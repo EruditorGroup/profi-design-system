@@ -1,19 +1,4 @@
 {
   "presets": ["@babel/preset-react", "@babel/preset-env"],
-  "plugins": [
-    [
-      "react-css-modules",
-      {
-        "option": "value",
-        "filetypes": "css",
-        "webpackHotModuleReloading": true,
-        "handleMissingStyleName": "ignore"
-      }
-    ]
-  ],
-  "filetypes": {
-    ".scss": {
-      "syntax": "postcss-scss"
-    }
-  }
+  "plugins": [["react-css-modules"]]
 }

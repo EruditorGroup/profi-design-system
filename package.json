@@ -2,10 +2,12 @@
   "name": "profi-ui",
   "version": "1.0.0",
   "description": "Essential cross-platform UI components for React for Eruditor Group",
-  "main": "index.js",
+  "main": "./dist/index.js",
   "scripts": {
     "test": "test",
-    "build": "./node_modules/.bin/babel src --out-file index.js"
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook",
+    "build": "cross-env TS_NODE_PROJECT=\"tsconfig-for-webpack-config.json\" webpack"
   },
   "repository": {
     "type": "git",
@@ -30,11 +32,39 @@
     "@babel/core": "^7.7.4",
     "@babel/preset-env": "^7.7.4",
     "@babel/preset-react": "^7.7.4",
+    "@storybook/addon-actions": "^5.2.6",
+    "@storybook/addon-links": "^5.2.6",
+    "@storybook/addons": "^5.2.6",
+    "@storybook/react": "^5.2.6",
+    "@types/node": "^12.12.14",
+    "@types/webpack": "^4.41.0",
+    "@types/webpack-dev-server": "^3.9.0",
+    "babel-eslint": "^10.0.3",
+    "babel-jest": "^24.9.0",
+    "babel-loader": "^8.0.6",
     "babel-plugin-react-css-modules": "^5.2.6",
     "classnames": "^2.2.6",
+    "cross-env": "^6.0.3",
+    "css-loader": "^3.2.0",
+    "eslint": "^6.7.1",
+    "eslint-plugin-prettier": "^3.1.1",
+    "jest": "^24.9.0",
     "postcss-scss": "^2.0.0",
     "prettier": "1.19.1",
+    "pretty-quick": "^2.0.1",
     "react": "^16.12.0",
-    "react-dom": "^16.12.0"
+    "react-dom": "^16.12.0",
+    "react-test-renderer": "^16.12.0",
+    "style-loader": "^1.0.0",
+    "ts-node": "^8.5.2",
+    "tsconfig-paths": "^3.9.0",
+    "typescript": "^3.7.2",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.10",
+    "webpack-dev-server": "^3.9.0"
+  },
+  "dependencies": {
+    "html-webpack-plugin": "^3.2.0",
+    "react-scripts": "^3.2.0"
   }
 }
