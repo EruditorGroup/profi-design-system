@@ -1,3 +1,0 @@
-{
-  "throws": "Cannot use styleName attribute for style name 'missing_import' without importing at least one stylesheet."
-}
