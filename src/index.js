@@ -1,9 +1,6 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 export default class ProfiUI extends Component {
-
-    render () {
-        return (
-            <div>Хеллоу, кожанные мешки</div>
-    )
-    }
+  render() {
+    return <div>Хеллоу, кожанные мешки</div>;
+  }
 }
