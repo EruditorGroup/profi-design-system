@@ -7,7 +7,7 @@
     "test": "test",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
-    "build": "cross-env TS_NODE_PROJECT=\"tsconfig-for-webpack-config.json\" webpack"
+    "build": "yarn babel --out-dir build src -x '.ts' -x '.tsx' --config-file=./babel.config.js && cross-env TS_NODE_PROJECT=\"tsconfig-for-webpack-config.json\" webpack"
   },
   "repository": {
     "type": "git",
@@ -53,6 +53,7 @@
     "css-loader": "^3.2.0",
     "eslint": "^6.7.1",
     "eslint-plugin-prettier": "^3.1.1",
+    "html-webpack-root-plugin": "^0.10.0",
     "jest": "^24.9.0",
     "postcss-scss": "^2.0.0",
     "prettier": "1.19.1",
