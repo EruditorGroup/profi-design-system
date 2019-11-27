@@ -19,7 +19,7 @@ module.exports = {
     }),
   ],
   resolve: {
-    extensions: ['.ts', '.tsx'],
+    extensions: ['.js', '.jsx', '.ts', '.tsx'],
   },
   devServer: {
     contentBase: path.join(__dirname, 'dist'),
