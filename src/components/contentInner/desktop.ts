@@ -1,6 +1,8 @@
 import React from "react";
-import "./contentInner.module.css";
+
 import ContentInnerProps from "./types";
+
+import "./styles/desktop.module.css";
 
 const ContentInnerDesktop: React.FC = ({
   children,
@@ -12,7 +14,7 @@ const ContentInnerDesktop: React.FC = ({
   if (!children) return null;
 
   return (
-    <div id={id} styleName="root">
+    <div id={id} data-shmid={shmid} styleName="root" className={className}>
       {children}
     </div>
   );
