@@ -12,7 +12,14 @@ export default class ProfiUI extends React.Component {
           Block: <Block />
         </div>
         <div>
-          ContentInner: <ContentInner version="mobile">контент</ContentInner>
+          ContentInner desktop: <br />
+          <ContentInner version="desktop">контент</ContentInner>
+          ContentInner mobile: <br />
+          <ContentInner version="mobile">контент</ContentInner>
+          ContentInner mobile withMobileMaxWidth: <br />
+          <ContentInner withMobileMaxWidth version="mobile">
+            контент
+          </ContentInner>
         </div>
       </div>
     );

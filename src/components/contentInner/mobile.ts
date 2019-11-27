@@ -1,7 +1,9 @@
 import React from "react";
+import cx from "classnames";
+
 import ContentInnerProps from "./types";
 
-import "./contentInner.module.css";
+import "./styles/mobile.module.css";
 
 const ContentInnerMobile: React.FC = ({
   children,
@@ -13,7 +15,12 @@ const ContentInnerMobile: React.FC = ({
   if (!children) return null;
 
   return (
-    <div id={id} styleName="root">
+    <div
+      id={id}
+      styleName={cx("root", {
+        withMobileMaxWidth: withMobileMaxWidth
+      })}
+    >
       {children}
     </div>
   );

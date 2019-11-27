@@ -19,7 +19,9 @@ const ContentInner: React.FC = ({
   withMobileMaxWidth
 }: VersionProps & ContentInneProps) => {
   const props = { children, id, shmid, className, withMobileMaxWidth };
+
   if (version === "mobile") return <ContentInnerMobile {...props} />;
+
   return <ContentInnerDesktop {...props} />;
 };
 

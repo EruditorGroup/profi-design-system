@@ -1,9 +1,17 @@
+import _getClassName from "babel-plugin-react-css-modules/dist/browser/getClassName";
 import React from "react";
-import "./contentInner.module.css";
+import cx from "classnames";
+import "./styles/mobile.module.css";
+const _styleModuleImportMap = {
+  "./styles/mobile.module.css": {
+    "root": "mobile-module__root-3oAMk",
+    "withMobileMaxWidth": "mobile-module__withMobileMaxWidth-1KCcX"
+  }
+};
 
 if (module.hot) {
-  module.hot.accept("./contentInner.module.css", function () {
-    require("./contentInner.module.css");
+  module.hot.accept("./styles/mobile.module.css", function () {
+    require("./styles/mobile.module.css");
   });
 }
 
@@ -17,7 +25,12 @@ const ContentInnerMobile = ({
   if (!children) return null;
   return React.createElement("div", {
     id: id,
-    className: "contentInner-module__root-3iYKR"
+    className: _getClassName(cx("root", {
+      withMobileMaxWidth: withMobileMaxWidth
+    }), _styleModuleImportMap, {
+      "autoResolveMultipleImports": true,
+      "handleMissingStyleName": "warn"
+    })
   }, children);
 };
 

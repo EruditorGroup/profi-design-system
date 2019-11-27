@@ -1,9 +1,9 @@
 import React from "react";
-import "./contentInner.module.css";
+import "./styles/desktop.module.css";
 
 if (module.hot) {
-  module.hot.accept("./contentInner.module.css", function () {
-    require("./contentInner.module.css");
+  module.hot.accept("./styles/desktop.module.css", function () {
+    require("./styles/desktop.module.css");
   });
 }
 
@@ -17,7 +17,8 @@ const ContentInnerDesktop = ({
   if (!children) return null;
   return React.createElement("div", {
     id: id,
-    className: "contentInner-module__root-3iYKR"
+    "data-shmid": shmid,
+    className: (className ? className + " " : "") + "desktop-module__root-3t-PJ"
   }, children);
 };
 
