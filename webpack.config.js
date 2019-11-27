@@ -1,4 +1,6 @@
-var HtmlWebpackPlugin = require('html-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const HtmlWebpackRootPlugin = require('html-webpack-root-plugin');
+
 const path = require('path');
 const context = path.resolve(__dirname, 'src');
 
@@ -11,12 +13,8 @@ module.exports = {
     path: path.resolve(__dirname, 'dist'),
   },
   plugins: [
-    new HtmlWebpackPlugin({
-      title: 'PROFI-UI',
-      template: './index.html',
-      tagId: 'root',
-      tagName: 'div',
-    }),
+    new HtmlWebpackPlugin({title: 'PROFI UI'}),
+    new HtmlWebpackRootPlugin(),
   ],
   resolve: {
     extensions: ['.js', '.jsx', '.ts', '.tsx'],
@@ -46,10 +44,10 @@ module.exports = {
                   'react-css-modules',
                   {
                     context,
-                    generateScopedName: '[name]__[local]',
-                    webpackHotModuleReloading: true,
-                    handleMissingStyleName: 'warn',
                     autoResolveMultipleImports: true,
+                    generateScopedName: '[name]__[local]-[hash:base64:5]',
+                    handleMissingStyleName: 'warn',
+                    webpackHotModuleReloading: true,
                   },
                 ],
               ],
@@ -60,16 +58,13 @@ module.exports = {
       {
         test: /\.css$/,
         use: [
-          {
-            loader: 'style-loader',
-          },
+          {loader: 'style-loader'},
           {
             loader: 'css-loader',
             options: {
-              importLoaders: 1,
               modules: {
                 context,
-                localIdentName: '[name]__[local]',
+                localIdentName: '[name]__[local]-[hash:base64:5]',
               },
               sourceMap: true,
             },
