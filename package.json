@@ -7,7 +7,7 @@
     "test": "test",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
-    "build": "cross-env TS_NODE_PROJECT=\"tsconfig-for-webpack-config.json\" webpack"
+    "build": "yarn babel --out-dir build src -x '.ts' -x '.tsx' --config-file=./babel.config.js && cross-env TS_NODE_PROJECT=\"tsconfig-for-webpack-config.json\" webpack"
   },
   "repository": {
     "type": "git",
