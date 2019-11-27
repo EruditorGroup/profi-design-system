@@ -1,30 +1,30 @@
-var HtmlWebpackPlugin = require('html-webpack-plugin');
-const path = require('path');
-const context = path.resolve(__dirname, 'src');
+var HtmlWebpackPlugin = require("html-webpack-plugin");
+const path = require("path");
+const context = path.resolve(__dirname, "src");
 
 module.exports = {
-  mode: 'development',
-  entry: './index.tsx',
+  mode: "development",
+  entry: "./index.tsx",
   context,
   output: {
-    filename: 'ui.bundle.js',
-    path: path.resolve(__dirname, 'dist'),
+    filename: "ui.bundle.js",
+    path: path.resolve(__dirname, "dist")
   },
   plugins: [
     new HtmlWebpackPlugin({
-      title: 'PROFI-UI',
-      template: './index.html',
-      tagId: 'root',
-      tagName: 'div',
-    }),
+      title: "PROFI-UI",
+      template: "./index.html",
+      tagId: "root",
+      tagName: "div"
+    })
   ],
   resolve: {
-    extensions: ['.js', '.jsx', '.ts', '.tsx'],
+    extensions: [".js", ".jsx", ".ts", ".tsx"]
   },
   devServer: {
-    contentBase: path.join(__dirname, 'dist'),
+    contentBase: path.join(__dirname, "dist"),
     compress: true,
-    port: 9000,
+    port: 9000
   },
   module: {
     rules: [
@@ -32,50 +32,50 @@ module.exports = {
         test: /\.tsx?$/,
         use: [
           {
-            loader: 'babel-loader',
+            loader: "babel-loader",
             options: {
               presets: [
                 [
-                  '@babel/preset-typescript',
-                  {isTSX: true, allExtensions: true},
-                ],
+                  "@babel/preset-typescript",
+                  { isTSX: true, allExtensions: true }
+                ]
               ],
               plugins: [
-                '@babel/transform-react-jsx',
+                "@babel/transform-react-jsx",
                 [
-                  'react-css-modules',
+                  "react-css-modules",
                   {
                     context,
-                    generateScopedName: '[name]__[local]',
+                    generateScopedName: "[name]__[local]-[hash:base64:5]",
                     webpackHotModuleReloading: true,
-                    handleMissingStyleName: 'warn',
-                    autoResolveMultipleImports: true,
-                  },
-                ],
-              ],
-            },
-          },
-        ],
+                    handleMissingStyleName: "warn",
+                    autoResolveMultipleImports: true
+                  }
+                ]
+              ]
+            }
+          }
+        ]
       },
       {
         test: /\.css$/,
         use: [
           {
-            loader: 'style-loader',
+            loader: "style-loader"
           },
           {
-            loader: 'css-loader',
+            loader: "css-loader",
             options: {
               importLoaders: 1,
               modules: {
                 context,
-                localIdentName: '[name]__[local]',
+                localIdentName: "[name]__[local]-[hash:base64:5]"
               },
-              sourceMap: true,
-            },
-          },
-        ],
-      },
-    ],
-  },
+              sourceMap: true
+            }
+          }
+        ]
+      }
+    ]
+  }
 };
