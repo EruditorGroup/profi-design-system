@@ -1,5 +1,5 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import ProfiUI from './main';
+import React from "react";
+import ReactDOM from "react-dom";
+import ProfiUI from "./main";
 
-ReactDOM.render(<ProfiUI />, document.getElementById('root'));
+ReactDOM.render(<ProfiUI />, document.getElementById("root"));

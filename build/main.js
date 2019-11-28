@@ -1,6 +1,6 @@
 import React from "react";
 import Block from "./components/block";
-import ContentInner from "./components/contentInner";
+import ContentInner from "@ui/contentInner";
 import "./index.module.css";
 
 if (module.hot) {
