@@ -1,80 +1,74 @@
 {
-  "name": "@ProfiRu/ui",
-  "version": "1.0.0",
+  "name": "ui_new",
+  "version": "0.0.1",
   "description": "Essential cross-platform UI components for React for Eruditor Group",
-  "main": "./dist/index.js",
-  "scripts": {
-    "test": "test",
-    "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook",
-    "build": "yarn babel --out-dir build src -x '.ts' -x '.tsx' --config-file=./babel.config.js && cross-env TS_NODE_PROJECT=\"tsconfig-for-webpack-config.json\" webpack"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/ProfiRu/UI.git"
-  },
-  "keywords": [
-    "react",
-    "ui"
-  ],
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com"
-  },
+  "private": true,
+  "homepage": "https://github.com/ProfiRu/UI#readme",
   "author": "ProfiRu",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/ProfiRu/UI/issues"
   },
-  "homepage": "https://github.com/ProfiRu/UI#readme",
-  "peerDependencies": {
-    "react": "^16.6.1",
-    "react-dom": "^16.6.3"
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ProfiRu/UI.git"
+  },
+  "dependencies": {
+    "clsx": "^1.1.1",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1"
+  },
+  "scripts": {
+    "start": "yarn storybook",
+    "build": "webpack build",
+    "test": "jest",
+    "storybook": "start-storybook -p 6006 -s public",
+    "build-storybook": "build-storybook -s public"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   },
   "devDependencies": {
-    "@babel/cli": "^7.7.4",
-    "@babel/core": "^7.7.4",
-    "@babel/plugin-transform-typescript": "^7.7.4",
-    "@babel/preset-env": "^7.7.4",
-    "@babel/preset-react": "^7.7.4",
-    "@babel/preset-typescript": "^7.7.4",
-    "@storybook/addon-actions": "^5.2.6",
-    "@storybook/addon-links": "^5.2.6",
-    "@storybook/addons": "^5.2.6",
-    "@storybook/react": "^5.2.6",
-    "@types/node": "^12.12.14",
+    "@babel/plugin-transform-react-jsx": "^7.12.12",
+    "@babel/preset-typescript": "^7.12.7",
+    "@storybook/addon-actions": "^6.1.15",
+    "@storybook/addon-essentials": "^6.1.15",
+    "@storybook/addon-links": "^6.1.15",
+    "@storybook/node-logger": "^6.1.15",
+    "@storybook/preset-create-react-app": "^3.1.5",
+    "@storybook/react": "^6.1.15",
     "@types/react-css-modules": "^4.6.2",
-    "@types/react-dom": "^16.9.4",
-    "@types/webpack": "^4.41.0",
-    "@types/webpack-dev-server": "^3.9.0",
-    "babel-eslint": "^10.0.3",
-    "babel-jest": "^24.9.0",
-    "babel-loader": "^8.0.6",
+    "@types/enzyme": "^3.10.8",
+    "@types/jest": "^26.0.15",
+    "@types/node": "^12.0.0",
+    "@types/react": "^17.0.0",
+    "@types/react-dom": "^16.9.8",
+    "add": "^2.0.6",
+    "babel-loader": "^8.2.2",
     "babel-plugin-react-css-modules": "^5.2.6",
-    "babel-preset-react": "^6.24.1",
-    "classnames": "^2.2.6",
-    "cross-env": "^6.0.3",
-    "css-loader": "^3.2.0",
-    "eslint": "^6.7.1",
-    "eslint-plugin-prettier": "^3.1.1",
-    "html-webpack-root-plugin": "^0.10.0",
-    "jest": "^24.9.0",
-    "jest-cli": "^24.9.0",
-    "postcss-scss": "^2.0.0",
-    "prettier": "1.19.1",
-    "pretty-quick": "^2.0.1",
-    "react": "^16.12.0",
-    "react-dom": "^16.12.0",
-    "react-test-renderer": "^16.12.0",
-    "storybook": "^5.1.11",
-    "style-loader": "^1.0.0",
-    "ts-loader": "^6.2.1",
-    "ts-node": "^8.5.2",
-    "tsconfig-paths": "^3.9.0",
-    "typescript": "^3.7.2",
-    "webpack": "^4.41.2",
-    "webpack-cli": "^3.3.10",
-    "webpack-dev-server": "^3.9.0",
-    "html-webpack-plugin": "^3.2.0",
-    "react-scripts": "^3.2.0"
+    "css-loader": "^5.0.1",
+    "enzyme": "^3.11.0",
+    "jest": "^26.6.3",
+    "webpack-cli": "^4.4.0",
+    "yarn": "^1.22.10",
+    "typescript": "^4.0.3"
   }
 }
