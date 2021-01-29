@@ -9,6 +9,9 @@
 # testing
 /coverage
 
+# interface
+/storybook-static
+
 # production
 /dist
 

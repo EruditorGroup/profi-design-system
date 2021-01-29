@@ -9,17 +9,11 @@ module.exports = {
     filename: 'index.js',
     path: path.resolve(__dirname, 'dist'),
   },
-  plugins: [],
   resolve: {
     extensions: ['.js', '.jsx', '.ts', '.tsx'],
     alias: {
       '@ui': path.resolve(__dirname, './src/components/'),
     },
-  },
-  devServer: {
-    contentBase: path.join(__dirname, 'dist'),
-    compress: true,
-    port: 9000,
   },
   module: {
     rules: [

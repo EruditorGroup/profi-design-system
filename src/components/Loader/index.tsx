@@ -1,16 +1,17 @@
-import cx from "clsx";
+import React from 'react';
+import cx from 'clsx';
 
-import styles from "./Loader.module.css";
+import styles from './Loader.module.css';
 
 type LoaderProps = {
-  variant?: "dots" | "line";
+  variant?: 'dots' | 'line';
 };
 
-export default function Loader({ variant }: LoaderProps): React.ReactElement {
+export default function Loader({variant}: LoaderProps): React.ReactElement {
   return (
     <div
       title="loader"
-      className={cx(styles["loader"], styles[`loader_${variant}`])}
+      className={cx(styles['loader'], styles[`loader_${variant}`])}
     />
   );
 }
