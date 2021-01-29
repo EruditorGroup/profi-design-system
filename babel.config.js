@@ -2,7 +2,12 @@ const path = require('path');
 const context = path.resolve(__dirname, 'src');
 
 module.exports = {
-  presets: [['@babel/preset-typescript', {isTSX: true, allExtensions: true}]],
+  presets: [
+    [
+      '@babel/preset-typescript',
+      {isTSX: true, allExtensions: true, modules: false},
+    ],
+  ],
   plugins: [
     '@babel/transform-react-jsx',
     [
