@@ -1,9 +1,9 @@
-name: Build and Deploy storybook pages
+name: 'storybook: deploy to github pages'
 on:
   push:
     branches:
       - master
-    paths: ["src/components/**/*stories*"] # Trigger the action only when files change in the folders defined here
+    paths: ['src/components/**/*stories*'] # Trigger the action only when files change in the folders defined here
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
