@@ -5,7 +5,7 @@ on:
       - master
     paths: ['src/components/**/*stories*'] # Trigger the action only when files change in the folders defined here
 jobs:
-  build-and-deploy:
+  deploy-storybook:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout 🛎️
