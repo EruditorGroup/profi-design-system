@@ -26,7 +26,7 @@
     "build": "webpack build",
     "test": "jest",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "precommit": "build-storybook -o ./docs"
   },
   "eslintConfig": {
     "extends": [
