@@ -3,7 +3,7 @@ on:
   push:
     branches:
       - master
-    paths: ['src/components/**/*stories*'] # Trigger the action only when files change in the folders defined here
+    # paths: ['src/components/**/*stories*'] # Trigger the action only when files change in the folders defined here
 jobs:
   deploy-storybook:
     runs-on: ubuntu-latest

@@ -10,7 +10,7 @@
     "url": "https://github.com/ProfiRu/UI/issues"
   },
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com/ProfiRu"
+    "registry": "https://npm.pkg.github.com/@ProfiRu"
   },
   "repository": {
     "type": "git",
