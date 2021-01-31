@@ -1,12 +1,15 @@
 name: 'npm package: publish'
 
 on:
-  create:
-    tags:
-      - '*'
+  # create:
+  #   tags:
+  #     - '*'
+  push: 
+    branches: 
+      - master
 
 jobs:
-  test_and_build:
+  build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -14,7 +17,6 @@ jobs:
         with:
           node-version: 12
       - run: yarn
-      - run: yarn test
       - run: yarn build
       - name: Archive artifacts
         uses: actions/upload-artifact@v2
@@ -24,8 +26,20 @@ jobs:
             dist
             !dist/**/*.md
 
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 12
+      - run: yarn
+      - run: yarn test
+
   npm_package_publish:
-    needs: test_and_build
+    needs: 
+      - test
+      - build
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -34,4 +48,5 @@ jobs:
           always-auth: true
           node-version: 12
       - run: echo "@profiru:registry=https://npm.pkg.github.com/:_authToken=${{ secrets.GITHUB_TOKEN }}" > ~/.npmrc
+      - run: yarn build
       - run: npm publish --access public
