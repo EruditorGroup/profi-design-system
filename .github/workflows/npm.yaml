@@ -1,7 +1,9 @@
 name: 'npm package: publish'
 
 on:
-  tags:
+  create:
+    tags:
+      - '*'
   push:
     branches:
       - master
