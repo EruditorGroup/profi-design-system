@@ -1,45 +1,42 @@
 name: 'npm package: publish'
 
 on:
-  # create:
-  #   tags:
-  #     - '*'
-  push: 
-    branches: 
-      - master
+  create:
+    tags:
+      - '*'
 
 jobs:
-  # build:
-  #   runs-on: ubuntu-latest
-  #   steps:
-  #     - uses: actions/checkout@v2
-  #     - uses: actions/setup-node@v1
-  #       with:
-  #         node-version: 12
-  #     - run: yarn
-  #     - run: yarn build
-  #     - name: Archive & upload artifacts
-  #       uses: actions/upload-artifact@v2
-  #       with:
-  #         name: dist
-  #         path: |
-  #           dist
-  #           !dist/**/*.md
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 12
+      - run: yarn
+      - run: yarn build
+      - name: Archive & upload artifacts
+        uses: actions/upload-artifact@v2
+        with:
+          name: dist
+          path: |
+            dist
+            !dist/**/*.md
 
-  # test:
-  #   runs-on: ubuntu-latest
-  #   steps:
-  #     - uses: actions/checkout@v2
-  #     - uses: actions/setup-node@v1
-  #       with:
-  #         node-version: 12
-  #     - run: yarn
-  #     - run: yarn test
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 12
+      - run: yarn
+      - run: yarn test
 
   npm_package_publish:
-    # needs: 
-    #   - test
-    #   - build
+    needs: 
+      - test
+      - build
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
