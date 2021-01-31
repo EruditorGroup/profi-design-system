@@ -1,9 +1,11 @@
-import React from "react";
-import { render, screen } from "@testing-library/react";
-import Loader from ".";
+import React from 'react';
+import {mount} from 'enzyme';
+import Loader from '.';
 
-test("renders loader", () => {
-  render(<Loader variant="line" />);
-  const linkElement = screen.getByTitle("loader");
-  expect(linkElement).toBeInTheDocument();
+describe('Loader', () => {
+  it('renders loader', () => {
+    const component = mount(<Loader />);
+    const div = component.find('[title="loader"]');
+    expect(div).not.toBeNull();
+  });
 });
