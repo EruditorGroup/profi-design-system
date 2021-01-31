@@ -4,9 +4,6 @@ on:
   create:
     tags:
       - '*'
-  push:
-    branches:
-      - master
 
 jobs:
   npm_package_test:
