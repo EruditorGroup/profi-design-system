@@ -19,6 +19,7 @@ jobs:
       - run: yarn test
 
   pull_request_build:
+    needs: pull_request_test
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2

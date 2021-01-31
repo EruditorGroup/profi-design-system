@@ -17,7 +17,7 @@ jobs:
       - run: yarn test
 
   npm_package_build:
-    needs: test
+    needs: npm_package_test
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -28,7 +28,7 @@ jobs:
       - run: yarn build
 
   npm_package_publish:
-    needs: build
+    needs: npm_package_build
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
