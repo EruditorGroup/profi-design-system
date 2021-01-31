@@ -2,9 +2,8 @@ name: 'npm package: publish'
 
 on:
   release:
-    - create
-  branches:
-    - master
+    types:
+      - created
 
 jobs:
   npm_package_test:
