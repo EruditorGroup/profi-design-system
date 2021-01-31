@@ -18,7 +18,7 @@ jobs:
           node-version: 12
       - run: yarn
       - run: yarn build
-      - name: Archive artifacts
+      - name: Archive & upload artifacts
         uses: actions/upload-artifact@v2
         with:
           name: dist
@@ -47,6 +47,7 @@ jobs:
         with:
           always-auth: true
           node-version: 12
+      - name: Download artifacts
+        uses: actions/download-artifact@v2
       - run: echo "@profiru:registry=https://npm.pkg.github.com/:_authToken=${{ secrets.GITHUB_TOKEN }}" > ~/.npmrc
-      - run: yarn build
       - run: npm publish --access public
