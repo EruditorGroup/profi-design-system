@@ -10,7 +10,7 @@
 /coverage
 
 # interface
-/storybook-static
+/docs
 
 # production
 /dist
