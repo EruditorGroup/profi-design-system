@@ -49,4 +49,4 @@ jobs:
       - name: Download artifacts
         uses: actions/download-artifact@v2
       - run: echo "@profiru:registry=https://npm.pkg.github.com/:_authToken=${{ secrets.GITHUB_TOKEN }}" > ~/.npmrc
-      - run: npm publish --access public
+      - run: npm publish
