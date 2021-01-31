@@ -1,9 +1,10 @@
 name: 'npm package: publish'
 
 on:
-  push:
-    branches:
-      - master
+  release:
+    - create
+  branches:
+    - master
 
 jobs:
   npm_package_test:
@@ -35,7 +36,7 @@ jobs:
       - uses: actions/setup-node@v1
         with:
           node-version: 12
-          registry-url: https://npm.pkg.github.com/
+          registry-url: https://profiru.pkg.github.com/
       - run: yarn
       - run: yarn publish
         env:
