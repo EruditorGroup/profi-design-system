@@ -6,7 +6,7 @@ on:
       - master
 
 jobs:
-  test:
+  npm_package_test:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -16,7 +16,8 @@ jobs:
       - run: yarn
       - run: yarn test
 
-  build:
+  npm_package_build:
+    needs: test
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -26,7 +27,7 @@ jobs:
       - run: yarn
       - run: yarn build
 
-  publish-gpr:
+  npm_package_publish:
     needs: build
     runs-on: ubuntu-latest
     steps:

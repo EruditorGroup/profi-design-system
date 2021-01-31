@@ -8,7 +8,7 @@ on:
     branches: [master]
 
 jobs:
-  test:
+  pull_request_test:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -18,7 +18,7 @@ jobs:
       - run: yarn
       - run: yarn test
 
-  build:
+  pull_request_build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
