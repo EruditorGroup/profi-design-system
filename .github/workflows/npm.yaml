@@ -6,7 +6,7 @@ on:
       - '*'
 
 jobs:
-  build:
+  deps:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -14,6 +14,23 @@ jobs:
         with:
           node-version: 12
       - run: yarn
+      - name: Archive & upload artifacts
+        uses: actions/upload-artifact@v2
+        with:
+          name: node_modules
+            
+  build:
+    runs-on: ubuntu-latest
+    needs: deps
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 12
+      - name: Download artifacts
+        uses: actions/download-artifact@v2
+        with: 
+          name: node_modules
       - run: yarn build
       - name: Archive & upload artifacts
         uses: actions/upload-artifact@v2
@@ -25,13 +42,31 @@ jobs:
 
   test:
     runs-on: ubuntu-latest
+    needs: deps
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v1
         with:
           node-version: 12
-      - run: yarn
+      - name: Download artifacts
+        uses: actions/download-artifact@v2
+        with: 
+          name: node_modules
       - run: yarn test
+
+  lint:
+    runs-on: ubuntu-latest
+    needs: deps
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 12
+      - name: Download artifacts
+        uses: actions/download-artifact@v2
+        with: 
+          name: node_modules
+      - run: yarn lint
 
   npm_package_publish:
     needs: 
@@ -45,5 +80,7 @@ jobs:
           node-version: 12
       - name: Download artifacts
         uses: actions/download-artifact@v2
+        with: 
+          name: dist
       - run: printf "//npm.pkg.github.com/:_authToken=${{ secrets.GITHUB_TOKEN }}\n@profiru:registry=https://npm.pkg.github.com/" > ~/.npmrc
       - run: npm publish
