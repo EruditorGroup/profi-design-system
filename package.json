@@ -26,6 +26,7 @@
     "build": "webpack build",
     "test": "jest",
     "storybook": "start-storybook -p 6006",
+    "lint": "yarn eslint src --cache --ext .js,.jsx",
     "precommit": "APP_ROOT_PATH=. lint-staged"
   },
   "browserslist": {
