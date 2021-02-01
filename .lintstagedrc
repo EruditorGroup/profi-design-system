@@ -4,9 +4,5 @@
     "eslint --cache --quiet",
     "build-storybook -o ./docs",
     "git add"
-  ],
-  "src/**/*.styl": [
-    "stylus-supremacy format --replace --options stylus-supremacy.config.json",
-    "git add"
   ]
 }
