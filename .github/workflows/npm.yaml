@@ -58,4 +58,4 @@ jobs:
         uses: actions/download-artifact@v2
       - run: printf "//npm.pkg.github.com/:_authToken=${{ secrets.GITHUB_TOKEN }}\n@profiru:registry=https://npm.pkg.github.com/" > ~/.npmrc
       - run: npx rimraf src ./*.js ./.??* public
-      - run: npm publish
+      - run: npm publish --access public
