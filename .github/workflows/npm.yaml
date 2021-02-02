@@ -1,9 +1,12 @@
 name: 'npm package: publish'
 
 on:
-  create:
-    tags:
-      - '*'
+  push:
+    branches:
+      - master
+  # create:
+  #   tags:
+  #     - '*'
 
 jobs:
   build:
@@ -23,25 +26,25 @@ jobs:
             dist
             !dist/**/*.md
 
-  test:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v1
-        with:
-          node-version: 12
-      - run: yarn
-      - run: yarn test
+  # test:
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     - uses: actions/checkout@v2
+  #     - uses: actions/setup-node@v1
+  #       with:
+  #         node-version: 12
+  #     - run: yarn
+  #     - run: yarn test
 
-  lint:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v1
-        with:
-          node-version: 12
-      - run: yarn
-      - run: yarn lint
+  # lint:
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     - uses: actions/checkout@v2
+  #     - uses: actions/setup-node@v1
+  #       with:
+  #         node-version: 12
+  #     - run: yarn
+  #     - run: yarn lint
 
   npm_package_publish:
     needs:
@@ -60,6 +63,7 @@ jobs:
           name: dist
       - run: printf "//npm.pkg.github.com/:_authToken=${{ secrets.GITHUB_TOKEN }}\n@profiru:registry=https://npm.pkg.github.com/" > ~/.npmrc
       - run: mkdir package
+      - run: ls -la
       - run: cp -r ./{package.json,LICENCE.md,src,dist} ./package
       - run: cd package && ls -la
       - run: npm publish
