@@ -6,9 +6,6 @@
   "author": "profiru",
   "license": "ISC",
   "main": "dist/index.js",
-  "engines": {
-    "node": ">=10"
-  },
   "bugs": {
     "url": "https://github.com/profiru/UI/issues"
   },
