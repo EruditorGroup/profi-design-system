@@ -5,7 +5,7 @@
   "homepage": "https://github.com/profiru/UI#readme",
   "author": "profiru",
   "license": "ISC",
-  "main": "dist/index.js",
+  "main": "index.js",
   "bugs": {
     "url": "https://github.com/profiru/UI/issues"
   },
