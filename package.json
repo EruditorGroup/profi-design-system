@@ -31,7 +31,7 @@
     "clean": "rimraf lib && rimraf dist && rimraf test/visual/dist",
     "start": "yarn storybook",
     "build": "yarn clean && yarn build:es && yarn build:typescript && yarn build:bundles",
-    "build:es": "babel src -x '.ts','.tsx' -d lib --ignore '**/*.test.tsx','**/*.stories.tsx','**/*.d.ts','**/__mocks__'",
+    "build:es": "EXPORT_CSS=1 babel src -x '.ts','.tsx' -d lib --ignore '**/*.test.tsx','**/*.stories.tsx','**/*.d.ts','**/__mocks__'",
     "build:typescript": "tsc --declaration --outDir lib/ --emitDeclarationOnly --noEmit false --declarationMap --allowJs false --checkJs false",
     "build:bundles": "webpack build",
     "test": "jest",
