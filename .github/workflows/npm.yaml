@@ -6,23 +6,6 @@ on:
       - '*'
 
 jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v1
-        with:
-          node-version: 12
-      - run: yarn
-      - run: yarn build
-      - name: Archive & upload artifacts
-        uses: actions/upload-artifact@v2
-        with:
-          name: package
-          path: |
-            dist
-            lib
-
   test:
     runs-on: ubuntu-latest
     steps:
@@ -45,7 +28,6 @@ jobs:
 
   npm_package_publish:
     needs:
-      - build
       - lint
       - test
     runs-on: ubuntu-latest
@@ -54,8 +36,8 @@ jobs:
       - uses: actions/setup-node@v1
         with:
           node-version: 12
-      - name: Download artifacts
-        uses: actions/download-artifact@v2
+      - run: yarn
+      - run: yarn build
       - run: printf "//npm.pkg.github.com/:_authToken=${{ secrets.GITHUB_TOKEN }}\n@profiru:registry=https://npm.pkg.github.com/" > ~/.npmrc
-      - run: npx rimraf src public *.js
+      - run: npx rimraf src public *.js *rc
       - run: npm publish --access public
