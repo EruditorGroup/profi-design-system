@@ -18,8 +18,14 @@
     "resolveJsonModule": true,
     "isolatedModules": false,
     "noEmit": true,
-    "jsx": "react-jsx"
+    "jsx": "react-jsx",
   },
+  "exclude": [
+    "**/*.test.tsx",
+    "**/*.stories.tsx",
+    "**/*.d.ts",
+    "**/__mocks__"
+  ],
   "include": [
     "src", 
     "declaration.d.ts"

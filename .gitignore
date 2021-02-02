@@ -11,9 +11,10 @@
 
 # production
 /dist
+/lib
 
 # production storybook
-/docs
+/storybook-static
 
 # misc
 .DS_Store

@@ -1,5 +1,5 @@
 import {useEffect} from 'react';
 
 export default function useTestHook() {
-  useEffect(() => console.log('test hook!'), []);
+  useEffect(() => console.log("I'm test hook"), []);
 }
