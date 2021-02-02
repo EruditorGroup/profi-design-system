@@ -1,7 +1,7 @@
 import classnames from 'clsx';
 import React, {forwardRef} from 'react';
 
-import styles from './Button.module.css';
+import styles from './index.module.css';
 
 export interface ButtonProps
   extends React.ButtonHTMLAttributes<HTMLButtonElement>,

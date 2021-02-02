@@ -11,9 +11,6 @@ module.exports = {
   },
   resolve: {
     extensions: ['.js', '.jsx', '.ts', '.tsx'],
-    alias: {
-      '@ui': path.resolve(__dirname, './src/components/'),
-    },
   },
   module: {
     rules: [
@@ -27,19 +24,7 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        use: [
-          {loader: 'style-loader'},
-          {
-            loader: 'css-loader',
-            options: {
-              modules: {
-                localIdentContext: context,
-                localIdentName: '[name]__[local]-[hash:base64:5]',
-              },
-              sourceMap: true,
-            },
-          },
-        ],
+        use: ['style-loader', 'css-loader'],
       },
     ],
   },

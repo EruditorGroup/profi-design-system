@@ -1,7 +1,7 @@
 import React from 'react';
 import cx from 'clsx';
 
-import styles from './Loader.module.css';
+import styles from './index.module.css';
 
 type LoaderProps = {
   variant?: 'dots' | 'line';
