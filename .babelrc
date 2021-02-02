@@ -1,13 +1,23 @@
 {
     "presets": [
-        "@babel/preset-env",
-        [
-          "@babel/preset-typescript",
-          {"isTSX": true, "allExtensions": true}
-        ]
+        ["@babel/preset-env", 
+          {
+            "shippedProposals": true,
+            "useBuiltIns": "usage",
+            "corejs": "3",
+            "targets": "defaults",
+            "modules": false
+          }
+        ],
+        "@babel/preset-react"
       ],
       "plugins": [
-        "@babel/transform-react-jsx",
+        ["@babel/plugin-transform-typescript", {
+          "allExtensions": true,
+          "allowDeclareFields": true,
+          "isTSX": true
+        }],
+        ["@babel/plugin-proposal-object-rest-spread", { "loose": true, "useBuiltIns": true }],
         [
           "react-css-modules",
           {
