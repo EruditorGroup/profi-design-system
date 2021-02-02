@@ -1,7 +1,10 @@
-const isProduction = process.env.NODE_ENV === 'production';
+const withCssExports = !!process.env.EXPORT_CSS;
 
 module.exports = {
-  presets: ['@babel/preset-react'],
+  presets: [
+    ['@babel/preset-env', {targets: {node: 'current'}}],
+    '@babel/preset-react',
+  ],
   plugins: [
     [
       '@babel/plugin-transform-typescript',
@@ -11,7 +14,7 @@ module.exports = {
         isTSX: true,
       },
     ],
-    isProduction && [
+    withCssExports && [
       'css-modules-transform',
       {
         generateScopedName: '[local]_[hash:base64:7]',
