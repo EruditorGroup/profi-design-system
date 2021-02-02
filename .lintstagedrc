@@ -2,7 +2,6 @@
   "src/**/*.{ts,tsx,js,jsx}": [
     "prettier --write",
     "eslint --cache --quiet",
-    "build-storybook -o ./docs",
     "git add"
   ]
 }

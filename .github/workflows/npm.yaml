@@ -6,7 +6,6 @@ on:
       - '*'
 
 jobs:
-            
   build:
     runs-on: ubuntu-latest
     steps:
@@ -45,7 +44,7 @@ jobs:
       - run: yarn lint
 
   npm_package_publish:
-    needs: 
+    needs:
       - test
       - lint
       - build
@@ -57,7 +56,9 @@ jobs:
           node-version: 12
       - name: Download artifacts
         uses: actions/download-artifact@v2
-        with: 
+        with:
           name: dist
       - run: printf "//npm.pkg.github.com/:_authToken=${{ secrets.GITHUB_TOKEN }}\n@profiru:registry=https://npm.pkg.github.com/" > ~/.npmrc
+      - run: rm -rf !src* !README* !LICENCE* !dist
+      - run: ls -la
       - run: npm publish
