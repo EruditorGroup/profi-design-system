@@ -48,8 +48,6 @@ jobs:
 
   npm_package_publish:
     needs:
-      - test
-      - lint
       - build
     runs-on: ubuntu-latest
     steps:
