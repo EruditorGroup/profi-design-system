@@ -18,10 +18,10 @@ jobs:
       - name: Archive & upload artifacts
         uses: actions/upload-artifact@v2
         with:
-          name: dist
+          name: package
           path: |
             dist
-            !dist/**/*.md
+            lib
 
   test:
     runs-on: ubuntu-latest
