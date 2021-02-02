@@ -6,7 +6,7 @@
             "useBuiltIns": "usage",
             "corejs": "3",
             "targets": "defaults",
-            "modules": false
+            "modules": "auto"
           }
         ],
         "@babel/preset-react"
