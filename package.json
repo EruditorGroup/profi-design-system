@@ -10,11 +10,11 @@
     "url": "https://github.com/profiru/UI/issues"
   },
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com/@profiru"
+    "registry": "https://npm.pkg.github.com/profiru"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/profiru/UI.git"
+    "url": "git://github.com/profiru/ui.git"
   },
   "dependencies": {
     "clsx": "^1.1.1",
