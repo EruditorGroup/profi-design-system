@@ -12,6 +12,12 @@
         "@babel/preset-react"
       ],
       "plugins": [
+        [
+          "css-modules-transform",
+          {
+            "generateScopedName": "[hash:base64:7]"
+          }
+        ],
         ["@babel/plugin-transform-typescript", {
           "allExtensions": true,
           "allowDeclareFields": true,
