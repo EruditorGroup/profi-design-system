@@ -57,8 +57,6 @@ jobs:
           node-version: 12
       - name: Download artifacts
         uses: actions/download-artifact@v2
-        with:
-          name: dist
       - run: printf "//npm.pkg.github.com/:_authToken=${{ secrets.GITHUB_TOKEN }}\n@profiru:registry=https://npm.pkg.github.com/" > ~/.npmrc
       - run: mkdir package
       - run: ls -la
