@@ -1,5 +1,5 @@
+import classnames from 'clsx';
 import React, {forwardRef} from 'react';
-import clsx from 'clsx';
 
 import styles from './Button.module.css';
 
@@ -26,7 +26,7 @@ const Button: React.ForwardRefExoticComponent<ButtonProps> = forwardRef(
     return (
       <button
         ref={ref}
-        className={clsx(
+        className={classnames(
           styles['button'],
           styles[`button--${size}`],
           styles[`button--${variant}`],
