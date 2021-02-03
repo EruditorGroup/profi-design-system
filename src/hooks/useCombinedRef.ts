@@ -5,7 +5,7 @@ import {useRef} from 'react';
  * Например объединить forwarderRef и собственный.
  * @param  {...React.Ref} refs - массив рефов
  */
-export function useCombinedRef<T>(
+export default function useCombinedRef<T>(
   ...refs: (React.RefCallback<T> | React.MutableRefObject<T> | null)[]
 ): (arg: T | null) => void {
   const combinedRef = useRef(function setRefs(arg: T | null) {

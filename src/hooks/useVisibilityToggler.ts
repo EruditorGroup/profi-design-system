@@ -8,7 +8,7 @@ type VisibilityTogglerProps = {
   refs: Array<HTMLElement | RefType>;
 };
 
-export function useVisibilityToggler({
+export default function useVisibilityToggler({
   defaultState = false,
   refs,
 }: VisibilityTogglerProps) {
