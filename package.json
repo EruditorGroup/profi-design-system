@@ -19,6 +19,7 @@
   "dependencies": {
     "classnames": "^2.2.6",
     "core-js": "^3.8.3",
+    "load-styles": "^2.0.0",
     "react": "16.14.0",
     "react-dom": "16.14.0"
   },
