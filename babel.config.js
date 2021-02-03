@@ -1,4 +1,4 @@
-const withCssExports = !!process.env.EXPORT_CSS;
+const extractCss = !!process.env.EXTRACT_CSS;
 
 module.exports = {
   presets: [
@@ -14,16 +14,11 @@ module.exports = {
         isTSX: true,
       },
     ],
-    withCssExports && [
+    extractCss && [
       'css-modules-transform',
       {
         generateScopedName: '[local]_[hash:base64:7]',
-        keepImport: true,
-        extractCss: {
-          dir: './lib',
-          relativeRoot: './src/',
-          filename: '[path]/[name].css',
-        },
+        extractCss: './style/ui.css',
       },
     ],
   ].filter(Boolean),
