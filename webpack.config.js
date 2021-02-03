@@ -1,13 +1,12 @@
 const path = require('path');
-const context = path.resolve(__dirname, 'src');
 
 module.exports = {
   mode: 'development',
+  context: path.resolve('src'),
   entry: './index.ts',
-  context,
   output: {
     filename: 'index.js',
-    path: path.resolve(__dirname, 'dist'),
+    path: path.resolve('dist'),
   },
   resolve: {
     extensions: ['.js', '.jsx', '.ts', '.tsx'],
@@ -21,6 +20,10 @@ module.exports = {
             loader: 'babel-loader',
           },
         ],
+      },
+      {
+        test: /\.css$/,
+        use: ['style-loader', 'css-loader'],
       },
     ],
   },

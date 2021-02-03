@@ -1,7 +1,7 @@
 import React, {forwardRef} from 'react';
 import classnames from 'classnames';
 
-import styles from './index.module.css';
+import styles from './Link.module.css';
 
 interface LinkProps
   extends React.AnchorHTMLAttributes<HTMLAnchorElement>,

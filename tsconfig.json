@@ -28,6 +28,6 @@
   ],
   "include": [
     "src", 
-    "declaration.d.ts"
-]
+    "declaration.tsx"
+  ]
 }
