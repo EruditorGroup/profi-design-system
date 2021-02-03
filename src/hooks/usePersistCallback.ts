@@ -1,7 +1,7 @@
 //@flow
 import {useEffect, useCallback, useRef} from 'react';
 
-export function usePersistCallback(
+export default function usePersistCallback(
   callback: (...args: any[]) => readonly any[],
   deps: readonly any[],
 ): typeof callback {

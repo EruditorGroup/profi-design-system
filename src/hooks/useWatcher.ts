@@ -1,7 +1,7 @@
 //@flow
 import * as React from 'react';
 
-export function useWatcher(callback: () => any, deps: readonly any[]) {
+export default function useWatcher(callback: () => any, deps: readonly any[]) {
   const prevDepsRef = React.useRef(deps);
   const prevDeps = prevDepsRef.current;
 
