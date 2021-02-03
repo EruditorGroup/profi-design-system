@@ -3,9 +3,7 @@
 
 name: 'pull request: test & build'
 
-on:
-  pull_request:
-    branches: [master]
+on: [push, pull_request]
 
 jobs:
   pull_request_test:
