@@ -1,5 +1,5 @@
 import React, {forwardRef} from 'react';
-import clsx from 'clsx';
+import classnames from 'classnames';
 
 import styles from './index.module.css';
 
@@ -10,7 +10,7 @@ interface LinkProps
 const Link: React.ForwardRefExoticComponent<LinkProps> = forwardRef(
   ({href, className, children, ...props}, ref) => {
     return (
-      <a ref={ref} className={clsx(styles['link'], className)} {...props}>
+      <a ref={ref} className={classnames(styles['link'], className)} {...props}>
         {children}
       </a>
     );

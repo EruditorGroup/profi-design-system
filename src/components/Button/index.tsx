@@ -1,4 +1,4 @@
-import classnames from 'clsx';
+import classnames from 'classnames';
 import React, {forwardRef} from 'react';
 
 import styles from './index.module.css';

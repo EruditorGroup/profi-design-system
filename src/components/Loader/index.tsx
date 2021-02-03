@@ -1,5 +1,5 @@
 import React from 'react';
-import cx from 'clsx';
+import classnames from 'classnames';
 
 import styles from './index.module.css';
 
@@ -11,7 +11,7 @@ export default function Loader({variant}: LoaderProps): React.ReactElement {
   return (
     <div
       title="loader"
-      className={cx(styles['loader'], styles[`loader_${variant}`])}
+      className={classnames(styles['loader'], styles[`loader_${variant}`])}
     />
   );
 }
