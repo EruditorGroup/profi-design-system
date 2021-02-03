@@ -18,7 +18,7 @@ module.exports = {
       'css-modules-transform',
       {
         generateScopedName: '[local]_[hash:base64:7]',
-        extractCss: './style/ui.css',
+        extractCss: './dist/ui.css',
       },
     ],
   ].filter(Boolean),
