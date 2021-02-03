@@ -1,7 +1,7 @@
 import React from 'react';
 import classnames from 'classnames';
 
-import styles from './index.module.css';
+import styles from './Loader.module.css';
 
 type LoaderProps = {
   variant?: 'dots' | 'line';

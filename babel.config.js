@@ -1,3 +1,5 @@
+const extractCss = !!process.env.EXTRACT_CSS;
+
 module.exports = {
   presets: [
     ['@babel/preset-env', {targets: {node: 'current'}}],
@@ -12,11 +14,12 @@ module.exports = {
         isTSX: true,
       },
     ],
-    [
-      'babel-plugin-transform-import-css',
+    extractCss && [
+      'css-modules-transform',
       {
         generateScopedName: 'ui_[hash:base64:5]',
+        extractCss: './dist/ui.css',
       },
     ],
-  ],
+  ].filter(Boolean),
 };
