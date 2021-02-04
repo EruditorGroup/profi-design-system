@@ -1,7 +1,7 @@
 import React, {useLayoutEffect, useMemo, useState} from 'react';
 
 /**
- * Returns elements
+ * Returns style that relative to passed [element] or undefined if element is not provider
  * @param elementRef DOM element react reference
  * @example
  * const parent = useRef<HTMLDivElement>();
