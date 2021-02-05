@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "baseUrl": "./src/",
     "target": "es5",
     "lib": [
       "dom",
@@ -27,7 +28,7 @@
     "**/__mocks__"
   ],
   "include": [
-    "src", 
+    "src/**/*",
     "declaration.tsx"
   ]
 }

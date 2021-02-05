@@ -3,33 +3,35 @@ import React from 'react';
 import {Story, Meta} from '@storybook/react/types-6-0';
 
 import Button, {ButtonProps} from './index';
+import {VkIcon} from '../../icons';
 
 export default {
-  title: 'Example/Button',
+  title: 'Button',
   component: Button,
 } as Meta;
 
-const Template: Story<ButtonProps> = (args) => <Button {...args} />;
+const Template: Story<ButtonProps> = (args) => (
+  <div className="theme-profi">
+    <Button {...args} />
+  </div>
+);
 
-export const Primary = Template.bind({});
-Primary.args = {
-  children: 'Button',
+export const Default = Template.bind({});
+Default.args = {
+  children: 'Обычная кнопка',
 };
 
-export const Secondary = Template.bind({});
-Secondary.args = {
-  variant: 'secondary',
-  children: 'Button',
+export const With_icon = Template.bind({});
+With_icon.args = {
+  children: (
+    <>
+      <VkIcon />
+      Кнопка с иконкой
+    </>
+  ),
 };
 
-export const Large = Template.bind({});
-Large.args = {
-  size: 'large',
-  children: 'Button',
-};
-
-export const Small = Template.bind({});
-Small.args = {
-  size: 'small',
-  children: 'Button',
+export const With_loader = Template.bind({});
+With_loader.args = {
+  isLoading: true,
 };

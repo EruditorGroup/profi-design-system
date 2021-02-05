@@ -3,7 +3,7 @@ import classnames from 'classnames';
 
 import styles from './Link.module.css';
 
-interface LinkProps
+export interface LinkProps
   extends React.AnchorHTMLAttributes<HTMLAnchorElement>,
     React.RefAttributes<HTMLAnchorElement> {}
 
