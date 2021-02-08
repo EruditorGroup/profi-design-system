@@ -1,3 +1,3 @@
-export {default as Button} from './Button';
-export {default as Loader} from './Loader';
-export {default as Link} from './Link';
+export {default as Butto, ButtonProps} from './Button';
+export {default as LoaderDots, LoaderProps} from './LoaderDots';
+export {default as Link, LinkProps} from './Link';
