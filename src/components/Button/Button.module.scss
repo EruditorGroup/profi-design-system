@@ -27,17 +27,54 @@
 .design-primary {
   color: white;
   background-color: var(--color-brand);
+
   &:hover:not([disabled]) {
     background-color: var(--bright-red);
+  }
+
+  &[disabled],
+  &[disabled]:hover {
+    background: var(--color-border);
   }
 }
 
 .design-secondary {
-  color: #333;
+  background: var(--light-blue);
+  color: var(--color-text);
+  font-weight: 600;
   background-color: transparent;
   box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 0px 1px inset;
+
   &:hover:not([disabled]) {
-    background-color: #cecece;
+    background: var(--light-blue-hover);
+  }
+
+  &:active:not([disabled]) {
+    background: var(--light-blue-active);
+  }
+
+  &[disabled],
+  &[disabled]:hover {
+    background: var(--color-border);
+  }
+}
+
+.design-light {
+  background: var(--grey-line);
+  color: var(--color-text);
+  font-weight: 600;
+
+  &:hover {
+    background: var(--light-grey);
+  }
+
+  &:active {
+    background: var(--medium-grey);
+  }
+
+  &[disabled],
+  &[disabled]:hover {
+    background: var(--color-border);
   }
 }
 

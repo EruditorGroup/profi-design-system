@@ -7,7 +7,7 @@ import styles from './Button.module.scss';
 export interface ButtonProps
   extends React.ButtonHTMLAttributes<HTMLButtonElement>,
     React.RefAttributes<HTMLButtonElement> {
-  design?: 'primary' | 'secondary' | 'yandex' | 'facebook' | 'vk';
+  design?: 'primary' | 'secondary' | 'light' | 'yandex' | 'facebook' | 'vk';
   fit?: boolean;
   size?: 'large' | 'small' | 'normal';
   isLoading?: boolean;
@@ -20,6 +20,7 @@ const Button: React.ForwardRefExoticComponent<ButtonProps> = forwardRef(
       design = 'primary',
       block = false,
       size = 'normal',
+      disabled,
       isLoading = false,
       fit = false, // без отступов
       children,
@@ -31,10 +32,11 @@ const Button: React.ForwardRefExoticComponent<ButtonProps> = forwardRef(
     return (
       <button
         ref={ref}
+        disabled={isLoading || disabled}
         className={classnames(
           styles['button'],
           styles[`design-${design}`],
-          styles[`size_${size}`],
+          styles[`size-${size}`],
           fit && styles['fit'],
           block && styles[`block`],
           className,
