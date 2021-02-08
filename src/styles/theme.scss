@@ -5,6 +5,7 @@
   --color-vk: #2787f5;
   --color-text: #000;
 
+  --grey-line: #e6e9f0;
   --dark-grey: #7d8089;
   --light-grey: #f2f4f8;
   --medium-grey: #c8cbd2;
@@ -14,7 +15,10 @@
   --border-radius-large: 10px;
   --border-radius-extra-large: 16px;
 
-  /* TODO: deprecated namings */
+  /* TODO: 
+  * ЗАРЕФАКТОРИТЬ после релиза дизайн-системы. 
+  * У нас слишком много цветов! 
+  */
   --color-border: #c8cbd2;
   --lightest-grey: #f7f8f9;
   --grayf: #f1f1f1;
@@ -27,7 +31,6 @@
   --cornflower-blue: #adceff;
   --hawkes-blue: #d6e6ff;
   --dark-border: #484a4f;
-  --grey-line: #e6e9f0;
   --tab-grey: #9d9fa5;
   --icon-grey: #cacfda;
   --gray-tag-hover: #c9cfde;
