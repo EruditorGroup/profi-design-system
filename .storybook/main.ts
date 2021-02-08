@@ -7,6 +7,13 @@ module.exports = {
   webpackFinal: async (config, {configType}) => {
     return {
       ...config,
+      resolve: {
+        ...config.resolve,
+        extensions: [
+          ...config.resolve.extensions,
+          ...webpackConfig.resolve.extensions,
+        ],
+      },
       module: {
         ...config.module,
         rules: webpackConfig.module.rules,
