@@ -1,0 +1,127 @@
+.button {
+  position: relative;
+  border: none;
+  font-family: var(--font-family);
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.4;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  outline: none;
+  height: 50px;
+  padding: 0 20px;
+
+  svg {
+    padding-right: 0.5rem;
+  }
+
+  &[disabled] {
+    opacity: 0.65;
+    cursor: default;
+  }
+}
+
+.design-primary {
+  color: white;
+  background-color: var(--color-brand);
+
+  &:hover:not([disabled]) {
+    background-color: var(--bright-red);
+  }
+
+  &[disabled],
+  &[disabled]:hover {
+    background: var(--color-border);
+  }
+}
+
+.design-secondary {
+  background: var(--light-blue);
+  color: var(--color-text);
+  font-weight: 600;
+  background-color: transparent;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 0px 1px inset;
+
+  &:hover:not([disabled]) {
+    background: var(--light-blue-hover);
+  }
+
+  &:active:not([disabled]) {
+    background: var(--light-blue-active);
+  }
+
+  &[disabled],
+  &[disabled]:hover {
+    background: var(--color-border);
+  }
+}
+
+.design-light {
+  background: var(--grey-line);
+  color: var(--color-text);
+  font-weight: 600;
+
+  &:hover {
+    background: var(--light-grey);
+  }
+
+  &:active {
+    background: var(--medium-grey);
+  }
+
+  &[disabled],
+  &[disabled]:hover {
+    background: var(--color-border);
+  }
+}
+
+.design-facebook {
+  background: var(--color-facebook);
+  color: #fff;
+  &:hover:not([disabled]) {
+    background-color: #1771e5;
+  }
+}
+
+.design-yandex {
+  background: var(--color-yandex);
+  color: #000;
+  &:hover:not([disabled]) {
+    background-color: #fac000;
+  }
+}
+
+.design-vk {
+  background-color: var(--color-vk);
+  color: #fff;
+  &:hover:not([disabled]) {
+    background-color: #257fe7;
+  }
+}
+
+.size-small {
+  font-size: 12px;
+  padding: 10px 16px;
+}
+
+.size-medium {
+  font-size: 14px;
+  padding: 11px 20px;
+}
+
+.size-large {
+  font-size: 16px;
+  padding: 12px 24px;
+}
+
+.block {
+  width: 100%;
+}
+
+.fit {
+  padding-right: 0;
+  padding-left: 0;
+}
