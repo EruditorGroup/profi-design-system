@@ -1,10 +1,12 @@
 const extractCss = !!process.env.EXTRACT_CSS;
+const isProduction = process.env.NODE_ENV === 'production';
+const isTest = process.env.NODE_ENV === 'test';
 
 module.exports = {
   presets: [
-    ['@babel/preset-env', {targets: {node: 'current'}}],
+    isTest && ['@babel/preset-env', {targets: {node: 'current'}}],
     '@babel/preset-react',
-  ],
+  ].filter(Boolean),
   plugins: [
     [
       '@babel/plugin-transform-typescript',
@@ -14,6 +16,7 @@ module.exports = {
         isTSX: true,
       },
     ],
+    (extractCss || isTest) && 'transform-postcss',
     extractCss && [
       'css-modules-transform',
       {

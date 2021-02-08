@@ -1,24 +1,30 @@
-import classnames from 'classnames';
 import React, {forwardRef} from 'react';
+import classnames from 'classnames';
+import LoaderDots from '../LoaderDots';
 
-import styles from './Button.module.css';
+import styles from './Button.module.scss';
 
 export interface ButtonProps
   extends React.ButtonHTMLAttributes<HTMLButtonElement>,
     React.RefAttributes<HTMLButtonElement> {
-  variant?: 'primary' | 'secondary';
+  design?: 'primary' | 'secondary' | 'light' | 'yandex' | 'facebook' | 'vk';
+  fit?: boolean;
   size?: 'large' | 'small' | 'normal';
   isLoading?: boolean;
+  block?: boolean;
 }
 
 const Button: React.ForwardRefExoticComponent<ButtonProps> = forwardRef(
   (
     {
-      variant = 'primary',
-      isLoading = false,
+      design = 'primary',
+      block = false,
       size = 'normal',
-      className,
+      disabled,
+      isLoading = false,
+      fit = false, // без отступов
       children,
+      className,
       ...props
     },
     ref,
@@ -26,15 +32,25 @@ const Button: React.ForwardRefExoticComponent<ButtonProps> = forwardRef(
     return (
       <button
         ref={ref}
+        disabled={isLoading || disabled}
         className={classnames(
           styles['button'],
-          styles[`button--${size}`],
-          styles[`button--${variant}`],
+          styles[`design-${design}`],
+          styles[`size-${size}`],
+          fit && styles['fit'],
+          block && styles[`block`],
           className,
         )}
         {...props}
       >
-        {isLoading ? 'Loading...' : children}
+        {isLoading ? (
+          <>
+            <LoaderDots />
+            {children}
+          </>
+        ) : (
+          children
+        )}
       </button>
     );
   },
