@@ -16,7 +16,7 @@ module.exports = {
         isTSX: true,
       },
     ],
-    extractCss || (isTest && 'transform-postcss'),
+    (extractCss || isTest) && 'transform-postcss',
     extractCss && [
       'css-modules-transform',
       {
