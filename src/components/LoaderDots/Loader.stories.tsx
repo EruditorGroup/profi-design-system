@@ -9,10 +9,10 @@ export default {
   component: LoaderDots,
 } as Meta;
 
-const Template: Story<LoaderProps> = (args) => (
-  <div className="theme-profi">
-    <LoaderDots {...args} />
-  </div>
-);
+const Template: Story<LoaderProps> = (args) => <LoaderDots {...args} />;
 
 export const Default = Template.bind({});
+Default.args = {
+  margin: '20',
+  color: 'gray',
+};

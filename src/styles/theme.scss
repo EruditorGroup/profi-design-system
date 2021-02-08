@@ -3,17 +3,19 @@
   --color-facebook: #1878f2;
   --color-yandex: #ffcc00;
   --color-vk: #2787f5;
+  --color-text: #000;
 
+  --dark-grey: #7d8089;
   --light-grey: #f2f4f8;
+  --medium-grey: #c8cbd2;
 
   --border-radius-small: 4px;
   --border-radius: 8px;
   --border-radius-large: 10px;
   --border-radius-extra-large: 16px;
 
-  --dark-grey: #7d8089;
-  --medium-grey: #c8cbd2;
-  --border-color: #c8cbd2;
+  /* TODO: deprecated namings */
+  --color-border: #c8cbd2;
   --lightest-grey: #f7f8f9;
   --grayf: #f1f1f1;
   --blue: #0087c6;
@@ -33,7 +35,6 @@
   --gray-tag-active-nover: #9da8c4;
   --tag-active: #e1e1dd;
   --transparent: rgba(0, 0, 0, 0.6);
-  --profi-red: #c00027;
   --bright-red: #e72446;
   --light-red: #fce7eb;
   --mauvelous: #f1859b;
@@ -53,7 +54,6 @@
   --border-radius-16: 16px;
   --black: #000;
   --white: #fff;
-  --profi-text: #000;
   --profi-black: #33363a;
   --title: #000;
   --gray-shadow: #c5c2d4;

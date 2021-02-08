@@ -17,7 +17,13 @@ _DEV_
 
 _Как мигрировать с warp ui_
 
-- Иконки стали использовать currentColor
+- Loader
+
+* { size="large" } изменен на { size="extraLarge" }
+
+- Icon
+
+* Иконки стали использовать currentColor
 
 _Обсудить:_
 

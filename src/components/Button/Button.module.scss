@@ -20,6 +20,7 @@
 
   &[disabled] {
     opacity: 0.65;
+    cursor: default;
   }
 }
 
@@ -81,4 +82,9 @@
 
 .block {
   width: 100%;
+}
+
+.fit {
+  padding-right: 0;
+  padding-left: 0;
 }

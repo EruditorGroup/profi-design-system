@@ -4,6 +4,7 @@ import {Story, Meta} from '@storybook/react/types-6-0';
 
 import Button, {ButtonProps} from './index';
 import {VkIcon} from '../../icons';
+import LoaderDots from '../LoaderDots';
 
 export default {
   title: 'Button',
@@ -11,27 +12,16 @@ export default {
 } as Meta;
 
 const Template: Story<ButtonProps> = (args) => (
-  <div className="theme-profi">
-    <Button {...args} />
-  </div>
+  <>
+    <Button {...args}>Обычная кнопка</Button>
+    <Button {...args} style={{marginTop: '10px'}}>
+      <VkIcon />
+      Кнопка с иконкой
+    </Button>
+    <Button {...args} disabled style={{marginTop: '10px'}}>
+      <LoaderDots />
+    </Button>
+  </>
 );
 
 export const Default = Template.bind({});
-Default.args = {
-  children: 'Обычная кнопка',
-};
-
-export const With_icon = Template.bind({});
-With_icon.args = {
-  children: (
-    <>
-      <VkIcon />
-      Кнопка с иконкой
-    </>
-  ),
-};
-
-export const With_loader = Template.bind({});
-With_loader.args = {
-  isLoading: true,
-};

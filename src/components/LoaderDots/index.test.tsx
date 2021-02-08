@@ -1,10 +1,10 @@
 import React from 'react';
 import {mount} from 'enzyme';
-import Loader from '.';
+import LoaderDots from '.';
 
-describe('Loader', () => {
-  it('renders loader', () => {
-    const component = mount(<Loader />);
+describe('LoaderDots', () => {
+  it('renders LoaderDots', () => {
+    const component = mount(<LoaderDots />);
     const div = component.find('[title="loader"]');
     expect(div).not.toBeNull();
   });

@@ -1,36 +1,63 @@
 .loader {
   position: relative;
+  justify-content: space-between;
+  align-items: center;
+  display: flex;
   width: 42px;
-  height: 5px;
 }
 
 .size-extraSmall {
   width: 16px;
 }
 
+.size-large {
+  width: 112px;
+}
+
 .dot {
   position: relative;
-  display: inline-block;
   will-change: transform;
+  transform-origin: 50%;
   animation: dotLoader 0.6s infinite ease-in-out;
 
   &:before {
-    position: absolute;
     display: block;
-    border-radius: 100%;
     content: '';
     transform: scale(0.6);
   }
 
   &:nth-child(2):before {
-    animation-delay: 0.2s;
+    animation: dotLoader 0.6s infinite ease-in-out 0.2s;
   }
   &:nth-child(3):before {
-    animation-delay: 0.4s;
+    animation: dotLoader 0.6s infinite ease-in-out 0.4s;
+  }
+}
+
+.dotDesign-circle {
+  &:before {
+    border-radius: 100%;
+  }
+}
+
+.dotDesign-square {
+  &:before {
+    height: 22px;
+    width: 22px;
   }
 }
 
 .dotSize {
+  &-extra-large {
+    width: 40px;
+    height: 40px;
+  }
+
+  &-large {
+    width: 40px;
+    height: 40px;
+  }
+
   &-medium {
     width: 10px;
     height: 10px;
