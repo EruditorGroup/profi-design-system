@@ -15,9 +15,9 @@ module.exports = {
     extensions: ['.js', '.jsx', '.ts', '.tsx', 'css', 'scss', 'sass'],
   },
   plugins: [
-    new MiniCssExtractPlugin({
-      filename: isProduction ? '[name].[contenthash].css' : '[name].css',
-    }),
+    // new MiniCssExtractPlugin({
+    //   filename: isProduction ? '[name].[contenthash].css' : '[name].css',
+    // }),
   ],
   module: {
     rules: [
@@ -32,7 +32,8 @@ module.exports = {
       {
         test: /\.(css|scss|sass)$/,
         use: [
-          {loader: isProduction ? MiniCssExtractPlugin.loader : 'style-loader'},
+          // {loader: isProduction ? MiniCssExtractPlugin.loader : 'style-loader'},
+          {loader: 'style-loader'},
           {
             loader: 'css-loader',
             options: {
