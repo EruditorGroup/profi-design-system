@@ -3,7 +3,6 @@ on:
   push:
     branches:
       - master
-    paths: ['src/components/**/*stories*']
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
