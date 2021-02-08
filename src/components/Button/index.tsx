@@ -8,7 +8,8 @@ export interface ButtonProps
   extends React.ButtonHTMLAttributes<HTMLButtonElement>,
     React.RefAttributes<HTMLButtonElement> {
   design?: 'primary' | 'secondary' | 'yandex' | 'facebook' | 'vk';
-  // size?: 'large' | 'small' | 'normal';
+  fit?: boolean;
+  size?: 'large' | 'small' | 'normal';
   isLoading?: boolean;
   block?: boolean;
 }
@@ -17,12 +18,12 @@ const Button: React.ForwardRefExoticComponent<ButtonProps> = forwardRef(
   (
     {
       design = 'primary',
-      isLoading = false,
       block = false,
-      disabled,
-      // size = 'normal',
-      className,
+      size = 'normal',
+      isLoading = false,
+      fit = false, // без отступов
       children,
+      className,
       ...props
     },
     ref,
@@ -32,15 +33,22 @@ const Button: React.ForwardRefExoticComponent<ButtonProps> = forwardRef(
         ref={ref}
         className={classnames(
           styles['button'],
-          // styles[`size-${size}`],
           styles[`design-${design}`],
+          styles[`size_${size}`],
+          fit && styles['fit'],
           block && styles[`block`],
           className,
         )}
-        disabled={isLoading || disabled}
         {...props}
       >
-        {isLoading ? <LoaderDots /> : children}
+        {isLoading ? (
+          <>
+            <LoaderDots />
+            {children}
+          </>
+        ) : (
+          children
+        )}
       </button>
     );
   },

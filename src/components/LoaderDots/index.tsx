@@ -6,19 +6,30 @@ import styles from './Loader.module.scss';
 export interface LoaderProps
   extends React.HTMLAttributes<HTMLDivElement>,
     React.RefAttributes<HTMLDivElement> {
-  // design?: 'dots' | 'line';
+  design?: 'circle' | 'square';
   size?: 'extraSmall' | 'small' | 'medium' | 'large';
   color?: 'white' | 'gray';
+  animation?: 'scale' | 'blick';
 }
 
 const LoaderDots: React.ForwardRefExoticComponent<LoaderProps> = forwardRef(
-  ({size = 'small', color = 'white', ...props}: LoaderProps, ref) => (
+  (
+    {
+      size = 'medium',
+      design = 'square',
+      animation = 'scale',
+      color = 'white',
+      ...props
+    }: LoaderProps,
+    ref,
+  ) => (
     <div
       className={classnames(
         styles['loader'],
-        // styles[`design-${design}`],
         styles[`size-${size}`],
+        styles[`design-${design}`],
       )}
+      ref={ref}
       {...props}
     >
       {Array.from({length: 3}).map((_, i) => (
@@ -26,6 +37,8 @@ const LoaderDots: React.ForwardRefExoticComponent<LoaderProps> = forwardRef(
           key={i}
           className={[
             styles['dot'],
+            styles[`dotAnimation-${animation}`],
+            styles[`dotDesign-${design}`],
             styles[`dotSize-${size}`],
             styles[`dotColor-${color}`],
           ].join(' ')}
