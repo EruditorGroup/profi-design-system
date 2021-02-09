@@ -1,2 +1,2 @@
 // declaration.d.ts
-declare module '*.css';
+import '../src/declaration';
