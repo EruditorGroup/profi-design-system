@@ -24,6 +24,15 @@ const Template: Story = (args) => {
       </Radio>
       <Radio
         name="storybook"
+        value="disabled"
+        disabled
+        style={{marginTop: '10px'}}
+        {...args}
+      >
+        Disabled Radio
+      </Radio>
+      <Radio
+        name="storybook"
         value="default"
         onChange={() => setSelected('default')}
         checked={selected === 'default'}
