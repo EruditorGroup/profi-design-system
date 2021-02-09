@@ -1,5 +1,11 @@
 // @flow
-import {useState, useEffect, useCallback} from 'react';
+import {
+  useState,
+  useEffect,
+  useCallback,
+  SetStateAction,
+  Dispatch,
+} from 'react';
 
 type RefType = {current: HTMLElement | null};
 
@@ -11,24 +17,27 @@ type VisibilityTogglerProps = {
 export default function useVisibilityToggler({
   defaultState = false,
   refs,
-}: VisibilityTogglerProps) {
+}: VisibilityTogglerProps): [boolean, Dispatch<SetStateAction<boolean>>] {
   const [isOpen, setIsOpen] = useState(defaultState);
 
   const handleChangePagePosition = useCallback(() => {
     setIsOpen(false);
   }, []);
 
-  const handleMousedown = useCallback(({target}: MouseEvent) => {
-    if (
-      target instanceof Node &&
-      !refs.some((ref) => {
-        if (ref instanceof Node) return ref.contains(target);
-        return ref.current && ref.current.contains(target);
-      })
-    ) {
-      setIsOpen(false);
-    }
-  }, []);
+  const handleMousedown = useCallback(
+    ({target}: MouseEvent) => {
+      if (
+        target instanceof Node &&
+        !refs.some((ref) => {
+          if (ref instanceof Node) return ref.contains(target);
+          return ref.current && ref.current.contains(target);
+        })
+      ) {
+        setIsOpen(false);
+      }
+    },
+    [refs],
+  );
 
   useEffect(() => {
     if (isOpen) {

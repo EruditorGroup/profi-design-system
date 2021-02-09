@@ -9,6 +9,22 @@ export default {
   component: Input,
 } as Meta;
 
-const Template: Story<InputProps> = (args) => <Input {...args} />;
+const Template: Story<InputProps> = (args) => (
+  <div>
+    <Input {...args} block placeholder="Статичный плейсхолдер" />
+    <Input
+      {...args}
+      style={{marginTop: '10px'}}
+      withFloatLabel
+      placeholder="Плавающий плейсхолдер"
+    />
+    <Input
+      {...args}
+      style={{marginTop: '10px'}}
+      placeholder="С маской"
+      mask={'+9 999 999-99-99'}
+    />
+  </div>
+);
 
-export const Primary = Template.bind({});
+export const Default = Template.bind({});

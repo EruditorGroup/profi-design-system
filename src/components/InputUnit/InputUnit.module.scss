@@ -1,0 +1,29 @@
+.wrapper {
+  position: relative;
+  background: #fff;
+}
+
+.input {
+  position: relative;
+  z-index: 2;
+  background: transparent;
+}
+
+.unit {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  bottom: 0;
+  margin: auto 0;
+  padding-left: 10px;
+}
+
+.value {
+  color: transparent;
+}
+
+.unitOffset {
+  width: 5px;
+}

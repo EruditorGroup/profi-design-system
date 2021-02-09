@@ -11,7 +11,7 @@ export default function useCombinedRef<T>(
   const combinedRef = useRef(function setRefs(arg: T | null) {
     refs.forEach((ref) => {
       if (typeof ref === 'function') ref(arg);
-      else if (ref != null) ref.current = arg!;
+      else if (ref !== null && arg) ref.current = arg;
     });
   });
 
