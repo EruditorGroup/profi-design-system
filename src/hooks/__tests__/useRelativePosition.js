@@ -30,7 +30,7 @@ describe('useRelativePosition', () => {
     expect(useRelativePosition).toBeDefined();
   });
 
-  it('', () => {
+  it('should return undefined when element is undefined', () => {
     let hook = renderHook(() => useRelativePosition());
     expect(hook.result.current).toBe(undefined);
   });

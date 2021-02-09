@@ -3,7 +3,7 @@
   border: none;
   font-family: var(--font-family);
   font-size: 16px;
-  font-weight: 500;
+  font-weight: 600;
   line-height: 1.4;
   border-radius: var(--border-radius);
   cursor: pointer;
@@ -29,7 +29,11 @@
   background-color: var(--color-brand);
 
   &:hover:not([disabled]) {
-    background-color: var(--bright-red);
+    background-color: var(--color-brand-hover);
+  }
+
+  &:active:not([disabled]) {
+    background: var(--color-brand-active);
   }
 
   &[disabled],

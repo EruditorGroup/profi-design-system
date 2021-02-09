@@ -1,0 +1,54 @@
+.form-control {
+  position: relative;
+}
+
+.input {
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  height: 50px;
+  padding: 0 12px 0 10px;
+  border: 1px solid var(--color-border);
+  color: var(--color-text);
+  border-radius: 4px;
+  font-size: 16px;
+  font-family: var(--font-family);
+  transition: border-color 0.15s ease;
+  -webkit-appearance: none;
+}
+
+.input-withFloatLabel {
+  padding-top: 10px;
+}
+
+.block {
+  display: block;
+  width: 100%;
+}
+
+.floatLabel {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 10px;
+  display: block;
+  overflow: hidden;
+  width: calc(100% - 15px);
+  height: 22px;
+  margin: auto;
+  color: var(--dark-grey);
+  white-space: nowrap;
+  font-size: 16px;
+  line-height: 22px;
+  transition-timing-function: ease-in-out;
+  transition-duration: 0.15s;
+  transition-property: top, font-size;
+  transform: translateZ(0);
+  pointer-events: none;
+  will-change: top, font-size;
+
+  &-floated {
+    top: -25px;
+    font-size: 13px;
+  }
+}
