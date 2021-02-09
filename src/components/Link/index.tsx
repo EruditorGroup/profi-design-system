@@ -7,7 +7,6 @@ export interface LinkProps
   extends Omit<React.AnchorHTMLAttributes<HTMLAnchorElement>, 'href'>, //хотим "to" вместо "href"?
     React.RefAttributes<HTMLAnchorElement> {
   to: string;
-  shmid?: string;
   disabled?: boolean;
   color?:
     | 'default'
