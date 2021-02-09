@@ -3,7 +3,7 @@
   border: none;
   font-family: var(--font-family);
   font-size: 16px;
-  font-weight: 600;
+  font-weight: 500;
   line-height: 1.4;
   border-radius: var(--border-radius);
   cursor: pointer;
@@ -16,6 +16,7 @@
 
   svg {
     padding-right: 0.5rem;
+    flex-shrink: 0;
   }
 
   &[disabled] {

@@ -5,7 +5,7 @@ import {Story, Meta} from '@storybook/react/types-6-0';
 import Input, {InputProps} from './index';
 
 export default {
-  title: 'Input',
+  title: 'Form.Input',
   component: Input,
 } as Meta;
 

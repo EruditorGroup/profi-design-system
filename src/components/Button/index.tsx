@@ -5,8 +5,7 @@ import LoaderDots from '../LoaderDots';
 import styles from './Button.module.scss';
 
 export interface ButtonProps
-  extends React.ButtonHTMLAttributes<HTMLButtonElement>,
-    React.RefAttributes<HTMLButtonElement> {
+  extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   design?: 'primary' | 'secondary' | 'light' | 'yandex' | 'facebook' | 'vk';
   fit?: boolean;
   size?: 'large' | 'small' | 'normal';
@@ -14,7 +13,9 @@ export interface ButtonProps
   block?: boolean;
 }
 
-const Button: React.ForwardRefExoticComponent<ButtonProps> = forwardRef(
+const Button: React.ForwardRefExoticComponent<
+  ButtonProps & React.RefAttributes<HTMLButtonElement>
+> = forwardRef(
   (
     {
       design = 'primary',
