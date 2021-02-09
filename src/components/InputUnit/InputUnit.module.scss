@@ -18,6 +18,10 @@
   bottom: 0;
   margin: auto 0;
   padding-left: 10px;
+
+  &-withFloatLabel {
+    padding-top: 10px;
+  }
 }
 
 .value {

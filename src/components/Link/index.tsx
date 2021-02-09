@@ -4,8 +4,8 @@ import classnames from 'classnames';
 import styles from './Link.module.scss';
 
 export interface LinkProps
-  extends Omit<React.AnchorHTMLAttributes<HTMLAnchorElement>, 'href'>, //хотим "to" вместо "href"?
-    React.RefAttributes<HTMLAnchorElement> {
+  extends Omit<React.AnchorHTMLAttributes<HTMLAnchorElement>, 'href'> {
+  //хотим "to" вместо "href"?
   to: string;
   disabled?: boolean;
   color?:
@@ -32,7 +32,9 @@ export interface LinkProps
   underlined?: boolean;
 }
 
-const Link: React.ForwardRefExoticComponent<LinkProps> = forwardRef(
+const Link: React.ForwardRefExoticComponent<
+  LinkProps & React.RefAttributes<HTMLAnchorElement>
+> = forwardRef(
   (
     {
       to: href,

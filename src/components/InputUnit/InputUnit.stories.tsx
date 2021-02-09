@@ -5,7 +5,7 @@ import {Story, Meta} from '@storybook/react/types-6-0';
 import InputUnit, {InputUnitProps} from './index';
 
 export default {
-  title: 'InputUnit',
+  title: 'Form.InputUnit',
   component: InputUnit,
 } as Meta;
 
