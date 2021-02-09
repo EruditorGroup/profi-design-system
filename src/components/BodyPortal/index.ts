@@ -1,4 +1,4 @@
-import {useEffect, useState} from 'react';
+import {useEffect, useMemo} from 'react';
 import {createPortal} from 'react-dom';
 
 type PortalProps = {
@@ -21,12 +21,12 @@ export default function BodyPortal({
   ref,
   children,
 }: PortalProps): React.ReactPortal {
-  const [container] = useState(() => document.createElement('div'));
+  const container = useMemo(() => document.createElement('div'), []);
   if (ref) ref.current = container;
 
   useEffect(() => {
     container.className = className || '';
-  }, [className]);
+  }, [className, container]);
 
   useEffect(() => {
     window.document.body.appendChild(container);

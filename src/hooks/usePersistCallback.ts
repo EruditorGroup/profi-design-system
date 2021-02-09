@@ -2,7 +2,7 @@
 import {useEffect, useCallback, useRef} from 'react';
 
 export default function usePersistCallback(
-  callback: (...args: any[]) => readonly any[],
+  callback: (...args: any[]) => any,
   deps: readonly any[],
 ): typeof callback {
   const callbackRef = useRef(callback);
