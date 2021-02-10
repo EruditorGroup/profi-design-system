@@ -1,10 +1,10 @@
-import {useEffect, useMemo} from 'react';
+import React, {forwardRef, useEffect, useMemo} from 'react';
 import {createPortal} from 'react-dom';
 
 type PortalProps = {
-  ref: React.MutableRefObject<HTMLDivElement>;
-  children: React.ReactElement;
+  children: React.ReactNode;
   className?: string;
+  style?: string;
 };
 
 /**
@@ -16,24 +16,33 @@ type PortalProps = {
  *    <h1>I'm in body right now!</h1>
  *  </BodyPortal>
  */
-export default function BodyPortal({
-  className,
-  ref,
-  children,
-}: PortalProps): React.ReactPortal {
-  const container = useMemo(() => document.createElement('div'), []);
-  if (ref) ref.current = container;
+const BodyPortal: React.ForwardRefExoticComponent<
+  PortalProps & React.RefAttributes<HTMLDivElement>
+> = forwardRef(
+  ({className, style, children}, ref): React.ReactPortal => {
+    const container = useMemo(() => document.createElement('div'), []);
+    if (ref) {
+      if (typeof ref === 'function') ref(container);
+      else if (ref) ref.current = container;
+    }
 
-  useEffect(() => {
-    container.className = className || '';
-  }, [className, container]);
+    useEffect(() => {
+      container.className = className || '';
+    }, [className, container]);
 
-  useEffect(() => {
-    window.document.body.appendChild(container);
-    return () => {
-      window.document.body.removeChild(container);
-    };
-  }, [container]);
+    useEffect(() => {
+      container.setAttribute('style', style || '');
+    }, [style, container]);
 
-  return createPortal(children, container);
-}
+    useEffect(() => {
+      window.document.body.appendChild(container);
+      return () => {
+        window.document.body.removeChild(container);
+      };
+    }, [container]);
+
+    return createPortal(children, container);
+  },
+);
+
+export default BodyPortal;

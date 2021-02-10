@@ -16,6 +16,8 @@ module.exports = {
         isTSX: true,
       },
     ],
+    '@babel/plugin-proposal-nullish-coalescing-operator',
+    '@babel/plugin-proposal-optional-chaining',
     (extractCss || isTest) && 'transform-postcss',
     extractCss && [
       'css-modules-transform',

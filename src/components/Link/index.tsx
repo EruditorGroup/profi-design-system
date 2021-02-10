@@ -6,7 +6,7 @@ import styles from './Link.module.scss';
 export interface LinkProps
   extends Omit<React.AnchorHTMLAttributes<HTMLAnchorElement>, 'href'> {
   //хотим "to" вместо "href"?
-  to: string;
+  to?: string;
   disabled?: boolean;
   color?:
     | 'default'
