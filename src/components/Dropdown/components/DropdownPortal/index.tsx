@@ -17,10 +17,6 @@ interface DropdownPortalProps {
   className?: string;
 }
 
-function toSnakeCase(camelCase: string): string {
-  return camelCase.replace(/([A-Z])/g, '-$1').toLowerCase();
-}
-
 export default function DropdownPortal({
   children,
   className,
@@ -28,17 +24,9 @@ export default function DropdownPortal({
   const context = useContext(DropdownContext);
   const relativePosition = useRelativePosition(context?.togglerRef?.current);
 
-  const css = useMemo(
-    () =>
-      Object.entries(relativePosition ?? {})
-        .map(([k, v]) => `${toSnakeCase(k)}:${v}`)
-        .join(';'),
-    [relativePosition],
-  );
-
   return (
     <BodyPortal
-      style={css}
+      style={relativePosition}
       ref={(el) => {
         if (context) context.contentRef.current = el;
       }}
