@@ -14,21 +14,20 @@
     "strict": true,
     "forceConsistentCasingInFileNames": true,
     "noFallthroughCasesInSwitch": true,
-    "module": "esnext",
+    "module": "commonjs",
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": false,
     "noEmit": true,
     "jsx": "react-jsx",
+    "typeRoots": ["node_modules/@types", "src/typings"],
   },
   "exclude": [
     "**/*.test.tsx",
     "**/*.stories.tsx",
     "**/*.d.ts",
-    "**/__mocks__"
+    "**/__mocks__",
+    "node_modules"
   ],
-  "include": [
-    "src/**/*",
-    "declaration.tsx"
-  ]
+  "include": ["src/**/*"]
 }

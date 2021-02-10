@@ -1,2 +1,3 @@
 src/setupTests.js
 **/__tests__/**
+*.config.js

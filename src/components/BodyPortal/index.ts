@@ -1,10 +1,11 @@
 import React, {forwardRef, useEffect, useMemo} from 'react';
 import {createPortal} from 'react-dom';
+import stringifyCssProps from '../../utils/stringifyCssProps';
 
 type PortalProps = {
   children: React.ReactNode;
   className?: string;
-  style?: string;
+  style?: React.CSSProperties;
 };
 
 /**
@@ -30,9 +31,10 @@ const BodyPortal: React.ForwardRefExoticComponent<
       container.className = className || '';
     }, [className, container]);
 
+    const css = useMemo(() => stringifyCssProps(style), [style]);
     useEffect(() => {
-      container.setAttribute('style', style || '');
-    }, [style, container]);
+      container.setAttribute('style', css);
+    }, [css, container]);
 
     useEffect(() => {
       window.document.body.appendChild(container);

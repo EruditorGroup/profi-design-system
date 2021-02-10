@@ -1,5 +1,7 @@
-import React, {useCallback, useContext, useLayoutEffect, useRef} from 'react';
+import React, {useCallback, useContext} from 'react';
 import {DropdownContext} from '../../index';
+
+import styles from './DropdownToggler.module.scss';
 
 export interface DropdownTogglerProps {
   children: React.ReactNode;
@@ -22,6 +24,7 @@ export default function DropdownToggler({
         if (context) context.togglerRef.current = el;
       }}
       onClick={onClickHandler}
+      className={styles['toggler']}
     >
       {children}
     </div>
