@@ -12,7 +12,7 @@ import React, {useLayoutEffect, useMemo, useState} from 'react';
  * </>
  */
 export default function useRelativePosition<T extends HTMLElement>(
-  element: T | undefined,
+  element: T | null | undefined,
 ): React.CSSProperties | undefined {
   const [css, setCSS] = useState<React.CSSProperties>();
 
@@ -32,7 +32,7 @@ export default function useRelativePosition<T extends HTMLElement>(
   return useMemo(() => {
     if (!css) return undefined;
     return {
-      position: 'fixed',
+      position: 'absolute',
       top: `${css.top}px`,
       left: `${css.left}px`,
       minWidth: `${css.width}px`,

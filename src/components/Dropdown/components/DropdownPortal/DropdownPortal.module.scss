@@ -1,0 +1,16 @@
+.portal {
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  visibility: hidden;
+  transform: translate3d(0, -10px, 0);
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.opened {
+  transform: translate3d(0, 0, 0);
+  opacity: 1;
+  visibility: visible;
+  z-index: 999;
+}
