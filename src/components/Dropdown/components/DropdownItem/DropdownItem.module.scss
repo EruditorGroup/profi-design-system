@@ -1,7 +1,61 @@
 .item {
-  padding: 5px 10px;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+  color: #000;
+  user-select: none;
+  svg {
+    flex-shrink: 0;
+    margin-right: 10px;
+    color: var(--dark-grey);
+  }
+}
+
+.design-light {
+  &:hover {
+    background: var(--light-grey);
+  }
+  &:active {
+    background: var(--medium-grey);
+  }
+}
+.design-brand {
+  &:hover {
+    background: var(--color-brand);
+  }
+  &:active {
+    background: var(--color-brand-active);
+  }
+}
+
+.disabled {
+  svg {
+    color: var(--medium-grey);
+  }
+  &:hover {
+    background: white;
+  }
+  &:active {
+    background: white;
+  }
 }
 
 .divided {
-  border-top: 1px solid var(--medium-grey);
+  margin-bottom: 10px;
+  &:after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 100%;
+    bottom: -10px;
+    left: 0;
+
+    border-bottom: 1px solid var(--medium-grey);
+  }
+  & + .item {
+    margin-top: 10px;
+  }
 }

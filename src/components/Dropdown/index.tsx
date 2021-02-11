@@ -9,23 +9,27 @@ import React, {
 import useClickOutside from '../../hooks/useClickOutside';
 
 export interface DropdownProps {
-  verticalPosition?: 'top' | 'bottom';
+  // verticalPosition?: 'top' | 'bottom';
   horizontalPosition?: 'left' | 'right';
-  opened?: boolean;
+  design?: 'light' | 'brand';
   children?: React.ReactNode;
 }
 
-interface DropdownContext<T extends HTMLElement = HTMLElement> {
+interface DropdownContext extends Omit<DropdownProps, 'children'> {
   isOpened: boolean;
   setOpened: Dispatch<SetStateAction<boolean>>;
-  togglerRef: React.MutableRefObject<T | null>;
-  contentRef: React.MutableRefObject<T | null>;
+  togglerRef: React.MutableRefObject<HTMLElement | null>;
+  contentRef: React.MutableRefObject<HTMLElement | null>;
 }
 
 export const DropdownContext = createContext<DropdownContext | null>(null);
 
-const Dropdown = ({opened, children}: DropdownProps): React.ReactElement => {
-  const [isOpened, setOpened] = useState(opened ?? false);
+const Dropdown = ({
+  children,
+  horizontalPosition = 'right',
+  design = 'light',
+}: DropdownProps): React.ReactElement => {
+  const [isOpened, setOpened] = useState(false);
   const togglerRef = useRef(null);
   const contentRef = useRef(null);
 
@@ -35,8 +39,10 @@ const Dropdown = ({opened, children}: DropdownProps): React.ReactElement => {
       setOpened,
       togglerRef,
       contentRef,
+      design,
+      horizontalPosition,
     }),
-    [isOpened, togglerRef, contentRef],
+    [isOpened, togglerRef, contentRef, design, horizontalPosition],
   );
 
   useClickOutside(contentRef, () => isOpened && setOpened(false));
