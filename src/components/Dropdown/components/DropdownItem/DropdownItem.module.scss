@@ -10,11 +10,13 @@
   svg {
     flex-shrink: 0;
     margin-right: 10px;
-    color: var(--dark-grey);
   }
 }
 
 .design-light {
+  svg {
+    color: var(--dark-grey);
+  }
   &:hover {
     background: var(--light-grey);
   }
@@ -22,23 +24,30 @@
     background: var(--medium-grey);
   }
 }
+
 .design-brand {
   &:hover {
+    color: #fff;
     background: var(--color-brand);
   }
   &:active {
+    color: #fff;
     background: var(--color-brand-active);
   }
 }
 
 .disabled {
+  color: var(--dark-grey);
+  cursor: default;
   svg {
     color: var(--medium-grey);
   }
   &:hover {
+    color: var(--dark-grey);
     background: white;
   }
   &:active {
+    color: var(--dark-grey);
     background: white;
   }
 }
