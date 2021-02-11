@@ -1,7 +1,6 @@
 import React, {forwardRef, useContext} from 'react';
 import classnames from 'classnames';
 import styles from './DropdownItem.module.scss';
-import Link from '../../../../components/Link';
 import {DropdownContext} from '../../index';
 
 export interface DropdownItemProps
@@ -13,23 +12,24 @@ export interface DropdownItemProps
 
 const DropdownItem: React.ForwardRefExoticComponent<
   DropdownItemProps & React.RefAttributes<HTMLAnchorElement>
-> = forwardRef(({to, disabled = false, divided = false, ...props}, ref) => {
-  const context = useContext(DropdownContext);
-  return (
-    <Link
-      className={classnames(
-        styles['item'],
-        divided && styles['divided'],
-        disabled && styles['disabled'],
-        styles[`design-${context?.design}`],
-      )}
-      to={to}
-      ref={ref}
-      {...props}
-      color={disabled ? 'dark-grey' : 'black'}
-      disabled={disabled}
-    />
-  );
-});
+> = forwardRef(
+  ({to, disabled = false, divided = false, className, ...props}, ref) => {
+    const context = useContext(DropdownContext);
+    return (
+      <a
+        className={classnames(
+          styles['item'],
+          divided && styles['divided'],
+          disabled && styles['disabled'],
+          styles[`design-${context?.design}`],
+          className,
+        )}
+        href={to}
+        ref={ref}
+        {...props}
+      />
+    );
+  },
+);
 
 export default DropdownItem;
