@@ -26,7 +26,7 @@ export const DropdownContext = createContext<DropdownContext | null>(null);
 
 const Dropdown = ({
   children,
-  horizontalPosition = 'right',
+  horizontalPosition = 'left',
   design = 'light',
 }: DropdownProps): React.ReactElement => {
   const [isOpened, setOpened] = useState(false);
