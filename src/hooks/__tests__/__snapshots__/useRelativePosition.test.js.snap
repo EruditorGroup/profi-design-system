@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`useRelativePosition should use getBoundingClientRect to calculate styles 1`] = `
+Object {
+  "left": "auto",
+  "minWidth": "70px",
+  "position": "absolute",
+  "right": "auto",
+  "top": "60px",
+  "zIndex": 10000000,
+}
+`;

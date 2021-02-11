@@ -1,4 +1,10 @@
-import React, {useLayoutEffect, useMemo, useState} from 'react';
+import React, {
+  useCallback,
+  useEffect,
+  useLayoutEffect,
+  useMemo,
+  useState,
+} from 'react';
 
 /**
  * Returns style that relative to passed [element] or undefined if element is not provider
@@ -12,29 +18,42 @@ import React, {useLayoutEffect, useMemo, useState} from 'react';
  * </>
  */
 export default function useRelativePosition<T extends HTMLElement>(
-  element: T | undefined,
+  element: T | null | undefined,
+  align: 'left' | 'right',
 ): React.CSSProperties | undefined {
+  const [clientRects, setClientRects] = useState<DOMRect>();
   const [css, setCSS] = useState<React.CSSProperties>();
 
+  const calcRects = useCallback(
+    () => setClientRects(element?.getBoundingClientRect()),
+    [element],
+  );
+
+  useLayoutEffect(() => calcRects(), [calcRects]);
+
+  useEffect(() => {
+    window.addEventListener('resize', calcRects, false);
+    return () => window.removeEventListener('resize', calcRects, false);
+  }, [calcRects]);
+
   useLayoutEffect(() => {
-    if (element) {
-      const rects = element.getBoundingClientRect();
-      setCSS({
-        top: rects.top + rects.height,
-        left: rects.left,
-        width: rects.width,
-      });
+    if (clientRects) {
+      const {top, left, right, width, height} = clientRects;
+      setCSS({width, top: top + height});
+      if (align === 'left') setCSS((css) => ({...css, left}));
+      if (align === 'right') setCSS((css) => ({...css, right: right - width}));
     } else {
       setCSS(undefined);
     }
-  }, [element]);
+  }, [clientRects, align]);
 
   return useMemo(() => {
     if (!css) return undefined;
     return {
-      position: 'fixed',
+      position: 'absolute',
       top: `${css.top}px`,
-      left: `${css.left}px`,
+      left: css.left ? `${css.left}px` : 'auto',
+      right: css.right ? `${css.right}px` : 'auto',
       minWidth: `${css.width}px`,
       zIndex: 10000000,
     };

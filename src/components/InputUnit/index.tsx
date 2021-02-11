@@ -1,4 +1,9 @@
-import React, {HTMLAttributes, forwardRef, useCallback, useState} from 'react';
+import React, {
+  InputHTMLAttributes,
+  forwardRef,
+  useCallback,
+  useState,
+} from 'react';
 import classNames from 'classnames';
 import Input, {InputProps} from '../Input';
 
@@ -10,36 +15,44 @@ export interface InputUnitProps extends InputProps {
 
 const InputUnit: React.ForwardRefExoticComponent<
   InputUnitProps &
-    HTMLAttributes<HTMLInputElement> &
+    InputHTMLAttributes<HTMLInputElement> &
     React.RefAttributes<HTMLInputElement>
-> = forwardRef(({unit, onKeyUp, ...props}, ref) => {
-  const [value, setValue] = useState('');
-  const _onChange = useCallback(
-    (ev) => {
-      if (onKeyUp) onKeyUp(ev);
-      setValue(ev.target.value.replace(/[^\d]/g, ''));
-    },
-    [onKeyUp],
-  );
+> = forwardRef(
+  ({unit, placeholder, withFloatLabel, onKeyUp, ...props}, ref) => {
+    const [value, setValue] = useState('');
+    const _onChange = useCallback(
+      (ev) => {
+        if (onKeyUp) onKeyUp(ev);
+        setValue(ev.target.value.replace(/[^\d]/g, ''));
+      },
+      [onKeyUp],
+    );
 
-  return (
-    <div className={classNames(styles['wrapper'], styles)}>
-      <Input
-        onChange={_onChange}
-        value={value}
-        className={styles['input']}
-        ref={ref}
-        {...props}
-      />
-      {unit && (
-        <div className={styles['unit']}>
-          <span className={styles['value']}>{value}</span>
-          <span className={styles['unitOffset']} />
-          {unit}
-        </div>
-      )}
-    </div>
-  );
-});
+    return (
+      <div className={classNames(styles['wrapper'], styles)}>
+        <Input
+          onChange={_onChange}
+          value={value}
+          className={styles['input']}
+          ref={ref}
+          withFloatLabel={withFloatLabel}
+          placeholder={placeholder}
+          {...props}
+        />
+        {unit && (
+          <div
+            className={classNames(styles['unit'], {
+              [styles['unit-withFloatLabel']]: placeholder && withFloatLabel,
+            })}
+          >
+            <span className={styles['value']}>{value}</span>
+            <span className={styles['unitOffset']} />
+            {!placeholder || value ? unit : ''}
+          </div>
+        )}
+      </div>
+    );
+  },
+);
 
 export default InputUnit;
