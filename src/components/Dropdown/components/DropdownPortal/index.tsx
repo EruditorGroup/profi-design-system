@@ -1,10 +1,4 @@
-import React, {
-  useContext,
-  useEffect,
-  useLayoutEffect,
-  useMemo,
-  useRef,
-} from 'react';
+import React, {useContext} from 'react';
 import {DropdownContext} from '../../../Dropdown';
 import BodyPortal from '../../../BodyPortal';
 import classNames from 'classnames';
