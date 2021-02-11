@@ -1,8 +1,8 @@
 import React, {forwardRef, useEffect, useMemo} from 'react';
 import {createPortal} from 'react-dom';
-import stringifyCssProps from '../../utils/stringifyCssProps';
+import stringifyCssProps from 'utils/stringifyCssProps';
 
-type PortalProps = {
+export type BodyPortalProps = {
   children: React.ReactNode;
   className?: string;
   style?: React.CSSProperties;
@@ -11,14 +11,14 @@ type PortalProps = {
 /**
  * Element creates <div> element and append it to DOM when effect attached.
  * Hook removes <div> from body when effect disposed.
- * @param {PortalProps} props
+ * @param {BodyPortalProps} props
  * @example
  *  <BodyPortal className="superman">
  *    <h1>I'm in body right now!</h1>
  *  </BodyPortal>
  */
 const BodyPortal: React.ForwardRefExoticComponent<
-  PortalProps & React.RefAttributes<HTMLDivElement>
+  BodyPortalProps & React.RefAttributes<HTMLDivElement>
 > = forwardRef(
   ({className, style, children}, ref): React.ReactPortal => {
     const container = useMemo(() => document.createElement('div'), []);

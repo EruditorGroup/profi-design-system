@@ -6,7 +6,7 @@ import React, {
   useMemo,
   useRef,
 } from 'react';
-import useClickOutside from '../../hooks/useClickOutside';
+import useClickOutside from 'hooks/useClickOutside';
 
 export interface DropdownProps {
   // verticalPosition?: 'top' | 'bottom';

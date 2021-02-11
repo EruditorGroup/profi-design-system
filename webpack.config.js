@@ -1,4 +1,5 @@
 const path = require('path');
+const fs = require('fs');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 const isProduction = process.env.NODE_ENV === 'production';
@@ -23,6 +24,12 @@ module.exports = {
     rules: [
       {
         test: /\.tsx?$/,
+        resolve: {
+          alias: fs.readdirSync('./src').reduce((aliases, folder) => ({
+            ...aliases,
+            [folder]: path.resolve(`./src/${folder}`),
+          })),
+        },
         use: [
           {
             loader: 'babel-loader',

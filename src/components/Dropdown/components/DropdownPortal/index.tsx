@@ -1,11 +1,11 @@
 import React, {useContext} from 'react';
-import {DropdownContext} from '../../../Dropdown';
-import BodyPortal from '../../../BodyPortal';
+import {DropdownContext} from 'components/Dropdown';
+import BodyPortal from 'components/BodyPortal';
 import classNames from 'classnames';
 
 import styles from './DropdownPortal.module.scss';
-import theme from '../../../../styles/theme.scss';
-import useRelativePosition from '../../../../hooks/useRelativePosition';
+import theme from 'styles/theme.scss';
+import useRelativePosition from 'hooks/useRelativePosition';
 
 interface DropdownPortalProps {
   children: React.ReactNode;

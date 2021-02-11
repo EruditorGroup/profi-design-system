@@ -1,5 +1,5 @@
 import React, {useCallback, useContext} from 'react';
-import {DropdownContext} from '../../index';
+import {DropdownContext} from 'components/Dropdown';
 
 import styles from './DropdownToggler.module.scss';
 

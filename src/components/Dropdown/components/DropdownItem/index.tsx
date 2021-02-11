@@ -1,7 +1,7 @@
 import React, {forwardRef, useContext} from 'react';
 import classnames from 'classnames';
 import styles from './DropdownItem.module.scss';
-import {DropdownContext} from '../../index';
+import {DropdownContext} from 'components/Dropdown';
 
 export interface DropdownItemProps
   extends Omit<React.AnchorHTMLAttributes<HTMLAnchorElement>, 'href'> {
