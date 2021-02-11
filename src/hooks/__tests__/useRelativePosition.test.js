@@ -16,14 +16,6 @@ describe('useRelativePosition', () => {
         width: 70,
       })),
     };
-
-    expectedResult = {
-      left: '50px',
-      minWidth: '70px',
-      position: 'fixed',
-      top: '60px',
-      zIndex: 10000000,
-    };
   });
 
   it('should be defined', () => {
@@ -37,6 +29,6 @@ describe('useRelativePosition', () => {
 
   it('should use getBoundingClientRect to calculate styles', () => {
     const hook = renderHook(() => useRelativePosition(element));
-    expect(hook.result.current).toEqual(expectedResult);
+    expect(hook.result.current).toMatchSnapshot();
   });
 });

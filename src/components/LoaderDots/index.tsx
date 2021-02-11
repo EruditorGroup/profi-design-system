@@ -3,16 +3,16 @@ import classnames from 'classnames';
 
 import styles from './Loader.module.scss';
 
-export interface LoaderProps
-  extends React.HTMLAttributes<HTMLDivElement>,
-    React.RefAttributes<HTMLDivElement> {
+export interface LoaderProps extends React.RefAttributes<HTMLDivElement> {
   design?: 'circle' | 'square';
   size?: 'extraSmall' | 'small' | 'medium' | 'large';
   color?: 'white' | 'gray';
   animation?: 'scale' | 'blick';
 }
 
-const LoaderDots: React.ForwardRefExoticComponent<LoaderProps> = forwardRef(
+const LoaderDots: React.ForwardRefExoticComponent<
+  LoaderProps & React.HTMLAttributes<HTMLDivElement>
+> = forwardRef(
   (
     {
       size = 'medium',
