@@ -1,6 +1,6 @@
 import React, {forwardRef} from 'react';
 import classnames from 'classnames';
-import LoaderDots from 'components/LoaderDots';
+import LoaderDots from '../LoaderDots';
 
 import styles from './Button.module.scss';
 
