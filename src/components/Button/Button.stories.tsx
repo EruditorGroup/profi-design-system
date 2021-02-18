@@ -15,7 +15,7 @@ const Template: Story<ButtonProps> = (args) => (
     <Button {...args}>Обычная кнопка</Button>
     <Button {...args} style={{marginTop: '10px'}}>
       <VkIcon />
-      Кнопка с иконкой
+      Привязать
     </Button>
     <Button {...args} disabled style={{marginTop: '10px'}} isLoading />
   </>

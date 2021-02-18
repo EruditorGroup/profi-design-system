@@ -7,8 +7,8 @@ import styles from './Button.module.scss';
 export interface ButtonProps
   extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   design?: 'primary' | 'secondary' | 'light' | 'yandex' | 'facebook' | 'vk';
+  size?: 'small' | 'normal' | 'large';
   fit?: boolean;
-  size?: 'large' | 'small' | 'normal';
   isLoading?: boolean;
   block?: boolean;
 }
@@ -19,8 +19,8 @@ const Button: React.ForwardRefExoticComponent<
   (
     {
       design = 'primary',
-      block = false,
       size = 'normal',
+      block = false,
       disabled,
       isLoading = false,
       fit = false, // без отступов

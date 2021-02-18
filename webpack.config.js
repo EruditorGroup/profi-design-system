@@ -37,7 +37,7 @@ module.exports = {
         ],
       },
       {
-        test: /\.(css|scss|sass)$/,
+        test: /\.(css|scss)$/,
         use: [
           // {loader: isProduction ? MiniCssExtractPlugin.loader : 'style-loader'},
           'style-loader',
@@ -47,12 +47,12 @@ module.exports = {
               importLoaders: 1,
               modules: {
                 localIdentName: isProduction
-                  ? '[hash:base64:7]'
+                  ? 'ui_[hash:base64:7]'
                   : '[local]-[hash:base64:5]',
               },
             },
           },
-          {loader: 'postcss-loader'},
+          'sass-loader',
         ],
       },
     ],
