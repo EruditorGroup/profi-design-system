@@ -11,8 +11,8 @@
   justify-content: center;
   align-items: center;
   outline: none;
-  height: 50px;
   padding: 0 20px;
+  height: 50px;
 
   svg {
     padding-right: 0.5rem;
@@ -87,7 +87,10 @@
   background: var(--color-facebook);
   color: #fff;
   &:hover:not([disabled]) {
-    background-color: #1771e5;
+    background-color: var(--color-fb-hover);
+  }
+  &:active:not([disabled]) {
+    background-color: var(--color-fb-active);
   }
 }
 
@@ -95,7 +98,10 @@
   background: var(--color-yandex);
   color: #000;
   &:hover:not([disabled]) {
-    background-color: #fac000;
+    background-color: var(--color-yandex-hover);
+  }
+  &:active:not([disabled]) {
+    background-color: var(--color-yandex-active);
   }
 }
 
@@ -103,17 +109,19 @@
   background-color: var(--color-vk);
   color: #fff;
   &:hover:not([disabled]) {
-    background-color: #257fe7;
+    background-color: var(--color-vk-hover);
+  }
+  &:active:not([disabled]) {
+    background-color: var(--color-vk-active);
   }
 }
 
 .size-small {
-  font-size: 12px;
-  padding: 10px 16px;
+  height: 40px;
+  font-weight: 400;
 }
 
-.size-medium {
-  font-size: 14px;
+.size-normal {
   padding: 11px 20px;
 }
 

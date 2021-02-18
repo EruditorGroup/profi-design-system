@@ -1,3 +1,5 @@
+const sass = require('node-sass');
+
 const extractCss = !!process.env.EXTRACT_CSS;
 const isProduction = process.env.NODE_ENV === 'production';
 const isTest = process.env.NODE_ENV === 'test';
@@ -18,12 +20,21 @@ module.exports = {
     ],
     '@babel/plugin-proposal-nullish-coalescing-operator',
     '@babel/plugin-proposal-optional-chaining',
-    (extractCss || isTest) && 'transform-postcss',
     extractCss && [
       'css-modules-transform',
       {
+        devMode: !isProduction,
+        keepImport: false,
         generateScopedName: 'ui_[hash:base64:5]',
         extractCss: './dist/ui.css',
+        extensions: ['.css', '.scss'],
+        preprocessCss: (css) => {
+          return sass
+            .renderSync({
+              data: css,
+            })
+            .css.toString();
+        },
       },
     ],
   ].filter(Boolean),

@@ -1,0 +1,20 @@
+.col {
+  box-sizing: border-box;
+}
+
+$columnsInRow: 12;
+$oneColWidth: 100 / $columnsInRow;
+
+@debug 100 / 5;
+
+@for $i from 0 through $columnsInRow {
+  $col: 1% * $i * $oneColWidth;
+  .span-#{$i} {
+    max-width: #{$col};
+    flex: 0 0 #{$col};
+  }
+
+  .offset-#{$i} {
+    margin-left: #{$col};
+  }
+}
