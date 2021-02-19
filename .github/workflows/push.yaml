@@ -6,8 +6,8 @@ name: 'Every push checks'
 on:
   push:
     branches:
-      # Push events on main branch
-      - *
+      # Push events on any branch
+      - '*'
 
   jobs:
   test:
