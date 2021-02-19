@@ -3,7 +3,8 @@ import React, {useState} from 'react';
 import {Story, Meta} from '@storybook/react/types-6-0';
 import styles from '../../styles/theme.scss';
 
-import Dropdown, {DropdownToggler, DropdownItem, DropdownPortal} from './index';
+import Dropdown from './index';
+import Menu from '../Menu';
 import Button from '../Button';
 import {VkIcon} from '../../icons';
 
@@ -17,29 +18,29 @@ const Template: Story = (args) => {
   return (
     <div style={{display: 'flex', justifyContent: 'center'}}>
       <Dropdown {...args}>
-        <DropdownToggler>
+        <Dropdown.Toggler>
           <Button>Открыть дропдаун</Button>
-        </DropdownToggler>
-        <DropdownPortal className={styles['theme-profi']}>
-          <DropdownItem>
+        </Dropdown.Toggler>
+        <Dropdown.Portal className={styles['theme-profi']}>
+          <Menu.Item rounded={false}>
             <VkIcon /> Пункт c иконкой
-          </DropdownItem>
-          <DropdownItem>Пункт без иконки</DropdownItem>
-          <DropdownItem disabled>
+          </Menu.Item>
+          <Menu.Item rounded={false}>Пункт без иконки</Menu.Item>
+          <Menu.Item rounded={false} disabled>
             <VkIcon /> Disabled
-          </DropdownItem>
-          <DropdownItem divided>
+          </Menu.Item>
+          <Menu.Item rounded={false} divided>
             <VkIcon /> Пункт 3 с отбивкой снизу
-          </DropdownItem>
-          <DropdownItem>
+          </Menu.Item>
+          <Menu.Item rounded={false}>
             <VkIcon /> Многострочный с иконкой Многострочный с иконкой
             Многострочный с иконкой Многострочный с иконкой
-          </DropdownItem>
-          <DropdownItem>
+          </Menu.Item>
+          <Menu.Item rounded={false}>
             Многострочный без иконки Многострочный без иконки Многострочный без
             иконки Многострочный без иконки
-          </DropdownItem>
-        </DropdownPortal>
+          </Menu.Item>
+        </Dropdown.Portal>
       </Dropdown>
     </div>
   );

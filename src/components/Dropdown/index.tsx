@@ -7,6 +7,9 @@ import React, {
   useRef,
 } from 'react';
 import useClickOutside from 'hooks/useClickOutside';
+import DropdownToggler from './components/DropdownToggler';
+import DropdownItem from './components/DropdownItem';
+import DropdownPortal from './components/DropdownPortal';
 
 export interface DropdownProps {
   // verticalPosition?: 'top' | 'bottom';
@@ -54,7 +57,8 @@ const Dropdown = ({
   );
 };
 
+Dropdown.Toggler = DropdownToggler;
+Dropdown.Item = DropdownItem;
+Dropdown.Portal = DropdownPortal;
+
 export default Dropdown;
-export {default as DropdownToggler} from './components/DropdownToggler';
-export {default as DropdownItem} from './components/DropdownItem';
-export {default as DropdownPortal} from './components/DropdownPortal';
