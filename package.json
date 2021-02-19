@@ -26,9 +26,15 @@
     "react-input-mask": "^2.0.4"
   },
   "files": [
-    "index.d.ts",
     "/dist",
-    "/lib"
+    "/components",
+    "/hooks",
+    "/icons",
+    "/utils",
+    "*.d.ts",
+    "*.d.ts.map",
+    "index.js",
+    "declaration.js"
   ],
   "scripts": {
     "clean": "rimraf lib && rimraf dist && rimraf test/visual/dist",

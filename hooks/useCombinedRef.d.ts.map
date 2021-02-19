@@ -1,0 +1,1 @@
+{"version":3,"file":"useCombinedRef.d.ts","sourceRoot":"","sources":["../src/hooks/useCombinedRef.ts"],"names":[],"mappings":";AAEA;;;;GAIG;AACH,MAAM,CAAC,OAAO,UAAU,cAAc,CAAC,CAAC,EACtC,GAAG,IAAI,EAAE,CAAC,KAAK,CAAC,WAAW,CAAC,CAAC,CAAC,GAAG,KAAK,CAAC,gBAAgB,CAAC,CAAC,CAAC,GAAG,IAAI,CAAC,EAAE,GACnE,CAAC,GAAG,EAAE,CAAC,GAAG,IAAI,KAAK,IAAI,CASzB"}
