@@ -6,7 +6,7 @@ name: 'Every push checks'
 on:
   push: ['branches']
 
-  jobs:
+jobs:
   test:
     runs-on: ubuntu-latest
     steps:
