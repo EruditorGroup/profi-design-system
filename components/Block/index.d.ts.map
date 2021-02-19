@@ -1,0 +1,1 @@
+{"version":3,"file":"index.d.ts","sourceRoot":"","sources":["../../src/components/Block/index.tsx"],"names":[],"mappings":"AAAA,OAAO,KAAmB,MAAM,OAAO,CAAC;AAGxC,oBAAY,UAAU,GAAG,KAAK,CAAC,cAAc,CAAC,cAAc,CAAC,CAAC;AAE9D,QAAA,MAAM,KAAK,EAAE,KAAK,CAAC,yBAAyB,CAC1C,UAAU,GAAG,KAAK,CAAC,aAAa,CAAC,cAAc,CAAC,CAKhD,CAAC;AAEH,eAAe,KAAK,CAAC"}

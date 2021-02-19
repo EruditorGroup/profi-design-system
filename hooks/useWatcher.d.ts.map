@@ -1,0 +1,1 @@
+{"version":3,"file":"useWatcher.d.ts","sourceRoot":"","sources":["../src/hooks/useWatcher.ts"],"names":[],"mappings":"AACA,OAAO,KAAK,KAAK,MAAM,OAAO,CAAC;AAE/B,MAAM,CAAC,OAAO,UAAU,UAAU,CAAC,GAAG,EACpC,QAAQ,EAAE,MAAM,GAAG,EACnB,IAAI,EAAE,KAAK,CAAC,cAAc,GACzB,IAAI,CAaN"}

@@ -1,0 +1,1 @@
+{"version":3,"file":"useRelativePosition.d.ts","sourceRoot":"","sources":["../src/hooks/useRelativePosition.ts"],"names":[],"mappings":"AAAA,OAAO,KAMN,MAAM,OAAO,CAAC;AAEf;;;;;;;;;;GAUG;AACH,MAAM,CAAC,OAAO,UAAU,mBAAmB,CAAC,CAAC,SAAS,WAAW,EAC/D,OAAO,EAAE,CAAC,GAAG,IAAI,GAAG,SAAS,EAC7B,KAAK,EAAE,MAAM,GAAG,OAAO,GACtB,KAAK,CAAC,aAAa,GAAG,SAAS,CAsCjC"}

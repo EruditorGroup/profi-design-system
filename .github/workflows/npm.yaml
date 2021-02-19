@@ -41,5 +41,4 @@ jobs:
         env:
           NODE_ENV: production
       - run: printf "//npm.pkg.github.com/:_authToken=${{ secrets.GITHUB_TOKEN }}\n@profiru:registry=https://npm.pkg.github.com/" > ~/.npmrc
-      - run: npx rimraf src public *.js *rc
       - run: npm publish --access public
