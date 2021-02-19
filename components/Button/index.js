@@ -4,18 +4,18 @@ import React, { forwardRef } from 'react';
 import classnames from 'classnames';
 import LoaderDots from '../LoaderDots';
 var styles = {
-  "button": "ui_2t432",
-  "design-primary": "ui_11LTX",
-  "design-secondary": "ui_2EfGF",
-  "design-light": "ui_3HO4k",
-  "design-facebook": "ui_3mPiv",
-  "design-yandex": "ui_Aa9_b",
-  "design-vk": "ui_2lMjr",
-  "size-small": "ui_ewZVI",
-  "size-normal": "ui_3RiKO",
-  "size-large": "ui_PgCim",
-  "block": "ui_34kbB",
-  "fit": "ui_1tawG"
+  "button": "button-2t432",
+  "design-primary": "design-primary-11LTX",
+  "design-secondary": "design-secondary-2EfGF",
+  "design-light": "design-light-3HO4k",
+  "design-facebook": "design-facebook-3mPiv",
+  "design-yandex": "design-yandex-Aa9_b",
+  "design-vk": "design-vk-2lMjr",
+  "size-small": "size-small-ewZVI",
+  "size-normal": "size-normal-3RiKO",
+  "size-large": "size-large-PgCim",
+  "block": "block-34kbB",
+  "fit": "fit-1tawG"
 };
 const Button = /*#__PURE__*/forwardRef(({
   design = 'primary',

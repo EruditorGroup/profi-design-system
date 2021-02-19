@@ -3,11 +3,11 @@ function _extends() { _extends = Object.assign || function (target) { for (var i
 import React, { forwardRef, useContext } from 'react';
 import classnames from 'classnames';
 var styles = {
-  "item": "ui_3X4XG",
-  "design-light": "ui_AXKil",
-  "design-brand": "ui_29X3o",
-  "disabled": "ui_37wKW",
-  "divided": "ui_1xyhE"
+  "item": "item-3X4XG",
+  "design-light": "design-light-AXKil",
+  "design-brand": "design-brand-29X3o",
+  "disabled": "disabled-37wKW",
+  "divided": "divided-1xyhE"
 };
 import { DropdownContext } from "@profiru/ui/components/Dropdown";
 const DropdownItem = /*#__PURE__*/forwardRef(({

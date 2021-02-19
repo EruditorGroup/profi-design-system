@@ -3,9 +3,13 @@
 
 name: 'Every push checks'
 
-on: [push]
+on:
+  push:
+    branches:
+      # Push events on main branch
+      - *
 
-jobs:
+  jobs:
   test:
     runs-on: ubuntu-latest
     steps:

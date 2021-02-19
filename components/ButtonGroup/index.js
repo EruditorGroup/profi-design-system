@@ -3,8 +3,8 @@ function _extends() { _extends = Object.assign || function (target) { for (var i
 import React, { forwardRef } from 'react';
 import classnames from 'classnames';
 var styles = {
-  "group": "ui_2KpkB",
-  "block": "ui_2Q724"
+  "group": "group-2KpkB",
+  "block": "block-2Q724"
 };
 const ButtonGroup = /*#__PURE__*/forwardRef(({
   className,

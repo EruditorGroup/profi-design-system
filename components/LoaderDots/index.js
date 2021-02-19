@@ -3,20 +3,20 @@ function _extends() { _extends = Object.assign || function (target) { for (var i
 import React, { forwardRef } from 'react';
 import classnames from 'classnames';
 var styles = {
-  "loader": "ui_2oMxT",
-  "size-extraSmall": "ui_18hLd",
-  "size-large": "ui_38xwW",
-  "dot": "ui_2c-dv",
-  "dotLoader": "ui_1IQRs",
-  "dotDesign-circle": "ui_3Ijod",
-  "dotDesign-square": "ui_3LCI3",
-  "dotSize-extra-large": "ui_Dbw8a",
-  "dotSize-large": "ui_1YZkB",
-  "dotSize-medium": "ui_3Bm-v",
-  "dotSize-small": "ui_1c795",
-  "dotSize-extraSmall": "ui_1tCEH",
-  "dotColor-white": "ui_2JHdU",
-  "dotColor-gray": "ui_vbJJI"
+  "loader": "loader-2oMxT",
+  "size-extraSmall": "size-extraSmall-18hLd",
+  "size-large": "size-large-38xwW",
+  "dot": "dot-2c-dv",
+  "dotLoader": "dotLoader-1IQRs",
+  "dotDesign-circle": "dotDesign-circle-3Ijod",
+  "dotDesign-square": "dotDesign-square-3LCI3",
+  "dotSize-extra-large": "dotSize-extra-large-Dbw8a",
+  "dotSize-large": "dotSize-large-1YZkB",
+  "dotSize-medium": "dotSize-medium-3Bm-v",
+  "dotSize-small": "dotSize-small-1c795",
+  "dotSize-extraSmall": "dotSize-extraSmall-1tCEH",
+  "dotColor-white": "dotColor-white-2JHdU",
+  "dotColor-gray": "dotColor-gray-vbJJI"
 };
 const LoaderDots = /*#__PURE__*/forwardRef(({
   size = 'medium',
