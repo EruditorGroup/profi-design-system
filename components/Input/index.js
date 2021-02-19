@@ -5,12 +5,12 @@ import InputMask from 'react-input-mask';
 import classnames from 'classnames';
 import useFloatLabel from './hooks/useFloatLabel';
 var styles = {
-  "form-control": "ui_Lx7RP",
-  "input": "ui_1i6bi",
-  "input-withFloatLabel": "ui_s-47i",
-  "block": "ui_4yS0x",
-  "floatLabel": "ui_1azX-",
-  "floatLabel-floated": "ui_3ADge"
+  "form-control": "form-control-Lx7RP",
+  "input": "input-1i6bi",
+  "input-withFloatLabel": "input-withFloatLabel-s-47i",
+  "block": "block-4yS0x",
+  "floatLabel": "floatLabel-1azX-",
+  "floatLabel-floated": "floatLabel-floated-3ADge"
 };
 const Input = /*#__PURE__*/forwardRef(({
   className,

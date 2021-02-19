@@ -3,11 +3,11 @@ import { DropdownContext } from "@profiru/ui/components/Dropdown";
 import BodyPortal from "@profiru/ui/components/BodyPortal";
 import classNames from 'classnames';
 var styles = {
-  "portal": "ui_5I8af",
-  "animated": "ui_1bEH3",
-  "opened": "ui_2L9Id",
-  "horizontal-left": "ui_3Sh7S",
-  "horizontal-right": "ui_3WgS-"
+  "portal": "portal-5I8af",
+  "animated": "animated-1bEH3",
+  "opened": "opened-2L9Id",
+  "horizontal-left": "horizontal-left-3Sh7S",
+  "horizontal-right": "horizontal-right-3WgS-"
 };
 import useRelativePosition from "@profiru/ui/hooks/useRelativePosition";
 export default function DropdownPortal({

@@ -3,11 +3,11 @@ function _extends() { _extends = Object.assign || function (target) { for (var i
 import React, { forwardRef } from 'react';
 import classnames from 'classnames';
 var styles = {
-  "label": "ui_3mVdI",
-  "checker": "ui_3gUsk",
-  "design-brand": "ui_4S4zG",
-  "input": "ui_1y39W",
-  "content": "ui_glhin"
+  "label": "label-3mVdI",
+  "checker": "checker-3gUsk",
+  "design-brand": "design-brand-4S4zG",
+  "input": "input-1y39W",
+  "content": "content-glhin"
 }; // export interface RadioProps {
 //   design?: 'light' | 'brand';
 // }

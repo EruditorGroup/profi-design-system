@@ -34,7 +34,12 @@ module.exports = {
               replacement: `${package.name}/${folder}`,
             },
           ],
-          [],
+          [
+            extractCss && {
+              original: './styles/theme.scss',
+              replacement: './dist/main.css',
+            },
+          ].filter(Boolean),
         ),
       },
     ],

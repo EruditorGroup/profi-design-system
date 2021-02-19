@@ -4,12 +4,12 @@ import React, { forwardRef, useCallback, useState } from 'react';
 import classNames from 'classnames';
 import Input from "@profiru/ui/components/Input";
 var styles = {
-  "wrapper": "ui_qiJBy",
-  "input": "ui_8nq9v",
-  "unit": "ui_3QMsm",
-  "unit-withFloatLabel": "ui_IDVZ5",
-  "value": "ui_3Zlms",
-  "unitOffset": "ui_3YtnU"
+  "wrapper": "wrapper-qiJBy",
+  "input": "input-8nq9v",
+  "unit": "unit-3QMsm",
+  "unit-withFloatLabel": "unit-withFloatLabel-IDVZ5",
+  "value": "value-3Zlms",
+  "unitOffset": "unitOffset-3YtnU"
 };
 const InputUnit = /*#__PURE__*/forwardRef(({
   unit,

@@ -3,11 +3,11 @@ function _extends() { _extends = Object.assign || function (target) { for (var i
 import React, { forwardRef } from 'react';
 import classnames from 'classnames';
 var styles = {
-  "label": "ui_QwxPG",
-  "checker": "ui_3r_66",
-  "design-brand": "ui_3JT3T",
-  "input": "ui_3BKOi",
-  "content": "ui_3v8cW"
+  "label": "label-QwxPG",
+  "checker": "checker-3r_66",
+  "design-brand": "design-brand-3JT3T",
+  "input": "input-3BKOi",
+  "content": "content-3v8cW"
 }; // export interface CheckboxProps {
 //   design?: 'brand';
 // }

@@ -1,7 +1,7 @@
 import React, { useCallback, useContext } from 'react';
 import { DropdownContext } from "@profiru/ui/components/Dropdown";
 var styles = {
-  "toggler": "ui_8YMmy"
+  "toggler": "toggler-8YMmy"
 };
 export default function DropdownToggler({
   children

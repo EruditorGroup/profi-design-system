@@ -2,7 +2,7 @@ function _extends() { _extends = Object.assign || function (target) { for (var i
 
 import React, { forwardRef } from 'react';
 var styles = {
-  "wrapper": "ui_2iTSS"
+  "wrapper": "wrapper-2iTSS"
 };
 const Wrapper = /*#__PURE__*/forwardRef(({
   className,
