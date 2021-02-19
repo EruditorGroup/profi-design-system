@@ -97,7 +97,7 @@ const Template: Story<{}> = () => {
             ))}
             {Array.from({length: 3}).map(() => (
               <Col span={4} style={colStyle}>
-                span-3
+                span-4
               </Col>
             ))}
             <Col span={5} style={colStyle}>
