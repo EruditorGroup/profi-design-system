@@ -1,1 +1,0 @@
-{"version":3,"file":"usePersistCallback.d.ts","sourceRoot":"","sources":["../src/hooks/usePersistCallback.ts"],"names":[],"mappings":"AACA,OAAO,EAAiC,cAAc,EAAC,MAAM,OAAO,CAAC;AAErE,MAAM,CAAC,OAAO,UAAU,kBAAkB,CAAC,GAAG,EAAE,GAAG,EACjD,QAAQ,EAAE,CAAC,GAAG,IAAI,EAAE,GAAG,EAAE,KAAK,GAAG,EACjC,IAAI,EAAE,cAAc,GAAG,SAAS,GAC/B,OAAO,QAAQ,CASjB"}

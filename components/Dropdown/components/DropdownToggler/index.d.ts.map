@@ -1,1 +1,0 @@
-{"version":3,"file":"index.d.ts","sourceRoot":"","sources":["../../../../src/components/Dropdown/components/DropdownToggler/index.tsx"],"names":[],"mappings":"AAAA,OAAO,KAAgC,MAAM,OAAO,CAAC;AAKrD,MAAM,WAAW,oBAAoB;IACnC,QAAQ,EAAE,KAAK,CAAC,SAAS,CAAC;CAC3B;AAED,MAAM,CAAC,OAAO,UAAU,eAAe,CAAC,EACtC,QAAQ,GACT,EAAE,oBAAoB,GAAG,KAAK,CAAC,YAAY,CAoB3C"}
