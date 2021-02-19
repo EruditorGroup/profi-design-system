@@ -11,12 +11,12 @@ export default {
 } as Meta;
 
 const colStyle = {
-  background: '#e7f6fb',
-  border: '1px solid #d0d0d0',
+  background: '#d3d3d38f',
+  border: '1px solid #fff',
   padding: '5px',
 };
 const rowStyle = {
-  background: 'lightgrey',
+  background: 'rgba(231, 246, 251, 0.5)',
   marginTop: '10px',
   marginBottom: '10px',
   paddingTop: '10px',
@@ -26,7 +26,30 @@ const rowStyle = {
 
 const Template: Story<{}> = () => {
   return (
-    <>
+    <div style={{position: 'relative'}}>
+      <div
+        style={{
+          position: 'absolute',
+          top: '0',
+          left: '0',
+          right: '0',
+          margin: 'auto',
+          height: '100%',
+          width: '100%',
+          display: 'flex',
+          boxSizing: 'border-box',
+        }}
+      >
+        {Array.from({length: 12}).map((e, i) => (
+          <i
+            style={{
+              height: '100%',
+              background: `rgba(255, 48, 198, ${i % 2 ? '.05' : '.1'})`,
+              width: `${100 / 12}%`,
+            }}
+          />
+        ))}
+      </div>
       <Row style={rowStyle}>
         <Col span={12} style={colStyle}>
           span-12
@@ -89,7 +112,7 @@ const Template: Story<{}> = () => {
           </Row>
         </Col>
       </Row>
-    </>
+    </div>
   );
 };
 
