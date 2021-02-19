@@ -4,10 +4,7 @@
 name: 'Every push checks'
 
 on:
-  push:
-    branches:
-      # Push events on any branch
-      - '**'
+  push: ['branches']
 
   jobs:
   test:
