@@ -4,7 +4,7 @@
 name: 'Every push checks'
 
 on:
-  push: ['branches']
+  push: branches
 
 jobs:
   test:
