@@ -40,7 +40,7 @@
     "build:webpack": "webpack build",
     "compile:babel": "babel src -x '.ts','.tsx' -d dist/cjs --ignore '**/*.test.tsx','**/*.stories.tsx','**/*.d.ts','**/__mocks__'",
     "compile:typescript": "tsc --declaration --emitDeclarationOnly --noEmit false --declarationMap --allowJs false --checkJs false",
-    "test": "jest",
+    "test": "MODULE_TYPE=esm jest",
     "storybook": "start-storybook -p 6006",
     "lint": "yarn eslint src --cache --ext .js,.jsx,.ts,.tsx --max-warnings 0",
     "precommit": "APP_ROOT_PATH=. lint-staged"
