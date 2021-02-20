@@ -14,6 +14,7 @@ module.exports = {
           ...webpackConfig.resolve.extensions,
         ],
       },
+      // plugins: [...config.plugins, ...webpackConfig.plugins],
       module: {
         ...config.module,
         rules: webpackConfig.module.rules,

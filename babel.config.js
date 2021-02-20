@@ -12,7 +12,7 @@ const isProduction = process.env.NODE_ENV === 'production';
 
 module.exports = {
   presets: [
-    process.env.MODULE_TYPE === 'esm' && [
+    process.env.MODULE_TYPE === 'cjs' && [
       '@babel/preset-env',
       {
         targets: {node: 'current'},
@@ -38,6 +38,8 @@ module.exports = {
           (replacements, folder) => [
             ...replacements,
             {
+              // rename internal imports by src/ folder content
+              // e.x: components/Button will resolved as {package.name}/src/components/Button
               original: folder,
               replacement: process.env.MODULE_TYPE
                 ? `${package.name}/dist/${process.env.MODULE_TYPE}/${folder}`
@@ -47,7 +49,7 @@ module.exports = {
           [
             transformCssImports && {
               original: './styles/theme.scss',
-              replacement: '../main.css',
+              replacement: `${package.name}/dist/main.css`,
             },
           ].filter(Boolean),
         ),
@@ -61,6 +63,7 @@ module.exports = {
         generateScopedName: (localName, filePath) => {
           return CSS_MODULE_LOCAL_IDENT_NAME_GENERATOR(localName, filePath);
         },
+        extractCss: './dist/main.css',
         extensions: ['.css', '.scss'],
         preprocessCss: (css) => {
           return sass
