@@ -4,8 +4,8 @@ import classnames from 'classnames';
 import styles from './Link.module.scss';
 
 export interface LinkProps
-  extends Omit<React.AnchorHTMLAttributes<HTMLAnchorElement>, 'href'> {
-  //хотим "to" вместо "href"?
+  extends React.AnchorHTMLAttributes<HTMLAnchorElement> {
+  //хотим "to" вместо "href"? flowgen не знает про Omit :(
   to?: string;
   disabled?: boolean;
   color?:

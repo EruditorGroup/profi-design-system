@@ -4,7 +4,7 @@ import styles from './DropdownItem.module.scss';
 import {DropdownContext} from 'components/Dropdown';
 
 export interface DropdownItemProps
-  extends Omit<React.AnchorHTMLAttributes<HTMLAnchorElement>, 'href'> {
+  extends React.AnchorHTMLAttributes<HTMLAnchorElement> {
   divided?: boolean;
   disabled?: boolean;
   to?: string;
