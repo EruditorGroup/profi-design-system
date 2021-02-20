@@ -1,10 +1,18 @@
 const path = require('path');
 const fs = require('fs');
 const package = require('./package.json');
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const {CSS_MODULE_LOCAL_IDENT_NAME_GENERATOR} = require('./.config');
 
-const isProduction = process.env.NODE_ENV === 'production';
+// resolve imports starts with "@profiru/ui" to package root
+// so babel will add @profiru/ui/{src|dist} prefix to each internal import e.g components/, hooks/
+// that allows to import local components in builded npm module
+function getResolver() {
+  return {
+    alias: {
+      [package.name]: path.resolve(__dirname),
+    },
+  };
+}
 
 module.exports = {
   mode: 'development',
@@ -21,25 +29,12 @@ module.exports = {
     // if we dont add extensions, webpack will skip this import
     extensions: ['.js', '.jsx', '.ts', '.tsx', 'css', 'scss'],
   },
-  plugins: [
-    // used in production mode only to generate css bundle in ./dist
-    new MiniCssExtractPlugin({
-      filename: '[name].css',
-    }),
-  ],
   module: {
     rules: [
       {
         // use babel-loader on each ts,tsx file
         test: /\.tsx?$/,
-        resolve: {
-          alias: {
-            // add alias "@profiru/ui" from package.json to "./src"
-            // why: babel config add @profiru/ui to each internal import e.g components/, hooks/
-            // that allows to import local components builded npm module
-            [package.name]: path.resolve(__dirname),
-          },
-        },
+        resolve: getResolver(),
         use: [
           {
             // babel provides the transpiler for typescript, jsx and other syntax
@@ -50,10 +45,10 @@ module.exports = {
       },
       {
         test: /\.(css|scss)$/,
+        resolve: getResolver(),
         use: [
-          // in dev mode we can use style loader because we dont care about connect styles
-          // but we should use MiniCssExtractPlugin in production because we need css bundle in dist
-          {loader: isProduction ? MiniCssExtractPlugin.loader : 'style-loader'},
+          // load styles dynamically as with <link /> tag
+          'style-loader',
           {
             // css-loader allows us to generate unique classnames for incapsulate styles inside npm module
             loader: 'css-loader',
@@ -76,7 +71,7 @@ module.exports = {
           },
           // sass-loader is syntax booster of project`s styles
           'sass-loader',
-          // autoprefixer and other features, config placed in ./postcss.config.js
+          // autoprefixer and custom transpile plugins
           {
             loader: 'postcss-loader',
             options: {
