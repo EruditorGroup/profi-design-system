@@ -3,7 +3,6 @@ import React, {useState} from 'react';
 import {Story, Meta} from '@storybook/react/types-6-0';
 
 import Menu from './index';
-import Button from '../Button';
 import {VkIcon} from '../../icons';
 
 export default {
@@ -12,7 +11,6 @@ export default {
 } as Meta;
 
 const Template: Story = (args) => {
-  const [opened, setOpened] = useState(false);
   return (
     <div style={{display: 'flex', justifyContent: 'center'}}>
       <Menu {...args}>

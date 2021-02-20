@@ -3,13 +3,21 @@ const fs = require('fs');
 const package = require('./package.json');
 const {CSS_MODULE_LOCAL_IDENT_NAME_GENERATOR} = require('./.config');
 
-const extractCss = !!process.env.EXTRACT_CSS;
+// Should we replace style imports into css-modules classes mapping?
+// NOTE: it isn`t generate any css bundles. If you need change something in styles bundling, check webpack config.
+const transformCssImports = !!process.env.CSS_MODULES;
+
+// Production flag, used in a few plugins/presets
 const isProduction = process.env.NODE_ENV === 'production';
-const isTest = process.env.NODE_ENV === 'test';
 
 module.exports = {
   presets: [
-    ['@babel/preset-env', {targets: {node: 'current'}}],
+    process.env.MODULE_TYPE === 'esm' && [
+      '@babel/preset-env',
+      {
+        targets: {node: 'current'},
+      },
+    ],
     '@babel/preset-react',
   ].filter(Boolean),
   plugins: [
@@ -31,19 +39,21 @@ module.exports = {
             ...replacements,
             {
               original: folder,
-              replacement: `${package.name}/${folder}`,
+              replacement: process.env.MODULE_TYPE
+                ? `${package.name}/dist/${process.env.MODULE_TYPE}/${folder}`
+                : `${package.name}/src/${folder}`,
             },
           ],
           [
-            extractCss && {
+            transformCssImports && {
               original: './styles/theme.scss',
-              replacement: './dist/main.css',
+              replacement: '../main.css',
             },
           ].filter(Boolean),
         ),
       },
     ],
-    extractCss && [
+    transformCssImports && [
       'css-modules-transform',
       {
         devMode: !isProduction,

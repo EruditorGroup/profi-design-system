@@ -37,7 +37,7 @@ module.exports = {
             // add alias "@profiru/ui" from package.json to "./src"
             // why: babel config add @profiru/ui to each internal import e.g components/, hooks/
             // that allows to import local components builded npm module
-            [package.name]: path.resolve(__dirname, './src'),
+            [package.name]: path.resolve(__dirname),
           },
         },
         use: [
