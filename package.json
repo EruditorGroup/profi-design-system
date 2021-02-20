@@ -33,7 +33,7 @@
     "build:cjs": "yarn compile:typescript --outDir dist/cjs && MODULE_TYPE=cjs yarn compile:babel -d dist/cjs",
     "build:esm": "yarn compile:typescript --outDir dist/esm && MODULE_TYPE=esm yarn compile:babel -d dist/esm",
     "build:typescript": "tsc --declaration --emitDeclarationOnly --noEmit false --declarationMap --allowJs false --checkJs false",
-    "compile:flow": "for i in $(find dist -type f -name \"*.d.ts\"); do sh -c \"flowgen $i -o ${i%.*.*}.js.flow --add-flow-header\"; done;",
+    "compile:flow": "for i in $(find dist -type f -name \"*.d.ts\"); do sh -c \"echo $i;flowgen $i -o ${i%.*.*}.js.flow --add-flow-header\"; done;",
     "compile:babel": "CSS_MODULES=1 babel src -x '.ts','.tsx' -d dist/cjs --ignore '**/*.test.tsx','**/*.stories.tsx','**/*.d.ts','**/__mocks__'",
     "compile:typescript": "tsc --declaration --emitDeclarationOnly --noEmit false --declarationMap --allowJs false --checkJs false",
     "test": "MODULE_TYPE=cjs jest",
