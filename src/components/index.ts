@@ -4,6 +4,9 @@ export type {ColProps} from './Col';
 export {default as Row} from './Row';
 export type {RowProps} from './Row';
 
+export {default as Menu} from './Menu';
+export type {MenuProps} from './Menu';
+
 export {default as Block} from './Block';
 export type {BlockProps} from './Block';
 
