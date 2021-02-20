@@ -4,11 +4,16 @@ import MenuItem from './MenuItem';
 import styles from './Menu.module.scss';
 
 export interface MenuProps
-  extends Omit<React.AnchorHTMLAttributes<HTMLAnchorElement>, 'href'> {
+  extends React.AnchorHTMLAttributes<HTMLAnchorElement> {
   to?: string;
 }
 
-const Menu = forwardRef(({to, className, ...props}, ref) => {
+// additional type cast to flowgen
+const Menu: React.ForwardRefExoticComponent<
+  MenuProps & React.RefAttributes<HTMLAnchorElement>
+> & {
+  Item: typeof MenuItem;
+} = forwardRef(({to, className, ...props}, ref) => {
   return (
     <a
       className={classnames(styles['menu'], className)}

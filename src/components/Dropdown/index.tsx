@@ -18,20 +18,25 @@ export interface DropdownProps {
   children?: React.ReactNode;
 }
 
-interface DropdownContext extends Omit<DropdownProps, 'children'> {
+interface DropdownContext {
   isOpened: boolean;
   setOpened: Dispatch<SetStateAction<boolean>>;
   togglerRef: React.MutableRefObject<HTMLElement | null>;
   contentRef: React.MutableRefObject<HTMLElement | null>;
+  design?: DropdownProps['design'];
+  horizontalPosition?: DropdownProps['horizontalPosition'];
 }
 
-export const DropdownContext = createContext<DropdownContext | null>(null);
+// additional type cast to flowgen
+export const DropdownContext: React.Context<DropdownContext | null> = createContext<DropdownContext | null>(
+  null,
+);
 
-const Dropdown = ({
+function Dropdown({
   children,
   horizontalPosition = 'left',
   design = 'light',
-}: DropdownProps): React.ReactElement => {
+}: DropdownProps): React.ReactElement {
   const [isOpened, setOpened] = useState(false);
   const togglerRef = useRef(null);
   const contentRef = useRef(null);
@@ -55,7 +60,7 @@ const Dropdown = ({
       {children}
     </DropdownContext.Provider>
   );
-};
+}
 
 Dropdown.Toggler = DropdownToggler;
 Dropdown.Item = DropdownItem;
