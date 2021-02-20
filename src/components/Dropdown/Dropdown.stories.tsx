@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 // also exported from '@storybook/react' if you can deal with breaking changes in 6.1
 import {Story, Meta} from '@storybook/react/types-6-0';
-import styles from '../../styles/theme.scss';
+import styles from 'styles/theme.scss';
 
 import Dropdown from './index';
 import Menu from '../Menu';
@@ -9,7 +9,7 @@ import Button from '../Button';
 import {VkIcon} from '../../icons';
 
 export default {
-  title: 'Form.Dropdown',
+  title: 'Dropdown',
   component: Dropdown,
 } as Meta;
 
