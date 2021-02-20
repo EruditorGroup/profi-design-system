@@ -20,30 +20,36 @@ export type BodyPortalProps = {
 const BodyPortal: React.ForwardRefExoticComponent<
   BodyPortalProps & React.RefAttributes<HTMLDivElement>
 > = forwardRef(
-  ({className, style, children}, ref): React.ReactPortal => {
-    const container = useMemo(() => document.createElement('div'), []);
+  ({className, style, children}, ref): React.ReactPortal | null => {
+    const css = useMemo(() => stringifyCssProps(style), [style]);
+
+    const container = useMemo<HTMLDivElement | null>(() => {
+      if (typeof window === 'undefined') return null;
+      const div = document.createElement('div');
+      window.document.body.appendChild(div);
+      return div;
+    }, []);
+
+    useEffect(() => {
+      return () => {
+        if (container) window.document.body.removeChild(container);
+      };
+    }, [container]);
+
+    useEffect(() => {
+      if (container) container.className = className || '';
+    }, [className, container]);
+
+    useEffect(() => {
+      if (container) container.setAttribute('style', css);
+    }, [css, container]);
+
     if (ref) {
       if (typeof ref === 'function') ref(container);
       else if (ref) ref.current = container;
     }
 
-    useEffect(() => {
-      container.className = className || '';
-    }, [className, container]);
-
-    const css = useMemo(() => stringifyCssProps(style), [style]);
-    useEffect(() => {
-      container.setAttribute('style', css);
-    }, [css, container]);
-
-    useEffect(() => {
-      window.document.body.appendChild(container);
-      return () => {
-        window.document.body.removeChild(container);
-      };
-    }, [container]);
-
-    return createPortal(children, container);
+    return container ? createPortal(children, container) : null;
   },
 );
 
