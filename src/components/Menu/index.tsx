@@ -1,6 +1,6 @@
 import React, {forwardRef} from 'react';
 import classnames from 'classnames';
-import MenuItem from './MenuItem';
+import MenuItem from './components/MenuItem';
 import styles from './Menu.module.scss';
 
 export interface MenuProps
