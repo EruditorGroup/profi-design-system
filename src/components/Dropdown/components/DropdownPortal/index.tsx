@@ -1,11 +1,5 @@
 import React, {useContext, forwardRef} from 'react';
-import type {
-  ReactElement,
-  ReactNode,
-  HTMLAttributes,
-  RefAttributes,
-  ForwardRefExoticComponent,
-} from 'react';
+import type {RefAttributes, ForwardRefExoticComponent} from 'react';
 import {DropdownContext} from 'components/Dropdown';
 import BodyPortal from '../../../BodyPortal';
 import type {BodyPortalProps} from '../../../BodyPortal';
