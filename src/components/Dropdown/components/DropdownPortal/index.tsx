@@ -1,23 +1,26 @@
-import React, {useContext} from 'react';
-import type {ReactElement, ReactNode} from 'react';
+import React, {useContext, forwardRef} from 'react';
+import type {
+  ReactElement,
+  ReactNode,
+  HTMLAttributes,
+  RefAttributes,
+  ForwardRefExoticComponent,
+} from 'react';
 import {DropdownContext} from 'components/Dropdown';
-import BodyPortal from 'components/BodyPortal';
+import BodyPortal from '../../../BodyPortal';
+import type {BodyPortalProps} from '../../../BodyPortal';
 import classNames from 'classnames';
 
 import styles from './DropdownPortal.module.scss';
 import useRelativePosition from 'hooks/useRelativePosition';
 
-interface DropdownPortalProps {
-  children: ReactNode;
-  className?: string;
+export interface DropdownPortalProps extends BodyPortalProps {
   animated?: boolean;
 }
 
-export default function DropdownPortal({
-  children,
-  animated = true,
-  className,
-}: DropdownPortalProps): ReactElement {
+const DropdownPortal: ForwardRefExoticComponent<
+  DropdownPortalProps & RefAttributes<HTMLDivElement>
+> = forwardRef(({animated = true, className, ...props}, ref) => {
   const context = useContext(DropdownContext);
   const relativePosition = useRelativePosition(
     context?.togglerRef?.current,
@@ -29,6 +32,8 @@ export default function DropdownPortal({
       style={relativePosition}
       ref={(el) => {
         if (context) context.contentRef.current = el;
+        if (typeof ref === 'function') ref(el);
+        else if (ref?.current) ref.current = el;
       }}
       className={classNames(
         styles['portal'],
@@ -37,8 +42,9 @@ export default function DropdownPortal({
         context?.isOpened && styles['opened'],
         className,
       )}
-    >
-      {children}
-    </BodyPortal>
+      {...props}
+    />
   );
-}
+});
+
+export default DropdownPortal;

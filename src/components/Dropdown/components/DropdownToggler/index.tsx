@@ -1,16 +1,19 @@
-import React, {useCallback, useContext} from 'react';
-import type {ReactNode, ReactElement} from 'react';
+import React, {useCallback, useContext, forwardRef} from 'react';
+import type {
+  HTMLAttributes,
+  RefAttributes,
+  ForwardRefExoticComponent,
+} from 'react';
+import classNames from 'classnames';
 import {DropdownContext} from 'components/Dropdown';
 
 import styles from './DropdownToggler.module.scss';
 
-export interface DropdownTogglerProps {
-  children: ReactNode;
-}
+export type DropdownTogglerProps = HTMLAttributes<HTMLDivElement>;
 
-export default function DropdownToggler({
-  children,
-}: DropdownTogglerProps): ReactElement {
+const DropdownToggler: ForwardRefExoticComponent<
+  DropdownTogglerProps & RefAttributes<HTMLDivElement>
+> = forwardRef(({className, ...props}, ref) => {
   const context = useContext(DropdownContext);
 
   // Proxy handler for trigger context state
@@ -23,11 +26,14 @@ export default function DropdownToggler({
     <div
       ref={(el) => {
         if (context) context.togglerRef.current = el;
+        if (typeof ref === 'function') ref(el);
+        else if (ref?.current) ref.current = el;
       }}
       onClick={onClickHandler}
-      className={styles['toggler']}
-    >
-      {children}
-    </div>
+      className={classNames(styles['toggler'], className)}
+      {...props}
+    />
   );
-}
+});
+
+export default DropdownToggler;
