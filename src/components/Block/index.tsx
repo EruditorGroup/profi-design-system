@@ -1,10 +1,15 @@
 import React, {forwardRef} from 'react';
+import type {
+  HTMLAttributes,
+  ForwardRefExoticComponent,
+  RefAttributes,
+} from 'react';
 import styles from './Block.module.scss';
 
-export type BlockProps = React.HTMLAttributes<HTMLDivElement>;
+export type BlockProps = HTMLAttributes<HTMLDivElement>;
 
-const Block: React.ForwardRefExoticComponent<
-  BlockProps & React.RefAttributes<HTMLDivElement>
+const Block: ForwardRefExoticComponent<
+  BlockProps & RefAttributes<HTMLDivElement>
 > = forwardRef(({className, ...props}, ref) => {
   return (
     <div className={`${styles['block']} ${className}`} ref={ref} {...props} />

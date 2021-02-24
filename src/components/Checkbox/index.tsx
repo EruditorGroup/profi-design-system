@@ -1,4 +1,9 @@
 import React, {forwardRef} from 'react';
+import type {
+  InputHTMLAttributes,
+  ForwardRefExoticComponent,
+  RefAttributes,
+} from 'react';
 import classnames from 'classnames';
 
 import styles from './Checkbox.module.scss';
@@ -7,10 +12,9 @@ import styles from './Checkbox.module.scss';
 //   design?: 'brand';
 // }
 
-const Checkbox: React.ForwardRefExoticComponent<
+const Checkbox: ForwardRefExoticComponent<
   // CheckboxProps &
-  React.InputHTMLAttributes<HTMLInputElement> &
-    React.RefAttributes<HTMLInputElement>
+  InputHTMLAttributes<HTMLInputElement> & RefAttributes<HTMLInputElement>
 > = forwardRef(
   (
     {

@@ -1,11 +1,18 @@
-import React, {forwardRef, useEffect, useMemo} from 'react';
+import {forwardRef, useEffect, useMemo} from 'react';
+import type {
+  ForwardRefExoticComponent,
+  RefAttributes,
+  ReactNode,
+  CSSProperties,
+  ReactPortal,
+} from 'react';
 import {createPortal} from 'react-dom';
 import stringifyCssProps from 'utils/stringifyCssProps';
 
 export type BodyPortalProps = {
-  children: React.ReactNode;
+  children: ReactNode;
   className?: string;
-  style?: React.CSSProperties;
+  style?: CSSProperties;
 };
 
 /**
@@ -17,40 +24,38 @@ export type BodyPortalProps = {
  *    <h1>I'm in body right now!</h1>
  *  </BodyPortal>
  */
-const BodyPortal: React.ForwardRefExoticComponent<
-  BodyPortalProps & React.RefAttributes<HTMLDivElement>
-> = forwardRef(
-  ({className, style, children}, ref): React.ReactPortal | null => {
-    const css = useMemo(() => stringifyCssProps(style), [style]);
+const BodyPortal: ForwardRefExoticComponent<
+  BodyPortalProps & RefAttributes<HTMLDivElement>
+> = forwardRef(({className, style, children}, ref): ReactPortal | null => {
+  const css = useMemo(() => stringifyCssProps(style), [style]);
 
-    const container = useMemo<HTMLDivElement | null>(() => {
-      if (typeof window === 'undefined') return null;
-      const div = document.createElement('div');
-      window.document.body.appendChild(div);
-      return div;
-    }, []);
+  const container = useMemo<HTMLDivElement | null>(() => {
+    if (typeof window === 'undefined') return null;
+    const div = document.createElement('div');
+    window.document.body.appendChild(div);
+    return div;
+  }, []);
 
-    useEffect(() => {
-      return () => {
-        if (container) window.document.body.removeChild(container);
-      };
-    }, [container]);
+  useEffect(() => {
+    return () => {
+      if (container) window.document.body.removeChild(container);
+    };
+  }, [container]);
 
-    useEffect(() => {
-      if (container) container.className = className || '';
-    }, [className, container]);
+  useEffect(() => {
+    if (container) container.className = className || '';
+  }, [className, container]);
 
-    useEffect(() => {
-      if (container) container.setAttribute('style', css);
-    }, [css, container]);
+  useEffect(() => {
+    if (container) container.setAttribute('style', css);
+  }, [css, container]);
 
-    if (ref) {
-      if (typeof ref === 'function') ref(container);
-      else if (ref) ref.current = container;
-    }
+  if (ref) {
+    if (typeof ref === 'function') ref(container);
+    else if (ref) ref.current = container;
+  }
 
-    return container ? createPortal(children, container) : null;
-  },
-);
+  return container ? createPortal(children, container) : null;
+});
 
 export default BodyPortal;

@@ -1,10 +1,14 @@
 import React, {forwardRef} from 'react';
+import type {
+  AnchorHTMLAttributes,
+  ForwardRefExoticComponent,
+  RefAttributes,
+} from 'react';
 import classnames from 'classnames';
 
 import styles from './Link.module.scss';
 
-export interface LinkProps
-  extends React.AnchorHTMLAttributes<HTMLAnchorElement> {
+export interface LinkProps extends AnchorHTMLAttributes<HTMLAnchorElement> {
   //хотим "to" вместо "href"? flowgen не знает про Omit :(
   to?: string;
   disabled?: boolean;
@@ -32,8 +36,8 @@ export interface LinkProps
   underlined?: boolean;
 }
 
-const Link: React.ForwardRefExoticComponent<
-  LinkProps & React.RefAttributes<HTMLAnchorElement>
+const Link: ForwardRefExoticComponent<
+  LinkProps & RefAttributes<HTMLAnchorElement>
 > = forwardRef(
   (
     {

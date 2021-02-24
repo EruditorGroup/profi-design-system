@@ -1,17 +1,22 @@
 import React, {forwardRef} from 'react';
+import type {
+  HTMLAttributes,
+  ForwardRefExoticComponent,
+  RefAttributes,
+} from 'react';
 import classnames from 'classnames';
 
 import styles from './Loader.module.scss';
 
-export interface LoaderProps extends React.RefAttributes<HTMLDivElement> {
+export interface LoaderProps extends RefAttributes<HTMLDivElement> {
   design?: 'circle' | 'square';
   size?: 'extraSmall' | 'small' | 'medium' | 'large';
   color?: 'white' | 'gray';
   animation?: 'scale' | 'blick';
 }
 
-const LoaderDots: React.ForwardRefExoticComponent<
-  LoaderProps & React.HTMLAttributes<HTMLDivElement>
+const LoaderDots: ForwardRefExoticComponent<
+  LoaderProps & HTMLAttributes<HTMLDivElement>
 > = forwardRef(
   (
     {

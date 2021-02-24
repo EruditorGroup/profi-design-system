@@ -1,8 +1,9 @@
-import React, {
+import React, {forwardRef, useCallback, useState} from 'react';
+import type {
   InputHTMLAttributes,
-  forwardRef,
-  useCallback,
-  useState,
+  ForwardRefExoticComponent,
+  ReactNode,
+  RefAttributes,
 } from 'react';
 import classNames from 'classnames';
 import Input, {InputProps} from 'components/Input';
@@ -10,13 +11,13 @@ import Input, {InputProps} from 'components/Input';
 import styles from './InputUnit.module.scss';
 
 export interface InputUnitProps extends InputProps {
-  unit?: React.ReactNode;
+  unit?: ReactNode;
 }
 
-const InputUnit: React.ForwardRefExoticComponent<
+const InputUnit: ForwardRefExoticComponent<
   InputUnitProps &
     InputHTMLAttributes<HTMLInputElement> &
-    React.RefAttributes<HTMLInputElement>
+    RefAttributes<HTMLInputElement>
 > = forwardRef(
   ({unit, placeholder, withFloatLabel, onKeyUp, ...props}, ref) => {
     const [value, setValue] = useState('');
