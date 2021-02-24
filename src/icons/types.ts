@@ -1,8 +1,9 @@
 // @flow
+import type {ButtonHTMLAttributes, RefAttributes} from 'react';
 
 export interface IconPropsType
-  extends React.ButtonHTMLAttributes<SVGSVGElement>,
-    React.RefAttributes<SVGSVGElement> {
+  extends ButtonHTMLAttributes<SVGSVGElement>,
+    RefAttributes<SVGSVGElement> {
   width?: string;
   height?: string;
   color?: string;

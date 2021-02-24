@@ -1,10 +1,11 @@
 //@flow
-import {useEffect, useCallback, useRef, DependencyList} from 'react';
+import {useEffect, useCallback, useRef} from 'react';
+import type {DependencyList} from 'react';
 
 export default function usePersistCallback<ARG, RET>(
   callback: (...args: ARG[]) => RET,
   deps: DependencyList | undefined,
-): typeof callback {
+): (...args: ARG[]) => RET {
   const callbackRef = useRef(callback);
 
   useEffect(() => {

@@ -1,10 +1,11 @@
-import React, {
+import {
   useCallback,
   useEffect,
   useLayoutEffect,
   useMemo,
   useState,
 } from 'react';
+import type {CSSProperties} from 'react';
 
 /**
  * Returns style that relative to passed [element] or undefined if element is not provider
@@ -20,9 +21,9 @@ import React, {
 export default function useRelativePosition<T extends HTMLElement>(
   element: T | null | undefined,
   align: 'left' | 'right',
-): React.CSSProperties | undefined {
+): CSSProperties | undefined {
   const [clientRects, setClientRects] = useState<DOMRect>();
-  const [css, setCSS] = useState<React.CSSProperties>();
+  const [css, setCSS] = useState<CSSProperties>();
 
   const calcRects = useCallback(
     () => setClientRects(element?.getBoundingClientRect()),

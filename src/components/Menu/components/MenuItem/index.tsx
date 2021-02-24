@@ -1,9 +1,14 @@
 import React, {forwardRef} from 'react';
+import type {
+  AnchorHTMLAttributes,
+  ForwardRefExoticComponent,
+  RefAttributes,
+} from 'react';
 import classnames from 'classnames';
 import styles from './MenuItem.module.scss';
 
 export interface DropdownItemProps
-  extends React.AnchorHTMLAttributes<HTMLAnchorElement> {
+  extends AnchorHTMLAttributes<HTMLAnchorElement> {
   divided?: boolean;
   disabled?: boolean;
   to?: string;
@@ -11,8 +16,8 @@ export interface DropdownItemProps
   current?: boolean;
 }
 
-const DropdownItem: React.ForwardRefExoticComponent<
-  DropdownItemProps & React.RefAttributes<HTMLAnchorElement>
+const DropdownItem: ForwardRefExoticComponent<
+  DropdownItemProps & RefAttributes<HTMLAnchorElement>
 > = forwardRef(
   (
     {

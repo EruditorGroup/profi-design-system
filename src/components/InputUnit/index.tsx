@@ -6,7 +6,7 @@ import type {
   RefAttributes,
 } from 'react';
 import classNames from 'classnames';
-import Input, {InputProps} from 'components/Input';
+import Input, {InputProps} from '../Input';
 
 import styles from './InputUnit.module.scss';
 

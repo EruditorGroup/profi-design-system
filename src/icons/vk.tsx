@@ -1,9 +1,10 @@
 // @flow
 import React, {forwardRef} from 'react';
-import {IconPropsType} from './types';
+import type {ForwardRefExoticComponent} from 'react';
+import type {IconPropsType} from './types';
 
-const VkIcon: React.ForwardRefExoticComponent<IconPropsType> = forwardRef(
-  ({width = '20', height = '20', color, ...props}: IconPropsType, ref) => {
+const VkIcon: ForwardRefExoticComponent<IconPropsType> = forwardRef(
+  ({width = '20', height = '20', color, ...props}, ref) => {
     return (
       <svg
         xmlns="http://www.w3.org/2000/svg"

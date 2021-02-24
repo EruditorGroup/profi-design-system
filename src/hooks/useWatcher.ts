@@ -1,11 +1,12 @@
 //@flow
-import * as React from 'react';
+import {useRef} from 'react';
+import type {DependencyList} from 'react';
 
 export default function useWatcher<RET>(
   callback: () => RET,
-  deps: React.DependencyList,
+  deps: DependencyList,
 ): void {
-  const prevDepsRef = React.useRef(deps);
+  const prevDepsRef = useRef(deps);
   const prevDeps = prevDepsRef.current;
 
   if (
