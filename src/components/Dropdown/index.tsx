@@ -3,9 +3,10 @@ import type {
   Dispatch,
   SetStateAction,
   Context,
-  ReactElement,
-  ReactNode,
   MutableRefObject,
+  ForwardRefExoticComponent,
+  RefAttributes,
+  FC,
 } from 'react';
 import useClickOutside from 'hooks/useClickOutside';
 import DropdownToggler from './components/DropdownToggler';
@@ -15,7 +16,6 @@ export interface DropdownProps {
   // verticalPosition?: 'top' | 'bottom';
   horizontalPosition?: 'left' | 'right';
   design?: 'light' | 'brand';
-  children?: ReactNode;
 }
 
 interface IDropdownContext {
@@ -32,11 +32,17 @@ export const DropdownContext: Context<IDropdownContext | null> = createContext<I
   null,
 );
 
-function Dropdown({
+export interface DropdownComponent extends FC<DropdownProps> {
+  Toggler: typeof DropdownToggler;
+  Portal: typeof DropdownPortal;
+  ref?: ForwardRefExoticComponent<RefAttributes<DropdownProps>>;
+}
+
+const Dropdown = (({
   children,
   horizontalPosition = 'left',
   design = 'light',
-}: DropdownProps): ReactElement {
+}) => {
   const [isOpened, setOpened] = useState(false);
   const togglerRef = useRef(null);
   const contentRef = useRef(null);
@@ -60,7 +66,7 @@ function Dropdown({
       {children}
     </DropdownContext.Provider>
   );
-}
+}) as DropdownComponent;
 
 Dropdown.Toggler = DropdownToggler;
 Dropdown.Portal = DropdownPortal;
