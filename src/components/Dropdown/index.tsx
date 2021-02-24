@@ -41,7 +41,7 @@ function Dropdown({
   const togglerRef = useRef(null);
   const contentRef = useRef(null);
 
-  const state = useMemo<DropdownContext>(
+  const state = useMemo<IDropdownContext>(
     () => ({
       isOpened,
       setOpened,
