@@ -1,11 +1,6 @@
 // @flow
-import {
-  useState,
-  useEffect,
-  useCallback,
-  SetStateAction,
-  Dispatch,
-} from 'react';
+import {useState, useEffect, useCallback} from 'react';
+import type {Dispatch, SetStateAction} from 'react';
 
 type RefType = {current: HTMLElement | null};
 

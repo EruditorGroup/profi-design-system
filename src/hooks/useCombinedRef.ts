@@ -1,4 +1,5 @@
 import {useRef} from 'react';
+import type {RefCallback, MutableRefObject} from 'react';
 
 /**
  * React hook для объединения нескольких рефов в один.
@@ -6,7 +7,7 @@ import {useRef} from 'react';
  * @param  {...React.Ref} refs - массив рефов
  */
 export default function useCombinedRef<T>(
-  ...refs: (React.RefCallback<T> | React.MutableRefObject<T> | null)[]
+  ...refs: (RefCallback<T> | MutableRefObject<T> | null)[]
 ): (arg: T | null) => void {
   const combinedRef = useRef(function setRefs(arg: T | null) {
     refs.forEach((ref) => {

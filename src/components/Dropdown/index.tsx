@@ -18,7 +18,7 @@ export interface DropdownProps {
   children?: ReactNode;
 }
 
-interface DropdownContext {
+interface IDropdownContext {
   isOpened: boolean;
   setOpened: Dispatch<SetStateAction<boolean>>;
   togglerRef: MutableRefObject<HTMLElement | null>;
@@ -28,7 +28,7 @@ interface DropdownContext {
 }
 
 // additional type cast to flowgen
-export const DropdownContext: Context<DropdownContext | null> = createContext<DropdownContext | null>(
+export const DropdownContext: Context<IDropdownContext | null> = createContext<IDropdownContext | null>(
   null,
 );
 

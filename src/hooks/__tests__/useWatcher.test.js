@@ -1,4 +1,4 @@
-import * as React from 'react';
+import {useRef} from 'react';
 import useWatcher from '../useWatcher';
 
 jest.mock('react', () => ({
@@ -10,7 +10,7 @@ it('useWatcher', () => {
   const deps = [1, 2, 3];
   const newDeps = [1, 3, 4];
   const ref = {current: deps};
-  React.useRef.mockImplementation(() => ref);
+  useRef.mockImplementation(() => ref);
   const cb = jest.fn();
 
   useWatcher(cb, newDeps);
