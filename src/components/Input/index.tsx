@@ -1,4 +1,5 @@
 import React, {forwardRef, useCallback} from 'react';
+import type {ForwardRefExoticComponent, RefAttributes} from 'react';
 import InputMask, {Props as InputMaskProps} from 'react-input-mask';
 import classnames from 'classnames';
 
@@ -13,8 +14,8 @@ export interface InputProps {
   block?: boolean;
 }
 
-const Input: React.ForwardRefExoticComponent<
-  InputProps & Partial<InputMaskProps> & React.RefAttributes<HTMLInputElement>
+const Input: ForwardRefExoticComponent<
+  InputProps & Partial<InputMaskProps> & RefAttributes<HTMLInputElement>
 > = forwardRef(
   (
     {

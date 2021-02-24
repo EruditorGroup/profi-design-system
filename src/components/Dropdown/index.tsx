@@ -1,34 +1,34 @@
-import React, {
-  createContext,
-  useState,
+import React, {createContext, useState, useMemo, useRef} from 'react';
+import type {
   Dispatch,
   SetStateAction,
-  useMemo,
-  useRef,
+  Context,
+  ReactElement,
+  ReactNode,
+  MutableRefObject,
 } from 'react';
 import useClickOutside from 'hooks/useClickOutside';
 import DropdownToggler from './components/DropdownToggler';
-import DropdownItem from './components/DropdownItem';
 import DropdownPortal from './components/DropdownPortal';
 
 export interface DropdownProps {
   // verticalPosition?: 'top' | 'bottom';
   horizontalPosition?: 'left' | 'right';
   design?: 'light' | 'brand';
-  children?: React.ReactNode;
+  children?: ReactNode;
 }
 
 interface DropdownContext {
   isOpened: boolean;
   setOpened: Dispatch<SetStateAction<boolean>>;
-  togglerRef: React.MutableRefObject<HTMLElement | null>;
-  contentRef: React.MutableRefObject<HTMLElement | null>;
+  togglerRef: MutableRefObject<HTMLElement | null>;
+  contentRef: MutableRefObject<HTMLElement | null>;
   design?: DropdownProps['design'];
   horizontalPosition?: DropdownProps['horizontalPosition'];
 }
 
 // additional type cast to flowgen
-export const DropdownContext: React.Context<DropdownContext | null> = createContext<DropdownContext | null>(
+export const DropdownContext: Context<DropdownContext | null> = createContext<DropdownContext | null>(
   null,
 );
 
@@ -36,7 +36,7 @@ function Dropdown({
   children,
   horizontalPosition = 'left',
   design = 'light',
-}: DropdownProps): React.ReactElement {
+}: DropdownProps): ReactElement {
   const [isOpened, setOpened] = useState(false);
   const togglerRef = useRef(null);
   const contentRef = useRef(null);
@@ -63,7 +63,6 @@ function Dropdown({
 }
 
 Dropdown.Toggler = DropdownToggler;
-Dropdown.Item = DropdownItem;
 Dropdown.Portal = DropdownPortal;
 
 export default Dropdown;

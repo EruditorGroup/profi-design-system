@@ -1,4 +1,5 @@
 import React, {useContext} from 'react';
+import type {ReactElement, ReactNode} from 'react';
 import {DropdownContext} from 'components/Dropdown';
 import BodyPortal from 'components/BodyPortal';
 import classNames from 'classnames';
@@ -7,7 +8,7 @@ import styles from './DropdownPortal.module.scss';
 import useRelativePosition from 'hooks/useRelativePosition';
 
 interface DropdownPortalProps {
-  children: React.ReactNode;
+  children: ReactNode;
   className?: string;
   animated?: boolean;
 }
@@ -16,7 +17,7 @@ export default function DropdownPortal({
   children,
   animated = true,
   className,
-}: DropdownPortalProps): React.ReactElement {
+}: DropdownPortalProps): ReactElement {
   const context = useContext(DropdownContext);
   const relativePosition = useRelativePosition(
     context?.togglerRef?.current,

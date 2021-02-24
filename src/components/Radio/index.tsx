@@ -1,4 +1,9 @@
 import React, {forwardRef} from 'react';
+import type {
+  InputHTMLAttributes,
+  ForwardRefExoticComponent,
+  RefAttributes,
+} from 'react';
 import classnames from 'classnames';
 
 import styles from './Radio.module.scss';
@@ -7,10 +12,9 @@ import styles from './Radio.module.scss';
 //   design?: 'light' | 'brand';
 // }
 
-const Radio: React.ForwardRefExoticComponent<
+const Radio: ForwardRefExoticComponent<
   // RadioProps &
-  React.InputHTMLAttributes<HTMLInputElement> &
-    React.RefAttributes<HTMLInputElement>
+  InputHTMLAttributes<HTMLInputElement> & RefAttributes<HTMLInputElement>
 > = forwardRef(
   (
     {

@@ -1,16 +1,20 @@
 import React, {forwardRef} from 'react';
+import type {
+  AnchorHTMLAttributes,
+  ForwardRefExoticComponent,
+  RefAttributes,
+} from 'react';
 import classnames from 'classnames';
 import MenuItem from './components/MenuItem';
 import styles from './Menu.module.scss';
 
-export interface MenuProps
-  extends React.AnchorHTMLAttributes<HTMLAnchorElement> {
+export interface MenuProps extends AnchorHTMLAttributes<HTMLAnchorElement> {
   to?: string;
 }
 
 // additional type cast to flowgen
-const Menu: React.ForwardRefExoticComponent<
-  MenuProps & React.RefAttributes<HTMLAnchorElement>
+const Menu: ForwardRefExoticComponent<
+  MenuProps & RefAttributes<HTMLAnchorElement>
 > & {
   Item: typeof MenuItem;
 } = forwardRef(({to, className, ...props}, ref) => {
@@ -22,8 +26,8 @@ const Menu: React.ForwardRefExoticComponent<
       {...props}
     />
   );
-}) as React.ForwardRefExoticComponent<
-  MenuProps & React.RefAttributes<HTMLAnchorElement>
+}) as ForwardRefExoticComponent<
+  MenuProps & RefAttributes<HTMLAnchorElement>
 > & {
   Item: typeof MenuItem;
 };

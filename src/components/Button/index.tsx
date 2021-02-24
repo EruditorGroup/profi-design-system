@@ -1,11 +1,15 @@
 import React, {forwardRef} from 'react';
+import type {
+  ButtonHTMLAttributes,
+  ForwardRefExoticComponent,
+  RefAttributes,
+} from 'react';
 import classnames from 'classnames';
 import LoaderDots from '../LoaderDots';
 
 import styles from './Button.module.scss';
 
-export interface ButtonProps
-  extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   design?: 'primary' | 'secondary' | 'light' | 'yandex' | 'facebook' | 'vk';
   size?: 'small' | 'normal' | 'large';
   fit?: boolean;
@@ -13,8 +17,8 @@ export interface ButtonProps
   block?: boolean;
 }
 
-const Button: React.ForwardRefExoticComponent<
-  ButtonProps & React.RefAttributes<HTMLButtonElement>
+const Button: ForwardRefExoticComponent<
+  ButtonProps & RefAttributes<HTMLButtonElement>
 > = forwardRef(
   (
     {

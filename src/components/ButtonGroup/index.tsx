@@ -1,14 +1,19 @@
 import React, {forwardRef} from 'react';
+import type {
+  HTMLAttributes,
+  ForwardRefExoticComponent,
+  RefAttributes,
+} from 'react';
 import classnames from 'classnames';
 
 import styles from './ButtonGroup.module.scss';
 
-export interface ButtonGroupProps extends React.HTMLAttributes<HTMLDivElement> {
+export interface ButtonGroupProps extends HTMLAttributes<HTMLDivElement> {
   block?: boolean;
 }
 
-const ButtonGroup: React.ForwardRefExoticComponent<
-  ButtonGroupProps & React.RefAttributes<HTMLDivElement>
+const ButtonGroup: ForwardRefExoticComponent<
+  ButtonGroupProps & RefAttributes<HTMLDivElement>
 > = forwardRef(({className, block, ...props}, ref) => {
   return (
     <div

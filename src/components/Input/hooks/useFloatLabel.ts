@@ -1,4 +1,5 @@
-import {useCallback, useState, FocusEventHandler} from 'react';
+import {useCallback, useState} from 'react';
+import type {FocusEventHandler, FocusEvent} from 'react';
 
 /**
  * Прокси-хук для focus и blur евентов, управляющий float label
@@ -21,7 +22,7 @@ export default function useFloatLabel(
   const [floated, setFloated] = useState(false);
 
   const onFloatFocus = useCallback(
-    (ev: React.FocusEvent<HTMLInputElement>) => {
+    (ev: FocusEvent<HTMLInputElement>) => {
       if (onFocus) onFocus(ev);
       setFloated(true);
     },
@@ -29,7 +30,7 @@ export default function useFloatLabel(
   );
 
   const onFloatBlur = useCallback(
-    (ev: React.FocusEvent<HTMLInputElement>) => {
+    (ev: FocusEvent<HTMLInputElement>) => {
       if (onBlur) onBlur(ev);
       if (!ev.target.value) setFloated(false);
     },

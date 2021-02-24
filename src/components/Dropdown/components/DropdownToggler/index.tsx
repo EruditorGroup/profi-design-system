@@ -1,15 +1,16 @@
 import React, {useCallback, useContext} from 'react';
+import type {ReactNode, ReactElement} from 'react';
 import {DropdownContext} from 'components/Dropdown';
 
 import styles from './DropdownToggler.module.scss';
 
 export interface DropdownTogglerProps {
-  children: React.ReactNode;
+  children: ReactNode;
 }
 
 export default function DropdownToggler({
   children,
-}: DropdownTogglerProps): React.ReactElement {
+}: DropdownTogglerProps): ReactElement {
   const context = useContext(DropdownContext);
 
   // Proxy handler for trigger context state
