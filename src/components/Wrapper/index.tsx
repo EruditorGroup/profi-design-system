@@ -1,4 +1,5 @@
 import React, {forwardRef} from 'react';
+import classnames from 'classnames';
 import type {
   HTMLAttributes,
   ForwardRefExoticComponent,
@@ -6,13 +7,21 @@ import type {
 } from 'react';
 import styles from './Wrapper.module.scss';
 
-export type WrapperProps = HTMLAttributes<HTMLDivElement>;
+export interface WrapperProps extends HTMLAttributes<HTMLDivElement> {
+  bg?: 'grey' | 'white' | 'transparent';
+}
 
 const Wrapper: ForwardRefExoticComponent<
   WrapperProps & RefAttributes<HTMLDivElement>
-> = forwardRef(({className, ...props}, ref) => {
+> = forwardRef(({className, bg = 'grey', ...props}, ref) => {
   return (
-    <div className={`${styles['wrapper']} ${className}`} ref={ref} {...props} />
+    <div className={styles[`bg-${bg}`]}>
+      <div
+        className={classnames(styles['wrapper'], className)}
+        ref={ref}
+        {...props}
+      />
+    </div>
   );
 });
 

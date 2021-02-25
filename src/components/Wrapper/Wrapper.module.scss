@@ -1,5 +1,13 @@
 .wrapper {
-  max-width: 1020px;
+  max-width: 960px;
   margin: 0 auto;
   padding: 0 10px;
+}
+
+.bg-grey {
+  background: var(--color-grey);
+}
+
+.bg-white {
+  background: #fff;
 }

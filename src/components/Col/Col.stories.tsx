@@ -13,7 +13,8 @@ export default {
 const colStyle = {
   background: '#d3d3d38f',
   border: '1px solid #fff',
-  padding: '5px',
+  paddingTop: '5px',
+  paddingBottom: '5px',
 };
 const rowStyle = {
   background: 'rgba(231, 246, 251, 0.5)',

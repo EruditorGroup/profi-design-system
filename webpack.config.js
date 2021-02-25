@@ -1,6 +1,7 @@
 const path = require('path');
 const fs = require('fs');
 const package = require('./package.json');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const {CSS_MODULE_LOCAL_IDENT_NAME_GENERATOR} = require('./.config');
 
 // resolve imports starts with "@profiru/ui" to package root
@@ -29,6 +30,7 @@ module.exports = {
     // if we dont add extensions, webpack will skip this import
     extensions: ['.js', '.jsx', '.ts', '.tsx', 'css', 'scss'],
   },
+  plugins: [new MiniCssExtractPlugin()],
   module: {
     rules: [
       {
@@ -48,7 +50,12 @@ module.exports = {
         resolve: getResolver(),
         use: [
           // load styles dynamically as with <link /> tag
-          'style-loader',
+          {
+            loader:
+              process.env.NODE_ENV === 'production'
+                ? MiniCssExtractPlugin.loader
+                : 'style-loader',
+          },
           {
             // css-loader allows us to generate unique classnames for incapsulate styles inside npm module
             loader: 'css-loader',

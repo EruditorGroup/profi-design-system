@@ -47,6 +47,8 @@ module.exports = {
             },
           ],
           [
+            // by default, webpack will exports all styles in dist/main.css
+            // so we add default replacement for styles importing with package name prefix
             transformCssImports && {
               original: './styles/theme.scss',
               replacement: `${package.name}/dist/main.css`,
@@ -63,14 +65,15 @@ module.exports = {
         generateScopedName: (localName, filePath) => {
           return CSS_MODULE_LOCAL_IDENT_NAME_GENERATOR(localName, filePath);
         },
-        extractCss: './dist/main.css',
+        // extractCss: './dist/main.css',
         extensions: ['.css', '.scss'],
-        preprocessCss: (css) => {
+        preprocessCss: (css, path) => {
+          console.log(path);
           return sass
             .renderSync({
               data: css,
             })
-            .css.toString();
+            .css.toString('utf8');
         },
       },
     ],

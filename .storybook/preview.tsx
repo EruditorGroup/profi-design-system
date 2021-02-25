@@ -1,5 +1,4 @@
 import React from 'react';
-import styles from 'styles/theme.scss';
 
 export const parameters = {
   actions: {argTypesRegex: '^on[A-Z].*'},
@@ -7,7 +6,7 @@ export const parameters = {
 
 export const decorators = [
   (Story) => (
-    <div className={styles['theme-profi']}>
+    <div className={import('../src/styles/theme.scss')['theme-profi']}>
       <Story />
     </div>
   ),

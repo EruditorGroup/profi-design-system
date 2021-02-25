@@ -1,11 +1,10 @@
 .col {
   box-sizing: border-box;
+  padding: 0 10px;
 }
 
 $columnsInRow: 12;
 $oneColWidth: 100 / $columnsInRow;
-
-@debug 100 / 5;
 
 @for $i from 0 through $columnsInRow {
   $col: 1% * $i * $oneColWidth;
