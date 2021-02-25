@@ -1,7 +1,6 @@
 import React, {useState} from 'react';
 // also exported from '@storybook/react' if you can deal with breaking changes in 6.1
 import {Story, Meta} from '@storybook/react/types-6-0';
-import styles from '../../styles/theme.scss';
 
 import Dropdown from './index';
 import Menu from '../Menu';
@@ -20,7 +19,7 @@ const Template: Story = (args) => {
         <Dropdown.Toggler>
           <Button>Открыть дропдаун</Button>
         </Dropdown.Toggler>
-        <Dropdown.Portal className={styles['theme-profi']}>
+        <Dropdown.Portal>
           <Menu.Item rounded={false}>
             <VkIcon /> Пункт c иконкой
           </Menu.Item>
