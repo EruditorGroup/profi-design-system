@@ -48,3 +48,6 @@ export type {TextProps} from './Text';
 
 export {default as Divider} from './Divider';
 export type {DividerProps} from './Divider';
+
+export {default as Select} from './Select';
+export type {SelectProps} from './Select';
