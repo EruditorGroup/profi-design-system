@@ -32,11 +32,13 @@ const BodyPortal: ForwardRefExoticComponent<
   const container = useMemo<HTMLDivElement | null>(() => {
     if (typeof window === 'undefined') return null;
     const div = document.createElement('div');
+    div.style.display = 'none';
     window.document.body.appendChild(div);
     return div;
   }, []);
 
   useEffect(() => {
+    if (container) container.style.display = '';
     return () => {
       if (container) window.document.body.removeChild(container);
     };

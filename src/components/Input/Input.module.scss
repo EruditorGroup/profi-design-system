@@ -1,5 +1,6 @@
 .form-control {
   position: relative;
+  padding: 8px 0;
 }
 
 .input {
@@ -36,7 +37,7 @@
   width: calc(100% - 15px);
   height: 22px;
   margin: auto;
-  color: var(--dark-grey);
+  color: var(--color-darkGrey);
   white-space: nowrap;
   font-size: 16px;
   line-height: 22px;

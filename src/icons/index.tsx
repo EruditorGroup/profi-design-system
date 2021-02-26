@@ -1,0 +1,11 @@
+export {default as VkIcon} from './Vk';
+export {default as SettingsIcon} from './Settings';
+export {default as SignOutIcon} from './SignOut';
+export {default as CameraIcon} from './Camera';
+export {default as FbIcon} from './Fb';
+export {default as NotificationIcon} from './Notification';
+export {default as PersonIcon} from './Person';
+export {default as ProfileIcon} from './Profile';
+export {default as RemoveIcon} from './Remove';
+export {default as SocialsIcon} from './Socials';
+export {default as UploadIcon} from './Upload';

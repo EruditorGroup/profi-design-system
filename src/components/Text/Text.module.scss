@@ -1,0 +1,36 @@
+.text {
+  font-size: 16px;
+  color: var(--color-text);
+  line-height: 1.4;
+  margin: 0;
+}
+
+.design-h1 {
+  font-size: 34px; // used in warp cabinet settings
+  font-weight: bold;
+}
+.design-h2 {
+  font-size: 30px; // FIXME: compare with design-system
+  font-weight: bold;
+}
+.design-h3 {
+  font-size: 24px; // used in warp cabinet settings
+  font-weight: bold;
+}
+.design-h4 {
+  font-size: 20px; // FIXME: compare with design-system
+  font-weight: bold;
+}
+.design-h5 {
+  font-size: 18px; // FIXME: compare with design-system
+  font-weight: bold;
+}
+.design-h6 {
+  font-size: 16px; // FIXME: compare with design-system
+  font-weight: bold;
+}
+
+.design-hint {
+  font-size: 14px;
+  color: var(--color-darkGrey);
+}

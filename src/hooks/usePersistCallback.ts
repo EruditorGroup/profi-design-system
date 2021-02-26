@@ -1,4 +1,3 @@
-//@flow
 import {useEffect, useCallback, useRef} from 'react';
 import type {DependencyList} from 'react';
 
