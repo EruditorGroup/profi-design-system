@@ -15,7 +15,7 @@
   height: 50px;
   padding-right: 25px;
   border: 1px solid var(--color-border);
-  border-radius: var(--border-radius);
+  border-radius: var(--border-radius-small);
   padding: 5px 25px 5px 15px;
   -webkit-appearance: none;
   background: no-repeat right transparent;
@@ -31,7 +31,7 @@
   display: block;
   top: 0;
   bottom: 0;
-  right: 22px;
+  right: 20px;
 }
 
 .option-placeholder {
