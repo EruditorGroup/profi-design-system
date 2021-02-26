@@ -3,6 +3,7 @@ import {act, renderHook} from '@testing-library/react-hooks';
 import useRelativePosition from '../useRelativePosition';
 
 jest.unmock('../useRelativePosition');
+jest.useRealTimers();
 
 describe('useRelativePosition', () => {
   let element;
@@ -27,7 +28,7 @@ describe('useRelativePosition', () => {
     expect(hook.result.current).toBe(undefined);
   });
 
-  it('should use getBoundingClientRect to calculate styles', () => {
+  it('should use getBoundingClientRect to calculate styles', async () => {
     const hook = renderHook(() => useRelativePosition(element));
     expect(hook.result.current).toMatchSnapshot();
   });

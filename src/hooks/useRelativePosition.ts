@@ -1,10 +1,4 @@
-import {
-  useCallback,
-  useEffect,
-  useLayoutEffect,
-  useMemo,
-  useState,
-} from 'react';
+import {useCallback, useEffect, useMemo, useState} from 'react';
 import type {CSSProperties} from 'react';
 
 export type RelativePositionOffset = {
@@ -38,30 +32,31 @@ export default function useRelativePosition<T extends HTMLElement>(
     [element],
   );
 
-  useLayoutEffect(() => calcRects(), [calcRects]);
+  useEffect(() => calcRects(), [calcRects]);
 
   useEffect(() => {
     window.addEventListener('resize', calcRects, false);
     return () => window.removeEventListener('resize', calcRects, false);
   }, [calcRects]);
 
-  useLayoutEffect(() => {
+  useEffect(() => {
     if (clientRects) {
       const {top, left, right, width, height} = clientRects;
-      const position = {
+      setCSS((css) => ({
+        ...css,
         width,
         top: top + height + (offset?.top ?? 0),
-      };
+      }));
       if (align === 'left')
-        setCSS({
-          ...position,
+        setCSS((css) => ({
+          ...css,
           left: left + (offset?.left ?? 0),
-        });
+        }));
       if (align === 'right')
-        setCSS({
-          ...position,
+        setCSS((css) => ({
+          ...css,
           right: right - width + (offset?.right ?? 0),
-        });
+        }));
     } else {
       setCSS(undefined);
     }

@@ -3,7 +3,7 @@ import type {ForwardRefExoticComponent} from 'react';
 import type {IconPropsType} from './_types';
 
 const SettingsIcon: ForwardRefExoticComponent<IconPropsType> = forwardRef(
-  ({width = '20', height = '20', color, key, ...props}, ref) => {
+  ({width = '20', height = '20', color, ...props}, ref) => {
     return (
       <svg
         fill="none"
