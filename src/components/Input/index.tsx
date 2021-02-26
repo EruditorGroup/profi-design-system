@@ -47,7 +47,7 @@ const Input: ForwardRefExoticComponent<
     );
 
     return (
-      <div className={styles['form-control']}>
+      <div className={classnames(styles['form-control'], className)}>
         {withFloatLabel && (
           <label
             className={classnames(
@@ -67,7 +67,6 @@ const Input: ForwardRefExoticComponent<
           className: classnames(
             styles['input'],
             withFloatLabel && styles['input-withFloatLabel'],
-            className,
           ),
           ...props,
         })}
