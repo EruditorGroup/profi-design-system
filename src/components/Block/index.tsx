@@ -4,6 +4,7 @@ import type {
   ForwardRefExoticComponent,
   RefAttributes,
 } from 'react';
+import classnames from 'classnames';
 import styles from './Block.module.scss';
 
 export type BlockProps = HTMLAttributes<HTMLDivElement>;
@@ -12,7 +13,11 @@ const Block: ForwardRefExoticComponent<
   BlockProps & RefAttributes<HTMLDivElement>
 > = forwardRef(({className, ...props}, ref) => {
   return (
-    <div className={`${styles['block']} ${className}`} ref={ref} {...props} />
+    <div
+      className={classnames(styles['block'], className)}
+      ref={ref}
+      {...props}
+    />
   );
 });
 
