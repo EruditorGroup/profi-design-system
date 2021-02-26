@@ -12,18 +12,8 @@ export default {
 const Template: Story<InputProps> = (args) => (
   <div>
     <Input {...args} block placeholder="Статичный плейсхолдер" />
-    <Input
-      {...args}
-      style={{marginTop: '10px'}}
-      withFloatLabel
-      placeholder="Плавающий плейсхолдер"
-    />
-    <Input
-      {...args}
-      style={{marginTop: '10px'}}
-      placeholder="С маской"
-      mask={'+9 999 999-99-99'}
-    />
+    <Input {...args} withFloatLabel placeholder="Плавающий плейсхолдер" />
+    <Input {...args} placeholder="С маской" mask={'+9 999 999-99-99'} />
   </div>
 );
 

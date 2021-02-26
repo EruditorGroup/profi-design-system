@@ -19,10 +19,10 @@
 
 .design-light {
   svg {
-    color: var(--dark-grey);
+    color: var(--color-darkGrey);
   }
   &:hover {
-    background: var(--light-grey);
+    background: var(--color-lightGrey);
   }
   &:active {
     background: var(--medium-grey);
@@ -44,17 +44,17 @@
 }
 
 .disabled {
-  color: var(--dark-grey);
+  color: var(--color-darkGrey);
   cursor: default;
   svg {
     color: var(--medium-grey);
   }
   &:hover {
-    color: var(--dark-grey);
+    color: var(--color-darkGrey);
     background: white;
   }
   &:active {
-    color: var(--dark-grey);
+    color: var(--color-darkGrey);
     background: white;
   }
 }

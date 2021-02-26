@@ -65,12 +65,12 @@
 }
 
 .design-light {
-  background: var(--grey-line);
+  background: var(--color-grey);
   color: var(--color-text);
   font-weight: 600;
 
   &:hover {
-    background: var(--light-grey);
+    background: var(--color-lightGrey);
   }
 
   &:active {

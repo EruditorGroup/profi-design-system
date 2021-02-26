@@ -7,6 +7,13 @@ import {
 } from 'react';
 import type {CSSProperties} from 'react';
 
+export type RelativePositionOffset = {
+  top?: number;
+  bottom?: number;
+  left?: number;
+  right?: number;
+};
+
 /**
  * Returns style that relative to passed [element] or undefined if element is not provider
  * @param elementRef DOM element react reference
@@ -21,6 +28,7 @@ import type {CSSProperties} from 'react';
 export default function useRelativePosition<T extends HTMLElement>(
   element: T | null | undefined,
   align: 'left' | 'right',
+  offset?: RelativePositionOffset,
 ): CSSProperties | undefined {
   const [clientRects, setClientRects] = useState<DOMRect>();
   const [css, setCSS] = useState<CSSProperties>();
@@ -40,13 +48,24 @@ export default function useRelativePosition<T extends HTMLElement>(
   useLayoutEffect(() => {
     if (clientRects) {
       const {top, left, right, width, height} = clientRects;
-      setCSS({width, top: top + height});
-      if (align === 'left') setCSS((css) => ({...css, left}));
-      if (align === 'right') setCSS((css) => ({...css, right: right - width}));
+      const position = {
+        width,
+        top: top + height + (offset?.top ?? 0),
+      };
+      if (align === 'left')
+        setCSS({
+          ...position,
+          left: left + (offset?.left ?? 0),
+        });
+      if (align === 'right')
+        setCSS({
+          ...position,
+          right: right - width + (offset?.right ?? 0),
+        });
     } else {
       setCSS(undefined);
     }
-  }, [clientRects, align]);
+  }, [clientRects, align, offset]);
 
   return useMemo(() => {
     if (!css) return undefined;
@@ -56,7 +75,7 @@ export default function useRelativePosition<T extends HTMLElement>(
       left: css.left ? `${css.left}px` : 'auto',
       right: css.right ? `${css.right}px` : 'auto',
       minWidth: `${css.width}px`,
-      zIndex: 10000000,
+      zIndex: 10000000, //TODO: maybe control it from props?
     };
   }, [css]);
 }

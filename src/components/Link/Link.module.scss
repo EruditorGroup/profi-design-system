@@ -27,7 +27,7 @@
 }
 
 .color-dark-grey {
-  color: var(--dark-grey);
+  color: var(--color-darkGrey);
 }
 
 .color-black {
@@ -116,12 +116,12 @@
   padding: 5px 13px 5px 11px;
   border-radius: var(--border-radius-16);
   background: var(--light-blue);
-  color: var(--profi-text);
+  color: var(--color-text);
   font-size: 16px;
   transition: all 200ms linear;
   &:hover {
     background: var(--light-red);
-    color: var(--profi-text);
+    color: var(--color-text);
   }
 }
 
@@ -130,14 +130,14 @@
   margin: 5px 10px 5px 0;
   padding: 10px 15px;
   border-radius: var(--border-radius);
-  background: var(--grey-line);
-  color: var(--profi-text);
+  background: var(--color-grey);
+  color: var(--color-text);
   font-weight: 500;
   font-size: 16px;
   transition: all 200ms linear;
   &:hover {
     background: var(--gray-tag-hover);
-    color: var(--profi-text);
+    color: var(--color-text);
   }
 }
 
@@ -145,28 +145,28 @@
   display: inline-block;
   margin: 5px 5px 5px 0;
   padding: 0 0.71em;
-  border: 1px solid var(--grey-line);
+  border: 1px solid var(--color-grey);
   border-radius: var(--border-radius-16);
   background: #fff;
-  color: var(--profi-text);
+  color: var(--color-text);
   font-size: 14px;
   line-height: 1.9;
   transition: all 200ms linear;
   &:hover {
-    background: var(--light-grey);
+    background: var(--color-lightGrey);
   }
   &:active,
   &_active,
   &_active:hover {
-    background: var(--grey-line);
+    background: var(--color-grey);
   }
 }
 
 .disabled {
-  color: var(--dark-grey);
+  color: var(--color-darkGrey);
   cursor: default;
   &:hover,
   &:active {
-    color: var(--dark-grey);
+    color: var(--color-darkGrey);
   }
 }

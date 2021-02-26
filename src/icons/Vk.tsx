@@ -1,7 +1,6 @@
-// @flow
 import React, {forwardRef} from 'react';
 import type {ForwardRefExoticComponent} from 'react';
-import type {IconPropsType} from './types';
+import type {IconPropsType} from './_types';
 
 const VkIcon: ForwardRefExoticComponent<IconPropsType> = forwardRef(
   ({width = '20', height = '20', color, ...props}, ref) => {
@@ -25,5 +24,7 @@ const VkIcon: ForwardRefExoticComponent<IconPropsType> = forwardRef(
     );
   },
 );
+
+VkIcon.displayName = 'VkIcon';
 
 export default VkIcon;
