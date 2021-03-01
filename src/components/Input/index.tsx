@@ -8,7 +8,6 @@ import useFloatLabel from './hooks/useFloatLabel';
 import styles from './Input.module.scss';
 
 export interface InputProps {
-  noMargin?: boolean;
   label?: string;
   withFloatLabel?: boolean;
   placeholder?: string;
