@@ -6,7 +6,7 @@ import type {
   MutableRefObject,
   FC,
 } from 'react';
-import useClickOutside from 'hooks/useClickOutside';
+import useClickOutside from '../../hooks/useClickOutside';
 import DropdownToggler from './components/DropdownToggler';
 import DropdownPortal from './components/DropdownPortal';
 

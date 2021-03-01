@@ -7,8 +7,8 @@ import {DropdownContext} from 'components/Dropdown';
 import BodyPortal from '../../../BodyPortal';
 import type {BodyPortalProps} from '../../../BodyPortal';
 
-import useRelativePosition from 'hooks/useRelativePosition';
-import type {RelativePositionOffset} from 'hooks/useRelativePosition';
+import useRelativePosition from '../../../../hooks/useRelativePosition';
+import type {RelativePositionOffset} from '../../../../hooks/useRelativePosition';
 
 import styles from './DropdownPortal.module.scss';
 

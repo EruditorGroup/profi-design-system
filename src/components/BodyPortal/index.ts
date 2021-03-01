@@ -12,7 +12,7 @@ import stringifyCssProps from 'utils/stringifyCssProps';
 export type BodyPortalProps = {
   children: ReactNode;
   className?: string;
-  style?: CSSProperties;
+  style?: {[key: string]: string};
 };
 
 /**

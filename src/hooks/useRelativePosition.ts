@@ -23,7 +23,7 @@ export default function useRelativePosition<T extends HTMLElement>(
   element: T | null | undefined,
   align: 'left' | 'right',
   offset?: RelativePositionOffset,
-): CSSProperties | undefined {
+): {[key: string]: string} | undefined {
   const [clientRects, setClientRects] = useState<DOMRect>();
   const [css, setCSS] = useState<CSSProperties>();
 
