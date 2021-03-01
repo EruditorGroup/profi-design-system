@@ -4860,6 +4860,18 @@ css-loader@^5.0.1:
     schema-utils "^3.0.0"
     semver "^7.3.2"
 
+css-modules-flow-types-loader@^1.4.1:
+  version "1.4.1"
+  resolved "https://registry.yarnpkg.com/css-modules-flow-types-loader/-/css-modules-flow-types-loader-1.4.1.tgz#0faedb8dfa317e01900fdcad4704483220ffa470"
+  integrity sha512-l813Y6N9Wf4Kg0ILlKhe8aI6sM6dj+SgUkE85YbXV42cepRpnHA1YrkGyR2WN5xAY0SYLAZr53J3EzUoIvYRsQ==
+  dependencies:
+    css-modules-flow-types-printer "^1.4.1"
+
+css-modules-flow-types-printer@^1.4.1:
+  version "1.4.1"
+  resolved "https://registry.yarnpkg.com/css-modules-flow-types-printer/-/css-modules-flow-types-printer-1.4.1.tgz#f3308c4a81169dd9a933ccb0e76e3a49bf58c4dc"
+  integrity sha512-OJXluvPgEzifS0IO/cSaHrVpZL9Cz1wqYv58WIpD4tB8so+a43xhnoiZWx28Rr6zyqQdsW5IoS5aCPZl66AKFg==
+
 css-modules-require-hook@^4.0.6:
   version "4.2.3"
   resolved "https://registry.yarnpkg.com/css-modules-require-hook/-/css-modules-require-hook-4.2.3.tgz#6792ca412b15e23e6f9be6a07dcef7f577ff904d"
