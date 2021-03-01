@@ -7,8 +7,7 @@ import type {
 import classnames from 'classnames';
 import styles from './MenuItem.module.scss';
 
-export interface DropdownItemProps
-  extends AnchorHTMLAttributes<HTMLAnchorElement> {
+export interface MenuItemProps extends AnchorHTMLAttributes<HTMLAnchorElement> {
   divided?: boolean;
   disabled?: boolean;
   to?: string;
@@ -16,8 +15,8 @@ export interface DropdownItemProps
   current?: boolean;
 }
 
-const DropdownItem: ForwardRefExoticComponent<
-  DropdownItemProps & RefAttributes<HTMLAnchorElement>
+const MenuItem: ForwardRefExoticComponent<
+  MenuItemProps & RefAttributes<HTMLAnchorElement>
 > = forwardRef(
   (
     {
@@ -50,4 +49,4 @@ const DropdownItem: ForwardRefExoticComponent<
   },
 );
 
-export default DropdownItem;
+export default MenuItem;
