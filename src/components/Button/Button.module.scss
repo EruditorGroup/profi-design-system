@@ -14,14 +14,19 @@
   padding: 0 20px;
   height: 50px;
 
-  svg {
-    padding-right: 0.5rem;
-    flex-shrink: 0;
-  }
-
   &[disabled] {
     opacity: 0.65;
     cursor: default;
+  }
+}
+
+.icon {
+  flex-shrink: 0;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  &-withMargin {
+    margin-right: 0.5rem;
   }
 }
 
@@ -39,7 +44,8 @@
 
   &[disabled],
   &[disabled]:hover {
-    background: var(--color-border);
+    // opacity: 0.65;
+    background: var(--color-brand);
   }
 }
 
@@ -121,7 +127,7 @@
   font-weight: 400;
 }
 
-.size-normal {
+.size-default {
   padding: 11px 20px;
 }
 
