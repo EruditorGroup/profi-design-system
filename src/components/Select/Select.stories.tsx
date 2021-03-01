@@ -44,7 +44,7 @@ const Template: Story = (args) => {
         ))}
       </Select>
       <hr />
-      <h3>Block with placeholder</h3>
+      <h3>width 100% (block)</h3>
       <Select
         selected={selected}
         block
@@ -59,6 +59,19 @@ const Template: Story = (args) => {
       <h3>Float label</h3>
       <Select
         selected={selected}
+        withFloatLabel
+        block
+        placeholder="Float label"
+        onChange={(el) => setSelected(el.target.value)}
+        {...args}
+      >
+        {variants.map((child) => (
+          <Select.Option value={child}>{child}</Select.Option>
+        ))}
+      </Select>
+      <h3>With default value</h3>
+      <Select
+        selected={selected || 'Green'}
         withFloatLabel
         block
         placeholder="Float label"

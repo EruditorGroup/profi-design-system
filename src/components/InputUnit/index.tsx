@@ -11,7 +11,7 @@ import Input, {InputProps} from '../Input';
 import styles from './InputUnit.module.scss';
 
 export interface InputUnitProps extends InputProps {
-  unit?: ReactNode;
+  unit: ReactNode;
 }
 
 const InputUnit: ForwardRefExoticComponent<
@@ -40,17 +40,15 @@ const InputUnit: ForwardRefExoticComponent<
           placeholder={placeholder}
           {...props}
         />
-        {unit && (
-          <div
-            className={classNames(styles['unit'], {
-              [styles['unit-withFloatLabel']]: placeholder && withFloatLabel,
-            })}
-          >
-            <span className={styles['value']}>{value}</span>
-            <span className={styles['unitOffset']} />
-            {!placeholder || value ? unit : ''}
-          </div>
-        )}
+        <div
+          className={classNames(styles['unit'], {
+            [styles['unit-withFloatLabel']]: placeholder && withFloatLabel,
+          })}
+        >
+          <span className={styles['value']}>{value}</span>
+          <span className={styles['unitOffset']} />
+          {!placeholder || value ? unit : ''}
+        </div>
       </div>
     );
   },
