@@ -7,6 +7,6 @@ Object {
   "position": "absolute",
   "right": "auto",
   "top": "60px",
-  "zIndex": 10000000,
+  "zIndex": "10000000",
 }
 `;
