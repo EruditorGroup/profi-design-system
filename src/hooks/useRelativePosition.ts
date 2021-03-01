@@ -62,15 +62,13 @@ export default function useRelativePosition<T extends HTMLElement>(
     }
   }, [clientRects, align, offset]);
 
-  return useMemo(() => {
-    if (!css) return undefined;
-    return {
-      position: 'absolute',
-      top: `${css.top}px`,
-      left: css.left ? `${css.left}px` : 'auto',
-      right: css.right ? `${css.right}px` : 'auto',
-      minWidth: `${css.width}px`,
-      zIndex: 10000000, //TODO: maybe control it from props?
-    };
-  }, [css]);
+  if (!css) return undefined;
+  return {
+    position: 'absolute',
+    top: `${css.top}px`,
+    left: css.left ? `${css.left}px` : 'auto',
+    right: css.right ? `${css.right}px` : 'auto',
+    minWidth: `${css.width}px`,
+    zIndex: '10000000', //TODO: maybe control it from props?
+  };
 }
