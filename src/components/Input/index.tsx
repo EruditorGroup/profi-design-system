@@ -17,9 +17,7 @@ export interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
   withFloatLabel?: boolean;
   placeholder?: string;
   block?: boolean;
-}
 
-export interface InputMaskProps {
   /**
    * Mask string. Format characters are:
    * * `9`: `0-9`
@@ -29,7 +27,7 @@ export interface InputMaskProps {
    * Any character can be escaped with backslash, which usually will appear as double backslash in JS strings.
    * For example, German phone mask with unremoveable prefix +49 will look like `mask="+4\\9 99 999 99"` or `mask={"+4\\\\9 99 999 99"}`
    */
-  mask: string | Array<string | RegExp>;
+  mask?: string | Array<string | RegExp>;
   /**
    * Character to cover unfilled editable parts of mask. Default character is "_". If set to null, unfilled parts will be empty, like in ordinary input.
    */
@@ -45,7 +43,7 @@ export interface InputMaskProps {
 }
 
 const Input: ForwardRefExoticComponent<
-  InputProps & InputMaskProps & RefAttributes<HTMLInputElement>
+  InputProps & RefAttributes<HTMLInputElement>
 > = forwardRef(
   (
     {
@@ -66,9 +64,9 @@ const Input: ForwardRefExoticComponent<
     );
 
     const InputComponent = useCallback(
-      (inputProps: InputMaskProps | InputProps) => {
+      (inputProps: InputProps) => {
         return mask ? (
-          <InputMask {...(inputProps as InputMaskProps)} mask={mask} />
+          <InputMask {...inputProps} mask={mask} />
         ) : (
           <input {...inputProps} />
         );
