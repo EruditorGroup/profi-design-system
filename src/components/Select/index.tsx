@@ -41,7 +41,13 @@ const Select = forwardRef(
   ) => {
     return (
       <SelectedValueContext.Provider value={selected}>
-        <div className={classnames(styles['root'], block && styles['block'])}>
+        <div
+          className={classnames(
+            styles['root'],
+            block && styles['block'],
+            className,
+          )}
+        >
           <svg
             width="11"
             height="6"
@@ -70,7 +76,6 @@ const Select = forwardRef(
               block && styles['block'],
               withFloatLabel && styles['select-withFloatLabel'],
               styles['select'],
-              className,
             )}
             ref={ref}
             {...props}
