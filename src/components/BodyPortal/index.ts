@@ -3,7 +3,6 @@ import type {
   ForwardRefExoticComponent,
   RefAttributes,
   ReactNode,
-  CSSProperties,
   ReactPortal,
 } from 'react';
 import {createPortal} from 'react-dom';
