@@ -76,6 +76,7 @@ module.exports = {
               },
             },
           },
+          'css-modules-flow-types-loader',
           // sass-loader is syntax booster of project`s styles
           'sass-loader',
           // autoprefixer and custom transpile plugins
