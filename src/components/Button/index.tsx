@@ -67,14 +67,16 @@ const Button: ForwardRefExoticComponent<
           </>
         ) : (
           <>
-            <span
-              className={classnames(
-                styles['icon'],
-                children && styles['icon-withMargin'],
-              )}
-            >
-              {icon}
-            </span>
+            {icon && (
+              <span
+                className={classnames(
+                  styles['icon'],
+                  children && styles['icon-withMargin'],
+                )}
+              >
+                {icon}
+              </span>
+            )}
             {children}
           </>
         )}
