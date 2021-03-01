@@ -1,7 +1,8 @@
 .form-control {
   position: relative;
-  padding: 8px 0;
+  margin: 8px 0;
   border: 1px solid var(--color-border);
+  border-radius: var(--border-radius-small);
 }
 
 .input {
@@ -11,12 +12,13 @@
   height: 50px;
   padding: 0 12px 0 15px;
   color: var(--color-text);
-  border: none;
   border-radius: var(--border-radius-small);
+  border: none;
   font-size: 16px;
   font-family: var(--font-family);
   transition: border-color 0.15s ease;
   -webkit-appearance: none;
+  background: transparent;
 }
 
 .input-withFloatLabel {
