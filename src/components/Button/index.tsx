@@ -3,15 +3,17 @@ import type {
   ButtonHTMLAttributes,
   ForwardRefExoticComponent,
   RefAttributes,
+  ReactNode,
 } from 'react';
 import classnames from 'classnames';
-import LoaderDots from '../LoaderDots';
+import Spinner from '../Spinner';
 
 import styles from './Button.module.scss';
 
 export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   design?: 'primary' | 'secondary' | 'light' | 'yandex' | 'facebook' | 'vk';
-  size?: 'small' | 'normal' | 'large';
+  size?: 'small' | 'default' | 'large';
+  icon?: ReactNode;
   fit?: boolean;
   isLoading?: boolean;
   block?: boolean;
@@ -23,13 +25,15 @@ const Button: ForwardRefExoticComponent<
   (
     {
       design = 'primary',
-      size = 'normal',
+      size = 'default',
+      type = 'button',
       block = false,
       disabled,
       isLoading = false,
       fit = false, // без отступов
       children,
       className,
+      icon,
       ...props
     },
     ref,
@@ -37,6 +41,7 @@ const Button: ForwardRefExoticComponent<
     return (
       <button
         ref={ref}
+        type={type}
         disabled={isLoading || disabled}
         className={classnames(
           styles['button'],
@@ -50,11 +55,28 @@ const Button: ForwardRefExoticComponent<
       >
         {isLoading ? (
           <>
-            <LoaderDots />
+            <Spinner
+              className={classnames(
+                styles['icon'],
+                children && styles['icon-withMargin'],
+              )}
+              size={size}
+              color="light"
+            />
             {children}
           </>
         ) : (
-          children
+          <>
+            <span
+              className={classnames(
+                styles['icon'],
+                children && styles['icon-withMargin'],
+              )}
+            >
+              {icon}
+            </span>
+            {children}
+          </>
         )}
       </button>
     );
