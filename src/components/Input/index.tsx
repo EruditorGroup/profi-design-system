@@ -15,7 +15,6 @@ import styles from './Input.module.scss';
 export interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
   label?: string;
   withFloatLabel?: boolean;
-  placeholder?: string;
   block?: boolean;
 
   /**
