@@ -1,4 +1,4 @@
-import React, {forwardRef, useCallback} from 'react';
+import React, {forwardRef, useCallback, useEffect} from 'react';
 import type {
   ForwardRefExoticComponent,
   RefAttributes,
@@ -51,6 +51,7 @@ const Input: ForwardRefExoticComponent<
       placeholder,
       withFloatLabel,
       block = true,
+      value,
       mask,
       onFocus,
       onBlur,
@@ -59,6 +60,7 @@ const Input: ForwardRefExoticComponent<
     ref,
   ) => {
     const [isFloated, onFocusProxy, onBlurProxy] = useFloatLabel(
+      Boolean(value),
       onFocus,
       onBlur,
     );
@@ -89,6 +91,7 @@ const Input: ForwardRefExoticComponent<
         )}
         {InputComponent({
           ref,
+          value,
           onFocus: onFocusProxy,
           onBlur: onBlurProxy,
           placeholder: withFloatLabel ? '' : placeholder,

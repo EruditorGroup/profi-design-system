@@ -1,8 +1,9 @@
-import {useCallback, useState} from 'react';
+import {useCallback, useEffect, useState} from 'react';
 import type {FocusEventHandler, FocusEvent} from 'react';
 
 /**
  * Прокси-хук для focus и blur евентов, управляющий float label
+ * @param defaultValue {boolean} Дефолтное значение floated
  * @param onFocus функция, которую нужно вызвать при фокусе
  * @param onBlur функция, которую нужно вызвать при блюре
  * @returns [
@@ -12,6 +13,7 @@ import type {FocusEventHandler, FocusEvent} from 'react';
  * ]
  */
 export default function useFloatLabel(
+  defaultValue = false,
   onFocus?: FocusEventHandler<HTMLInputElement>,
   onBlur?: FocusEventHandler<HTMLInputElement>,
 ): [
@@ -19,7 +21,11 @@ export default function useFloatLabel(
   FocusEventHandler<HTMLInputElement>,
   FocusEventHandler<HTMLInputElement>,
 ] {
-  const [floated, setFloated] = useState(false);
+  const [floated, setFloated] = useState(defaultValue);
+
+  useEffect(() => {
+    setFloated(defaultValue);
+  }, [defaultValue]);
 
   const onFloatFocus = useCallback(
     (ev: FocusEvent<HTMLInputElement>) => {
