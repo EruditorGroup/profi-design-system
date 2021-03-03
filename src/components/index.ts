@@ -51,3 +51,6 @@ export type {DividerProps} from './Divider';
 
 export {default as Select} from './Select';
 export type {SelectProps} from './Select';
+
+export {default as Spinner} from './Spinner';
+export type {SpinnerProps} from './Spinner';
