@@ -1,4 +1,4 @@
-import React, {forwardRef, useCallback, useEffect} from 'react';
+import React, {forwardRef, useCallback} from 'react';
 import type {
   ForwardRefExoticComponent,
   RefAttributes,
