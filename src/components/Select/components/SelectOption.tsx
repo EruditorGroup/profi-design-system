@@ -12,8 +12,6 @@ const SelectOption: ForwardRefExoticComponent<
   SelectOptionProps & RefAttributes<HTMLOptionElement>
 > = forwardRef(({value, ...props}, ref) => {
   const selectedValue = useContext(SelectedValueContext);
-
-  console.log(value, selectedValue);
   return (
     <option
       ref={ref}

@@ -27,7 +27,6 @@ const DropdownPortal: ForwardRefExoticComponent<
     offset,
   );
 
-  console.log(context?.isOpened);
   return (
     <BodyPortal
       style={relativePosition}
