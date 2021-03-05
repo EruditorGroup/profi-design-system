@@ -24,6 +24,13 @@ const Template: Story<InputProps> = (args) => {
         placeholder="Плавающий плейсхолдер с дефолтным значением"
         value={value || 'floated'}
       />
+      <Input
+        {...args}
+        disabled
+        withFloatLabel
+        placeholder="Disabled"
+        value={'Меня не отредактируешь'}
+      />
     </div>
   );
 };
