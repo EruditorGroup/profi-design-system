@@ -19,6 +19,7 @@ const Template: Story = () => {
       <Text design="h5">H5</Text>
       <Text design="h6">H6</Text>
       <Text design="hint">Hint text</Text>
+      <Text design="error">Error text</Text>
     </div>
   );
 };

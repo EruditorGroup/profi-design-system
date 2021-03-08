@@ -15,7 +15,7 @@ const Template: Story = (args) => {
     <div>
       <Checkbox {...args}>Простой checkbox</Checkbox>
       <Checkbox style={{marginTop: '10px'}} disabled {...args}>
-        Disabled checkbox
+        Неактивный checkbox
       </Checkbox>
       <Checkbox
         checked={checked}
@@ -24,6 +24,15 @@ const Template: Story = (args) => {
         {...args}
       >
         Выбранный checkbox
+      </Checkbox>
+      <Checkbox
+        checked
+        disabled
+        onChange={() => setChecked(!checked)}
+        style={{marginTop: '10px'}}
+        {...args}
+      >
+        Выбранный неактивный checkbox
       </Checkbox>
       <Checkbox {...args} style={{marginTop: '10px'}}>
         <div>Многострочный</div>

@@ -10,7 +10,16 @@ export interface TextProps
   extends HTMLAttributes<Variants>,
     RefAttributes<Variants> {
   tag?: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'p' | 'span';
-  design?: 'default' | 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'hint';
+  design?:
+    | 'default'
+    | 'h1'
+    | 'h2'
+    | 'h3'
+    | 'h4'
+    | 'h5'
+    | 'h6'
+    | 'hint'
+    | 'error';
 }
 
 const Text: ForwardRefExoticComponent<TextProps> = forwardRef(
