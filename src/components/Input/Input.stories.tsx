@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useRef, useState} from 'react';
 // also exported from '@storybook/react' if you can deal with breaking changes in 6.1
 import {Story, Meta} from '@storybook/react/types-6-0';
 
@@ -11,8 +11,10 @@ export default {
 
 const Template: Story<InputProps> = (args) => {
   const [value, setValue] = useState('');
+  const ref = useRef();
   args.value = value;
   args.onChange = (ev) => setValue(ev.target.value);
+  console.log(ref.current, document.activeElement);
   return (
     <div>
       <Input {...args} block placeholder="Статичный плейсхолдер" />
@@ -31,6 +33,14 @@ const Template: Story<InputProps> = (args) => {
         placeholder="Disabled"
         value={'Меня не отредактируешь'}
       />
+      <h2>Focus state</h2>
+      <Input
+        ref={ref}
+        {...args}
+        placeholder="С маской"
+        mask={'+9 999 999-99-99'}
+      />
+      Focused: {document.activeElement === ref.current ? 'true' : 'false'}
     </div>
   );
 };
