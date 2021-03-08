@@ -1,6 +1,17 @@
 import {useCallback, useEffect, useState} from 'react';
 import type {FocusEventHandler, FocusEvent} from 'react';
 
+type FloatLabelState = [
+  // Текущее состояние float-label
+  boolean,
+  {
+    //  функция, которую нужно вызвать при фокусе
+    onFocus: FocusEventHandler<HTMLInputElement>;
+    //  функция, которую нужно вызвать при блюре
+    onBlur: FocusEventHandler<HTMLInputElement>;
+  },
+];
+
 /**
  * Прокси-хук для focus и blur евентов, управляющий float label
  * @param defaultValue {boolean} Дефолтное значение floated
@@ -14,13 +25,11 @@ import type {FocusEventHandler, FocusEvent} from 'react';
  */
 export default function useFloatLabel(
   defaultValue = false,
-  onFocus?: FocusEventHandler<HTMLInputElement>,
-  onBlur?: FocusEventHandler<HTMLInputElement>,
-): [
-  boolean,
-  FocusEventHandler<HTMLInputElement>,
-  FocusEventHandler<HTMLInputElement>,
-] {
+  props: {
+    onFocus?: FocusEventHandler<HTMLInputElement>;
+    onBlur?: FocusEventHandler<HTMLInputElement>;
+  },
+): FloatLabelState {
   const [floated, setFloated] = useState(defaultValue);
 
   useEffect(() => {
@@ -29,19 +38,25 @@ export default function useFloatLabel(
 
   const onFloatFocus = useCallback(
     (ev: FocusEvent<HTMLInputElement>) => {
-      if (onFocus) onFocus(ev);
+      if (props.onFocus) props.onFocus(ev);
       setFloated(true);
     },
-    [onFocus],
+    [props],
   );
 
   const onFloatBlur = useCallback(
     (ev: FocusEvent<HTMLInputElement>) => {
-      if (onBlur) onBlur(ev);
+      if (props.onBlur) props.onBlur(ev);
       if (!ev.target.value) setFloated(false);
     },
-    [onBlur],
+    [props],
   );
 
-  return [floated, onFloatFocus, onFloatBlur];
+  return [
+    floated,
+    {
+      onFocus: onFloatFocus,
+      onBlur: onFloatBlur,
+    },
+  ];
 }

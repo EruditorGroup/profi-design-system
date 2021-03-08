@@ -59,21 +59,30 @@ const Input: ForwardRefExoticComponent<
     },
     ref,
   ) => {
-    const [isFloated, onFocusProxy, onBlurProxy] = useFloatLabel(
-      Boolean(value),
+    const [isFloated, focusProps] = useFloatLabel(Boolean(value), {
       onFocus,
       onBlur,
-    );
+    });
 
     const InputComponent = useCallback(
       (inputProps: InputProps) => {
         return mask ? (
-          <InputMask {...inputProps} mask={mask} />
+          <InputMask
+            {...inputProps}
+            inputRef={(el) => {
+              if (typeof ref === 'function') {
+                ref(el);
+              } else if (typeof ref === 'object' && ref !== null) {
+                ref.current = el;
+              }
+            }}
+            mask={mask}
+          />
         ) : (
-          <input {...inputProps} />
+          <input {...inputProps} ref={ref} />
         );
       },
-      [mask],
+      [mask, ref],
     );
 
     return (
@@ -90,15 +99,13 @@ const Input: ForwardRefExoticComponent<
           </label>
         )}
         {InputComponent({
-          ref,
           value,
-          onFocus: onFocusProxy,
-          onBlur: onBlurProxy,
           placeholder: withFloatLabel ? '' : placeholder,
           className: classnames(
             styles['input'],
             withFloatLabel && styles['input-withFloatLabel'],
           ),
+          ...focusProps,
           ...props,
         })}
       </div>
