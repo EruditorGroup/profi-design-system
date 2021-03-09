@@ -36,7 +36,9 @@ export default function useRelativePosition<T extends HTMLElement>(
 
   useEffect(() => {
     window.addEventListener('resize', calcRects, false);
-    return () => window.removeEventListener('resize', calcRects, false);
+    return () => {
+      window.removeEventListener('resize', calcRects, false);
+    };
   }, [calcRects]);
 
   useEffect(() => {
@@ -45,17 +47,17 @@ export default function useRelativePosition<T extends HTMLElement>(
       setCSS((css) => ({
         ...css,
         width,
-        top: top + height + (offset?.top ?? 0),
+        top: top + height + (offset?.top ?? 0) + window.scrollY,
       }));
       if (align === 'left')
         setCSS((css) => ({
           ...css,
-          left: left + (offset?.left ?? 0),
+          left: left + (offset?.left ?? 0) - window.scrollX,
         }));
       if (align === 'right')
         setCSS((css) => ({
           ...css,
-          right: right - width + (offset?.right ?? 0),
+          right: right - width + (offset?.right ?? 0) + window.scrollX,
         }));
     } else {
       setCSS(undefined);
