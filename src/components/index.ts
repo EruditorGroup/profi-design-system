@@ -31,7 +31,7 @@ export type {ButtonGroupProps} from './ButtonGroup';
 export {default as LoaderDots} from './LoaderDots';
 export type {LoaderProps} from './LoaderDots';
 
-export {default as Dropdown} from './Dropdown';
+export {default as Dropdown, DropdownContext} from './Dropdown';
 export type {DropdownProps} from './Dropdown';
 
 export {default as Checkbox} from './Checkbox';

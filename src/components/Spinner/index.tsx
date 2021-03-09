@@ -16,7 +16,7 @@ export interface SpinnerProps
   speed?: number;
 }
 
-const SpinnerDots: ForwardRefExoticComponent<SpinnerProps> = forwardRef(
+const Spinner: ForwardRefExoticComponent<SpinnerProps> = forwardRef(
   (
     {
       size = 'default',
@@ -41,4 +41,4 @@ const SpinnerDots: ForwardRefExoticComponent<SpinnerProps> = forwardRef(
   ),
 );
 
-export default SpinnerDots;
+export default Spinner;

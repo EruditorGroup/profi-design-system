@@ -68,7 +68,7 @@ module.exports = {
         // extractCss: './dist/main.css',
         extensions: ['.css', '.scss'],
         preprocessCss: (css, path) => {
-          console.log(path);
+          console.log('CSS-module: ', path);
           return sass
             .renderSync({
               data: css,

@@ -2,6 +2,7 @@ export {default as VkIcon} from './Vk';
 export {default as SettingsIcon} from './Settings';
 export {default as SignOutIcon} from './SignOut';
 export {default as CameraIcon} from './Camera';
+export {default as CameraOutlineIcon} from './CameraOutline';
 export {default as FbIcon} from './Fb';
 export {default as NotificationIcon} from './Notification';
 export {default as PersonIcon} from './Person';
