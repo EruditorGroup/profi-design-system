@@ -25,7 +25,7 @@ describe('useRelativePosition', () => {
 
   it('should return undefined when element is undefined', () => {
     let hook = renderHook(() => useRelativePosition());
-    expect(hook.result.current).toBe(undefined);
+    expect(hook.result.current[0]).toBe(undefined);
   });
 
   it('should use getBoundingClientRect to calculate styles', async () => {
