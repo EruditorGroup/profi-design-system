@@ -14,7 +14,6 @@ const Template: Story<InputProps> = (args) => {
   const ref = useRef();
   args.value = value;
   args.onChange = (ev) => setValue(ev.target.value);
-  console.log(ref.current, document.activeElement);
   return (
     <div>
       <Input {...args} block placeholder="Статичный плейсхолдер" />

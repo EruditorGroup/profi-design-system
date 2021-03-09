@@ -28,7 +28,6 @@ const DropdownPortal: ForwardRefExoticComponent<
   );
 
   useEffect(() => {
-    console.log('opened', context?.isOpened);
     if (context?.isOpened) recalc();
   }, [context?.isOpened, recalc]);
 
