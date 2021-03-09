@@ -1,4 +1,4 @@
-import React, {useContext, forwardRef} from 'react';
+import React, {useContext, forwardRef, useEffect} from 'react';
 import classNames from 'classnames';
 
 import type {RefAttributes, ForwardRefExoticComponent} from 'react';
@@ -21,11 +21,16 @@ const DropdownPortal: ForwardRefExoticComponent<
   DropdownPortalProps & RefAttributes<HTMLDivElement>
 > = forwardRef(({animated = true, offset, className, ...props}, ref) => {
   const context = useContext(DropdownContext);
-  const relativePosition = useRelativePosition(
+  const [relativePosition, recalc] = useRelativePosition(
     context?.togglerRef?.current,
     context?.horizontalPosition || 'left',
     offset,
   );
+
+  useEffect(() => {
+    console.log('opened', context?.isOpened);
+    if (context?.isOpened) recalc();
+  }, [context?.isOpened, recalc]);
 
   return (
     <BodyPortal

@@ -57,7 +57,7 @@ const Template: Story = (args) => {
               <VkIcon /> Disabled
             </Menu.Item>
             <Menu.Item rounded={false} divided>
-              <VkIcon /> Пункт 3 с отбивкой снизу
+              <VkIcon /> Пункт с отбивкой сверху
             </Menu.Item>
             <Menu.Item rounded={false}>
               <VkIcon /> Многострочный с иконкой Многострочный с иконкой

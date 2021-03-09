@@ -60,18 +60,14 @@
 }
 
 .divided {
-  margin-bottom: 10px;
-  &:after {
+  margin-top: 20px;
+  &:before {
     content: '';
     display: block;
     position: absolute;
     width: 100%;
-    bottom: -10px;
+    top: -10px;
     left: 0;
-
-    border-bottom: 1px solid var(--medium-grey);
-  }
-  & + .item {
-    margin-top: 20px;
+    border-top: 1px solid var(--medium-grey);
   }
 }

@@ -22,7 +22,7 @@ const Template: Story = (args) => {
           <VkIcon /> Disabled
         </Menu.Item>
         <Menu.Item divided>
-          <VkIcon /> Пункт 3 с отбивкой снизу
+          <VkIcon /> Пункт 3 с отбивкой сверху
         </Menu.Item>
         <Menu.Item>
           <VkIcon /> Многострочный с иконкой Многострочный с иконкой
