@@ -11,7 +11,14 @@ import Spinner from '../Spinner';
 import styles from './Button.module.scss';
 
 export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
-  design?: 'primary' | 'secondary' | 'light' | 'yandex' | 'facebook' | 'vk';
+  design?:
+    | 'primary'
+    | 'secondary'
+    | 'light'
+    | 'yandex'
+    | 'facebook'
+    | 'vk'
+    | 'none';
   size?: 'small' | 'default' | 'large';
   icon?: ReactNode;
   fit?: boolean;
@@ -45,7 +52,7 @@ const Button: ForwardRefExoticComponent<
         disabled={isLoading || disabled}
         className={classnames(
           styles['button'],
-          styles[`design-${design}`],
+          design !== 'none' && styles[`design-${design}`],
           styles[`size-${size}`],
           fit && styles['fit'],
           block && styles[`block`],
