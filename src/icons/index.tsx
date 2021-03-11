@@ -11,3 +11,5 @@ export {default as RemoveIcon} from './Remove';
 export {default as SocialsIcon} from './Socials';
 export {default as UploadIcon} from './Upload';
 export {default as SuccessIcon} from './Success';
+export {default as ArrowLeft} from './ArrowLeft';
+export {default as Close} from './Close';
