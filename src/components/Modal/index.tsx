@@ -4,6 +4,7 @@ import type {
   HTMLAttributes,
   ForwardRefExoticComponent,
   RefAttributes,
+  MouseEventHandler,
 } from 'react';
 
 import {disableBodyScroll, enableBodyScroll} from 'body-scroll-lock';
@@ -32,11 +33,12 @@ export interface ModalProps extends HTMLAttributes<HTMLDivElement> {
   width: string;
   height: string;
   visible: boolean;
-  title?: ReactNode;
-  children?: ReactNode;
+  title?: string | undefined;
   className?: string;
-  onClickBack?: (e) => void;
+  onClickBack?: MouseEventHandler<HTMLElement>;
+  onClose: MouseEventHandler<HTMLElement>;
 }
+
 const DEFAULT_ANIMATION_DURATION = 300;
 
 const Modal: ForwardRefExoticComponent<
@@ -70,9 +72,10 @@ const Modal: ForwardRefExoticComponent<
 
     if (!canUseDom()) return null;
 
-    const handleCloseClick = () => {
-      e.stopPropagation();
-      onClose(e);
+    const handleCloseClick: MouseEventHandler<HTMLElement> = (event) => {
+      if (!event) return;
+      event.stopPropagation();
+      onClose(event);
     };
 
     const rootStyles = {
@@ -116,7 +119,7 @@ const Modal: ForwardRefExoticComponent<
                   onClick={onClickBack}
                   className={classNames(styles['button-icon'], styles['left'])}
                 >
-                  <ArrowLeft width={10} height={14} fill="black" />
+                  <ArrowLeft width={10} height={14} color="black" />
                 </Button>
               )}
 
@@ -130,7 +133,7 @@ const Modal: ForwardRefExoticComponent<
                 </Button>
               )}
 
-              {title !== undefined && (
+              {title && (
                 <div className={styles['head']}>
                   <Text fontWeight="bold">{title}</Text>
                 </div>
