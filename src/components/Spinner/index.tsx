@@ -12,7 +12,7 @@ export interface SpinnerProps
   extends HTMLAttributes<HTMLDivElement>,
     RefAttributes<HTMLDivElement> {
   size?: 'small' | 'default' | 'large';
-  color?: 'light' | 'brand';
+  color?: string;
   speed?: number;
 }
 
@@ -21,18 +21,17 @@ const Spinner: ForwardRefExoticComponent<SpinnerProps> = forwardRef(
     {
       size = 'default',
       speed = 500,
-      color = 'light',
+      color = 'currentColor',
       className,
       ...props
     }: SpinnerProps,
     ref,
   ) => (
     <span
-      style={{transitionDuration: `${speed}ms`}}
+      style={{transitionDuration: `${speed}ms`, color}}
       className={classnames(
         styles['spinner'],
         styles[`size-${size}`],
-        styles[`color-${color}`],
         className,
       )}
       ref={ref}

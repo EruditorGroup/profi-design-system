@@ -6,7 +6,7 @@ export {default as CameraOutlineIcon} from './CameraOutline';
 export {default as FbIcon} from './Fb';
 export {default as NotificationIcon} from './Notification';
 export {default as PersonIcon} from './Person';
-export {default as ProfileIcon} from './Profile';
+export {default as TabletIcon} from './Tablet';
 export {default as RemoveIcon} from './Remove';
 export {default as SocialsIcon} from './Socials';
 export {default as UploadIcon} from './Upload';

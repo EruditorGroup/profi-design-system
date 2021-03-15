@@ -15,14 +15,9 @@ const PersonIcon: ForwardRefExoticComponent<IconPropsType> = forwardRef(
         height={height}
         {...props}
       >
+        <circle cx="10.5" cy="6.5" r="2.5" fill="currentColor" />
         <path
-          fill-rule="evenodd"
-          clip-rule="evenodd"
-          d="M6.5 5A1.5 1.5 0 005 6.5v8A1.5 1.5 0 006.5 16h8a1.5 1.5 0 001.5-1.5v-8A1.5 1.5 0 0014.5 5H14v2H7V5h-.5z"
-          fill="currentColor"
-        />
-        <path
-          d="M8 5.5A1.5 1.5 0 019.5 4h2A1.5 1.5 0 0113 5.5V6H8v-.5z"
+          d="M16.5 13.86c0 2.13-2.686 2.64-6 2.64s-6-.51-6-2.64c0-2.132 2.686-3.86 6-3.86s6 1.728 6 3.86z"
           fill="currentColor"
         />
       </svg>
