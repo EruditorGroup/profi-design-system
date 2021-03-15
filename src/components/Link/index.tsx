@@ -52,6 +52,7 @@ const Link: ForwardRefExoticComponent<
       lineHeight,
       className,
       children,
+      onClick,
       ...props
     },
     ref,
@@ -60,8 +61,10 @@ const Link: ForwardRefExoticComponent<
       <a
         ref={ref}
         href={disabled ? undefined : href}
+        onClick={onClick}
         className={classnames(
           styles['link'],
+          onClick && styles['hasOnClick'],
           underlined && styles['underlined'],
           disabled && styles['disabled'],
           design && styles[`design-${design}`],

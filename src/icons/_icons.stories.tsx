@@ -17,20 +17,27 @@ const variants: IconPropsType[] = [
 // To add icon to this story you should add export your icon inside './index.tsx'
 const Template: Story = () => {
   return (
-    <>
+    <div style={{display: 'flex', flexWrap: 'wrap'}}>
       {Object.keys(icons)
         .filter((key) => icons[key].displayName)
         .map((key, i) => (
-          <div key={i}>
+          <div
+            key={i}
+            style={{
+              margin: '5px',
+              padding: '0 10px 10px',
+              border: '1px solid #ececec',
+              width: '160px',
+            }}
+          >
             <h3>{icons[key].displayName}</h3>
             {variants.map((props, j) => {
               const Component = icons[key];
               return <Component {...props} key={j} />;
             })}
-            <hr />
           </div>
         ))}
-    </>
+    </div>
   );
 };
 

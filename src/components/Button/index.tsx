@@ -13,6 +13,7 @@ import styles from './Button.module.scss';
 export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   design?:
     | 'primary'
+    | 'primary-light'
     | 'secondary'
     | 'light'
     | 'yandex'
@@ -68,7 +69,6 @@ const Button: ForwardRefExoticComponent<
                 children && styles['icon-withMargin'],
               )}
               size={size}
-              color="light"
             />
             {children}
           </>

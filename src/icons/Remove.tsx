@@ -2,7 +2,7 @@ import React, {forwardRef} from 'react';
 import type {ForwardRefExoticComponent} from 'react';
 import type {IconPropsType} from './_types';
 
-const ProfileIcon: ForwardRefExoticComponent<IconPropsType> = forwardRef(
+const RemoveIcon: ForwardRefExoticComponent<IconPropsType> = forwardRef(
   ({width = '20', height = '20', color, ...props}, ref) => {
     return (
       <svg
@@ -28,6 +28,6 @@ const ProfileIcon: ForwardRefExoticComponent<IconPropsType> = forwardRef(
   },
 );
 
-ProfileIcon.displayName = 'ProfileIcon';
+RemoveIcon.displayName = 'RemoveIcon';
 
-export default ProfileIcon;
+export default RemoveIcon;
