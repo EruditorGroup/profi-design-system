@@ -18,17 +18,11 @@ export interface SpinnerProps
 
 const Spinner: ForwardRefExoticComponent<SpinnerProps> = forwardRef(
   (
-    {
-      size = 'default',
-      speed = 500,
-      color = 'currentColor',
-      className,
-      ...props
-    }: SpinnerProps,
+    {size = 'default', speed, color, className, ...props}: SpinnerProps,
     ref,
   ) => (
     <span
-      style={{transitionDuration: `${speed}ms`, color}}
+      style={{transitionDuration: speed ? `${speed}ms` : undefined, color}}
       className={classnames(
         styles['spinner'],
         styles[`size-${size}`],
