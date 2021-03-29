@@ -33,7 +33,7 @@ export default function useRelativePosition<T extends HTMLElement>(
   const [css, setCSS] = useState<CSSProperties>();
 
   const calcRects = useCallback(() => {
-    setClientRects(element?.getBoundingClientRect());
+    setClientRects(element ? element.getBoundingClientRect() : undefined);
   }, [element]);
 
   useEffect(() => calcRects(), [calcRects]);
@@ -45,6 +45,7 @@ export default function useRelativePosition<T extends HTMLElement>(
     };
   }, [calcRects]);
 
+  console.log(clientRects);
   useEffect(() => {
     if (clientRects) {
       const {top, left, right, width, height} = clientRects;
@@ -61,7 +62,8 @@ export default function useRelativePosition<T extends HTMLElement>(
       if (align === 'right')
         setCSS((css) => ({
           ...css,
-          right: right - width + (offset?.right ?? 0) + window.scrollX,
+          left: left - width - (offset?.right ?? 0),
+          // right: right - width + (offset?.right ?? 0) + window.scrollX,
         }));
     } else {
       setCSS(undefined);

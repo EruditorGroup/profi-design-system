@@ -1,1 +1,2 @@
-export {default as testUtil} from './testUtil';
+export {default as canUseDom} from './canUseDom';
+export {default as stringifyCssProps} from './stringifyCssProps';
