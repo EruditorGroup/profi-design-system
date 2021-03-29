@@ -17,7 +17,7 @@ import BodyPortal from 'components/BodyPortal';
 import Button from 'components/Button';
 import Text from 'components/Text';
 
-import {canUseDom} from 'utils/canUseDom';
+import canUseDom from 'utils/canUseDom';
 
 import classNames from 'classnames';
 

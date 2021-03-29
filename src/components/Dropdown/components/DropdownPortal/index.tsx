@@ -1,4 +1,4 @@
-import React, {useContext, forwardRef, useEffect} from 'react';
+import React, {useContext, forwardRef, useEffect, useCallback} from 'react';
 import classNames from 'classnames';
 
 import type {RefAttributes, ForwardRefExoticComponent} from 'react';
@@ -19,7 +19,7 @@ export interface DropdownPortalProps extends BodyPortalProps {
 
 const DropdownPortal: ForwardRefExoticComponent<
   DropdownPortalProps & RefAttributes<HTMLDivElement>
-> = forwardRef(({animated = true, offset, className, ...props}, ref) => {
+> = forwardRef(({animated = true, offset, style, className, ...props}, ref) => {
   const context = useContext(DropdownContext);
   const [relativePosition, recalc] = useRelativePosition(
     context?.togglerRef?.current,
@@ -33,7 +33,6 @@ const DropdownPortal: ForwardRefExoticComponent<
 
   return (
     <BodyPortal
-      style={relativePosition}
       ref={(el) => {
         if (context) context.contentRef.current = el;
         if (typeof ref === 'function') ref(el);
@@ -47,6 +46,7 @@ const DropdownPortal: ForwardRefExoticComponent<
         className,
       )}
       {...props}
+      style={{...relativePosition, ...style}}
     />
   );
 });

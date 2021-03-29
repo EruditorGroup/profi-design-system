@@ -1,4 +1,4 @@
-export function canUseDom(): boolean {
+export default function canUseDom(): boolean {
   return !!(
     typeof window !== 'undefined' &&
     window.document &&
