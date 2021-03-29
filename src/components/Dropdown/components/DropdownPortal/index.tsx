@@ -1,4 +1,4 @@
-import React, {useContext, forwardRef, useEffect, useCallback} from 'react';
+import React, {useContext, forwardRef, useEffect} from 'react';
 import classNames from 'classnames';
 
 import type {RefAttributes, ForwardRefExoticComponent} from 'react';
