@@ -45,7 +45,6 @@ export default function useRelativePosition<T extends HTMLElement>(
     };
   }, [calcRects]);
 
-  console.log(clientRects);
   useEffect(() => {
     if (clientRects) {
       const {top, left, width, height} = clientRects;
