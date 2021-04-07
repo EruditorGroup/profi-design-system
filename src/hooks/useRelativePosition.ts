@@ -69,7 +69,7 @@ export default function useRelativePosition<T extends HTMLElement>(
     }
   }, [clientRects, align, offset]);
 
-  if (!css) return [undefined, calcRects];
+  if (!css) return [{display: 'none'}, calcRects];
   return [
     {
       position: 'absolute',
