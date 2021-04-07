@@ -62,7 +62,7 @@ export default function useRelativePosition<T extends HTMLElement>(
       if (align === 'right')
         setCSS((css) => ({
           ...css,
-          left: left - width - (offset?.right ?? 0),
+          left: left - (offset?.right ?? 0),
           // right: right - width + (offset?.right ?? 0) + window.scrollX,
         }));
     } else {
