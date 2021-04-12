@@ -1,12 +1,5 @@
-import React, {createContext, useState, useMemo, useRef} from 'react';
-import type {
-  Dispatch,
-  SetStateAction,
-  Context,
-  MutableRefObject,
-  FC,
-} from 'react';
-import useClickOutside from '../../hooks/useClickOutside';
+import React, {createContext, useState, useMemo} from 'react';
+import type {Dispatch, SetStateAction, Context, FC} from 'react';
 import DropdownToggler from './components/DropdownToggler';
 import DropdownPortal from './components/DropdownPortal';
 import styles from './Dropdown.module.css';
