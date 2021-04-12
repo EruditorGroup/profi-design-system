@@ -1,54 +1,52 @@
-import React, {useContext, forwardRef, useEffect} from 'react';
+import React, {useContext, forwardRef, useEffect, useRef} from 'react';
 import classNames from 'classnames';
 
-import type {RefAttributes, ForwardRefExoticComponent} from 'react';
+import type {
+  RefAttributes,
+  ForwardRefExoticComponent,
+  HTMLAttributes,
+} from 'react';
 import {DropdownContext} from 'components/Dropdown';
 
-import BodyPortal from '../../../BodyPortal';
-import type {BodyPortalProps} from '../../../BodyPortal';
-
-import useRelativePosition from '../../../../hooks/useRelativePosition';
-import type {RelativePositionOffset} from '../../../../hooks/useRelativePosition';
-
 import styles from './DropdownPortal.module.scss';
+import useClickOutside from 'hooks/useClickOutside';
 
-export interface DropdownPortalProps extends BodyPortalProps {
+export interface DropdownPortalProps extends HTMLAttributes<HTMLDivElement> {
   animated?: boolean;
-  offset?: RelativePositionOffset;
+  position?: 'bottom-left' | 'bottom-right' | 'top-left' | 'top-right';
 }
 
 const DropdownPortal: ForwardRefExoticComponent<
   DropdownPortalProps & RefAttributes<HTMLDivElement>
-> = forwardRef(({animated = true, offset, style, className, ...props}, ref) => {
-  const context = useContext(DropdownContext);
-  const [relativePosition, recalc] = useRelativePosition(
-    context?.togglerRef?.current,
-    context?.horizontalPosition || 'left',
-    offset,
-  );
+> = forwardRef(
+  (
+    {animated = true, style, position = 'bottom-left', className, ...props},
+    ref,
+  ) => {
+    const _ref = useRef() as React.MutableRefObject<HTMLDivElement | null>;
+    const context = useContext(DropdownContext);
 
-  useEffect(() => {
-    if (context?.isOpened) recalc();
-  }, [context?.isOpened, recalc]);
+    useClickOutside(_ref, () => context?.isOpened && context?.setOpened(false));
 
-  return (
-    <BodyPortal
-      ref={(el) => {
-        if (context) context.contentRef.current = el;
-        if (typeof ref === 'function') ref(el);
-        else if (ref?.current) ref.current = el;
-      }}
-      className={classNames(
-        styles['portal'],
-        styles[`horizontal-${context?.horizontalPosition}`],
-        animated && styles['animated'],
-        context?.isOpened && styles['opened'],
-        className,
-      )}
-      {...props}
-      style={{...relativePosition, ...style}}
-    />
-  );
-});
+    return (
+      <div
+        ref={(el) => {
+          _ref.current = el;
+          if (typeof ref === 'function') ref(el);
+          else if (ref) ref.current = el;
+        }}
+        className={classNames(
+          styles['dropdown-area'],
+          styles[`position-${position}`],
+          animated && styles['animated'],
+          context?.isOpened && styles['opened'],
+          className,
+        )}
+        {...props}
+        style={{...style}}
+      />
+    );
+  },
+);
 
 export default DropdownPortal;

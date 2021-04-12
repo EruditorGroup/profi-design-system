@@ -9,6 +9,7 @@ import type {
 import useClickOutside from '../../hooks/useClickOutside';
 import DropdownToggler from './components/DropdownToggler';
 import DropdownPortal from './components/DropdownPortal';
+import styles from './Dropdown.module.css';
 
 export interface DropdownProps {
   // verticalPosition?: 'top' | 'bottom';
@@ -19,10 +20,7 @@ export interface DropdownProps {
 interface IDropdownContext {
   isOpened: boolean;
   setOpened: Dispatch<SetStateAction<boolean>>;
-  togglerRef: MutableRefObject<HTMLElement | null>;
-  contentRef: MutableRefObject<HTMLElement | null>;
   design?: DropdownProps['design'];
-  horizontalPosition?: DropdownProps['horizontalPosition'];
 }
 
 // additional type cast to flowgen
@@ -35,32 +33,21 @@ export interface DropdownComponent extends FC<DropdownProps> {
   Portal: typeof DropdownPortal;
 }
 
-const Dropdown = (({
-  children,
-  horizontalPosition = 'left',
-  design = 'light',
-}) => {
+const Dropdown = (({children, design = 'light'}) => {
   const [isOpened, setOpened] = useState(false);
-  const togglerRef = useRef(null);
-  const contentRef = useRef(null);
 
   const state = useMemo<IDropdownContext>(
     () => ({
       isOpened,
       setOpened,
-      togglerRef,
-      contentRef,
       design,
-      horizontalPosition,
     }),
-    [isOpened, togglerRef, contentRef, design, horizontalPosition],
+    [isOpened, design],
   );
-
-  useClickOutside(contentRef, () => isOpened && setOpened(false));
 
   return (
     <DropdownContext.Provider value={state}>
-      {children}
+      <div className={styles['relative']}>{children}</div>
     </DropdownContext.Provider>
   );
 }) as DropdownComponent;

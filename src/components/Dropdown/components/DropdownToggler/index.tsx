@@ -22,13 +22,8 @@ const DropdownToggler: ForwardRefExoticComponent<
   }, [context]);
 
   return (
-    // Content should be positioned near the toggler ref
     <div
-      ref={(el) => {
-        if (context) context.togglerRef.current = el;
-        if (typeof ref === 'function') ref(el);
-        else if (ref?.current) ref.current = el;
-      }}
+      ref={ref}
       onClick={onClickHandler}
       className={classNames(styles['toggler'], className)}
       {...props}
