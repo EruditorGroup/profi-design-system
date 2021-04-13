@@ -12,13 +12,19 @@ export default {
 const Template: Story<InputProps> = (args) => {
   const [value, setValue] = useState('');
   const ref = useRef();
-  args.value = value;
-  args.onChange = (ev) => setValue(ev.target.value);
+  // args.value = value;
+  // args.onChange = (ev) => setValue(ev.target.value);
   return (
     <div>
       <Input {...args} block placeholder="Статичный плейсхолдер" />
       <Input {...args} withFloatLabel placeholder="Плавающий плейсхолдер" />
       <Input {...args} placeholder="С маской" mask={'+9 999 999-99-99'} />
+      <Input
+        {...args}
+        withFloatLabel
+        placeholder="С маской и плавающим лейблом"
+        mask={'+9 999 999-99-99'}
+      />
       <Input
         {...args}
         withFloatLabel

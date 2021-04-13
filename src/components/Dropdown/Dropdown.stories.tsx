@@ -1,6 +1,7 @@
 import React, {useRef, useState} from 'react';
 // also exported from '@storybook/react' if you can deal with breaking changes in 6.1
 import {Story, Meta} from '@storybook/react/types-6-0';
+import type {IDropdownContext} from './index';
 
 import Dropdown from './index';
 import Menu from '../Menu';
@@ -13,6 +14,7 @@ export default {
 } as Meta;
 
 const Template: Story = (args) => {
+  const ref = useRef<IDropdownContext>();
   return (
     <>
       <div
@@ -24,13 +26,19 @@ const Template: Story = (args) => {
           flexWrap: 'wrap',
         }}
       >
-        <Dropdown {...args}>
+        <Dropdown {...args} ref={ref}>
           <Dropdown.Toggler>
-            <Button>Открыть дропдаун</Button>
+            <Button>Открыть</Button>
           </Dropdown.Toggler>
           <Dropdown.Portal>
             <Menu.Item rounded={false}>
               <VkIcon /> Пункт c иконкой
+            </Menu.Item>
+            <Menu.Item
+              onClick={() => ref.current?.setOpened(false)}
+              rounded={false}
+            >
+              <VkIcon /> Пункт закрывается на нажатие
             </Menu.Item>
             <Menu.Item rounded={false}>Пункт без иконки</Menu.Item>
             <Menu.Item rounded={false} disabled>
