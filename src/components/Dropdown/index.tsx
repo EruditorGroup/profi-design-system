@@ -1,46 +1,51 @@
-import React, {createContext, useState, useMemo} from 'react';
-import type {Dispatch, SetStateAction, Context, FC} from 'react';
+import React, {
+  createContext,
+  useState,
+  useMemo,
+  forwardRef,
+  PropsWithChildren,
+} from 'react';
+import type {Dispatch, SetStateAction, ForwardRefExoticComponent} from 'react';
 import DropdownToggler from './components/DropdownToggler';
 import DropdownPortal from './components/DropdownPortal';
+import cx from 'classnames';
 import styles from './Dropdown.module.css';
 
-export interface DropdownProps {
-  // verticalPosition?: 'top' | 'bottom';
-  horizontalPosition?: 'left' | 'right';
-  design?: 'light' | 'brand';
-}
-
-interface IDropdownContext {
+export interface IDropdownContext {
   isOpened: boolean;
   setOpened: Dispatch<SetStateAction<boolean>>;
-  design?: DropdownProps['design'];
 }
 
-// additional type cast to flowgen
-export const DropdownContext: Context<IDropdownContext | null> = createContext<IDropdownContext | null>(
-  null,
-);
+export const DropdownContext = createContext<IDropdownContext | null>(null);
 
-export interface DropdownComponent extends FC<DropdownProps> {
+export type DropdownProps = PropsWithChildren<{
+  className?: string;
+}>;
+
+interface DropdownComponent
+  extends ForwardRefExoticComponent<
+    DropdownProps & React.RefAttributes<IDropdownContext>
+  > {
   Toggler: typeof DropdownToggler;
   Portal: typeof DropdownPortal;
 }
 
-const Dropdown = (({children, design = 'light'}) => {
+// additional type cast to flowgen
+const Dropdown = forwardRef(({children, className}, ref) => {
   const [isOpened, setOpened] = useState(false);
 
-  const state = useMemo<IDropdownContext>(
-    () => ({
-      isOpened,
-      setOpened,
-      design,
-    }),
-    [isOpened, design],
-  );
+  const state = useMemo<IDropdownContext>(() => ({isOpened, setOpened}), [
+    isOpened,
+  ]);
+
+  if (ref) {
+    if (typeof ref === 'function') ref(state);
+    else if (ref) ref.current = state;
+  }
 
   return (
     <DropdownContext.Provider value={state}>
-      <div className={styles['relative']}>{children}</div>
+      <div className={cx(className, styles['relative'])}>{children}</div>
     </DropdownContext.Provider>
   );
 }) as DropdownComponent;
