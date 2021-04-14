@@ -17,7 +17,7 @@ export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
     | 'secondary'
     | 'light'
     | 'yandex'
-    | 'facebook'
+    | 'fb'
     | 'vk'
     | 'none';
   size?: 'small' | 'default' | 'large';
