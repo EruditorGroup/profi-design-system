@@ -1,7 +1,7 @@
 {
   "src/**/*.{ts,tsx,js,jsx}": [
     "prettier --write",
-    "eslint --cache --quiet",
+    "yarn lint",
     "git add"
   ]
 }
