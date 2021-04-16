@@ -1,6 +1,9 @@
 .root {
   position: relative;
   display: inline-flex;
+  border-radius: var(--border-radius-small);
+  border: 1px solid var(--color-border);
+  overflow: hidden;
 }
 
 .block {
@@ -13,13 +16,15 @@
   font-size: 16px;
   min-width: 147px;
   height: 50px;
+  border: none;
   padding-right: 25px;
-  border: 1px solid var(--color-border);
-  border-radius: var(--border-radius-small);
   padding: 5px 25px 5px 15px;
   -webkit-appearance: none;
   background: no-repeat right transparent;
   cursor: pointer;
+  z-index: 1;
+  position: relative;
+  background: transparent;
   &-withFloatLabel {
     padding-top: 15px;
   }
@@ -32,6 +37,7 @@
   top: 0;
   bottom: 0;
   right: 20px;
+  z-index: 0;
 }
 
 .option-placeholder {
