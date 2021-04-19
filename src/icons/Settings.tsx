@@ -1,10 +1,11 @@
-import React, {forwardRef} from 'react';
+import React, {forwardRef, useMemo} from 'react';
 import type {ForwardRefExoticComponent} from 'react';
 import type {IconPropsType} from './_types';
 
 const SettingsIcon: ForwardRefExoticComponent<
   IconPropsType & {key: string}
 > = forwardRef(({width = '20', key, height = '20', color, ...props}, ref) => {
+  const id = useMemo<string>(() => (Math.random() * 1000).toFixed(), []);
   return (
     <svg
       fill="none"
@@ -17,7 +18,7 @@ const SettingsIcon: ForwardRefExoticComponent<
       {...props}
     >
       <mask
-        id={`Icon_Settings_svg__a${key}`}
+        id={`Icon_Settings_svg__a${key || id}`}
         maskUnits="userSpaceOnUse"
         x="3"
         y="3"
@@ -31,7 +32,7 @@ const SettingsIcon: ForwardRefExoticComponent<
           fill="#fff"
         />
       </mask>
-      <g mask={`url(#Icon_Settings_svg__a${key})`} fill="currentColor">
+      <g mask={`url(#Icon_Settings_svg__a${key || id})`} fill="currentColor">
         <path d="M10 0l1.837 5.565L17.07 2.93l-2.636 5.234L20 10l-5.565 1.837 2.636 5.234-5.234-2.636L10 20l-1.837-5.565L2.93 17.07l2.636-5.234L0 10l5.565-1.837L2.93 2.93l5.234 2.636L10 0z" />
         <circle cx="10" cy="10" r="5.5" />
       </g>
