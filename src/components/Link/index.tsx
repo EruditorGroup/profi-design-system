@@ -18,7 +18,7 @@ export interface LinkProps extends AnchorHTMLAttributes<HTMLAnchorElement> {
     | 'black'
     | 'white'
     | 'dark-grey'
-    | 'medium-grey'
+    | 'color-mediumGrey'
     | 'inherit';
   design?:
     | 'default'
