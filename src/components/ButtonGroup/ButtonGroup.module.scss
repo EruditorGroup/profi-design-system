@@ -8,7 +8,7 @@
     width: 100%;
     border-radius: 0;
     &:nth-child(n + 2) {
-      border-left: 1px solid var(--medium-grey);
+      border-left: 1px solid var(--color-mediumGrey);
     }
   }
 }

@@ -25,10 +25,10 @@
     background: var(--color-lightGrey);
   }
   &:active {
-    background: var(--medium-grey);
+    background: var(--color-mediumGrey);
   }
   &.current {
-    background: var(--medium-grey);
+    background: var(--color-mediumGrey);
   }
 }
 
@@ -47,7 +47,7 @@
   color: var(--color-darkGrey);
   cursor: default;
   svg {
-    color: var(--medium-grey);
+    color: var(--color-mediumGrey);
   }
   &:hover {
     color: var(--color-darkGrey);
@@ -68,6 +68,6 @@
     width: 100%;
     top: -10px;
     left: 0;
-    border-top: 1px solid var(--medium-grey);
+    border-top: 1px solid var(--color-mediumGrey);
   }
 }
