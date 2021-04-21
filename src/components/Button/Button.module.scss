@@ -97,11 +97,11 @@
   font-weight: 600;
 
   &:hover {
-    background: var(--color-grey);
+    background: var(--color-mediumGrey);
   }
 
   &:active {
-    background: var(--color-mediumGrey);
+    background: var(--color-border);
   }
 
   &[disabled],
