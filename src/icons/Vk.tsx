@@ -8,7 +8,7 @@ const VkIcon: ForwardRefExoticComponent<IconPropsType> = forwardRef(
       <svg
         width={width}
         height={height}
-        viewBox="0 0 14 14"
+        viewBox="0 0 20 20"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
         style={{color}}
