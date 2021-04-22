@@ -3,26 +3,26 @@ import type {ForwardRefExoticComponent} from 'react';
 import type {IconPropsType} from './_types';
 
 const CameraIcon: ForwardRefExoticComponent<IconPropsType> = forwardRef(
-  ({width = '20', height = '20', color, ...props}, ref) => {
+  ({width = '14', height = '13', color, ...props}, ref) => {
     return (
       <svg
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 20 20"
-        style={{color}}
-        ref={ref}
         width={width}
         height={height}
+        viewBox="0 0 14 14"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+        style={{color}}
+        ref={ref}
         {...props}
       >
         <path
           fill-rule="evenodd"
           clip-rule="evenodd"
-          d="M7 5a2 2 0 012-2h2a2 2 0 012 2h2.5A1.5 1.5 0 0117 6.5v8a1.5 1.5 0 01-1.5 1.5h-11A1.5 1.5 0 013 14.5v-8A1.5 1.5 0 014.5 5H7zm3 9a3.5 3.5 0 100-7 3.5 3.5 0 000 7z"
+          d="M4 2C4 0.89543 4.89543 0 6 0H8C9.10457 0 10 0.895431 10 2H12.5C13.3284 2 14 2.67157 14 3.5V11.5C14 12.3284 13.3284 13 12.5 13H1.5C0.671573 13 0 12.3284 0 11.5V3.5C0 2.67157 0.671573 2 1.5 2L4 2ZM7 11C8.933 11 10.5 9.433 10.5 7.5C10.5 5.567 8.933 4 7 4C5.067 4 3.5 5.567 3.5 7.5C3.5 9.433 5.067 11 7 11Z"
           fill="currentColor"
         />
         <path
-          d="M10 9v3m-1.5-1.5h3"
+          d="M7 6V9M5.5 7.5H8.5"
           stroke="currentColor"
           stroke-linecap="round"
         />
