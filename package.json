@@ -1,22 +1,22 @@
 {
-  "name": "@profiru/ui",
+  "name": "@eruditorgroup/profi-design-system",
   "version": "0.1.18",
   "description": "Essential cross-platform UI components for React for Eruditor Group",
-  "homepage": "https://github.com/profiru/UI#readme",
+  "homepage": "https://github.com/eruditorgroup/profi-design-system#readme",
   "author": "profiru",
   "license": "ISC",
   "main": "dist/cjs/index.js",
   "types": "dist/esm/index.d.ts",
   "module": "dist/esm/index.js",
   "bugs": {
-    "url": "https://github.com/profiru/UI/issues"
+    "url": "https://github.com/eruditorgroup/profi-design-system/issues"
   },
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/profiru"
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/profiru/ui.git"
+    "url": "git://github.com/eruditorgroup/profi-design-system.git"
   },
   "dependencies": {
     "body-scroll-lock": "^3.1.5",
