@@ -1,4 +1,4 @@
-src/setupTests.js
 **/__tests__/**
+setupTests.js
 *stories.tsx
 *.config.js
