@@ -1,7 +1,10 @@
 const sass = require('node-sass');
 const fs = require('fs');
 const package = require('./package.json');
-const {CSS_MODULE_LOCAL_IDENT_NAME_GENERATOR} = require('./.config');
+const {CSS_MODULE_LOCAL_IDENT_NAME_GENERATOR} = require('../../.config');
+const {resolve} = require('path');
+
+const PACKAGE_SRC = resolve(__dirname, 'src');
 
 // Should we replace style imports into css-modules classes mapping?
 // NOTE: it isn`t generate any css bundles. If you need change something in styles bundling, check webpack config.
@@ -34,7 +37,7 @@ module.exports = {
     [
       'transform-rename-import',
       {
-        replacements: fs.readdirSync('./src').reduce(
+        replacements: fs.readdirSync(PACKAGE_SRC).reduce(
           (replacements, folder) => [
             ...replacements,
             {
