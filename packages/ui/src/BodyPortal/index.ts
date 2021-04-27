@@ -6,7 +6,7 @@ import type {
   ReactPortal,
 } from 'react';
 import {createPortal} from 'react-dom';
-import stringifyCssProps from 'utils/stringifyCssProps';
+import {stringifyCssProps} from '@eruditorgroup/profi-toolkit/dist/esm';
 
 export type BodyPortalProps = {
   children: ReactNode;

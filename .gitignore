@@ -10,11 +10,11 @@ node_modules
 /coverage
 
 # production
-/dist
-/lib
+dist
+lib
 
 # production storybook
-/storybook-static
+storybook-static
 
 # misc
 .DS_Store
