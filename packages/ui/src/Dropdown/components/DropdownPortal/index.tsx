@@ -9,7 +9,7 @@ import type {
 import {DropdownContext} from '../../';
 
 import styles from './DropdownPortal.module.scss';
-import {useClickOutside} from '@eruditorgroup/profi-toolkit/dist/esm';
+import {useClickOutside} from '@eruditorgroup/profi-toolkit';
 
 export interface DropdownPortalProps extends HTMLAttributes<HTMLDivElement> {
   animated?: boolean;
