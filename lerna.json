@@ -2,5 +2,13 @@
   "version": "0.2.0",
   "npmClient": "yarn",
   "packages": ["packages/*"],
-  "useWorkspaces": true
+  "useWorkspaces": true,
+  "command": {
+    "publish": {
+      "conventionalCommits": true,
+      "message": "chore(release): publish",
+      "registry": "https://npm.pkg.github.com/profiru",
+      "allowBranch": "master"
+    }
+  }
 }
