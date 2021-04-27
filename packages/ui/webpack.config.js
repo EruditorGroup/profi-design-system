@@ -2,7 +2,7 @@ const path = require('path');
 const fs = require('fs');
 const package = require('./package.json');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const {CSS_MODULE_LOCAL_IDENT_NAME_GENERATOR} = require('./.config');
+const {CSS_MODULE_LOCAL_IDENT_NAME_GENERATOR} = require('../../.config');
 
 // resolve imports starts with "@EruditorGroup/profi-design-system" to package root
 // so babel will add @EruditorGroup/profi-design-system/{src|dist} prefix to each internal import e.g components/, hooks/
