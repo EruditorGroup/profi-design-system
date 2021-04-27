@@ -1,0 +1,19 @@
+{
+  "name": "@eruditorgroup/profi-icons",
+  "version": "0.0.0",
+  "description": "Common icon set for Eruditor Group",
+  "author": "profiru",
+  "license": "ISC",
+  "homepage": "https://github.com/eruditorgroup/profi-design-system#readme",
+  "bugs": {
+    "url": "https://github.com/eruditorgroup/profi-design-system/issues"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/profiru"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/eruditorgroup/profi-design-system.git",
+    "directory": "packages/icons"
+  }
+}
