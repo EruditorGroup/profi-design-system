@@ -1,32 +1,10 @@
 {
+  "extends": "../../tsconfig.json",
   "compilerOptions": {
-    "baseUrl": "./src",
-    "target": "es5",
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext"
-    ],
-    "allowJs": true,
-    "skipLibCheck": true,
-    "esModuleInterop": true,
-    "allowSyntheticDefaultImports": true,
-    "strict": true,
-    "forceConsistentCasingInFileNames": true,
-    "noFallthroughCasesInSwitch": true,
-    "module": "ESNext",
-    "moduleResolution": "node",
-    "resolveJsonModule": true,
-    "isolatedModules": false,
-    "noEmit": true,
-    "jsx": "react",
+    "rootDir": "src",
+    "baseUrl": "./src"
   },
-  "exclude": [
-    "**/*.test.tsx",
-    "**/*.stories.tsx",
-    "**/*.d.ts",
-    "**/__mocks__",
-    "node_modules"
-  ],
-  "include": ["**/src/**/*"]
+  "include": [
+    "src/**/*"
+  ]
 }
