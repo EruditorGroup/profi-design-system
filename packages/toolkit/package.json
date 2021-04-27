@@ -15,5 +15,22 @@
     "type": "git",
     "url": "git://github.com/eruditorgroup/profi-design-system.git",
     "directory": "packages/toolkit"
+  },
+  "main": "dist/cjs/index.js",
+  "types": "dist/esm/index.d.ts",
+  "module": "dist/esm/index.js",
+  "scripts": {
+    "clean": "rimraf lib && rimraf dist && rimraf test/visual/dist",
+    "build": "yarn clean && yarn build:cjs && yarn webpack build && yarn build:esm",
+    "build:cjs": "yarn compile:typescript --outDir dist/cjs && MODULE_TYPE=cjs yarn compile:babel -d dist/cjs",
+    "build:esm": "yarn compile:typescript --outDir dist/esm && MODULE_TYPE=esm yarn compile:babel -d dist/esm",
+    "build:typescript": "tsc --declaration --emitDeclarationOnly --noEmit false --declarationMap --allowJs false --checkJs false",
+    "compile:flow": "for i in $(find dist -type f -name \"*.d.ts\"); do sh -c \"flowgen $i -o ${i%.*.*}.js.flow --add-flow-header;echo 'Done $i';\"; done;",
+    "compile:babel": "CSS_MODULES=1 babel src -x '.ts','.tsx' -d dist/cjs --ignore '**/*.test.tsx','**/*.stories.tsx','**/*.d.ts','**/__mocks__'",
+    "compile:typescript": "tsc --declaration --emitDeclarationOnly --noEmit false --declarationMap --allowJs false --checkJs false",
+    "test": "MODULE_TYPE=cjs jest",
+    "storybook": "start-storybook -p 6006",
+    "lint": "yarn eslint src --cache --ext .js,.jsx,.ts,.tsx --max-warnings 0",
+    "precommit": "APP_ROOT_PATH=. lint-staged"
   }
 }
