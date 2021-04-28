@@ -1,6 +1,5 @@
 {
   "compilerOptions": {
-    "baseUrl": "./src/",
     "target": "es5",
     "lib": [
       "dom",
@@ -27,6 +26,5 @@
     "**/*.d.ts",
     "**/__mocks__",
     "node_modules"
-  ],
-  "include": ["src/**/*"]
+  ]
 }

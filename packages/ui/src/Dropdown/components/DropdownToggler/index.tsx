@@ -5,7 +5,7 @@ import type {
   ForwardRefExoticComponent,
 } from 'react';
 import classNames from 'classnames';
-import {DropdownContext} from 'components/Dropdown';
+import {DropdownContext} from '../..';
 
 import styles from './DropdownToggler.module.scss';
 
