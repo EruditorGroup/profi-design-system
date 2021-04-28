@@ -10,14 +10,13 @@ import type {
 import {disableBodyScroll, enableBodyScroll} from 'body-scroll-lock';
 import {CSSTransition} from 'react-transition-group';
 
-import ArrowLeft from 'icons/ArrowLeft';
-import Close from 'icons/Close';
+import {ArrowLeft, Close} from '@eruditorgroup/profi-icons';
 
-import BodyPortal from 'components/BodyPortal';
-import Button from 'components/Button';
-import Text from 'components/Text';
+import BodyPortal from '../BodyPortal';
+import Button from '../Button';
+import Text from '../Text';
 
-import canUseDom from 'utils/canUseDom';
+import {canUseDom} from '@eruditorgroup/profi-toolkit';
 
 import classNames from 'classnames';
 
