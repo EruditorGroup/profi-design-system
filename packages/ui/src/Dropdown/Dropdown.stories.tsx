@@ -6,7 +6,7 @@ import type {IDropdownContext} from './index';
 import Dropdown from './index';
 import Menu from '../Menu';
 import Button from '../Button';
-import {VkIcon} from '../../icons';
+import {VkIcon} from '@eruditorgroup/profi-icons';
 
 export default {
   title: 'Dropdown',
