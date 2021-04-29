@@ -4,7 +4,7 @@ import {Story, Meta} from '@storybook/react/types-6-0';
 
 import ButtonGroup, {ButtonGroupProps} from './index';
 import Button from '../Button';
-import {VkIcon} from '../../icons';
+import {VkIcon} from '@eruditorgroup/profi-icons';
 
 export default {
   title: 'ButtonGroup',
