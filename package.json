@@ -20,11 +20,36 @@
     "packages/*"
   ],
   "scripts": {
+    "clean": "lerna exec --parallel -- rimraf lib dist",
+    "start": "start-storybook -p 6006",
+    "build": "yarn build:types && yarn build:lib && yarn build:bundle",
+    "build:types": "lerna exec -- tsc --outDir lib --declaration --emitDeclarationOnly --noEmit false --declarationMap --allowJs false --checkJs false",
+    "build:lib": "lerna exec --parallel -- CSS_MODULES=1 babel --root-mode upward src -x '.ts','.tsx' -d lib --ignore '**/*.test.tsx','**/*.stories.tsx','**/*.d.ts','**/__mocks__'",
+    "build:bundle": "lerna exec --parallel -- webpack -c ../../webpack.config.js",
+    "build:storybook": "build-storybook",
     "precommit": "APP_ROOT_PATH=. lint-staged"
   },
   "devDependencies": {
+    "@babel/cli": "^7.13.16",
+    "@babel/core": "^7.13.16",
+    "@babel/plugin-proposal-nullish-coalescing-operator": "^7.13.8",
+    "@babel/plugin-proposal-optional-chaining": "^7.13.12",
+    "@babel/preset-react": "^7.13.13",
+    "@babel/preset-typescript": "^7.13.0",
+    "@storybook/addon-actions": "^6.2.9",
+    "@storybook/addon-essentials": "^6.2.9",
+    "@storybook/addon-links": "^6.2.9",
+    "@storybook/react": "^6.2.9",
+    "@types/react": "^17.0.4",
+    "@types/react-dom": "^17.0.3",
+    "@types/react-input-mask": "^3.0.0",
     "@typescript-eslint/eslint-plugin": "^4.22.0",
     "@typescript-eslint/parser": "^4.22.0",
+    "autoprefixer": "^9.0.0",
+    "babel-loader": "^8.2.2",
+    "babel-plugin-css-modules-transform": "^1.6.2",
+    "css-loader": "^5.2.4",
+    "css-modules-flow-types-loader": "^1.4.1",
     "eslint": "^7.25.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-babel": "^5.3.1",
@@ -32,12 +57,23 @@
     "eslint-plugin-prettier": "^3.4.0",
     "eslint-plugin-react": "^7.23.2",
     "eslint-plugin-react-hooks": "^4.2.0",
-    "husky": "^4.3.8",
+    "generic-names": "^3.0.0",
+    "husky": "^6.0.0",
     "lerna": "^4.0.0",
     "lint-staged": "^10.5.4",
+    "mini-css-extract-plugin": "^1.5.1",
+    "node-sass": "^5.0.0",
+    "postcss": "^8.2.8",
+    "postcss-loader": "^4.2.0",
+    "postcss-scss": "^3.0.5",
     "prettier": "^2.2.1",
+    "react": "^16.14.0",
+    "react-dom": "^16.14.0",
     "rimraf": "^3.0.2",
-    "typescript": "^4.2.4"
+    "sass-loader": "^10.0.1",
+    "style-loader": "^2.0.0",
+    "typescript": "^4.2.4",
+    "webpack-cli": "^4.6.0"
   },
   "browserslist": {
     "production": [
@@ -73,5 +109,6 @@
     "hooks": {
       "pre-commit": "yarn precommit"
     }
-  }
+  },
+  "dependencies": {}
 }
