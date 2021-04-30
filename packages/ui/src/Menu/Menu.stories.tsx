@@ -3,7 +3,7 @@ import React, {useState} from 'react';
 import {Story, Meta} from '@storybook/react/types-6-0';
 
 import Menu from './index';
-import {VkIcon} from '../../icons';
+import {VkIcon} from '@eruditorgroup/profi-icons';
 
 export default {
   title: 'Menu',
