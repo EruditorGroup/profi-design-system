@@ -1,4 +1,3 @@
-const sass = require('node-sass');
 const fs = require('fs');
 const package = require('./package.json');
 const {CSS_MODULE_LOCAL_IDENT_NAME_GENERATOR} = require('../../.config');
@@ -70,14 +69,7 @@ module.exports = {
         },
         // extractCss: './dist/main.css',
         extensions: ['.css', '.scss'],
-        preprocessCss: (css, path) => {
-          console.log('CSS-module: ', path);
-          return sass
-            .renderSync({
-              data: css,
-            })
-            .css.toString('utf8');
-        },
+        preprocessCss: './processSass.js',
       },
     ],
   ].filter(Boolean),

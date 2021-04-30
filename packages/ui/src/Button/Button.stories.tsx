@@ -3,7 +3,7 @@ import React from 'react';
 import {Story, Meta} from '@storybook/react/types-6-0';
 
 import Button, {ButtonProps} from './index';
-import {VkIcon} from '../../icons';
+import {VkIcon} from '@eruditorgroup/profi-icons';
 
 export default {
   title: 'Button',
