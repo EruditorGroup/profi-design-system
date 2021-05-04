@@ -1,5 +1,4 @@
 name: 'npm package: publish'
-
 on:
   push:
     branches:
@@ -40,7 +39,5 @@ jobs:
       - run: yarn build
         env:
           NODE_ENV: production
-      # - run: mkdir dist/esm/styles && cp src/styles/theme.scss dist/esm/styles/theme.scss
-      # - run: mkdir dist/cjs/styles && cp src/styles/theme.scss dist/cjs/styles/theme.scss
       - run: printf "//npm.pkg.github.com/:_authToken=${{ secrets.GITHUB_TOKEN }}\n@profiru:registry=https://npm.pkg.github.com/" > ~/.npmrc
       - run: lerna publish --conventional-commits --yes

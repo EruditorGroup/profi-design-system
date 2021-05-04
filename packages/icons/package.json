@@ -1,6 +1,6 @@
 {
   "name": "@eruditorgroup/profi-icons",
-  "version": "0.0.2",
+  "version": "0.0.1",
   "description": "Common icon set for Eruditor Group",
   "author": "profiru",
   "license": "ISC",
@@ -9,7 +9,7 @@
     "url": "https://github.com/eruditorgroup/profi-design-system/issues"
   },
   "publishConfig": {
-    "registry": "http://localhost:4873/"
+    "registry": "https://npm.pkg.github.com/profiru"
   },
   "repository": {
     "type": "git",
