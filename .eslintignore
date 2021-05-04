@@ -2,3 +2,9 @@
 setupTests.js
 *stories.tsx
 *.config.js
+
+# TODO: STYLELINT
+*.scss
+*.scss.flow
+*.css
+*.css.flow
