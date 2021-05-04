@@ -1,46 +1,46 @@
-# name: 'npm package: publish'
+name: 'npm package: publish'
 
-# on:
-#   create:
-#     tags:
-#       - '*'
+on:
+  push:
+    branches:
+      - master
 
-# jobs:
-#   test:
-#     runs-on: ubuntu-latest
-#     steps:
-#       - uses: actions/checkout@v2
-#       - uses: actions/setup-node@v1
-#         with:
-#           node-version: 12
-#       - run: yarn
-#       - run: yarn test
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 12
+      - run: yarn
+      - run: yarn test
 
-#   lint:
-#     runs-on: ubuntu-latest
-#     steps:
-#       - uses: actions/checkout@v2
-#       - uses: actions/setup-node@v1
-#         with:
-#           node-version: 12
-#       - run: yarn
-#       - run: yarn lint
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 12
+      - run: yarn
+      - run: yarn lint
 
-#   npm_package_publish:
-#     needs:
-#       - lint
-#       - test
-#     runs-on: ubuntu-latest
-#     steps:
-#       - uses: actions/checkout@v2
-#       - uses: actions/setup-node@v1
-#         with:
-#           node-version: 12
-#       - run: yarn
-#       - run: yarn build
-#         env:
-#           NODE_ENV: production
-#       - run: mkdir dist/esm/styles && cp src/styles/theme.scss dist/esm/styles/theme.scss
-#       - run: mkdir dist/cjs/styles && cp src/styles/theme.scss dist/cjs/styles/theme.scss
-#       - run: printf "//npm.pkg.github.com/:_authToken=${{ secrets.GITHUB_TOKEN }}\n@profiru:registry=https://npm.pkg.github.com/" > ~/.npmrc
-#       - run: npm publish --access public
+  npm_package_publish:
+    needs:
+      - lint
+      - test
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 12
+      - run: yarn
+      - run: yarn build
+        env:
+          NODE_ENV: production
+      # - run: mkdir dist/esm/styles && cp src/styles/theme.scss dist/esm/styles/theme.scss
+      # - run: mkdir dist/cjs/styles && cp src/styles/theme.scss dist/cjs/styles/theme.scss
+      - run: printf "//npm.pkg.github.com/:_authToken=${{ secrets.GITHUB_TOKEN }}\n@profiru:registry=https://npm.pkg.github.com/" > ~/.npmrc
+      - run: lerna publish --conventional-commits --yes
