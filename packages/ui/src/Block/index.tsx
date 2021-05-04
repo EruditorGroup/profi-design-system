@@ -21,6 +21,4 @@ const Block: ForwardRefExoticComponent<
   );
 });
 
-console.log('test');
-
 export default Block;
