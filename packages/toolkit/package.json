@@ -9,7 +9,7 @@
     "url": "https://github.com/eruditorgroup/profi-design-system/issues"
   },
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com/profiru"
+    "registry": "http://localhost:4873/"
   },
   "repository": {
     "type": "git",
@@ -26,5 +26,6 @@
   "peerDependencies": {
     "react": "^16.14.0",
     "react-dom": "^16.14.0"
-  }
+  },
+  "gitHead": "565e5c3e1d65be7f9083f07c01acb7ad1b6214e9"
 }
