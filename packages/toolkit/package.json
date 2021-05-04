@@ -1,6 +1,6 @@
 {
   "name": "@eruditorgroup/profi-toolkit",
-  "version": "0.0.5",
+  "version": "0.0.1",
   "description": "Toolkit for React for Eruditor Group",
   "author": "profiru",
   "license": "ISC",
@@ -9,7 +9,7 @@
     "url": "https://github.com/eruditorgroup/profi-design-system/issues"
   },
   "publishConfig": {
-    "registry": "http://localhost:4873/"
+    "registry": "https://npm.pkg.github.com/profiru"
   },
   "repository": {
     "type": "git",

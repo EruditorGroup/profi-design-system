@@ -5,7 +5,6 @@ module.exports = {
   },
   extends: [
     'prettier',
-    'prettier/react',
     'plugin:jest/recommended',
     'plugin:react-hooks/recommended',
     'plugin:@typescript-eslint/recommended',
@@ -27,4 +26,9 @@ module.exports = {
     'prettier',
   ],
   rules: {},
+  settings: {
+    jest: {
+      version: 26
+    }
+  }
 };

@@ -1,6 +1,6 @@
 {
   "name": "@eruditorgroup/profi-ui",
-  "version": "0.0.7",
+  "version": "0.0.1",
   "description": "Essential cross-platform UI components for React for Eruditor Group",
   "author": "profiru",
   "license": "ISC",
@@ -9,7 +9,7 @@
     "url": "https://github.com/eruditorgroup/profi-design-system/issues"
   },
   "publishConfig": {
-    "registry": "http://localhost:4873/"
+    "registry": "https://npm.pkg.github.com/profiru"
   },
   "repository": {
     "type": "git",
@@ -24,8 +24,8 @@
     "/lib"
   ],
   "dependencies": {
-    "@eruditorgroup/profi-icons": "^0.0.2",
-    "@eruditorgroup/profi-toolkit": "^0.0.5",
+    "@eruditorgroup/profi-icons": "^0.0.1",
+    "@eruditorgroup/profi-toolkit": "^0.0.1",
     "body-scroll-lock": "^3.1.5",
     "classnames": "^2.2.6",
     "react-input-mask": "^2.0.4",
