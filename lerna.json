@@ -8,7 +8,8 @@
       "conventionalCommits": true,
       "message": "chore(release): publish",
       "registry": "http://localhost:4873/",
-      "allowBranch": "publish-packages"
+      "allowBranch": "publish-packages",
+      "ignoreChanges": ["*.md"]
     }
   }
 }
