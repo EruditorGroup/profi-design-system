@@ -1,6 +1,6 @@
 {
   "name": "@eruditorgroup/profi-design-system",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Essential cross-platform UI components for React for Eruditor Group",
   "author": "profiru",
   "license": "ISC",
@@ -10,7 +10,7 @@
     "url": "https://github.com/eruditorgroup/profi-design-system/issues"
   },
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com/profiru"
+    "registry": "http://localhost:4873/"
   },
   "repository": {
     "type": "git",
