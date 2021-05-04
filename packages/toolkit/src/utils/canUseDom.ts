@@ -1,3 +1,4 @@
+// test
 export default function canUseDom(): boolean {
   return !!(
     typeof window !== 'undefined' &&

@@ -40,4 +40,6 @@ jobs:
         env:
           NODE_ENV: production
       - run: printf "//npm.pkg.github.com/:_authToken=${{ secrets.GITHUB_TOKEN }}\n@profiru:registry=https://npm.pkg.github.com/" > ~/.npmrc
+      - run: git config user.email "publisher@eruditor-group.com"
+      - run: git config user.name "Publisher"
       - run: lerna publish --conventional-commits --yes
