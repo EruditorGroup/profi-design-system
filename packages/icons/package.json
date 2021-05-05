@@ -1,6 +1,6 @@
 {
   "name": "@eruditorgroup/profi-icons",
-  "version": "0.0.2",
+  "version": "0.0.5",
   "description": "Common icon set for Eruditor Group",
   "author": "profiru",
   "license": "ISC",
@@ -26,5 +26,6 @@
   "peerDependencies": {
     "react": "^16.14.0",
     "react-dom": "^16.14.0"
-  }
+  },
+  "gitHead": "48a9be693046f55784eeead964b46c6ef15b24b4"
 }
