@@ -22,4 +22,5 @@ export {default as ReviewIcon} from './Review';
 export {default as SearchIcon} from './Search';
 export {default as SettingsIcon} from './Settings';
 export {default as StarIcon} from './Star';
+export {default as StarStrokeIcon} from './StarStroke';
 export {default as VkIcon} from './Vk';

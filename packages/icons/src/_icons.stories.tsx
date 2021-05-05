@@ -17,6 +17,7 @@ const Template: Story = () => {
     <table cellPadding="10">
       <thead>
         <tr>
+          <th></th>
           {sizes.map((size) => (
             <th key={size}>{size.toUpperCase()}</th>
           ))}
@@ -35,6 +36,7 @@ const Template: Story = () => {
                 width: '160px',
               }}
             >
+              <td style={{textAlign: 'right'}}>{icons[key].displayName}</td>
               {sizes.map((size, j) => {
                 const Component = icons[key];
                 return (

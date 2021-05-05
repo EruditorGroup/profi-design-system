@@ -4,7 +4,7 @@ import {Story, Meta} from '@storybook/react/types-6-0';
 
 import Button, {ButtonProps} from './index';
 import Spinner from '../Spinner';
-import {VkIcon} from '@eruditorgroup/profi-icons';
+import {ArrowLeftIcon, ArrowRightIcon} from '@eruditorgroup/profi-icons';
 
 export default {
   title: 'Button',
@@ -29,9 +29,9 @@ const Template: Story = (args) => (
       'silver',
     ] as ButtonProps['design'][]).map((design) => (
       <div style={line} key={design}>
-        <Button {...args} design={design} style={withOffset} size="l" />
-        <Button {...args} design={design} style={withOffset} size="m" />
-        <Button {...args} design={design} style={withOffset} size="s" />
+        {['s', 'm', 'l'].map((size) => (
+          <Button {...args} size={size} design={design} style={withOffset} />
+        ))}
       </div>
     ))}
   </>
@@ -44,13 +44,13 @@ Active.args = {
 
 export const With_leading_icon = Template.bind({});
 With_leading_icon.args = {
-  leading: <VkIcon />,
+  leading: <ArrowLeftIcon />,
   children: 'Button',
 };
 
 export const With_trailing_icon = Template.bind({});
 With_trailing_icon.args = {
-  trailing: <VkIcon />,
+  trailing: <ArrowRightIcon />,
   children: 'Button',
 };
 

@@ -53,7 +53,7 @@ const Button: ForwardRefExoticComponent<
         {...props}
       >
         {leading && <span className={styles['leading']}>{leading}</span>}
-        <span className="content">{children}</span>
+        <span className={styles['content']}>{children}</span>
         {trailing && <span className={styles['trailing']}>{trailing}</span>}
       </button>
     );
