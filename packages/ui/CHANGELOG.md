@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.2.0](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.0.7...@eruditorgroup/profi-ui@0.2.0) (2021-05-05)
+
+
+### Bug Fixes
+
+* enable jobs ([cbf19ac](https://github.com/eruditorgroup/profi-design-system/commit/cbf19ac9497dffeff5a5d843c2d8cf3f4db8ab9d))
+
+
+### Features
+
+* new icons & new color theme & implemented Text and Button components ([07dba06](https://github.com/eruditorgroup/profi-design-system/commit/07dba066e8c294cc2e09027ede0c29300544cb00))
+* Tests, lint, publish packages ([6d3ad2d](https://github.com/eruditorgroup/profi-design-system/commit/6d3ad2d60aeda2d901084721f482eeb5e5db19b1))
+
+
+
+
+
 # [0.1.0](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.0.7...@eruditorgroup/profi-ui@0.1.0) (2021-05-05)
 
 
