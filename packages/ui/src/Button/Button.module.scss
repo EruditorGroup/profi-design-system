@@ -3,6 +3,7 @@
   border: none;
   font-weight: 600;
   border-radius: 0.6em;
+  line-height: 1em;
   cursor: pointer;
   display: flex;
   justify-content: center;
@@ -16,6 +17,10 @@
   &:active:not([disabled]) {
     opacity: 0.85;
   }
+}
+
+.content {
+  padding-top: 1px;
 }
 
 .icon {
