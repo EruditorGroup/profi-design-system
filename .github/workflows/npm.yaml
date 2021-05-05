@@ -33,6 +33,7 @@ jobs:
       - uses: actions/checkout@v2
         with:
           token: ${{ secrets.DEPLOY_GITHUB_TOKEN }}
+          fetch-depth: 0
     
       - uses: actions/setup-node@v1
         with:
@@ -50,6 +51,7 @@ jobs:
           GITHUB_PAT: ${{ secrets.DEPLOY_GITHUB_TOKEN }}
 
       - name: Fetch and checkout
+        run: git fetch --depth=1 origin +refs/tags/*:refs/tags/*
         run: git fetch && git checkout master
       
       - name: Set .npmrc
