@@ -50,7 +50,7 @@ jobs:
           GITHUB_PAT: ${{ secrets.DEPLOY_GITHUB_TOKEN }}
 
       - name: Checkout and pull branch
-        run: git checkout "${GITHUB_REF:11}" && git pull
+        run: git checkout master && git pull
 
       - name: Publish package
         run: lerna publish --conventional-commits --no-git-tag-version --yes
