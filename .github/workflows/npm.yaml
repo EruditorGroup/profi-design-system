@@ -30,6 +30,10 @@ jobs:
       - test
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.DEPLOY_GITHUB_TOKEN }}
+          
       - uses: actions/setup-node@v1
         with:
           node-version: 12
@@ -40,10 +44,6 @@ jobs:
           yarn build
         env:
           NODE_ENV: production
-
-      - uses: actions/checkout@v2
-        with:
-          token: ${{ secrets.DEPLOY_GITHUB_TOKEN }}
 
       - name: Configure CI Git User
         run: |
