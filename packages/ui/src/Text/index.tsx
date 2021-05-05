@@ -1,42 +1,37 @@
 import React, {forwardRef, HTMLAttributes} from 'react';
-import type {RefAttributes, ForwardRefExoticComponent} from 'react';
+import type {ForwardRefExoticComponent} from 'react';
 import classNames from 'classnames';
 
 import styles from './Text.module.scss';
+import common from '../styles/common.module.scss';
+import {IColor, ISize} from 'uitype';
 
-type Variants = HTMLHeadingElement | HTMLParagraphElement;
+type TagVariants = HTMLParagraphElement | HTMLSpanElement | HTMLDivElement;
 
-export interface TextProps
-  extends HTMLAttributes<Variants>,
-    RefAttributes<Variants> {
-  tag?: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'p' | 'span';
-  fontWeight?: 'bold';
-  design?:
-    | 'default'
-    | 'h1'
-    | 'h2'
-    | 'h3'
-    | 'h4'
-    | 'h5'
-    | 'h6'
-    | 'hint'
-    | 'error';
+export interface TextProps<E extends TagVariants = HTMLParagraphElement>
+  extends HTMLAttributes<E> {
+  tag?: 'p' | 'span' | 'div';
+  color?: IColor;
+  size?: ISize;
+  bold?: boolean;
 }
 
 const Text: ForwardRefExoticComponent<TextProps> = forwardRef(
-  ({design = 'default', fontWeight, tag = 'p', className, ...props}, ref) => {
-    const elementProperties = {
+  <P extends TextProps>(
+    {bold, size = 'm', color = 'secondary', tag = 'p', className, ...props}: P,
+    ref: P extends TextProps<infer Element> ? React.Ref<Element> : never,
+  ) =>
+    React.createElement(tag, {
       ref,
       className: classNames(
         styles['text'],
-        styles[`design-${design}`],
-        fontWeight && styles[`fontWeight-${fontWeight}`],
+        common[`color-${color}`],
+        common[`size-${size}`],
+        bold && styles[`bold`],
         className,
       ),
       ...props,
-    };
-    return React.createElement(tag, elementProperties);
-  },
+    }),
 );
 
 export default Text;

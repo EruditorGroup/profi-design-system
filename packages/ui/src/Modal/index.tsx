@@ -10,7 +10,7 @@ import type {
 import {disableBodyScroll, enableBodyScroll} from 'body-scroll-lock';
 import {CSSTransition} from 'react-transition-group';
 
-import {ArrowLeft, Close} from '@eruditorgroup/profi-icons';
+import {ArrowLeftIcon, CloseIcon} from '@eruditorgroup/profi-icons';
 
 import BodyPortal from '../BodyPortal';
 import Button from '../Button';
@@ -114,27 +114,25 @@ const Modal: ForwardRefExoticComponent<
             >
               {onClickBack && (
                 <Button
-                  design="none"
                   onClick={onClickBack}
                   className={classNames(styles['button-icon'], styles['left'])}
                 >
-                  <ArrowLeft width={10} height={14} color="black" />
+                  <ArrowLeftIcon />
                 </Button>
               )}
 
               {withCloseButton && (
                 <Button
-                  design="none"
                   onClick={handleCloseClick}
                   className={classNames(styles['button-icon'], styles['right'])}
                 >
-                  <Close width={14} height={14} color="black" />
+                  <CloseIcon />
                 </Button>
               )}
 
               {title && (
                 <div className={styles['head']}>
-                  <Text fontWeight="bold">{title}</Text>
+                  <Text bold>{title}</Text>
                 </div>
               )}
 
