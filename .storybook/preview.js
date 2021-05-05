@@ -1,5 +1,3 @@
-import '../packages/ui/src/styles/theme.scss';
-
 export const parameters = {
   actions: { argTypesRegex: "^on[A-Z].*" },
   controls: {
