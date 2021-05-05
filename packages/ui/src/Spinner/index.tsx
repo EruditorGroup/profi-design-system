@@ -1,4 +1,4 @@
-import React, {forwardRef} from 'react';
+import React, {forwardRef, useEffect, useState} from 'react';
 import type {
   HTMLAttributes,
   ForwardRefExoticComponent,
@@ -7,31 +7,46 @@ import type {
 import classnames from 'classnames';
 
 import styles from './Spinner.module.scss';
+import common from '../styles/common.module.scss';
+import {IColor, ISize} from 'uitype';
 
 export interface SpinnerProps
   extends HTMLAttributes<HTMLDivElement>,
     RefAttributes<HTMLDivElement> {
-  size?: 'small' | 'default' | 'large';
-  color?: string;
+  color?: IColor;
+  delay?: number;
   speed?: number;
+  size?: ISize;
 }
 
 const Spinner: ForwardRefExoticComponent<SpinnerProps> = forwardRef(
-  (
-    {size = 'default', speed, color, className, ...props}: SpinnerProps,
-    ref,
-  ) => (
-    <span
-      style={{transitionDuration: speed ? `${speed}ms` : undefined, color}}
-      className={classnames(
-        styles['spinner'],
-        styles[`size-${size}`],
-        className,
-      )}
-      ref={ref}
-      {...props}
-    />
-  ),
+  ({speed, color, delay, size, className, ...props}: SpinnerProps, ref) => {
+    const [showed, setShowed] = useState(!delay);
+
+    useEffect(() => {
+      if (delay) {
+        const timeout = setTimeout(() => setShowed(true), delay);
+        return () => clearTimeout(timeout);
+      }
+    }, [delay, setShowed]);
+
+    return (
+      <div
+        className={classnames(styles['inner'], showed && className, {
+          [styles['showed']]: showed,
+          [common[`size-${size}`]]: size,
+          [common[`color-${color}`]]: color,
+        })}
+        {...props}
+      >
+        <span
+          style={{transitionDuration: speed ? `${speed}ms` : undefined}}
+          className={classnames(styles['spinner'])}
+          ref={ref}
+        />
+      </div>
+    );
+  },
 );
 
 export default Spinner;
