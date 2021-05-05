@@ -11,15 +11,14 @@ export default {
 const Template: Story = () => {
   return (
     <div>
-      <Text>Text without design</Text>
-      <Text design="h1">H1</Text>
-      <Text design="h2">H2</Text>
-      <Text design="h3">H3</Text>
-      <Text design="h4">H4</Text>
-      <Text design="h5">H5</Text>
-      <Text design="h6">H6</Text>
-      <Text design="hint">Hint text</Text>
-      <Text design="error">Error text</Text>
+      {(['l', 'm', 's', 'xs'] as TextProps['size']).map((size) => (
+        <div style={{display: 'flex'}} key={size}>
+          <Text size={size}>Съешь ещё этих мягких французских булок</Text>
+          <Text size={size} bold>
+            Съешь ещё этих мягких французских булок
+          </Text>
+        </div>
+      ))}
     </div>
   );
 };

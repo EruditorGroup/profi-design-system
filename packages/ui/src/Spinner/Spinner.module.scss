@@ -1,13 +1,13 @@
 .spinner,
 .spinner:after {
   color: currentColor;
-  font-size: 10px;
-  position: relative;
+  background: transparent;
+  width: calc(1em - 4px);
+  height: calc(1em - 4px);
   text-indent: -9999em;
   border-top: 1.5px solid;
   border-right: 1.5px solid;
-  border-bottom: 1.5px solid;
-  border-bottom-color: transparent !important;
+  border-bottom: 1.5px solid transparent;
   border-left: 1.5px solid;
   transform: translateZ(0);
   animation: spin 0.5s infinite linear;
@@ -15,20 +15,23 @@
   display: inline-flex;
 }
 
-.size-small,
-.size-small:after {
-  width: 15px;
-  height: 15px;
-}
-.size-default,
-.size-default:after {
-  width: 20px;
-  height: 20px;
-}
-.size-large,
-.size-large:after {
-  width: 25px;
-  height: 25px;
+.inner {
+  position: relative;
+  height: 0;
+  width: 0;
+  opacity: 0;
+  transition: margin 0.3s, opacity 0.3s, width 0.3s, height 0.3s;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: -0.5em;
+  &.showed {
+    height: 1em;
+    width: 1em;
+    opacity: 1;
+    margin-right: 0;
+  }
 }
 
 @-webkit-keyframes spin {
