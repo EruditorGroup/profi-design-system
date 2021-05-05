@@ -1,6 +1,6 @@
 const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const {CSS_MODULE_LOCAL_IDENT_NAME_GENERATOR} = require('./.config')
+const {CSS_MODULE_LOCAL_IDENT_NAME_GENERATOR} = require('./.config');
 
 module.exports = {
   mode: 'development',
@@ -29,7 +29,7 @@ module.exports = {
             // configuration of babel is placed in ./babel.config.js
             loader: 'babel-loader',
             options: require('./babel.config.js'),
-          }
+          },
         ],
       },
       {
@@ -62,9 +62,10 @@ module.exports = {
               },
             },
           },
-          'css-modules-flow-types-loader',
           // sass-loader is syntax booster of project`s styles
           'sass-loader',
+          // transform css variables to string values
+          // 'css-variables-loader',
           // autoprefixer and custom transpile plugins
           {
             loader: 'postcss-loader',
