@@ -15,7 +15,7 @@ const ChevronUpIcon: ForwardRefExoticComponent<IconPropsType> = forwardRef(
         ref={ref}
       >
         <path
-          d="M4 3.5L14 13.5M4 13.5L14 3.5"
+          d="M14 11L9.00016 6L4 11"
           stroke="currentColor"
           stroke-width="2"
           stroke-linecap="round"

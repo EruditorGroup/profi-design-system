@@ -14,13 +14,9 @@ const MoreVerticalIcon: ForwardRefExoticComponent<IconPropsType> = forwardRef(
         {...props}
         ref={ref}
       >
-        <path
-          d="M14 11L9.00016 6L4 11"
-          stroke="currentColor"
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-        />
+        <circle cx="2.5" cy="8.5" r="2" fill="currentColor" />
+        <circle cx="9" cy="8.5" r="2" fill="currentColor" />
+        <circle cx="15.5" cy="8.5" r="2" fill="currentColor" />
       </svg>
     );
   },
