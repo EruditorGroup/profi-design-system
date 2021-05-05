@@ -2,7 +2,7 @@ import React, {forwardRef} from 'react';
 import type {ForwardRefExoticComponent} from 'react';
 import type {IconPropsType} from './_types';
 
-const ArrowLeftIcon: ForwardRefExoticComponent<IconPropsType> = forwardRef(
+const SearchIcon: ForwardRefExoticComponent<IconPropsType> = forwardRef(
   (props, ref) => {
     return (
       <svg
@@ -14,8 +14,15 @@ const ArrowLeftIcon: ForwardRefExoticComponent<IconPropsType> = forwardRef(
         {...props}
         ref={ref}
       >
+        <circle
+          cx="8.5"
+          cy="7.5"
+          r="6"
+          stroke="currentColor"
+          stroke-width="2"
+        />
         <path
-          d="M15.75 9L1.75 9M1.75 9L7.75 3M1.75 9L7.75 15"
+          d="M12.5 12.5L15.5 15.5"
           stroke="currentColor"
           stroke-width="2"
           stroke-linecap="round"
@@ -26,6 +33,6 @@ const ArrowLeftIcon: ForwardRefExoticComponent<IconPropsType> = forwardRef(
   },
 );
 
-ArrowLeftIcon.displayName = 'ArrowLeftIcon';
+SearchIcon.displayName = 'SearchIcon';
 
-export default ArrowLeftIcon;
+export default SearchIcon;
