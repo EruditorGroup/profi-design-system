@@ -1,8 +1,7 @@
 name: 'storybook: deploy to github pages'
 on:
-  push:
-    branches:
-      - master
+  release:
+    types: [created]
 
 jobs:
   build-and-deploy:
