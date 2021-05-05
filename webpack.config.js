@@ -6,7 +6,7 @@ const {eruditorgroup} = require(path.resolve('package.json'));
 const {CSS_MODULE_LOCAL_IDENT_NAME_GENERATOR} = require('./.config');
 
 module.exports = {
-  mode: 'development',
+  mode: 'production',
   context: path.resolve('src'),
   // where the start of your bundle
   entry: './index.ts',
@@ -56,7 +56,7 @@ module.exports = {
   },
   plugins: [
     new MiniCssExtractPlugin({
-      filename: 'profi-ui.css',
+      filename: `${eruditorgroup.libFilename}.css`,
     }),
   ],
   optimization: {
