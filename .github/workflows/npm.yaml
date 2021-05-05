@@ -49,8 +49,8 @@ jobs:
         env:
           GITHUB_PAT: ${{ secrets.DEPLOY_GITHUB_TOKEN }}
 
-      - name: Pull branch
-        run: git pull origin master
+      - name: Checkout origin/master
+        run: git checkout origin/master
 
       - name: Publish package
         run: lerna publish --conventional-commits --no-git-tag-version --yes
