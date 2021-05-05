@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.0.6](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-icons@0.0.5...@eruditorgroup/profi-icons@0.0.6) (2021-05-05)
+
+
+### Bug Fixes
+
+* **icons:** confused paths ([67826fb](https://github.com/eruditorgroup/profi-design-system/commit/67826fbd663ec56cc79f9b76ba173b684b1490d6))
+
+
+
+
+
 ## 0.0.5 (2021-05-05)
 
 
