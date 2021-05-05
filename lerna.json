@@ -7,8 +7,8 @@
     "publish": {
       "conventionalCommits": true,
       "message": "chore(release): publish",
-      "registry": "https://npm.pkg.github.com/profiru",
-      "allowBranch": "master",
+      "registry": "http://localhost:4873",
+      "allowBranch": "deploy-test",
       "ignoreChanges": ["*.md"]
     }
   }

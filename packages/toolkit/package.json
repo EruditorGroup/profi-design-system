@@ -9,7 +9,7 @@
     "url": "https://github.com/eruditorgroup/profi-design-system/issues"
   },
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com/profiru"
+    "registry": "http://localhost:4873"
   },
   "repository": {
     "type": "git",
