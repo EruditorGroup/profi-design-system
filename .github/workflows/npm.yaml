@@ -50,7 +50,6 @@ jobs:
         env:
           GITHUB_PAT: ${{ secrets.DEPLOY_GITHUB_TOKEN }}
 
-      - run: git fetch --depth=1 origin +refs/tags/*:refs/tags/*
       - name: Fetch and checkout
         run: git fetch && git checkout master
       
