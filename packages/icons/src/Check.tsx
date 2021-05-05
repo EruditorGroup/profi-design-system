@@ -2,7 +2,7 @@ import React, {forwardRef} from 'react';
 import type {ForwardRefExoticComponent} from 'react';
 import type {IconPropsType} from './_types';
 
-const ArrowLeftIcon: ForwardRefExoticComponent<IconPropsType> = forwardRef(
+const CheckIcon: ForwardRefExoticComponent<IconPropsType> = forwardRef(
   (props, ref) => {
     return (
       <svg
@@ -15,7 +15,7 @@ const ArrowLeftIcon: ForwardRefExoticComponent<IconPropsType> = forwardRef(
         ref={ref}
       >
         <path
-          d="M15.75 9L1.75 9M1.75 9L7.75 3M1.75 9L7.75 15"
+          d="M3.25 8.25L7.45 12.25L14.75 3.25"
           stroke="currentColor"
           stroke-width="2"
           stroke-linecap="round"
@@ -26,6 +26,6 @@ const ArrowLeftIcon: ForwardRefExoticComponent<IconPropsType> = forwardRef(
   },
 );
 
-ArrowLeftIcon.displayName = 'ArrowLeftIcon';
+CheckIcon.displayName = 'CheckIcon';
 
-export default ArrowLeftIcon;
+export default CheckIcon;

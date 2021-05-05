@@ -2,7 +2,7 @@ import React, {forwardRef} from 'react';
 import type {ForwardRefExoticComponent} from 'react';
 import type {IconPropsType} from './_types';
 
-const VkIcon: ForwardRefExoticComponent<IconPropsType> = forwardRef(
+const GalleryIcon: ForwardRefExoticComponent<IconPropsType> = forwardRef(
   (props, ref) => {
     return (
       <svg
@@ -25,6 +25,6 @@ const VkIcon: ForwardRefExoticComponent<IconPropsType> = forwardRef(
   },
 );
 
-VkIcon.displayName = 'VkIcon';
+GalleryIcon.displayName = 'GalleryIcon';
 
-export default VkIcon;
+export default GalleryIcon;

@@ -1,23 +1,20 @@
 .button {
   position: relative;
   border: none;
-  font-family: var(--font-family);
-  font-size: 16px;
-  font-weight: 500;
-  line-height: 1.4;
-  border-radius: var(--border-radius);
+  font-weight: 600;
+  border-radius: 0.6em;
   cursor: pointer;
   display: flex;
   justify-content: center;
   align-items: center;
   outline: none;
-  padding: 0 20px;
-  height: 50px;
-  border: 1px solid transparent;
 
   &[disabled] {
-    opacity: 0.65;
     cursor: default;
+  }
+
+  &:active:not([disabled]) {
+    opacity: 0.85;
   }
 }
 
@@ -27,86 +24,60 @@
   justify-content: center;
   align-items: center;
   &-withMargin {
-    margin-right: 0.5rem;
+    margin-right: 0.3em;
   }
 }
 
 .design-primary {
-  color: white;
-  background-color: var(--color-brand);
+  color: var(--color-primaryInverse);
+  background-color: var(--color-primary);
 
   &:hover:not([disabled]) {
-    background-color: var(--color-brand-hover);
+    background-color: var(--color-primaryState);
   }
 
-  &:active:not([disabled]) {
-    background: var(--color-brand-active);
-  }
-
-  &[disabled],
-  &[disabled]:hover {
-    // opacity: 0.65;
-    background: var(--color-brand);
-  }
-}
-
-.design-primary-light {
-  color: var(--color-brand);
-  background-color: rgba(255, 0, 44, 0.07);
-
-  &:hover:not([disabled]) {
-    background-color: rgba(255, 0, 44, 0.15);
-  }
-
-  &:active:not([disabled]) {
-    background: rgba(255, 0, 44, 0.25);
-  }
-
-  &[disabled],
-  &[disabled]:hover {
-    // opacity: 0.65;
-    // background: var(--color-brand);
-    border-color: rgba(255, 0, 44, 0.25);
+  &[disabled] {
+    color: var(--color-primaryInverseState);
   }
 }
 
 .design-light {
-  background: var(--light-blue);
-  color: var(--color-text);
-  font-weight: 600;
-  background-color: #fff;
-  // box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 0px 1px inset;
+  background: var(--color-light);
+  color: var(--color-lightInverse);
 
   &:hover:not([disabled]) {
-    background: var(--light-blue-hover);
+    background: var(--color-lightState);
   }
 
-  &:active:not([disabled]) {
-    background: var(--light-blue-active);
+  &[disabled] {
+    color: var(--color-lightInverseState);
+  }
+}
+
+.design-silver {
+  background: transparent;
+  color: var(--color-lightInverse);
+
+  &:hover:not([disabled]) {
+    background: var(--color-lightState);
   }
 
-  &[disabled],
-  &[disabled]:hover {
-    background: var(--color-border);
+  &[disabled] {
+    color: var(--color-lightInverseState);
   }
 }
 
 .design-secondary {
-  background: var(--color-lightGrey);
-  color: var(--color-text);
+  background: var(--color-secondary);
+  color: var(--color-secondaryInverse);
   font-weight: 600;
 
-  &:hover {
-    background: var(--color-mediumGrey);
+  &:hover:not([disabled]) {
+    background: var(--color-secondaryState);
   }
 
-  &:active {
-    background: var(--color-border);
-  }
-
-  &[disabled],
-  &[disabled]:hover {
-    background: var(--color-border);
+  &[disabled] {
+    color: var(--color-secondaryInverseState);
   }
 }
 
@@ -143,27 +114,48 @@
   }
 }
 
-.size-small {
-  height: 40px;
-  font-weight: 600;
+.size-s {
+  padding: 11px 15px;
+  font-size: var(--text-size-s);
+  &.rounded {
+    padding: 11px;
+  }
 }
 
-.size-default {
-  padding: 11px 20px;
+.size-m {
+  padding: 12px 18px;
+  font-size: var(--text-size-m);
+  &.rounded {
+    padding: 12px;
+  }
 }
 
-.size-large {
-  font-size: 30px;
-  font-weight: 500;
-  padding: 24px;
-  height: 80px;
+.size-l {
+  padding: 13px 20px;
+  font-size: var(--text-size-l);
+
+  &.rounded {
+    padding: 13px;
+  }
+}
+
+.rounded {
+  border-radius: 50px;
 }
 
 .block {
   width: 100%;
 }
 
-.fit {
-  padding-right: 0;
-  padding-left: 0;
+.leading,
+.trailing {
+  display: inline-flex;
+}
+
+.leading {
+  margin-right: 0.5em;
+}
+
+.trailing {
+  margin-left: 0.5em;
 }
