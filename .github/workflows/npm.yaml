@@ -4,30 +4,30 @@ on:
     types: [published]
 
 jobs:
-  # test:
-  #   runs-on: ubuntu-latest
-  #   steps:
-  #     - uses: actions/checkout@v2
-  #     - uses: actions/setup-node@v1
-  #       with:
-  #         node-version: 12
-  #     - run: yarn
-  #     - run: yarn test
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 12
+      - run: yarn
+      - run: yarn test
 
-  # lint:
-  #   runs-on: ubuntu-latest
-  #   steps:
-  #     - uses: actions/checkout@v2
-  #     - uses: actions/setup-node@v1
-  #       with:
-  #         node-version: 12
-  #     - run: yarn
-  #     - run: yarn lint
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 12
+      - run: yarn
+      - run: yarn lint
 
   npm_package_publish:
-    # needs:
-    #   - lint
-    #   - test
+    needs:
+      - lint
+      - test
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -49,8 +49,11 @@ jobs:
         env:
           GITHUB_PAT: ${{ secrets.DEPLOY_GITHUB_TOKEN }}
 
-      - name: Pull branch
-        run: git pull
-
+      - name: Fetch and checkout
+        run: git fetch && git checkout master
+      
+      - name: Set .npmrc
+        run: printf "//npm.pkg.github.com/:_authToken=${{ secrets.GITHUB_TOKEN }}\n@profiru:registry=https://npm.pkg.github.com/" > ~/.npmrc
+      
       - name: Publish package
-        run: lerna publish --conventional-commits --no-git-tag-version --yes
+        run: lerna publish --conventional-commits --yes
