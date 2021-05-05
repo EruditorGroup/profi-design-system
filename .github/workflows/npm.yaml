@@ -50,7 +50,7 @@ jobs:
           GITHUB_PAT: ${{ secrets.DEPLOY_GITHUB_TOKEN }}
 
       - name: Pull branch
-        run: git pull
+        run: git pull origin master
 
       - name: Publish package
         run: lerna publish --conventional-commits --no-git-tag-version --yes
