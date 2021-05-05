@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.0.7](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-icons@0.0.6...@eruditorgroup/profi-icons@0.0.7) (2021-05-05)
+
+
+### Bug Fixes
+
+* delete ([6028f3f](https://github.com/eruditorgroup/profi-design-system/commit/6028f3fcd53d68fdc81944051e383a52383f9844))
+
+
+
+
+
 ## [0.0.6](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-icons@0.0.5...@eruditorgroup/profi-icons@0.0.6) (2021-05-05)
 
 **Note:** Version bump only for package @eruditorgroup/profi-icons
