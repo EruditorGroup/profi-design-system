@@ -1,5 +1,8 @@
 const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
+const TerserPlugin = require('terser-webpack-plugin');
+const {eruditorgroup} = require(path.resolve('package.json'));
 const {CSS_MODULE_LOCAL_IDENT_NAME_GENERATOR} = require('./.config');
 
 module.exports = {
@@ -9,7 +12,9 @@ module.exports = {
   entry: './index.ts',
   output: {
     // where we should output webpack bundle results
-    filename: 'index.js',
+    filename: `${eruditorgroup.libFilename}.min.js`,
+    library: eruditorgroup.libName,
+    libraryTarget: 'umd',
     path: path.resolve('dist'),
   },
   resolve: {
@@ -17,7 +22,46 @@ module.exports = {
     // if we dont add extensions, webpack will skip this import
     extensions: ['.js', '.jsx', '.ts', '.tsx', 'css', 'scss'],
   },
-  plugins: [new MiniCssExtractPlugin()],
+  externals: {
+    react: {
+      commonjs: 'react',
+      commonjs2: 'react',
+      amd: 'react',
+      root: 'React',
+    },
+    'react-dom': {
+      commonjs: 'react-dom',
+      commonjs2: 'react-dom',
+      amd: 'react-dom',
+      root: 'ReactDOM',
+    },
+    '@eruditorgroup/profi-ui': {
+      commonjs: '@eruditorgroup/profi-ui',
+      commonjs2: '@eruditorgroup/profi-toolkit',
+      amd: '@eruditorgroup/profi-ui',
+      root: 'ProfiUI',
+    },
+    '@eruditorgroup/profi-icons': {
+      commonjs: '@eruditorgroup/profi-icons',
+      commonjs2: '@eruditorgroup/profi-toolkit',
+      amd: '@eruditorgroup/profi-icons',
+      root: 'ProfiIcons',
+    },
+    '@eruditorgroup/profi-toolkit': {
+      commonjs: '@eruditorgroup/profi-toolkit',
+      commonjs2: '@eruditorgroup/profi-toolkit',
+      amd: '@eruditorgroup/profi-toolkit',
+      root: 'ProfiToolkit',
+    },
+  },
+  plugins: [
+    new MiniCssExtractPlugin({
+      filename: 'profi-ui.css',
+    }),
+  ],
+  optimization: {
+    minimizer: [new TerserPlugin(), new OptimizeCSSAssetsPlugin()],
+  },
   module: {
     rules: [
       {
@@ -36,18 +80,13 @@ module.exports = {
         test: /\.(css|scss)$/,
         use: [
           // load styles dynamically as with <link /> tag
-          {
-            loader:
-              process.env.NODE_ENV === 'production'
-                ? MiniCssExtractPlugin.loader
-                : 'style-loader',
-          },
+          MiniCssExtractPlugin.loader,
           {
             // css-loader allows us to generate unique classnames for incapsulate styles inside npm module
             loader: 'css-loader',
             options: {
               // we should import sass-loader and postcss-loader before css-loader to transpile scss-syntax and append plugins
-              importLoaders: 2,
+              importLoaders: 3,
               modules: {
                 // provides common unique classname generator of babel and webpack
                 // babel is generating separated modules (ES-modules)
@@ -62,26 +101,22 @@ module.exports = {
               },
             },
           },
-          // sass-loader is syntax booster of project`s styles
-          'sass-loader',
-          // transform css variables to string values
-          // 'css-variables-loader',
-          // autoprefixer and custom transpile plugins
+          'css-modules-flow-types-loader',
           {
             loader: 'postcss-loader',
             options: {
-              sourceMap: true,
               postcssOptions: {
-                ident: 'postcss',
-                syntax: require('postcss-scss'),
                 plugins: [
-                  require('autoprefixer', {
-                    browser: ['> 1%', 'ie > 9'],
-                  }),
+                  [
+                    'postcss-preset-env',
+                    {importFrom: './src/styles/theme.css'},
+                  ],
                 ],
               },
             },
           },
+          // sass-loader is syntax booster of project`s styles
+          'sass-loader',
         ],
       },
     ],
