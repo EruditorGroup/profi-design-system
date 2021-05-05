@@ -51,6 +51,9 @@ jobs:
 
       - name: Fetch and checkout
         run: git fetch && git checkout master
-
+      
+      - name: Set .npmrc
+        run: printf "//npm.pkg.github.com/:_authToken=${{ secrets.GITHUB_TOKEN }}\n@profiru:registry=https://npm.pkg.github.com/" > ~/.npmrc
+      
       - name: Publish package
         run: lerna publish --conventional-commits --no-git-tag-version --yes
