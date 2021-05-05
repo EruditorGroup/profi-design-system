@@ -43,5 +43,6 @@ jobs:
       - run: yarn build
         env:
           NODE_ENV: production
-      - run: printf "//npm.pkg.github.com/:_authToken=${{ secrets.GITHUB_TOKEN }}\n@profiru:registry=https://npm.pkg.github.com/" > ~/.npmrc
-      - run: lerna publish --conventional-commits --yes
+      - run: git checkout master
+      - run: git pull
+      - run: lerna publish --conventional-commits --no-git-tag-version --yes
