@@ -1,0 +1,49 @@
+.color-brand {
+  color: var(--color-brand);
+}
+
+.color-primary {
+  color: var(--color-primary);
+}
+
+.color-secondary {
+  color: var(--color-secondary);
+}
+
+.color-light {
+  color: var(--color-secondary);
+}
+
+.color-danger {
+  color: var(--color-danger);
+}
+
+.color-success {
+  color: var(--color-success);
+}
+
+.color-warning {
+  color: var(--color-warning);
+}
+
+.size-xs {
+  font-size: var(--text-size-s);
+}
+.size-s {
+  font-size: var(--text-size-s);
+}
+.size-m {
+  font-size: var(--text-size-m);
+}
+.size-l {
+  font-size: var(--text-size-l);
+}
+.size-xl {
+  font-size: var(--text-size-xl);
+}
+.size-xxl {
+  font-size: var(--text-size-xxl);
+}
+.size-huge {
+  font-size: var(--text-size-huge);
+}

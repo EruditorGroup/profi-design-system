@@ -3,28 +3,19 @@ import type {
   ButtonHTMLAttributes,
   ForwardRefExoticComponent,
   RefAttributes,
-  ReactNode,
 } from 'react';
 import classnames from 'classnames';
-import Spinner from '../Spinner';
 
 import styles from './Button.module.scss';
+import {IColor, ISize} from 'uitype';
 
 export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
-  design?:
-    | 'primary'
-    | 'primary-light'
-    | 'secondary'
-    | 'light'
-    | 'yandex'
-    | 'fb'
-    | 'vk'
-    | 'none';
-  size?: 'small' | 'default' | 'large';
-  icon?: ReactNode;
-  fit?: boolean;
-  isLoading?: boolean;
+  design?: IColor;
+  size?: ISize;
   block?: boolean;
+  rounded?: boolean;
+  leading?: React.ReactNode;
+  trailing?: React.ReactNode;
 }
 
 const Button: ForwardRefExoticComponent<
@@ -33,15 +24,15 @@ const Button: ForwardRefExoticComponent<
   (
     {
       design = 'primary',
-      size = 'default',
+      size = 'm',
       type = 'button',
+      rounded = false,
       block = false,
       disabled,
-      isLoading = false,
-      fit = false, // без отступов
       children,
       className,
-      icon,
+      leading,
+      trailing,
       ...props
     },
     ref,
@@ -50,43 +41,20 @@ const Button: ForwardRefExoticComponent<
       <button
         ref={ref}
         type={type}
-        disabled={isLoading || disabled}
+        disabled={disabled}
         className={classnames(
           styles['button'],
-          design !== 'none' && styles[`design-${design}`],
+          styles[`design-${design}`],
           styles[`size-${size}`],
-          fit && styles['fit'],
           block && styles[`block`],
+          rounded && styles[`rounded`],
           className,
         )}
         {...props}
       >
-        {isLoading ? (
-          <>
-            <Spinner
-              className={classnames(
-                styles['icon'],
-                children && styles['icon-withMargin'],
-              )}
-              size={size}
-            />
-            {children}
-          </>
-        ) : (
-          <>
-            {icon && (
-              <span
-                className={classnames(
-                  styles['icon'],
-                  children && styles['icon-withMargin'],
-                )}
-              >
-                {icon}
-              </span>
-            )}
-            {children}
-          </>
-        )}
+        {leading && <span className={styles['leading']}>{leading}</span>}
+        <span className="content">{children}</span>
+        {trailing && <span className={styles['trailing']}>{trailing}</span>}
       </button>
     );
   },
