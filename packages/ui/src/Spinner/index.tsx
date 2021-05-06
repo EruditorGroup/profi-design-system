@@ -7,7 +7,7 @@ import type {
 import classnames from 'classnames';
 
 import styles from './Spinner.module.scss';
-import common from '../styles/common.module.scss';
+import common from '../styles/common.module.css';
 import {IColor, ISize} from 'uitype';
 
 export interface SpinnerProps

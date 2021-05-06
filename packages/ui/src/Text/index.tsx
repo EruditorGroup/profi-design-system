@@ -3,7 +3,7 @@ import type {ForwardRefExoticComponent} from 'react';
 import classNames from 'classnames';
 
 import styles from './Text.module.scss';
-import common from '../styles/common.module.scss';
+import common from '../styles/common.module.css';
 import {IColor, ISize} from 'uitype';
 
 type TagVariants = HTMLParagraphElement | HTMLSpanElement | HTMLDivElement;
