@@ -1,0 +1,22 @@
+.avatar {
+  background: var(--color-light);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  background-size: cover;
+  overflow: hidden;
+}
+
+.design-circle {
+  border-radius: 50%;
+  width: 1.8em;
+  height: 1.8em;
+}
+
+.design-rect {
+  border-radius: 2px;
+  width: 2.222em;
+  height: 2.888em;
+  border-radius: var(--border-radius-small);
+}

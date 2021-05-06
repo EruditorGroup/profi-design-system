@@ -1,0 +1,39 @@
+import React, {forwardRef} from 'react';
+import classnames from 'classnames';
+
+import styles from './Avatar.module.scss';
+import common from '../styles/common.module.scss';
+import {ISize} from 'uitype';
+
+export interface AvatarProps
+  extends Omit<React.HTMLAttributes<HTMLDivElement>, 'children'> {
+  design?: 'circle' | 'rect';
+  size?: ISize;
+  src?: string;
+  username?: string;
+}
+
+const Button = forwardRef<HTMLDivElement, AvatarProps>(
+  (
+    {size, style, design = 'circle', src, username, className, ...props},
+    ref,
+  ) => {
+    return (
+      <div
+        ref={ref}
+        style={src ? {backgroundImage: `url(${src})`, ...style} : style}
+        className={classnames(
+          styles['avatar'],
+          size && common[`size-${size}`],
+          styles[`design-${design}`],
+          className,
+        )}
+        {...props}
+      >
+        {!src && username?.slice(0, 1)}
+      </div>
+    );
+  },
+);
+
+export default Button;

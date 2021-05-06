@@ -20,7 +20,10 @@
 }
 
 .content {
-  padding-top: 1px;
+  display: flex;
+  justify-content: center;
+  text-align: left;
+  flex-grow: 1;
 }
 
 .icon {
@@ -120,27 +123,34 @@
 }
 
 .size-s {
-  padding: 11px 15px;
+  padding: 0 15px;
+  min-height: 40px;
   font-size: var(--text-size-s);
+
   &.rounded {
-    padding: 11px;
+    width: 40px;
+    height: 40px;
   }
 }
 
 .size-m {
-  padding: 12px 18px;
+  padding: 0 18px;
+  min-height: 45px;
   font-size: var(--text-size-m);
   &.rounded {
-    padding: 12px;
+    width: 45px;
+    height: 45px;
   }
 }
 
 .size-l {
-  padding: 13px 20px;
+  padding: 0 20px;
+  min-height: 50px;
   font-size: var(--text-size-l);
 
   &.rounded {
-    padding: 13px;
+    width: 50px;
+    height: 50px;
   }
 }
 
@@ -155,12 +165,13 @@
 .leading,
 .trailing {
   display: inline-flex;
+  flex-shrink: 0;
 }
 
 .leading {
-  margin-right: 0.5em;
+  padding-right: 9px;
 }
 
 .trailing {
-  margin-left: 0.5em;
+  padding-left: 9px;
 }
