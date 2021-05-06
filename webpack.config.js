@@ -3,7 +3,10 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
 const {eruditorgroup} = require(path.resolve('package.json'));
-const {CSS_MODULE_LOCAL_IDENT_NAME_GENERATOR} = require('./.config');
+const {
+  CSS_MODULE_LOCAL_IDENT_NAME_GENERATOR,
+  GET_PACKEGES_INFO,
+} = require('./.config');
 
 module.exports = {
   mode: 'production',
@@ -35,24 +38,18 @@ module.exports = {
       amd: 'react-dom',
       root: 'ReactDOM',
     },
-    '@eruditorgroup/profi-ui': {
-      commonjs: '@eruditorgroup/profi-ui',
-      commonjs2: '@eruditorgroup/profi-toolkit',
-      amd: '@eruditorgroup/profi-ui',
-      root: 'ProfiUI',
-    },
-    '@eruditorgroup/profi-icons': {
-      commonjs: '@eruditorgroup/profi-icons',
-      commonjs2: '@eruditorgroup/profi-toolkit',
-      amd: '@eruditorgroup/profi-icons',
-      root: 'ProfiIcons',
-    },
-    '@eruditorgroup/profi-toolkit': {
-      commonjs: '@eruditorgroup/profi-toolkit',
-      commonjs2: '@eruditorgroup/profi-toolkit',
-      amd: '@eruditorgroup/profi-toolkit',
-      root: 'ProfiToolkit',
-    },
+    ...GET_PACKEGES_INFO().reduce(
+      (packages, package) =>
+        Object.assign(packages, {
+          [package.name]: {
+            commonjs: package.name,
+            commonjs2: package.name,
+            amd: package.libFilename,
+            root: package.libName,
+          },
+        }),
+      {},
+    ),
   },
   plugins: [
     new MiniCssExtractPlugin({
