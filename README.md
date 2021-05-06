@@ -51,7 +51,7 @@
 **Иконки**
 
 * Заменить на импорты из пакета `@eruditorgroup/profi-icons`
-```
+```javascript
 import {ArrowLeftIcon} from '@eruditorgroup/profi-icons';
 ``` 
 * По умолчанию теперь иконки используют `currentColor`.
