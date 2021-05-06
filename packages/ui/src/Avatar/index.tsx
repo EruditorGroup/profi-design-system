@@ -9,13 +9,23 @@ export interface AvatarProps
   extends Omit<React.HTMLAttributes<HTMLDivElement>, 'children'> {
   design?: 'circle' | 'rect';
   size?: ISize;
+  isOnline?: boolean;
   src?: string;
   username?: string;
 }
 
-const Button = forwardRef<HTMLDivElement, AvatarProps>(
+const Avatar = forwardRef<HTMLDivElement, AvatarProps>(
   (
-    {size, style, design = 'circle', src, username, className, ...props},
+    {
+      size,
+      style,
+      isOnline,
+      design = 'circle',
+      src,
+      username,
+      className,
+      ...props
+    },
     ref,
   ) => {
     return (
@@ -31,9 +41,10 @@ const Button = forwardRef<HTMLDivElement, AvatarProps>(
         {...props}
       >
         {!src && username?.slice(0, 1)}
+        {isOnline && <i className={styles['onlineDot']} />}
       </div>
     );
   },
 );
 
-export default Button;
+export default Avatar;

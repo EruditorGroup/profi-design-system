@@ -5,13 +5,17 @@
   align-items: center;
   flex-shrink: 0;
   background-size: cover;
-  overflow: hidden;
+
+  position: relative;
 }
 
 .design-circle {
   border-radius: 50%;
   width: 1.8em;
   height: 1.8em;
+  .onlineDot {
+    transform: translate3d(calc(1.52em - 3px), calc(1.52em - 3px), 0);
+  }
 }
 
 .design-rect {
@@ -19,4 +23,18 @@
   width: 2.222em;
   height: 2.888em;
   border-radius: var(--border-radius-small);
+  .onlineDot {
+    transform: translate3d(calc(2.05em - 3px), calc(2.7em - 3px), 0);
+  }
+}
+
+.onlineDot {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border: 2px solid #fff;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--color-success);
 }
