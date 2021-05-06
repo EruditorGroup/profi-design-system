@@ -1,5 +1,7 @@
-const fs = require('fs');
-const {CSS_MODULE_LOCAL_IDENT_NAME_GENERATOR} = require('../.config');
+const {
+  CSS_MODULE_LOCAL_IDENT_NAME_GENERATOR,
+  GET_PACKEGES_INFO,
+} = require('../.config');
 
 module.exports = {
   stories: [
@@ -46,12 +48,9 @@ module.exports = {
                           {
                             preserve: false,
                             browsers: ['>0.2%', 'not dead', 'not op_mini all'],
-                            importFrom: fs
-                              .readdirSync('./packages')
-                              .map(
-                                (p) => `./packages/${p}/src/styles/theme.css`,
-                              )
-                              .filter((p) => fs.existsSync(p)),
+                            importFrom: GET_PACKEGES_INFO()
+                              .map((p) => p.themePath)
+                              .filter(Boolean),
                           },
                         ],
                       ],
