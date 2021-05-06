@@ -53,7 +53,7 @@ Active.args = {
 export const Leading_and_trailing_components = Template.bind({});
 Leading_and_trailing_components.args = {
   children: 'Василий Петрович',
-  leading: <Avatar src={src} />,
+  leading: <Avatar src={src} isOnline />,
   trailing: <ChevronDownIcon />,
 };
 

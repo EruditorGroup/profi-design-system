@@ -10,6 +10,7 @@ declare module '*.scss' {
 
 declare module 'react-transition-group';
 declare module 'body-scroll-lock';
+declare module '*.png';
 
 declare module 'uitype' {
   export type ISize = 'xs' | 's' | 'm' | 'l';
