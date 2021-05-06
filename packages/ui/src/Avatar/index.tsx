@@ -2,7 +2,7 @@ import React, {forwardRef} from 'react';
 import classnames from 'classnames';
 
 import styles from './Avatar.module.scss';
-import common from '../styles/common.module.scss';
+import common from '../styles/common.module.css';
 import {ISize} from 'uitype';
 
 export interface AvatarProps

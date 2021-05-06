@@ -1,15 +1,14 @@
 import React from 'react';
 import {Story, Meta} from '@storybook/react/types-6-0';
+import classnames from 'classnames';
 
 import * as icons from './index';
-import {IconPropsType} from './_types';
 
 export default {
   title: 'Icons',
 } as Meta;
 
-const sizes = ['xs', 's', 'm', 'l', 'xl', 'xxl', 'huge'];
-const colors = ['brand', 'success', 'info', 'warning', 'secondary', 'primary'];
+const sizes = [13, 15, 17, 22, 28];
 
 // To add icon to this story you should add export your icon inside './index.tsx'
 const Template: Story = () => {
@@ -19,7 +18,7 @@ const Template: Story = () => {
         <tr>
           <th></th>
           {sizes.map((size) => (
-            <th key={size}>{size.toUpperCase()}</th>
+            <th key={size}>{size}px</th>
           ))}
         </tr>
       </thead>
@@ -42,11 +41,7 @@ const Template: Story = () => {
                 return (
                   <th
                     key={size}
-                    style={{
-                      fontSize: `var(--text-size-${size})`,
-                      color: `var(--color-${colors[j]})`,
-                      border: '1px solid #ececec',
-                    }}
+                    style={{fontSize: `${size}px`, border: '1px solid #ececec'}}
                   >
                     <Component key={j} />
                   </th>
