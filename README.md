@@ -1,32 +1,60 @@
-... TODO
+# Profi design system
+## Документация
+* [Readme @eruditorgroup/profi-icons](https://github.com/EruditorGroup/profi-design-system/blob/master/packages/icons/README.md)
+* [Readme @eruditorgroup/profi-toolkit](https://github.com/EruditorGroup/profi-design-system/blob/master/packages/toolkit/README.md)
+* [Readme @eruditorgroup/profi-ui](https://github.com/EruditorGroup/profi-design-system/blob/master/packages/ui/README.md)
 
-_Написать тут про:_
+## Правила разработки
+  1. Именование коммитов строго по https://www.conventionalcommits.org/. Необходимо для корректного бампа версий при публикации пакетов.
+  2. Если необходимы `flow` тайпинги - пишем их на стороне потребителя библиотеки.
+  3. Используем `css-modules` для написания стилей. Запрещены вложенные стили.
 
-- flow typings пишите сами (можно взять из warp)
-- можете брать эту ui-библиотеку, если используете profi дизайн-систему
-- css модули: вложенные стили запрещены
-- где собранные лежат пакеты (npm registry, как скачать инструкция)
-- ссылка на example сторибук
-- milestone
+## Процесс разработки
+  1. Качаем монорепу ```git clone git@github.com:EruditorGroup/profi-design-system.git```
+  2. Устанавливаем зависимости ```yarn install```
+  3. В корне проекта запускаем сборку ```yarn build```
+  4. Запускаем Storybook ```yarn start```
+ 
+## Процесс релиза
+  1. Мержим в `master` необходимые для релиза изменения.
+  2. Публикуем новый `release` либо `pre-release` с новой версией тега. (https://github.com/EruditorGroup/profi-design-system/releases)
+  3. После публикации релиза запускаются джобы для публикации `npm пакетов` и сборки `storybook`. (https://github.com/EruditorGroup/profi-design-system/actions)
+  4. После успешной публикации обновляем пакеты на стороне потребителей библиотеки.
+## Conventional commits
+* `fix`: исправление бага (соответствует PATCH)
+* `feat`: добавление нового функционала/фичи/компонента (соответствует MINOR)
+* `BREAKING CHANGE` либо `!`: нарушение обратной совместимости. (соответствует MAJOR). Могут быть добавлены в коммит либого типа.
+* `build, chore, ci, docs, style, refactor, perf, test`:  также можем использовать
+### Примеры
+Простой фикс:
 
-_DEV_
+```fix: Поправлен баг```
 
-- сборка: как запустить, как сбилдить
-- релиз: yarn version --patch & git push --follow-tags (автоматизировать?)
-- что поддерживаем (scss, sass, css modules, typescript...)
+Фикс со `scope`:
 
-_Как мигрировать с warp ui_
+```fix(Avatar): Поправлен баг с аватаркой```
 
-- Loader
+Добавление нового компонента:
 
-* { size="large" } изменен на { size="extraLarge" }
+```feat(Grid): Добавлен компонент Сетка```
 
-- Icon
+Внесение критичных изменений с обновлением мажорной версии пакета:
 
-* Иконки стали использовать currentColor
+```refactor!: Убираем поддержку IE11```
 
-_Обсудить:_
+## Миграция с UI WARP
+### Component refactoring
+**Loader**
 
-- тесты на сторибук
-- readme
-- сборка css?
+* `size="large"` заменить на `size="extraLarge"`
+
+**Иконки**
+
+* Заменить на импорты из пакета `@eruditorgroup/profi-icons`
+```
+import {ArrowLeftIcon} from '@eruditorgroup/profi-icons';
+``` 
+* По умолчанию теперь иконки используют `currentColor`.
+
+## TODO:
+1. Ссылка на storybook
