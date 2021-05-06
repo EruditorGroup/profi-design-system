@@ -7,11 +7,11 @@ import {IColor, ISize} from 'uitype';
 /* eslint-disable */
 interface ForwardingComponent<TInitial extends React.ElementType, P = unknown> {
   <As extends React.ElementType = TInitial>(
-    props: React.ComponentPropsWithRef<As> & P,
+    props: React.ComponentPropsWithRef<As> & P & {as?: As},
     context?: any,
   ): React.ReactElement | null;
   defaultProps?: Partial<
-    React.ComponentPropsWithRef<TInitial> & P & {as: TInitial}
+    React.ComponentPropsWithRef<TInitial> & P & {as?: TInitial}
   >;
 }
 /* eslint-enable */
