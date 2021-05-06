@@ -43,8 +43,8 @@ export {default as Radio} from './Radio';
 export {default as Link} from './Link';
 export type {LinkProps} from './Link';
 
-export {default as Text} from './Text';
-export type {TextProps} from './Text';
+export {default as Text} from './Typography/Text';
+export type {TextProps} from './Typography/Text';
 
 export {default as Divider} from './Divider';
 export type {DividerProps} from './Divider';

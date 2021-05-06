@@ -175,3 +175,14 @@
 .trailing {
   padding-left: 9px;
 }
+
+.design-link {
+  color: var(--color-link);
+  background: transparent;
+  padding: 0;
+  min-height: inherit;
+
+  &:hover .content {
+    text-decoration: underline;
+  }
+}
