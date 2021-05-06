@@ -2,7 +2,7 @@ import React from 'react';
 import {Story, Meta} from '@storybook/react/types-6-0';
 
 import Avatar, {AvatarProps} from './index';
-import src from './avatar.png';
+// import src from './avatar.png';
 
 export default {
   title: 'Avatar',

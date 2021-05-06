@@ -13,7 +13,7 @@ declare module 'body-scroll-lock';
 declare module '*.png';
 
 declare module 'uitype' {
-  export type ISize = 'xs' | 's' | 'm' | 'l';
+  export type ISize = 'xs' | 's' | 'm' | 'l' | 'xl' | 'xxl' | 'huge';
 
   export type IColor =
     | 'brand'

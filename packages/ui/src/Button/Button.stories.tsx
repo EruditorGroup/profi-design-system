@@ -5,14 +5,9 @@ import {Story, Meta} from '@storybook/react/types-6-0';
 import Button, {ButtonProps} from './index';
 import Spinner from '../Spinner';
 import Avatar from '../Avatar';
+import Link from '../Link';
 import src from '../Avatar/avatar.png';
-import {
-  ArrowLeftIcon,
-  ArrowRightIcon,
-  ChevronDownIcon,
-  ChevronRightIcon,
-  CloseIcon,
-} from '@eruditorgroup/profi-icons';
+import {ChevronDownIcon, CloseIcon} from '@eruditorgroup/profi-icons';
 
 export default {
   title: 'Button',
@@ -35,6 +30,7 @@ const Template: Story = (args) => (
       'secondary',
       'light',
       'silver',
+      'link',
     ] as ButtonProps['design'][]).map((design) => (
       <div style={line} key={design}>
         {['s', 'm', 'l'].map((size) => (
@@ -87,4 +83,11 @@ export const Rounded = Template.bind({});
 Rounded.args = {
   children: <CloseIcon />,
   rounded: true,
+};
+
+export const As_link = Template.bind({});
+As_link.args = {
+  leading: <CloseIcon />,
+  children: 'Close',
+  as: Link,
 };

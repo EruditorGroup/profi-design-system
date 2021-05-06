@@ -1,26 +1,31 @@
 import React, {forwardRef} from 'react';
-import type {
-  ButtonHTMLAttributes,
-  ForwardRefExoticComponent,
-  RefAttributes,
-} from 'react';
 import classnames from 'classnames';
 
 import styles from './Button.module.scss';
 import {IColor, ISize} from 'uitype';
 
-export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
-  design?: IColor;
+/* eslint-disable */
+interface ForwardingComponent<TInitial extends React.ElementType, P = unknown> {
+  <As extends React.ElementType = TInitial>(
+    props: React.ComponentPropsWithRef<As> & P,
+    context?: any,
+  ): React.ReactElement | null;
+  defaultProps?: Partial<
+    React.ComponentPropsWithRef<TInitial> & P & {as: TInitial}
+  >;
+}
+/* eslint-enable */
+
+export type ButtonProps = {
+  design?: IColor | 'link';
   size?: ISize;
   block?: boolean;
   rounded?: boolean;
   leading?: React.ReactNode;
   trailing?: React.ReactNode;
-}
+};
 
-const Button: ForwardRefExoticComponent<
-  ButtonProps & RefAttributes<HTMLButtonElement>
-> = forwardRef(
+const Button: ForwardingComponent<'button', ButtonProps> = forwardRef(
   (
     {
       design = 'primary',
@@ -28,7 +33,7 @@ const Button: ForwardRefExoticComponent<
       type = 'button',
       rounded = false,
       block = false,
-      disabled,
+      as: Component = 'button',
       children,
       className,
       leading,
@@ -38,10 +43,9 @@ const Button: ForwardRefExoticComponent<
     ref,
   ) => {
     return (
-      <button
+      <Component
         ref={ref}
         type={type}
-        disabled={disabled}
         className={classnames(
           styles['button'],
           styles[`design-${design}`],
@@ -55,7 +59,7 @@ const Button: ForwardRefExoticComponent<
         {leading && <span className={styles['leading']}>{leading}</span>}
         <span className={styles['content']}>{children}</span>
         {trailing && <span className={styles['trailing']}>{trailing}</span>}
-      </button>
+      </Component>
     );
   },
 );
