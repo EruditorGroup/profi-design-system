@@ -6,7 +6,7 @@ import Button, {ButtonProps} from './index';
 import Spinner from '../Spinner';
 import Avatar from '../Avatar';
 import Link from '../Link';
-// import src from '../Avatar/avatar.png';
+import src from '../Avatar/avatar.png';
 import {ChevronDownIcon, CloseIcon} from '@eruditorgroup/profi-icons';
 
 export default {
