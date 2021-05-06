@@ -33,6 +33,5 @@ jobs:
       - uses: actions/setup-node@v1
         with:
           node-version: 12
-          NODE_ENV: production
       - run: yarn
-      - run: yarn build
+      - run: NODE_ENV=production yarn build
