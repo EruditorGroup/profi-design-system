@@ -17,8 +17,8 @@
     "directory": "packages/icons"
   },
   "main": "lib/index.js",
-  "types": "lib",
-  "module": "lib/es/index.js",
+  "types": "lib/index.d.ts",
+  "unpkg": "dist/profi-ui.min.js",
   "devDependencies": {
     "react": "^16.14.0",
     "react-dom": "^16.14.0"

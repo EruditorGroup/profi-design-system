@@ -20,7 +20,7 @@
     "start": "start-storybook -p 6006",
     "build": "yarn build:types && yarn build:lib && yarn build:bundle",
     "build:types": "lerna exec -- tsc --outDir lib --declaration --emitDeclarationOnly --noEmit false --declarationMap --allowJs false --checkJs false",
-    "build:lib": "lerna exec --parallel -- CSS_MODULES=1 babel --root-mode upward src -x '.ts','.tsx' -d lib --ignore '**/*.test.tsx','**/*.stories.tsx','**/*.d.ts','**/__mocks__'",
+    "build:lib": "lerna exec --parallel -- CSS_MODULES=1 MODULE_TYPE=cjs babel --root-mode upward src -x '.ts','.tsx' -d lib --ignore '**/*.test.tsx','**/*.stories.tsx','**/*.d.ts','**/__mocks__'",
     "build:bundle": "lerna exec --parallel -- webpack -c ../../webpack.config.js",
     "build:storybook": "build-storybook",
     "test": "MODULE_TYPE=cjs jest",
