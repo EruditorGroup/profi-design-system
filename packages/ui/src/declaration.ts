@@ -13,7 +13,7 @@ declare module 'body-scroll-lock';
 
 declare module 'uitype' {
   export type ISize = 'xs' | 's' | 'm' | 'l';
-
+  export type ISocials = 'vk' | 'ya' | 'fb' | 'apple';
   export type IColor =
     | 'brand'
     | 'primary'
@@ -22,5 +22,4 @@ declare module 'uitype' {
     | 'danger'
     | 'success'
     | 'warning';
-  export type ISocials = 'vk' | 'ya' | 'fb' | 'apple';
 }

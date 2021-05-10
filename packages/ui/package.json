@@ -17,8 +17,8 @@
     "directory": "packages/ui"
   },
   "main": "lib/index.js",
-  "types": "lib",
-  "module": "lib/es/index.js",
+  "types": "lib/index.d.ts",
+  "unpkg": "dist/profi-ui.min.js",
   "files": [
     "/dist",
     "/lib"
