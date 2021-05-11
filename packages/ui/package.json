@@ -18,11 +18,13 @@
   },
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
-  "module": "esm/index.js",
+  "module": "es/index.js",
   "unpkg": "dist/profi-ui.min.js",
   "files": [
     "/dist",
-    "/lib"
+    "/lib",
+    "/es",
+    "/src"
   ],
   "dependencies": {
     "@eruditorgroup/profi-icons": "^0.0.8",
