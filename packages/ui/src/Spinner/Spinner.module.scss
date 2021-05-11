@@ -20,17 +20,22 @@
   height: 0;
   width: 0;
   opacity: 0;
-  transition: margin 0.3s, opacity 0.3s, width 0.3s, height 0.3s;
+  transition: padding 0.3s, opacity 0.3s, width 0.3s, height 0.3s;
   overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-right: -0.5em;
+
   &.showed {
     height: 1em;
     width: 1em;
     opacity: 1;
-    margin-right: 0;
+    &.withRightPadding {
+      padding-right: 0.5em;
+    }
+    &.withLeftPadding {
+      padding-left: 0.5em;
+    }
   }
 }
 
