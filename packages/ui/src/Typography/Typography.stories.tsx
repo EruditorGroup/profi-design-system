@@ -52,6 +52,9 @@ const Template: Story = () => {
             <td style={td}>
               <Title size={size}>Съешь ещё этих мягких французских булок</Title>
             </td>
+            <td>
+              <Text>123123123</Text>
+            </td>
           </tr>
         ))}
       </tbody>
