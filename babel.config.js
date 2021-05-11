@@ -25,7 +25,7 @@ if (isESM) {
   transformCssModulesConfig.importPathFormatter = (path) =>
     path.replace(/(scss|css)$/, 'build.css');
   transformCssModulesConfig.extractCss = {
-    dir: './esm/',
+    dir: './es/',
     relativeRoot: './src/',
     filename: '[path]/[name].build.css',
   };
