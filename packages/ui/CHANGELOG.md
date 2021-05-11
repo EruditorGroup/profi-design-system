@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.0.10](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.0.9...@eruditorgroup/profi-ui@0.0.10) (2021-05-11)
+
+
+### Bug Fixes
+
+* publish npm ([52866de](https://github.com/eruditorgroup/profi-design-system/commit/52866de734c41dd7c30320a6b308b8566b6cb17c))
+* remote test comment ([ed4c3d5](https://github.com/eruditorgroup/profi-design-system/commit/ed4c3d59f0f86c1b98da027787c14c2e344eb0d3))
+
+
+
+
+
 ## [0.0.9](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.0.8...@eruditorgroup/profi-ui@0.0.9) (2021-05-11)
 
 

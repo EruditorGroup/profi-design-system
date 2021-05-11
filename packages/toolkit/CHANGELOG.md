@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.0.8](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-toolkit@0.0.7...@eruditorgroup/profi-toolkit@0.0.8) (2021-05-11)
+
+
+### Bug Fixes
+
+* publish npm ([52866de](https://github.com/eruditorgroup/profi-design-system/commit/52866de734c41dd7c30320a6b308b8566b6cb17c))
+
+
+
+
+
 ## [0.0.7](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-toolkit@0.0.6...@eruditorgroup/profi-toolkit@0.0.7) (2021-05-11)
 
 
