@@ -25,7 +25,14 @@ const Template: Story<LinkProps> = (args) => (
     </p>
     <p>
       Lorem ipsum{' '}
-      <Link to="/foo/bar" disabled {...args}>
+      <Link {...args} to="#" color="brand">
+        с brand-цветом
+      </Link>{' '}
+      lorem ipsum
+    </p>
+    <p>
+      Lorem ipsum{' '}
+      <Link {...args} disabled>
         неактивный линк
       </Link>{' '}
       lorem ipsum

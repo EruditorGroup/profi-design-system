@@ -8,3 +8,4 @@ setupTests.js
 *.scss.flow
 *.css
 *.css.flow
+*.png

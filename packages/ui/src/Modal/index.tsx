@@ -14,7 +14,7 @@ import {ArrowLeftIcon, CloseIcon} from '@eruditorgroup/profi-icons';
 
 import BodyPortal from '../BodyPortal';
 import Button from '../Button';
-import Text from '../Text';
+import Text from '../Typography/Text';
 
 import {canUseDom} from '@eruditorgroup/profi-toolkit';
 

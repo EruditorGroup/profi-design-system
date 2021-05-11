@@ -4,7 +4,10 @@ import {Story, Meta} from '@storybook/react/types-6-0';
 
 import Button, {ButtonProps} from './index';
 import Spinner from '../Spinner';
-import {ArrowLeftIcon, ArrowRightIcon} from '@eruditorgroup/profi-icons';
+import Avatar from '../Avatar';
+import Link from '../Link';
+import src from '../Avatar/avatar.png';
+import {ChevronDownIcon, CloseIcon} from '@eruditorgroup/profi-icons';
 
 export default {
   title: 'Button',
@@ -27,6 +30,7 @@ const Template: Story = (args) => (
       'secondary',
       'light',
       'silver',
+      'link',
     ] as ButtonProps['design'][]).map((design) => (
       <div style={line} key={design}>
         {['s', 'm', 'l'].map((size) => (
@@ -42,16 +46,11 @@ Active.args = {
   children: 'Button',
 };
 
-export const With_leading_icon = Template.bind({});
-With_leading_icon.args = {
-  leading: <ArrowLeftIcon />,
-  children: 'Button',
-};
-
-export const With_trailing_icon = Template.bind({});
-With_trailing_icon.args = {
-  trailing: <ArrowRightIcon />,
-  children: 'Button',
+export const Leading_and_trailing_components = Template.bind({});
+Leading_and_trailing_components.args = {
+  children: 'Василий Петрович',
+  leading: <Avatar src={src} isOnline />,
+  trailing: <ChevronDownIcon />,
 };
 
 export const Disabled = Template.bind({});
@@ -60,15 +59,36 @@ Disabled.args = {
   children: 'Button',
 };
 
-export const With_spinner = Template.bind({});
-With_spinner.args = {
-  leading: <Spinner delay={1000} />,
+export const With_left_spinner = Template.bind({});
+With_left_spinner.args = {
   disabled: true,
-  children: 'Button',
+  children: (
+    <>
+      <Spinner withRightPadding delay={1000} /> Button
+    </>
+  ),
+};
+
+export const With_right_spinner = Template.bind({});
+With_right_spinner.args = {
+  disabled: true,
+  children: (
+    <>
+      Button <Spinner withLeftPadding delay={1000} />
+    </>
+  ),
 };
 
 export const Rounded = Template.bind({});
 Rounded.args = {
-  children: <Spinner />,
+  children: <CloseIcon />,
   rounded: true,
+};
+
+export const As_link = Template.bind({});
+As_link.args = {
+  leading: <CloseIcon />,
+  children: 'Close',
+  as: Link,
+  to: '#',
 };
