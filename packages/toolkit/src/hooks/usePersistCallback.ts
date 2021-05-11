@@ -3,7 +3,7 @@ import type {DependencyList} from 'react';
 
 export default function usePersistCallback<ARG, RET>(
   callback: (...args: ARG[]) => RET,
-  deps: DependencyList | undefined,
+  deps?: DependencyList,
 ): (...args: ARG[]) => RET {
   const callbackRef = useRef(callback);
 
