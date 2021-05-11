@@ -90,4 +90,5 @@ As_link.args = {
   leading: <CloseIcon />,
   children: 'Close',
   as: Link,
+  to: '#',
 };

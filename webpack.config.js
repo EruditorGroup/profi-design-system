@@ -98,7 +98,6 @@ module.exports = {
               },
             },
           },
-          'css-modules-flow-types-loader',
           {
             loader: 'postcss-loader',
             options: {
