@@ -21,6 +21,14 @@ module.exports = {
         {
           oneOf: [
             {
+              test: /\.(png|jpe?g|gif)$/i,
+              use: [
+                {
+                  loader: 'file-loader',
+                },
+              ],
+            },
+            {
               test: /\.(css|scss)$/,
               use: [
                 'style-loader',
