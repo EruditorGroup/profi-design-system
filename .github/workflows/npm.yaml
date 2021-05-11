@@ -34,7 +34,7 @@ jobs:
         with:
           token: ${{ secrets.DEPLOY_GITHUB_TOKEN }}
           fetch-depth: 0
-    
+
       - uses: actions/setup-node@v1
         with:
           node-version: 12
@@ -51,9 +51,12 @@ jobs:
 
       - name: Fetch and checkout
         run: git fetch && git checkout yarn.lock && git checkout master # если на тег, то git checkout "${GITHUB_REF/refs\/tags\//}". Но ругается Detached git HEAD.
-      
+
       - name: Set .npmrc
         run: printf "//npm.pkg.github.com/:_authToken=${{ secrets.GITHUB_TOKEN }}\n@profiru:registry=https://npm.pkg.github.com/" > ~/.npmrc
-      
+
       - name: Publish package
         run: lerna publish --conventional-commits --yes
+
+      - name: Check packages/ui
+        run: ls -l packages/ui
