@@ -26,7 +26,9 @@ const DropdownPortal: ForwardRefExoticComponent<
     const _ref = useRef() as React.MutableRefObject<HTMLDivElement | null>;
     const context = useContext(DropdownContext);
 
-    useClickOutside(_ref, () => context?.setOpened(false));
+    useClickOutside(_ref, () => {
+      if (context?.isOpened) context?.setOpened(false);
+    });
 
     return (
       <div

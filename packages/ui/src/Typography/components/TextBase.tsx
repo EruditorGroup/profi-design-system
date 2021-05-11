@@ -3,29 +3,34 @@ import classNames from 'classnames';
 
 import styles from './TextBase.module.scss';
 import common from '../../styles/common.module.css';
-import {IColor, ISize} from 'uitype';
+import {ForwardingComponent, IColor, ISize} from 'uitype';
 
-export interface TextBaseProps<E extends HTMLElement = HTMLElement>
-  extends HTMLAttributes<E> {
-  tag: keyof JSX.IntrinsicElements;
+export interface TextBaseProps {
+  as: 'p' | 'span' | 'div' | 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6';
   size: ISize;
   color?: IColor;
   bold?: boolean;
 }
 
-const TextBase = forwardRef<HTMLElement, TextBaseProps>(
-  ({bold, size, color = 'secondary', tag, className, ...props}, ref) =>
-    React.createElement(tag, {
-      ref,
-      className: classNames(
-        styles['text'],
-        common[`color-${color}`],
-        common[`size-${size}`],
-        bold && styles[`bold`],
-        className,
-      ),
-      ...props,
-    }),
+const TextBase: ForwardingComponent<'p', TextBaseProps> = forwardRef(
+  (
+    {bold, size, color = 'secondary', as: Component, className, ...props},
+    ref,
+  ) => {
+    return (
+      <Component
+        {...props}
+        ref={ref}
+        className={classNames(
+          styles['text'],
+          common[`color-${color}`],
+          common[`size-${size}`],
+          bold && styles[`bold`],
+          className,
+        )}
+      />
+    );
+  },
 );
 
 export default TextBase;

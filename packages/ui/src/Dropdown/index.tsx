@@ -4,6 +4,7 @@ import React, {
   useMemo,
   forwardRef,
   PropsWithChildren,
+  useEffect,
 } from 'react';
 import type {Dispatch, SetStateAction, ForwardRefExoticComponent} from 'react';
 import DropdownToggler from './components/DropdownToggler';
@@ -30,7 +31,6 @@ interface DropdownComponent
   Portal: typeof DropdownPortal;
 }
 
-// additional type cast to flowgen
 const Dropdown = forwardRef(({children, className}, ref) => {
   const [isOpened, setOpened] = useState(false);
 
