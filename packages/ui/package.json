@@ -18,6 +18,7 @@
   },
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
+  "module": "esm/index.js",
   "unpkg": "dist/profi-ui.min.js",
   "files": [
     "/dist",
