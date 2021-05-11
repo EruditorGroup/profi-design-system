@@ -18,8 +18,14 @@
   },
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
-  "module": "esm/index.js",
+  "module": "es/index.js",
   "unpkg": "dist/profi-toolkit.min.js",
+  "files": [
+    "/dist",
+    "/lib",
+    "/es",
+    "/src"
+  ],
   "devDependencies": {
     "react": "^16.14.0",
     "react-dom": "^16.14.0"
