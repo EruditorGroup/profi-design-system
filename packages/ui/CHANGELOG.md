@@ -3,6 +3,20 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.0.8](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.0.7...@eruditorgroup/profi-ui@0.0.8) (2021-05-11)
+
+
+### Bug Fixes
+
+* modules in package.json ([0b4d8f5](https://github.com/eruditorgroup/profi-design-system/commit/0b4d8f54fd0058aeb70b8cd700c385af3e945289))
+* **link:** use styles as global anchor ([8659066](https://github.com/eruditorgroup/profi-design-system/commit/86590665ee037eff29693a38050fa4d51008aa24))
+* build fixes ([8c238a4](https://github.com/eruditorgroup/profi-design-system/commit/8c238a4fca47c4482dbcd3f99533c1a59f8b88a4))
+* icons storybook ([1c404be](https://github.com/eruditorgroup/profi-design-system/commit/1c404beaecf1225399bbdd5648fa9035bbf07af3))
+
+
+
+
+
 ## [0.0.7](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.0.6...@eruditorgroup/profi-ui@0.0.7) (2021-05-06)
 
 
