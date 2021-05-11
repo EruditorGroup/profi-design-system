@@ -12,7 +12,7 @@ node_modules
 # production
 dist
 lib
-esm
+es
 
 # production storybook
 storybook-static
