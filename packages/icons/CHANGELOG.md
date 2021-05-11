@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.0.9](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-icons@0.0.8...@eruditorgroup/profi-icons@0.0.9) (2021-05-11)
+
+
+### Bug Fixes
+
+* publish npm ([52866de](https://github.com/eruditorgroup/profi-design-system/commit/52866de734c41dd7c30320a6b308b8566b6cb17c))
+
+
+
+
+
 ## [0.0.8](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-icons@0.0.7...@eruditorgroup/profi-icons@0.0.8) (2021-05-11)
 
 
