@@ -7,7 +7,7 @@ import type {
 import classnames from 'classnames';
 
 import styles from './Spinner.module.scss';
-import common from '../styles/common.module.scss';
+import common from '../styles/common.module.css';
 import {IColor, ISize} from 'uitype';
 
 export interface SpinnerProps
@@ -17,10 +17,24 @@ export interface SpinnerProps
   delay?: number;
   speed?: number;
   size?: ISize;
+  withRightPadding?: boolean;
+  withLeftPadding?: boolean;
 }
 
 const Spinner: ForwardRefExoticComponent<SpinnerProps> = forwardRef(
-  ({speed, color, delay, size, className, ...props}: SpinnerProps, ref) => {
+  (
+    {
+      withLeftPadding,
+      withRightPadding,
+      speed,
+      color,
+      delay,
+      size,
+      className,
+      ...props
+    }: SpinnerProps,
+    ref,
+  ) => {
     const [showed, setShowed] = useState(!delay);
 
     useEffect(() => {
@@ -34,6 +48,8 @@ const Spinner: ForwardRefExoticComponent<SpinnerProps> = forwardRef(
       <div
         className={classnames(styles['inner'], showed && className, {
           [styles['showed']]: showed,
+          [styles['withRightPadding']]: withRightPadding,
+          [styles['withLeftPadding']]: withLeftPadding,
           [common[`size-${size}`]]: size,
           [common[`color-${color}`]]: color,
         })}

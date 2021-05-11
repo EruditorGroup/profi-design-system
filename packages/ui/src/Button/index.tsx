@@ -1,26 +1,21 @@
 import React, {forwardRef} from 'react';
-import type {
-  ButtonHTMLAttributes,
-  ForwardRefExoticComponent,
-  RefAttributes,
-} from 'react';
 import classnames from 'classnames';
 
 import styles from './Button.module.scss';
-import {IColor, ISize} from 'uitype';
+import {ForwardingComponent, IColor, ISize} from 'uitype';
 
-export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
-  design?: IColor;
+/* eslint-enable */
+
+export type ButtonProps = {
+  design?: IColor | 'link';
   size?: ISize;
   block?: boolean;
   rounded?: boolean;
   leading?: React.ReactNode;
   trailing?: React.ReactNode;
-}
+};
 
-const Button: ForwardRefExoticComponent<
-  ButtonProps & RefAttributes<HTMLButtonElement>
-> = forwardRef(
+const Button: ForwardingComponent<'button', ButtonProps> = forwardRef(
   (
     {
       design = 'primary',
@@ -28,7 +23,7 @@ const Button: ForwardRefExoticComponent<
       type = 'button',
       rounded = false,
       block = false,
-      disabled,
+      as: Component = 'button',
       children,
       className,
       leading,
@@ -38,11 +33,11 @@ const Button: ForwardRefExoticComponent<
     ref,
   ) => {
     return (
-      <button
+      <Component
         ref={ref}
         type={type}
-        disabled={disabled}
         className={classnames(
+          'btn',
           styles['button'],
           styles[`design-${design}`],
           styles[`size-${size}`],
@@ -55,7 +50,7 @@ const Button: ForwardRefExoticComponent<
         {leading && <span className={styles['leading']}>{leading}</span>}
         <span className={styles['content']}>{children}</span>
         {trailing && <span className={styles['trailing']}>{trailing}</span>}
-      </button>
+      </Component>
     );
   },
 );

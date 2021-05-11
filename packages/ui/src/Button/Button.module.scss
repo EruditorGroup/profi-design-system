@@ -9,6 +9,7 @@
   justify-content: center;
   align-items: center;
   outline: none;
+  text-decoration: none;
 
   &[disabled] {
     cursor: default;
@@ -20,7 +21,10 @@
 }
 
 .content {
-  padding-top: 1px;
+  display: flex;
+  justify-content: center;
+  text-align: left;
+  flex-grow: 1;
 }
 
 .icon {
@@ -38,6 +42,7 @@
   background-color: var(--color-primary);
 
   &:hover:not([disabled]) {
+    color: var(--color-primaryInverse);
     background-color: var(--color-primaryState);
   }
 
@@ -51,6 +56,7 @@
   color: var(--color-lightInverse);
 
   &:hover:not([disabled]) {
+    background: var(--color-light);
     background: var(--color-lightState);
   }
 
@@ -64,6 +70,7 @@
   color: var(--color-lightInverse);
 
   &:hover:not([disabled]) {
+    color: var(--color-lightInverse);
     background: var(--color-lightState);
   }
 
@@ -78,6 +85,7 @@
   font-weight: 600;
 
   &:hover:not([disabled]) {
+    color: var(--color-secondaryInverse);
     background: var(--color-secondaryState);
   }
 
@@ -90,6 +98,7 @@
   background: var(--color-facebook);
   color: #fff;
   &:hover:not([disabled]) {
+    color: #fff;
     background-color: var(--color-fb-hover);
   }
   &:active:not([disabled]) {
@@ -97,10 +106,11 @@
   }
 }
 
-.design-yandex {
+.design-ya {
   background: var(--color-yandex);
   color: #000;
   &:hover:not([disabled]) {
+    color: #000;
     background-color: var(--color-yandex-hover);
   }
   &:active:not([disabled]) {
@@ -112,6 +122,7 @@
   background-color: var(--color-vk);
   color: #fff;
   &:hover:not([disabled]) {
+    color: #fff;
     background-color: var(--color-vk-hover);
   }
   &:active:not([disabled]) {
@@ -120,27 +131,34 @@
 }
 
 .size-s {
-  padding: 11px 15px;
+  padding: 0 15px;
+  min-height: 40px;
   font-size: var(--text-size-s);
+
   &.rounded {
-    padding: 11px;
+    width: 40px;
+    height: 40px;
   }
 }
 
 .size-m {
-  padding: 12px 18px;
+  padding: 0 18px;
+  min-height: 45px;
   font-size: var(--text-size-m);
   &.rounded {
-    padding: 12px;
+    width: 45px;
+    height: 45px;
   }
 }
 
 .size-l {
-  padding: 13px 20px;
+  padding: 0 20px;
+  min-height: 50px;
   font-size: var(--text-size-l);
 
   &.rounded {
-    padding: 13px;
+    width: 50px;
+    height: 50px;
   }
 }
 
@@ -155,12 +173,24 @@
 .leading,
 .trailing {
   display: inline-flex;
+  flex-shrink: 0;
 }
 
 .leading {
-  margin-right: 0.5em;
+  padding-right: 9px;
 }
 
 .trailing {
-  margin-left: 0.5em;
+  padding-left: 9px;
+}
+
+.design-link {
+  color: var(--color-link);
+  background: transparent;
+  padding: 0;
+  min-height: inherit;
+
+  &:hover {
+    text-decoration: underline;
+  }
 }
