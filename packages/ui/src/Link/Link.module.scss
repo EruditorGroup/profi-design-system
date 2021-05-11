@@ -1,20 +1,32 @@
-.link {
+:global(a) {
   color: var(--color-link);
   text-decoration: none;
-  &:hover,
-  &:active {
+
+  &:hover {
     color: var(--color-brand);
   }
 }
 
-.color .underlined {
+.color-brand {
+  color: var(--color-brand);
+
+  &:hover,
+  &:active {
+    color: var(--color-link);
+  }
+}
+
+.disabled,
+.disabled:hover,
+.disabled:active {
+  color: var(--color-lightState);
+  cursor: default;
+}
+
+.underlined {
   text-decoration: underline;
 }
 
 .block {
   display: block;
-}
-
-.font-bold {
-  font-weight: 600;
 }

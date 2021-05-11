@@ -3218,6 +3218,14 @@
   dependencies:
     "@types/istanbul-lib-report" "*"
 
+"@types/jest@^26.0.23":
+  version "26.0.23"
+  resolved "https://registry.yarnpkg.com/@types/jest/-/jest-26.0.23.tgz#a1b7eab3c503b80451d019efb588ec63522ee4e7"
+  integrity sha512-ZHLmWMJ9jJ9PTiT58juykZpL7KjwJywFN3Rr2pTSkyQfydf/rk22yS7W8p5DaVUMQ2BQC7oYiU3FjbTM/mYrOA==
+  dependencies:
+    jest-diff "^26.0.0"
+    pretty-format "^26.0.0"
+
 "@types/json-schema@^7.0.3", "@types/json-schema@^7.0.4", "@types/json-schema@^7.0.5", "@types/json-schema@^7.0.6":
   version "7.0.7"
   resolved "https://registry.yarnpkg.com/@types/json-schema/-/json-schema-7.0.7.tgz#98a993516c859eb0d5c4c8f098317a9ea68db9ad"
@@ -5693,18 +5701,6 @@ css-loader@^5.2.4:
     postcss-value-parser "^4.1.0"
     schema-utils "^3.0.0"
     semver "^7.3.5"
-
-css-modules-flow-types-loader@^1.4.1:
-  version "1.4.1"
-  resolved "https://registry.yarnpkg.com/css-modules-flow-types-loader/-/css-modules-flow-types-loader-1.4.1.tgz#0faedb8dfa317e01900fdcad4704483220ffa470"
-  integrity sha512-l813Y6N9Wf4Kg0ILlKhe8aI6sM6dj+SgUkE85YbXV42cepRpnHA1YrkGyR2WN5xAY0SYLAZr53J3EzUoIvYRsQ==
-  dependencies:
-    css-modules-flow-types-printer "^1.4.1"
-
-css-modules-flow-types-printer@^1.4.1:
-  version "1.4.1"
-  resolved "https://registry.yarnpkg.com/css-modules-flow-types-printer/-/css-modules-flow-types-printer-1.4.1.tgz#f3308c4a81169dd9a933ccb0e76e3a49bf58c4dc"
-  integrity sha512-OJXluvPgEzifS0IO/cSaHrVpZL9Cz1wqYv58WIpD4tB8so+a43xhnoiZWx28Rr6zyqQdsW5IoS5aCPZl66AKFg==
 
 css-modules-require-hook@^4.0.6:
   version "4.2.3"
@@ -9077,7 +9073,7 @@ jest-config@^26.6.3:
     micromatch "^4.0.2"
     pretty-format "^26.6.2"
 
-jest-diff@^26.6.2:
+jest-diff@^26.0.0, jest-diff@^26.6.2:
   version "26.6.2"
   resolved "https://registry.yarnpkg.com/jest-diff/-/jest-diff-26.6.2.tgz#1aa7468b52c3a68d7d5c5fdcdfcd5e49bd164394"
   integrity sha512-6m+9Z3Gv9wN0WFVasqjCL/06+EFCMTqDEUl/b87HYK2rAPTyfz4ZIuSlPhY51PIQRWx5TaxeF1qmXKe9gfN3sA==
@@ -12319,7 +12315,7 @@ pretty-error@^2.1.1:
     lodash "^4.17.20"
     renderkid "^2.0.4"
 
-pretty-format@^26.6.2:
+pretty-format@^26.0.0, pretty-format@^26.6.2:
   version "26.6.2"
   resolved "https://registry.yarnpkg.com/pretty-format/-/pretty-format-26.6.2.tgz#e35c2705f14cb7fe2fe94fa078345b444120fc93"
   integrity sha512-7AeGuCYNGmycyQbCqd/3PWH4eOoX/OiCa0uphp57NVTeAGdJGaAliecxwBDHYQCIvrW7aDBZCYeNTP/WX69mkg==

@@ -2,18 +2,8 @@ import React, {forwardRef} from 'react';
 import classnames from 'classnames';
 
 import styles from './Button.module.scss';
-import {IColor, ISize} from 'uitype';
+import {ForwardingComponent, IColor, ISize} from 'uitype';
 
-/* eslint-disable */
-interface ForwardingComponent<TInitial extends React.ElementType, P = unknown> {
-  <As extends React.ElementType = TInitial>(
-    props: React.ComponentPropsWithRef<As> & P & {as?: As},
-    context?: any,
-  ): React.ReactElement | null;
-  defaultProps?: Partial<
-    React.ComponentPropsWithRef<TInitial> & P & {as?: TInitial}
-  >;
-}
 /* eslint-enable */
 
 export type ButtonProps = {
@@ -47,6 +37,7 @@ const Button: ForwardingComponent<'button', ButtonProps> = forwardRef(
         ref={ref}
         type={type}
         className={classnames(
+          'btn',
           styles['button'],
           styles[`design-${design}`],
           styles[`size-${size}`],

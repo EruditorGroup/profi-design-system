@@ -23,15 +23,13 @@ const Template: Story<AvatarProps> = (args) => (
     {(['circle', 'rect'] as AvatarProps['design'][]).map((design) => (
       <div style={line}>
         {['xs', 's', 'm', 'l', 'xl', 'xxl'].map((size) => (
-          <>
-            <Avatar
-              {...args}
-              size={size}
-              design={design}
-              style={withOffset}
-              src={src}
-            />
-          </>
+          <Avatar
+            {...args}
+            size={size}
+            design={design}
+            style={withOffset}
+            src={src}
+          />
         ))}
       </div>
     ))}

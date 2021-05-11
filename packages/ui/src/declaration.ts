@@ -24,4 +24,17 @@ declare module 'uitype' {
     | 'success'
     | 'warning';
   export type ISocials = 'vk' | 'ya' | 'fb' | 'apple';
+
+  export interface ForwardingComponent<
+    TInitial extends React.ElementType,
+    P = unknown
+  > {
+    <As extends React.ElementType = TInitial, Context = unknown>(
+      props: React.ComponentPropsWithRef<As> & P & {as?: As},
+      context?: Context,
+    ): React.ReactElement | null;
+    defaultProps?: Partial<
+      React.ComponentPropsWithRef<TInitial> & P & {as?: TInitial}
+    >;
+  }
 }

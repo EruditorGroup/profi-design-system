@@ -22,6 +22,9 @@ export type {InputUnitProps} from './InputUnit';
 export {default as BodyPortal} from './BodyPortal';
 export type {BodyPortalProps} from './BodyPortal';
 
+export {default as Link} from './Link';
+export type {LinkProps} from './Link';
+
 export {default as Button} from './Button';
 export type {ButtonProps} from './Button';
 
@@ -39,9 +42,6 @@ export {default as Checkbox} from './Checkbox';
 
 export {default as Radio} from './Radio';
 // export type {RadioProps} from './Radio'; // TODO: refactor
-
-export {default as Link} from './Link';
-export type {LinkProps} from './Link';
 
 export {default as Text} from './Typography/Text';
 export type {TextProps} from './Typography/Text';
