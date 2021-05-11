@@ -5,6 +5,7 @@ import styles from './Avatar.module.scss';
 import common from '../styles/common.module.css';
 import {ISize} from 'uitype';
 
+// test
 export interface AvatarProps
   extends Omit<React.HTMLAttributes<HTMLDivElement>, 'children'> {
   design?: 'circle' | 'rect';
