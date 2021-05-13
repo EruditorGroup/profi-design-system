@@ -112,7 +112,14 @@ module.exports = {
             },
           },
           // sass-loader is syntax booster of project`s styles
-          'sass-loader',
+          {
+            loader: 'sass-loader',
+            options: {
+              sassOptions: {
+                precision: 10,
+              },
+            },
+          },
         ],
       },
     ],
