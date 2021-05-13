@@ -1,8 +1,5 @@
-export {default as Col} from './Col';
-export type {ColProps} from './Col';
-
-export {default as Row} from './Row';
-export type {RowProps} from './Row';
+export {default as Grid, Container, Row, Col} from './Grid';
+export type {ColProps} from './Grid';
 
 export {default as Menu} from './Menu';
 export type {MenuProps} from './Menu';

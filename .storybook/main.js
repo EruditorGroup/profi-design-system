@@ -65,7 +65,14 @@ module.exports = {
                     },
                   },
                 },
-                'sass-loader',
+                {
+                  loader: 'sass-loader',
+                  options: {
+                    sassOptions: {
+                      precision: 10,
+                    },
+                  },
+                },
               ],
             },
             ...config.module.rules,
