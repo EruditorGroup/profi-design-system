@@ -3,6 +3,26 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.1.0](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.0.10...@eruditorgroup/profi-ui@0.1.0) (2021-05-13)
+
+
+
+## 0.1.28 (2021-05-13)
+
+
+### Bug Fixes
+
+* **avatar:** rm trash ([c8dbfa8](https://github.com/eruditorgroup/profi-design-system/commit/c8dbfa84d27f2d2e1fdd234eb2957b63e1e90db4))
+
+
+### Features
+
+* **Text, Dropdown:** implemented "as" component logic ([2c8a106](https://github.com/eruditorgroup/profi-design-system/commit/2c8a106d74eb44c666a11904d2c3df414c9192f8))
+
+
+
+
+
 ## [0.0.10](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.0.9...@eruditorgroup/profi-ui@0.0.10) (2021-05-11)
 
 
