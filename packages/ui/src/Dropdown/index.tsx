@@ -18,7 +18,7 @@ export interface IDropdownContext {
 
 export const DropdownContext = createContext<IDropdownContext | null>(null);
 
-type DropdownProps = {
+export type DropdownProps = {
   className?: string;
   onChange?: (opened: boolean) => void;
 };
