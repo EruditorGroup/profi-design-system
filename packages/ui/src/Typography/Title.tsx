@@ -8,12 +8,13 @@ export interface TitleProps
   bold?: boolean;
 }
 
-const Text = forwardRef<HTMLHeadingElement, TitleProps>(
-  ({size = 'xxl', bold = true, level = 3, ...props}, ref) => {
-    return (
-      <TextBase as={`h${level}`} size={size} bold={bold} {...props} ref={ref} />
-    );
-  },
-);
+const Text = forwardRef<
+  HTMLHeadingElement,
+  React.PropsWithChildren<TitleProps>
+>(({size = 'xxl', bold = true, level = 3, ...props}, ref) => {
+  return (
+    <TextBase as={`h${level}`} size={size} bold={bold} {...props} ref={ref} />
+  );
+});
 
 export default Text;

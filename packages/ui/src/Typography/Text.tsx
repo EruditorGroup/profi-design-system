@@ -1,10 +1,11 @@
 import React, {forwardRef} from 'react';
+import Link from '../Link';
 import {ForwardingComponent} from 'uitype';
 import TextBase, {TextBaseProps} from './components/TextBase';
 
 export interface TextProps
   extends Omit<TextBaseProps, 'size' | 'as' | 'fontWeight'> {
-  as?: 'p' | 'span' | 'div';
+  as?: 'p' | 'span' | 'div' | typeof Link;
   size?: 'xs' | 's' | 'm' | 'l'; // xl, xxl, huge is available in <Title /> component
   bold?: boolean;
 }

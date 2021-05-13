@@ -2,15 +2,16 @@ import React, {
   createContext,
   useState,
   useMemo,
-  forwardRef,
-  PropsWithChildren,
   useEffect,
+  useCallback,
+  useRef,
 } from 'react';
-import type {Dispatch, SetStateAction, ForwardRefExoticComponent} from 'react';
+import type {Dispatch, SetStateAction} from 'react';
 import DropdownToggler from './components/DropdownToggler';
 import DropdownPortal from './components/DropdownPortal';
 import cx from 'classnames';
 import styles from './Dropdown.module.css';
+import {usePersistCallback} from '@eruditorgroup/profi-toolkit';
 
 export interface IDropdownContext {
   isOpened: boolean;
@@ -19,36 +20,36 @@ export interface IDropdownContext {
 
 export const DropdownContext = createContext<IDropdownContext | null>(null);
 
-export type DropdownProps = PropsWithChildren<{
+type DropdownProps = {
   className?: string;
-}>;
+  onChange?: (opened: boolean) => void;
+};
 
-interface DropdownComponent
-  extends ForwardRefExoticComponent<
-    DropdownProps & React.RefAttributes<IDropdownContext>
-  > {
+interface DropdownComponent extends React.FC<DropdownProps> {
   Toggler: typeof DropdownToggler;
   Portal: typeof DropdownPortal;
 }
 
-const Dropdown = forwardRef(({children, className}, ref) => {
+const Dropdown: DropdownComponent = ({children, onChange, className}) => {
   const [isOpened, setOpened] = useState(false);
 
-  const state = useMemo<IDropdownContext>(() => ({isOpened, setOpened}), [
+  const context = useMemo<IDropdownContext>(() => ({isOpened, setOpened}), [
     isOpened,
   ]);
 
-  if (ref) {
-    if (typeof ref === 'function') ref(state);
-    else if (ref) ref.current = state;
-  }
+  const onChangeRef = useRef<DropdownProps['onChange']>();
+  onChangeRef.current = onChange;
+
+  useEffect(() => {
+    if (onChangeRef.current) onChangeRef.current(isOpened);
+  }, [isOpened]);
 
   return (
-    <DropdownContext.Provider value={state}>
+    <DropdownContext.Provider value={context}>
       <div className={cx(className, styles['relative'])}>{children}</div>
     </DropdownContext.Provider>
   );
-}) as DropdownComponent;
+};
 
 Dropdown.Toggler = DropdownToggler;
 Dropdown.Portal = DropdownPortal;
