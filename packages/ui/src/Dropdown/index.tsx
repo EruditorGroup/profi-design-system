@@ -3,7 +3,6 @@ import React, {
   useState,
   useMemo,
   useEffect,
-  useCallback,
   useRef,
 } from 'react';
 import type {Dispatch, SetStateAction} from 'react';
@@ -11,7 +10,6 @@ import DropdownToggler from './components/DropdownToggler';
 import DropdownPortal from './components/DropdownPortal';
 import cx from 'classnames';
 import styles from './Dropdown.module.css';
-import {usePersistCallback} from '@eruditorgroup/profi-toolkit';
 
 export interface IDropdownContext {
   isOpened: boolean;
