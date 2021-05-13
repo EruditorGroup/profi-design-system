@@ -1,4 +1,4 @@
-import React, {useRef, useState} from 'react';
+import React, {useEffect, useRef, useState} from 'react';
 // also exported from '@storybook/react' if you can deal with breaking changes in 6.1
 import {Story, Meta} from '@storybook/react/types-6-0';
 import type {IDropdownContext} from './index';
@@ -6,7 +6,12 @@ import type {IDropdownContext} from './index';
 import Dropdown from './index';
 import Menu from '../Menu';
 import Button from '../Button';
-import {VkIcon} from '@eruditorgroup/profi-icons';
+import Link from '../Link';
+import {
+  ChevronDownIcon,
+  ChevronUpIcon,
+  VkIcon,
+} from '@eruditorgroup/profi-icons';
 
 export default {
   title: 'Dropdown',
@@ -15,6 +20,9 @@ export default {
 
 const Template: Story = (args) => {
   const ref = useRef<IDropdownContext>();
+
+  const [isOpened, setOpened] = useState(!!ref.current?.isOpened);
+
   return (
     <>
       <div
@@ -26,9 +34,12 @@ const Template: Story = (args) => {
           flexWrap: 'wrap',
         }}
       >
-        <Dropdown {...args} ref={ref}>
-          <Dropdown.Toggler>
-            <Button>Открыть</Button>
+        <Dropdown {...args} onChange={(state) => setOpened(state)}>
+          <Dropdown.Toggler
+            trailing={isOpened ? <ChevronUpIcon /> : <ChevronDownIcon />}
+            as={Button}
+          >
+            Открыть
           </Dropdown.Toggler>
           <Dropdown.Portal>
             <Menu.Item rounded={false}>
@@ -58,8 +69,8 @@ const Template: Story = (args) => {
           </Dropdown.Portal>
         </Dropdown>
         <Dropdown {...args}>
-          <Dropdown.Toggler>
-            <Button>Открыть дропдаун</Button>
+          <Dropdown.Toggler as={Button} design="secondary">
+            Открыть дропдаун
           </Dropdown.Toggler>
           <Dropdown.Portal>
             <Menu.Item rounded={false}>
@@ -83,8 +94,8 @@ const Template: Story = (args) => {
           </Dropdown.Portal>
         </Dropdown>
         <Dropdown {...args}>
-          <Dropdown.Toggler>
-            <Button style={{float: 'right'}}>Открыть дропдаун</Button>
+          <Dropdown.Toggler as={Button} design="light" style={{float: 'right'}}>
+            Открыть дропдаун
           </Dropdown.Toggler>
           <Dropdown.Portal position="bottom-right">
             <Menu.Item rounded={false}>
@@ -109,8 +120,8 @@ const Template: Story = (args) => {
         </Dropdown>
 
         <Dropdown {...args}>
-          <Dropdown.Toggler>
-            <Button style={{float: 'right'}}>Открыть дропдаун</Button>
+          <Dropdown.Toggler as={Button} style={{float: 'right'}}>
+            Открыть дропдаун
           </Dropdown.Toggler>
           <Dropdown.Portal position="bottom-right">
             <Menu.Item rounded={false}>
@@ -144,8 +155,8 @@ const Template: Story = (args) => {
         }}
       >
         <Dropdown {...args}>
-          <Dropdown.Toggler>
-            <Button style={{float: 'right'}}>Открыть дропдаун</Button>
+          <Dropdown.Toggler as={Link} style={{float: 'right'}}>
+            Открыть дропдаун
           </Dropdown.Toggler>
           <Dropdown.Portal position="top-left">
             <Menu.Item rounded={false}>
@@ -170,8 +181,8 @@ const Template: Story = (args) => {
         </Dropdown>
 
         <Dropdown {...args}>
-          <Dropdown.Toggler>
-            <Button style={{float: 'right'}}>Открыть дропдаун</Button>
+          <Dropdown.Toggler as={Button} style={{float: 'right'}}>
+            Открыть дропдаун
           </Dropdown.Toggler>
           <Dropdown.Portal position="top-right">
             <Menu.Item rounded={false}>

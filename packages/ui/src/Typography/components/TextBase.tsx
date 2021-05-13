@@ -1,4 +1,4 @@
-import React, {forwardRef, HTMLAttributes} from 'react';
+import React, {forwardRef} from 'react';
 import classNames from 'classnames';
 
 import styles from './TextBase.module.scss';
