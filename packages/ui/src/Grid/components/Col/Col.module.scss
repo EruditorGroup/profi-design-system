@@ -1,0 +1,25 @@
+$columnsInRow: 12;
+
+.col {
+  padding: 0 30px;
+  flex: 1 1 100%;
+  box-sizing: border-box;
+}
+
+@media (min-width: 752px) {
+.col {
+  flex: 1 0 0%;
+
+  @for $i from 1 through $columnsInRow {
+    $col: percentage($i / $columnsInRow);
+    &_span-#{$i} {
+      flex: 0 0 auto;
+      width: $col;
+    }
+  
+    &_offset-#{$i} {
+      margin-left: $col;
+    }
+  }
+}
+}
