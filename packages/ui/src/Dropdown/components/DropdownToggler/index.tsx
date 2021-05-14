@@ -13,7 +13,9 @@ const DropdownToggler: ForwardingComponent<
 
   // Proxy handler for trigger context state
   const onClickHandler = useCallback(() => {
-    context?.setOpened(!context.isOpened);
+    if (context?.trigger === 'click') {
+      context?.setOpened(!context.isOpened);
+    }
   }, [context]);
 
   return (

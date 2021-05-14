@@ -45,11 +45,14 @@ const Template: Story = (args) => {
             <Menu.Item rounded={false}>
               <VkIcon /> Пункт c иконкой
             </Menu.Item>
+            <Dropdown.Item as={Menu.Item} rounded={false} closable>
+              <VkIcon /> Пункт закрывается на нажатие
+            </Dropdown.Item>
             <Menu.Item
               onClick={() => ref.current?.setOpened(false)}
               rounded={false}
             >
-              <VkIcon /> Пункт закрывается на нажатие
+              aaaa
             </Menu.Item>
             <Menu.Item rounded={false}>Пункт без иконки</Menu.Item>
             <Menu.Item rounded={false} disabled>
@@ -68,9 +71,9 @@ const Template: Story = (args) => {
             </Menu.Item>
           </Dropdown.Portal>
         </Dropdown>
-        <Dropdown {...args}>
+        <Dropdown {...args} trigger="hover">
           <Dropdown.Toggler as={Button} design="secondary">
-            Открыть дропдаун
+            Hover me
           </Dropdown.Toggler>
           <Dropdown.Portal>
             <Menu.Item rounded={false}>
@@ -93,6 +96,7 @@ const Template: Story = (args) => {
             </Menu.Item>
           </Dropdown.Portal>
         </Dropdown>
+
         <Dropdown {...args}>
           <Dropdown.Toggler as={Button} design="light" style={{float: 'right'}}>
             Открыть дропдаун
@@ -158,6 +162,30 @@ const Template: Story = (args) => {
           <Dropdown.Toggler as={Link} style={{float: 'right'}}>
             Открыть дропдаун
           </Dropdown.Toggler>
+          <Dropdown.Portal position="top-left">
+            <Menu.Item rounded={false}>
+              <VkIcon /> Пункт c иконкой
+            </Menu.Item>
+            <Menu.Item rounded={false}>Пункт без иконки</Menu.Item>
+            <Menu.Item rounded={false} disabled>
+              <VkIcon /> Disabled
+            </Menu.Item>
+            <Menu.Item rounded={false} divided>
+              <VkIcon /> Пункт с отбивкой сверху
+            </Menu.Item>
+            <Menu.Item rounded={false}>
+              <VkIcon /> Многострочный с иконкой Многострочный с иконкой
+              Многострочный с иконкой Многострочный с иконкой
+            </Menu.Item>
+            <Menu.Item rounded={false}>
+              Многострочный без иконки Многострочный без иконки Многострочный
+              без иконки Многострочный без иконки
+            </Menu.Item>
+          </Dropdown.Portal>
+        </Dropdown>
+
+        <Dropdown {...args} trigger="hover">
+          <Dropdown.Toggler as={Link}>Hover me</Dropdown.Toggler>
           <Dropdown.Portal position="top-left">
             <Menu.Item rounded={false}>
               <VkIcon /> Пункт c иконкой
