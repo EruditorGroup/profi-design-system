@@ -14,47 +14,47 @@
 }
 
 .rounded {
-  border-radius: var(--border-radius);
+  border-radius: var(--ui-border-radius);
 }
 
 .design-light {
   svg {
-    color: var(--color-darkGrey);
+    color: var(--ui-color-darkGrey);
   }
   &:hover {
-    background: var(--color-lightGrey);
+    background: var(--ui-color-lightGrey);
   }
   &:active {
-    background: var(--color-mediumGrey);
+    background: var(--ui-color-mediumGrey);
   }
   &.current {
-    background: var(--color-mediumGrey);
+    background: var(--ui-color-mediumGrey);
   }
 }
 
 .design-brand {
   &:hover {
     color: #fff;
-    background: var(--color-brand);
+    background: var(--ui-color-brand);
   }
   &:active {
     color: #fff;
-    background: var(--color-brand-active);
+    background: var(--ui-color-brand-active);
   }
 }
 
 .disabled {
-  color: var(--color-darkGrey);
+  color: var(--ui-color-darkGrey);
   cursor: default;
   svg {
-    color: var(--color-mediumGrey);
+    color: var(--ui-color-mediumGrey);
   }
   &:hover {
-    color: var(--color-darkGrey);
+    color: var(--ui-color-darkGrey);
     background: white;
   }
   &:active {
-    color: var(--color-darkGrey);
+    color: var(--ui-color-darkGrey);
     background: white;
   }
 }
@@ -68,6 +68,6 @@
     width: 100%;
     top: -10px;
     left: 0;
-    border-top: 1px solid var(--color-mediumGrey);
+    border-top: 1px solid var(--ui-color-mediumGrey);
   }
 }

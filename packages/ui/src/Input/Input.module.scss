@@ -1,8 +1,8 @@
 .form-control {
   position: relative;
   margin: 8px 0;
-  border: 1px solid var(--color-border);
-  border-radius: var(--border-radius-small);
+  border: 1px solid var(--ui-color-border);
+  border-radius: var(--ui-border-radius-small);
 }
 
 .input {
@@ -11,8 +11,8 @@
   width: 100%;
   height: 50px;
   padding: 0 12px 0 15px;
-  color: var(--color-text);
-  border-radius: var(--border-radius-small);
+  color: var(--ui-color-text);
+  border-radius: var(--ui-border-radius-small);
   border: none;
   font-size: 16px;
   font-family: var(--font-family);
@@ -44,7 +44,7 @@
   width: calc(100% - 15px);
   height: 22px;
   margin: auto;
-  color: var(--color-darkGrey);
+  color: var(--ui-color-darkGrey);
   white-space: nowrap;
   font-size: 16px;
   line-height: 22px;
