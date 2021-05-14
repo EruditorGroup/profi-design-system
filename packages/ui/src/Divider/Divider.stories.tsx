@@ -1,9 +1,9 @@
-import React, {useState} from 'react';
-import Row from '../Row';
+import React from 'react';
+import {Row} from '../Grid';
 // also exported from '@storybook/react' if you can deal with breaking changes in 6.1
 import {Story, Meta} from '@storybook/react/types-6-0';
 
-import Col from '../Col';
+import {Col} from '../Grid';
 
 export default {
   title: 'Grid',
