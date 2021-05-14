@@ -9,7 +9,7 @@ export default {
 } as Meta;
 
 const td = {
-  color: `var(--color-secondary})`,
+  color: `var(--ui-color-secondary})`,
   border: '1px solid #ececec',
 };
 

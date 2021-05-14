@@ -1,25 +1,25 @@
 :global(a) {
-  color: var(--color-link);
+  color: var(--ui-color-link);
   text-decoration: none;
 
   &:hover {
-    color: var(--color-brand);
+    color: var(--ui-color-brand);
   }
 }
 
 .color-brand {
-  color: var(--color-brand);
+  color: var(--ui-color-brand);
 
   &:hover,
   &:active {
-    color: var(--color-link);
+    color: var(--ui-color-link);
   }
 }
 
 .disabled,
 .disabled:hover,
 .disabled:active {
-  color: var(--color-lightState);
+  color: var(--ui-color-lightState);
   cursor: default;
 }
 

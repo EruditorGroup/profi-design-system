@@ -1,49 +1,49 @@
 .color-brand {
-  color: var(--color-brand);
+  color: var(--ui-color-brand);
 }
 
 .color-primary {
-  color: var(--color-primary);
+  color: var(--ui-color-primary);
 }
 
 .color-secondary {
-  color: var(--color-secondary);
+  color: var(--ui-color-secondary);
 }
 
 .color-light {
-  color: var(--color-secondary);
+  color: var(--ui-color-secondary);
 }
 
 .color-danger {
-  color: var(--color-danger);
+  color: var(--ui-color-danger);
 }
 
 .color-success {
-  color: var(--color-success);
+  color: var(--ui-color-success);
 }
 
 .color-warning {
-  color: var(--color-warning);
+  color: var(--ui-color-warning);
 }
 
 .size-xs {
-  font-size: var(--text-size-s);
+  font-size: var(--ui-text-size-s);
 }
 .size-s {
-  font-size: var(--text-size-s);
+  font-size: var(--ui-text-size-s);
 }
 .size-m {
-  font-size: var(--text-size-m);
+  font-size: var(--ui-text-size-m);
 }
 .size-l {
-  font-size: var(--text-size-l);
+  font-size: var(--ui-text-size-l);
 }
 .size-xl {
-  font-size: var(--text-size-xl);
+  font-size: var(--ui-text-size-xl);
 }
 .size-xxl {
-  font-size: var(--text-size-xxl);
+  font-size: var(--ui-text-size-xxl);
 }
 .size-huge {
-  font-size: var(--text-size-huge);
+  font-size: var(--ui-text-size-huge);
 }

@@ -38,101 +38,101 @@
 }
 
 .design-primary {
-  color: var(--color-primaryInverse);
-  background-color: var(--color-primary);
+  color: var(--ui-color-primaryInverse);
+  background-color: var(--ui-color-primary);
 
   &:hover:not([disabled]) {
-    color: var(--color-primaryInverse);
-    background-color: var(--color-primaryState);
+    color: var(--ui-color-primaryInverse);
+    background-color: var(--ui-color-primaryState);
   }
 
   &[disabled] {
-    color: var(--color-primaryInverseState);
+    color: var(--ui-color-primaryInverseState);
   }
 }
 
 .design-secondary {
-  background: var(--color-secondary);
-  color: var(--color-secondaryInverse);
+  background: var(--ui-color-secondary);
+  color: var(--ui-color-secondaryInverse);
 
   &:hover:not([disabled]) {
-    color: var(--color-secondaryInverse);
-    background: var(--color-secondaryState);
+    color: var(--ui-color-secondaryInverse);
+    background: var(--ui-color-secondaryState);
   }
 
   &[disabled] {
-    color: var(--color-secondaryInverseState);
+    color: var(--ui-color-secondaryInverseState);
   }
 }
 
 .design-light {
-  background: var(--color-light);
-  color: var(--color-lightInverse);
+  background: var(--ui-color-light);
+  color: var(--ui-color-lightInverse);
 
   &:hover:not([disabled]) {
-    color: var(--color-light);
-    background: var(--color-lightState);
+    color: var(--ui-color-light);
+    background: var(--ui-color-lightState);
   }
 
   &[disabled] {
-    color: var(--color-lightInverseState);
+    color: var(--ui-color-lightInverseState);
   }
 }
 
 .design-transparent {
   background: transparent;
-  color: var(--color-lightInverse);
+  color: var(--ui-color-lightInverse);
 
   &:hover:not([disabled]) {
-    color: var(--color-lightInverse);
-    background: var(--color-light);
+    color: var(--ui-color-lightInverse);
+    background: var(--ui-color-light);
   }
 
   &[disabled] {
-    color: var(--color-lightInverseState);
+    color: var(--ui-color-lightInverseState);
   }
 }
 
 .design-fb {
-  background: var(--color-facebook);
+  background: var(--ui-color-facebook);
   color: #fff;
   &:hover:not([disabled]) {
     color: #fff;
-    background-color: var(--color-fb-hover);
+    background-color: var(--ui-color-fb-hover);
   }
   &:active:not([disabled]) {
-    background-color: var(--color-fb-active);
+    background-color: var(--ui-color-fb-active);
   }
 }
 
 .design-ya {
-  background: var(--color-yandex);
+  background: var(--ui-color-yandex);
   color: #000;
   &:hover:not([disabled]) {
     color: #000;
-    background-color: var(--color-yandex-hover);
+    background-color: var(--ui-color-yandex-hover);
   }
   &:active:not([disabled]) {
-    background-color: var(--color-yandex-active);
+    background-color: var(--ui-color-yandex-active);
   }
 }
 
 .design-vk {
-  background-color: var(--color-vk);
+  background-color: var(--ui-color-vk);
   color: #fff;
   &:hover:not([disabled]) {
     color: #fff;
-    background-color: var(--color-vk-hover);
+    background-color: var(--ui-color-vk-hover);
   }
   &:active:not([disabled]) {
-    background-color: var(--color-vk-active);
+    background-color: var(--ui-color-vk-active);
   }
 }
 
 .size-s {
   padding: 0 15px;
   min-height: 35px;
-  font-size: var(--text-size-s);
+  font-size: var(--ui-text-size-s);
 
   &.rounded {
     width: 35px;
@@ -143,7 +143,7 @@
 .size-m {
   padding: 0 18px;
   min-height: 40px;
-  font-size: var(--text-size-m);
+  font-size: var(--ui-text-size-m);
   &.rounded {
     width: 40x;
     height: 40px;
@@ -153,7 +153,7 @@
 .size-l {
   padding: 0 20px;
   min-height: 50px;
-  font-size: var(--text-size-l);
+  font-size: var(--ui-text-size-l);
 
   &.rounded {
     width: 50px;
@@ -185,7 +185,7 @@
 }
 
 .design-link {
-  color: var(--color-link);
+  color: var(--ui-color-link);
   background: transparent;
   padding: 0;
   min-height: inherit;
