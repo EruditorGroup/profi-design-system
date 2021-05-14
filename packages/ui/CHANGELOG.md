@@ -3,6 +3,26 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.2.0](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.1.0...@eruditorgroup/profi-ui@0.2.0) (2021-05-14)
+
+
+### Bug Fixes
+
+* **Button:** Лишний fontWeight ([4b2bad4](https://github.com/eruditorgroup/profi-design-system/commit/4b2bad4bfb934577f8be8c777c3420ff24f61c8a))
+* Актуализация дизайн системы с макетами ([22afe2c](https://github.com/eruditorgroup/profi-design-system/commit/22afe2caf4f729ec72cfe77ce3e57e75dda2ddfe))
+* **storybook:** Divider story ([e985562](https://github.com/eruditorgroup/profi-design-system/commit/e9855625dd99d8de89a6924b7e6ca7f6a3907a83))
+* **storybook:** Grid imports ([b7158df](https://github.com/eruditorgroup/profi-design-system/commit/b7158dff8d47dd50333aee6b7598ce7339984d49))
+
+
+### Features
+
+* Added prefix for theme variables ([1dc09ba](https://github.com/eruditorgroup/profi-design-system/commit/1dc09bab8690c1f3cdcf9a2784d4bbbae7d0d1ae))
+* **Dropdown:** Добавлен :hover trigger, добавлен DropdownItem ([cebcb3b](https://github.com/eruditorgroup/profi-design-system/commit/cebcb3b06847c8c86278d145b62bacd2e639133e))
+
+
+
+
+
 # [0.1.0](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.0.10...@eruditorgroup/profi-ui@0.1.0) (2021-05-13)
 
 
