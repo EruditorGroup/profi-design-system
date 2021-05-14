@@ -70,7 +70,7 @@
   color: var(--color-lightInverse);
 
   &:hover:not([disabled]) {
-    background: var(--color-light);
+    color: var(--color-light);
     background: var(--color-lightState);
   }
 
