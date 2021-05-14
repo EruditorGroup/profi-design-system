@@ -48,12 +48,6 @@ const Template: Story = (args) => {
             <Dropdown.Item as={Menu.Item} rounded={false} closable>
               <VkIcon /> Пункт закрывается на нажатие
             </Dropdown.Item>
-            <Menu.Item
-              onClick={() => ref.current?.setOpened(false)}
-              rounded={false}
-            >
-              aaaa
-            </Menu.Item>
             <Menu.Item rounded={false}>Пункт без иконки</Menu.Item>
             <Menu.Item rounded={false} disabled>
               <VkIcon /> Disabled

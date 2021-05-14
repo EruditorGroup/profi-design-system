@@ -54,7 +54,6 @@
 .design-secondary {
   background: var(--color-secondary);
   color: var(--color-secondaryInverse);
-  font-weight: 600;
 
   &:hover:not([disabled]) {
     color: var(--color-secondaryInverse);
