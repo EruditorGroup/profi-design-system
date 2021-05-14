@@ -2,13 +2,17 @@ import React, {forwardRef} from 'react';
 import classnames from 'classnames';
 
 import styles from './Button.module.scss';
-import {ForwardingComponent, IColor, ISize} from 'uitype';
+import {ForwardingComponent, IColor, ISize, ISocials} from 'uitype';
 
-/* eslint-enable */
+type ButtonSocial = Extract<ISocials, 'fb' | 'ya' | 'vk'>;
+type ButtonColor = Extract<
+  IColor,
+  'primary' | 'secondary' | 'light' | 'transparent'
+>;
 
 export type ButtonProps = {
-  design?: IColor | 'link';
-  size?: ISize;
+  design?: ButtonColor | ButtonSocial;
+  size?: Extract<ISize, 's' | 'm' | 'l'>;
   block?: boolean;
   rounded?: boolean;
   leading?: React.ReactNode;
@@ -37,7 +41,6 @@ const Button: ForwardingComponent<'button', ButtonProps> = forwardRef(
         ref={ref}
         type={type}
         className={classnames(
-          'btn',
           styles['button'],
           styles[`design-${design}`],
           styles[`size-${size}`],

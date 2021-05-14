@@ -20,6 +20,7 @@ declare module 'uitype' {
     | 'primary'
     | 'secondary'
     | 'light'
+    | 'transparent'
     | 'danger'
     | 'success'
     | 'warning';

@@ -27,26 +27,34 @@ const DropdownPortal: ForwardRefExoticComponent<
     const context = useContext(DropdownContext);
 
     useClickOutside(_ref, () => {
-      if (context?.isOpened) context?.setOpened(false);
+      if (!context) return;
+
+      const {trigger, isOpened, setOpened} = context;
+      if (trigger === 'click') {
+        isOpened && setOpened(false);
+      }
     });
 
     return (
       <div
-        ref={(el) => {
-          _ref.current = el;
-          if (typeof ref === 'function') ref(el);
-          else if (ref) ref.current = el;
-        }}
         className={classNames(
-          styles['dropdown-area'],
-          styles[`position-${position}`],
+          styles['dropdown-portal'],
           animated && styles['animated'],
+          styles[`position-${position}`],
           context?.isOpened && styles['opened'],
-          className,
         )}
-        {...props}
-        style={{...style}}
-      />
+      >
+        <div
+          ref={(el) => {
+            _ref.current = el;
+            if (typeof ref === 'function') ref(el);
+            else if (ref) ref.current = el;
+          }}
+          className={classNames(styles['dropdown-area'], className)}
+          {...props}
+          style={{...style}}
+        />
+      </div>
     );
   },
 );
