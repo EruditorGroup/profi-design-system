@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.0.10](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-icons@0.0.9...@eruditorgroup/profi-icons@0.0.10) (2021-05-17)
+
+
+### Bug Fixes
+
+* **webpack:** copy theme.css to dist ([ebb286a](https://github.com/eruditorgroup/profi-design-system/commit/ebb286aadbede05cf5787664b028e06e33583a60))
+
+
+
+
+
 ## [0.0.9](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-icons@0.0.8...@eruditorgroup/profi-icons@0.0.9) (2021-05-11)
 
 
