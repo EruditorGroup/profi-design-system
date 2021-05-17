@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.3.1](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.3.0...@eruditorgroup/profi-ui@0.3.1) (2021-05-17)
+
+
+### Bug Fixes
+
+* **Text:** add muted color ([abd10c7](https://github.com/eruditorgroup/profi-design-system/commit/abd10c73300d09c3a8243a218b4ca5d697b35928))
+
+
+
+
+
 # [0.3.0](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.1.0...@eruditorgroup/profi-ui@0.3.0) (2021-05-17)
 
 
