@@ -92,3 +92,9 @@ As_link.args = {
   as: Link,
   to: '#',
 };
+
+export const Regular = Template.bind({});
+Regular.args = {
+  regular: true,
+  children: 'Button',
+};

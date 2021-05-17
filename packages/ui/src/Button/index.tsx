@@ -15,6 +15,7 @@ export type ButtonProps = {
   size?: Extract<ISize, 's' | 'm' | 'l'>;
   block?: boolean;
   rounded?: boolean;
+  regular?: boolean;
   leading?: React.ReactNode;
   trailing?: React.ReactNode;
 };
@@ -32,6 +33,7 @@ const Button: ForwardingComponent<'button', ButtonProps> = forwardRef(
       className,
       leading,
       trailing,
+      regular,
       ...props
     },
     ref,
@@ -46,6 +48,7 @@ const Button: ForwardingComponent<'button', ButtonProps> = forwardRef(
           styles[`size-${size}`],
           block && styles[`block`],
           rounded && styles[`rounded`],
+          regular && styles[`regular`],
           className,
         )}
         {...props}
