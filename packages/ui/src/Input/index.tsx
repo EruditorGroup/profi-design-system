@@ -2,21 +2,28 @@ import React, {forwardRef, useCallback} from 'react';
 import type {
   ForwardRefExoticComponent,
   RefAttributes,
-  Ref,
   InputHTMLAttributes,
 } from 'react';
 import InputMask from 'react-input-mask';
 import classnames from 'classnames';
 
-import useFloatLabel from './hooks/useFloatLabel';
+import {useFloatLabel} from '@eruditorgroup/profi-toolkit';
 
 import styles from './Input.module.scss';
+import {ISize} from 'uitype';
 
-export interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
+type InputSize = Extract<ISize, 's' | 'm' | 'l' | 'xl'>;
+
+export interface InputProps
+  extends Omit<InputHTMLAttributes<HTMLInputElement>, 'size'> {
   label?: string;
   withFloatLabel?: boolean;
 
+  size?: InputSize;
+
   block?: boolean;
+
+  invalid?: boolean;
 
   /**
    * Mask string. Format characters are:
@@ -28,18 +35,6 @@ export interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
    * For example, German phone mask with unremoveable prefix +49 will look like `mask="+4\\9 99 999 99"` or `mask={"+4\\\\9 99 999 99"}`
    */
   mask?: string | Array<string | RegExp>;
-  /**
-   * Character to cover unfilled editable parts of mask. Default character is "_". If set to null, unfilled parts will be empty, like in ordinary input.
-   */
-  maskPlaceholder?: string | null;
-  /**
-   * Show mask even in empty input without focus.
-   */
-  alwaysShowMask?: boolean;
-  /**
-   * Use inputRef instead of ref if you need input node to manage focus, selection, etc.
-   */
-  inputRef?: Ref<HTMLInputElement>;
 }
 
 const Input: ForwardRefExoticComponent<
@@ -50,7 +45,9 @@ const Input: ForwardRefExoticComponent<
       className,
       placeholder,
       withFloatLabel,
+      size = 'm',
       block = true,
+      invalid,
       value,
       mask,
       onFocus,
@@ -59,14 +56,14 @@ const Input: ForwardRefExoticComponent<
     },
     ref,
   ) => {
-    const [isFloated, focusProps] = useFloatLabel(Boolean(value), {
+    const [isFloated, focusHandlers] = useFloatLabel(Boolean(value), {
       onFocus,
       onBlur,
     });
 
     const InputComponent = useCallback(
-      (inputProps: InputProps) => {
-        return mask ? (
+      (inputProps: Omit<InputProps, 'size'>) =>
+        mask ? (
           <InputMask
             {...inputProps}
             inputRef={(el) => {
@@ -80,8 +77,7 @@ const Input: ForwardRefExoticComponent<
           />
         ) : (
           <input {...inputProps} ref={ref} />
-        );
-      },
+        ),
       [mask, ref],
     );
 
@@ -103,9 +99,11 @@ const Input: ForwardRefExoticComponent<
           placeholder: withFloatLabel ? '' : placeholder,
           className: classnames(
             styles['input'],
+            invalid && styles['input_invalid'],
+            styles[`input_${size}`],
             withFloatLabel && styles['input-withFloatLabel'],
           ),
-          ...focusProps,
+          ...focusHandlers,
           ...props,
         })}
       </div>

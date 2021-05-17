@@ -2,7 +2,7 @@
   display: inline-flex;
   justify-content: space-between;
   flex-flow: row nowrap;
-  border-radius: var(--ui-border-radius);
+  border-radius: var(--ui-border-radius-l);
   overflow: hidden;
   & > * {
     width: 100%;
