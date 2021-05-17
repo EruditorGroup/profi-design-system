@@ -29,6 +29,7 @@
     "build:storybook": "build-storybook",
     "test": "MODULE_TYPE=cjs jest",
     "lint": "yarn eslint 'packages/*/src/**' --cache --ext .js,.jsx,.ts,.tsx --max-warnings 0",
+    "publish": "lerna publish --conventional-commits --yes",
     "precommit": "APP_ROOT_PATH=. lint-staged"
   },
   "husky": {
