@@ -14,47 +14,34 @@
 }
 
 .rounded {
-  border-radius: var(--ui-border-radius);
+  border-radius: var(--ui-border-radius-small);
 }
 
 .design-light {
-  svg {
-    color: var(--ui-color-darkGrey);
-  }
+  color: var(--ui-color-secondary);
   &:hover {
-    background: var(--ui-color-lightGrey);
+    background: var(--ui-bg-light);
+    color: var(--ui-color-secondary);
   }
   &:active {
-    background: var(--ui-color-mediumGrey);
+    background: var(--ui-bg-lightState);
+    color: var(--ui-color-secondary);
   }
   &.current {
-    background: var(--ui-color-mediumGrey);
-  }
-}
-
-.design-brand {
-  &:hover {
-    color: #fff;
-    background: var(--ui-color-brand);
-  }
-  &:active {
-    color: #fff;
-    background: var(--ui-color-brand-active);
+    background: var(--ui-bg-lightState);
+    color: var(--ui-color-secondary);
   }
 }
 
 .disabled {
-  color: var(--ui-color-darkGrey);
+  color: var(--ui-color-secondaryInverseState);
   cursor: default;
-  svg {
-    color: var(--ui-color-mediumGrey);
-  }
   &:hover {
-    color: var(--ui-color-darkGrey);
+    color: var(--ui-color-secondaryInverseState);
     background: white;
   }
   &:active {
-    color: var(--ui-color-darkGrey);
+    color: var(--ui-color-secondaryInverseState);
     background: white;
   }
 }
@@ -68,6 +55,6 @@
     width: 100%;
     top: -10px;
     left: 0;
-    border-top: 1px solid var(--ui-color-mediumGrey);
+    border-top: 1px solid var(--ui-color-light);
   }
 }
