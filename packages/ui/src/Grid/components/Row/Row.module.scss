@@ -1,6 +1,12 @@
 .row {
-  margin: 0 -30px;
+  margin: 0 -20px;
   display: flex;
   flex-wrap: wrap;
   box-sizing: border-box;
+}
+
+@media (min-width: 752px) {
+  .row {
+    margin: 0 -30px;
+  }
 }
