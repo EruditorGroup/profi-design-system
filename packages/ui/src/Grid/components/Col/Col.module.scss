@@ -1,25 +1,26 @@
 $columnsInRow: 12;
 
 .col {
-  padding: 0 30px;
+  padding: 0 20px;
   flex: 1 1 100%;
   box-sizing: border-box;
 }
 
 @media (min-width: 752px) {
-.col {
-  flex: 1 0 0%;
+  .col {
+    flex: 1 0 0%;
+    padding: 0 30px;
 
-  @for $i from 1 through $columnsInRow {
-    $col: percentage($i / $columnsInRow);
-    &_span-#{$i} {
-      flex: 0 0 auto;
-      width: $col;
-    }
-  
-    &_offset-#{$i} {
-      margin-left: $col;
+    @for $i from 1 through $columnsInRow {
+      $col: percentage($i / $columnsInRow);
+      &_span-#{$i} {
+        flex: 0 0 auto;
+        width: $col;
+      }
+
+      &_offset-#{$i} {
+        margin-left: $col;
+      }
     }
   }
-}
 }
