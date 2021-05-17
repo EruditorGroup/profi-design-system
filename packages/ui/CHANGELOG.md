@@ -3,6 +3,36 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.3.0](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.1.0...@eruditorgroup/profi-ui@0.3.0) (2021-05-17)
+
+
+
+## 0.1.28 (2021-05-17)
+
+
+### Bug Fixes
+
+* **Button:** :hover color for light button ([0af1000](https://github.com/eruditorgroup/profi-design-system/commit/0af10004979898313f94c7fcc032da178d63026c))
+* **Button:** Regular начертание ([95a4174](https://github.com/eruditorgroup/profi-design-system/commit/95a41741f4bae2e5e275daa7100320bf8ac9ebb5))
+* **Button:** Лишний fontWeight ([4b2bad4](https://github.com/eruditorgroup/profi-design-system/commit/4b2bad4bfb934577f8be8c777c3420ff24f61c8a))
+* **Grid:** Мобильный контейнер ([df23d88](https://github.com/eruditorgroup/profi-design-system/commit/df23d88456c4afb0154a9e3afe73f076a31fafd8))
+* **Menu:** Меню по макетам дизайн-системы ([4f7db13](https://github.com/eruditorgroup/profi-design-system/commit/4f7db130866b6e6b87ae8f8e153f4501d6b8dd1c))
+* **webpack:** copy theme.css to dist ([ebb286a](https://github.com/eruditorgroup/profi-design-system/commit/ebb286aadbede05cf5787664b028e06e33583a60))
+* border-radius по дизайн-системе ([c351278](https://github.com/eruditorgroup/profi-design-system/commit/c351278d31206c4c2db32d155bf1f92837ab010b))
+* Актуализация дизайн системы с макетами ([22afe2c](https://github.com/eruditorgroup/profi-design-system/commit/22afe2caf4f729ec72cfe77ce3e57e75dda2ddfe))
+* **storybook:** Divider story ([e985562](https://github.com/eruditorgroup/profi-design-system/commit/e9855625dd99d8de89a6924b7e6ca7f6a3907a83))
+* **storybook:** Grid imports ([b7158df](https://github.com/eruditorgroup/profi-design-system/commit/b7158dff8d47dd50333aee6b7598ce7339984d49))
+
+
+### Features
+
+* Added prefix for theme variables ([1dc09ba](https://github.com/eruditorgroup/profi-design-system/commit/1dc09bab8690c1f3cdcf9a2784d4bbbae7d0d1ae))
+* **Dropdown:** Добавлен :hover trigger, добавлен DropdownItem ([cebcb3b](https://github.com/eruditorgroup/profi-design-system/commit/cebcb3b06847c8c86278d145b62bacd2e639133e))
+
+
+
+
+
 # [0.2.0](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.1.0...@eruditorgroup/profi-ui@0.2.0) (2021-05-14)
 
 
