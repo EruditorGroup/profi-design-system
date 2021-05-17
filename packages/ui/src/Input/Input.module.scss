@@ -1,62 +1,97 @@
-.form-control {
-  position: relative;
-  margin: 8px 0;
-  border: 1px solid var(--ui-color-border);
-  border-radius: var(--ui-border-radius-small);
+@mixin reset-input {
+  font-family: inherit;
+  margin: 0;
+
+  overflow: visible; /* Show overflow in IE/Edge */
+
+  outline: 0;
+
+  &::-webkit-outer-spin-button,
+  &::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  &[type="number"] {
+    -moz-appearance: textfield;
+  }
+}
+
+.input_wrapper {
+  display: inline-block;
+
+}
+
+.input_wrapper--block {
+  display: block;
 }
 
 .input {
-  display: block;
+  @include reset-input;
+
+  width: 100%;
+
+  background: var(--ui-color-light);
+  border: 1px solid transparent;
+
+  color: var(--ui-color-lightInverse);
+
   box-sizing: border-box;
-  width: 100%;
-  height: 50px;
-  padding: 0 12px 0 15px;
-  color: var(--ui-color-text);
-  border-radius: var(--ui-border-radius-small);
-  border: none;
-  font-size: 16px;
-  font-family: var(--font-family);
-  transition: border-color 0.15s ease;
-  -webkit-appearance: none;
-  background: transparent;
-  &[disabled] {
-    background-color: rgba(239, 239, 239, 0.3);
-    color: rgb(84, 84, 84);
+
+  &::placeholder {
+    color: var(--ui-color-lightInverse);
+    opacity: 0.65;
+  }
+
+  &:not(:disabled):hover {
+    background: var(--ui-color-lightState);
+  }
+
+  &_invalid {
+    border-color: var(--ui-color-primaryInverseState);
+  }
+
+  &:disabled {
+    color: var(--ui-color-lightInverseState);
+    -webkit-text-fill-color: var(--ui-color-lightInverseState); /* Safari pale color bug */
+    opacity: 1; /* iOS pale color bug */
   }
 }
 
-.input-withFloatLabel {
-  padding-top: 10px;
+.input_s {
+  padding: 7px 14px 8px;
+
+  border-radius: var(--ui-border-radius-s);
+
+  font-size: var(--ui-text-size-s);
+  font-weight: 400;
+  line-height: var(--ui-text-lineHeight-s);
 }
+.input_m {
+  padding: 7px 14px 9px;
 
-.block {
-  display: block;
-  width: 100%;
+  border-radius: var(--ui-border-radius-m);
+
+  font-size: var(--ui-text-size-m);
+  font-weight: 400;
+  line-height: var(--ui-text-lineHeight-m);
 }
+.input_l {
+  padding: 11px 14px 13px;
 
-.floatLabel {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 15px;
-  display: block;
-  overflow: hidden;
-  width: calc(100% - 15px);
-  height: 22px;
-  margin: auto;
-  color: var(--ui-color-darkGrey);
-  white-space: nowrap;
-  font-size: 16px;
-  line-height: 22px;
-  transition-timing-function: ease-in-out;
-  transition-duration: 0.15s;
-  transition-property: top, font-size;
-  transform: translateZ(0);
-  pointer-events: none;
-  will-change: top, font-size;
+  border-radius: var(--ui-border-radius-l);
 
-  &-floated {
-    top: -25px;
-    font-size: 13px;
-  }
+  font-size: var(--ui-text-size-l);
+  font-weight: 400;
+  line-height: var(--ui-text-lineHeight-l);
+}
+.input_xl {
+  height: 65px; // FF line-height bug
+  padding: 18px 19px 19px;
+
+  border-radius: var(--ui-border-radius-xl);
+
+  font-size: var(--ui-text-size-xl);
+  font-weight: 600;
+  line-height: var(--ui-text-lineHeight-xl);
 }
