@@ -1,9 +1,5 @@
-import React, {forwardRef, useCallback} from 'react';
-import type {
-  ForwardRefExoticComponent,
-  RefAttributes,
-  InputHTMLAttributes,
-} from 'react';
+import React, {forwardRef, useCallback, useRef} from 'react';
+import type {InputHTMLAttributes} from 'react';
 import InputMask from 'react-input-mask';
 import classnames from 'classnames';
 
@@ -35,11 +31,12 @@ export interface InputProps
    * For example, German phone mask with unremoveable prefix +49 will look like `mask="+4\\9 99 999 99"` or `mask={"+4\\\\9 99 999 99"}`
    */
   mask?: string | Array<string | RegExp>;
+
+  // Show mask when input is empty and has no focus.
+  alwaysShowMask?: boolean;
 }
 
-const Input: ForwardRefExoticComponent<
-  InputProps & RefAttributes<HTMLInputElement>
-> = forwardRef(
+const Input = forwardRef<HTMLInputElement, InputProps>(
   (
     {
       className,
@@ -47,19 +44,34 @@ const Input: ForwardRefExoticComponent<
       withFloatLabel,
       size = 'm',
       block = true,
+      disabled,
       invalid,
       value,
+      defaultValue,
       mask,
+      alwaysShowMask,
       onFocus,
       onBlur,
       ...props
     },
     ref,
   ) => {
-    const [isFloated, focusHandlers] = useFloatLabel(Boolean(value), {
-      onFocus,
-      onBlur,
-    });
+    const [isFloated, focusHandlers] = useFloatLabel(
+      Boolean(value || defaultValue),
+      {
+        onFocus,
+        onBlur,
+      },
+    );
+
+    const internalRef = useRef<HTMLInputElement>(null);
+    const inputRef = ref || internalRef;
+
+    const onWrapperClick = (): void => {
+      if (typeof inputRef === 'object' && inputRef !== null) {
+        inputRef.current?.focus();
+      }
+    };
 
     const InputComponent = useCallback(
       (inputProps: Omit<InputProps, 'size'>) =>
@@ -67,45 +79,58 @@ const Input: ForwardRefExoticComponent<
           <InputMask
             {...inputProps}
             inputRef={(el) => {
-              if (typeof ref === 'function') {
-                ref(el);
-              } else if (typeof ref === 'object' && ref !== null) {
-                ref.current = el;
+              if (typeof inputRef === 'function') {
+                inputRef(el);
+              } else if (typeof inputRef === 'object' && inputRef !== null) {
+                inputRef.current = el;
               }
             }}
             mask={mask}
+            alwaysShowMask={alwaysShowMask}
           />
         ) : (
-          <input {...inputProps} ref={ref} />
+          <input {...inputProps} ref={inputRef} />
         ),
-      [mask, ref],
+      [mask, alwaysShowMask, inputRef],
     );
 
     return (
-      <div className={classnames(styles['form-control'], className)}>
-        {withFloatLabel && (
-          <label
-            className={classnames(
-              styles['floatLabel'],
-              block && styles['block'],
-              isFloated && styles['floatLabel-floated'],
-            )}
-          >
-            {placeholder}
-          </label>
+      <div
+        className={classnames(
+          styles['form-control'],
+          withFloatLabel
+            ? styles[`form-control_withLabel_${size}`]
+            : styles[`form-control_${size}`],
+          block && styles['form-control_block'],
+          disabled && styles['form-control_disabled'],
+          invalid && styles['form-control_invalid'],
+          className,
         )}
-        {InputComponent({
-          value,
-          placeholder: withFloatLabel ? '' : placeholder,
-          className: classnames(
-            styles['input'],
-            invalid && styles['input_invalid'],
-            styles[`input_${size}`],
-            withFloatLabel && styles['input-withFloatLabel'],
-          ),
-          ...focusHandlers,
-          ...props,
-        })}
+        onClick={onWrapperClick}
+      >
+        <div className={styles['form-control-flex']}>
+          <div className={styles['form-control-infix']}>
+            {withFloatLabel && (
+              <label
+                className={classnames(
+                  styles['input-label'],
+                  isFloated && styles['input-label_floated'],
+                )}
+              >
+                {placeholder}
+              </label>
+            )}
+            {InputComponent({
+              value,
+              defaultValue,
+              disabled,
+              placeholder: withFloatLabel ? '' : placeholder,
+              className: classnames(styles['input']),
+              ...focusHandlers,
+              ...props,
+            })}
+          </div>
+        </div>
       </div>
     );
   },

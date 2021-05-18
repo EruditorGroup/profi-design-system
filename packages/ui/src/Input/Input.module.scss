@@ -1,10 +1,15 @@
 @mixin reset-input {
-  font-family: inherit;
   margin: 0;
+  padding: 0;
+
+  background: transparent;
+  border: 0;
+  outline: 0;
+
+  color: inherit;
+  font: inherit;
 
   overflow: visible; /* Show overflow in IE/Edge */
-
-  outline: 0;
 
   &::-webkit-outer-spin-button,
   &::-webkit-inner-spin-button {
@@ -12,24 +17,15 @@
     margin: 0;
   }
 
-  &[type="number"] {
+  &[type='number'] {
     -moz-appearance: textfield;
   }
 }
 
-.input_wrapper {
+.form-control {
+  position: relative;
+
   display: inline-block;
-
-}
-
-.input_wrapper--block {
-  display: block;
-}
-
-.input {
-  @include reset-input;
-
-  width: 100%;
 
   background: var(--ui-color-light);
   border: 1px solid transparent;
@@ -38,60 +34,138 @@
 
   box-sizing: border-box;
 
-  &::placeholder {
-    color: var(--ui-color-lightInverse);
-    opacity: 0.65;
+  &_block {
+    display: block;
   }
 
-  &:not(:disabled):hover {
+  &:not(&_disabled):hover {
     background: var(--ui-color-lightState);
+  }
+
+  &_disabled {
+    color: var(--ui-color-disabled);
   }
 
   &_invalid {
     border-color: var(--ui-color-primaryInverseState);
   }
 
-  &:disabled {
+  &_s {
+    padding: 8px 14px 9px;
+
+    border-radius: var(--ui-border-radius-s);
+
+    font-size: var(--ui-text-size-s);
+    font-weight: 400;
+    line-height: var(--ui-line-height-s);
+  }
+
+  &_m {
+    padding: 8px 14px 10px;
+
+    border-radius: var(--ui-border-radius-m);
+  }
+
+  &_withLabel_m {
+    padding: 23px 14px 10px;
+    border-radius: var(--ui-border-radius-l);
+  }
+
+  &_m,
+  &_withLabel_m {
+    font-size: var(--ui-text-size-m);
+    font-weight: 400;
+    line-height: var(--ui-line-height-m);
+  }
+
+  &_l {
+    padding: 12px 14px 14px;
+    border-radius: var(--ui-border-radius-l);
+  }
+
+  &_withLabel_l {
+    padding: 26px 14px 10px;
+    border-radius: var(--ui-border-radius-l);
+  }
+
+  &_l,
+  &_withLabel_l {
+    font-size: var(--ui-text-size-l);
+    font-weight: 400;
+    line-height: var(--ui-line-height-l);
+  }
+
+  &_xl {
+    height: 65px; /* FF line-height bug */
+    padding: 18px 19px 19px;
+
+    border-radius: var(--ui-border-radius-xl);
+
+    font-size: var(--ui-text-size-xl);
+    font-weight: 600;
+    line-height: var(--ui-line-height-xl);
+  }
+}
+
+.form-control-flex {
+  display: inline-flex;
+}
+
+.form-control-infix {
+  position: relative;
+
+  line-height: 1;
+}
+
+.input {
+  @include reset-input;
+
+  width: 100%;
+
+  &::placeholder {
     color: var(--ui-color-lightInverseState);
-    -webkit-text-fill-color: var(--ui-color-lightInverseState); /* Safari pale color bug */
+    opacity: 1;
+  }
+
+  &:disabled {
+    -webkit-text-fill-color: var(
+      --ui-color-disabled
+    ); /* Safari pale color bug */
     opacity: 1; /* iOS pale color bug */
   }
 }
 
-.input_s {
-  padding: 7px 14px 8px;
+.input-label {
+  position: absolute;
+  left: 0;
 
-  border-radius: var(--ui-border-radius-s);
+  display: inline-block;
 
-  font-size: var(--ui-text-size-s);
-  font-weight: 400;
-  line-height: var(--ui-text-lineHeight-s);
-}
-.input_m {
-  padding: 7px 14px 9px;
+  width: 100%;
+  padding-bottom: 1px;
 
-  border-radius: var(--ui-border-radius-m);
+  color: var(--ui-color-lightInverseState);
+  font: inherit;
 
-  font-size: var(--ui-text-size-m);
-  font-weight: 400;
-  line-height: var(--ui-text-lineHeight-m);
-}
-.input_l {
-  padding: 11px 14px 13px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  vertical-align: middle;
 
-  border-radius: var(--ui-border-radius-l);
+  transform: translate3d(0, -6px, 0);
+  transform-origin: 0 0;
 
-  font-size: var(--ui-text-size-l);
-  font-weight: 400;
-  line-height: var(--ui-text-lineHeight-l);
-}
-.input_xl {
-  height: 65px; // FF line-height bug
-  padding: 18px 19px 19px;
+  transition-property: font-size, line-height, transform;
+  transition-duration: 0.1s;
+  transition-timing-function: ease-in-out;
+  will-change: font-size, line-height, transform;
 
-  border-radius: var(--ui-border-radius-xl);
+  pointer-events: none;
 
-  font-size: var(--ui-text-size-xl);
-  font-weight: 600;
-  line-height: var(--ui-text-lineHeight-xl);
+  &_floated {
+    font-size: 13px;
+    line-height: 17px;
+
+    transform: translate3d(0, -100%, 0);
+  }
 }
