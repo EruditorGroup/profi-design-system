@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useRef} from 'react';
 import {Story, Meta} from '@storybook/react';
 
 import Input, {InputProps} from './index';
@@ -8,124 +8,140 @@ export default {
   component: Input,
 } as Meta;
 
-const TEXT_FIELD_SIZES: InputProps['size'][] = ['l', 'm', 's', 'xl'];
-const FLOATING_LABEL_SIZES: InputProps['size'][] = ['l', 'm'];
-
-const Template: Story<InputProps> = ({placeholder = 'Label', ...args}) => {
-  const defaultValue = 'Text';
-
-  const SIZES = args.withFloatLabel ? FLOATING_LABEL_SIZES : TEXT_FIELD_SIZES;
-
-  return (
-    <div>
-      <StoryStyles />
-      <table className="story-table">
-        <thead>
-          <tr>
-            <th></th>
-            {SIZES.map((s) => (
-              <th key={s}>
-                {s}
-                <div className="story-size-guide"></div>
-              </th>
-            ))}
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td className="story-variant-guide">
-              <div>Normal</div>
-            </td>
-            {SIZES.map((s) => (
-              <td key={s}>
-                <Input
-                  {...args}
-                  size={s}
-                  defaultValue={defaultValue}
-                  placeholder={placeholder}
-                />
-              </td>
-            ))}
-          </tr>
-          <tr>
-            <td className="story-variant-guide">
-              <div>Disabled</div>
-            </td>
-            {SIZES.map((s) => (
-              <td key={s}>
-                <Input
-                  {...args}
-                  size={s}
-                  defaultValue={defaultValue}
-                  placeholder={placeholder}
-                  disabled
-                />
-              </td>
-            ))}
-          </tr>
-          <tr>
-            <td className="story-variant-guide">
-              <div>Empty</div>
-            </td>
-            {SIZES.map((s) => (
-              <td key={s}>
-                <Input
-                  {...args}
-                  size={s}
-                  defaultValue=""
-                  placeholder={placeholder}
-                />
-              </td>
-            ))}
-          </tr>
-          <tr>
-            <td className="story-variant-guide">
-              <div>Error</div>
-            </td>
-            {SIZES.map((s) => (
-              <td key={s}>
-                <Input
-                  {...args}
-                  size={s}
-                  defaultValue={defaultValue}
-                  placeholder={placeholder}
-                  invalid
-                />
-              </td>
-            ))}
-          </tr>
-          <tr>
-            <td className="story-variant-guide">
-              <div>Error (empty)</div>
-            </td>
-            {SIZES.map((s) => (
-              <td key={s}>
-                <Input
-                  {...args}
-                  size={s}
-                  defaultValue=""
-                  placeholder={placeholder}
-                  invalid
-                />
-              </td>
-            ))}
-          </tr>
-        </tbody>
-      </table>
-    </div>
-  );
+type InputStoryMeta = {
+  name: string;
+  sizes: InputProps['size'][];
+  rows: {
+    label: string;
+    props: Partial<InputProps>;
+  }[];
 };
 
-export const Default = Template.bind({});
-Default.storyName = 'Text field';
+const TextFieldStoryMeta: InputStoryMeta = {
+  name: 'Text field',
+  sizes: ['l', 'm', 's', 'xl'],
+  rows: [
+    {
+      label: 'Normal',
+      props: {},
+    },
+    {
+      label: 'Disabled',
+      props: {disabled: true},
+    },
+    {
+      label: 'Empty',
+      props: {defaultValue: ''},
+    },
+    {
+      label: 'Error',
+      props: {invalid: true},
+    },
+    {
+      label: 'Error (empty)',
+      props: {invalid: true, defaultValue: ''},
+    },
+  ],
+};
+const FloatingLabelStoryMeta: InputStoryMeta = {
+  name: 'Floating Label Text field',
+  sizes: ['l', 'm'],
+  rows: [
+    {
+      label: 'Normal',
+      props: {defaultValue: 'Text Field'},
+    },
+    {
+      label: 'Disabled',
+      props: {disabled: true},
+    },
+    {
+      label: 'Empty',
+      props: {defaultValue: ''},
+    },
+    {
+      label: 'Error',
+      props: {defaultValue: 'Text Field', invalid: true},
+    },
+    {
+      label: 'Error (empty)',
+      props: {defaultValue: '', invalid: true},
+    },
+  ],
+};
 
-export const WithLabels = Template.bind({});
-WithLabels.storyName = 'Floating Label Text field';
+const templateFactory: (meta: InputStoryMeta) => Story<InputProps> = (
+  meta,
+) => ({defaultValue = 'Text', placeholder = 'Label', ...args}) => (
+  <div>
+    <StoryStyles />
+    <table className="story-table">
+      <thead>
+        <tr>
+          <th className="story-guide"></th>
+          {meta.sizes.map((s) => (
+            <th key={s} className={s === 'xl' ? 'size_xl' : undefined}>
+              {s}
+              <div className="story-size-guide"></div>
+            </th>
+          ))}
+        </tr>
+      </thead>
+      <tbody>
+        {meta.rows.map((row, ri) => (
+          <tr key={ri}>
+            <td className="story-variant-guide">
+              {row.label && <div>{row.label}</div>}
+            </td>
+            {meta.sizes.map((s) => (
+              <td key={s}>
+                <Input
+                  defaultValue={defaultValue}
+                  placeholder={placeholder}
+                  {...args}
+                  {...row.props}
+                  size={s}
+                />
+              </td>
+            ))}
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  </div>
+);
+
+export const TextFieldStory = templateFactory(TextFieldStoryMeta).bind({});
+TextFieldStory.storyName = TextFieldStoryMeta.name;
+
+export const WithLabels = templateFactory(FloatingLabelStoryMeta).bind({});
+WithLabels.storyName = FloatingLabelStoryMeta.name;
 WithLabels.args = {withFloatLabel: true};
+
+const PreviewTemplate: Story<InputProps> = ({
+  placeholder = 'Label',
+  ...args
+}) => (
+  <div className="preview">
+    <StoryStyles />
+    <Input className="preview-item" defaultValue="Ваш адрес" />
+    <Input
+      className="preview-item preview-item_short"
+      mask="+7 999 999-99-99"
+      placeholder="+7 961 903-00-59"
+    />
+    <Input className="preview-item" placeholder="Оставьте отзыв" />
+    <Input className="preview-item" placeholder="Ваше имя и фамилия" />
+    <Input className="preview-item" placeholder="Поле заблокировано" disabled />
+    <Input className="preview-item" placeholder="Эл. почта" invalid />
+  </div>
+);
+export const Preview = PreviewTemplate.bind({});
 
 const StoryStyles = () => (
   <style>{`
   .story-table {
+    width: 1px;
     table-layout: fixed;
     border-collapse: collapse;
   }
@@ -142,10 +158,10 @@ const StoryStyles = () => (
     line-height: 20px;
     text-transform: uppercase;
   }
-  .story-table th:first-of-type {
+  .story-table th.story-guide {
     width: 110px;
   }
-  .story-table th:last-of-type {
+  .story-table th.size_xl {
     width: 240px;
   }
   .story-table td {
@@ -184,11 +200,19 @@ const StoryStyles = () => (
   }
 
   td.story-variant-guide {
+    height: 1px;
     padding: 14px 0;
   }
   .story-variant-guide div {
     position: relative;
-    padding: 15px 17px 16px 0;
+    
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    height: 100%;
+    padding-right: 17px;
+
     font-size: 15px;
     line-height: 20px;
     text-align: right;
@@ -219,6 +243,16 @@ const StoryStyles = () => (
     border-right: 0;
     border-radius: 2px;
     vertical-align: middle;
+  }
+
+  .preview {
+    width: 320px;
+  }
+  .preview-item {
+    margin-bottom: 30px;
+  }
+  .preview-item_short {
+    width: 220px;
   }
 `}</style>
 );
