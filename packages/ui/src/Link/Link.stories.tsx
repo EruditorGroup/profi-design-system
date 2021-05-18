@@ -37,6 +37,20 @@ const Template: Story<LinkProps> = (args) => (
       </Link>{' '}
       lorem ipsum
     </p>
+    <p>
+      Lorem ipsum{' '}
+      <Link {...args} to="#" underlined>
+        underlined link
+      </Link>{' '}
+      lorem ipsum
+    </p>
+    <p>
+      Lorem ipsum{' '}
+      <Link {...args} to="#" bold>
+        bold link
+      </Link>{' '}
+      lorem ipsum
+    </p>
   </>
 );
 
