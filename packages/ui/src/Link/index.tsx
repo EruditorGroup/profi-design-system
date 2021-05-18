@@ -12,6 +12,7 @@ export interface LinkProps
   extends Omit<AnchorHTMLAttributes<HTMLAnchorElement>, 'href'> {
   to?: string;
   block?: boolean;
+  bold?: boolean;
   underlined?: boolean;
   disabled?: boolean;
 }
@@ -19,7 +20,7 @@ export interface LinkProps
 const Link: ForwardRefExoticComponent<
   LinkProps & RefAttributes<HTMLAnchorElement>
 > = forwardRef(
-  ({to: href, underlined, block, disabled, className, ...props}, ref) => {
+  ({to: href, underlined, block, bold, disabled, className, ...props}, ref) => {
     return (
       <a
         ref={ref}
@@ -29,6 +30,7 @@ const Link: ForwardRefExoticComponent<
           block && styles['block'],
           disabled && styles['disabled'],
           underlined && styles['underlined'],
+          bold && styles['bold'],
           className,
         )}
         {...props}
