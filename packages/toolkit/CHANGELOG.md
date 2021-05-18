@@ -3,6 +3,47 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.1.3](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-toolkit@0.1.2...@eruditorgroup/profi-toolkit@0.1.3) (2021-05-17)
+
+**Note:** Version bump only for package @eruditorgroup/profi-toolkit
+
+
+
+
+
+## [0.1.2](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-toolkit@0.1.1...@eruditorgroup/profi-toolkit@0.1.2) (2021-05-17)
+
+**Note:** Version bump only for package @eruditorgroup/profi-toolkit
+
+
+
+
+
+## [0.1.1](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-toolkit@0.1.0...@eruditorgroup/profi-toolkit@0.1.1) (2021-05-17)
+
+**Note:** Version bump only for package @eruditorgroup/profi-toolkit
+
+
+
+
+
+# [0.1.0](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-toolkit@0.0.8...@eruditorgroup/profi-toolkit@0.1.0) (2021-05-17)
+
+
+### Bug Fixes
+
+* **tools:** rm back usePersistCallback ([334ddba](https://github.com/eruditorgroup/profi-design-system/commit/334ddba2012a72b9c164b17b41a8f02238bae24f))
+* **webpack:** copy theme.css to dist ([ebb286a](https://github.com/eruditorgroup/profi-design-system/commit/ebb286aadbede05cf5787664b028e06e33583a60))
+
+
+### Features
+
+* **Text, Dropdown:** implemented "as" component logic ([2c8a106](https://github.com/eruditorgroup/profi-design-system/commit/2c8a106d74eb44c666a11904d2c3df414c9192f8))
+
+
+
+
+
 ## [0.0.8](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-toolkit@0.0.7...@eruditorgroup/profi-toolkit@0.0.8) (2021-05-11)
 
 

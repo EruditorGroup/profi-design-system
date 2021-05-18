@@ -18,6 +18,7 @@ export type ButtonProps = {
   regular?: boolean;
   leading?: React.ReactNode;
   trailing?: React.ReactNode;
+  contentClassName?: string;
 };
 
 const Button: ForwardingComponent<'button', ButtonProps> = forwardRef(
@@ -31,6 +32,7 @@ const Button: ForwardingComponent<'button', ButtonProps> = forwardRef(
       as: Component = 'button',
       children,
       className,
+      contentClassName,
       leading,
       trailing,
       regular,
@@ -54,7 +56,9 @@ const Button: ForwardingComponent<'button', ButtonProps> = forwardRef(
         {...props}
       >
         {leading && <span className={styles['leading']}>{leading}</span>}
-        <span className={styles['content']}>{children}</span>
+        <span className={classnames(styles['content'], contentClassName)}>
+          {children}
+        </span>
         {trailing && <span className={styles['trailing']}>{trailing}</span>}
       </Component>
     );
