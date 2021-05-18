@@ -46,6 +46,9 @@ export {default as Radio} from './Radio';
 export {default as Text} from './Typography/Text';
 export type {TextProps} from './Typography/Text';
 
+export {default as Title} from './Typography/Title';
+export type {TitleProps} from './Typography/Title';
+
 export {default as Divider} from './Divider';
 export type {DividerProps} from './Divider';
 

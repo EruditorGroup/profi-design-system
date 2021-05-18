@@ -52,11 +52,8 @@ jobs:
       - name: Fetch and checkout
         run: git fetch && git checkout yarn.lock && git checkout master # если на тег, то git checkout "${GITHUB_REF/refs\/tags\//}". Но ругается Detached git HEAD.
 
-      - name: Set .npmrc
-        run: printf "//npm.pkg.github.com/:_authToken=${{ secrets.GITHUB_TOKEN }}\n@profiru:registry=https://npm.pkg.github.com/" > ~/.npmrc
+      - name: Set .npmrc (publish token)
+        run: printf "//npm.pkg.github.com/:_authToken=${{ secrets.GITHUB_TOKEN }}\n" > ~/.npmrc
 
       - name: Publish package
-        run: lerna publish --conventional-commits --yes
-
-      - name: Check packages/ui
-        run: ls -l packages/ui
+        run: npm run publish
