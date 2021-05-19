@@ -64,35 +64,28 @@
     padding: 8px 14px 10px;
 
     border-radius: var(--ui-border-radius-m);
-  }
 
-  &_withLabel_m {
-    padding: 23px 14px 10px;
-    border-radius: var(--ui-border-radius-l);
-  }
-
-  &_m,
-  &_withLabel_m {
     font-size: var(--ui-text-size-m);
     font-weight: 400;
     line-height: var(--ui-line-height-m);
   }
 
+  &_withLabel_m {
+    padding: 6px 14px 10px;
+    border-radius: var(--ui-border-radius-l);
+  }
+
   &_l {
     padding: 12px 14px 14px;
     border-radius: var(--ui-border-radius-l);
-  }
 
-  &_withLabel_l {
-    padding: 26px 14px 10px;
-    border-radius: var(--ui-border-radius-l);
-  }
-
-  &_l,
-  &_withLabel_l {
     font-size: var(--ui-text-size-l);
     font-weight: 400;
     line-height: var(--ui-line-height-l);
+  }
+
+  &_withLabel_l {
+    padding: 9px 14px 10px;
   }
 
   &_xl {
@@ -122,8 +115,10 @@
   display: block;
   min-width: 0;
   width: 100%;
-  
-  line-height: 1;
+}
+
+.form-control-infix_withLabel {
+  padding-top: 17px; // Label line-height
 }
 
 .form-control-prefix,
@@ -177,7 +172,7 @@
   overflow: hidden;
   vertical-align: middle;
 
-  transform: translate3d(0, -6px, 0);
+  transform: translate3d(0, -8px, 0);
   transform-origin: 0 0;
 
   transition-property: font-size, line-height, transform;
@@ -191,6 +186,6 @@
     font-size: 13px;
     line-height: 17px;
 
-    transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -16px, 0);
   }
 }

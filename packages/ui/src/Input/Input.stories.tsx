@@ -133,11 +133,13 @@ const PreviewTemplate: Story<InputProps> = ({
   <div className="preview">
     <StoryStyles />
     <Input
+      {...args}
       className="preview-item"
-      defaultValue="Ваш адрес"
+      placeholder="Ваш адрес"
       trailing={<LocationIcon />}
     />
     <Input
+      {...args}
       className="preview-item preview-item_short"
       mask="+7 999 999-99-99"
       placeholder="+7 961 903-00-59"
@@ -154,10 +156,19 @@ const PreviewTemplate: Story<InputProps> = ({
         />
       }
     />
-    <Input className="preview-item" placeholder="Оставьте отзыв..." />
-    <Input className="preview-item" placeholder="Ваше имя и фамилия" />
-    <Input className="preview-item" placeholder="Поле заблокировано" disabled />
-    <Input className="preview-item" placeholder="Эл. почта" invalid />
+    <Input {...args} className="preview-item" placeholder="Оставьте отзыв..." />
+    <Input
+      {...args}
+      className="preview-item"
+      placeholder="Ваше имя и фамилия"
+    />
+    <Input
+      {...args}
+      className="preview-item"
+      placeholder="Поле заблокировано"
+      disabled
+    />
+    <Input {...args} className="preview-item" placeholder="Эл. почта" invalid />
   </div>
 );
 export const Preview = PreviewTemplate.bind({});

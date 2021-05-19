@@ -102,9 +102,8 @@ const Input = forwardRef<HTMLInputElement, InputProps>(
       <div
         className={classnames(
           styles['form-control'],
-          withFloatLabel
-            ? styles[`form-control_withLabel_${size}`]
-            : styles[`form-control_${size}`],
+          styles[`form-control_${size}`],
+          withFloatLabel && styles[`form-control_withLabel_${size}`],
           block && styles['form-control_block'],
           disabled && styles['form-control_disabled'],
           invalid && styles['form-control_invalid'],
@@ -116,7 +115,12 @@ const Input = forwardRef<HTMLInputElement, InputProps>(
           {leading && (
             <div className={styles['form-control-prefix']}>{leading}</div>
           )}
-          <div className={styles['form-control-infix']}>
+          <div
+            className={classnames(
+              styles['form-control-infix'],
+              withFloatLabel && styles['form-control-infix_withLabel'],
+            )}
+          >
             {withFloatLabel && (
               <label
                 className={classnames(
