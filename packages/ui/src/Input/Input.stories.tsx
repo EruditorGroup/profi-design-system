@@ -11,6 +11,7 @@ export default {
 type InputStoryMeta = {
   name: string;
   sizes: InputProps['size'][];
+  biggerGuides?: boolean;
   rows: {
     label: string;
     props: Partial<InputProps>;
@@ -46,6 +47,7 @@ const TextFieldStoryMeta: InputStoryMeta = {
 const FloatingLabelStoryMeta: InputStoryMeta = {
   name: 'Floating Label Text field',
   sizes: ['l', 'm'],
+  biggerGuides: true,
   rows: [
     {
       label: 'Normal',
@@ -90,7 +92,12 @@ const templateFactory: (meta: InputStoryMeta) => Story<InputProps> = (
       <tbody>
         {meta.rows.map((row, ri) => (
           <tr key={ri}>
-            <td className="story-variant-guide">
+            <td
+              className={[
+                'story-variant-guide',
+                meta.biggerGuides && 'story-variant-guide_l',
+              ].join(' ')}
+            >
               {row.label && <div>{row.label}</div>}
             </td>
             {meta.sizes.map((s) => (
@@ -200,8 +207,7 @@ const StoryStyles = () => (
   }
 
   td.story-variant-guide {
-    height: 1px;
-    padding: 14px 0;
+    padding: 15px 0;
   }
   .story-variant-guide div {
     position: relative;
@@ -210,7 +216,7 @@ const StoryStyles = () => (
     justify-content: flex-end;
     align-items: center;
 
-    height: 100%;
+    height: 50px;
     padding-right: 17px;
 
     font-size: 15px;
@@ -218,6 +224,9 @@ const StoryStyles = () => (
     text-align: right;
 
     overflow: hidden;
+  }
+  .story-variant-guide_l div {
+    height: 60px;
   }
   .story-variant-guide div::before {
     content: '';
