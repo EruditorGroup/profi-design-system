@@ -1,46 +1,58 @@
 import React, {useState} from 'react';
-// also exported from '@storybook/react' if you can deal with breaking changes in 6.1
-import {Story, Meta} from '@storybook/react/types-6-0';
+import Checkbox from '.';
 
-import Checkbox from './index';
+// also exported from '@storybook/react' if you can deal with breaking changes in 6.1
+import type {Story, Meta} from '@storybook/react/types-6-0';
+import type {CheckboxProps} from '.'
 
 export default {
-  title: 'Form.Checkbox',
+  title: 'Checkbox',
   component: Checkbox,
 } as Meta;
 
-const Template: Story = (args) => {
+export const Default: Story<CheckboxProps> = (args) => {
   const [checked, setChecked] = useState(true);
   return (
     <div>
-      <Checkbox {...args}>Простой checkbox</Checkbox>
-      <Checkbox style={{marginTop: '10px'}} disabled {...args}>
-        Неактивный checkbox
-      </Checkbox>
-      <Checkbox
-        checked={checked}
-        onChange={() => setChecked(!checked)}
-        style={{marginTop: '10px'}}
-        {...args}
-      >
-        Выбранный checkbox
-      </Checkbox>
-      <Checkbox
-        checked
-        disabled
-        onChange={() => setChecked(!checked)}
-        style={{marginTop: '10px'}}
-        {...args}
-      >
-        Выбранный неактивный checkbox
-      </Checkbox>
-      <Checkbox {...args} style={{marginTop: '10px'}}>
-        <div>Многострочный</div>
-        <div>Многострочный</div>
-        <div>Многострочный</div>
-      </Checkbox>
+      {[
+        <Checkbox {...args}>Простой checkbox</Checkbox>,
+        <Checkbox disabled {...args}>
+          Неактивный checkbox
+        </Checkbox>,
+        <Checkbox
+          checked={checked}
+          onChange={() => setChecked(!checked)}
+          {...args}
+        >
+          Выбранный checkbox
+        </Checkbox>,
+        <Checkbox
+          checked
+          disabled
+          onChange={() => setChecked(!checked)}
+          {...args}
+        >
+          Выбранный неактивный checkbox
+        </Checkbox>,
+        <Checkbox {...args}>
+          <div>Многострочный</div>
+          <div>Многострочный</div>
+          <div>Многострочный</div>
+        </Checkbox>,
+      ].map((i) => (
+        <div style={{marginBottom: '10px'}}>{i}</div>
+      ))}
     </div>
   );
 };
 
-export const Default = Template.bind({});
+Default.args = {
+  size: 'm'
+}
+
+Default.argTypes = {
+  size: {
+    options: ['m', 'l', 'xl', 'xxl'],
+    control: { type: 'radio' }
+  }
+}
