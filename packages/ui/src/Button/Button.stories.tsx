@@ -29,7 +29,7 @@ const Template: Story = (args) => (
       'primary',
       'secondary',
       'light',
-      'silver',
+      'transparent',
       'link',
     ] as ButtonProps['design'][]).map((design) => (
       <div style={line} key={design}>
