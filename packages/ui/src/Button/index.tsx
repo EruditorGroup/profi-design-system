@@ -11,7 +11,7 @@ type ButtonColor = Extract<
 >;
 
 export type ButtonProps = {
-  design?: ButtonColor | ButtonSocial;
+  design?: ButtonColor | ButtonSocial | 'link';
   size?: Extract<ISize, 's' | 'm' | 'l'>;
   block?: boolean;
   rounded?: boolean;
