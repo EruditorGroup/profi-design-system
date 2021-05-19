@@ -42,7 +42,7 @@ const Input = forwardRef<HTMLInputElement, InputProps>(
       className,
       placeholder,
       withFloatLabel,
-      size = 'm',
+      size = 'l',
       block = true,
       disabled,
       invalid,
