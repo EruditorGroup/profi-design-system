@@ -1,41 +1,17 @@
 import React, {forwardRef} from 'react';
-import type {
-  InputHTMLAttributes,
-  ForwardRefExoticComponent,
-  RefAttributes,
-} from 'react';
-import classnames from 'classnames';
+import Checkbox from '../Checkbox';
 
-import styles from './Radio.module.scss';
+import type {CheckboxProps} from '../Checkbox';
 
-// export interface RadioProps {
-//   design?: 'light' | 'brand';
-// }
+export interface RadioProps extends CheckboxProps {
+  name: string;
+}
 
-const Radio: ForwardRefExoticComponent<
-  // RadioProps &
-  InputHTMLAttributes<HTMLInputElement> & RefAttributes<HTMLInputElement>
-> = forwardRef(
-  (
-    {
-      // design = 'brand',
-      children,
-      className,
-      style,
-      ...props
-    },
-    ref,
-  ) => {
-    return (
-      <label style={style} className={classnames(styles['label'], className)}>
-        <input ref={ref} className={styles['input']} type="radio" {...props} />
-        <i
-          className={classnames(styles['checker'], styles[`design-brand`])}
-        ></i>
-        <div className={styles['content']}>{children}</div>
-      </label>
-    );
-  },
-);
+const Radio = forwardRef<HTMLInputElement, RadioProps>(function Radio(
+  props,
+  ref,
+) {
+  return <Checkbox {...props} type="radio" ref={ref} />;
+});
 
 export default Radio;

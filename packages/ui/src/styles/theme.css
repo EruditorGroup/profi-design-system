@@ -10,6 +10,13 @@
   --ui-text-size-xxl: 28px;
   --ui-text-size-huge: 88px;
 
+  --ui-text-lineHeight-xs: 13px;
+  --ui-text-lineHeight-s: 17px;
+  --ui-text-lineHeight-m: 20px;
+  --ui-text-lineHeight-l: 22px;
+  --ui-text-lineHeight-xl: 26px;
+  --ui-text-lineHeight-xxl: 33px;
+
   --ui-color-primary: #e01935;
   --ui-color-primaryState: #c90c27;
   --ui-color-primaryInverse: #fff;
