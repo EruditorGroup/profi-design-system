@@ -10,8 +10,7 @@ import {ISize} from 'uitype';
 
 type InputSize = Extract<ISize, 's' | 'm' | 'l' | 'xl'>;
 
-export interface InputProps
-  extends Omit<InputHTMLAttributes<HTMLInputElement>, 'size'> {
+export type InputProps = Omit<InputHTMLAttributes<HTMLInputElement>, 'size'> & {
   label?: string;
   withFloatLabel?: boolean;
 
@@ -34,7 +33,10 @@ export interface InputProps
 
   // Show mask when input is empty and has no focus.
   alwaysShowMask?: boolean;
-}
+
+  leading?: React.ReactNode;
+  trailing?: React.ReactNode;
+};
 
 const Input = forwardRef<HTMLInputElement, InputProps>(
   (
@@ -50,6 +52,8 @@ const Input = forwardRef<HTMLInputElement, InputProps>(
       defaultValue,
       mask,
       alwaysShowMask,
+      leading,
+      trailing,
       onFocus,
       onBlur,
       ...props
@@ -109,6 +113,9 @@ const Input = forwardRef<HTMLInputElement, InputProps>(
         onClick={onWrapperClick}
       >
         <div className={styles['form-control-flex']}>
+          {leading && (
+            <div className={styles['form-control-prefix']}>{leading}</div>
+          )}
           <div className={styles['form-control-infix']}>
             {withFloatLabel && (
               <label
@@ -130,6 +137,9 @@ const Input = forwardRef<HTMLInputElement, InputProps>(
               ...props,
             })}
           </div>
+          {trailing && (
+            <div className={styles['form-control-suffix']}>{trailing}</div>
+          )}
         </div>
       </div>
     );
