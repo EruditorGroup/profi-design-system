@@ -27,22 +27,28 @@
 }
 
 .size-xs {
-  font-size: var(--ui-text-size-s);
+  font-size: var(--ui-text-size-xs);
+  line-height: var(--ui-text-lineHeight-xs);
 }
 .size-s {
   font-size: var(--ui-text-size-s);
+  line-height: var(--ui-text-lineHeight-s);
 }
 .size-m {
   font-size: var(--ui-text-size-m);
+  line-height: var(--ui-text-lineHeight-m);
 }
 .size-l {
   font-size: var(--ui-text-size-l);
+  line-height: var(--ui-text-lineHeight-l);
 }
 .size-xl {
   font-size: var(--ui-text-size-xl);
+  line-height: var(--ui-text-lineHeight-xl);
 }
 .size-xxl {
   font-size: var(--ui-text-size-xxl);
+  line-height: var(--ui-text-lineHeight-xxl);
 }
 .size-huge {
   font-size: var(--ui-text-size-huge);
