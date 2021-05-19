@@ -8,6 +8,7 @@ export {default as ChevronLeftIcon} from './ChevronLeft';
 export {default as ChevronRightIcon} from './ChevronRight';
 export {default as ChevronUpIcon} from './ChevronUp';
 export {default as CloseIcon} from './Close';
+export {default as DotIcon} from './Dot';
 export {default as EditIcon} from './Edit';
 export {default as FbIcon} from './Fb';
 export {default as GalleryIcon} from './Gallery';
