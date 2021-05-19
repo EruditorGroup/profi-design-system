@@ -109,12 +109,37 @@
 
 .form-control-flex {
   display: inline-flex;
+  align-items: baseline;
+  box-sizing: border-box;
+  width: 100%;
 }
 
 .form-control-infix {
   position: relative;
-
+  
+  flex: auto;
+  
+  display: block;
+  min-width: 0;
+  width: 100%;
+  
   line-height: 1;
+}
+
+.form-control-prefix,
+.form-control-suffix {
+  flex: none;
+  align-self: center;
+  
+  display: inline-flex;
+  
+  white-space: nowrap;
+}
+.form-control-prefix {
+  margin-right: 7px;
+}
+.form-control-suffix {
+  margin-left: 7px;
 }
 
 .input {

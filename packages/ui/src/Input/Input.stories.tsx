@@ -2,6 +2,7 @@ import React, {useRef} from 'react';
 import {Story, Meta} from '@storybook/react';
 
 import Input, {InputProps} from './index';
+import {LocationIcon} from '@eruditorgroup/profi-icons';
 
 export default {
   title: 'Form/Input',
@@ -131,13 +132,29 @@ const PreviewTemplate: Story<InputProps> = ({
 }) => (
   <div className="preview">
     <StoryStyles />
-    <Input className="preview-item" defaultValue="Ваш адрес" />
+    <Input
+      className="preview-item"
+      defaultValue="Ваш адрес"
+      trailing={<LocationIcon />}
+    />
     <Input
       className="preview-item preview-item_short"
       mask="+7 999 999-99-99"
       placeholder="+7 961 903-00-59"
+      leading={
+        // Russian flag
+        <div
+          style={{
+            height: '14px',
+            width: '17px',
+            borderRadius: '2px',
+            background:
+              'linear-gradient(-180deg, #fff 33.3%, #1653EF 33.3%, #1653EF 66.6%, #EE1B39 66.6%)',
+          }}
+        />
+      }
     />
-    <Input className="preview-item" placeholder="Оставьте отзыв" />
+    <Input className="preview-item" placeholder="Оставьте отзыв..." />
     <Input className="preview-item" placeholder="Ваше имя и фамилия" />
     <Input className="preview-item" placeholder="Поле заблокировано" disabled />
     <Input className="preview-item" placeholder="Эл. почта" invalid />
