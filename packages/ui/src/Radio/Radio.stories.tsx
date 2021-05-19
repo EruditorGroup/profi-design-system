@@ -1,19 +1,20 @@
 import React, {useState} from 'react';
-// also exported from '@storybook/react' if you can deal with breaking changes in 6.1
-import {Story, Meta} from '@storybook/react/types-6-0';
+import Radio from '.';
 
-import Radio from './index';
+// also exported from '@storybook/react' if you can deal with breaking changes in 6.1
+import type {Story, Meta} from '@storybook/react/types-6-0';
+import type {RadioProps} from '.';
 
 export default {
-  title: 'Form.Radio',
+  title: 'Radio',
   component: Radio,
 } as Meta;
 
-const Template: Story = (args) => {
+export const Default: Story<RadioProps> = (args) => {
   const [selected, setSelected] = useState('default');
   return (
     <div>
-      <Radio
+      {[<Radio
         name="storybook"
         onChange={() => setSelected('simple')}
         checked={selected === 'simple'}
@@ -21,40 +22,49 @@ const Template: Story = (args) => {
         {...args}
       >
         Простой Radio
-      </Radio>
+      </Radio>,
       <Radio
         name="storybook"
         value="disabled"
         disabled
-        style={{marginTop: '10px'}}
         {...args}
       >
         Disabled Radio
-      </Radio>
+      </Radio>,
       <Radio
         name="storybook"
         value="default"
         onChange={() => setSelected('default')}
         checked={selected === 'default'}
-        style={{marginTop: '10px'}}
         {...args}
       >
         Выбранный по дефолту Radio
-      </Radio>
+      </Radio>,
       <Radio
         name="storybook"
         value="multiline"
         onChange={() => setSelected('multiline')}
         checked={selected === 'multiline'}
-        style={{marginTop: '10px'}}
         {...args}
       >
         <div>Многострочный</div>
         <div>Многострочный</div>
         <div>Многострочный</div>
-      </Radio>
+      </Radio>].map((i) => (
+        <div style={{marginBottom: '10px'}}>{i}</div>
+      ))}
+      
     </div>
   );
 };
 
-export const Default = Template.bind({});
+Default.args = {
+  size: 'm'
+}
+
+Default.argTypes = {
+  size: {
+    options: ['m', 'l', 'xl', 'xxl'],
+    control: { type: 'radio' }
+  }
+}
