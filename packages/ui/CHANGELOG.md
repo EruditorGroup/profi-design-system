@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.3.4](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.3.3...@eruditorgroup/profi-ui@0.3.4) (2021-05-19)
+
+
+### Bug Fixes
+
+* **Button:** add contentClassName prop & fix icon positioning bug ([#69](https://github.com/eruditorgroup/profi-design-system/issues/69)) ([040ab8e](https://github.com/eruditorgroup/profi-design-system/commit/040ab8eb71b30ed2498308e3eba3505c9e1d93cc))
+* **Grid:** Мобильные отступы ([be3f40d](https://github.com/eruditorgroup/profi-design-system/commit/be3f40d9f77b7f7bede00a4dbb02d1b7c1c89063))
+* **Link:** Цвет линка в соответствии с дизайн-системой ([b3763fe](https://github.com/eruditorgroup/profi-design-system/commit/b3763fe2410e9a022786a2a8bbd00a32c199d000))
+
+
+
+
+
 ## [0.3.3](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.3.2...@eruditorgroup/profi-ui@0.3.3) (2021-05-17)
 
 
