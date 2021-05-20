@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.4.0](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.3.5...@eruditorgroup/profi-ui@0.4.0) (2021-05-20)
+
+
+### Bug Fixes
+
+* **Button:** Button design type ([d95653a](https://github.com/eruditorgroup/profi-design-system/commit/d95653a25e3ac9d04f270ae7f8c46cda8485b593))
+
+
+### Features
+
+* **Text:** Add line-height variables and css rules ([09e2587](https://github.com/eruditorgroup/profi-design-system/commit/09e2587ae14d3a6df1c4435bbcde4fc5012e7da0))
+* **ui:** Add Checkbox & Radio components ([698a06a](https://github.com/eruditorgroup/profi-design-system/commit/698a06a745117bba83d1f6ad17aefd8ea77bc08d))
+
+
+
+
+
 ## [0.3.5](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.3.4...@eruditorgroup/profi-ui@0.3.5) (2021-05-19)
 
 **Note:** Version bump only for package @eruditorgroup/profi-ui
