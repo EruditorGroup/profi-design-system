@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.1.0](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-icons@0.0.13...@eruditorgroup/profi-icons@0.1.0) (2021-05-20)
+
+
+### Bug Fixes
+
+* **CheckIcon:** Adjust path and viewbox ([919b89c](https://github.com/eruditorgroup/profi-design-system/commit/919b89c4c0ba8820027bbe9150864b6af3674cd5))
+
+
+### Features
+
+* **icons:** Add DotIcon ([a5c2964](https://github.com/eruditorgroup/profi-design-system/commit/a5c2964790849d90bdc2c60aa131b26a096ef5c3))
+
+
+
+
+
 ## [0.0.13](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-icons@0.0.12...@eruditorgroup/profi-icons@0.0.13) (2021-05-17)
 
 **Note:** Version bump only for package @eruditorgroup/profi-icons
