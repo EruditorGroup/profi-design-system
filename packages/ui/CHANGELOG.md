@@ -3,6 +3,21 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.4.1](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.4.0...@eruditorgroup/profi-ui@0.4.1) (2021-05-21)
+
+
+
+## 0.5.1 (2021-05-21)
+
+
+### Bug Fixes
+
+* **Link:** underline hover state ([45add8f](https://github.com/eruditorgroup/profi-design-system/commit/45add8fbc88646d7995569d7856cb9b406b43d7f))
+
+
+
+
+
 # [0.4.0](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.3.5...@eruditorgroup/profi-ui@0.4.0) (2021-05-20)
 
 
