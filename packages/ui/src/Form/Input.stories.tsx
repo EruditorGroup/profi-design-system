@@ -1,8 +1,8 @@
-import React, {useRef} from 'react';
+import React from 'react';
 import {Story, Meta} from '@storybook/react';
 
-import Input, {InputProps} from './index';
-import {LocationIcon} from '@eruditorgroup/profi-icons';
+import {Input} from './index';
+import type {InputProps} from './index';
 
 export default {
   title: 'Form/Input',
@@ -12,7 +12,6 @@ export default {
 type InputStoryMeta = {
   name: string;
   sizes: InputProps['size'][];
-  biggerGuides?: boolean;
   rows: {
     label: string;
     props: Partial<InputProps>;
@@ -48,7 +47,6 @@ const TextFieldStoryMeta: InputStoryMeta = {
 const FloatingLabelStoryMeta: InputStoryMeta = {
   name: 'Floating Label Text field',
   sizes: ['l', 'm'],
-  biggerGuides: true,
   rows: [
     {
       label: 'Normal',
@@ -93,12 +91,7 @@ const templateFactory: (meta: InputStoryMeta) => Story<InputProps> = (
       <tbody>
         {meta.rows.map((row, ri) => (
           <tr key={ri}>
-            <td
-              className={[
-                'story-variant-guide',
-                meta.biggerGuides && 'story-variant-guide_l',
-              ].join(' ')}
-            >
+            <td className="story-variant-guide">
               {row.label && <div>{row.label}</div>}
             </td>
             {meta.sizes.map((s) => (
@@ -125,53 +118,6 @@ TextFieldStory.storyName = TextFieldStoryMeta.name;
 export const WithLabels = templateFactory(FloatingLabelStoryMeta).bind({});
 WithLabels.storyName = FloatingLabelStoryMeta.name;
 WithLabels.args = {withFloatLabel: true};
-
-const PreviewTemplate: Story<InputProps> = ({
-  placeholder = 'Label',
-  ...args
-}) => (
-  <div className="preview">
-    <StoryStyles />
-    <Input
-      {...args}
-      className="preview-item"
-      placeholder="Ваш адрес"
-      trailing={<LocationIcon />}
-    />
-    <Input
-      {...args}
-      className="preview-item preview-item_short"
-      mask="+7 999 999-99-99"
-      placeholder="+7 961 903-00-59"
-      leading={
-        // Russian flag
-        <div
-          style={{
-            height: '14px',
-            width: '17px',
-            borderRadius: '2px',
-            background:
-              'linear-gradient(-180deg, #fff 33.3%, #1653EF 33.3%, #1653EF 66.6%, #EE1B39 66.6%)',
-          }}
-        />
-      }
-    />
-    <Input {...args} className="preview-item" placeholder="Оставьте отзыв..." />
-    <Input
-      {...args}
-      className="preview-item"
-      placeholder="Ваше имя и фамилия"
-    />
-    <Input
-      {...args}
-      className="preview-item"
-      placeholder="Поле заблокировано"
-      disabled
-    />
-    <Input {...args} className="preview-item" placeholder="Эл. почта" invalid />
-  </div>
-);
-export const Preview = PreviewTemplate.bind({});
 
 const StoryStyles = () => (
   <style>{`
@@ -235,6 +181,7 @@ const StoryStyles = () => (
   }
 
   td.story-variant-guide {
+    height: 1px;
     padding: 15px 0;
   }
   .story-variant-guide div {
@@ -244,7 +191,7 @@ const StoryStyles = () => (
     justify-content: flex-end;
     align-items: center;
 
-    height: 50px;
+    height: 100%;
     padding-right: 17px;
 
     font-size: 15px;
@@ -252,9 +199,6 @@ const StoryStyles = () => (
     text-align: right;
 
     overflow: hidden;
-  }
-  .story-variant-guide_l div {
-    height: 60px;
   }
   .story-variant-guide div::before {
     content: '';
@@ -280,16 +224,6 @@ const StoryStyles = () => (
     border-right: 0;
     border-radius: 2px;
     vertical-align: middle;
-  }
-
-  .preview {
-    width: 320px;
-  }
-  .preview-item {
-    margin-bottom: 30px;
-  }
-  .preview-item_short {
-    width: 220px;
   }
 `}</style>
 );
