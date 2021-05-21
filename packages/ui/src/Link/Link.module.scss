@@ -3,17 +3,12 @@
   text-decoration: none;
 
   &:hover {
-    color: var(--ui-color-brand);
+    text-decoration: underline;
   }
 }
 
 .color-brand {
   color: var(--ui-color-brand);
-
-  &:hover,
-  &:active {
-    color: var(--ui-color-link);
-  }
 }
 
 .disabled,
