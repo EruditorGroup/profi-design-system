@@ -37,9 +37,21 @@ const Template: Story = ({placeholder = 'Label', ...args}) => (
     />
     <Textarea
       {...args}
-      rows={3}
+      minRows={3}
       className="preview-item"
       placeholder="Оставьте отзыв..."
+      leading={
+        // Russian flag
+        <div
+          style={{
+            height: '14px',
+            width: '17px',
+            borderRadius: '2px',
+            background:
+              'linear-gradient(-180deg, #fff 33.3%, #1653EF 33.3%, #1653EF 66.6%, #EE1B39 66.6%)',
+          }}
+        />
+      }
     />
     <Input
       {...args}
