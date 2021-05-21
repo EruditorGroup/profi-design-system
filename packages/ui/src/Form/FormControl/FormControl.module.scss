@@ -100,16 +100,21 @@
 .form-control__prefix,
 .form-control__suffix {
   flex: none;
-  align-self: center;
   
-  display: inline-flex;
-  
+  line-height: inherit;
   white-space: nowrap;
+
+  & > * {
+    display: inline-block;
+    vertical-align: middle;
+  }
 }
 .form-control__prefix {
+  align-self: flex-start;
   margin-right: 7px;
 }
 .form-control__suffix {
+  align-self: baseline;
   margin-left: 7px;
 }
 
