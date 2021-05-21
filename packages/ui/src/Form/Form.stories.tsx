@@ -31,6 +31,7 @@ const Template: Story = ({placeholder = 'Label', ...args}) => (
             borderRadius: '2px',
             background:
               'linear-gradient(-180deg, #fff 33.3%, #1653EF 33.3%, #1653EF 66.6%, #EE1B39 66.6%)',
+            transform: 'translateY(-1.5px)',
           }}
         />
       }
@@ -49,6 +50,7 @@ const Template: Story = ({placeholder = 'Label', ...args}) => (
             borderRadius: '2px',
             background:
               'linear-gradient(-180deg, #fff 33.3%, #1653EF 33.3%, #1653EF 66.6%, #EE1B39 66.6%)',
+            transform: 'translateY(-1.5px)',
           }}
         />
       }
