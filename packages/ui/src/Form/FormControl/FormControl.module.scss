@@ -76,14 +76,14 @@
   }
 }
 
-.form-control-flex {
+.form-control__flex {
   display: inline-flex;
   align-items: baseline;
   box-sizing: border-box;
   width: 100%;
 }
 
-.form-control-infix {
+.form-control__infix {
   position: relative;
   
   flex: auto;
@@ -97,8 +97,8 @@
   }
 }
 
-.form-control-prefix,
-.form-control-suffix {
+.form-control__prefix,
+.form-control__suffix {
   flex: none;
   align-self: center;
   
@@ -106,14 +106,14 @@
   
   white-space: nowrap;
 }
-.form-control-prefix {
+.form-control__prefix {
   margin-right: 7px;
 }
-.form-control-suffix {
+.form-control__suffix {
   margin-left: 7px;
 }
 
-.form-control-label {
+.form-control__label {
   position: absolute;
   left: 0;
 
