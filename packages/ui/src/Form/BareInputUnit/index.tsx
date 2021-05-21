@@ -1,7 +1,6 @@
 import React, {
   ChangeEventHandler,
   CSSProperties,
-  useCallback,
   useRef,
   useState,
 } from 'react';
