@@ -29,6 +29,7 @@ export type BareInputProps = Omit<
 
 const BareInput: React.FC<BareInputProps> = ({
   className,
+  type = 'text',
   mask,
   alwaysShowMask,
   inputRef,
@@ -57,6 +58,7 @@ const BareInput: React.FC<BareInputProps> = ({
 
   return InputComponent({
     className: classnames(styles['input'], className),
+    type,
     ...props,
   });
 };
