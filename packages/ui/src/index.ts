@@ -13,16 +13,20 @@ export type {BlockProps} from './Block';
 export {default as Wrapper} from './Wrapper';
 export type {WrapperProps} from './Wrapper';
 
-export {wrapControlWithRef, FormControl, Input, Textarea} from './Form';
+export {
+  wrapControlWithRef,
+  FormControl,
+  Input,
+  InputUnit,
+  Textarea,
+} from './Form';
 export type {
   BaseControlProps,
   FormControlProps,
   InputProps,
+  InputUnitProps,
   TextareaProps,
 } from './Form';
-
-export {default as InputUnit} from './InputUnit';
-export type {InputUnitProps} from './InputUnit';
 
 export {default as BodyPortal} from './BodyPortal';
 export type {BodyPortalProps} from './BodyPortal';

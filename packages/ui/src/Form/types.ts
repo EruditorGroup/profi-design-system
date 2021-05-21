@@ -1,4 +1,9 @@
-import type {FocusEventHandler, RefObject} from 'react';
+import type {
+  CSSProperties,
+  FocusEventHandler,
+  InputHTMLAttributes,
+  RefObject,
+} from 'react';
 
 type Mutable<T> = {
   -readonly [P in keyof T]: T[P];
@@ -11,10 +16,12 @@ type MutableRef<HTMLElementType> =
 
 export type BaseControlProps<HTMLElementType = HTMLInputElement> = Partial<
   Pick<
-    HTMLInputElement,
+    InputHTMLAttributes<HTMLInputElement>,
     'id' | 'className' | 'placeholder' | 'value' | 'defaultValue'
   >
 > & {
+  style?: CSSProperties;
+
   onFocus?: FocusEventHandler<HTMLElementType>;
   onBlur?: FocusEventHandler<HTMLElementType>;
 

@@ -19,18 +19,21 @@ const controlFactory = <
   Component: ComponentType<PropsType>,
 ) => (props: PropsType, ref: Ref<HTMLElementType>): ReactElement => {
   const {
-    id,
-    className,
-    placeholder,
     withFloatLabel,
     size = 'l',
     block = true,
-    disabled,
     invalid,
-    value,
-    defaultValue,
+    disabled,
+    style,
+
     leading,
     trailing,
+
+    id,
+    className,
+    placeholder,
+    value,
+    defaultValue,
     onFocus,
     onBlur,
     ...restInputProps
@@ -66,6 +69,7 @@ const controlFactory = <
     block,
     invalid,
     disabled,
+    style,
     leading,
     trailing,
   };

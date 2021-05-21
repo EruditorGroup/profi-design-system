@@ -67,21 +67,21 @@ const FormControl: React.FC<FormControlHTMLProps> = ({
       onClick={onClick}
       {...props}
     >
-      <div className={styles['form-control-flex']}>
+      <div className={styles['form-control__flex']}>
         {leading && (
-          <div className={styles['form-control-prefix']}>{leading}</div>
+          <div className={styles['form-control__prefix']}>{leading}</div>
         )}
         <div
           className={classnames(
-            styles['form-control-infix'],
-            withFloatLabel && styles['form-control-infix_withLabel'],
+            styles['form-control__infix'],
+            withFloatLabel && styles['form-control__infix_withLabel'],
           )}
         >
           {withFloatLabel && (
             <label
               className={classnames(
-                styles['form-control-label'],
-                isLabelFloated && styles['form-control-label_floated'],
+                styles['form-control__label'],
+                isLabelFloated && styles['form-control__label_floated'],
               )}
               htmlFor={labelFor}
             >
@@ -91,7 +91,7 @@ const FormControl: React.FC<FormControlHTMLProps> = ({
           {children}
         </div>
         {trailing && (
-          <div className={styles['form-control-suffix']}>{trailing}</div>
+          <div className={styles['form-control__suffix']}>{trailing}</div>
         )}
       </div>
     </div>
