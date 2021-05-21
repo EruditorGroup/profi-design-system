@@ -7,6 +7,9 @@ import type {BaseControlProps, HTMLElementWithValue} from './types';
 import FormControl from './FormControl';
 import type {FormControlProps} from './FormControl';
 
+const GLOBAL_ID_PREFIX = 'profi-ui-';
+let globalIdCount = 0;
+
 export type ControlProps<T extends BaseControlProps = BaseControlProps> = T &
   FormControlProps & {
     children?: never;
@@ -38,10 +41,9 @@ const controlFactory = <
     onBlur,
     ...restInputProps
   } = props;
-
-  type FocusElementType = HTMLElementType extends HTMLInputElement
-    ? HTMLInputElement
-    : HTMLTextAreaElement;
+  const inputId = useMemo(() => id || `${GLOBAL_ID_PREFIX}${globalIdCount++}`, [
+    id,
+  ]);
 
   const [isFloated, focusHandlers] = useFloatLabel<HTMLElementType>(
     Boolean(value || defaultValue),
@@ -51,7 +53,7 @@ const controlFactory = <
     },
   );
 
-  const internalRef = useRef<FocusElementType>(null);
+  const internalRef = useRef<HTMLElementType>(null);
   const inputRef = useMemo(() => ref || internalRef, [ref]);
 
   const onWrapperClick = useCallback((): void => {
@@ -75,7 +77,7 @@ const controlFactory = <
   };
 
   const inputProps = {
-    id,
+    id: inputId,
     value,
     defaultValue,
     disabled,
@@ -85,7 +87,7 @@ const controlFactory = <
   } as ComponentProps<typeof Component>;
 
   return (
-    <FormControl labelFor={id} onClick={onWrapperClick} {...wrapperProps}>
+    <FormControl labelFor={inputId} onClick={onWrapperClick} {...wrapperProps}>
       <Component {...inputProps} inputRef={inputRef} />
     </FormControl>
   );
