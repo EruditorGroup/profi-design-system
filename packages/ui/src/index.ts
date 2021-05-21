@@ -13,8 +13,13 @@ export type {BlockProps} from './Block';
 export {default as Wrapper} from './Wrapper';
 export type {WrapperProps} from './Wrapper';
 
-export {default as Input} from './Input';
-export type {InputProps} from './Input';
+export {wrapControlWithRef, FormControl, Input, Textarea} from './Form';
+export type {
+  BaseControlProps,
+  FormControlProps,
+  InputProps,
+  TextareaProps,
+} from './Form';
 
 export {default as InputUnit} from './InputUnit';
 export type {InputUnitProps} from './InputUnit';
