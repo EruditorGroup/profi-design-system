@@ -4,9 +4,15 @@
   box-sizing: border-box;
 }
 
-@media (min-width: 752px) {
+@media (min-width: 732px) {
+  .container {
+    max-width: 1020px;
+    padding: 0 30px;
+  }
+}
+
+@media (min-width: 1281px) {
   .container {
     max-width: 1200px;
-    padding: 0 30px;
   }
 }
