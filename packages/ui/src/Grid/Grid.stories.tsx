@@ -8,6 +8,9 @@ import type {ColProps} from './components/Col';
 export default {
   title: 'Grid',
   component: Grid.Container,
+  parameters: {
+    layout: 'fullscreen',
+  },
 } as Meta;
 
 const containerStyles: CSSProperties = {
@@ -83,9 +86,9 @@ Default.args = {
 };
 Default.argTypes = {
   span: {
-    control: {type: 'range', min: 1, max: 12}
+    control: {type: 'range', min: 1, max: 12},
   },
   offset: {
-    control: {type: 'range', min: 1, max: 11}
-  }
-}
+    control: {type: 'range', min: 1, max: 11},
+  },
+};
