@@ -32,6 +32,7 @@
   --ui-color-lightInverse: #333333;
   --ui-color-lightInverseState: #a6a6a6;
 
+  --ui-color-disabled: #bfbfbf;
   --ui-color-danger: #e01935;
   --ui-color-warning: #ffa216;
   --ui-color-success: #18d15c;
@@ -46,8 +47,11 @@
 
   --ui-border-color: #d9d9d9;
 
-  --ui-border-radius-small: 5px;
-  --ui-border-radius: 10px;
+  --ui-border-radius-xs: 5px;
+  --ui-border-radius-s: 8px;
+  --ui-border-radius-m: 9px;
+  --ui-border-radius-l: 10px;
+  --ui-border-radius-xl: 12px;
   --ui-border-radius-large: 50px;
 
   --ui-box-shadow: 0px 5px 30px 5px #0000000d;

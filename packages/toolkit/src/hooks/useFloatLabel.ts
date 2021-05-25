@@ -1,14 +1,14 @@
 import {useCallback, useEffect, useState} from 'react';
 import type {FocusEventHandler, FocusEvent} from 'react';
 
-type FloatLabelState = [
+type FloatLabelState<T = HTMLInputElement> = [
   // Текущее состояние float-label
   boolean,
   {
     //  функция, которую нужно вызвать при фокусе
-    onFocus: FocusEventHandler<HTMLInputElement>;
+    onFocus: FocusEventHandler<T>;
     //  функция, которую нужно вызвать при блюре
-    onBlur: FocusEventHandler<HTMLInputElement>;
+    onBlur: FocusEventHandler<T>;
   },
 ];
 
@@ -23,13 +23,15 @@ type FloatLabelState = [
  *  onBlur,  // blur-хандлер для JSX input элемента
  * ]
  */
-export default function useFloatLabel(
+export default function useFloatLabel<
+  T extends HTMLElement & {value: string} = HTMLInputElement
+>(
   defaultValue = false,
   props: {
-    onFocus?: FocusEventHandler<HTMLInputElement>;
-    onBlur?: FocusEventHandler<HTMLInputElement>;
+    onFocus?: FocusEventHandler<T>;
+    onBlur?: FocusEventHandler<T>;
   },
-): FloatLabelState {
+): FloatLabelState<T> {
   const [floated, setFloated] = useState(defaultValue);
 
   useEffect(() => {
@@ -37,7 +39,7 @@ export default function useFloatLabel(
   }, [defaultValue]);
 
   const onFloatFocus = useCallback(
-    (ev: FocusEvent<HTMLInputElement>) => {
+    (ev: FocusEvent<T>) => {
       if (props.onFocus) props.onFocus(ev);
       setFloated(true);
     },
@@ -45,7 +47,7 @@ export default function useFloatLabel(
   );
 
   const onFloatBlur = useCallback(
-    (ev: FocusEvent<HTMLInputElement>) => {
+    (ev: FocusEvent<T>) => {
       if (props.onBlur) props.onBlur(ev);
       if (!ev.target.value) setFloated(false);
     },
