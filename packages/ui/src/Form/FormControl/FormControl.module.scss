@@ -1,0 +1,154 @@
+.form-control {
+  position: relative;
+
+  display: inline-block;
+
+  background: var(--ui-color-light);
+  border: 1px solid transparent;
+
+  color: var(--ui-color-lightInverse);
+
+  box-sizing: border-box;
+
+  &_block {
+    display: block;
+  }
+
+  &:not(&_disabled):hover {
+    background: var(--ui-color-lightState);
+  }
+
+  &_disabled {
+    color: var(--ui-color-disabled);
+  }
+
+  &_invalid {
+    border-color: var(--ui-color-primaryInverseState);
+  }
+
+  &_s {
+    padding: 8px 14px 9px;
+
+    border-radius: var(--ui-border-radius-s);
+
+    font-size: var(--ui-text-size-s);
+    font-weight: 400;
+    line-height: var(--ui-line-height-s);
+  }
+
+  &_m {
+    padding: 8px 14px 10px;
+
+    border-radius: var(--ui-border-radius-m);
+
+    font-size: var(--ui-text-size-m);
+    font-weight: 400;
+    line-height: var(--ui-line-height-m);
+  }
+
+  &_withLabel_m {
+    padding: 6px 14px 10px;
+    border-radius: var(--ui-border-radius-l);
+  }
+
+  &_l {
+    padding: 12px 14px 14px;
+    border-radius: var(--ui-border-radius-l);
+
+    font-size: var(--ui-text-size-l);
+    font-weight: 400;
+    line-height: var(--ui-line-height-l);
+  }
+
+  &_withLabel_l {
+    padding: 9px 14px 10px;
+  }
+
+  &_xl {
+    height: 65px; /* FF line-height bug */
+    padding: 18px 19px 19px;
+
+    border-radius: var(--ui-border-radius-xl);
+
+    font-size: var(--ui-text-size-xl);
+    font-weight: 600;
+    line-height: var(--ui-line-height-xl);
+  }
+}
+
+.form-control__flex {
+  display: inline-flex;
+  align-items: baseline;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.form-control__infix {
+  position: relative;
+  
+  flex: auto;
+  
+  display: block;
+  min-width: 0;
+  width: 100%;
+
+  &_withLabel {
+    padding-top: 17px; // Label line-height
+  }
+}
+
+.form-control__prefix,
+.form-control__suffix {
+  flex: none;
+  
+  line-height: inherit;
+  white-space: nowrap;
+
+  & > * {
+    display: inline-block;
+    vertical-align: middle;
+  }
+}
+.form-control__prefix {
+  align-self: flex-start;
+  margin-right: 7px;
+}
+.form-control__suffix {
+  align-self: baseline;
+  margin-left: 7px;
+}
+
+.form-control__label {
+  position: absolute;
+  left: 0;
+
+  display: inline-block;
+
+  width: 100%;
+  padding-bottom: 1px;
+
+  color: var(--ui-color-lightInverseState);
+  font: inherit;
+
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  vertical-align: middle;
+
+  transform: translate3d(0, -8px, 0);
+  transform-origin: 0 0;
+
+  transition-property: font-size, line-height, transform;
+  transition-duration: 0.1s;
+  transition-timing-function: ease-in-out;
+  will-change: font-size, line-height, transform;
+
+  pointer-events: none;
+
+  &_floated {
+    font-size: 13px;
+    line-height: 17px;
+
+    transform: translate3d(0, -16px, 0);
+  }
+}
