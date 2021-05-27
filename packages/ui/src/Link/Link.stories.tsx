@@ -12,13 +12,13 @@ export default {
 const Template: Story<LinkProps> = (args) => (
   <>
     <p>
-      <Link to="/foo/bar" {...args}>
+      <Link {...args} to="#">
         Обычный линк
       </Link>
     </p>
     <p>
       Lorem ipsum{' '}
-      <Link to="/foo/bar" {...args}>
+      <Link {...args} to="#">
         линк в тексте
       </Link>{' '}
       lorem ipsum
@@ -32,7 +32,7 @@ const Template: Story<LinkProps> = (args) => (
     </p>
     <p>
       Lorem ipsum{' '}
-      <Link {...args} disabled>
+      <Link {...args} to="#" disabled>
         неактивный линк
       </Link>{' '}
       lorem ipsum
