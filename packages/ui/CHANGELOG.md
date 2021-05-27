@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.5.1](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.5.0...@eruditorgroup/profi-ui@0.5.1) (2021-05-27)
+
+
+### Bug Fixes
+
+* **Text:** Remove default size ([d074588](https://github.com/eruditorgroup/profi-design-system/commit/d0745881741bd63e45aee6904410ab2816a203ec))
+
+
+
+
+
 # [0.5.0](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.4.1...@eruditorgroup/profi-ui@0.5.0) (2021-05-27)
 
 
