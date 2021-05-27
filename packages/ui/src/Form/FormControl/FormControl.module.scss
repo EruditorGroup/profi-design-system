@@ -33,7 +33,7 @@
 
     font-size: var(--ui-text-size-s);
     font-weight: 400;
-    line-height: var(--ui-line-height-s);
+    line-height: var(--ui-text-lineHeight-s);
   }
 
   &_m {
@@ -43,7 +43,7 @@
 
     font-size: var(--ui-text-size-m);
     font-weight: 400;
-    line-height: var(--ui-line-height-m);
+    line-height: var(--ui-text-lineHeight-m);
   }
 
   &_withLabel_m {
@@ -57,7 +57,7 @@
 
     font-size: var(--ui-text-size-l);
     font-weight: 400;
-    line-height: var(--ui-line-height-l);
+    line-height: var(--ui-text-lineHeight-l);
   }
 
   &_withLabel_l {
@@ -72,7 +72,7 @@
 
     font-size: var(--ui-text-size-xl);
     font-weight: 600;
-    line-height: var(--ui-line-height-xl);
+    line-height: var(--ui-text-lineHeight-xl);
   }
 }
 
