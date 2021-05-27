@@ -33,7 +33,7 @@
 
     font-size: var(--ui-text-size-s);
     font-weight: 400;
-    line-height: var(--ui-line-height-s);
+    line-height: var(--ui-text-lineHeight-s);
   }
 
   &_m {
@@ -43,7 +43,7 @@
 
     font-size: var(--ui-text-size-m);
     font-weight: 400;
-    line-height: var(--ui-line-height-m);
+    line-height: var(--ui-text-lineHeight-m);
   }
 
   &_withLabel_m {
@@ -57,7 +57,7 @@
 
     font-size: var(--ui-text-size-l);
     font-weight: 400;
-    line-height: var(--ui-line-height-l);
+    line-height: var(--ui-text-lineHeight-l);
   }
 
   &_withLabel_l {
@@ -65,14 +65,13 @@
   }
 
   &_xl {
-    height: 65px; /* FF line-height bug */
     padding: 18px 19px 19px;
 
     border-radius: var(--ui-border-radius-xl);
 
     font-size: var(--ui-text-size-xl);
     font-weight: 600;
-    line-height: var(--ui-line-height-xl);
+    line-height: var(--ui-text-lineHeight-xl);
   }
 }
 
@@ -99,22 +98,27 @@
 
 .form-control__prefix,
 .form-control__suffix {
+  
   flex: none;
   
   line-height: inherit;
   white-space: nowrap;
-
-  & > * {
-    display: inline-block;
-    vertical-align: middle;
-  }
 }
+// Prefixes aligned by center of Control's first line
 .form-control__prefix {
   align-self: flex-start;
   margin-right: 7px;
+
+  & > svg {
+    margin-top: 3px;
+  }
 }
+// Prefixes aligned by center of Control element
 .form-control__suffix {
-  align-self: baseline;
+  display: flex;
+  align-self: stretch;
+  align-items: center;
+
   margin-left: 7px;
 }
 
