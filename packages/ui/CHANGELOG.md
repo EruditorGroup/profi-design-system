@@ -3,6 +3,35 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.5.0](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.4.1...@eruditorgroup/profi-ui@0.5.0) (2021-05-27)
+
+
+### Bug Fixes
+
+* **Link:** Remove :global a ([5fdba1e](https://github.com/eruditorgroup/profi-design-system/commit/5fdba1eda4222b457f416e6de77765c2fe89cc72))
+* **ui:** add Input type prop defaults ([02349b4](https://github.com/eruditorgroup/profi-design-system/commit/02349b440abe2bbb5e3194d4250ce6f84c4d6863))
+* **ui:** change default Input size to "l" ([daceb0d](https://github.com/eruditorgroup/profi-design-system/commit/daceb0d79e15e7e1e900462d22c0010eabaaf822))
+* **ui:** Fix style import order ([0f4b3b3](https://github.com/eruditorgroup/profi-design-system/commit/0f4b3b3c9141d7b8bc3bd4e8e85765d2eade9226))
+* **ui:** Refactor Input with floating label styles ([4cc464d](https://github.com/eruditorgroup/profi-design-system/commit/4cc464d0ff4fd8eb40995dc2d72158fbf151c866))
+
+
+### Features
+
+* **Grid:** Adjust breakpoints ([20404b7](https://github.com/eruditorgroup/profi-design-system/commit/20404b7a26297143b13e7b9a21c294fe986df0b6))
+* **ui:** add Input component ([fc08374](https://github.com/eruditorgroup/profi-design-system/commit/fc0837446db445ae8fd1b57873fd529308eb4e78))
+* **ui:** add Input's Floating Label variant ([6503b31](https://github.com/eruditorgroup/profi-design-system/commit/6503b311e700d1aba1cb7edcedd84e26783ce55d))
+* **ui:** add InputUnit component ([220ad34](https://github.com/eruditorgroup/profi-design-system/commit/220ad34704edd9b6f7ca440965765a45cbfe9471))
+* **ui:** add support for Input's leading & trailing elements ([5d07fda](https://github.com/eruditorgroup/profi-design-system/commit/5d07fda88b267c198a7b064eb535449832a0cb12))
+* **ui:** add Textarea component ([34a3888](https://github.com/eruditorgroup/profi-design-system/commit/34a38885c3fd3991000f97d310279cec135d225d))
+* **ui:** Form Controls: better leading & trailing icons alignment ([412b48f](https://github.com/eruditorgroup/profi-design-system/commit/412b48f4856e8af616adf823b14b2df8ca072615))
+* **ui:** Form Controls: ensure that id is always set ([c24171b](https://github.com/eruditorgroup/profi-design-system/commit/c24171b095e29f5f5e61ffb7e374b372d2e71cef))
+* **ui:** refactor Input ([8857824](https://github.com/eruditorgroup/profi-design-system/commit/8857824c16c34feef3ba8922776280c6a58269b1))
+* **ui:** Textarea: add autosize feature ([9c39193](https://github.com/eruditorgroup/profi-design-system/commit/9c39193d7ea563df38be420fc1ee80a296e15247))
+
+
+
+
+
 ## [0.4.1](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.4.0...@eruditorgroup/profi-ui@0.4.1) (2021-05-21)
 
 
