@@ -7,7 +7,7 @@ import {ForwardingComponent, IColor, ISize} from 'uitype';
 
 export interface TextBaseProps {
   as: 'p' | 'span' | 'div' | 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6';
-  size: ISize;
+  size?: ISize;
   color?: IColor | 'muted';
   bold?: boolean;
 }
@@ -24,7 +24,7 @@ const TextBase: ForwardingComponent<'p', TextBaseProps> = forwardRef(
         className={classNames(
           styles['text'],
           common[`color-${color}`],
-          common[`size-${size}`],
+          size && common[`size-${size}`],
           {
             [styles[`bold`]]: bold,
             [styles[`color-text-muted`]]: color === 'muted',
