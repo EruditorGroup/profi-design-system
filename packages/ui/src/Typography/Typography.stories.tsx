@@ -6,6 +6,7 @@ import Title, {TitleProps} from './Title';
 
 export default {
   title: 'Text & Title',
+  component: Text,
 } as Meta;
 
 const td = {
@@ -13,7 +14,7 @@ const td = {
   border: '1px solid #ececec',
 };
 
-const Template: Story = () => {
+export const Default: Story<TextProps> = (args) => {
   return (
     <table cellPadding="10">
       <thead>
@@ -62,4 +63,11 @@ const Template: Story = () => {
   );
 };
 
-export const Default = Template.bind({});
+export const TextInsideText: Story<TextProps> = (args) => (
+  <Text size="xl">
+    Привет,{' '}
+    <Text as="span" bold>
+      Мир!
+    </Text>
+  </Text>
+);

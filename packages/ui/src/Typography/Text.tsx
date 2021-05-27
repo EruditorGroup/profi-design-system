@@ -10,9 +10,10 @@ export interface TextProps
   bold?: boolean;
 }
 
-const Text: ForwardingComponent<'p', TextProps> = forwardRef(
-  ({size = 'm', bold = false, as = 'p', ...props}, ref) => {
-    return <TextBase as={as} size={size} bold={bold} {...props} ref={ref} />;
-  },
-);
+const Text: ForwardingComponent<'p', TextProps> = forwardRef(function Text(
+  {size, bold = false, as = 'p', ...props},
+  ref,
+) {
+  return <TextBase as={as} size={size} bold={bold} {...props} ref={ref} />;
+});
 export default Text;
