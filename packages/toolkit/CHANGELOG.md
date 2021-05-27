@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.2.0](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-toolkit@0.1.3...@eruditorgroup/profi-toolkit@0.2.0) (2021-05-27)
+
+
+### Features
+
+* **toolkit:** change signature useFloatLabel to generic ([cc18d44](https://github.com/eruditorgroup/profi-design-system/commit/cc18d44a7ea21c4610cc4606db3364f7d1a78514))
+
+
+
+
+
 ## [0.1.3](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-toolkit@0.1.2...@eruditorgroup/profi-toolkit@0.1.3) (2021-05-17)
 
 **Note:** Version bump only for package @eruditorgroup/profi-toolkit
