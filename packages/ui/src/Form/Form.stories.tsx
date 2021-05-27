@@ -28,10 +28,11 @@ const Template: Story = ({placeholder = 'Label', ...args}) => (
           style={{
             height: '14px',
             width: '17px',
+            marginTop: '5px',
             borderRadius: '2px',
             background:
               'linear-gradient(-180deg, #fff 33.3%, #1653EF 33.3%, #1653EF 66.6%, #EE1B39 66.6%)',
-            transform: 'translateY(-1.5px)',
+            transform: 'translateY(-0.5px)',
           }}
         />
       }
@@ -41,19 +42,7 @@ const Template: Story = ({placeholder = 'Label', ...args}) => (
       minRows={3}
       className="preview-item"
       placeholder="Оставьте отзыв..."
-      leading={
-        // Russian flag
-        <div
-          style={{
-            height: '14px',
-            width: '17px',
-            borderRadius: '2px',
-            background:
-              'linear-gradient(-180deg, #fff 33.3%, #1653EF 33.3%, #1653EF 66.6%, #EE1B39 66.6%)',
-            transform: 'translateY(-1.5px)',
-          }}
-        />
-      }
+      leading={<LocationIcon />}
     />
     <Input
       {...args}
