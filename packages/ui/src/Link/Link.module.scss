@@ -1,14 +1,10 @@
-:global(a) {
+.link {
   color: var(--ui-color-link);
   text-decoration: none;
 
   &:hover {
     text-decoration: underline;
   }
-}
-
-.color-brand {
-  color: var(--ui-color-brand);
 }
 
 .disabled,
