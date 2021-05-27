@@ -16,7 +16,7 @@
     "packages/*"
   ],
   "scripts": {
-    "clean": "lerna exec --parallel -- rimraf lib dist",
+    "clean": "lerna exec --parallel -- rimraf lib dist es",
     "start": "start-storybook -p 6006",
     "build": "yarn build:cjs && yarn build:esm && yarn build:bundle",
     "build:cjs": "yarn build:cjs-types && yarn build:cjs-babel",
