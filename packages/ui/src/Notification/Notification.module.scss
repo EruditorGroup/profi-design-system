@@ -16,5 +16,11 @@
   letter-spacing: 0.4px;
   vertical-align: middle;
 
+  user-select: none;
   box-sizing: border-box;
+
+  &_disabled {
+    background: var(--ui-color-lightInverseState);
+    color: var(--ui-color-primaryInverse);
+  }
 }
