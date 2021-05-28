@@ -17,9 +17,9 @@ const CloseIcon: ForwardRefExoticComponent<IconPropsType> = forwardRef(
         <path
           d="M4 3.5L14 13.5M4 13.5L14 3.5"
           stroke="currentColor"
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
         />
       </svg>
     );

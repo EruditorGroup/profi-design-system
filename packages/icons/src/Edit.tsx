@@ -25,7 +25,7 @@ const EditIcon: ForwardRefExoticComponent<IconPropsType> = forwardRef(
         <path
           d="M8.5 3H5.5C3.84315 3 2.5 4.34315 2.5 6V11.25C2.5 12.9069 3.84315 14.25 5.5 14.25H10.75C12.4069 14.25 13.75 12.9069 13.75 11.25V8.25003"
           stroke="currentColor"
-          stroke-width="1.5"
+          strokeWidth="1.5"
         />
       </svg>
     );
