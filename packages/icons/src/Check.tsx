@@ -17,9 +17,9 @@ const CheckIcon: ForwardRefExoticComponent<IconPropsType> = forwardRef(
         <path
           d="M2.5 8.25L6.7 12.25L14 3.25"
           stroke="currentColor"
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
         />
       </svg>
     );

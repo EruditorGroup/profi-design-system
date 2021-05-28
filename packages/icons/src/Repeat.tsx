@@ -17,9 +17,9 @@ const RepeatIcon: ForwardRefExoticComponent<IconPropsType> = forwardRef(
         <path
           d="M13 4.125H8C5.23858 4.125 3 6.36358 3 9.125V9.125C3 11.8864 5.23858 14.125 8 14.125V14.125C10.7614 14.125 13 11.8864 13 9.125V9.125M13 4.125L11 1.875M13 4.125L11 5.875"
           stroke="currentColor"
-          stroke-width="1.5"
-          stroke-linecap="round"
-          stroke-linejoin="round"
+          strokeWidth="1.5"
+          strokeLinecap="round"
+          strokeLinejoin="round"
         />
       </svg>
     );

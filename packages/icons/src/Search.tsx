@@ -14,19 +14,13 @@ const SearchIcon: ForwardRefExoticComponent<IconPropsType> = forwardRef(
         {...props}
         ref={ref}
       >
-        <circle
-          cx="8.5"
-          cy="7.5"
-          r="6"
-          stroke="currentColor"
-          stroke-width="2"
-        />
+        <circle cx="8.5" cy="7.5" r="6" stroke="currentColor" strokeWidth="2" />
         <path
           d="M12.5 12.5L15.5 15.5"
           stroke="currentColor"
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
         />
       </svg>
     );
