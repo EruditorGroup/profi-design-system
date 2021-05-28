@@ -15,8 +15,8 @@ const MenuIcon: ForwardRefExoticComponent<IconPropsType> = forwardRef(
         ref={ref}
       >
         <path
-          fill-rule="evenodd"
-          clip-rule="evenodd"
+          fillRule="evenodd"
+          clipRule="evenodd"
           d="M2 17H20V15H2V17ZM2 12H20V10H2V12ZM2 5V7H20V5H2Z"
           fill="currentColor"
         />

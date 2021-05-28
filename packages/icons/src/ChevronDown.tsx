@@ -17,9 +17,9 @@ const ChevronDownIcon: ForwardRefExoticComponent<IconPropsType> = forwardRef(
         <path
           d="M13.9999 6L9.00006 11L4.00006 6"
           stroke="currentColor"
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
         />
       </svg>
     );

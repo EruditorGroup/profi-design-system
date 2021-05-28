@@ -17,9 +17,9 @@ const ArrowRightIcon: ForwardRefExoticComponent<IconPropsType> = forwardRef(
         <path
           d="M2.75 9H16.75M16.75 9L10.75 3M16.75 9L10.75 15"
           stroke="currentColor"
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
         />
       </svg>
     );
