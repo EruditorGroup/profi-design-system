@@ -13,17 +13,17 @@ export interface TextBaseProps {
 }
 
 const TextBase: ForwardingComponent<'p', TextBaseProps> = forwardRef(
-  (
-    {bold, size, color = 'secondary', as: Component, className, ...props},
+  function TextBase(
+    {bold, size, color, as: Component, className, ...props},
     ref,
-  ) => {
+  ) {
     return (
       <Component
         {...props}
         ref={ref}
         className={classNames(
           styles['text'],
-          common[`color-${color}`],
+          color && common[`color-${color}`],
           size && common[`size-${size}`],
           {
             [styles[`bold`]]: bold,
