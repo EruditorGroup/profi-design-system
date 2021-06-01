@@ -9,7 +9,12 @@ export default {
   component: Link,
 } as Meta;
 
-const Template: Story<LinkProps> = (args) => (
+const td = {
+  color: `var(--ui-color-secondary})`,
+  border: '1px solid #ececec',
+};
+
+export const Default: Story<LinkProps> = (args) => (
   <>
     <p>
       <Link {...args} to="#">
@@ -54,4 +59,35 @@ const Template: Story<LinkProps> = (args) => (
   </>
 );
 
-export const Default = Template.bind({});
+export const Sizes: Story<LinkProps> = (args) => {
+  return (
+    <table cellPadding="10">
+      <thead>
+        <tr>
+          <th></th>
+          <th>Regular</th>
+          <th>Bold</th>
+        </tr>
+      </thead>
+      <tbody>
+        {(['xs', 's', 'm', 'l'] as LinkProps['size'][]).map((size) => (
+          <tr>
+            <td style={td} key={size}>
+              Link: {size.toUpperCase()}
+            </td>
+            <td style={td}>
+              <Link size={size} to="#">
+                Съешь ещё этих мягких французских булок
+              </Link>
+            </td>
+            <td style={td}>
+              <Link size={size} to="#" bold>
+                Съешь ещё этих мягких французских булок
+              </Link>
+            </td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  );
+};

@@ -3,7 +3,7 @@ import classNames from 'classnames';
 
 import styles from './TextBase.module.scss';
 import common from '../../styles/common.module.css';
-import {ForwardingComponent, IColor, ISize} from 'uitype';
+import type {ForwardingComponent, IColor, ISize} from 'uitype';
 
 export interface TextBaseProps {
   as: 'p' | 'span' | 'div' | 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6';
