@@ -3,6 +3,24 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.6.0](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.5.1...@eruditorgroup/profi-ui@0.6.0) (2021-06-01)
+
+
+### Bug Fixes
+
+* Отступы внутри DropdownPortal ([b701be8](https://github.com/eruditorgroup/profi-design-system/commit/b701be8e2f4c3036bfda03034cb13b57db0dd279))
+
+
+### Features
+
+* Size и disabled у Link ([894e481](https://github.com/eruditorgroup/profi-design-system/commit/894e481e9c979f279bc6ac0229fb4e1d772fea79))
+* **ui:** Notification Badge - add "disabled" state ([b72468f](https://github.com/eruditorgroup/profi-design-system/commit/b72468f09269c7967625c3381e6a63cfe0a67341))
+* **ui:** Notification badges ([811e2cc](https://github.com/eruditorgroup/profi-design-system/commit/811e2ccf7b1f959109a776161e6dd3ff2ad9d9ff))
+
+
+
+
+
 ## [0.5.1](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.5.0...@eruditorgroup/profi-ui@0.5.1) (2021-05-27)
 
 
