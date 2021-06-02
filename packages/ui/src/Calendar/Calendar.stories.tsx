@@ -45,7 +45,7 @@ const Template: Story<CalendarProps> = ({
         forceMonth={forceMonth}
         selectedDays={dates}
         onChange={(newDates: readonly Date[]) => setDates(newDates)}
-        style={{maxWidth: '265px', margin: '0 10px'}}
+        style={{maxWidth: '250px', margin: '0 10px'}}
       />
       <pre
         style={{
