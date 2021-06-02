@@ -1,7 +1,7 @@
 import React, {CSSProperties, useMemo, useState} from 'react';
 import classnames from 'classnames';
 
-import {default as Calendar} from '../Calendar';
+import Calendar from '../Calendar';
 import type {CalendarProps} from '../Calendar';
 import styles from './DualCalendar.module.scss';
 
