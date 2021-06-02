@@ -1,0 +1,9 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.container__spacer {
+  flex: none;
+  width: 30px;
+}
