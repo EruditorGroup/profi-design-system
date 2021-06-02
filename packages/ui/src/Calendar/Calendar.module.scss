@@ -16,18 +16,18 @@
 
 .header__title {
   flex-grow: 1;
-  
+
   padding: 9px 10px;
 
   &_left {
     order: -1;
     text-align: left;
   }
-  
+
   &_center {
     text-align: center;
   }
-  
+
   &_right {
     order: 1;
     text-align: right;
@@ -96,12 +96,12 @@
   &_today {
     font-weight: 600;
   }
-  
+
   &_disabled {
     color: var(--ui-color-lightInverseState);
     cursor: default;
   }
-  
+
   &_selected {
     background: var(--ui-color-secondary);
     color: var(--ui-color-secondaryInverse);
@@ -115,4 +115,13 @@
       color: var(--ui-color-secondaryInverseState);
     }
   }
+}
+
+.dual-container {
+  display: flex;
+  justify-content: space-between;
+}
+.dual-container__spacer {
+  flex: none;
+  width: 30px;
 }

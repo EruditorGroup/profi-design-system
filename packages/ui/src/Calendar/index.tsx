@@ -39,7 +39,7 @@ export type CalendarProps = Omit<HTMLAttributes<HTMLDivElement>, 'onChange'> & {
   onChange?: (dates: ReadonlyArray<Date>) => void;
   onMonthChange?: (newMonth: Date) => void;
 
-  children: never;
+  children?: never;
 };
 
 const Calendar: React.FC<CalendarProps> = ({
