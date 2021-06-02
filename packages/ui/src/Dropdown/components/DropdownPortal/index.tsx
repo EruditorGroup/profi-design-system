@@ -14,13 +14,21 @@ import {useClickOutside} from '@eruditorgroup/profi-toolkit';
 export interface DropdownPortalProps extends HTMLAttributes<HTMLDivElement> {
   animated?: boolean;
   position?: 'bottom-left' | 'bottom-right' | 'top-left' | 'top-right';
+  fit?: boolean;
 }
 
 const DropdownPortal: ForwardRefExoticComponent<
   DropdownPortalProps & RefAttributes<HTMLDivElement>
 > = forwardRef(
   (
-    {animated = true, style, position = 'bottom-left', className, ...props},
+    {
+      animated = true,
+      style,
+      position = 'bottom-left',
+      fit,
+      className,
+      ...props
+    },
     ref,
   ) => {
     const _ref = useRef() as React.MutableRefObject<HTMLDivElement | null>;
@@ -50,7 +58,11 @@ const DropdownPortal: ForwardRefExoticComponent<
             if (typeof ref === 'function') ref(el);
             else if (ref) ref.current = el;
           }}
-          className={classNames(styles['dropdown-area'], className)}
+          className={classNames(
+            styles['dropdown-area'],
+            fit && styles['fit'],
+            className,
+          )}
           {...props}
           style={{...style}}
         />

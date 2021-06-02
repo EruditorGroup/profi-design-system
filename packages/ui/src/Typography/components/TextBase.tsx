@@ -3,7 +3,7 @@ import classNames from 'classnames';
 
 import styles from './TextBase.module.scss';
 import common from '../../styles/common.module.css';
-import {ForwardingComponent, IColor, ISize} from 'uitype';
+import type {ForwardingComponent, IColor, ISize} from 'uitype';
 
 export interface TextBaseProps {
   as: 'p' | 'span' | 'div' | 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6';
@@ -13,17 +13,17 @@ export interface TextBaseProps {
 }
 
 const TextBase: ForwardingComponent<'p', TextBaseProps> = forwardRef(
-  (
-    {bold, size, color = 'secondary', as: Component, className, ...props},
+  function TextBase(
+    {bold, size, color, as: Component, className, ...props},
     ref,
-  ) => {
+  ) {
     return (
       <Component
         {...props}
         ref={ref}
         className={classNames(
           styles['text'],
-          common[`color-${color}`],
+          color && common[`color-${color}`],
           size && common[`size-${size}`],
           {
             [styles[`bold`]]: bold,
