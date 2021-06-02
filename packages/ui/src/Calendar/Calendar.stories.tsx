@@ -104,7 +104,7 @@ const DualTemplate: Story<DualCalendarProps> = ({
         selectedDays={dates}
         onChange={(newDates: readonly Date[]) => setDates(newDates)}
         containerStyle={{
-          width: '530px',
+          maxWidth: '530px',
           padding: '0 10px',
         }}
       />
