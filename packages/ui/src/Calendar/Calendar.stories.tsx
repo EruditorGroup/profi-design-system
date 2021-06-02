@@ -3,8 +3,8 @@ import {Story, Meta} from '@storybook/react';
 
 import {isValidDate, shiftDate} from '@eruditorgroup/profi-toolkit';
 
-import Calendar, {CalendarProps} from './index';
-import DualCalendar, {DualCalendarProps} from './DualCalendar';
+import Calendar, {CalendarProps} from './components/Calendar';
+import DualCalendar, {DualCalendarProps} from './components/DualCalendar';
 
 export default {
   title: 'Calendar',

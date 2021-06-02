@@ -1,9 +1,9 @@
 import React, {CSSProperties, useMemo, useState} from 'react';
 import classnames from 'classnames';
 
-import {default as Calendar} from './index';
-import type {CalendarProps} from './index';
-import styles from './Calendar.module.scss';
+import {default as Calendar} from '../Calendar';
+import type {CalendarProps} from '../Calendar';
+import styles from './DualCalendar.module.scss';
 
 export type DualCalendarProps = CalendarProps & {
   containerClassName?: string;
@@ -38,7 +38,7 @@ const DualCalendar: React.FC<DualCalendarProps> = ({
 
   return (
     <div
-      className={classnames(styles['dual-container'], containerClassName)}
+      className={classnames(styles['container'], containerClassName)}
       style={containerStyle}
     >
       <Calendar
@@ -48,7 +48,7 @@ const DualCalendar: React.FC<DualCalendarProps> = ({
         forceMonth={month}
         onMonthChange={onMonthChange()}
       />
-      <div className={styles['dual-container__spacer']} />
+      <div className={styles['container__spacer']} />
       <Calendar
         {...props}
         hideMonthBack
