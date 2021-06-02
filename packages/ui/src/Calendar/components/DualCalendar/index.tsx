@@ -14,6 +14,7 @@ const DualCalendar: React.FC<DualCalendarProps> = ({
   selectedDays = [],
   forceMonth,
   onMonthChange: _onMonthChange,
+  className,
   containerClassName,
   containerStyle,
   ...props
@@ -46,14 +47,15 @@ const DualCalendar: React.FC<DualCalendarProps> = ({
         hideMonthForward
         selectedDays={selectedDays}
         forceMonth={month}
+        className={classnames(styles['calendar'], className)}
         onMonthChange={onMonthChange()}
       />
-      <div className={styles['container__spacer']} />
       <Calendar
         {...props}
         hideMonthBack
         selectedDays={selectedDays}
         forceMonth={supplimentaryMonth}
+        className={classnames(styles['calendar'], className)}
         onMonthChange={onMonthChange(1)}
       />
     </div>

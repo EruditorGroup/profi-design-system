@@ -1,9 +1,19 @@
 .container {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 
-.container__spacer {
-  flex: none;
-  width: 30px;
+@media screen and (min-width: 732px) {
+  .container {
+    flex-wrap: nowrap;
+  }
+
+  .calendar {
+    flex: 1 1 auto;
+
+    &:not(:last-of-type) {
+      margin-right: 30px;
+    }
+  }
 }
