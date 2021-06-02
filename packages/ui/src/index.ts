@@ -19,6 +19,11 @@ export type {BlockProps} from './Block';
 export {default as Wrapper} from './Wrapper';
 export type {WrapperProps} from './Wrapper';
 
+export {default as Calendar} from './Calendar';
+export type {CalendarProps} from './Calendar';
+export {default as DualCalendar} from './Calendar/DualCalendar';
+export type {DualCalendarProps} from './Calendar/DualCalendar';
+
 export {
   wrapControlWithRef,
   FormControl,
