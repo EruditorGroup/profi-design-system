@@ -52,10 +52,14 @@
   flex-direction: column;
   background: #fff;
   border-radius: var(--ui-border-radius-l);
-  padding: 10px 0;
+  padding: 5px;
   max-width: 450px;
   min-width: 300px;
   font-family: var(--font-family);
+}
+
+.fit {
+  padding: 0;
 }
 
 .horizontal-left {
