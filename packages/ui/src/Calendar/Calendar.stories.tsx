@@ -19,7 +19,7 @@ const Template: Story<CalendarProps> = ({
   forceMonth,
   ...args
 }) => {
-  const [dates, setDates] = useState<readonly Date[]>(
+  const [dates, setDates] = useState<Date[]>(
     args.selectedDays || [
       new Date(TODAY.getFullYear(), TODAY.getMonth(), TODAY.getDate() + 1),
       new Date(TODAY.getFullYear(), TODAY.getMonth(), TODAY.getDate() + 2),
@@ -44,7 +44,7 @@ const Template: Story<CalendarProps> = ({
         maxDate={maxDate}
         forceMonth={forceMonth}
         selectedDays={dates}
-        onChange={(newDates: readonly Date[]) => setDates(newDates)}
+        onChange={(newDates: Date[]) => setDates(newDates)}
         style={{maxWidth: '250px', margin: '0 10px'}}
       />
       <pre
@@ -81,7 +81,7 @@ const DualTemplate: Story<DualCalendarProps> = ({
   ...args
 }) => {
   const TODAY = new Date();
-  const [dates, setDates] = useState<readonly Date[]>(
+  const [dates, setDates] = useState<Date[]>(
     args.selectedDays || [
       new Date(TODAY.getFullYear(), TODAY.getMonth(), TODAY.getDate() + 1),
       new Date(TODAY.getFullYear(), TODAY.getMonth(), TODAY.getDate() + 2),
@@ -102,7 +102,7 @@ const DualTemplate: Story<DualCalendarProps> = ({
         minDate={minDate}
         maxDate={maxDate}
         selectedDays={dates}
-        onChange={(newDates: readonly Date[]) => setDates(newDates)}
+        onChange={(newDates: Date[]) => setDates(newDates)}
         containerStyle={{
           maxWidth: '530px',
           padding: '0 10px',
