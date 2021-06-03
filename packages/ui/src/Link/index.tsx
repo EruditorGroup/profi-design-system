@@ -19,6 +19,7 @@ export interface LinkProps
   bold?: boolean;
   underlined?: boolean;
   disabled?: boolean;
+  clear?: boolean;
 }
 
 const Link: ForwardRefExoticComponent<
@@ -34,6 +35,7 @@ const Link: ForwardRefExoticComponent<
       size,
       className,
       onClick: onClickOrigin,
+      clear,
       ...props
     },
     ref,
@@ -53,7 +55,7 @@ const Link: ForwardRefExoticComponent<
         ref={ref}
         href={href}
         className={classnames(
-          styles['link'],
+          !clear && styles['link'],
           block && styles['block'],
           disabled && styles['disabled'],
           underlined && styles['underlined'],
