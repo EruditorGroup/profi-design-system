@@ -1,25 +1,37 @@
 $columnsInRow: 12;
 
-.col {
-  padding: 0 10px;
-  flex: 1 0 0%;
-  box-sizing: border-box;
-
+@mixin generateGrid($size: null) {
   @for $i from 1 through $columnsInRow {
+    $infix: if($size != null, '#{$size}-', '');
     $col: percentage($i / $columnsInRow);
-    &_span-#{$i} {
+
+    .col_#{$infix}span-#{$i} {
       flex: 0 0 auto;
       width: $col;
     }
 
-    &_offset-#{$i} {
+    .col_#{$infix}offset-#{$i} {
       margin-left: $col;
     }
   }
 }
 
+.col {
+  padding: 0 10px;
+  flex: 1 0 0%;
+  box-sizing: border-box;
+}
+
+@include generateGrid();
+
 @media (min-width: 732px) {
   .col {
     padding: 0 30px;
   }
+
+  @include generateGrid('m');
+}
+
+@media (min-width: 1280px) {
+  @include generateGrid('l');
 }
