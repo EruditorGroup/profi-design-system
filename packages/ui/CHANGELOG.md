@@ -3,6 +3,28 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.8.0](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.7.0...@eruditorgroup/profi-ui@0.8.0) (2021-06-03)
+
+
+### Features
+
+* **Grid:** Добавлена возможность задавать span/offset для каждого брейкпоинта ([f6ba38c](https://github.com/eruditorgroup/profi-design-system/commit/f6ba38c6a9784a0a233b31f93faf1c1352ebdee1))
+
+
+
+
+
+# [0.7.0](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.6.0...@eruditorgroup/profi-ui@0.7.0) (2021-06-03)
+
+
+### Features
+
+* **Text:** Удалил цвет по умолчанию ([848c5cd](https://github.com/eruditorgroup/profi-design-system/commit/848c5cd1f7442b03d7b0c97ff1376cb11729a0de))
+
+
+
+
+
 # [0.6.0](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.5.1...@eruditorgroup/profi-ui@0.6.0) (2021-06-01)
 
 

@@ -75,6 +75,10 @@ const Template: Story<ColProps> = ({span, offset}) => {
           span={span} offset={offset}
         </Grid.Col>
       </Grid.Row>
+      <Grid.Row style={rowStyles}>
+        <Grid.Col style={colStyles} l={5} m={2}>l=5 m=2</Grid.Col>
+        <Grid.Col style={colStyles} m={{span: 3, offset: 1}}>{`m={span: 3, offset: 1}`}</Grid.Col>
+      </Grid.Row>
     </Grid.Container>
   );
 };
