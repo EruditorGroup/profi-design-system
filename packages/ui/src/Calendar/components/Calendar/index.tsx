@@ -25,7 +25,7 @@ import {
 export type SelectionMode = 'Single' | 'Multi' | 'Pair';
 
 export type CalendarProps = Omit<HTMLAttributes<HTMLDivElement>, 'onChange'> & {
-  selectedDays?: ReadonlyArray<Date>;
+  selectedDays?: Date[];
   forceMonth?: Date;
   minDate?: Date;
   maxDate?: Date;
@@ -36,7 +36,7 @@ export type CalendarProps = Omit<HTMLAttributes<HTMLDivElement>, 'onChange'> & {
   hideWeekdays?: boolean;
   monthAlign?: 'center' | 'left' | 'right';
 
-  onChange?: (dates: ReadonlyArray<Date>) => void;
+  onChange?: (dates: Date[]) => void;
   onMonthChange?: (newMonth: Date) => void;
 
   children?: never;
