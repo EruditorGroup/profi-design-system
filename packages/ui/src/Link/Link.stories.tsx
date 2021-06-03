@@ -22,6 +22,11 @@ export const Default: Story<LinkProps> = (args) => (
       </Link>
     </p>
     <p>
+      <Link {...args} to="#" clear>
+        Ссылка без стилей (для использования в качестве `as`)
+      </Link>
+    </p>
+    <p>
       Lorem ipsum{' '}
       <Link {...args} to="#">
         линк в тексте
