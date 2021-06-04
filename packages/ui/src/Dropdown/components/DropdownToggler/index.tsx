@@ -7,7 +7,7 @@ import {ForwardingComponent} from 'uitype';
 
 const DropdownToggler: ForwardingComponent<
   'div',
-  {children: React.ReactNode}
+  {children?: React.ReactNode}
 > = forwardRef(({className, as: Component = 'div', ...props}, ref) => {
   const context = useContext(DropdownContext);
 
