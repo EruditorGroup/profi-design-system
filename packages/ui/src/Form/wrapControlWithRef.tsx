@@ -15,7 +15,7 @@ export type ControlProps<T extends BaseControlProps = BaseControlProps> = T &
     children?: never;
   };
 
-const controlFactory = <
+const wrapControlWithRef = <
   HTMLElementType extends HTMLElementWithValue,
   PropsType extends BaseControlProps<HTMLElementType> & FormControlProps
 >(
@@ -93,4 +93,4 @@ const controlFactory = <
   );
 };
 
-export default controlFactory;
+export default wrapControlWithRef;
