@@ -12,6 +12,8 @@ import type {BareInputProps} from '../BareInput';
 
 import styles from './BareInputUnit.module.scss';
 
+const UNIT_TO_INPUT_MARGIN = 4;
+
 export type BareInputUnitProps = BareInputProps & {
   withFloatLabel?: boolean;
   unit: ReactNode;
@@ -46,7 +48,9 @@ const BareInputUnit: React.FC<BareInputUnitProps> = ({
 
   const overflowUnitPadStyles = {
     paddingRight: unitRef.current
-      ? `${unitRef.current.getBoundingClientRect().width + 4}px`
+      ? `${
+          unitRef.current.getBoundingClientRect().width + UNIT_TO_INPUT_MARGIN
+        }px`
       : undefined,
   };
 
