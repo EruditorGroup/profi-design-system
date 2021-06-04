@@ -19,13 +19,13 @@ export const BaseStory = Template.bind({});
 BaseStory.storyName = 'Datepicker';
 BaseStory.args = {
   value: shiftDate(new Date(), 1),
-  minDate: shiftDate(new Date(), -40),
+  minDate: new Date(),
 };
 
 const StoryStyles = () => (
   <style>{`
   .preview {
-    width: 320px;
+    max-width: 320px;
   }
   .preview-item {
     margin-bottom: 30px;
