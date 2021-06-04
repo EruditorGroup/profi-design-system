@@ -98,6 +98,7 @@
 
 .form-control__prefix,
 .form-control__suffix {
+  display: inline-flex;
   
   flex: none;
   
@@ -115,7 +116,6 @@
 }
 // Prefixes aligned by center of Control element
 .form-control__suffix {
-  display: flex;
   align-self: stretch;
   align-items: center;
 
