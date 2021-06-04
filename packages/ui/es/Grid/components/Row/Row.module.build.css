@@ -1,0 +1,11 @@
+/*  imported from Row.module.scss  */
+
+.row-1q6sj {
+  margin: 0 -10px;
+  display: flex;
+  flex-wrap: wrap;
+  box-sizing: border-box; }
+
+@media (min-width: 732px) {
+  .row-1q6sj {
+    margin: 0 -30px; } }

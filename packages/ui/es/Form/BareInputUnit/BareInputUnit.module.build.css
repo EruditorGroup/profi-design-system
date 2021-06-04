@@ -1,0 +1,24 @@
+/*  imported from BareInputUnit.module.scss  */
+
+.input-unit-H3t8P {
+  position: relative; }
+
+.input-unit__input-dPZf2 {
+  position: relative;
+  z-index: 2; }
+
+.input-unit__stretcher-3_4Zb {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  display: flex;
+  align-items: center; }
+
+.input-unit__value-vLaDY {
+  margin-right: 4px;
+  opacity: 0;
+  flex: 0 1 auto;
+  min-width: 1px; }

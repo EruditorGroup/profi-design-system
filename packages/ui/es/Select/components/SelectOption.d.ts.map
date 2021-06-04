@@ -1,0 +1,1 @@
+{"version":3,"file":"SelectOption.d.ts","sourceRoot":"","sources":["../../../src/Select/components/SelectOption.tsx"],"names":[],"mappings":"AACA,OAAO,KAAK,EACV,oBAAoB,EACpB,yBAAyB,EACzB,aAAa,EACd,MAAM,OAAO,CAAC;AAGf,oBAAY,iBAAiB,GAAG,oBAAoB,CAAC,iBAAiB,CAAC,CAAC;AAExE,QAAA,MAAM,YAAY,EAAE,yBAAyB,CAC3C,iBAAiB,GAAG,aAAa,CAAC,iBAAiB,CAAC,CAWpD,CAAC;AAIH,eAAe,YAAY,CAAC"}

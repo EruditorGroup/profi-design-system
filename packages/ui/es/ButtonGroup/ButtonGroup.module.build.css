@@ -1,0 +1,16 @@
+/*  imported from ButtonGroup.module.scss  */
+
+.group-21Fth {
+  display: inline-flex;
+  justify-content: space-between;
+  flex-flow: row nowrap;
+  border-radius: var(--ui-border-radius-l);
+  overflow: hidden; }
+  .group-21Fth > * {
+    width: 100%;
+    border-radius: 0; }
+    .group-21Fth > *:nth-child(n + 2) {
+      border-left: 1px solid var(--ui-color-mediumGrey); }
+
+.block-27kIq {
+  display: flex; }

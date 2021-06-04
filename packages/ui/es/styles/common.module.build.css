@@ -1,0 +1,49 @@
+/*  imported from common.module.css  */
+
+.color-brand-h5Cyd {
+  color: var(--ui-color-brand); }
+
+.color-primary-A7lMg {
+  color: var(--ui-color-primary); }
+
+.color-secondary-2cS18 {
+  color: var(--ui-color-secondary); }
+
+.color-light-2laSu {
+  color: var(--ui-color-secondary); }
+
+.color-danger-12hTX {
+  color: var(--ui-color-danger); }
+
+.color-success-2wEne {
+  color: var(--ui-color-success); }
+
+.color-warning-Hpz_8 {
+  color: var(--ui-color-warning); }
+
+.size-xs-3yjq_ {
+  font-size: var(--ui-text-size-xs);
+  line-height: var(--ui-text-lineHeight-xs); }
+
+.size-s-3zQju {
+  font-size: var(--ui-text-size-s);
+  line-height: var(--ui-text-lineHeight-s); }
+
+.size-m-2guU_ {
+  font-size: var(--ui-text-size-m);
+  line-height: var(--ui-text-lineHeight-m); }
+
+.size-l-2R6Zj {
+  font-size: var(--ui-text-size-l);
+  line-height: var(--ui-text-lineHeight-l); }
+
+.size-xl-3UmLL {
+  font-size: var(--ui-text-size-xl);
+  line-height: var(--ui-text-lineHeight-xl); }
+
+.size-xxl-2nH5c {
+  font-size: var(--ui-text-size-xxl);
+  line-height: var(--ui-text-lineHeight-xxl); }
+
+.size-huge-1MGuM {
+  font-size: var(--ui-text-size-huge); }

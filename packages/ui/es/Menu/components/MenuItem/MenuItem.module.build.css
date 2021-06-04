@@ -1,0 +1,50 @@
+/*  imported from MenuItem.module.scss  */
+
+.item-31lWS {
+  padding: 10px 20px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+  color: #000;
+  user-select: none; }
+  .item-31lWS svg {
+    flex-shrink: 0;
+    margin-right: 10px; }
+
+.rounded-2f4rM {
+  border-radius: var(--ui-border-radius-xs); }
+
+.design-light-3FCYu {
+  color: var(--ui-color-secondary); }
+  .design-light-3FCYu:hover {
+    background: var(--ui-bg-light);
+    color: var(--ui-color-secondary); }
+  .design-light-3FCYu:active {
+    background: var(--ui-bg-lightState);
+    color: var(--ui-color-secondary); }
+  .design-light-3FCYu.current-GGE42 {
+    background: var(--ui-bg-lightState);
+    color: var(--ui-color-secondary); }
+
+.disabled-3Di1y {
+  color: var(--ui-color-secondaryInverseState);
+  cursor: default; }
+  .disabled-3Di1y:hover {
+    color: var(--ui-color-secondaryInverseState);
+    background: white; }
+  .disabled-3Di1y:active {
+    color: var(--ui-color-secondaryInverseState);
+    background: white; }
+
+.divided-22Gwf {
+  margin-top: 20px; }
+  .divided-22Gwf:before {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 100%;
+    top: -10px;
+    left: 0;
+    border-top: 1px solid var(--ui-color-light); }

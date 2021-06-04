@@ -1,0 +1,1 @@
+{"version":3,"file":"index.d.ts","sourceRoot":"","sources":["../../src/Notification/index.tsx"],"names":[],"mappings":"AAAA,OAAO,KAAK,EAAE,EAAC,cAAc,EAAC,MAAM,OAAO,CAAC;AAK5C,oBAAY,iBAAiB,GAAG,cAAc,CAAC,cAAc,CAAC,GAAG;IAC/D,QAAQ,CAAC,EAAE,OAAO,CAAC;CACpB,CAAC;AAEF,QAAA,MAAM,YAAY,EAAE,KAAK,CAAC,EAAE,CAAC,iBAAiB,CAgB7C,CAAC;AAEF,eAAe,YAAY,CAAC"}

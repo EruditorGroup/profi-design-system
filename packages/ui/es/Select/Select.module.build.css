@@ -1,0 +1,66 @@
+/*  imported from Select.module.scss  */
+
+.root-113jn {
+  position: relative;
+  display: inline-flex;
+  border-radius: var(--ui-border-radius-xs);
+  border: 1px solid var(--ui-color-border);
+  overflow: hidden; }
+
+.block-2srpd {
+  display: flex;
+  width: 100%; }
+
+.select-mK-ji {
+  box-sizing: border-box;
+  font-size: 16px;
+  min-width: 147px;
+  height: 50px;
+  border: none;
+  padding-right: 25px;
+  padding: 5px 25px 5px 15px;
+  -webkit-appearance: none;
+  background: no-repeat right transparent;
+  cursor: pointer;
+  z-index: 1;
+  position: relative;
+  background: transparent; }
+  .select-withFloatLabel-3tZQ_ {
+    padding-top: 15px; }
+
+.open-icon-3JxVn {
+  position: absolute;
+  margin: auto 0;
+  display: block;
+  top: 0;
+  bottom: 0;
+  right: 20px;
+  z-index: 0; }
+
+.option-placeholder-wB_Rz {
+  display: none;
+  color: var(--ui-color-darkGrey); }
+
+.placeholder-1w8qJ {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 16px;
+  display: block;
+  overflow: hidden;
+  width: calc(100% - 15px);
+  height: 22px;
+  margin: auto;
+  color: var(--ui-color-darkGrey);
+  white-space: nowrap;
+  font-size: 16px;
+  line-height: 22px;
+  transition-timing-function: ease-in-out;
+  transition-duration: 0.15s;
+  transition-property: top, font-size;
+  transform: translateZ(0);
+  pointer-events: none;
+  will-change: top, font-size; }
+  .placeholder-floated-H_MlW {
+    top: -25px;
+    font-size: 13px; }

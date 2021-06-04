@@ -1,0 +1,24 @@
+/*  imported from Link.module.scss  */
+
+.link-1hi7c {
+  color: var(--ui-color-link);
+  text-decoration: none; }
+  .link-1hi7c:hover {
+    text-decoration: underline; }
+
+.disabled-1d8d_,
+.disabled-1d8d_:hover,
+.disabled-1d8d_:active {
+  color: var(--ui-color-lightState);
+  cursor: default; }
+
+.underlined-1DQpj {
+  text-decoration: underline; }
+  .underlined-1DQpj:hover {
+    text-decoration: none; }
+
+.block-24uQM {
+  display: block; }
+
+.bold-2DEzT {
+  font-weight: bold; }

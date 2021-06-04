@@ -1,0 +1,44 @@
+:root {
+  font-size: var(--ui-text-size-m);
+  line-height: 1.2;
+
+  --ui-text-size-xs: 11px;
+  --ui-text-size-s: 13px;
+  --ui-text-size-m: 15px;
+  --ui-text-size-l: 17px;
+  --ui-text-size-xl: 22px;
+  --ui-text-size-xxl: 28px;
+  --ui-text-size-huge: 88px;
+
+  --ui-color-primary: #e01935;
+  --ui-color-primaryState: #c90c27;
+  --ui-color-primaryInverse: #fff;
+  --ui-color-primaryInverseState: #ec7586;
+
+  --ui-color-secondary: #333333;
+  --ui-color-secondaryState: #1a1a1a;
+  --ui-color-secondaryInverse: #fff;
+  --ui-color-secondaryInverseState: #666666;
+
+  --ui-color-light: #ebebeb;
+  --ui-color-lightState: #dedede;
+  --ui-color-lightInverse: #333333;
+  --ui-color-lightInverseState: #a6a6a6;
+
+  --ui-color-danger: #e01935;
+  --ui-color-warning: #ffa216;
+  --ui-color-success: #18d15c;
+  --ui-color-brand: #ee203a;
+
+  --ui-color-vk: #2787f5;
+  --ui-color-fb: #1878f2;
+  --ui-color-ya: #fc0;
+
+  --ui-color-link: blue;
+
+  --ui-border-radius-small: 8px;
+  --ui-border-radius: 12px;
+  --ui-border-radius-large: 50px;
+
+  --ui-box-shadow: 0px 5px 30px 5px #0000000d;
+}

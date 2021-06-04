@@ -1,0 +1,56 @@
+/*  imported from Input.module.scss  */
+
+.form-control-2sjws {
+  position: relative;
+  margin: 8px 0;
+  border: 1px solid var(--ui-color-border);
+  border-radius: var(--ui-border-radius-small); }
+
+.input-2tqZz {
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  height: 50px;
+  padding: 0 12px 0 15px;
+  color: var(--ui-color-text);
+  border-radius: var(--ui-border-radius-small);
+  border: none;
+  font-size: 16px;
+  font-family: var(--font-family);
+  transition: border-color 0.15s ease;
+  -webkit-appearance: none;
+  background: transparent; }
+  .input-2tqZz[disabled] {
+    background-color: rgba(239, 239, 239, 0.3);
+    color: #545454; }
+
+.input-withFloatLabel-2b6k5 {
+  padding-top: 10px; }
+
+.block-1NYbn {
+  display: block;
+  width: 100%; }
+
+.floatLabel-txFNZ {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 15px;
+  display: block;
+  overflow: hidden;
+  width: calc(100% - 15px);
+  height: 22px;
+  margin: auto;
+  color: var(--ui-color-darkGrey);
+  white-space: nowrap;
+  font-size: 16px;
+  line-height: 22px;
+  transition-timing-function: ease-in-out;
+  transition-duration: 0.15s;
+  transition-property: top, font-size;
+  transform: translateZ(0);
+  pointer-events: none;
+  will-change: top, font-size; }
+  .floatLabel-floated-3XKfR {
+    top: -25px;
+    font-size: 13px; }

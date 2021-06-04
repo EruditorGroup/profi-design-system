@@ -1,0 +1,1 @@
+{"version":3,"file":"index.d.ts","sourceRoot":"","sources":["../../src/Divider/index.tsx"],"names":[],"mappings":"AACA,OAAO,KAAK,EACV,cAAc,EACd,yBAAyB,EACzB,aAAa,EACd,MAAM,OAAO,CAAC;AAIf,MAAM,WAAW,YAAa,SAAQ,cAAc,CAAC,cAAc,CAAC;IAClE,GAAG,CAAC,EAAE,OAAO,CAAC;CACf;AAED,QAAA,MAAM,OAAO,EAAE,yBAAyB,CACtC,YAAY,GAAG,aAAa,CAAC,cAAc,CAAC,CAS5C,CAAC;AAEH,eAAe,OAAO,CAAC"}

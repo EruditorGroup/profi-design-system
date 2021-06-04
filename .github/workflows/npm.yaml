@@ -1,9 +1,9 @@
 name: 'npm package: publish'
 
 on:
-  create:
-    tags:
-      - '*'
+  push:
+    branches:
+      - profi-design-system
 
 jobs:
   test:

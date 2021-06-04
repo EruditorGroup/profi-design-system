@@ -1,0 +1,72 @@
+/*  imported from Checkbox.module.scss  */
+
+.label-2tyyJ {
+  display: inline-flex;
+  cursor: pointer;
+  user-select: none; }
+
+.checkbox-E1Wpv {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: transparent;
+  background-color: var(--ui-color-light);
+  transition: background-color 0.3s; }
+  .checkbox_size-m-O2h7l {
+    width: var(--ui-text-size-m);
+    height: var(--ui-text-size-m);
+    border-radius: 3.21429px;
+    font-size: 9px; }
+  .checkbox_size-l-3PRpv {
+    width: var(--ui-text-size-l);
+    height: var(--ui-text-size-l);
+    border-radius: 4px;
+    font-size: var(--ui-text-size-xs); }
+  .checkbox_size-xl-ZREY3 {
+    width: var(--ui-text-size-xl);
+    height: var(--ui-text-size-xl);
+    border-radius: 5px;
+    font-size: var(--ui-text-size-m); }
+  .checkbox_size-xxl-1HCes {
+    width: var(--ui-text-size-xxl);
+    height: var(--ui-text-size-xxl);
+    border-radius: 6px;
+    font-size: var(--ui-text-size-l); }
+  .checkbox_type-radio-2gNH8 {
+    border-radius: 50%; }
+  .checkbox_type-radio-2gNH8.checkbox_size-m-O2h7l {
+    font-size: 3px; }
+  .checkbox_type-radio-2gNH8.checkbox_size-l-3PRpv {
+    font-size: 5px; }
+  .checkbox_type-radio-2gNH8.checkbox_size-xl-ZREY3 {
+    font-size: 6px; }
+  .checkbox_type-radio-2gNH8.checkbox_size-xxl-1HCes {
+    font-size: 8px; }
+  .input-AArKW:active + .checkbox-E1Wpv {
+    background-color: var(--ui-color-lightState); }
+  .input-AArKW:checked + .checkbox-E1Wpv {
+    color: var(--ui-color-secondaryInverse);
+    background-color: var(--ui-color-secondary); }
+  .input-AArKW:disabled ~ .checkbox-E1Wpv {
+    cursor: default;
+    background-color: var(--ui-color-light);
+    color: var(--ui-color-lightInverseState); }
+
+.content_size-m-3QXVW, .content_size-l-Qnug0 {
+  margin: -3px 0 -2px 9px; }
+
+.content_size-xl-3teUt {
+  margin-left: 10px; }
+
+.content_size-xxl-3Ursa {
+  margin: 2px 0 0 12px; }
+
+.input-AArKW:disabled ~ .content-3c0Cu {
+  cursor: default;
+  color: var(--ui-color-lightInverseState); }
+
+.input-AArKW {
+  position: absolute;
+  opacity: 0.01;
+  width: 0.01px;
+  height: 0.01px; }

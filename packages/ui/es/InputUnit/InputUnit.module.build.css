@@ -1,0 +1,28 @@
+/*  imported from InputUnit.module.scss  */
+
+.wrapper-1euO- {
+  position: relative;
+  background: #fff; }
+
+.input-29WL8 {
+  position: relative;
+  z-index: 2;
+  background: transparent; }
+
+.unit-2PB0f {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  bottom: 0;
+  margin: auto 0;
+  margin-left: 15px; }
+  .unit-withFloatLabel-3x3g3 {
+    padding-top: 10px; }
+
+.value-fjLCw {
+  color: transparent; }
+
+.unitOffset-2boyp {
+  width: 5px; }

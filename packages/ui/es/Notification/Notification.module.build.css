@@ -1,0 +1,22 @@
+/*  imported from Notification.module.scss  */
+
+.notification-10_7J {
+  display: inline-block;
+  min-height: var(--ui-text-lineHeight-m);
+  min-width: var(--ui-text-lineHeight-m);
+  padding: 3px 6px 4px;
+  background: var(--ui-color-primary);
+  border-radius: 10px;
+  color: var(--ui-color-primaryInverse);
+  font-size: var(--ui-text-size-xs);
+  font-weight: 600;
+  line-height: var(--ui-text-lineHeight-xs);
+  text-align: center;
+  white-space: nowrap;
+  letter-spacing: 0.4px;
+  vertical-align: middle;
+  user-select: none;
+  box-sizing: border-box; }
+  .notification_disabled-3HFa7 {
+    background: var(--ui-color-lightInverseState);
+    color: var(--ui-color-primaryInverse); }

@@ -1,0 +1,27 @@
+/*  imported from BareInput.module.scss  */
+
+.input-27dTD {
+  margin: 0;
+  padding: 0;
+  background: transparent;
+  border: 0;
+  outline: 0;
+  color: inherit;
+  font: inherit;
+  overflow: visible;
+  /* Show overflow in IE/Edge */
+  width: 100%;
+  max-width: 100%; }
+  .input-27dTD::-webkit-outer-spin-button, .input-27dTD::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0; }
+  .input-27dTD[type='number'] {
+    -moz-appearance: textfield; }
+  .input-27dTD::placeholder {
+    color: var(--ui-color-lightInverseState);
+    opacity: 1; }
+  .input-27dTD:disabled {
+    -webkit-text-fill-color: var(--ui-color-disabled);
+    /* Safari pale color bug */
+    opacity: 1;
+    /* iOS pale color bug */ }

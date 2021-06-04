@@ -1,0 +1,10 @@
+/*  imported from Block.module.scss  */
+
+.block-196JA {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 20px;
+  margin: 0 0 10px;
+  background: #ffffff;
+  border-radius: var(--ui-border-radius-l); }

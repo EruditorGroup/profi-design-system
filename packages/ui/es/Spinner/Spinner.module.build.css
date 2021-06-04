@@ -1,0 +1,48 @@
+/*  imported from Spinner.module.scss  */
+
+.spinner-FTm7B,
+.spinner-FTm7B:after {
+  color: currentColor;
+  background: transparent;
+  width: calc(1em - 4px);
+  height: calc(1em - 4px);
+  text-indent: -9999em;
+  border-top: 1.5px solid;
+  border-right: 1.5px solid;
+  border-bottom: 1.5px solid transparent;
+  border-left: 1.5px solid;
+  transform: translateZ(0);
+  animation: spin-1Gr5i 0.5s infinite linear;
+  border-radius: 50%;
+  display: inline-flex; }
+
+.inner-fKh5y {
+  position: relative;
+  height: 0;
+  width: 0;
+  opacity: 0;
+  transition: padding 0.3s, opacity 0.3s, width 0.3s, height 0.3s;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .inner-fKh5y.showed-33tG1 {
+    height: 1em;
+    width: 1em;
+    opacity: 1; }
+    .inner-fKh5y.showed-33tG1.withRightPadding-2TjSY {
+      padding-right: 0.5em; }
+    .inner-fKh5y.showed-33tG1.withLeftPadding-18MWx {
+      padding-left: 0.5em; }
+
+@-webkit-keyframes spin-1Gr5i {
+  0% {
+    transform: rotate(0deg); }
+  100% {
+    transform: rotate(360deg); } }
+
+@keyframes spin-1Gr5i {
+  0% {
+    transform: rotate(0deg); }
+  100% {
+    transform: rotate(360deg); } }

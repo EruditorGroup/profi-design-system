@@ -1,0 +1,24 @@
+/*  imported from BareTextarea.module.scss  */
+
+.textarea-4CxXL {
+  margin: 0;
+  padding: 0;
+  background: transparent;
+  border: 0;
+  outline: 0;
+  color: inherit;
+  font: inherit;
+  resize: none;
+  overflow: auto;
+  /* Remove default vertical scrollbar in IE 10+ */
+  width: 100%;
+  max-width: 100%;
+  vertical-align: middle; }
+  .textarea-4CxXL::placeholder {
+    color: var(--ui-color-lightInverseState);
+    opacity: 1; }
+  .textarea-4CxXL:disabled {
+    -webkit-text-fill-color: var(--ui-color-disabled);
+    /* Safari pale color bug */
+    opacity: 1;
+    /* iOS pale color bug */ }
