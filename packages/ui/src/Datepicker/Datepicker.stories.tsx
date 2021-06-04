@@ -19,8 +19,7 @@ export const BaseStory = Template.bind({});
 BaseStory.storyName = 'Datepicker';
 BaseStory.args = {
   value: shiftDate(new Date(), 1),
-  minDate: new Date(),
-  allowUnsetDayInSingleMode: true,
+  minDate: shiftDate(new Date(), -40),
 };
 
 const StoryStyles = () => (
