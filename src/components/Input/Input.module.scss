@@ -15,10 +15,10 @@
   border-radius: var(--border-radius-small);
   border: none;
   font-size: 16px;
-  font-family: var(--font-family);
   transition: border-color 0.15s ease;
   -webkit-appearance: none;
   background: transparent;
+
   &[disabled] {
     background-color: rgba(239, 239, 239, 0.3);
     color: rgb(84, 84, 84);
