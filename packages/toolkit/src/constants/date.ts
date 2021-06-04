@@ -35,6 +35,21 @@ export const MONTHS: Month[] = [
 ];
 export const MONTH_NAMES = MONTHS.map((m) => m.fullName);
 
+export const MONTH_NAMES_DECLENSED: {[monthNumber: number]: string} = {
+  1: 'января',
+  2: 'февраля',
+  3: 'марта',
+  4: 'апреля',
+  5: 'мая',
+  6: 'июня',
+  7: 'июля',
+  8: 'августа',
+  9: 'сентября',
+  10: 'октября',
+  11: 'ноября',
+  12: 'декабря',
+};
+
 export type Weekday = ItemInfo<'mo' | 'tu' | 'we' | 'th' | 'fr' | 'sa' | 'su'>;
 
 export const WEEKDAYS: Weekday[] = [
@@ -46,4 +61,8 @@ export const WEEKDAYS: Weekday[] = [
   {id: 'sa', shortName: 'Сб', fullName: 'Суббота'},
   {id: 'su', shortName: 'Вс', fullName: 'Воскресенье'},
 ];
+export const WEEKDAY_SHORTNAMES: {
+  [dayNumber: number]: string;
+} = WEEKDAYS.reduce((wd, m, mi) => ({...wd, [mi + 1]: m.shortName}), {});
+
 export const DAYS_IN_WEEK = WEEKDAYS.length;
