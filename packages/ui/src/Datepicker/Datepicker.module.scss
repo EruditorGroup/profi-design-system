@@ -1,6 +1,42 @@
 .icon {
   color: var(--ui-color-lightInverseState);
 }
-.calendar {
+
+.input input {
+  cursor: pointer;
+}
+
+.dropdown {
+  padding: 10px 25px 20px;
+  box-sizing: border-box;
+}
+
+.mobile-container {
+  position: fixed;
+  top: -10px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  background: rgba(0,0,0,0.2);
+
+  animation: slide-up 0.15s linear;
+}
+
+.mobile-calendar {
   padding: 5px 20px 15px;
+}
+
+@keyframes slide-up {
+  0% {
+    transform: translate3d(0, 10px, 0);
+    opacity: 0
+  }
+  66% {
+    opacity: 1;
+  }
+  100% {
+    transform: translate3d(0,0,0);
+    opacity: 1;
+  }
 }
