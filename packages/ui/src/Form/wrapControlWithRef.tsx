@@ -1,4 +1,4 @@
-import React, {useCallback, useMemo, useRef} from 'react';
+import React, {MouseEventHandler, useCallback, useMemo, useRef} from 'react';
 import type {ComponentProps, ComponentType, ReactElement, Ref} from 'react';
 
 import {useFloatLabel} from '@eruditorgroup/profi-toolkit';
@@ -56,11 +56,16 @@ const wrapControlWithRef = <
   const internalRef = useRef<HTMLElementType>(null);
   const inputRef = useMemo(() => ref || internalRef, [ref]);
 
-  const onWrapperClick = useCallback((): void => {
-    if (typeof inputRef === 'object' && inputRef !== null) {
-      inputRef.current?.focus();
-    }
-  }, [inputRef]);
+  const onWrapperClick: MouseEventHandler<HTMLDivElement> = useCallback(
+    (evt) => {
+      if (evt.target !== evt.currentTarget) return;
+      if (typeof inputRef === 'object' && inputRef !== null) {
+        inputRef.current?.click();
+        inputRef.current?.focus();
+      }
+    },
+    [inputRef],
+  );
 
   const wrapperProps = {
     className,
