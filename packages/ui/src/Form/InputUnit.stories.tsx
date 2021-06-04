@@ -61,3 +61,4 @@ const Template: Story<InputUnitProps> = ({unit = '₽', ...args}) => (
 );
 
 export const Default = Template.bind({});
+Default.storyName = 'InputUnit';
