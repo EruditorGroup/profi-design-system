@@ -95,7 +95,10 @@ const Datepicker: React.FC<DatepickerProps> = ({
             <Dropdown.Portal
               animated={false}
               position="from-bottom"
-              className={styles['dropdown']}
+              className={classnames(
+                styles['dropdown'],
+                styles['mobile-dropdown'],
+              )}
             >
               {calendarComponent}
             </Dropdown.Portal>
