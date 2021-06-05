@@ -5,6 +5,7 @@ import React, {
   useEffect,
   useRef,
   useCallback,
+  MutableRefObject,
 } from 'react';
 import cx from 'classnames';
 
@@ -26,6 +27,7 @@ export const DropdownContext = createContext<IDropdownContext | null>(null);
 
 export type DropdownProps = {
   className?: string;
+  closeRefHandler?: MutableRefObject<(() => void) | undefined>;
   onChange?: (opened: boolean) => void;
   trigger?: 'click' | 'hover';
 };
@@ -40,6 +42,7 @@ const Dropdown: DropdownComponent = ({
   children,
   onChange,
   className,
+  closeRefHandler,
   trigger = 'click',
 }) => {
   const [isOpened, setOpened] = useState(false);
@@ -48,6 +51,11 @@ const Dropdown: DropdownComponent = ({
   const context = useMemo<IDropdownContext>(
     () => ({isOpened, setOpened, trigger}),
     [isOpened, trigger],
+  );
+
+  useMemo(
+    () => closeRefHandler && (closeRefHandler.current = () => setOpened(false)),
+    [closeRefHandler],
   );
 
   const onChangeRef = useRef<DropdownProps['onChange']>();

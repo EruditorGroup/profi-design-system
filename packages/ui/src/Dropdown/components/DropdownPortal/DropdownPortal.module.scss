@@ -33,6 +33,12 @@
     transform: translate3d(0, -10px, 0);
   }
 
+  &.position-from-bottom {
+    bottom: 0;
+    left: 0;
+    transform: translate3d(0, 10px, 0);
+  }
+
   &.opened {
     transform: translate3d(0, 0, 0);
     opacity: 1;

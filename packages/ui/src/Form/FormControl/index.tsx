@@ -52,50 +52,48 @@ const FormControl: React.FC<FormControlHTMLProps> = ({
 
   onClick,
   ...props
-}) => {
-  return (
-    <div
-      className={classnames(
-        styles['form-control'],
-        styles[`form-control_${size}`],
-        withFloatLabel && styles[`form-control_withLabel_${size}`],
-        block && styles['form-control_block'],
-        disabled && styles['form-control_disabled'],
-        invalid && styles['form-control_invalid'],
-        className,
+}) => (
+  <div
+    className={classnames(
+      styles['form-control'],
+      styles[`form-control_${size}`],
+      withFloatLabel && styles[`form-control_withLabel_${size}`],
+      block && styles['form-control_block'],
+      disabled && styles['form-control_disabled'],
+      invalid && styles['form-control_invalid'],
+      className,
+    )}
+    onClick={onClick}
+    {...props}
+  >
+    <div className={styles['form-control__flex']}>
+      {leading && (
+        <div className={styles['form-control__prefix']}>{leading}</div>
       )}
-      onClick={onClick}
-      {...props}
-    >
-      <div className={styles['form-control__flex']}>
-        {leading && (
-          <div className={styles['form-control__prefix']}>{leading}</div>
+      <div
+        className={classnames(
+          styles['form-control__infix'],
+          withFloatLabel && styles['form-control__infix_withLabel'],
         )}
-        <div
-          className={classnames(
-            styles['form-control__infix'],
-            withFloatLabel && styles['form-control__infix_withLabel'],
-          )}
-        >
-          {withFloatLabel && (
-            <label
-              className={classnames(
-                styles['form-control__label'],
-                isLabelFloated && styles['form-control__label_floated'],
-              )}
-              htmlFor={labelFor}
-            >
-              {label}
-            </label>
-          )}
-          {children}
-        </div>
-        {trailing && (
-          <div className={styles['form-control__suffix']}>{trailing}</div>
+      >
+        {withFloatLabel && (
+          <label
+            className={classnames(
+              styles['form-control__label'],
+              isLabelFloated && styles['form-control__label_floated'],
+            )}
+            htmlFor={labelFor}
+          >
+            {label}
+          </label>
         )}
+        {children}
       </div>
+      {trailing && (
+        <div className={styles['form-control__suffix']}>{trailing}</div>
+      )}
     </div>
-  );
-};
+  </div>
+);
 
 export default FormControl;
