@@ -1,3 +1,5 @@
+import {MONTH_NAMES_DECLENSED, WEEKDAY_SHORTNAMES} from '../constants';
+
 /**
  * Проверяет объект date на валидность
  * @param {Date} date дата для проверки
@@ -81,3 +83,37 @@ export const isBeforeDate = (target: Date, compareWith: Date): boolean =>
  */
 export const isAfterDate = (target: Date, compareWith: Date): boolean =>
   compareDates(target, compareWith) === 1;
+
+export const getReadableDate = (
+  targetDate: string | Date,
+  opts: {
+    withWeekday?: boolean;
+    withYear?: boolean;
+    omitYearIfThisYear?: boolean;
+  } = {},
+): string => {
+  const dt = new Date(targetDate);
+  if (!isValidDate(dt)) return '';
+
+  const today = new Date();
+
+  const dtMonth = dt.getMonth();
+  const dtMonthName = MONTH_NAMES_DECLENSED[dtMonth + 1];
+
+  let result = `${dt.getDate()} ${dtMonthName}`;
+
+  if (opts.withWeekday) {
+    const dtWeekday = dt.getDay() === 0 ? 7 : dt.getDay();
+    result += ', ' + WEEKDAY_SHORTNAMES[dtWeekday].toLocaleLowerCase();
+  }
+
+  if (opts.withYear) {
+    const dtYear = dt.getFullYear();
+    if (!opts.omitYearIfThisYear || dtYear !== today.getFullYear()) {
+      result += opts.withWeekday ? ',' : '';
+      result += ` ${dtYear}`;
+    }
+  }
+
+  return result;
+};

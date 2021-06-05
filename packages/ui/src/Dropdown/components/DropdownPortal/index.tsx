@@ -13,7 +13,12 @@ import {useClickOutside} from '@eruditorgroup/profi-toolkit';
 
 export interface DropdownPortalProps extends HTMLAttributes<HTMLDivElement> {
   animated?: boolean;
-  position?: 'bottom-left' | 'bottom-right' | 'top-left' | 'top-right';
+  position?:
+    | 'bottom-left'
+    | 'bottom-right'
+    | 'top-left'
+    | 'top-right'
+    | 'from-bottom';
   fit?: boolean;
 }
 
@@ -31,7 +36,7 @@ const DropdownPortal: ForwardRefExoticComponent<
     },
     ref,
   ) => {
-    const _ref = useRef() as React.MutableRefObject<HTMLDivElement | null>;
+    const _ref = useRef<HTMLDivElement | null>(null);
     const context = useContext(DropdownContext);
 
     useClickOutside(_ref, () => {
