@@ -3,6 +3,24 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.4.0](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-toolkit@0.3.0...@eruditorgroup/profi-toolkit@0.4.0) (2021-06-07)
+
+
+### Bug Fixes
+
+* **toolkit:** fixes hooks exports ([9ff14eb](https://github.com/eruditorgroup/profi-design-system/commit/9ff14ebb52af8fc45ac64676057ad90b4adb49dc))
+
+
+### Features
+
+* **toolkit:** array utility functions ([afd0dc8](https://github.com/eruditorgroup/profi-design-system/commit/afd0dc84c5c74c841968ba054507b090df1e5c01))
+* **toolkit:** date utility functions & constants ([5eeeb16](https://github.com/eruditorgroup/profi-design-system/commit/5eeeb16afdf83a8ffb947f87ec1ddf0361495522))
+* **toolkit:** getReadableDate date utility function ([f6f855a](https://github.com/eruditorgroup/profi-design-system/commit/f6f855af37137ee92ba68454265819220e9fce0e))
+
+
+
+
+
 # [0.3.0](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-toolkit@0.2.0...@eruditorgroup/profi-toolkit@0.3.0) (2021-06-01)
 
 

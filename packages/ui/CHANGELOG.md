@@ -3,6 +3,32 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.9.0](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.8.0...@eruditorgroup/profi-ui@0.9.0) (2021-06-07)
+
+
+### Bug Fixes
+
+* **Menu.Item:** Цвет ссылки + скругления ([eb46b1e](https://github.com/eruditorgroup/profi-design-system/commit/eb46b1effc1b507eb973869bd3763c9e5fff5468))
+* **ui:** Dropdown - make children optional ([f527df1](https://github.com/eruditorgroup/profi-design-system/commit/f527df1214c80d33befc77c4efd3f55aed99d79f))
+* **ui:** Form inputs' leading icon alignment ([99cdedb](https://github.com/eruditorgroup/profi-design-system/commit/99cdedb43c23f2570822bbb2f62e785f2bd10a73))
+* **ui:** InputUnit remove magic number ([7da4879](https://github.com/eruditorgroup/profi-design-system/commit/7da48797ef7b89dc40477e59681ff099f5851a74))
+* **ui:** Prevent FormControl's false click triggers ([40efc00](https://github.com/eruditorgroup/profi-design-system/commit/40efc00ec33f625f0569df49198f22dc1db71466))
+* **ui:** Tweak Input & Textarea placeholder fontWeight ([4923f5e](https://github.com/eruditorgroup/profi-design-system/commit/4923f5e66ce74fdfaf97763a5d89da727da15563))
+
+
+### Features
+
+* **ui:** Calendar ([08eb476](https://github.com/eruditorgroup/profi-design-system/commit/08eb476cec7eb43148df7f26cff75969c374654d))
+* **ui:** Datepicker ([eb401aa](https://github.com/eruditorgroup/profi-design-system/commit/eb401aab8fcc9d4b1e7ae36f9512540416b8574b))
+* **ui:** Datepicker - alternate mobile appearance ([717bc0d](https://github.com/eruditorgroup/profi-design-system/commit/717bc0d09942b5281be209d2eeaae75fd1458131))
+* **ui:** Dropdown - 'from-bottom' position ([3c023e0](https://github.com/eruditorgroup/profi-design-system/commit/3c023e06deb872db17834fa1cea13ff49a6414b8))
+* **ui:** Dropdown - close dropdown refHandler ([447be1a](https://github.com/eruditorgroup/profi-design-system/commit/447be1a121ee055892720a9df4867bf6a543c999))
+* **ui:** DualCalendar ([705c194](https://github.com/eruditorgroup/profi-design-system/commit/705c194fd779f9b045120d6a15107c76e33b0808))
+
+
+
+
+
 # [0.8.0](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.7.0...@eruditorgroup/profi-ui@0.8.0) (2021-06-03)
 
 
