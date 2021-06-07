@@ -1,10 +1,12 @@
 import React, {forwardRef} from 'react';
+import classnames from 'classnames';
+
 import type {
   AnchorHTMLAttributes,
   ForwardRefExoticComponent,
   RefAttributes,
 } from 'react';
-import classnames from 'classnames';
+
 import styles from './MenuItem.module.scss';
 
 export interface MenuItemProps extends AnchorHTMLAttributes<HTMLAnchorElement> {
