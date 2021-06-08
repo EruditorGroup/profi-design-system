@@ -1,5 +1,9 @@
 import React from 'react';
-import {Story, Meta} from '@storybook/react/types-6-0';
+import {Story, Meta} from '@storybook/react';
+
+import TableGuides, {
+  TableGuidesProps,
+} from '../../../../.storybook/TableGuides';
 
 import Avatar, {AvatarProps} from './index';
 import src from './avatar.png';
@@ -9,31 +13,31 @@ export default {
   component: Avatar,
 } as Meta;
 
-const line = {
-  display: 'flex',
-  alignItems: 'flex-start',
+const AVATAR_DESIGNS: AvatarProps['design'][] = ['rect', 'circle'];
+const AVATAR_SIZES: AvatarProps['size'][] = ['xxl', 'xl', 'l', 'm', 's', 'xs'];
+
+type AvatarStoryMeta = Omit<
+  TableGuidesProps<Omit<AvatarProps, ''>>,
+  'Component'
+> & {
+  name: string;
 };
 
-const withOffset = {
-  margin: '10px',
+const avatarStoryMeta: AvatarStoryMeta = {
+  name: 'Text field',
+  cols: AVATAR_SIZES.map((size) => ({
+    key: size.toLocaleUpperCase(),
+    props: {size},
+  })),
+  rows: AVATAR_DESIGNS.map((design) => ({key: design, props: {design}})),
 };
 
 const Template: Story<AvatarProps> = (args) => (
-  <div>
-    {(['circle', 'rect'] as AvatarProps['design'][]).map((design) => (
-      <div style={line}>
-        {['xs', 's', 'm', 'l', 'xl', 'xxl'].map((size) => (
-          <Avatar
-            {...args}
-            size={size}
-            design={design}
-            style={withOffset}
-            src={src}
-          />
-        ))}
-      </div>
-    ))}
-  </div>
+  <TableGuides
+    cols={avatarStoryMeta.cols}
+    rows={avatarStoryMeta.rows}
+    Component={(props) => <Avatar src={src} {...args} {...props} />}
+  />
 );
 
 export const Default = Template.bind({});
