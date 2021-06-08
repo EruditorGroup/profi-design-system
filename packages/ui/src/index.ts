@@ -69,3 +69,6 @@ export type {SelectProps} from './Select';
 
 export {default as Spinner} from './Spinner';
 export type {SpinnerProps} from './Spinner';
+
+export {default as Notification} from './Notification';
+export type {NotificationProps} from './Notification';
