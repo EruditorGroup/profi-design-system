@@ -29,6 +29,10 @@ $columnsInRow: 12;
     padding: 0 30px;
   }
 
+  @include generateGrid('s');
+}
+
+@media (min-width: 1024px) {
   @include generateGrid('m');
 }
 
