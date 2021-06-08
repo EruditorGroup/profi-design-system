@@ -5,8 +5,9 @@
   align-items: center;
   position: relative;
   cursor: pointer;
-  color: #000;
+  color: var(--ui-color-secondary);
   user-select: none;
+  text-decoration: none;
   svg {
     flex-shrink: 0;
     margin-right: 10px;
@@ -14,7 +15,7 @@
 }
 
 .rounded {
-  border-radius: var(--ui-border-radius-xs);
+  border-radius: 0.6em;
 }
 
 .design-light {
