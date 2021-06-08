@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.9.1](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.9.0...@eruditorgroup/profi-ui@0.9.1) (2021-06-08)
+
+
+### Bug Fixes
+
+* **Link:** Fix Link bold ([f8232bd](https://github.com/eruditorgroup/profi-design-system/commit/f8232bda7f35f2c33629774f770b4c0fe7187ed5))
+* **ui:** Add Notification to index re-export ([6b5fa17](https://github.com/eruditorgroup/profi-design-system/commit/6b5fa1710ff6709956a219ce333810f8fb986e83))
+* **ui:** Checkbox & Radio - disabled unchecked state displayed as checked ([ca8ff05](https://github.com/eruditorgroup/profi-design-system/commit/ca8ff05cb28cc9aa1e22dc1323a4589021cb7c2a))
+
+
+
+
+
 # [0.9.0](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.8.0...@eruditorgroup/profi-ui@0.9.0) (2021-06-07)
 
 
