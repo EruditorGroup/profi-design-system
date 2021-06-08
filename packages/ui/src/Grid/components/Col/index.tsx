@@ -11,7 +11,7 @@ type ColOffset =
 
 type ColSpan = ColOffset | 12 | '12';
 
-type ColBreakpoints = 'm' | 'l';
+type ColBreakpoints = 's' | 'm' | 'l';
 
 type BreakpointSettings = ColSpan | ColSettings;
 
@@ -40,7 +40,7 @@ const getColBreakpointClassNames = (
   );
 
 const Col = forwardRef<HTMLDivElement, ColProps>(function Col(
-  {children, className, span, offset, m, l, ...props},
+  {children, className, span, offset, s, m, l, ...props},
   ref,
 ) {
   return (
@@ -52,6 +52,7 @@ const Col = forwardRef<HTMLDivElement, ColProps>(function Col(
         styles['col'],
         span && styles[`col_span-${span}`],
         offset && styles[`col_offset-${offset}`],
+        getColBreakpointClassNames('s', s),
         getColBreakpointClassNames('m', m),
         getColBreakpointClassNames('l', l),
       )}
