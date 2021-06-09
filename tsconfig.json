@@ -18,7 +18,6 @@
   },
   "exclude": [
     "**/*.test.tsx",
-    "**/*.stories.tsx",
     "**/*.d.ts",
     "**/__mocks__",
     "node_modules"

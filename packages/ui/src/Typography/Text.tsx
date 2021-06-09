@@ -3,17 +3,15 @@ import Link from '../Link';
 import {ForwardingComponent} from 'uitype';
 import TextBase, {TextBaseProps} from './components/TextBase';
 
-export interface TextProps
-  extends Omit<TextBaseProps, 'size' | 'as' | 'fontWeight'> {
+export interface TextProps extends Omit<TextBaseProps, 'as'> {
   as?: 'p' | 'span' | 'div' | typeof Link;
-  size?: 'xs' | 's' | 'm' | 'l'; // xl, xxl, huge is available in <Title /> component
-  bold?: boolean;
 }
 
 const Text: ForwardingComponent<'p', TextProps> = forwardRef(function Text(
-  {size, bold = false, as = 'p', ...props},
+  {as: Component = 'p', size, ...props},
   ref,
 ) {
-  return <TextBase as={as} size={size} bold={bold} {...props} ref={ref} />;
+  return <TextBase as={Component} size={size} {...props} ref={ref} />;
 });
+
 export default Text;

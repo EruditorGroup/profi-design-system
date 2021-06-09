@@ -26,19 +26,28 @@ declare module 'uitype' {
     | 'warning';
   export type ISocials = 'vk' | 'ya' | 'fb' | 'apple';
 
-  type ForwardingComponentProps<
-    As extends React.ElementType,
-    P
-  > = React.PropsWithChildren<React.ComponentPropsWithRef<As> & P & {as?: As}>;
+  type ReplaceProps<Component extends React.ElementType, P> = Pick<
+    React.ComponentPropsWithRef<Component>,
+    Exclude<keyof React.ComponentPropsWithRef<Component>, keyof P>
+  > &
+    P;
+
+  export interface AliasProps<
+    Component extends React.ElementType = React.ElementType
+  > {
+    as?: Component;
+  }
 
   export interface ForwardingComponent<
-    TInitial extends React.ElementType,
+    InitialComponent extends React.ElementType,
     P = unknown
   > {
-    <As extends React.ElementType = TInitial, Context = unknown>(
-      props: ForwardingComponentProps<As, P>,
+    <Component extends React.ElementType = InitialComponent, Context = unknown>(
+      props: React.PropsWithChildren<
+        ReplaceProps<Component, P> & AliasProps<Component>
+      >,
       context?: Context,
     ): React.ReactElement | null;
-    defaultProps?: Partial<ForwardingComponentProps<TInitial, P>>;
+    defaultProps?: Partial<P>;
   }
 }

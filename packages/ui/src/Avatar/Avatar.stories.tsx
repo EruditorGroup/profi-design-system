@@ -3,6 +3,7 @@ import {Story, Meta} from '@storybook/react/types-6-0';
 
 import Avatar, {AvatarProps} from './index';
 import src from './avatar.png';
+import {ISize} from 'uitype';
 
 export default {
   title: 'Avatar',
@@ -22,7 +23,7 @@ const Template: Story<AvatarProps> = (args) => (
   <div>
     {(['circle', 'rect'] as AvatarProps['design'][]).map((design) => (
       <div style={line}>
-        {['xs', 's', 'm', 'l', 'xl', 'xxl'].map((size) => (
+        {(['xs', 's', 'm', 'l', 'xl', 'xxl'] as ISize[]).map((size) => (
           <Avatar
             {...args}
             size={size}

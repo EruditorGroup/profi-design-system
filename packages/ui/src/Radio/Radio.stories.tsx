@@ -10,61 +10,57 @@ export default {
   component: Radio,
 } as Meta;
 
-export const Default: Story<RadioProps> = (args) => {
+export const Default: Story<Omit<RadioProps, 'name'>> = (args) => {
   const [selected, setSelected] = useState('default');
   return (
     <div>
-      {[<Radio
-        name="storybook"
-        onChange={() => setSelected('simple')}
-        checked={selected === 'simple'}
-        value="simple"
-        {...args}
-      >
-        Простой Radio
-      </Radio>,
-      <Radio
-        name="storybook"
-        value="disabled"
-        disabled
-        {...args}
-      >
-        Disabled Radio
-      </Radio>,
-      <Radio
-        name="storybook"
-        value="default"
-        onChange={() => setSelected('default')}
-        checked={selected === 'default'}
-        {...args}
-      >
-        Выбранный по дефолту Radio
-      </Radio>,
-      <Radio
-        name="storybook"
-        value="multiline"
-        onChange={() => setSelected('multiline')}
-        checked={selected === 'multiline'}
-        {...args}
-      >
-        <div>Многострочный</div>
-        <div>Многострочный</div>
-        <div>Многострочный</div>
-      </Radio>].map((i) => (
+      {[
+        <Radio
+          name="storybook"
+          onChange={() => setSelected('simple')}
+          checked={selected === 'simple'}
+          value="simple"
+          {...args}
+        >
+          Простой Radio
+        </Radio>,
+        <Radio name="storybook" value="disabled" disabled {...args}>
+          Disabled Radio
+        </Radio>,
+        <Radio
+          name="storybook"
+          value="default"
+          onChange={() => setSelected('default')}
+          checked={selected === 'default'}
+          {...args}
+        >
+          Выбранный по дефолту Radio
+        </Radio>,
+        <Radio
+          name="storybook"
+          value="multiline"
+          onChange={() => setSelected('multiline')}
+          checked={selected === 'multiline'}
+          {...args}
+        >
+          <div>Многострочный</div>
+          <div>Многострочный</div>
+          <div>Многострочный</div>
+        </Radio>,
+      ].map((i) => (
         <div style={{marginBottom: '10px'}}>{i}</div>
       ))}
-      
     </div>
   );
 };
 
 Default.args = {
-  size: 'm'
-}
+  size: 'm',
+};
 
 Default.argTypes = {
   size: {
     options: ['m', 'l', 'xl', 'xxl'],
-    control: { type: 'radio' }
-  }
-}
+    control: {type: 'radio'},
+  },
+};

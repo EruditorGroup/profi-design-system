@@ -1,20 +1,19 @@
-import React, {forwardRef} from 'react';
+import React, {forwardRef, HTMLAttributes} from 'react';
 import classNames from 'classnames';
 
 import styles from './TextBase.module.scss';
 import common from '../../styles/common.module.css';
-import type {ForwardingComponent, IColor, ISize} from 'uitype';
+import type {IColor, ISize, AliasProps} from 'uitype';
 
-export interface TextBaseProps {
-  as: 'p' | 'span' | 'div' | 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6';
+export interface TextBaseProps extends HTMLAttributes<HTMLParagraphElement> {
   size?: ISize;
   color?: IColor | 'muted';
   bold?: boolean;
 }
 
-const TextBase: ForwardingComponent<'p', TextBaseProps> = forwardRef(
+const TextBase = forwardRef<unknown, TextBaseProps & AliasProps>(
   function TextBase(
-    {bold, size, color, as: Component, className, ...props},
+    {bold, size, color, as: Component = 'p', className, ...props},
     ref,
   ) {
     return (

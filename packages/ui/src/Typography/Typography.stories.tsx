@@ -3,6 +3,7 @@ import {Story, Meta} from '@storybook/react/types-6-0';
 
 import Text, {TextProps} from './Text';
 import Title, {TitleProps} from './Title';
+import {Link} from '../../es';
 
 export default {
   title: 'Text & Title',
@@ -29,7 +30,7 @@ export const Default: Story<TextProps> = (args) => {
           {(['xs', 's', 'm', 'l'] as TextProps['size'][]).map((size) => (
             <tr>
               <td style={td} key={size}>
-                Text: {size.toUpperCase()}
+                Text: {size?.toUpperCase()}
               </td>
               <td style={td}>
                 <Text size={size}>Съешь ещё этих мягких французских булок</Text>
@@ -44,7 +45,7 @@ export const Default: Story<TextProps> = (args) => {
           {(['xl', 'xxl', 'huge'] as TitleProps['size'][]).map((size) => (
             <tr>
               <td style={td} key={size}>
-                Title: {size.toUpperCase()}
+                Title: {size?.toUpperCase()}
               </td>
               <td style={td}>
                 <Title size={size} bold={false}>
@@ -68,10 +69,10 @@ export const Default: Story<TextProps> = (args) => {
 };
 
 export const TextInsideText: Story<TextProps> = (args) => (
-  <Text size="xl">
+  <Title size="xl">
     Привет,{' '}
     <Text as="span" bold>
       Мир!
     </Text>
-  </Text>
+  </Title>
 );

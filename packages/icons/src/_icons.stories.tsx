@@ -3,12 +3,17 @@ import {Story, Meta} from '@storybook/react/types-6-0';
 import classnames from 'classnames';
 
 import * as icons from './index';
+import {IconPropsType} from './_types';
 
 export default {
   title: 'Icons',
 } as Meta;
 
 const sizes = [13, 15, 17, 22, 28];
+
+type Icons = {
+  [key: string]: React.ForwardRefExoticComponent<IconPropsType>;
+};
 
 // To add icon to this story you should add export your icon inside './index.tsx'
 const Template: Story = () => {
@@ -23,8 +28,8 @@ const Template: Story = () => {
         </tr>
       </thead>
       <tbody>
-        {Object.keys(icons)
-          .filter((key) => icons[key].displayName)
+        {Object.keys(icons as Icons)
+          .filter((key) => (icons as Icons)[key].displayName)
           .map((key, i) => (
             <tr
               key={i}
@@ -35,9 +40,11 @@ const Template: Story = () => {
                 width: '160px',
               }}
             >
-              <td style={{textAlign: 'right'}}>{icons[key].displayName}</td>
+              <td style={{textAlign: 'right'}}>
+                {(icons as Icons)[key].displayName}
+              </td>
               {sizes.map((size, j) => {
-                const Component = icons[key];
+                const Component = (icons as Icons)[key];
                 return (
                   <th
                     key={size}

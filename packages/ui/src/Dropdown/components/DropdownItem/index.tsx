@@ -1,10 +1,11 @@
 import React, {useCallback, useContext, forwardRef} from 'react';
 import {DropdownContext} from '../..';
 
-import type {ForwardingComponent} from 'uitype';
+import type {ForwardingComponent, AliasProps} from 'uitype';
 
 export interface DropdownItemProps
-  extends React.HTMLAttributes<HTMLDivElement> {
+  extends React.HTMLAttributes<HTMLDivElement>,
+    AliasProps {
   closable?: boolean;
 }
 

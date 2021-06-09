@@ -31,7 +31,7 @@ const Template: Story = (args) => {
         withCloseButton
         width="auto"
         height="auto"
-        name="storybook"
+        // name="storybook"
         visible
         title="Заголовок"
         className="test"

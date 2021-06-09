@@ -33,7 +33,7 @@ const Template: Story = (args) => (
       'link',
     ] as ButtonProps['design'][]).map((design) => (
       <div style={line} key={design}>
-        {['s', 'm', 'l'].map((size) => (
+        {(['s', 'm', 'l'] as ButtonProps['size'][]).map((size) => (
           <Button {...args} size={size} design={design} style={withOffset} />
         ))}
       </div>

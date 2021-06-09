@@ -19,7 +19,7 @@ const Template: Story<ButtonGroupProps> = (args) => (
         <VkIcon />
         Кнопка с иконкой
       </Button>
-      <Button disabled isLoading />
+      <Button disabled />
     </ButtonGroup>
   </>
 );
