@@ -3,11 +3,11 @@ import {Story, Meta} from '@storybook/react';
 
 import {ArrowRightIcon} from '@eruditorgroup/profi-icons';
 
-import Notification, {NotificationProps, NotificationColor} from './index';
+import Notification, {NotificationProps} from './index';
 
-const rowStyles: CSSProperties = {
-  marginBottom: '20px',
-};
+// const rowStyles: CSSProperties = {
+//   marginBottom: '20px',
+// };
 
 const itemStyles: CSSProperties = {
   marginRight: '22px',

@@ -20,7 +20,7 @@ type RadioStoryMeta = Omit<
   name: string;
 };
 
-const RADIO_SIZES: RadioProps['size'][] = ['xxl', 'xl', 'l', 'm'];
+const RADIO_SIZES: NonNullable<RadioProps['size']>[] = ['xxl', 'xl', 'l', 'm'];
 
 const radioStoryMeta: RadioStoryMeta = {
   name: 'Radio',

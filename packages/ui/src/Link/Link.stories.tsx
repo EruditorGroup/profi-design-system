@@ -78,7 +78,7 @@ export const Sizes: Story<LinkProps> = (args) => {
         {(['xs', 's', 'm', 'l'] as LinkProps['size'][]).map((size) => (
           <tr>
             <td style={td} key={size}>
-              Link: {size.toUpperCase()}
+              Link: {size?.toUpperCase()}
             </td>
             <td style={td}>
               <Link size={size} to="#">

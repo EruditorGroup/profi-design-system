@@ -4,6 +4,7 @@ import {Story, Meta} from '@storybook/react/types-6-0';
 
 import TableGuides, {
   TableGuidesProps,
+  TableCell,
 } from '../../../../.storybook/TableGuides';
 
 import {ChevronDownIcon, CloseIcon} from '@eruditorgroup/profi-icons';
@@ -14,14 +15,14 @@ import Avatar from '../Avatar';
 import Link from '../Link';
 import src from '../Avatar/avatar.png';
 
-const BUTTON_DESIGNS: ButtonProps['design'][] = [
+const BUTTON_DESIGNS: NonNullable<ButtonProps['design']>[] = [
   'primary',
   'secondary',
   'light',
   'transparent',
   'link',
 ];
-const BUTTON_SIZES: ButtonProps['size'][] = ['l', 'm', 's'];
+const BUTTON_SIZES: NonNullable<ButtonProps['size']>[] = ['l', 'm', 's'];
 
 export default {
   title: 'Button',
@@ -38,7 +39,7 @@ const fullStoryMeta: ButtonStoryMeta = {
     key: size,
     props: {size},
   })),
-  rows: BUTTON_DESIGNS.reduce(
+  rows: BUTTON_DESIGNS.reduce<TableCell<ButtonProps>[]>(
     (rows, design) => [
       ...rows,
       {key: `Normal`, span: 2, spanLabel: design, props: {design}},
@@ -92,6 +93,9 @@ AsLinkStory.args = {
   as: Link,
   children: 'Close',
   leading: <CloseIcon />,
+  // @ts-ignore
+  // не одупляет, что мы передали as={Link} и надо забрать его пропы.
+  // Но тут и не сильно нужен тайп-чекинг
   to: '#',
 };
 

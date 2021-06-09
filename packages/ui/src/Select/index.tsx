@@ -23,8 +23,10 @@ export interface SelectComponent
   Option: typeof SelectOption;
 }
 
-type Value = string | null;
-export const SelectedValueContext: Context<Value> = createContext<Value>(null);
+type Value = string | undefined;
+export const SelectedValueContext: Context<Value> = createContext<Value>(
+  undefined,
+);
 
 const Select = forwardRef(
   (

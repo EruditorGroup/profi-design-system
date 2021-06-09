@@ -13,8 +13,15 @@ export default {
   component: Avatar,
 } as Meta;
 
-const AVATAR_DESIGNS: AvatarProps['design'][] = ['rect', 'circle'];
-const AVATAR_SIZES: AvatarProps['size'][] = ['xxl', 'xl', 'l', 'm', 's', 'xs'];
+const AVATAR_DESIGNS: NonNullable<AvatarProps['design']>[] = ['rect', 'circle'];
+const AVATAR_SIZES: NonNullable<AvatarProps['size']>[] = [
+  'xxl',
+  'xl',
+  'l',
+  'm',
+  's',
+  'xs',
+];
 
 type AvatarStoryMeta = Omit<
   TableGuidesProps<Omit<AvatarProps, ''>>,

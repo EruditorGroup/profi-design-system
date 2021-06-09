@@ -1,8 +1,8 @@
-import React, {forwardRef} from 'react';
+import React, {forwardRef, ButtonHTMLAttributes} from 'react';
 import classnames from 'classnames';
 
 import styles from './Button.module.scss';
-import {ForwardingComponent, IColor, ISize, ISocials} from 'uitype';
+import {ForwardingComponent, AliasProps, IColor, ISize, ISocials} from 'uitype';
 
 type ButtonSocial = Extract<ISocials, 'fb' | 'ya' | 'vk'>;
 type ButtonColor = Extract<
@@ -10,7 +10,9 @@ type ButtonColor = Extract<
   'primary' | 'secondary' | 'light' | 'transparent'
 >;
 
-export type ButtonProps = {
+export interface ButtonProps
+  extends ButtonHTMLAttributes<HTMLButtonElement>,
+    AliasProps {
   design?: ButtonColor | ButtonSocial | 'link';
   size?: Extract<ISize, 's' | 'm' | 'l'>;
   block?: boolean;
@@ -19,7 +21,7 @@ export type ButtonProps = {
   leading?: React.ReactNode;
   trailing?: React.ReactNode;
   contentClassName?: string;
-};
+}
 
 const Button: ForwardingComponent<'button', ButtonProps> = forwardRef(
   (

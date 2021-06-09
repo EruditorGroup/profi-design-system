@@ -13,8 +13,8 @@ export default {
   component: Input,
 } as Meta;
 
-const INPUT_SIZES: InputProps['size'][] = ['l', 'm', 's', 'xl'];
-const FLOATINGLABEL_INPUT_SIZES: InputProps['size'][] = ['l', 'm'];
+const INPUT_SIZES: NonNullable<InputProps['size']>[] = ['l', 'm', 's', 'xl'];
+const FLOATINGLABEL_INPUT_SIZES: NonNullable<InputProps['size']>[] = ['l', 'm'];
 
 type InputStoryMeta = Omit<TableGuidesProps<InputProps>, 'Component'> & {
   name: string;

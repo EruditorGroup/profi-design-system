@@ -13,8 +13,16 @@ export default {
   component: Textarea,
 } as Meta;
 
-const TEXTAREA_SIZES: TextareaProps['size'][] = ['l', 'm', 's', 'xl'];
-const FLOATINGLABEL_TEXTAREA_SIZES: TextareaProps['size'][] = ['l', 'm'];
+const TEXTAREA_SIZES: NonNullable<TextareaProps['size']>[] = [
+  'l',
+  'm',
+  's',
+  'xl',
+];
+const FLOATINGLABEL_TEXTAREA_SIZES: NonNullable<TextareaProps['size']>[] = [
+  'l',
+  'm',
+];
 
 type TextareaStoryMeta = Omit<TableGuidesProps<TextareaProps>, 'Component'> & {
   name: string;

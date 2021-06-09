@@ -1,9 +1,10 @@
 import React, {ComponentType, HTMLAttributes} from 'react';
 import classnames from 'classnames';
 
+// @ts-ignore
 import styles from './TableGuides.module.scss';
 
-export type TableCell<PropType extends Record<string, unknown> = {}> = {
+export type TableCell<PropType = {}> = {
   key: string | number;
   label?: string;
   props?: Partial<PropType>;
@@ -13,7 +14,7 @@ export type TableCell<PropType extends Record<string, unknown> = {}> = {
 };
 
 export type TableGuidesProps<
-  PropType extends Record<string, unknown> = {}
+  PropType = {}
 > = HTMLAttributes<HTMLTableElement> & {
   cols: TableCell<PropType>[];
   rows: TableCell<PropType>[];
@@ -61,7 +62,7 @@ const TableGuides = <PropTypes extends Record<string, unknown> = {}>({
       ? '#FFF'
       : tableBackground;
 
-  const hasRowSpan = rows.some((row) => row.span > 1);
+  const hasRowSpan = rows.some((row) => row.span! > 1);
   const normalizedCols = normalizeCells(cols);
 
   return (
@@ -94,7 +95,7 @@ const TableGuides = <PropTypes extends Record<string, unknown> = {}>({
           const rowLabel = row.label ?? row.key;
           return (
             <tr key={`${row.key}-${ri}`}>
-              {row.span > 1 && (
+              {row.span! > 1 && (
                 <td
                   rowSpan={row.span}
                   className={classnames(

@@ -20,7 +20,12 @@ type CheckboxStoryMeta = Omit<
   name: string;
 };
 
-const CHECKBOX_SIZES: CheckboxProps['size'][] = ['xxl', 'xl', 'l', 'm'];
+const CHECKBOX_SIZES: NonNullable<CheckboxProps['size']>[] = [
+  'xxl',
+  'xl',
+  'l',
+  'm',
+];
 
 const checkboxStoryMeta: CheckboxStoryMeta = {
   name: 'Checkbox',

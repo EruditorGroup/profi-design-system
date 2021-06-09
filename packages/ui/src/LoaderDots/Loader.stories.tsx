@@ -13,6 +13,6 @@ const Template: Story<LoaderProps> = (args) => <LoaderDots {...args} />;
 
 export const Default = Template.bind({});
 Default.args = {
-  margin: '20',
+  // margin: '20',
   color: 'gray',
 };

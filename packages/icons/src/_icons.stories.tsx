@@ -19,8 +19,12 @@ type IconStoryMeta = Omit<
   name: string;
 };
 
+type Icons = {
+  [key: string]: React.ForwardRefExoticComponent<IconPropsType>;
+};
+
 const AVAILABLE_ICON_KEYS = Object.keys(icons).filter(
-  (key) => icons[key].displayName,
+  (key) => (icons as Icons)[key].displayName,
 );
 
 const ICON_SIZES = [
@@ -33,7 +37,9 @@ const ICON_SIZES = [
 
 const iconStoryMeta: IconStoryMeta = {
   name: 'Icons',
-  cols: AVAILABLE_ICON_KEYS.map((key) => ({key: icons[key].displayName})),
+  cols: AVAILABLE_ICON_KEYS.map((key) => ({
+    key: (icons as Icons)[key].displayName!,
+  })),
   rows: ICON_SIZES.map(({size, label}) => ({
     key: size,
     label,
@@ -50,7 +56,7 @@ const Template: Story = (args) => (
     cols={iconStoryMeta.cols}
     rows={iconStoryMeta.rows}
     Component={({colKey, rowKey, ...props}) => {
-      const Component = icons[colKey];
+      const Component = (icons as Icons)[colKey ?? ''];
       return (
         <div style={{textAlign: 'center'}}>
           <Component {...args} {...props} />
