@@ -3,7 +3,6 @@ import {Story, Meta} from '@storybook/react/types-6-0';
 
 import Text, {TextProps} from './Text';
 import Title, {TitleProps} from './Title';
-import {Link} from '../../es';
 
 export default {
   title: 'Text & Title',
