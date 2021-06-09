@@ -2,66 +2,120 @@ import React from 'react';
 // also exported from '@storybook/react' if you can deal with breaking changes in 6.1
 import {Story, Meta} from '@storybook/react/types-6-0';
 
+import TableGuides, {
+  TableGuidesProps,
+} from '../../../../.storybook/TableGuides';
+
+import {ChevronDownIcon, CloseIcon} from '@eruditorgroup/profi-icons';
+
 import Button, {ButtonProps} from './index';
 import Spinner from '../Spinner';
 import Avatar from '../Avatar';
 import Link from '../Link';
 import src from '../Avatar/avatar.png';
-import {ChevronDownIcon, CloseIcon} from '@eruditorgroup/profi-icons';
+
+const BUTTON_DESIGNS: ButtonProps['design'][] = [
+  'primary',
+  'secondary',
+  'light',
+  'transparent',
+  'link',
+];
+const BUTTON_SIZES: ButtonProps['size'][] = ['l', 'm', 's'];
 
 export default {
   title: 'Button',
   component: Button,
 } as Meta;
 
-const line = {
-  display: 'flex',
-  alignItems: 'flex-start',
+type ButtonStoryMeta = Omit<TableGuidesProps<ButtonProps>, 'Component'> & {
+  name: string;
 };
 
-const withOffset = {
-  margin: '10px',
+const fullStoryMeta: ButtonStoryMeta = {
+  name: 'Button',
+  cols: BUTTON_SIZES.map((size) => ({
+    key: size,
+    props: {size},
+  })),
+  rows: BUTTON_DESIGNS.reduce(
+    (rows, design) => [
+      ...rows,
+      {key: `Normal`, span: 2, spanLabel: design, props: {design}},
+      {key: `Disabled`, props: {design, disabled: true}},
+    ],
+    [],
+  ),
 };
 
-const Template: Story = (args) => (
-  <>
-    {([
-      'primary',
-      'secondary',
-      'light',
-      'transparent',
-      'link',
-    ] as ButtonProps['design'][]).map((design) => (
-      <div style={line} key={design}>
-        {['s', 'm', 'l'].map((size) => (
-          <Button {...args} size={size} design={design} style={withOffset} />
-        ))}
+const templateStoryMeta: ButtonStoryMeta = {
+  name: '',
+  cols: BUTTON_SIZES.map((size) => ({
+    key: size,
+    props: {size},
+  })),
+  rows: BUTTON_DESIGNS.map((design) => ({
+    key: design,
+    props: {design},
+  })),
+};
+
+const templateFactory: (meta: ButtonStoryMeta) => Story<ButtonProps> = (
+  meta,
+) => ({children = 'Button', ...args}) => (
+  <TableGuides
+    cols={meta.cols}
+    rows={meta.rows}
+    forceRowHeight="50px"
+    Component={(props) => (
+      <div style={{textAlign: 'center'}}>
+        <Button {...args} {...props}>
+          {children}
+        </Button>
       </div>
-    ))}
-  </>
+    )}
+  />
 );
 
-export const Active = Template.bind({});
-Active.args = {
-  children: 'Button',
+export const BaseStory = templateFactory(fullStoryMeta).bind({});
+BaseStory.storyName = fullStoryMeta.name;
+
+export const RegularButtonStory = templateFactory(fullStoryMeta).bind({});
+RegularButtonStory.storyName = 'Regular';
+RegularButtonStory.args = {
+  regular: true,
 };
 
-export const Leading_and_trailing_components = Template.bind({});
-Leading_and_trailing_components.args = {
+export const AsLinkStory = templateFactory(fullStoryMeta).bind({});
+AsLinkStory.storyName = 'As Link';
+AsLinkStory.args = {
+  as: Link,
+  children: 'Close',
+  leading: <CloseIcon />,
+  to: '#',
+};
+
+export const RoundedStory = templateFactory(fullStoryMeta).bind({});
+RoundedStory.storyName = 'Rounded';
+RoundedStory.args = {
+  children: <CloseIcon />,
+  rounded: true,
+};
+
+export const LeadingAndTrailingComponentsStory = templateFactory(
+  templateStoryMeta,
+).bind({});
+LeadingAndTrailingComponentsStory.storyName =
+  'With Leading & Trailing components';
+LeadingAndTrailingComponentsStory.args = {
   children: 'Василий Петрович',
   leading: <Avatar src={src} isOnline />,
   trailing: <ChevronDownIcon />,
 };
 
-export const Disabled = Template.bind({});
-Disabled.args = {
-  disabled: true,
-  children: 'Button',
-};
-
-export const With_left_spinner = Template.bind({});
-With_left_spinner.args = {
-  disabled: true,
+export const WithLeftSpinnerStory = templateFactory(templateStoryMeta).bind({});
+WithLeftSpinnerStory.storyName = 'With Left Spinner';
+WithLeftSpinnerStory.args = {
   children: (
     <>
       <Spinner withRightPadding delay={1000} /> Button
@@ -69,32 +123,14 @@ With_left_spinner.args = {
   ),
 };
 
-export const With_right_spinner = Template.bind({});
-With_right_spinner.args = {
-  disabled: true,
+export const WithRightSpinnerStory = templateFactory(templateStoryMeta).bind(
+  {},
+);
+WithRightSpinnerStory.storyName = 'With Right Spinner';
+WithRightSpinnerStory.args = {
   children: (
     <>
-      Button <Spinner withLeftPadding delay={1000} />
+      <Spinner withRightPadding delay={1000} /> Button
     </>
   ),
-};
-
-export const Rounded = Template.bind({});
-Rounded.args = {
-  children: <CloseIcon />,
-  rounded: true,
-};
-
-export const As_link = Template.bind({});
-As_link.args = {
-  leading: <CloseIcon />,
-  children: 'Close',
-  as: Link,
-  to: '#',
-};
-
-export const Regular = Template.bind({});
-Regular.args = {
-  regular: true,
-  children: 'Button',
 };

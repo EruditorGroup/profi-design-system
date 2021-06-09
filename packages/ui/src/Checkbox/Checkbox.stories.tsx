@@ -1,58 +1,51 @@
-import React, {useState} from 'react';
-import Checkbox from '.';
+import React from 'react';
+import type {Story, Meta} from '@storybook/react';
 
-// also exported from '@storybook/react' if you can deal with breaking changes in 6.1
-import type {Story, Meta} from '@storybook/react/types-6-0';
-import type {CheckboxProps} from '.'
+import TableGuides, {
+  TableGuidesProps,
+} from '../../../../.storybook/TableGuides';
+
+import Checkbox from '.';
+import type {CheckboxProps} from '.';
 
 export default {
-  title: 'Checkbox',
+  title: 'Form/Checkbox',
   component: Checkbox,
 } as Meta;
 
-export const Default: Story<CheckboxProps> = (args) => {
-  const [checked, setChecked] = useState(true);
-  return (
-    <div>
-      {[
-        <Checkbox {...args}>Простой checkbox</Checkbox>,
-        <Checkbox disabled {...args}>
-          Неактивный checkbox
-        </Checkbox>,
-        <Checkbox
-          checked={checked}
-          onChange={() => setChecked(!checked)}
-          {...args}
-        >
-          Выбранный checkbox
-        </Checkbox>,
-        <Checkbox
-          checked
-          disabled
-          onChange={() => setChecked(!checked)}
-          {...args}
-        >
-          Выбранный неактивный checkbox
-        </Checkbox>,
-        <Checkbox {...args}>
-          <div>Многострочный</div>
-          <div>Многострочный</div>
-          <div>Многострочный</div>
-        </Checkbox>,
-      ].map((i) => (
-        <div style={{marginBottom: '10px'}}>{i}</div>
-      ))}
-    </div>
-  );
+type CheckboxStoryMeta = Omit<
+  TableGuidesProps<Omit<CheckboxProps, ''>>,
+  'Component'
+> & {
+  name: string;
 };
 
-Default.args = {
-  size: 'm'
-}
+const CHECKBOX_SIZES: CheckboxProps['size'][] = ['xxl', 'xl', 'l', 'm'];
 
-Default.argTypes = {
-  size: {
-    options: ['m', 'l', 'xl', 'xxl'],
-    control: { type: 'radio' }
-  }
-}
+const checkboxStoryMeta: CheckboxStoryMeta = {
+  name: 'Checkbox',
+  cols: CHECKBOX_SIZES.map((size) => ({
+    key: size.toLocaleUpperCase(),
+    props: {size},
+  })),
+  rows: [
+    {key: 'On', props: {defaultChecked: true}},
+    {key: 'Disabled', props: {defaultChecked: true, disabled: true}},
+    {key: 'Off', props: {defaultChecked: false}},
+    {key: 'Disabled', props: {defaultChecked: false, disabled: true}},
+  ],
+};
+
+const Template: Story<CheckboxProps> = (args) => (
+  <TableGuides
+    cols={checkboxStoryMeta.cols}
+    rows={checkboxStoryMeta.rows}
+    Component={(props) => <Checkbox {...args} {...props} />}
+  />
+);
+
+export const CheckboxStory = Template.bind({});
+CheckboxStory.storyName = checkboxStoryMeta.name;
+CheckboxStory.args = {
+  children: 'Checkbox',
+};
