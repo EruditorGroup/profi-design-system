@@ -20,6 +20,7 @@
     "**/*.test.tsx",
     "**/*.d.ts",
     "**/__mocks__",
+    ".storybook/*",
     "node_modules"
   ]
 }
