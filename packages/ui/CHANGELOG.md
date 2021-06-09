@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.10.0](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.9.1...@eruditorgroup/profi-ui@0.10.0) (2021-06-08)
+
+
+### Features
+
+* **Grid:** Добавлен S breakpoint ([077299b](https://github.com/eruditorgroup/profi-design-system/commit/077299ba589117aa53a0d09056a67877c5fac903))
+
+
+
+
+
 ## [0.9.1](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.9.0...@eruditorgroup/profi-ui@0.9.1) (2021-06-08)
 
 
