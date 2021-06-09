@@ -1,66 +1,51 @@
-import React, {useState} from 'react';
-import Radio from '.';
+import React from 'react';
+import type {Story, Meta} from '@storybook/react';
 
-// also exported from '@storybook/react' if you can deal with breaking changes in 6.1
-import type {Story, Meta} from '@storybook/react/types-6-0';
+import TableGuides, {
+  TableGuidesProps,
+} from '../../../../.storybook/TableGuides';
+
+import Radio from '.';
 import type {RadioProps} from '.';
 
 export default {
-  title: 'Radio',
+  title: 'Form/Radio',
   component: Radio,
 } as Meta;
 
-export const Default: Story<Omit<RadioProps, 'name'>> = (args) => {
-  const [selected, setSelected] = useState('default');
-  return (
-    <div>
-      {[
-        <Radio
-          name="storybook"
-          onChange={() => setSelected('simple')}
-          checked={selected === 'simple'}
-          value="simple"
-          {...args}
-        >
-          Простой Radio
-        </Radio>,
-        <Radio name="storybook" value="disabled" disabled {...args}>
-          Disabled Radio
-        </Radio>,
-        <Radio
-          name="storybook"
-          value="default"
-          onChange={() => setSelected('default')}
-          checked={selected === 'default'}
-          {...args}
-        >
-          Выбранный по дефолту Radio
-        </Radio>,
-        <Radio
-          name="storybook"
-          value="multiline"
-          onChange={() => setSelected('multiline')}
-          checked={selected === 'multiline'}
-          {...args}
-        >
-          <div>Многострочный</div>
-          <div>Многострочный</div>
-          <div>Многострочный</div>
-        </Radio>,
-      ].map((i) => (
-        <div style={{marginBottom: '10px'}}>{i}</div>
-      ))}
-    </div>
-  );
+type RadioStoryMeta = Omit<
+  TableGuidesProps<Omit<RadioProps, ''>>,
+  'Component'
+> & {
+  name: string;
 };
 
-Default.args = {
-  size: 'm',
+const RADIO_SIZES: NonNullable<RadioProps['size']>[] = ['xxl', 'xl', 'l', 'm'];
+
+const radioStoryMeta: RadioStoryMeta = {
+  name: 'Radio',
+  cols: RADIO_SIZES.map((size) => ({
+    key: size.toLocaleUpperCase(),
+    props: {size},
+  })),
+  rows: [
+    {key: 'On', props: {defaultChecked: true}},
+    {key: 'Disabled', props: {defaultChecked: true, disabled: true}},
+    {key: 'Off', props: {defaultChecked: false}},
+    {key: 'Disabled', props: {defaultChecked: false, disabled: true}},
+  ],
 };
 
-Default.argTypes = {
-  size: {
-    options: ['m', 'l', 'xl', 'xxl'],
-    control: {type: 'radio'},
-  },
+const Template: Story<RadioProps> = (args) => (
+  <TableGuides
+    cols={radioStoryMeta.cols}
+    rows={radioStoryMeta.rows}
+    Component={(props) => <Radio {...args} {...props} />}
+  />
+);
+
+export const RadioStory = Template.bind({});
+RadioStory.storyName = radioStoryMeta.name;
+RadioStory.args = {
+  children: 'Radiobutton',
 };

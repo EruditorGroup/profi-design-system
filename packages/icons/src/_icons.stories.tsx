@@ -1,6 +1,7 @@
 import React from 'react';
-import {Story, Meta} from '@storybook/react/types-6-0';
-import classnames from 'classnames';
+import {Story, Meta} from '@storybook/react';
+
+import TableGuides, {TableGuidesProps} from '../../../.storybook/TableGuides';
 
 import * as icons from './index';
 import {IconPropsType} from './_types';
@@ -9,77 +10,61 @@ export default {
   title: 'Icons',
 } as Meta;
 
-const sizes = [13, 15, 17, 22, 28];
+type IconStoryMeta = Omit<
+  TableGuidesProps<
+    Omit<IconPropsType, ''> & {colKey?: string; rowKey?: string}
+  >,
+  'Component'
+> & {
+  name: string;
+};
 
 type Icons = {
   [key: string]: React.ForwardRefExoticComponent<IconPropsType>;
 };
 
-// To add icon to this story you should add export your icon inside './index.tsx'
-const Template: Story = () => {
-  return (
-    <table cellPadding="10">
-      <thead>
-        <tr>
-          <th></th>
-          {sizes.map((size) => (
-            <th key={size}>{size}px</th>
-          ))}
-        </tr>
-      </thead>
-      <tbody>
-        {Object.keys(icons as Icons)
-          .filter((key) => (icons as Icons)[key].displayName)
-          .map((key, i) => (
-            <tr
-              key={i}
-              style={{
-                margin: '5px',
-                padding: '0 10px 10px',
-                border: '1px solid #ececec',
-                width: '160px',
-              }}
-            >
-              <td style={{textAlign: 'right'}}>
-                {(icons as Icons)[key].displayName}
-              </td>
-              {sizes.map((size, j) => {
-                const Component = (icons as Icons)[key];
-                return (
-                  <th
-                    key={size}
-                    style={{fontSize: `${size}px`, border: '1px solid #ececec'}}
-                  >
-                    <Component key={j} />
-                  </th>
-                );
-              })}
-            </tr>
-          ))}
-      </tbody>
-    </table>
-    // <div style={{display: 'flex', flexWrap: 'wrap'}}>
-    //   {Object.keys(icons)
-    //     .filter((key) => icons[key].displayName)
-    //     .map((key, i) => (
-    //       <div
-    //         key={i}
-    //         style={{
-    //           margin: '5px',
-    //           padding: '0 10px 10px',
-    //           border: '1px solid #ececec',
-    //           width: '160px',
-    //         }}
-    //       >
-    //         <h3>{icons[key].displayName}</h3>
-    //         {variants.map((props, j) => {
-    //           const Component = icons[key];
-    //           return <Component {...props} key={j} />;
-    //         })}
-    //       </div>
-    //     ))}
-    // </div>
-  );
+const AVAILABLE_ICON_KEYS = Object.keys(icons).filter(
+  (key) => (icons as Icons)[key].displayName,
+);
+
+const ICON_SIZES = [
+  {size: 28, label: '28 XXL'},
+  {size: 22, label: '22 XL'},
+  {size: 17, label: '17 L'},
+  {size: 15, label: '15 M'},
+  {size: 13, label: '13 S'},
+];
+
+const iconStoryMeta: IconStoryMeta = {
+  name: 'Icons',
+  cols: AVAILABLE_ICON_KEYS.map((key) => ({
+    key: (icons as Icons)[key].displayName!,
+  })),
+  rows: ICON_SIZES.map(({size, label}) => ({
+    key: size,
+    label,
+    props: {
+      style: {fontSize: `${size}px`},
+    },
+  })),
 };
 
-export const List = Template.bind({});
+// To add icon to this story you should add export your icon inside './index.tsx'
+const Template: Story = (args) => (
+  <TableGuides
+    withCellKeyProps
+    cols={iconStoryMeta.cols}
+    rows={iconStoryMeta.rows}
+    Component={({colKey, rowKey, ...props}) => {
+      const Component = (icons as Icons)[colKey ?? ''];
+      return (
+        <div style={{textAlign: 'center'}}>
+          <Component {...args} {...props} />
+        </div>
+      );
+    }}
+  />
+);
+
+export const IconsStory = Template.bind({});
+IconsStory.storyName = 'Icons';
