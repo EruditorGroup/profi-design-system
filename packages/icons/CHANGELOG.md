@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.3.0](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-icons@0.2.0...@eruditorgroup/profi-icons@0.3.0) (2021-06-08)
+
+
+### Features
+
+* **icons:** Добавлены Instagram, OK, Youtube ([7478b5e](https://github.com/eruditorgroup/profi-design-system/commit/7478b5e00c36601b216557ccb1863a93ac23b24d))
+
+
+
+
+
 # [0.2.0](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-icons@0.1.1...@eruditorgroup/profi-icons@0.2.0) (2021-06-07)
 
 
