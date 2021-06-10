@@ -28,6 +28,7 @@
     "build:bundle": "lerna exec --parallel -- 'webpack -c ../../webpack.config.js && if [[ -e ./src/styles/theme.css ]]; then cp ./src/styles/theme.css ./dist/theme.css; fi'",
     "build:storybook": "build-storybook",
     "test": "MODULE_TYPE=cjs jest",
+    "test:storybook": "yarn build:storybook && MODULE_TYPE=cjs jest --config=storyshots.config.js",
     "lint": "yarn eslint 'packages/*/src/**' --cache --ext .js,.jsx,.ts,.tsx --max-warnings 0",
     "publish": "lerna publish --conventional-commits --yes",
     "precommit": "APP_ROOT_PATH=. lint-staged"
@@ -48,6 +49,8 @@
     "@storybook/addon-essentials": "^6.2.9",
     "@storybook/addon-links": "^6.2.9",
     "@storybook/addon-postcss": "^2.0.0",
+    "@storybook/addon-storyshots": "^6.2.9",
+    "@storybook/addon-storyshots-puppeteer": "^6.2.9",
     "@storybook/react": "^6.2.9",
     "@testing-library/react-hooks": "^5.1.2",
     "@types/jest": "^26.0.23",
@@ -82,6 +85,7 @@
     "postcss-preset-env": "^6.7.0",
     "postcss-scss": "^3.0.5",
     "prettier": "^2.2.1",
+    "puppeteer": "^10.0.0",
     "react": "^16.14.0",
     "react-dom": "^16.14.0",
     "rimraf": "^3.0.2",
@@ -121,6 +125,9 @@
     ],
     "setupFilesAfterEnv": [
       "<rootDir>/scripts/jest/setupTests.js"
+    ],
+    "testPathIgnorePatterns": [
+      "storyshots.test.(j|t)s"
     ]
   },
   "dependencies": {}
