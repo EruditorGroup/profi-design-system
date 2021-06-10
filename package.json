@@ -17,6 +17,7 @@
   ],
   "scripts": {
     "clean": "lerna exec --parallel -- rimraf lib dist es",
+    "clean:storybook": "rimraf __image_snapshots__ storybook-static",
     "start": "start-storybook -p 6006",
     "build": "yarn build:cjs && yarn build:esm && yarn build:bundle",
     "build:cjs": "yarn build:cjs-types && yarn build:cjs-babel",
@@ -29,6 +30,7 @@
     "build:storybook": "build-storybook",
     "test": "MODULE_TYPE=cjs jest",
     "test:storybook": "yarn build:storybook && MODULE_TYPE=cjs jest --config=storyshots.config.js",
+    "test:storybook:update": "yarn clean:storybook && yarn test:storybook",
     "lint": "yarn eslint 'packages/*/src/**' --cache --ext .js,.jsx,.ts,.tsx --max-warnings 0",
     "publish": "lerna publish --conventional-commits --yes",
     "precommit": "APP_ROOT_PATH=. lint-staged"
