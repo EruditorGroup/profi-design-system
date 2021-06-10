@@ -28,6 +28,8 @@ export {
   Input,
   InputUnit,
   Textarea,
+  Checkbox,
+  Radio,
 } from './Form';
 export type {
   BaseControlProps,
@@ -35,6 +37,8 @@ export type {
   InputProps,
   InputUnitProps,
   TextareaProps,
+  CheckboxProps,
+  RadioProps,
 } from './Form';
 
 export {default as BodyPortal} from './BodyPortal';
@@ -54,12 +58,6 @@ export type {LoaderProps} from './LoaderDots';
 
 export {default as Dropdown, DropdownContext} from './Dropdown';
 export type {DropdownProps} from './Dropdown';
-
-export {default as Checkbox} from './Checkbox';
-// export type {CheckboxProps} from './Checkbox';
-
-export {default as Radio} from './Radio';
-// export type {RadioProps} from './Radio'; // TODO: refactor
 
 export {default as Divider} from './Divider';
 export type {DividerProps} from './Divider';

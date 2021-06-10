@@ -4,12 +4,16 @@ import wrapControlWithRef from './wrapControlWithRef';
 import BareInput from './BareInput';
 import BareTextarea from './BareTextarea';
 import BareInputUnit from './BareInputUnit';
+import Checkbox from './Checkbox';
+import Radio from './Radio';
 
 import type {BaseControlProps} from './types';
 import type {BareInputProps} from './BareInput';
 import type {BareInputUnitProps} from './BareInputUnit';
 import type {BareTextareaProps} from './BareTextarea';
 import type {FormControlProps} from './FormControl';
+import type {CheckboxProps} from './Checkbox';
+import type {RadioProps} from './Radio';
 
 import {default as FormControl} from './FormControl';
 
@@ -40,11 +44,21 @@ const Textarea = forwardRef<HTMLTextAreaElement, TextareaProps>(
   wrapControlWithRef<HTMLTextAreaElement, TextareaProps>(BareTextarea),
 );
 
-export {wrapControlWithRef, FormControl, Input, InputUnit, Textarea};
+export {
+  wrapControlWithRef,
+  FormControl,
+  Input,
+  InputUnit,
+  Textarea,
+  Checkbox,
+  Radio,
+};
 export type {
   BaseControlProps,
   FormControlProps,
   InputProps,
   InputUnitProps,
   TextareaProps,
+  CheckboxProps,
+  RadioProps,
 };

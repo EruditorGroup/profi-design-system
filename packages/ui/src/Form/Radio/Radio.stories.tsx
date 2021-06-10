@@ -3,7 +3,7 @@ import type {Story, Meta} from '@storybook/react';
 
 import TableGuides, {
   TableGuidesProps,
-} from '../../../../.storybook/TableGuides';
+} from '../../../../../.storybook/TableGuides';
 
 import Radio from '.';
 import type {RadioProps} from '.';
