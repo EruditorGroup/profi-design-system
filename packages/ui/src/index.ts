@@ -52,3 +52,6 @@ export type {SpinnerProps} from './Spinner';
 
 export {default as Notification} from './Notification';
 export type {NotificationProps} from './Notification';
+
+export {default as Toggle} from './Toggle';
+export type {ToggleProps} from './Toggle';
