@@ -3,6 +3,37 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.5.0 (2021-06-16)
+
+
+### Bug Fixes
+
+* **link:** use styles as global anchor ([f5acb99](https://github.com/eruditorgroup/profi-design-system/commit/f5acb997b058e5faa4ea663d2a5ac074627966c8))
+* **toolkit:** fixes hooks exports ([261c597](https://github.com/eruditorgroup/profi-design-system/commit/261c59715be132e252b82ea56c96ead744763b41))
+* **tools:** rm back usePersistCallback ([1b006f7](https://github.com/eruditorgroup/profi-design-system/commit/1b006f70f779d448780d7a970143d05470651876))
+* **webpack:** copy theme.css to dist ([dfd048c](https://github.com/eruditorgroup/profi-design-system/commit/dfd048c6919a9a7f1139e416af5698bfa6d43ae8))
+* build fixes ([aa0837a](https://github.com/eruditorgroup/profi-design-system/commit/aa0837a32c74963a4b74562379fda30445b68997))
+* modules in package.json ([fabef2a](https://github.com/eruditorgroup/profi-design-system/commit/fabef2a5133d4a862e433ef150d44bb0987cdad3))
+* publish npm ([e31cb87](https://github.com/eruditorgroup/profi-design-system/commit/e31cb87a8475956eb604ae81a0f9aaac777ca0de))
+* Тест релиза ([cd21899](https://github.com/eruditorgroup/profi-design-system/commit/cd21899b30c97adc44b5289cd99d33b735d555e8))
+* Удалил лишнее ([0dc51c0](https://github.com/eruditorgroup/profi-design-system/commit/0dc51c08be5f98310b928cd5a9ee6711884737be))
+
+
+### Features
+
+* **Text, Dropdown:** implemented "as" component logic ([5a9361d](https://github.com/eruditorgroup/profi-design-system/commit/5a9361d1818dbb4fb46ffa53eb93cc6c52021ca4))
+* **toolkit:** array utility functions ([bdcae64](https://github.com/eruditorgroup/profi-design-system/commit/bdcae643b03b7e0a2059e4711790887f8f7366fd))
+* **toolkit:** change signature useFloatLabel to generic ([8a480ae](https://github.com/eruditorgroup/profi-design-system/commit/8a480aee491c2c472eb32ab6ed5292f46724867f))
+* **toolkit:** date utility functions & constants ([54c7427](https://github.com/eruditorgroup/profi-design-system/commit/54c742721fe685376d30dab6713edece605c0131))
+* **toolkit:** getReadableDate date utility function ([3ae3133](https://github.com/eruditorgroup/profi-design-system/commit/3ae31333a6ed6b9cce5497c3fce612d99169c168))
+* Tests, lint, publish packages ([0aa6fbe](https://github.com/eruditorgroup/profi-design-system/commit/0aa6fbe31a711d447fa97462f808268b3204d17f))
+* Добавлены useMedia и useCurrentScreen ([f1d8f14](https://github.com/eruditorgroup/profi-design-system/commit/f1d8f14b2ee6fa42c60476a24a34cf9755e3ba60))
+* Тест публикации ([fc68699](https://github.com/eruditorgroup/profi-design-system/commit/fc686997710b0fc18a9df817e100cb216dd070f1))
+
+
+
+
+
 # [0.4.0](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-toolkit@0.3.0...@eruditorgroup/profi-toolkit@0.4.0) (2021-06-07)
 
 

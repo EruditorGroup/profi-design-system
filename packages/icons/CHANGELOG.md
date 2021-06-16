@@ -3,6 +3,35 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.4.0 (2021-06-16)
+
+
+### Bug Fixes
+
+* **CheckIcon:** Adjust path and viewbox ([45ac9e2](https://github.com/eruditorgroup/profi-design-system/commit/45ac9e210002968dc9d5b01d879cca8f3ee3ec52))
+* **link:** use styles as global anchor ([f5acb99](https://github.com/eruditorgroup/profi-design-system/commit/f5acb997b058e5faa4ea663d2a5ac074627966c8))
+* **types:** ForwardingRef is now takes valid props validation from alias component ([#109](https://github.com/eruditorgroup/profi-design-system/issues/109)) ([b469793](https://github.com/eruditorgroup/profi-design-system/commit/b469793d951d7f87c09bfa3cf5ccaf2b0a21ece5)), closes [#102](https://github.com/eruditorgroup/profi-design-system/issues/102)
+* **webpack:** copy theme.css to dist ([dfd048c](https://github.com/eruditorgroup/profi-design-system/commit/dfd048c6919a9a7f1139e416af5698bfa6d43ae8))
+* build fixes ([aa0837a](https://github.com/eruditorgroup/profi-design-system/commit/aa0837a32c74963a4b74562379fda30445b68997))
+* icons storybook ([bb02833](https://github.com/eruditorgroup/profi-design-system/commit/bb02833cf61fb338fe360a5fe49b991718091c70))
+* modules in package.json ([fabef2a](https://github.com/eruditorgroup/profi-design-system/commit/fabef2a5133d4a862e433ef150d44bb0987cdad3))
+* publish npm ([e31cb87](https://github.com/eruditorgroup/profi-design-system/commit/e31cb87a8475956eb604ae81a0f9aaac777ca0de))
+* Удалил лишнее ([0dc51c0](https://github.com/eruditorgroup/profi-design-system/commit/0dc51c08be5f98310b928cd5a9ee6711884737be))
+* **icons:** confused paths ([89d485f](https://github.com/eruditorgroup/profi-design-system/commit/89d485f057f37e650e3e0e2db6afbb7dcb72ef6d))
+
+
+### Features
+
+* **icons:** Add Calendar icon ([080e46c](https://github.com/eruditorgroup/profi-design-system/commit/080e46ce5b94f586341a90d9ebeea2b4fe83d1a9))
+* **icons:** Add DotIcon ([200548e](https://github.com/eruditorgroup/profi-design-system/commit/200548e72d65a4cfd25dcd8b4ca0f7bfa75bb803))
+* **icons:** Добавлены Instagram, OK, Youtube ([c9fe2f2](https://github.com/eruditorgroup/profi-design-system/commit/c9fe2f2fc70a0f47938fe948caa3d2c2178d662c))
+* new icons & new color theme & implemented Text and Button components ([79610c1](https://github.com/eruditorgroup/profi-design-system/commit/79610c183ae43eb411d357f0dfa97bcb2038937b))
+* Tests, lint, publish packages ([0aa6fbe](https://github.com/eruditorgroup/profi-design-system/commit/0aa6fbe31a711d447fa97462f808268b3204d17f))
+
+
+
+
+
 # [0.3.0](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-icons@0.2.0...@eruditorgroup/profi-icons@0.3.0) (2021-06-08)
 
 

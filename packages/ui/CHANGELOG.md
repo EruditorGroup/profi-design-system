@@ -3,6 +3,100 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.11.0 (2021-06-16)
+
+
+
+## 0.6.3 (2021-06-16)
+
+
+### Bug Fixes
+
+* **avatar:** rm trash ([430dc89](https://github.com/eruditorgroup/profi-design-system/commit/430dc8951f95c224f1936936e59587aeb543bc11))
+* **Button:** :hover color for light button ([b7848a3](https://github.com/eruditorgroup/profi-design-system/commit/b7848a3d971a68649ca9537253e3061870b75cf4))
+* **Button:** add contentClassName prop & fix icon positioning bug ([#69](https://github.com/eruditorgroup/profi-design-system/issues/69)) ([e4c5562](https://github.com/eruditorgroup/profi-design-system/commit/e4c55620ae4b09a3712b09c6dbc3de28c48b155b))
+* **Button:** Button design type ([e4d37c0](https://github.com/eruditorgroup/profi-design-system/commit/e4d37c0c0831559efc81373b7340a273b5e5812a))
+* **Button:** Regular начертание ([553d9e0](https://github.com/eruditorgroup/profi-design-system/commit/553d9e05c999f51c1b730e27850048d9f3da35d9))
+* **Button:** Лишний fontWeight ([4b1e919](https://github.com/eruditorgroup/profi-design-system/commit/4b1e9197167017ad224dd029be657f6842aa9fec))
+* **Grid:** Мобильные отступы ([935900a](https://github.com/eruditorgroup/profi-design-system/commit/935900a4ff810e96b4813198a2acbb3d6ee8febb))
+* **Grid:** Мобильный контейнер ([54b166b](https://github.com/eruditorgroup/profi-design-system/commit/54b166bd04892c87fb524935c951099dec33819e))
+* **icons:** confused paths ([89d485f](https://github.com/eruditorgroup/profi-design-system/commit/89d485f057f37e650e3e0e2db6afbb7dcb72ef6d))
+* **link:** use styles as global anchor ([f5acb99](https://github.com/eruditorgroup/profi-design-system/commit/f5acb997b058e5faa4ea663d2a5ac074627966c8))
+* **Link:** Fix Link bold ([7f4c574](https://github.com/eruditorgroup/profi-design-system/commit/7f4c574d21956a32a8fb0eeeb85a3fb909052e18))
+* **Link:** Remove :global a ([92aee32](https://github.com/eruditorgroup/profi-design-system/commit/92aee3227c0215af8b4576df443361daad18c619))
+* **Link:** underline hover state ([935b1d3](https://github.com/eruditorgroup/profi-design-system/commit/935b1d35dc3d771e51f66ee1c8582f73a6fa0d92))
+* **Link:** Цвет линка в соответствии с дизайн-системой ([fec7e61](https://github.com/eruditorgroup/profi-design-system/commit/fec7e618dcfe3432a912c23e264ef225cb2bc299))
+* **Menu:** Меню по макетам дизайн-системы ([d56e80f](https://github.com/eruditorgroup/profi-design-system/commit/d56e80f7a25ba517d3f0d95bf8aa7d0891691471))
+* **Menu.Item:** Цвет ссылки + скругления ([fb8f7c8](https://github.com/eruditorgroup/profi-design-system/commit/fb8f7c8472fd99a2227bbd61b97332711e8759e9))
+* **storybook:** Divider story ([9270dbb](https://github.com/eruditorgroup/profi-design-system/commit/9270dbb9b840931237f0b377485cd69798c57386))
+* **storybook:** Grid imports ([7e68178](https://github.com/eruditorgroup/profi-design-system/commit/7e6817872926fb1836dd3a96580325a0d1bdf197))
+* **Text:** add muted color ([ecb29ee](https://github.com/eruditorgroup/profi-design-system/commit/ecb29ee0a4ac1ec56355e5ff201599a8798eb084))
+* **Text:** Remove default size ([89c67cd](https://github.com/eruditorgroup/profi-design-system/commit/89c67cdbff51409d38606a50a3e4cec3f9859d6e))
+* **types:** ForwardingRef is now takes valid props validation from alias component ([#109](https://github.com/eruditorgroup/profi-design-system/issues/109)) ([b469793](https://github.com/eruditorgroup/profi-design-system/commit/b469793d951d7f87c09bfa3cf5ccaf2b0a21ece5)), closes [#102](https://github.com/eruditorgroup/profi-design-system/issues/102)
+* **ui:** add Input type prop defaults ([8586fdf](https://github.com/eruditorgroup/profi-design-system/commit/8586fdf6554db3fe260606244909fc0b69e6fbd0))
+* **ui:** Add Notification to index re-export ([9faa0e9](https://github.com/eruditorgroup/profi-design-system/commit/9faa0e9cd6fcf839648e888c6bbd2dbd7ef9d9fe))
+* **ui:** change default Input size to "l" ([f265ea4](https://github.com/eruditorgroup/profi-design-system/commit/f265ea424a909ed1b85440ffdc908fb6bee0ed59))
+* **ui:** Checkbox & Radio - disabled unchecked state displayed as checked ([970019c](https://github.com/eruditorgroup/profi-design-system/commit/970019cf35e40f8b23231b729932f0b5bca03f18))
+* **ui:** Dropdown - make children optional ([646bb5d](https://github.com/eruditorgroup/profi-design-system/commit/646bb5db5b62d9f116ce866ba80b10f90d79dec1))
+* **ui:** Fix style import order ([5c2aceb](https://github.com/eruditorgroup/profi-design-system/commit/5c2aceb0f2f9c88aff1e5e10f74c18af5beb5d9d))
+* **ui:** Form inputs' leading icon alignment ([1d59b49](https://github.com/eruditorgroup/profi-design-system/commit/1d59b49c4d74cf5336692fd2b589f5df92988077))
+* **ui:** InputUnit remove magic number ([9fe8e79](https://github.com/eruditorgroup/profi-design-system/commit/9fe8e7986b74e1d5c6ad332c9eb238e24b9b233f))
+* **ui:** Prevent FormControl's false click triggers ([2f97c50](https://github.com/eruditorgroup/profi-design-system/commit/2f97c50eeb13f2774e12e05af758e17cdc44fe50))
+* **ui:** Refactor Input with floating label styles ([0412b47](https://github.com/eruditorgroup/profi-design-system/commit/0412b47aded0204dedd189ebf64048ec8bcb7bdf))
+* **ui:** Tweak Input & Textarea placeholder fontWeight ([cd840b6](https://github.com/eruditorgroup/profi-design-system/commit/cd840b6de00d0d7a8f52a1b04e62f83836b7b457))
+* border-radius по дизайн-системе ([a3beea8](https://github.com/eruditorgroup/profi-design-system/commit/a3beea8944c7b224cd37f11e5c6d76595e36f3a0))
+* build bundle ([0c4b659](https://github.com/eruditorgroup/profi-design-system/commit/0c4b6598c5057e928e6e652cb31b442fcf8a1852))
+* build fixes ([aa0837a](https://github.com/eruditorgroup/profi-design-system/commit/aa0837a32c74963a4b74562379fda30445b68997))
+* enable jobs ([19a5e5f](https://github.com/eruditorgroup/profi-design-system/commit/19a5e5f932f697beddc10b60929d1bd2ff92a5e4))
+* icons storybook ([bb02833](https://github.com/eruditorgroup/profi-design-system/commit/bb02833cf61fb338fe360a5fe49b991718091c70))
+* modules in package.json ([fabef2a](https://github.com/eruditorgroup/profi-design-system/commit/fabef2a5133d4a862e433ef150d44bb0987cdad3))
+* publish npm ([e31cb87](https://github.com/eruditorgroup/profi-design-system/commit/e31cb87a8475956eb604ae81a0f9aaac777ca0de))
+* remote test comment ([cdc7ea4](https://github.com/eruditorgroup/profi-design-system/commit/cdc7ea48776b8ad5c516513a9ba212e2e3647cd9))
+* test change ([d47a117](https://github.com/eruditorgroup/profi-design-system/commit/d47a117e77b60d78a2cc4643fecbee9f7d358e40))
+* trigger release ([7f2d7ed](https://github.com/eruditorgroup/profi-design-system/commit/7f2d7ed666af3d38ff668761274166b1229ce2f0))
+* Актуализация дизайн системы с макетами ([91d9544](https://github.com/eruditorgroup/profi-design-system/commit/91d95443530e3f83f698b33ea4b7cb1371abc270))
+* Отступы внутри DropdownPortal ([d5d8773](https://github.com/eruditorgroup/profi-design-system/commit/d5d8773f2e5311f42d2d3ac21ad1015de3cda2b1))
+* **webpack:** copy theme.css to dist ([dfd048c](https://github.com/eruditorgroup/profi-design-system/commit/dfd048c6919a9a7f1139e416af5698bfa6d43ae8))
+* Удалил лишнее ([0dc51c0](https://github.com/eruditorgroup/profi-design-system/commit/0dc51c08be5f98310b928cd5a9ee6711884737be))
+
+
+### Features
+
+* **Dropdown:** Добавлен :hover trigger, добавлен DropdownItem ([349cc7c](https://github.com/eruditorgroup/profi-design-system/commit/349cc7cd2b7c43e99e81f9fad7a2d40f6295a02f))
+* **Grid:** Adjust breakpoints ([bdecd7b](https://github.com/eruditorgroup/profi-design-system/commit/bdecd7bceb4564057313e9d67f532e22a14c636f))
+* **Grid:** Добавлен S breakpoint ([d22a035](https://github.com/eruditorgroup/profi-design-system/commit/d22a03587e71461e82ae7b46603f258e0ebf9c37))
+* **Grid:** Добавлена возможность задавать span/offset для каждого брейкпоинта ([df65846](https://github.com/eruditorgroup/profi-design-system/commit/df65846e01502ad9820c80b1d86910629eadc1d4))
+* **Text:** Add line-height variables and css rules ([b71970b](https://github.com/eruditorgroup/profi-design-system/commit/b71970b4368f7a7f56a656282e2952d1329a3005))
+* **Text:** Удалил цвет по умолчанию ([1cb442a](https://github.com/eruditorgroup/profi-design-system/commit/1cb442a313af3cab0442a2895b5eebd70e30ac39))
+* **Text, Dropdown:** implemented "as" component logic ([5a9361d](https://github.com/eruditorgroup/profi-design-system/commit/5a9361d1818dbb4fb46ffa53eb93cc6c52021ca4))
+* **ui:** Add Checkbox & Radio components ([c0d6b2a](https://github.com/eruditorgroup/profi-design-system/commit/c0d6b2a693ebadca10868805fcf8dd52f227f97e))
+* **ui:** add Input component ([faa72b5](https://github.com/eruditorgroup/profi-design-system/commit/faa72b5aff793ce18a2bc98a6d03e074e8aa9864))
+* **ui:** add Input's Floating Label variant ([5937ae5](https://github.com/eruditorgroup/profi-design-system/commit/5937ae51aa1973232ff911a0052769540201e95e))
+* **ui:** add InputUnit component ([9ee9318](https://github.com/eruditorgroup/profi-design-system/commit/9ee93184c1f99aaf30bf8b155a21ffdf348cb374))
+* **ui:** add support for Input's leading & trailing elements ([12cc57b](https://github.com/eruditorgroup/profi-design-system/commit/12cc57b2b4d41ece3b7ba35f9944b1488c14ae21))
+* **ui:** add Textarea component ([0bc400d](https://github.com/eruditorgroup/profi-design-system/commit/0bc400d57788ed2c2462d96d00431a0467a945ae))
+* **ui:** Calendar ([ac195b8](https://github.com/eruditorgroup/profi-design-system/commit/ac195b8f436fc23194e93fac284138f0a63772dc))
+* **ui:** Datepicker ([b0b50e1](https://github.com/eruditorgroup/profi-design-system/commit/b0b50e16779175e927c376e5f30d707f8ec0a10a))
+* **ui:** Datepicker - alternate mobile appearance ([52d03d5](https://github.com/eruditorgroup/profi-design-system/commit/52d03d56a97aecef27074141bd34808d9ed72b03))
+* **ui:** Dropdown - 'from-bottom' position ([cb48271](https://github.com/eruditorgroup/profi-design-system/commit/cb48271f0c1f3513da4610f1f398059ebdb7c79a))
+* **ui:** Dropdown - close dropdown refHandler ([8c133b6](https://github.com/eruditorgroup/profi-design-system/commit/8c133b614a2c6ece93188213ba8c1548389d97c3))
+* **ui:** DualCalendar ([8e2440f](https://github.com/eruditorgroup/profi-design-system/commit/8e2440f30086a9e1822c437697a66f047ece0e41))
+* **ui:** Form Controls: better leading & trailing icons alignment ([65656d7](https://github.com/eruditorgroup/profi-design-system/commit/65656d719894240f8bdc6299b24bb4125e307c1b))
+* **ui:** Form Controls: ensure that id is always set ([503ff3c](https://github.com/eruditorgroup/profi-design-system/commit/503ff3ca4e50aef3f3d5a5fc14f25a7ae33db8c4))
+* **ui:** Notification badges ([6a50cba](https://github.com/eruditorgroup/profi-design-system/commit/6a50cba6f914efb29a61d235ddfc51e711494eba))
+* **ui:** Toggle ([b05ffb8](https://github.com/eruditorgroup/profi-design-system/commit/b05ffb80fd195a975b4e2199481e0eba9bdef690))
+* Size и disabled у Link ([d6901ec](https://github.com/eruditorgroup/profi-design-system/commit/d6901ec21a152e64c4432368aef691a59c36bb01))
+* **ui:** Notification Badge - add "disabled" state ([a9a4c2b](https://github.com/eruditorgroup/profi-design-system/commit/a9a4c2b4443feecb59d41a6a99bc8b97f2e457e6))
+* **ui:** refactor Input ([9eeeb58](https://github.com/eruditorgroup/profi-design-system/commit/9eeeb58dcddeb301d278e4c37538784d9b507c10))
+* **ui:** Textarea: add autosize feature ([6380600](https://github.com/eruditorgroup/profi-design-system/commit/6380600c0d64b13c2b6ecd701e23735b25be7ca9))
+* Added prefix for theme variables ([41cd0a1](https://github.com/eruditorgroup/profi-design-system/commit/41cd0a12f101fea46d3a787e447ba77f80a417fb))
+* new icons & new color theme & implemented Text and Button components ([79610c1](https://github.com/eruditorgroup/profi-design-system/commit/79610c183ae43eb411d357f0dfa97bcb2038937b))
+* Tests, lint, publish packages ([0aa6fbe](https://github.com/eruditorgroup/profi-design-system/commit/0aa6fbe31a711d447fa97462f808268b3204d17f))
+
+
+
+
+
 # [0.10.0](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.9.1...@eruditorgroup/profi-ui@0.10.0) (2021-06-08)
 
 
