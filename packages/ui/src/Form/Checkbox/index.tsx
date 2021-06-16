@@ -41,7 +41,10 @@ const Checkbox = forwardRef<HTMLInputElement, CheckboxProps>(function Checkbox(
   const Icon = isRadio ? DotIcon : CheckIcon;
   const labelText = children ?? label;
   return (
-    <label style={style} className={cx(className, styles['label'])}>
+    <label
+      style={style}
+      className={cx(className, block && styles['block'], styles['label'])}
+    >
       <input
         ref={ref}
         className={cx(inputClassName, styles['input'])}
@@ -62,7 +65,7 @@ const Checkbox = forwardRef<HTMLInputElement, CheckboxProps>(function Checkbox(
           as="span"
           size={getTextSize(size)}
           className={cx(
-            block && styles['content-block'],
+            block && styles['block'],
             styles['content'],
             styles[`content_size-${size}`],
           )}
