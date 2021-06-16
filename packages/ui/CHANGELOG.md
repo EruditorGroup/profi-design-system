@@ -3,6 +3,21 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.11.1](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.11.0...@eruditorgroup/profi-ui@0.11.1) (2021-06-16)
+
+
+
+## 0.6.4 (2021-06-16)
+
+
+### Bug Fixes
+
+* **Checkbox:** block styles ([336bde7](https://github.com/eruditorgroup/profi-design-system/commit/336bde7ed2063c7147ba8054de8c585b54bfe079))
+
+
+
+
+
 # 0.11.0 (2021-06-16)
 
 
