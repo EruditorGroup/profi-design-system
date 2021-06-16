@@ -34,6 +34,10 @@
   font-weight: 600;
 }
 
+.regular {
+  font-weight: 400;
+}
+
 .size-xs {
   font-size: var(--ui-text-size-xs);
   line-height: var(--ui-text-lineHeight-xs);

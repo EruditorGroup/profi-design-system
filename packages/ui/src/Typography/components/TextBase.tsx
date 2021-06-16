@@ -25,6 +25,7 @@ const TextBase = forwardRef<unknown, TextBaseProps & AliasProps>(
           color && common[`color-${color}`],
           size && common[`size-${size}`],
           bold && common[`bold`],
+          !bold && common[`regular`],
           className,
         )}
       />
