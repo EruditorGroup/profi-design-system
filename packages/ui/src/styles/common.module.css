@@ -26,6 +26,18 @@
   color: var(--ui-color-warning);
 }
 
+.color-muted {
+  color: var(--ui-color-text-muted);
+}
+
+.bold {
+  font-weight: 600;
+}
+
+.regular {
+  font-weight: 400;
+}
+
 .size-xs {
   font-size: var(--ui-text-size-xs);
   line-height: var(--ui-text-lineHeight-xs);

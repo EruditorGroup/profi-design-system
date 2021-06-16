@@ -56,9 +56,6 @@ export const Default: Story<TextProps> = (args) => {
                   Съешь ещё этих мягких французских булок
                 </Title>
               </td>
-              <td>
-                <Text>123123123</Text>
-              </td>
             </tr>
           ))}
         </tbody>

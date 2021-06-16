@@ -7,7 +7,7 @@ import type {IColor, ISize, AliasProps} from 'uitype';
 
 export interface TextBaseProps extends HTMLAttributes<HTMLParagraphElement> {
   size?: ISize;
-  color?: IColor | 'muted';
+  color?: IColor;
   bold?: boolean;
 }
 
@@ -24,10 +24,8 @@ const TextBase = forwardRef<unknown, TextBaseProps & AliasProps>(
           styles['text'],
           color && common[`color-${color}`],
           size && common[`size-${size}`],
-          {
-            [styles[`bold`]]: bold,
-            [styles[`color-text-muted`]]: color === 'muted',
-          },
+          bold && common[`bold`],
+          !bold && common[`regular`],
           className,
         )}
       />

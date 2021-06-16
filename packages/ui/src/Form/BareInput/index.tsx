@@ -40,13 +40,7 @@ const BareInput: React.FC<BareInputProps> = ({
       mask ? (
         <InputMask
           {...inputProps}
-          inputRef={(el) => {
-            if (typeof inputRef === 'function') {
-              inputRef(el);
-            } else if (typeof inputRef === 'object' && inputRef !== null) {
-              inputRef.current = el;
-            }
-          }}
+          inputRef={inputRef}
           mask={mask}
           alwaysShowMask={alwaysShowMask}
         />

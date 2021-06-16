@@ -6,6 +6,7 @@
 
 .checkbox {
   display: flex;
+  flex-shrink: 0;
   align-items: center;
   justify-content: center;
   color: transparent;
@@ -73,7 +74,7 @@
     cursor: default;
     background-color: var(--ui-color-light);
   }
-  
+
   .input:checked:disabled ~ & {
     color: var(--ui-color-lightInverseState);
   }
@@ -97,6 +98,11 @@
     cursor: default;
     color: var(--ui-color-lightInverseState);
   }
+}
+
+.content_block {
+  width: 100%;
+  display: block;
 }
 
 .input {
