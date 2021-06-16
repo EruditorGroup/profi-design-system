@@ -8,7 +8,7 @@ export interface TextProps extends Omit<TextBaseProps, 'as'> {
 }
 
 const Text: ForwardingComponent<'p', TextProps> = forwardRef(function Text(
-  {as: Component = 'p', size, ...props},
+  {as: Component = 'p', size = 'm', ...props},
   ref,
 ) {
   return <TextBase as={Component} size={size} {...props} ref={ref} />;
