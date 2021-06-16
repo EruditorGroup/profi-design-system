@@ -1,6 +1,6 @@
 import React, {useCallback} from 'react';
 import type {InputHTMLAttributes} from 'react';
-import InputMask, {Props as InputMaskProps} from 'react-input-mask';
+import InputMask from 'react-input-mask';
 import classnames from 'classnames';
 
 import styles from './BareInput.module.scss';
