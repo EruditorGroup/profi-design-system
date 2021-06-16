@@ -44,7 +44,6 @@ const Button: ForwardingComponent<'button', ButtonProps> = forwardRef(
   ) => {
     return (
       <Component
-        ref={ref}
         type={type}
         className={classnames(
           styles['button'],
@@ -56,6 +55,8 @@ const Button: ForwardingComponent<'button', ButtonProps> = forwardRef(
           className,
         )}
         {...props}
+        ref={ref}
+        onClick={props.disabled ? null : props.onClick}
       >
         {leading && <span className={styles['leading']}>{leading}</span>}
         <span className={classnames(styles['content'], contentClassName)}>

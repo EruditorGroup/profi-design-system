@@ -54,7 +54,7 @@
   --ui-border-radius-xl: 12px;
   --ui-border-radius-large: 50px;
 
-  --ui-box-shadow: 0px 5px 30px 5px #0000000d;
+  --ui-box-shadow: 0px 5px 30px rgba(0, 0, 0, 0.1);
 
   --ui-bg-light: #f2f2f2;
   --ui-bg-lightState: #ebebeb;

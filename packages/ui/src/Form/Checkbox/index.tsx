@@ -16,21 +16,45 @@ export interface CheckboxProps
   size?: CheckboxSize;
   disabled?: boolean;
   type?: CheckboxType;
+  inputClassName?: string;
+  block?: boolean;
 }
 
 export const getTextSize = (size: CheckboxSize): CheckboxSize =>
   ['xxl', 'xl', 'l'].includes(size) ? 'l' : 'm';
 
 const Checkbox = forwardRef<HTMLInputElement, CheckboxProps>(function Checkbox(
-  {label, type = 'checkbox', size = 'm', children, className, style, ...props},
+  {
+    label,
+    type = 'checkbox',
+    size = 'm',
+    children,
+    inputClassName,
+    className,
+    style,
+    block = false,
+    ...props
+  },
   ref,
 ) {
   const isRadio = type === 'radio';
   const Icon = isRadio ? DotIcon : CheckIcon;
   const labelText = children ?? label;
   return (
-    <label style={style} className={cx(className, styles['label'])}>
-      <input ref={ref} className={styles['input']} type={type} {...props} />
+    <label
+      style={style}
+      className={cx(
+        className,
+        block && styles['content_block'],
+        styles['label'],
+      )}
+    >
+      <input
+        ref={ref}
+        className={cx(inputClassName, styles['input'])}
+        type={type}
+        {...props}
+      />
       <span
         className={cx(
           styles['checkbox'],
@@ -44,7 +68,11 @@ const Checkbox = forwardRef<HTMLInputElement, CheckboxProps>(function Checkbox(
         <Text
           as="span"
           size={getTextSize(size)}
-          className={cx(styles['content'], styles[`content_size-${size}`])}
+          className={cx(
+            block && styles['content_block'],
+            styles['content'],
+            styles[`content_size-${size}`],
+          )}
         >
           {labelText}
         </Text>

@@ -1,6 +1,6 @@
 import React, {useCallback} from 'react';
 import type {InputHTMLAttributes} from 'react';
-import InputMask from 'react-input-mask';
+import InputMask, {Props as InputMaskProps} from 'react-input-mask';
 import classnames from 'classnames';
 
 import styles from './BareInput.module.scss';
@@ -40,13 +40,7 @@ const BareInput: React.FC<BareInputProps> = ({
       mask ? (
         <InputMask
           {...inputProps}
-          inputRef={(el) => {
-            if (typeof inputRef === 'function') {
-              inputRef(el);
-            } else if (typeof inputRef === 'object' && inputRef !== null) {
-              inputRef.current = el;
-            }
-          }}
+          inputRef={inputRef}
           mask={mask}
           alwaysShowMask={alwaysShowMask}
         />

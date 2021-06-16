@@ -24,7 +24,8 @@ declare module 'uitype' {
     | 'transparent'
     | 'danger'
     | 'success'
-    | 'warning';
+    | 'warning'
+    | 'muted';
   export type ISocials = 'vk' | 'ya' | 'fb' | 'apple';
 
   type ReplaceProps<Component extends React.ElementType, P> = Pick<

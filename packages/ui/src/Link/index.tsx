@@ -9,12 +9,13 @@ import type {
 import styles from './Link.module.scss';
 import common from '../styles/common.module.css';
 
-import type {ISize} from 'uitype';
+import type {IColor, ISize} from 'uitype';
 
 export interface LinkProps
   extends Omit<AnchorHTMLAttributes<HTMLAnchorElement>, 'href'> {
   to?: string;
   size?: ISize;
+  color?: IColor;
   block?: boolean;
   bold?: boolean;
   underlined?: boolean;
@@ -33,6 +34,7 @@ const Link: ForwardRefExoticComponent<
       bold,
       disabled,
       size,
+      color,
       className,
       onClick: onClickOrigin,
       clear,
@@ -59,8 +61,9 @@ const Link: ForwardRefExoticComponent<
           block && styles['block'],
           disabled && styles['disabled'],
           underlined && styles['underlined'],
-          bold && styles['bold'],
+          bold && common['bold'],
           size && common[`size-${size}`],
+          color && common[`color-${color}`],
           className,
         )}
         onClick={onClick}
