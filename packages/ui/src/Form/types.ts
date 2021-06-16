@@ -26,6 +26,7 @@ export type BaseControlProps<HTMLElementType = HTMLInputElement> = Partial<
   onBlur?: FocusEventHandler<HTMLElementType>;
 
   inputRef?: MutableRef<HTMLElementType>;
+  inputClassName?: string;
 
   children?: never;
 };

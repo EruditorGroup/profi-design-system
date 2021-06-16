@@ -39,6 +39,7 @@ const wrapControlWithRef = <
     defaultValue,
     onFocus,
     onBlur,
+    inputClassName,
     ...restInputProps
   } = props;
   const inputId = useMemo(() => id || `${GLOBAL_ID_PREFIX}${globalIdCount++}`, [
@@ -87,6 +88,7 @@ const wrapControlWithRef = <
     defaultValue,
     disabled,
     placeholder: withFloatLabel ? '' : placeholder,
+    className: inputClassName,
     ...focusHandlers,
     ...restInputProps,
   } as ComponentProps<typeof Component>;
