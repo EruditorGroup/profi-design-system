@@ -3,6 +3,21 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.5.1](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-toolkit@0.5.0...@eruditorgroup/profi-toolkit@0.5.1) (2021-06-18)
+
+
+
+## 0.6.4 (2021-06-18)
+
+
+### Bug Fixes
+
+* **bundle:** transpile es modules ([d221316](https://github.com/eruditorgroup/profi-design-system/commit/d22131612359b1db69ccd3d6ba9ce57e30c627f9))
+
+
+
+
+
 # 0.5.0 (2021-06-16)
 
 
