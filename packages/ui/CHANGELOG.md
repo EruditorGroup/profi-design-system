@@ -3,6 +3,21 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.11.4](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.11.3...@eruditorgroup/profi-ui@0.11.4) (2021-06-18)
+
+
+
+## 0.6.4 (2021-06-18)
+
+
+### Bug Fixes
+
+* **api:** add Datepicker export ([#117](https://github.com/eruditorgroup/profi-design-system/issues/117)) ([9d409c9](https://github.com/eruditorgroup/profi-design-system/commit/9d409c912e0d9332c9a76e1a6289a1328efb174c))
+
+
+
+
+
 ## [0.11.3](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.11.2...@eruditorgroup/profi-ui@0.11.3) (2021-06-16)
 
 
