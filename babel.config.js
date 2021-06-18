@@ -33,7 +33,14 @@ if (isESM) {
 
 module.exports = {
   presets: [
-    isCommonJS && ['@babel/preset-env', {targets: {node: 'current'}}],
+    [
+      '@babel/preset-env',
+      {
+        targets: isCommonJS
+          ? {node: 'current'}
+          : {chrome: 59, safari: 11, ie: 11},
+      },
+    ],
     [
       '@babel/preset-typescript',
       {allExtensions: true, allowDeclareFields: true, isTSX: true},
