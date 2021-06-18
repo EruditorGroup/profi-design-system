@@ -10,6 +10,9 @@ export type {AvatarProps} from './Avatar';
 export {default as Grid, Container, Row, Col} from './Grid';
 export type {ColProps} from './Grid';
 
+export {default as Datepicker} from './Datepicker';
+export type {DatepickerProps} from './Datepicker';
+
 export {default as Menu} from './Menu';
 export type {MenuProps} from './Menu';
 
