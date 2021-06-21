@@ -34,7 +34,7 @@ const BareTextarea: React.FC<BareTextareaProps> = ({
       {...props}
       minRows={minRows}
       maxRows={maxRows}
-      className={classnames(styles['textarea'], className)}
+      className={classnames(styles['textarea'], 'input-default', className)}
       ref={(el) => {
         if (typeof inputRef === 'function') {
           inputRef(el);
