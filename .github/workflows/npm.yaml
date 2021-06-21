@@ -41,14 +41,6 @@ jobs:
       - run: yarn
       - run: NODE_ENV=production yarn build
 
-      - name: Configure CI Git User
-        run: |
-          git config user.email "mischenkoav@profi.ru"
-          git config user.name "Publisher"
-          git remote set-url origin https://$GITHUB_ACTOR:$GITHUB_PAT@github.com/EruditorGroup/profi-design-system
-        env:
-          GITHUB_PAT: ${{ secrets.DEPLOY_GITHUB_TOKEN }}
-
       - name: Fetch & checkout
         id: branch_name
         run: |
