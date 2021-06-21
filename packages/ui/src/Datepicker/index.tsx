@@ -86,7 +86,8 @@ const Datepicker: React.FC<DatepickerProps> = ({
         readOnly
         value={label}
         placeholder={placeholder}
-        className={classnames(styles['input'], inputClassName)}
+        className={styles['input']}
+        inputClassName={inputClassName}
         leading={<CalendarIcon className={styles['icon']} />}
       />
       {isMobile ? (
