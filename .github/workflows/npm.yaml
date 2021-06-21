@@ -63,9 +63,9 @@ jobs:
       - name: Create release branch & publish package
         run: |
           git checkout -b release/${{ env.GIT_TAG }}
+          git push --set-upstream origin release/${{ env.GIT_TAG }}
           git branch
           npm run publish
-          git push --set-upstream origin release/${{ env.GIT_TAG }}
 
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v3
