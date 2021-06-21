@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.11.6](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.11.5...@eruditorgroup/profi-ui@0.11.6) (2021-06-21)
+
+
+### Bug Fixes
+
+* **datepicker:** pass input className in valid prop ([d683ecb](https://github.com/eruditorgroup/profi-design-system/commit/d683ecbff4577259550e2af4b0573aac6aea0944))
+* **input:** add global class to drop default styles from warp ([#118](https://github.com/eruditorgroup/profi-design-system/issues/118)) ([4c18b88](https://github.com/eruditorgroup/profi-design-system/commit/4c18b88c25ee8154318ad533f9f6b14399862890))
+* **ui:** trigger deploy ([ff72963](https://github.com/eruditorgroup/profi-design-system/commit/ff729636eaadc24239ec8b92be3cc1b9bfa060be))
+
+
+
+
+
 ## [0.11.5](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.11.4...@eruditorgroup/profi-ui@0.11.5) (2021-06-18)
 
 
