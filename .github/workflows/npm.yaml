@@ -50,11 +50,13 @@ jobs:
           GITHUB_PAT: ${{ secrets.DEPLOY_GITHUB_TOKEN }}
 
       - name: Fetch and checkout
-        run: git fetch && git checkout yarn.lock && git checkout master 
-        
+        run: git fetch && git checkout yarn.lock && git checkout master
+
         # Создаем новую ветку, в которую закинем changelogs и сделаем с неё PR
-        run: git checkout -b "release-${GITHUB_REF/refs\/tags\//}"
-        run: git push --set-upstream origin "release-${GITHUB_REF/refs\/tags\//}"
+      - name: Create & push release branch
+        run: |
+          git checkout -b "release-${GITHUB_REF/refs\/tags\//}" 
+          git push --set-upstream origin "release-${GITHUB_REF/refs\/tags\//}"
 
       - name: Set .npmrc (publish token)
         run: printf "//npm.pkg.github.com/:_authToken=${{ secrets.GITHUB_TOKEN }}\n" > ~/.npmrc
@@ -67,7 +69,7 @@ jobs:
 
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v3
-        with: 
+        with:
           branch: master
           delete-branch: true
           title: Release "${GITHUB_REF/refs\/tags\//}" changes
