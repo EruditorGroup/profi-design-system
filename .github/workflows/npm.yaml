@@ -49,26 +49,27 @@ jobs:
         env:
           GITHUB_PAT: ${{ secrets.DEPLOY_GITHUB_TOKEN }}
 
-      - name: Fetch & checkout & create release branch
+      - name: Fetch & checkout
         id: branch_name
         run: |
           git fetch
           git checkout yarn.lock 
           git checkout master
-          git checkout -b "release/${GITHUB_REF/refs\/tags\//}"
-          git push --set-upstream origin "release/${GITHUB_REF/refs\/tags\//}"
           echo "GIT_TAG=${GITHUB_REF/refs\/tags\//}" >> $GITHUB_ENV
 
       - name: Set .npmrc (publish token)
         run: printf "//npm.pkg.github.com/:_authToken=${{ secrets.GITHUB_TOKEN }}\n" > ~/.npmrc
 
-      - name: Publish package
-        run: npm run publish
+      - name: Create release branch & publish package
+        run: |
+          git checkout -b release/${{ env.GIT_TAG }}
+          git branch
+          npm run publish
+          git push --set-upstream origin release/${{ env.GIT_TAG }}
 
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v3
         with:
           branch: release/${{ env.GIT_TAG }}
           base: master
-          delete-branch: true
           title: Release "${{ env.GIT_TAG }}" changes
