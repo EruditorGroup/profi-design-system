@@ -66,7 +66,6 @@ jobs:
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v3
         with:
-          branch: release/${GITHUB_REF/refs\/tags\//}
           base: master
           delete-branch: true
           title: Release "${GITHUB_REF/refs\/tags\//}" changes
