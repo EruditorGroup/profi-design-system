@@ -41,6 +41,11 @@ jobs:
       - run: yarn
       - run: NODE_ENV=production yarn build
 
+      - name: Configure CI Git User
+        run: |
+          git config user.name "GitHub"
+          git config user.email "noreply@github.com"
+
       - name: Fetch & checkout
         id: branch_name
         run: |
