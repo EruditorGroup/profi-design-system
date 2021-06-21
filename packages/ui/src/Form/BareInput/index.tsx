@@ -51,8 +51,8 @@ const BareInput: React.FC<BareInputProps> = ({
   );
 
   return InputComponent({
-    type,
     className: classnames(styles['input'], 'input-default', className),
+    type,
     ...props,
   });
 };
