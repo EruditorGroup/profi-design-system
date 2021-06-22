@@ -3,16 +3,12 @@ import classNames from 'classnames';
 import TooltipContent from './components/TooltipContent';
 import TooltipToggler from './components/TooltipToggler';
 
-import type {
-  RefAttributes,
-  ForwardRefExoticComponent,
-  HTMLAttributes,
-} from 'react';
+import type {ForwardRefExoticComponent, HTMLAttributes} from 'react';
 
 import styles from './Tooltip.module.scss';
-import {ForwardingComponent, AliasProps} from 'uitype';
+import {AliasProps} from 'uitype';
 
-type ITrigger = 'hover' | 'click';
+export type ITrigger = 'hover' | 'click';
 
 export interface TooltipProps
   extends HTMLAttributes<HTMLDivElement>,
@@ -28,7 +24,7 @@ interface TooltipComponent extends ForwardRefExoticComponent<TooltipProps> {
 
 type TooltipContextType = {
   trigger: ITrigger;
-  persist: boolean; // should we close tooltip when mouse is over tooltip content ?
+  persist: boolean; // should we not close tooltip when mouse is over tooltip content ?
   opened: boolean;
   setOpened: React.Dispatch<React.SetStateAction<boolean>>;
 };
