@@ -50,6 +50,9 @@ export type {ButtonProps} from './Button';
 export {default as Dropdown, DropdownContext} from './Dropdown';
 export type {DropdownProps} from './Dropdown';
 
+export {default as Tooltip} from './Tooltip';
+export type {TooltipProps} from './Tooltip';
+
 export {default as Spinner} from './Spinner';
 export type {SpinnerProps} from './Spinner';
 
