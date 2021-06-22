@@ -1,0 +1,123 @@
+import React, {useEffect, useRef, useState} from 'react';
+import {Story, Meta} from '@storybook/react';
+
+import Tooltip from './index';
+import Text from '../Typography/Text';
+import Button from '../Button';
+import Link from '../Link';
+import {
+  ChevronDownIcon,
+  ChevronUpIcon,
+  VkIcon,
+} from '@eruditorgroup/profi-icons';
+
+export default {
+  title: 'Tooltip',
+  component: Tooltip,
+} as Meta;
+
+const rowStyle: Record<string, string> = {
+  display: 'flex',
+  alignItems: 'flex-start',
+  justifyContent: 'space-between',
+  height: '150px',
+  flexWrap: 'wrap',
+};
+
+const Template: Story = (args) => {
+  return (
+    <>
+      <div style={rowStyle}>
+        <Tooltip>
+          <Tooltip.Toggler as={Button}>Bottom left</Tooltip.Toggler>
+
+          <Tooltip.Content position="bottom-left">
+            <Text size="l" bold>
+              Lorem Ipsum Lorem Ipsum
+            </Text>
+            <Text size="s">Lorem Ipsum Lorem Ipsum</Text>
+          </Tooltip.Content>
+        </Tooltip>
+
+        <Tooltip>
+          <Tooltip.Toggler as={Button}>Bottom center</Tooltip.Toggler>
+
+          <Tooltip.Content position="bottom-center">
+            <Text size="l" bold>
+              Lorem Ipsum Lorem Ipsum
+            </Text>
+            <Text size="s">Lorem Ipsum Lorem Ipsum</Text>
+          </Tooltip.Content>
+        </Tooltip>
+
+        <Tooltip>
+          <Tooltip.Toggler as={Button}>Bottom right</Tooltip.Toggler>
+          <Tooltip.Content position="bottom-right">
+            <Text size="l" bold>
+              Lorem Ipsum Lorem Ipsum
+            </Text>
+            <Text size="s">Lorem Ipsum Lorem Ipsum</Text>
+          </Tooltip.Content>
+        </Tooltip>
+      </div>
+      <div style={rowStyle}>
+        <Tooltip>
+          <Tooltip.Toggler as={Button}>Top left</Tooltip.Toggler>
+          <Tooltip.Content position="top-left">
+            <Text size="l" bold>
+              Lorem Ipsum Lorem Ipsum
+            </Text>
+            <Text size="s">Lorem Ipsum Lorem Ipsum</Text>
+          </Tooltip.Content>
+        </Tooltip>
+
+        <Tooltip>
+          <Tooltip.Toggler as={Button}>Top center</Tooltip.Toggler>
+          <Tooltip.Content position="top-center">
+            <Text size="l" bold>
+              Lorem Ipsum Lorem Ipsum
+            </Text>
+            <Text size="s">Lorem Ipsum Lorem Ipsum</Text>
+          </Tooltip.Content>
+        </Tooltip>
+
+        <Tooltip>
+          <Tooltip.Toggler as={Button}>Top right</Tooltip.Toggler>
+          <Tooltip.Content position="top-right">
+            <Text size="l" bold>
+              Lorem Ipsum Lorem Ipsum
+            </Text>
+            <Text size="s">Lorem Ipsum Lorem Ipsum</Text>
+          </Tooltip.Content>
+        </Tooltip>
+      </div>
+      <div style={rowStyle}>
+        <Tooltip persist>
+          <Tooltip.Toggler as={Button}>Persist</Tooltip.Toggler>
+          <Tooltip.Content position="top-left">
+            <Text size="l" bold>
+              Lorem Ipsum Lorem Ipsum
+            </Text>
+            <Text size="s">Lorem Ipsum Lorem Ipsum</Text>
+          </Tooltip.Content>
+        </Tooltip>
+        <Tooltip persist trigger="click">
+          <Tooltip.Toggler as={Button}>Click trigger</Tooltip.Toggler>
+          <Tooltip.Content position="top-right">
+            <Text size="l" bold>
+              Lorem Ipsum Lorem Ipsum
+            </Text>
+            <Text size="s">Lorem Ipsum Lorem Ipsum</Text>
+          </Tooltip.Content>
+        </Tooltip>
+      </div>
+    </>
+  );
+};
+
+export const Default = Template.bind({});
+
+export const Without_animation = Template.bind({});
+Without_animation.args = {
+  animated: false,
+};
