@@ -32,8 +32,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
         with:
-          token: ${{ secrets.DEPLOY_GITHUB_TOKEN }}
-          fetch-depth: 0
+          fetch-depth: 1
 
       - uses: actions/setup-node@v1
         with:

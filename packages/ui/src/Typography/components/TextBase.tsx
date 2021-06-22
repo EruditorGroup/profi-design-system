@@ -9,11 +9,20 @@ export interface TextBaseProps extends HTMLAttributes<HTMLParagraphElement> {
   size?: ISize;
   color?: IColor;
   bold?: boolean;
+  align?: 'center' | 'right' | 'left';
 }
 
 const TextBase = forwardRef<unknown, TextBaseProps & AliasProps>(
   function TextBase(
-    {bold, size, color, as: Component = 'p', className, ...props},
+    {
+      align = 'left',
+      bold,
+      size,
+      color,
+      as: Component = 'p',
+      className,
+      ...props
+    },
     ref,
   ) {
     return (
@@ -22,6 +31,7 @@ const TextBase = forwardRef<unknown, TextBaseProps & AliasProps>(
         ref={ref}
         className={classNames(
           styles['text'],
+          align && styles[`align-${align}`],
           color && common[`color-${color}`],
           size && common[`size-${size}`],
           bold && common[`bold`],
