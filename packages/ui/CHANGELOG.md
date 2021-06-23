@@ -3,6 +3,21 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.11.10 (2021-06-23)
+
+
+
+# 0.7.0 (2021-06-23)
+
+
+### Bug Fixes
+
+* **webpack:** file loader ([efda33d](https://github.com/eruditorgroup/profi-design-system/commit/efda33d5be1ec4cc277e7a50aa98f7f8ad04c776))
+
+
+
+
+
 ## 0.11.9 (2021-06-22)
 
 
