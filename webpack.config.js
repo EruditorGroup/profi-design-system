@@ -62,6 +62,14 @@ module.exports = {
   module: {
     rules: [
       {
+        test: /\.(png|jpe?g|gif)$/i,
+        use: [
+          {
+            loader: 'url-loader',
+          },
+        ],
+      },
+      {
         // use babel-loader on each ts,tsx file
         test: /\.tsx?$/,
         use: [
