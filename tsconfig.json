@@ -20,6 +20,9 @@
     "**/*.test.tsx",
     "**/*.d.ts",
     "**/__mocks__",
+    "**/lib",
+    "**/dist",
+    "**/es",
     "node_modules"
   ]
 }
