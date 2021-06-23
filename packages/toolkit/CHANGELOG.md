@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.5.7 (2021-06-23)
+
+
+
+## 0.7.3 (2021-06-23)
+
+**Note:** Version bump only for package @eruditorgroup/profi-toolkit
+
+
+
+
+
 ## 0.5.6 (2021-06-23)
 
 
