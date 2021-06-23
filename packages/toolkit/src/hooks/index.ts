@@ -7,3 +7,4 @@ export {default as usePersistCallback} from './usePersistCallback';
 export {default as useRelativePosition} from './useRelativePosition';
 export {default as useVisibilityToggler} from './useVisibilityToggler';
 export {default as useWatcher} from './useCombinedRef';
+export {default as useAutoFocus} from './useAutoFocus';

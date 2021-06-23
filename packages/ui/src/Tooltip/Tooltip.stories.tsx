@@ -4,7 +4,7 @@ import {Story, Meta} from '@storybook/react';
 import Tooltip from './index';
 import Text from '../Typography/Text';
 import Button from '../Button';
-import Link from '../Link';
+import Checkbox from '../Form/Checkbox';
 import {
   ChevronDownIcon,
   ChevronUpIcon,
@@ -108,6 +108,20 @@ const Template: Story = (args) => {
               Lorem Ipsum Lorem Ipsum
             </Text>
             <Text size="s">Lorem Ipsum Lorem Ipsum</Text>
+          </Tooltip.Content>
+        </Tooltip>
+
+        <Tooltip>
+          <Tooltip.Toggler>
+            <Checkbox>Custom toggler</Checkbox>
+          </Tooltip.Toggler>
+          <Tooltip.Content position="top-left">
+            <Text align="center" size="l" bold>
+              Lorem Ipsum Lorem Ipsum
+            </Text>
+            <Text align="center" size="s">
+              Lorem Ipsum Lorem Ipsum
+            </Text>
           </Tooltip.Content>
         </Tooltip>
       </div>
