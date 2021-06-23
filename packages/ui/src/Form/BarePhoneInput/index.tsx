@@ -84,13 +84,12 @@ export const PhoneInput = ({
 
   useAutoFocus(inputRef, autoFocus);
 
-  console.log(`placeholder=${placeholder}`, props);
   return (
     <div className={styles['root']}>
       <div className={cx(styles['flag'], styles[сode])} />
       <div className={styles['plus']}>+</div>
       <NumberFormat
-        className={cx(inputStyle['input'], className)}
+        className={cx(inputStyle['input'], 'input-default', className)}
         type="tel"
         autoComplete="tel"
         value={value}
