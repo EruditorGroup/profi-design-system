@@ -4,12 +4,10 @@ import {Story, Meta} from '@storybook/react';
 import {PhoneInput, PhoneInputProps} from './index';
 
 const containerStyles: CSSProperties = {
-  display: 'flex',
-  width: '340px',
   marginBottom: '30px',
 };
 
-const itemStyles: CSSProperties = {width: '100%', marginRight: '10px'};
+const itemStyles: CSSProperties = {margin: '10px 0'};
 
 export default {
   title: 'Form/PhoneInput',
@@ -18,16 +16,13 @@ export default {
 
 const Template: Story<PhoneInputProps> = ({...args}) => (
   <div>
-    <style>{`
-      .customUnitColor {
-        color: #888;
-      }
-    `}</style>
     <div style={containerStyles}>
+      <PhoneInput {...args} defaultCountryCode="by" style={itemStyles} />
       <PhoneInput {...args} style={itemStyles} />
-      <PhoneInput {...args} countryCode="by" style={itemStyles} />
+      <PhoneInput {...args} defaultCountryCode="ua" style={itemStyles} />
     </div>
   </div>
 );
 
 export const Default = Template.bind({});
+Default.args = {};

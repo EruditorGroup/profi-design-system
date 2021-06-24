@@ -9,9 +9,7 @@ import type {BaseControlProps} from '../types';
 const DEFAULT_TEXTAREA_ROWS = 3;
 
 export type BareTextareaProps = Omit<TextareaAutosizeProps, 'size'> &
-  BaseControlProps<HTMLTextAreaElement> & {
-    children?: never;
-  };
+  BaseControlProps<HTMLTextAreaElement>;
 
 const BareTextarea: React.FC<BareTextareaProps> = ({
   className,

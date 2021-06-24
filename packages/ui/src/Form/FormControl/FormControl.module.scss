@@ -1,7 +1,7 @@
 .form-control {
   position: relative;
 
-  display: inline-block;
+  display: inline-flex;
 
   background: var(--ui-color-light);
   border: 1px solid transparent;
@@ -11,7 +11,9 @@
   box-sizing: border-box;
 
   &_block {
-    display: block;
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
   }
 
   &:not(&_disabled):hover {
@@ -84,9 +86,9 @@
 
 .form-control__infix {
   position: relative;
-  
+
   flex: auto;
-  
+
   display: block;
   min-width: 0;
   width: 100%;
@@ -99,9 +101,9 @@
 .form-control__prefix,
 .form-control__suffix {
   display: inline-flex;
-  
+
   flex: none;
-  
+
   line-height: inherit;
   white-space: nowrap;
 }

@@ -1,107 +1,92 @@
-import React, {useState, useRef} from 'react';
+import React, {useState, useRef, useCallback} from 'react';
 import cx from 'classnames';
+import {Input, InputProps} from '../index';
 
-import NumberFormat, {NumberFormatProps} from 'react-number-format';
-
-import {getCountryCode, formatWithPattern} from './utils';
-import {BASE_COUNTRIES, ICountryCode} from './constants';
+import {getCountryByPhone} from './utils';
+import {ICountryCode} from './constants';
 import {useAutoFocus} from '@eruditorgroup/profi-toolkit';
 
-import inputStyle from '../BareInput/BareInput.module.scss';
-import styles from './PhoneInput.module.css';
-import {BaseControlProps} from '../types';
+import styles from './BarePhoneInput.module.scss';
 
-export interface BarePhoneInputProps
-  extends Omit<BaseControlProps<HTMLInputElement>, 'value' | 'size'>,
-    Omit<NumberFormatProps, 'size'> {
+export interface PhoneInputProps
+  extends Omit<InputProps, 'onChange' | 'placeholder' | 'mask'> {
   defaultValue?: string;
-  invalid?: boolean;
-  onChange?: (value: string) => void;
-  countryCode?: ICountryCode;
+  defaultCountryCode?: ICountryCode;
   autoFocus?: boolean;
-  inputClassName?: string;
+  onChange?: (value: string) => void;
 }
 
-function fixControlledValue(
-  propValue: BarePhoneInputProps['value'],
-  stateValue: string,
-): BarePhoneInputProps['value'] {
-  if (typeof propValue === 'undefined' || propValue === null) {
-    return stateValue;
-  } else {
-    return propValue;
-  }
-}
-
-export const PhoneInput = ({
+export default function PhoneInput({
   value: propValue,
   defaultValue = '',
   onChange,
   onFocus,
-  countryCode = 'ru',
-  className,
+  defaultCountryCode = 'ru',
   autoFocus,
+  inputRef,
   ...props
-}: BarePhoneInputProps): React.ReactElement | null => {
+}: PhoneInputProps): React.ReactElement | null {
   const [stateValue, setStateValue] = useState(defaultValue);
-  const value = fixControlledValue(propValue, stateValue);
+  const value = propValue ?? stateValue;
 
-  const [сode, setCode] = useState(() => getCountryCode(value, countryCode));
-  const {defaultCode, placeholder} =
-    BASE_COUNTRIES[сode] || BASE_COUNTRIES[countryCode];
+  const {phoneCode, countryCode, placeholder, mask} = getCountryByPhone(
+    value.toString(),
+    defaultCountryCode,
+  );
+  const oldMask = useRef(mask);
 
-  const inputRef = useRef<HTMLInputElement | null>(null);
+  const handleChangeMask = useCallback<
+    NonNullable<InputProps['beforeMaskedValueChange']>
+  >(
+    (state) => {
+      // обновляем каретку на смену маски, т.к дефолтное поведение багованое
+      if (state.selection && oldMask.current !== mask) {
+        oldMask.current = mask;
+        const caretPos = state.value.replace(/[^\d\s]+/g, '').trim().length;
+        state.selection.start = caretPos;
+        state.selection.end = caretPos;
+      }
+      return state;
+    },
+    [mask],
+  );
+
+  const ref = useRef<HTMLInputElement | null>(null);
 
   function handleFocus(ev: React.FocusEvent<HTMLInputElement>) {
-    const element = inputRef.current;
     if (onFocus) onFocus(ev);
-
-    if (!value && element) {
-      setDefaultValue();
-      // number format тащит курсор в начало строки на onfocus
-      setTimeout(function () {
-        element.selectionStart = element.selectionEnd = element.value.length;
-      }, 10);
-    }
-  }
-
-  function setDefaultValue() {
-    if (propValue === undefined) {
-      setStateValue(defaultCode);
-    } else {
-      if (onChange) onChange(defaultCode);
-    }
+    if (!value) handleChange(phoneCode);
   }
 
   function handleChange(val: string) {
-    if (propValue === undefined) {
-      setStateValue(val);
-    }
-
-    setCode(getCountryCode(val, countryCode));
+    if (propValue === undefined) setStateValue(val);
     if (onChange) onChange(val);
   }
 
-  useAutoFocus(inputRef, autoFocus);
+  useAutoFocus(ref, autoFocus);
 
   return (
-    <div className={styles['root']}>
-      <div className={cx(styles['flag'], styles[сode])} />
-      <div className={styles['plus']}>+</div>
-      <NumberFormat
-        className={cx(inputStyle['input'], 'input-default', className)}
-        type="tel"
-        autoComplete="tel"
-        value={value}
-        format={formatWithPattern}
-        onValueChange={(values) => handleChange(values.formattedValue)}
-        onFocus={handleFocus}
-        getInputRef={(el: HTMLInputElement) => (inputRef.current = el)}
-        {...props}
-        placeholder={placeholder}
-      />
-    </div>
+    <Input
+      leading={
+        <div className={styles['leading']}>
+          <div className={cx(styles['flag'], styles[countryCode])} />
+          <div className={styles['plus']}>+</div>
+        </div>
+      }
+      beforeMaskedValueChange={handleChangeMask}
+      value={value}
+      onChange={(ev) => handleChange(ev.currentTarget.value)}
+      onFocus={handleFocus}
+      type="tel"
+      autoComplete="tel"
+      {...props}
+      mask={mask}
+      inputRef={(element) => {
+        ref.current = element;
+        if (typeof inputRef === 'function') inputRef(element);
+        else if (inputRef) inputRef.current = element;
+      }}
+      placeholder={placeholder}
+    />
   );
-};
-
-export default PhoneInput;
+}

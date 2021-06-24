@@ -1,31 +1,17 @@
 import React, {useCallback} from 'react';
-import type {InputHTMLAttributes} from 'react';
-import InputMask from 'react-input-mask';
+import InputMask, {Props as InputMaskProps, InputState} from 'react-input-mask';
 import classnames from 'classnames';
 
 import styles from './BareInput.module.scss';
 
 import type {BaseControlProps} from '../types';
 
-export type BareInputProps = Omit<
-  InputHTMLAttributes<HTMLInputElement>,
-  'size'
-> &
-  BaseControlProps<HTMLInputElement> & {
-    /**
-     * Mask string. Format characters are:
-     * * `9`: `0-9`
-     * * `a`: `A-Z, a-z`
-     * * `\*`: `A-Z, a-z, 0-9`
-     *
-     * Any character can be escaped with backslash, which usually will appear as double backslash in JS strings.
-     * For example, German phone mask with unremoveable prefix +49 will look like `mask="+4\\9 99 999 99"` or `mask={"+4\\\\9 99 999 99"}`
-     */
-    mask?: string | Array<string | RegExp>;
-
-    // Show mask when input is empty and has no focus.
-    alwaysShowMask?: boolean;
-  };
+export interface BareInputProps
+  extends Omit<InputMaskProps, 'size' | 'mask' | 'inputRef' | 'children'>,
+    BaseControlProps<HTMLInputElement> {
+  mask?: InputMaskProps['mask'];
+  beforeMaskedValueChange?(state: InputState): InputState;
+}
 
 const BareInput: React.FC<BareInputProps> = ({
   className,
