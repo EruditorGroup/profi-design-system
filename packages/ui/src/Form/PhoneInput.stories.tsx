@@ -18,14 +18,10 @@ export default {
 
 const Template: Story<PhoneInputProps> = ({...args}) => (
   <div>
-    <style>{`
-      .customUnitColor {
-        color: #888;
-      }
-    `}</style>
     <div style={containerStyles}>
       <PhoneInput {...args} style={itemStyles} />
-      <PhoneInput {...args} countryCode="by" style={itemStyles} />
+      <PhoneInput {...args} defaultCountryCode="by" style={itemStyles} />
+      <PhoneInput {...args} defaultCountryCode="ua" style={itemStyles} />
     </div>
   </div>
 );
