@@ -1,4 +1,4 @@
-import React, {useState, useRef} from 'react';
+import React, {useState, useRef, useCallback} from 'react';
 import cx from 'classnames';
 import {Input, InputProps} from '../index';
 
@@ -9,7 +9,7 @@ import {useAutoFocus} from '@eruditorgroup/profi-toolkit';
 import styles from './BarePhoneInput.module.scss';
 
 export interface PhoneInputProps
-  extends Omit<InputProps, 'onChange' | 'placeholder'> {
+  extends Omit<InputProps, 'onChange' | 'placeholder' | 'mask'> {
   defaultValue?: string;
   defaultCountryCode?: ICountryCode;
   autoFocus?: boolean;
@@ -32,6 +32,23 @@ export default function PhoneInput({
   const {phoneCode, countryCode, placeholder, mask} = getCountryByPhone(
     value.toString(),
     defaultCountryCode,
+  );
+  const oldMask = useRef(mask);
+
+  const handleChangeMask = useCallback<
+    NonNullable<InputProps['beforeMaskedValueChange']>
+  >(
+    (state) => {
+      // обновляем каретку на смену маски, т.к дефолтное поведение багованое
+      if (state.selection && oldMask.current !== mask) {
+        oldMask.current = mask;
+        const caretPos = state.value.replace(/[^\d\s]+/g, '').trim().length;
+        state.selection.start = caretPos;
+        state.selection.end = caretPos;
+      }
+      return state;
+    },
+    [mask],
   );
 
   const ref = useRef<HTMLInputElement | null>(null);
@@ -70,17 +87,18 @@ export default function PhoneInput({
           <div className={styles['plus']}>+</div>
         </div>
       }
-      mask={mask}
+      beforeMaskedValueChange={handleChangeMask}
       value={value}
       onChange={(ev) => handleChange(ev.currentTarget.value)}
       onFocus={handleFocus}
       type="tel"
       autoComplete="tel"
       {...props}
+      mask={mask}
       inputRef={(element) => {
         ref.current = element;
         if (typeof inputRef === 'function') inputRef(element);
-        else if (inputRef) inputRef.current = element;
+        else if (inputRef?.current) inputRef.current = element;
       }}
       placeholder={placeholder}
     />

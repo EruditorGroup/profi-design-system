@@ -38,5 +38,5 @@ export function getCountryByPhone(
       })
     );
   });
-  return result || DEFAULT_COUNTRY;
+  return result || getCountryByCode(defaultCountryCode);
 }
