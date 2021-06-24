@@ -25,19 +25,13 @@ const Input = forwardRef<HTMLInputElement, InputProps>(
   wrapControlWithRef<HTMLInputElement, InputProps>(BareInput),
 );
 
-type InputUnitProps = FormControlProps &
-  BareInputUnitProps & {
-    children?: never;
-  };
+type InputUnitProps = FormControlProps & BareInputUnitProps;
 
 const InputUnit = forwardRef<HTMLInputElement, InputUnitProps>(
   wrapControlWithRef<HTMLInputElement, InputUnitProps>(BareInputUnit),
 );
 
-type TextareaProps = FormControlProps &
-  BareTextareaProps & {
-    children?: never;
-  };
+type TextareaProps = FormControlProps & BareTextareaProps;
 
 const Textarea = forwardRef<HTMLTextAreaElement, TextareaProps>(
   wrapControlWithRef<HTMLTextAreaElement, TextareaProps>(BareTextarea),

@@ -98,7 +98,7 @@ export default function PhoneInput({
       inputRef={(element) => {
         ref.current = element;
         if (typeof inputRef === 'function') inputRef(element);
-        else if (inputRef?.current) inputRef.current = element;
+        else if (inputRef) inputRef.current = element;
       }}
       placeholder={placeholder}
     />
