@@ -3,6 +3,21 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.6.0 (2021-06-24)
+
+
+
+## 0.7.4 (2021-06-24)
+
+
+### Features
+
+* **ui:** PhoneInput ([#130](https://github.com/eruditorgroup/profi-design-system/issues/130)) ([7dc2064](https://github.com/eruditorgroup/profi-design-system/commit/7dc2064ae0cdf8cde149e487cca77d1bc1375a43))
+
+
+
+
+
 ## 0.5.7 (2021-06-23)
 
 
