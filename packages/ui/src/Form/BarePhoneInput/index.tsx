@@ -55,24 +55,11 @@ export default function PhoneInput({
 
   function handleFocus(ev: React.FocusEvent<HTMLInputElement>) {
     if (onFocus) onFocus(ev);
-    if (!value) {
-      setDefaultValue();
-    }
-  }
-
-  function setDefaultValue() {
-    if (propValue === undefined) {
-      setStateValue(phoneCode);
-    } else {
-      if (onChange) onChange(phoneCode);
-    }
+    if (!value) handleChange(phoneCode);
   }
 
   function handleChange(val: string) {
-    if (propValue === undefined) {
-      setStateValue(val);
-    }
-
+    if (propValue === undefined) setStateValue(val);
     if (onChange) onChange(val);
   }
 
@@ -80,7 +67,6 @@ export default function PhoneInput({
 
   return (
     <Input
-      className={styles['root']}
       leading={
         <div className={styles['leading']}>
           <div className={cx(styles['flag'], styles[countryCode])} />
