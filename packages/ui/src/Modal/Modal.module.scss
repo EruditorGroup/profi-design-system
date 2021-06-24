@@ -11,6 +11,12 @@
   width: 100%;
   margin: auto;
   overflow: hidden;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.position-center {
+  align-items: center;
 }
 
 .overlay {
@@ -25,9 +31,10 @@
 }
 
 .modal {
+  position: relative;
   display: flex;
   width: 100%;
-  background: var(--white);
+  background: var(--ui-bg-light);
   border-radius: 10px;
   box-sizing: border-box;
   flex-direction: column;
@@ -46,29 +53,25 @@
 }
 
 .button-icon {
-  width: 32px;
-  height: 32px;
-  padding: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  top: 10px;
-  background: transparent;
   position: absolute;
   z-index: 1;
-  color: var(--ui-color-secondary);
+  top: 10px;
+  background: #fff;
+  box-shadow: var(--ui-box-shadow);
+  transition: transform 0.3s;
 }
 
-.button-icon:hover {
-  background: transparent;
+.button-icon:hover:not([disabled]) {
+  transform: scale(1.1);
+  background: #fff;
 }
 
 .right {
-  right: 4px;
+  right: 10px;
 }
 
 .left {
-  left: 4px;
+  left: 10px;
 }
 
 .icon {

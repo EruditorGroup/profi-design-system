@@ -14,7 +14,7 @@ export interface ButtonProps
   extends ButtonHTMLAttributes<HTMLButtonElement>,
     AliasProps {
   design?: ButtonColor | ButtonSocial | 'link';
-  size?: Extract<ISize, 's' | 'm' | 'l'>;
+  size?: Extract<ISize, 's' | 'm' | 'l'> | 'custom';
   block?: boolean;
   rounded?: boolean;
   regular?: boolean;
