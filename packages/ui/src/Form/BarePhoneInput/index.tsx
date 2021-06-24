@@ -77,7 +77,6 @@ export default function PhoneInput({
       type="tel"
       autoComplete="tel"
       {...props}
-      ref={ref}
       inputRef={(element) => {
         ref.current = element;
         if (typeof inputRef === 'function') inputRef(element);
