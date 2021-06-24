@@ -26,14 +26,13 @@ import slideUpTransition from 'styles/transitions/SlideUp.module.scss';
 import fadeInTransition from 'styles/transitions/FadeIn.module.scss';
 
 export interface ModalProps extends HTMLAttributes<HTMLDivElement> {
+  centred?: boolean;
   withCloseButton?: boolean;
   withPadding?: boolean;
   autoSize?: boolean;
-  width: string;
-  height: string;
+  width?: string | number;
   visible: boolean;
   title?: string | undefined;
-  className?: string;
   onClickBack?: MouseEventHandler<HTMLElement>;
   onClose: MouseEventHandler<HTMLElement>;
 }
@@ -46,12 +45,12 @@ const Modal: ForwardRefExoticComponent<
   (
     {
       width,
-      height,
       autoSize,
       visible,
       title,
       children,
       className,
+      centred,
       withPadding = true,
       withCloseButton = true,
       onClose,
@@ -77,13 +76,8 @@ const Modal: ForwardRefExoticComponent<
       onClose(event);
     };
 
-    const rootStyles = {
-      width,
-      height,
-    };
-
     return (
-      <div ref={ref} {...props}>
+      <>
         <CSSTransition
           unmountOnExit
           mountOnEnter
@@ -103,17 +97,25 @@ const Modal: ForwardRefExoticComponent<
           timeout={DEFAULT_ANIMATION_DURATION}
           classNames={slideUpTransition}
         >
-          <BodyPortal className={styles['root']}>
+          <BodyPortal
+            className={classNames(
+              styles['root'],
+              centred && styles['position-center'],
+            )}
+          >
             <div
               className={classNames(
                 styles['modal'],
                 className,
                 autoSize && styles['autoSize'],
               )}
-              style={rootStyles}
+              style={{width}}
+              ref={ref}
+              {...props}
             >
               {onClickBack && (
                 <Button
+                  rounded
                   onClick={onClickBack}
                   className={classNames(styles['button-icon'], styles['left'])}
                 >
@@ -123,6 +125,8 @@ const Modal: ForwardRefExoticComponent<
 
               {withCloseButton && (
                 <Button
+                  rounded
+                  design="transparent"
                   onClick={handleCloseClick}
                   className={classNames(styles['button-icon'], styles['right'])}
                 >
@@ -148,7 +152,7 @@ const Modal: ForwardRefExoticComponent<
             </div>
           </BodyPortal>
         </CSSTransition>
-      </div>
+      </>
     );
   },
 );

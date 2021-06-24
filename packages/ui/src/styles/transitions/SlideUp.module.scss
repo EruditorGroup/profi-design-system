@@ -1,17 +1,21 @@
 .enter {
-  transform: translateY(100%);
+  transform: translateY(15%);
+  opacity: 0;
 }
 
 .enterActive {
   transform: translateY(0);
-  transition: transform 0.3s ease;
+  transition: transform 0.3s, opacity 0.3s;
+  opacity: 1;
 }
 
 .exit {
   transform: translateY(0);
+  opacity: 1;
 }
 
 .exitActive {
-  transform: translateY(100%);
-  transition: transform 0.3s ease;
+  transform: translateY(15%);
+  transition: transform 0.3s ease, opacity 0.3s;
+  opacity: 0;
 }
