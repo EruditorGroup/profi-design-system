@@ -3,6 +3,21 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.7.0 (2021-06-25)
+
+
+
+# 0.8.0 (2021-06-25)
+
+
+### Features
+
+* **ui:** Space component ([#135](https://github.com/eruditorgroup/profi-design-system/issues/135)) ([c07273c](https://github.com/eruditorgroup/profi-design-system/commit/c07273c934c9cc5a50bd72eee795fbea006885cd))
+
+
+
+
+
 ## 0.6.1 (2021-06-25)
 
 
