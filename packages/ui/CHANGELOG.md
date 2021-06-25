@@ -3,6 +3,21 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.13.0 (2021-06-24)
+
+
+
+## 0.7.5 (2021-06-24)
+
+
+### Features
+
+* **ui:** modal ([#132](https://github.com/eruditorgroup/profi-design-system/issues/132)) ([e092be8](https://github.com/eruditorgroup/profi-design-system/commit/e092be8b1c697bdca2b5d214df67ae2c2c069c42))
+
+
+
+
+
 # 0.12.0 (2021-06-24)
 
 
