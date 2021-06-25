@@ -22,8 +22,8 @@ import classNames from 'classnames';
 
 import styles from './Modal.module.scss';
 
-import slideUpTransition from 'styles/transitions/SlideUp.module.scss';
-import fadeInTransition from 'styles/transitions/FadeIn.module.scss';
+import slideUpTransition from '../styles/transitions/SlideUp.module.scss';
+import fadeInTransition from '../styles/transitions/FadeIn.module.scss';
 
 export interface ModalProps
   extends Omit<HTMLAttributes<HTMLDivElement>, 'width'> {
