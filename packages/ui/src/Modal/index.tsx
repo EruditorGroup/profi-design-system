@@ -25,7 +25,8 @@ import styles from './Modal.module.scss';
 import slideUpTransition from 'styles/transitions/SlideUp.module.scss';
 import fadeInTransition from 'styles/transitions/FadeIn.module.scss';
 
-export interface ModalProps extends HTMLAttributes<HTMLDivElement> {
+export interface ModalProps
+  extends Omit<HTMLAttributes<HTMLDivElement>, 'width'> {
   centred?: boolean;
   withCloseButton?: boolean;
   withPadding?: boolean;

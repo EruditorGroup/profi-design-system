@@ -1,9 +1,8 @@
 import React, {useState} from 'react';
 import {Story, Meta} from '@storybook/react';
 
-import Modal, {ModalProps} from './index';
+import Modal from './index';
 import Button from '../Button';
-import {LocationIcon} from '@eruditorgroup/profi-icons';
 
 export default {
   title: 'Modal',

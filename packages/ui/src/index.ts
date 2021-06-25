@@ -63,3 +63,6 @@ export type {NotificationProps} from './Notification';
 
 export {default as Toggle} from './Toggle';
 export type {ToggleProps} from './Toggle';
+
+export {default as Modal} from './Modal';
+export type {ModalProps} from './Modal';
