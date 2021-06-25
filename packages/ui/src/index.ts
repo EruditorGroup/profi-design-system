@@ -66,3 +66,6 @@ export type {ToggleProps} from './Toggle';
 
 export {default as Modal} from './Modal';
 export type {ModalProps} from './Modal';
+
+export {default as Space} from './Space';
+export type {SpaceProps} from './Space';
