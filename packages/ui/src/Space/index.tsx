@@ -1,4 +1,4 @@
-import React, {forwardRef} from 'react';
+import React, {forwardRef, useMemo} from 'react';
 import cx from 'classnames';
 
 import type {
@@ -12,16 +12,17 @@ import {IColor, ISize} from 'uitype';
 
 type IPadding = string | number | [string | number, string | number];
 
+function paddingToArray(size?: IPadding): [string, string] {
+  if (Array.isArray(size)) {
+    return size.map((s) => `${s || 0}px`) as [string, string];
+  }
+  return [`${size || '0'}px`, `${size || '0'}px`];
+}
+
 function getPadding({x, y}: {x?: IPadding; y?: IPadding}): string | undefined {
   if (!x && !y) return undefined;
-  function resolve(size?: IPadding): [string, string] {
-    if (Array.isArray(size)) {
-      return size.map((s) => `${s || 0}px`) as [string, string];
-    }
-    return [`${size || '0'}px`, `${size || '0'}px`];
-  }
-  const [left, right] = resolve(x);
-  const [top, bottom] = resolve(y);
+  const [left, right] = paddingToArray(x);
+  const [top, bottom] = paddingToArray(y);
   return `${top} ${right} ${bottom} ${left === right ? '' : left}`;
 }
 
@@ -56,6 +57,12 @@ const Space: ForwardRefExoticComponent<
   },
   ref,
 ) {
+  // чтобы не было постоянного пересчёта паддингов, добавил memo.
+  // так как px и py могут быть массивами, приводим их к строке, иначе они будут новыми ссылками
+  // react-hooks/exhaustive-deps не понимает такого :(
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  const padding = useMemo(() => getPadding({x: px, y: py}), [`${px}${py}`]);
+
   return (
     <div
       className={cx(
@@ -70,7 +77,7 @@ const Space: ForwardRefExoticComponent<
         bg && styles[`bg-${bg}`],
       )}
       {...props}
-      style={{padding: getPadding({x: px, y: py}), ...style}}
+      style={{padding, ...(style || {})}}
       ref={ref}
     />
   );
