@@ -1,0 +1,80 @@
+.space {
+  display: flex;
+  overflow: hidden;
+}
+
+.inline {
+  display: inline-flex;
+}
+
+.justify-start {
+  justify-content: flex-start;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.justify-end {
+  justify-content: flex-end;
+}
+
+.align-start {
+  align-items: flex-start;
+}
+
+.align-center {
+  align-items: center;
+}
+
+.align-end {
+  align-items: flex-end;
+}
+
+.direction-row {
+  flex-direction: row;
+}
+
+.direction-col {
+  flex-direction: column;
+}
+
+.direction-row-reverse {
+  flex-direction: row-reverse;
+}
+
+.direction-col-reverse {
+  flex-direction: column-reverse;
+}
+
+.withShadow {
+  box-shadow: var(--ui-box-shadow);
+}
+
+@each $size in (xs, s, m, l, xl, xxl) {
+  .radius-#{$size} {
+    border-radius: var(--ui-border-radius-#{$size});
+  }
+}
+
+@each $color
+  in (
+    brand,
+    primary,
+    secondary,
+    light,
+    transparent,
+    danger,
+    success,
+    warning,
+    muted
+  )
+{
+  .bg-#{$color} {
+    background: var(--ui-color-#{$color});
+  }
+}
+
+.bg-white {
+  background: white;
+}
