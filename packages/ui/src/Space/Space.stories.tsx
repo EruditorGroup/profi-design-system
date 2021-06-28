@@ -11,18 +11,18 @@ export default {
 const Template: Story<SpaceProps> = ({placeholder = 'Label', ...args}) => {
   const variants: SpaceProps[] = [
     {bg: 'success'},
-    {radius: 's', x: 10, y: 15, bg: 'white', withShadow: true},
+    {radius: 's', px: 10, py: 15, bg: 'white', withShadow: true},
     {
       align: 'center',
       justify: 'center',
       bg: 'warning',
       direction: 'row',
       radius: 'm',
-      x: 20,
-      y: 30,
+      px: 20,
+      py: 30,
     },
-    {radius: 'l', x: [15, 5], y: [25, 10], bg: 'light', inline: true},
-    {radius: 'xl', x: 40, y: 60},
+    {radius: 'l', px: [15, 5], py: [25, 10], bg: 'light', inline: true},
+    {radius: 'xl', px: 40, py: 60},
   ];
   return (
     <div className="preview">
