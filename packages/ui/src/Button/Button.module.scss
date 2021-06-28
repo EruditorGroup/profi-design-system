@@ -186,13 +186,14 @@
 }
 
 .design-link {
-  color: var(--ui-color-link);
+  composes: link from '../Link/Link.module.scss';
   background: transparent;
   padding: 0;
   min-height: inherit;
+  text-decoration: underline;
 
   &:hover {
-    text-decoration: underline;
+    text-decoration: none;
   }
 }
 

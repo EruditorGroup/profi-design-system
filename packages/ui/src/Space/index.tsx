@@ -26,10 +26,10 @@ function getPadding({x, y}: {x?: IPadding; y?: IPadding}): string | undefined {
 }
 
 export interface SpaceProps extends HTMLAttributes<HTMLDivElement> {
-  x?: IPadding;
-  y?: IPadding;
+  px?: IPadding;
+  py?: IPadding;
   withShadow?: boolean;
-  radius?: ISize | false;
+  radius?: ISize;
   direction?: 'row' | 'col' | 'row-reverse' | 'col-reverse';
   bg?: IColor | 'white';
   justify?: 'start' | 'center' | 'end';
@@ -37,45 +37,43 @@ export interface SpaceProps extends HTMLAttributes<HTMLDivElement> {
   inline?: boolean;
 }
 
-const TooltipContent: ForwardRefExoticComponent<
+const Space: ForwardRefExoticComponent<
   SpaceProps & RefAttributes<HTMLDivElement>
-> = forwardRef(
-  (
-    {
-      x,
-      y,
-      withShadow,
-      justify = 'start',
-      align = 'start',
-      direction = 'col',
-      radius = false,
-      bg = 'transparent',
-      inline,
-      className,
-      style,
-      ...props
-    },
-    ref,
-  ) => {
-    return (
-      <div
-        className={cx(
-          className,
-          styles['space'],
-          inline && styles['inline'],
-          justify && styles[`justify-${justify}`],
-          align && styles[`align-${align}`],
-          direction && styles[`direction-${direction}`],
-          withShadow && styles['withShadow'],
-          radius && styles[`radius-${radius}`],
-          bg && styles[`bg-${bg}`],
-        )}
-        {...props}
-        style={{padding: getPadding({x, y}), ...style}}
-        ref={ref}
-      />
-    );
+> = forwardRef(function Space(
+  {
+    px,
+    py,
+    withShadow,
+    justify = 'start',
+    align = 'start',
+    direction = 'col',
+    radius,
+    bg = 'transparent',
+    inline,
+    className,
+    style,
+    ...props
   },
-);
+  ref,
+) {
+  return (
+    <div
+      className={cx(
+        className,
+        styles['space'],
+        inline && styles['inline'],
+        justify && styles[`justify-${justify}`],
+        align && styles[`align-${align}`],
+        direction && styles[`direction-${direction}`],
+        withShadow && styles['withShadow'],
+        radius && styles[`radius-${radius}`],
+        bg && styles[`bg-${bg}`],
+      )}
+      {...props}
+      style={{padding: getPadding({x: px, y: py}), ...style}}
+      ref={ref}
+    />
+  );
+});
 
-export default TooltipContent;
+export default Space;
