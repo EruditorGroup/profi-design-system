@@ -192,8 +192,8 @@
   min-height: inherit;
   text-decoration: underline;
 
-  &:hover {
-    color: var(--ui-color-primary);
+  &[disabled] {
+    color: var(--ui-color-lightInverseState);
   }
 }
 
