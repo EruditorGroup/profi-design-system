@@ -3,6 +3,48 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.8.0 (2021-06-25)
+
+
+
+# 0.8.0 (2021-06-25)
+
+
+### Features
+
+* **ui:** Space component ([#135](https://github.com/eruditorgroup/profi-design-system/issues/135)) ([c07273c](https://github.com/eruditorgroup/profi-design-system/commit/c07273c934c9cc5a50bd72eee795fbea006885cd))
+
+
+
+
+
+## 0.7.1 (2021-06-25)
+
+
+
+## 0.7.6 (2021-06-25)
+
+**Note:** Version bump only for package @eruditorgroup/profi-toolkit
+
+
+
+
+
+# 0.7.0 (2021-06-24)
+
+
+
+## 0.7.5 (2021-06-24)
+
+
+### Features
+
+* **ui:** modal ([#132](https://github.com/eruditorgroup/profi-design-system/issues/132)) ([e092be8](https://github.com/eruditorgroup/profi-design-system/commit/e092be8b1c697bdca2b5d214df67ae2c2c069c42))
+
+
+
+
+
 # 0.6.0 (2021-06-24)
 
 

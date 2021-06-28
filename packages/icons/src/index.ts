@@ -24,6 +24,7 @@ export {default as ProfileIcon} from './Profile';
 export {default as RepeatIcon} from './Repeat';
 export {default as ReviewIcon} from './Review';
 export {default as SearchIcon} from './Search';
+export {default as ClearIcon} from './Clear';
 export {default as SettingsIcon} from './Settings';
 export {default as StarIcon} from './Star';
 export {default as StarStrokeIcon} from './StarStroke';
