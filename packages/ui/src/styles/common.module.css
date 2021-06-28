@@ -64,4 +64,5 @@
 }
 .size-huge {
   font-size: var(--ui-text-size-huge);
+  line-height: var(--ui-text-lineHeight-huge);
 }
