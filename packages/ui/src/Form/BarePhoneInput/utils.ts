@@ -16,7 +16,7 @@ export const getCountryByCode = (code?: ICountryCode): ICountryData => {
 
 // если телефон не распознан – по дефолту ставим россию, и разрешаем
 // вводить дофига символов
-const DEFAULT_COUNTRY: ICountryData = getCountryByCode('ru');
+const DEFAULT_COUNTRY: ICountryData = BASE_COUNTRIES[0];
 
 /**
  * Returns [ICountryData] by provided phone number.
