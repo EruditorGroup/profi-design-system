@@ -6,7 +6,7 @@ import TooltipToggler from './components/TooltipToggler';
 import type {ForwardRefExoticComponent, HTMLAttributes} from 'react';
 
 import styles from './Tooltip.module.scss';
-import {AliasProps} from 'uitype';
+import {AliasProps} from '@eruditorgroup/profi-toolkit';
 
 export type ITrigger = 'hover' | 'click';
 

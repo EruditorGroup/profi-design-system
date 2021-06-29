@@ -1,5 +1,5 @@
 import React, {forwardRef} from 'react';
-import {ForwardingComponent} from 'uitype';
+import {ForwardingComponent} from '@eruditorgroup/profi-toolkit';
 import TextBase, {TextBaseProps} from './components/TextBase';
 
 export interface TitleProps extends Omit<TextBaseProps, 'as'> {

@@ -33,12 +33,11 @@ if (isESM) {
 
 module.exports = {
   presets: [
-    [
+    isCommonJS && [
       '@babel/preset-env',
       {
-        targets: isCommonJS
-          ? {node: 'current'}
-          : {chrome: 59, safari: 11, ie: 11},
+        shippedProposals: true,
+        targets: {node: 'current'},
       },
     ],
     [
@@ -48,8 +47,12 @@ module.exports = {
     '@babel/preset-react',
   ].filter(Boolean),
   plugins: [
-    '@babel/plugin-proposal-nullish-coalescing-operator',
-    '@babel/plugin-proposal-optional-chaining',
+    '@babel/plugin-transform-async-to-generator', // async/await
+    '@babel/plugin-transform-spread', // destructing e.g {x, y} = z
+    '@babel/plugin-proposal-object-rest-spread', // rest props e.g {x, y, ...rest}
+    '@babel/plugin-transform-block-scoping', // convert "let" and "const" to var
+    '@babel/plugin-proposal-nullish-coalescing-operator', // e.g foo ?? bar
+    '@babel/plugin-proposal-optional-chaining', // e.g foo?.bar
     transformCssImports && ['css-modules-transform', transformCssModulesConfig],
   ].filter(Boolean),
 };

@@ -2,7 +2,7 @@ import React from 'react';
 import {Story, Meta} from '@storybook/react';
 
 import Spinner, {SpinnerProps} from './index';
-import {IColor} from 'uitype';
+import {IColor} from '@eruditorgroup/profi-toolkit';
 
 export default {
   title: 'Spinner',

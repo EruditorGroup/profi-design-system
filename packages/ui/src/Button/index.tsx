@@ -2,7 +2,13 @@ import React, {forwardRef, ButtonHTMLAttributes} from 'react';
 import classnames from 'classnames';
 
 import styles from './Button.module.scss';
-import {ForwardingComponent, AliasProps, IColor, ISize, ISocials} from 'uitype';
+import {
+  ForwardingComponent,
+  AliasProps,
+  IColor,
+  ISize,
+  ISocials,
+} from '@eruditorgroup/profi-toolkit';
 
 type ButtonSocial = Extract<ISocials, 'fb' | 'ya' | 'vk'>;
 type ButtonColor = Extract<

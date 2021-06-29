@@ -1,26 +1,26 @@
 {
-  "name": "@eruditorgroup/profi-toolkit",
-  "version": "0.8.2",
-  "description": "Toolkit for React for Eruditor Group",
-  "author": "eruditorgroup",
+  "name": "@eruditorgroup/profi-containers",
+  "version": "0.0.1",
+  "description": "Scoped abstract components for Eruditor Group",
+  "author": "profiru",
   "license": "ISC",
   "homepage": "https://github.com/eruditorgroup/profi-design-system#readme",
   "bugs": {
     "url": "https://github.com/eruditorgroup/profi-design-system/issues"
   },
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com/eruditorgroup"
+    "registry": "https://npm.pkg.github.com/profiru"
   },
   "repository": {
     "type": "git",
     "url": "git://github.com/eruditorgroup/profi-design-system.git",
-    "directory": "packages/toolkit"
+    "directory": "packages/containers"
   },
   "browser": "es/index.js",
   "main": "lib/index.js",
   "types": "es/index.d.ts",
   "module": "es/index.js",
-  "unpkg": "dist/profi-toolkit.min.js",
+  "unpkg": "dist/profi-containers.min.js",
   "files": [
     "/dist",
     "/lib",
@@ -30,14 +30,19 @@
   ],
   "dependencies": {
     "react": "^16.14.0",
-    "react-dom": "^16.14.0"
+    "react-autosuggest": "^10.0.2",
+    "@eruditorgroup/profi-ui": "^0.14.0",
+    "classnames": "^2.2.6"
+  },
+  "devDependencies": {
+    "@types/react-autosuggest": "^10.1.4"
   },
   "peerDependencies": {
     "react": "^16.14.0",
     "react-dom": "^16.14.0"
   },
   "eruditorgroup": {
-    "libName": "ProfiToolkit",
-    "libFilename": "profi-toolkit"
+    "libName": "ProfiContainers",
+    "libFilename": "profi-containers"
   }
 }

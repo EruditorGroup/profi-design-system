@@ -2,14 +2,14 @@
   "name": "@eruditorgroup/profi-ui",
   "version": "0.14.2",
   "description": "Essential cross-platform UI components for React for Eruditor Group",
-  "author": "profiru",
+  "author": "eruditorgroup",
   "license": "ISC",
   "homepage": "https://github.com/eruditorgroup/profi-design-system#readme",
   "bugs": {
     "url": "https://github.com/eruditorgroup/profi-design-system/issues"
   },
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com/profiru"
+    "registry": "https://npm.pkg.github.com/eruditorgroup"
   },
   "repository": {
     "type": "git",
@@ -18,16 +18,19 @@
   },
   "browser": "es/index.js",
   "main": "lib/index.js",
-  "types": "lib/index.d.ts",
+  "types": "es/index.d.ts",
   "module": "es/index.js",
   "unpkg": "dist/profi-ui.min.js",
   "files": [
     "/dist",
     "/lib",
     "/es",
-    "/src"
+    "/src",
+    "/types"
   ],
   "dependencies": {
+    "react": "^16.14.0",
+    "react-dom": "^16.14.0",
     "@eruditorgroup/profi-icons": "^0.7.2",
     "@eruditorgroup/profi-toolkit": "^0.8.2",
     "body-scroll-lock": "^3.1.5",
@@ -35,10 +38,6 @@
     "react-input-mask": "^2.0.4",
     "react-textarea-autosize": "^8.3.0",
     "react-transition-group": "^4.4.1"
-  },
-  "devDependencies": {
-    "react": "^16.14.0",
-    "react-dom": "^16.14.0"
   },
   "peerDependencies": {
     "react": "^16.14.0",

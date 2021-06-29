@@ -3,7 +3,7 @@ import classnames from 'classnames';
 
 import styles from './Avatar.module.scss';
 import common from '../styles/common.module.css';
-import {ISize} from 'uitype';
+import {ISize} from '@eruditorgroup/profi-toolkit';
 
 export interface AvatarProps
   extends Omit<React.HTMLAttributes<HTMLDivElement>, 'children'> {

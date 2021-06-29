@@ -2,14 +2,14 @@
   "name": "@eruditorgroup/profi-icons",
   "version": "0.7.2",
   "description": "Common icon set for Eruditor Group",
-  "author": "profiru",
+  "author": "eruditorgroup",
   "license": "ISC",
   "homepage": "https://github.com/eruditorgroup/profi-design-system#readme",
   "bugs": {
     "url": "https://github.com/eruditorgroup/profi-design-system/issues"
   },
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com/profiru"
+    "registry": "https://npm.pkg.github.com/eruditorgroup"
   },
   "repository": {
     "type": "git",
@@ -18,16 +18,17 @@
   },
   "browser": "es/index.js",
   "main": "lib/index.js",
-  "types": "lib/index.d.ts",
+  "types": "es/index.d.ts",
   "module": "es/index.js",
-  "unpkg": "dist/profi-ui.min.js",
+  "unpkg": "dist/profi-icons.min.js",
   "files": [
     "/dist",
     "/lib",
     "/es",
-    "/src"
+    "/src",
+    "/types"
   ],
-  "devDependencies": {
+  "dependencies": {
     "react": "^16.14.0",
     "react-dom": "^16.14.0"
   },

@@ -1,7 +1,7 @@
 import React, {useCallback, forwardRef, HTMLAttributes} from 'react';
 import {useTooltipContext} from '../../index';
 
-import {ForwardingComponent, AliasProps} from 'uitype';
+import {ForwardingComponent, AliasProps} from '@eruditorgroup/profi-toolkit';
 
 const TooltipToggler: ForwardingComponent<
   'div',

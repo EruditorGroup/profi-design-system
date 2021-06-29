@@ -8,7 +8,7 @@ import classNames from 'classnames';
 import {DropdownContext} from '../..';
 
 import styles from './DropdownToggler.module.scss';
-import {ForwardingComponent, AliasProps} from 'uitype';
+import {ForwardingComponent, AliasProps} from '@eruditorgroup/profi-toolkit';
 
 const DropdownToggler: ForwardingComponent<
   'div',

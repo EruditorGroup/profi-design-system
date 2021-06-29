@@ -1,9 +1,7 @@
 import React from 'react';
 import {Story, Meta} from '@storybook/react';
 
-import TableGuides, {
-  TableGuidesProps,
-} from '../../../../.storybook/TableGuides';
+import TableGuides, {TableGuidesProps} from '.storybook/TableGuides';
 
 import {Textarea} from './index';
 import type {TextareaProps} from './index';

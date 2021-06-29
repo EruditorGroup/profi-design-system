@@ -1,4 +1,5 @@
 const path = require('path');
+const fs = require('fs');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
@@ -113,7 +114,9 @@ module.exports = {
                 plugins: [
                   [
                     'postcss-preset-env',
-                    {importFrom: './src/styles/theme.css'},
+                    fs.existsSync('./src/styles/theme.css') && {
+                      importFrom: './src/styles/theme.css',
+                    },
                   ],
                 ],
               },
