@@ -8,7 +8,7 @@ import type {
 } from 'react';
 
 import styles from './Space.module.scss';
-import {IColor, ISize} from 'uitype';
+import {IColor, ISize} from '@eruditorgroup/profi-toolkit';
 
 type IPadding = string | number | [string | number, string | number];
 

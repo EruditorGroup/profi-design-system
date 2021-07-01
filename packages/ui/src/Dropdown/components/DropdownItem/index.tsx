@@ -1,7 +1,10 @@
 import React, {useCallback, useContext, forwardRef} from 'react';
 import {DropdownContext} from '../..';
 
-import type {ForwardingComponent, AliasProps} from 'uitype';
+import type {
+  ForwardingComponent,
+  AliasProps,
+} from '@eruditorgroup/profi-toolkit';
 
 export interface DropdownItemProps
   extends React.HTMLAttributes<HTMLDivElement>,

@@ -8,7 +8,7 @@ import classnames from 'classnames';
 
 import styles from './Spinner.module.scss';
 import common from '../styles/common.module.css';
-import {IColor, ISize} from 'uitype';
+import {IColor, ISize} from '@eruditorgroup/profi-toolkit';
 
 export interface SpinnerProps
   extends HTMLAttributes<HTMLDivElement>,

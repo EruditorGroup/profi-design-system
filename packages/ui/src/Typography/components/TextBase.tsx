@@ -3,7 +3,7 @@ import classNames from 'classnames';
 
 import styles from './TextBase.module.scss';
 import common from '../../styles/common.module.css';
-import type {IColor, ISize, AliasProps} from 'uitype';
+import type {IColor, ISize, AliasProps} from '@eruditorgroup/profi-toolkit';
 
 export interface TextBaseProps extends HTMLAttributes<HTMLParagraphElement> {
   size?: ISize;

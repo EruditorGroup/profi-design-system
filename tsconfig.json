@@ -6,7 +6,7 @@
     "skipLibCheck": true,
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
-    "strict": true,
+
     "forceConsistentCasingInFileNames": true,
     "noFallthroughCasesInSwitch": true,
     "module": "ESNext",
@@ -17,12 +17,13 @@
     "jsx": "react"
   },
   "exclude": [
-    "**/*.test.tsx",
     "**/*.d.ts",
     "**/__mocks__",
+    ".storybook",
     "**/lib",
     "**/dist",
     "**/es",
+    "**/types",
     "node_modules"
   ]
 }

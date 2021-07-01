@@ -1,7 +1,7 @@
 import React, {HTMLAttributes} from 'react';
 import classnames from 'classnames';
 
-import {ISize} from 'uitype';
+import {ISize} from '@eruditorgroup/profi-toolkit';
 
 import styles from './FormControl.module.scss';
 

@@ -9,7 +9,7 @@ import type {
 import styles from './Link.module.scss';
 import common from '../styles/common.module.css';
 
-import type {IColor, ISize} from 'uitype';
+import type {IColor, ISize} from '@eruditorgroup/profi-toolkit';
 
 export interface LinkProps
   extends Omit<AnchorHTMLAttributes<HTMLAnchorElement>, 'href'> {

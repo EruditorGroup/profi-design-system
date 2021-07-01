@@ -2,14 +2,14 @@
   "name": "@eruditorgroup/profi-toolkit",
   "version": "0.8.2",
   "description": "Toolkit for React for Eruditor Group",
-  "author": "profiru",
+  "author": "eruditorgroup",
   "license": "ISC",
   "homepage": "https://github.com/eruditorgroup/profi-design-system#readme",
   "bugs": {
     "url": "https://github.com/eruditorgroup/profi-design-system/issues"
   },
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com/profiru"
+    "registry": "https://npm.pkg.github.com/eruditorgroup"
   },
   "repository": {
     "type": "git",
@@ -18,7 +18,7 @@
   },
   "browser": "es/index.js",
   "main": "lib/index.js",
-  "types": "lib/index.d.ts",
+  "types": "es/index.d.ts",
   "module": "es/index.js",
   "unpkg": "dist/profi-toolkit.min.js",
   "files": [
@@ -27,10 +27,7 @@
     "/es",
     "/src"
   ],
-  "devDependencies": {
-    "react": "^16.14.0",
-    "react-dom": "^16.14.0"
-  },
+  "dependencies": {},
   "peerDependencies": {
     "react": "^16.14.0",
     "react-dom": "^16.14.0"
