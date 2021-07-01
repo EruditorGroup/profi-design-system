@@ -16,7 +16,7 @@ type ButtonColor = Extract<
   IColor,
   'primary' | 'secondary' | 'light' | 'transparent'
 >;
-
+//test
 export interface ButtonProps
   extends ButtonHTMLAttributes<HTMLButtonElement>,
     AliasProps {
