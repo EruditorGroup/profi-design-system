@@ -61,8 +61,7 @@ jobs:
           git checkout -b release/${{ env.GIT_TAG }}
           git push --set-upstream origin release/${{ env.GIT_TAG }}
           git branch
-          yarn run publish --no-push
-          git push --tags
+          yarn run publish
 
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v3
