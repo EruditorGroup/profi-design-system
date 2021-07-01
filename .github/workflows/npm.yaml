@@ -48,7 +48,7 @@ jobs:
       - name: Fetch & checkout
         id: branch_name
         run: |
-          git fetch
+          git fetch --all --tags
           git checkout yarn.lock 
           git checkout master
           echo "GIT_TAG=${GITHUB_REF/refs\/tags\//}" >> $GITHUB_ENV
