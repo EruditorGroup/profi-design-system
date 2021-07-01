@@ -3,6 +3,110 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.15.0](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.11.5...@eruditorgroup/profi-ui@0.15.0) (2021-07-01)
+
+
+### Bug Fixes
+
+* CI test ([4efd077](https://github.com/eruditorgroup/profi-design-system/commit/4efd077973e2761845dfaa16b4f426b4d4acfb67))
+* **ui:** add react-autosuggest dependency ([ce6465e](https://github.com/eruditorgroup/profi-design-system/commit/ce6465ef1e03e7d445961e05f4bfb065673367f7))
+* Тест @eruditorgroup/ui ([3d1e3d3](https://github.com/eruditorgroup/profi-design-system/commit/3d1e3d3355712f9e0773579ada50d6ef2d91b3e5))
+* **BarePhoneInput:** DEFAULT_CONTRY ([23c3cbe](https://github.com/eruditorgroup/profi-design-system/commit/23c3cbef489efa88beb9471b39c5e72849f56164))
+* **Link:** Update link ([ea72646](https://github.com/eruditorgroup/profi-design-system/commit/ea72646e402956449ac8f1da03f029ad5431806f))
+* **ui:** Space api fix & Button new link design ([#137](https://github.com/eruditorgroup/profi-design-system/issues/137)) ([6979f18](https://github.com/eruditorgroup/profi-design-system/commit/6979f18b8a5c1ef6a36121a0d1716ffd8ee50066))
+
+
+
+# 0.8.0 (2021-06-25)
+
+
+### Features
+
+* **ui:** Space component ([#135](https://github.com/eruditorgroup/profi-design-system/issues/135)) ([c07273c](https://github.com/eruditorgroup/profi-design-system/commit/c07273c934c9cc5a50bd72eee795fbea006885cd))
+
+
+
+## 0.7.6 (2021-06-25)
+
+
+### Bug Fixes
+
+* **modal:** add export ([79eee9c](https://github.com/eruditorgroup/profi-design-system/commit/79eee9c10e5281bac6a493d199eb48f1ef0d658d))
+
+
+
+## 0.7.5 (2021-06-24)
+
+
+### Features
+
+* **ui:** modal ([#132](https://github.com/eruditorgroup/profi-design-system/issues/132)) ([e092be8](https://github.com/eruditorgroup/profi-design-system/commit/e092be8b1c697bdca2b5d214df67ae2c2c069c42))
+
+
+
+## 0.7.4 (2021-06-24)
+
+
+### Features
+
+* **ui:** PhoneInput ([#130](https://github.com/eruditorgroup/profi-design-system/issues/130)) ([7dc2064](https://github.com/eruditorgroup/profi-design-system/commit/7dc2064ae0cdf8cde149e487cca77d1bc1375a43))
+
+
+
+## 0.7.3 (2021-06-23)
+
+
+### Bug Fixes
+
+* **ui:** Phone flag -> base64 ([febe38f](https://github.com/eruditorgroup/profi-design-system/commit/febe38fdf124fc389588fe4798c5ec02a7af18b6))
+
+
+### Features
+
+* **ui): PhoneInput & feat(toolkit:** useAutoFocus hook ([16bfe60](https://github.com/eruditorgroup/profi-design-system/commit/16bfe605139e8207f0587f4ca41fd1cc4907e503))
+
+
+
+## 0.6.8 (2021-06-22)
+
+
+### Bug Fixes
+
+* **ui:** add Tooltip export ([5cd3021](https://github.com/eruditorgroup/profi-design-system/commit/5cd3021cc1edccbdee7bd2a725412ce860865af5))
+
+
+
+## 0.6.7 (2021-06-22)
+
+
+### Bug Fixes
+
+* test deploy ([d631d95](https://github.com/eruditorgroup/profi-design-system/commit/d631d954826eb499223d360116ff7c60b82186fd))
+* **datepicker:** pass input className in valid prop ([d683ecb](https://github.com/eruditorgroup/profi-design-system/commit/d683ecbff4577259550e2af4b0573aac6aea0944))
+* **input:** add global class to drop default styles from warp ([#118](https://github.com/eruditorgroup/profi-design-system/issues/118)) ([4c18b88](https://github.com/eruditorgroup/profi-design-system/commit/4c18b88c25ee8154318ad533f9f6b14399862890))
+* **ui:** trigger deploy ([ff72963](https://github.com/eruditorgroup/profi-design-system/commit/ff729636eaadc24239ec8b92be3cc1b9bfa060be))
+
+
+### Features
+
+* **ui:** Tooltip ([#122](https://github.com/eruditorgroup/profi-design-system/issues/122)) ([40cdf92](https://github.com/eruditorgroup/profi-design-system/commit/40cdf92685e4090f50f8a7a9f39c9db4eed8293e))
+
+
+
+
+
+## 0.14.3 (2021-07-01)
+
+
+
+## 0.8.3 (2021-07-01)
+
+**Note:** Version bump only for package @eruditorgroup/profi-ui
+
+
+
+
+
 ## 0.14.2 (2021-06-29)
 
 
