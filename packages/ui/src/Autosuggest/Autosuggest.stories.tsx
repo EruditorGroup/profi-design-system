@@ -4,7 +4,7 @@ import {Story, Meta} from '@storybook/react';
 import Autosuggest, {AutosuggestProps, ISuggestValue} from './index';
 
 export default {
-  title: 'Containers/Autosuggest',
+  title: 'Autosuggest',
   component: Autosuggest,
 } as Meta;
 
