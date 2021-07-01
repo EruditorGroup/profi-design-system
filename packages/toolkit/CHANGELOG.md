@@ -3,6 +3,33 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.17.0](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-toolkit@0.5.1...@eruditorgroup/profi-toolkit@0.17.0) (2021-07-01)
+
+
+
+## 0.8.10 (2021-07-01)
+
+
+
+## 0.8.4 (2021-07-01)
+
+
+
+## 0.7.2 (2021-06-23)
+
+
+
+## 0.7.1 (2021-06-23)
+
+
+### Features
+
+* **ui): PhoneInput & feat(toolkit:** useAutoFocus hook ([16bfe60](https://github.com/eruditorgroup/profi-design-system/commit/16bfe605139e8207f0587f4ca41fd1cc4907e503))
+
+
+
+
+
 # [0.16.0](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-toolkit@0.5.1...@eruditorgroup/profi-toolkit@0.16.0) (2021-07-01)
 
 
