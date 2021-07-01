@@ -3,6 +3,30 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.11.0](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-icons@0.4.1...@eruditorgroup/profi-icons@0.11.0) (2021-07-01)
+
+
+### Bug Fixes
+
+* **modal:** add export ([79eee9c](https://github.com/eruditorgroup/profi-design-system/commit/79eee9c10e5281bac6a493d199eb48f1ef0d658d))
+
+
+
+## 0.7.5 (2021-06-24)
+
+
+### Features
+
+* **ui:** modal ([#132](https://github.com/eruditorgroup/profi-design-system/issues/132)) ([e092be8](https://github.com/eruditorgroup/profi-design-system/commit/e092be8b1c697bdca2b5d214df67ae2c2c069c42))
+
+
+
+## 0.6.8 (2021-06-22)
+
+
+
+
+
 # [0.10.0](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-icons@0.4.1...@eruditorgroup/profi-icons@0.10.0) (2021-07-01)
 
 
