@@ -45,18 +45,15 @@ jobs:
           git config user.name "GitHub"
           git config user.email "noreply@github.com"
 
-      - name: Create release branch
-        id: branch_name
+      - name: Set .npmrc (publish token) and GIT_TAG env
         run: |
+          printf "//npm.pkg.github.com/:_authToken=${{ secrets.GITHUB_TOKEN }}\n" > ~/.npmrc
           echo "GIT_TAG=${GITHUB_REF/refs\/tags\//}" >> $GITHUB_ENV
+
+      - name: Create release branch & Publish package & Create pull request
+        run: |
           git checkout -b release/${{ env.GIT_TAG }}
           git push --set-upstream origin release/${{ env.GIT_TAG }}
-
-      - name: Set .npmrc (publish token)
-        run: printf "//npm.pkg.github.com/:_authToken=${{ secrets.GITHUB_TOKEN }}\n" > ~/.npmrc
-
-      - name: Publish package & create pull request
-        run: |
           yarn run publish
           curl \
             -X POST \
