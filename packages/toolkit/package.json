@@ -25,13 +25,9 @@
     "/dist",
     "/lib",
     "/es",
-    "/src",
-    "/types"
+    "/src"
   ],
-  "dependencies": {
-    "react": "^16.14.0",
-    "react-dom": "^16.14.0"
-  },
+  "dependencies": {},
   "peerDependencies": {
     "react": "^16.14.0",
     "react-dom": "^16.14.0"

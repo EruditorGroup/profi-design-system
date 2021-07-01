@@ -11,6 +11,7 @@ import {
 } from '@eruditorgroup/profi-toolkit';
 
 type ButtonSocial = Extract<ISocials, 'fb' | 'ya' | 'vk'>;
+type ButtonSize = Extract<ISize, 's' | 'm' | 'l'> | 'custom';
 type ButtonColor = Extract<
   IColor,
   'primary' | 'secondary' | 'light' | 'transparent'
@@ -20,7 +21,7 @@ export interface ButtonProps
   extends ButtonHTMLAttributes<HTMLButtonElement>,
     AliasProps {
   design?: ButtonColor | ButtonSocial | 'link';
-  size?: Extract<ISize, 's' | 'm' | 'l'> | 'custom';
+  size?: ButtonSize;
   block?: boolean;
   rounded?: boolean;
   regular?: boolean;

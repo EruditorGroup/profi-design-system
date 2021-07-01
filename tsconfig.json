@@ -14,14 +14,7 @@
     "resolveJsonModule": true,
     "isolatedModules": false,
     "noEmit": true,
-    "jsx": "react",
-    "baseUrl": ".",
-    "paths": {
-      "@eruditorgroup/profi-ui": ["packages/ui"],
-      "@eruditorgroup/profi-toolkit": ["packages/toolkit"],
-      "@eruditorgroup/profi-icons": ["packages/icons"],
-      "@eruditorgroup/profi-containers": ["packages/containers"]
-    }
+    "jsx": "react"
   },
   "exclude": [
     "**/*.d.ts",

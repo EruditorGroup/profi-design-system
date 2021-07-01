@@ -25,13 +25,12 @@
     "/dist",
     "/lib",
     "/es",
-    "/src",
-    "/types"
+    "/src"
   ],
   "dependencies": {
-    "react": "^16.14.0",
     "react-autosuggest": "^10.0.2",
     "@eruditorgroup/profi-ui": "^0.14.0",
+    "@eruditorgroup/profi-toolkit": "^0.8.2",
     "classnames": "^2.2.6"
   },
   "devDependencies": {
