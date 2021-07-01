@@ -62,7 +62,7 @@ jobs:
           git push --set-upstream origin release/${{ env.GIT_TAG }}
           git fetch --all
           yarn run publish --no-push
-          git push --tags
+          git push --follow-tags
 
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v3
