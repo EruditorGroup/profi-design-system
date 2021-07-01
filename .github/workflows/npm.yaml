@@ -58,10 +58,10 @@ jobs:
 
       - name: Create release branch & publish package
         run: |
+          yarn run publish --no-push
           git checkout -b release/${{ env.GIT_TAG }}
           git push --set-upstream origin release/${{ env.GIT_TAG }}
           git branch
-          yarn run publish --no-push
           git push --tags
 
       - name: Create Pull Request
