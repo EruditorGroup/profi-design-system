@@ -62,6 +62,7 @@ jobs:
           git push --set-upstream origin release/${{ env.GIT_TAG }}
           git branch
           git fetch --all --tags
+          git status
           git tag -l "@eruditorgroup*" 
           yarn run publish --no-push
           git push --tags
