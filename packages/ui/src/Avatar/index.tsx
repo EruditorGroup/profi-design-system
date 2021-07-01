@@ -13,7 +13,7 @@ export interface AvatarProps
   src?: string;
   username?: string;
 }
-// test
+
 const Avatar = forwardRef<HTMLDivElement, AvatarProps>(
   (
     {
