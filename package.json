@@ -19,7 +19,7 @@
     "clean": "lerna exec --parallel -- rimraf lib dist es types",
     "clean:storybook": "rimraf __image_snapshots__ storybook-static",
     "start": "start-storybook -p 6006",
-    "build": "yarn clean && yarn concurrently 'yarn build:types --outDir es' 'yarn build:types --outDir lib' 'yarn build:cjs' 'yarn build:esm' 'yarn build:bundle'",
+    "build": "yarn clean && yarn concurrently 'yarn build:types --outDir es' 'yarn build:cjs' 'yarn build:esm' 'yarn build:bundle'",
     "build:types": "lerna exec -- tsc src/*.ts --declaration --emitDeclarationOnly --jsx react --esModuleInterop",
     "build:cjs": "lerna exec --parallel -- MODULE_TYPE=cjs CSS_MODULES=1 yarn babel --root-mode upward src -x '.ts','.tsx' --ignore '**/*.test.tsx','**/*.stories.tsx','**/*.d.ts','**/__mocks__' -d lib",
     "build:esm": "lerna exec --parallel -- MODULE_TYPE=esm CSS_MODULES=1 yarn babel --root-mode upward src -x '.ts','.tsx' --ignore '**/*.test.tsx','**/*.stories.tsx','**/*.d.ts','**/__mocks__' -d es",
