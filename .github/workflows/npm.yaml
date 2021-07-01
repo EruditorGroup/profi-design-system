@@ -55,10 +55,9 @@ jobs:
           git checkout -b release/${{ env.GIT_TAG }}
           git push --set-upstream origin release/${{ env.GIT_TAG }}
           yarn run publish
-          env
           curl \
             -X POST \
             -H "Accept: application/vnd.github.v3+json" \
             -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
             https://api.github.com/repos/$GITHUB_REPOSITORY/pulls \
-            -d '{"head":"release/${{ env.GIT_TAG }}","base":"master"}'
+            -d '{"head":"release/${{ env.GIT_TAG }}","base":"master", "title": "chore: changelog ${{ env.GIT_TAG }}"}'

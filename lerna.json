@@ -5,7 +5,6 @@
   "useWorkspaces": true,
   "command": {
     "publish": {
-      "includeMergedTags": true,
       "conventionalCommits": true,
       "message": "chore(release): publish",
       "registry": "https://npm.pkg.github.com/profiru",
