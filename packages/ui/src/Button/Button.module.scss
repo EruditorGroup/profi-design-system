@@ -186,7 +186,8 @@
 }
 
 .design-link {
-  composes: link from '../Link/Link.module.scss';
+  color: var(--ui-color-link);
+  text-decoration: none;
   background: transparent;
   padding: 0;
   min-height: inherit;
@@ -194,6 +195,10 @@
 
   &[disabled] {
     color: var(--ui-color-lightInverseState);
+  }
+
+  &:hover {
+    color: var(--ui-color-primary);
   }
 }
 
