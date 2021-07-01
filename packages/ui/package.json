@@ -34,7 +34,8 @@
     "classnames": "^2.2.6",
     "react-input-mask": "^2.0.4",
     "react-textarea-autosize": "^8.3.0",
-    "react-transition-group": "^4.4.1"
+    "react-transition-group": "^4.4.1",
+    "react-autosuggest": "^10.1.0"
   },
   "peerDependencies": {
     "react": "^16.14.0",
