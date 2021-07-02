@@ -2,9 +2,17 @@
 }
 
 .spinner {
+  margin: 10px auto;
 }
 
 .container {
+  position: relative;
+  display: inline-flex;
+}
+
+.container.block {
+  display: block;
+  width: 100%;
 }
 
 .containerOpen {
@@ -20,6 +28,13 @@
 }
 
 .suggestionsContainer {
+  position: absolute;
+  top: 100%;
+  width: 100%;
+  left: 0;
+  z-index: 9999;
+  max-height: 300px;
+  overflow: scroll;
 }
 
 .suggestionsContainerOpen {
