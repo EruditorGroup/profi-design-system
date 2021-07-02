@@ -47,7 +47,6 @@ const Autosuggest = forwardRef<
     suggestions: values,
     onSuggestionsFetchRequested,
     block = false,
-    inputProps,
 
     inputClassName,
     inputRef,
