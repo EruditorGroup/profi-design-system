@@ -1,4 +1,5 @@
 import React, {forwardRef} from 'react';
+
 import type {ForwardRefExoticComponent} from 'react';
 import type {IconPropsType} from './_types';
 
