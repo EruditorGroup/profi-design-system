@@ -41,6 +41,7 @@ const Template: Story<SelectProps> = (args) => {
       <Select
         style={{margin: '10px'}}
         leading={<Text color="muted">До</Text>}
+        startScrollFrom={3}
         {...args}
       >
         <Select.Option value="00:00">00:00</Select.Option>
@@ -48,30 +49,30 @@ const Template: Story<SelectProps> = (args) => {
           01:00
         </Select.Option>
         <Select.Option value="02:00" trailing={<LocationIcon />}>
-          03:00
+          02:00
         </Select.Option>
         <Select.Option
           disabled
-          value="04:00"
+          value="03:00"
           trailing={<CloseIcon />}
           leading={<DotIcon />}
         >
-          disabled
-        </Select.Option>
-        <Select.Option value="00:00">00:00</Select.Option>
-        <Select.Option value="01:00" leading={<StarIcon />}>
-          01:00
-        </Select.Option>
-        <Select.Option value="02:00" trailing={<LocationIcon />}>
           03:00
+        </Select.Option>
+        <Select.Option value="04:00">04:00</Select.Option>
+        <Select.Option value="05:00" leading={<StarIcon />}>
+          05:00
+        </Select.Option>
+        <Select.Option value="06:00" trailing={<LocationIcon />}>
+          06:00
         </Select.Option>
         <Select.Option
           disabled
-          value="04:00"
+          value="07:00"
           trailing={<CloseIcon />}
           leading={<DotIcon />}
         >
-          disabled
+          07:00
         </Select.Option>
       </Select>
     </>

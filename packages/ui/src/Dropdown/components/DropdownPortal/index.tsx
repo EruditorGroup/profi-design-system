@@ -1,11 +1,7 @@
 import React, {useContext, forwardRef, useRef} from 'react';
 import classNames from 'classnames';
 
-import type {
-  RefAttributes,
-  ForwardRefExoticComponent,
-  HTMLAttributes,
-} from 'react';
+import type {HTMLAttributes} from 'react';
 import {DropdownContext} from '../../';
 
 import styles from './DropdownPortal.module.scss';
@@ -23,9 +19,7 @@ export interface DropdownPortalProps extends HTMLAttributes<HTMLDivElement> {
   fit?: boolean;
 }
 
-const DropdownPortal: ForwardRefExoticComponent<
-  DropdownPortalProps & RefAttributes<HTMLDivElement>
-> = forwardRef(
+const DropdownPortal = forwardRef<HTMLDivElement, DropdownPortalProps>(
   (
     {
       animated = true,

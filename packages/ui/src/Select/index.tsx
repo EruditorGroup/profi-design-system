@@ -2,7 +2,9 @@ import React, {
   createContext,
   useContext,
   useEffect,
+  useLayoutEffect,
   useMemo,
+  useRef,
   useState,
 } from 'react';
 import cx from 'classnames';
@@ -10,13 +12,12 @@ import cx from 'classnames';
 import SelectOption from './components/SelectOption';
 
 import Dropdown from '../Dropdown';
-import {FormControlProps, Input, InputProps} from '../Form';
+import {Input, InputProps} from '../Form';
 
 import styles from './Select.module.css';
-import {usePersistCallback} from '../../../toolkit/es';
 
 export interface SelectProps extends Omit<InputProps, 'readonly' | 'onChange'> {
-  startScrollFrom?: string;
+  startScrollFrom?: number;
   defaultOpened?: boolean;
   defaultValue?: string;
   size?: InputProps['size'];
@@ -40,6 +41,13 @@ export const useSelectContext = (): ISelectContext => {
   return context;
 };
 
+const sizeHeight: Record<NonNullable<InputProps['size']>, number> = {
+  s: 35,
+  m: 40,
+  l: 50,
+  xl: 50,
+};
+
 const Select: SelectComponent = function Select({
   startScrollFrom,
   defaultValue = '',
@@ -47,15 +55,24 @@ const Select: SelectComponent = function Select({
   onChange,
   defaultOpened,
   block = false,
-  size,
+  size = 'm',
   className,
   ...props
 }) {
   const [opened, setOpened] = useState(defaultOpened);
   const [value, setValue] = useState(defaultValue);
   const context = useMemo(() => ({value, setValue}), [value, setValue]);
+  const portalRef = useRef<HTMLDivElement>();
 
-  useEffect(() => onChange && onChange(value), [value]);
+  const _onChange = useRef(onChange);
+  _onChange.current = onChange;
+  useEffect(() => _onChange.current?.(value), [value]);
+
+  useLayoutEffect(() => {
+    if (startScrollFrom) {
+      portalRef.current?.scrollTo(0, startScrollFrom * sizeHeight[size]);
+    }
+  }, [startScrollFrom, size]);
 
   const {leading, trailing, inputRef, withFloatLabel, invalid} = props;
   const togglerProps = useMemo<InputProps>(
@@ -92,7 +109,12 @@ const Select: SelectComponent = function Select({
           {...togglerProps}
         />
         {children && (
-          <Dropdown.Portal block animated={false} className={styles['options']}>
+          <Dropdown.Portal
+            ref={portalRef as React.Ref<HTMLDivElement>}
+            block
+            animated={false}
+            className={styles['options']}
+          >
             {children}
           </Dropdown.Portal>
         )}
