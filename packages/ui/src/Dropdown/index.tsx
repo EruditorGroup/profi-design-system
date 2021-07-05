@@ -6,6 +6,7 @@ import React, {
   useRef,
   useCallback,
   MutableRefObject,
+  useContext,
 } from 'react';
 import cx from 'classnames';
 
@@ -22,6 +23,9 @@ export interface IDropdownContext {
   setOpened: Dispatch<SetStateAction<boolean>>;
   trigger: 'click' | 'hover';
 }
+
+const Context = createContext(false);
+export const useDisabledContext = (): boolean => useContext(Context);
 
 export const DropdownContext = createContext<IDropdownContext | null>(null);
 

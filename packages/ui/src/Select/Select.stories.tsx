@@ -9,7 +9,6 @@ import {
   StarIcon,
 } from '@eruditorgroup/profi-icons';
 import Text from '../Typography/Text';
-
 export default {
   title: 'Select',
   component: Select,

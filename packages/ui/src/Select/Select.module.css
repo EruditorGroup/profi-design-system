@@ -12,7 +12,7 @@
   min-width: initial !important;
   max-width: initial !important;
   box-sizing: border-box;
-  max-height: 200px;
+  max-height: 210px;
   overflow: auto;
   display: block;
 }
