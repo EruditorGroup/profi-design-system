@@ -1,0 +1,28 @@
+.toggler,
+.input {
+  cursor: pointer;
+}
+
+.opened {
+  background: var(--ui-color-lightState);
+}
+
+.options {
+  width: 100%;
+  min-width: initial !important;
+  max-width: initial !important;
+  box-sizing: border-box;
+  max-height: 200px;
+  overflow: auto;
+  display: block;
+}
+
+.inner {
+  width: auto;
+  display: inline-block;
+}
+
+.block {
+  width: 100%;
+  display: block;
+}

@@ -16,11 +16,16 @@ export type IColor =
   | 'muted';
 export type ISocials = 'vk' | 'ya' | 'fb' | 'apple';
 
-type ReplaceProps<Component extends React.ElementType, P> = Pick<
-  React.ComponentPropsWithRef<Component>,
-  Exclude<keyof React.ComponentPropsWithRef<Component>, keyof P>
-> &
-  P;
+type ReplaceProps<Component extends React.ElementType, P> = Omit<
+  keyof React.ComponentPropsWithRef<Component>,
+  keyof P
+>;
+
+// Pick<
+//   React.ComponentPropsWithRef<Component>,
+//   Exclude<keyof React.ComponentPropsWithRef<Component>, keyof P>
+// > &
+//   P;
 
 export interface AliasProps<
   Component extends React.ElementType = React.ElementType

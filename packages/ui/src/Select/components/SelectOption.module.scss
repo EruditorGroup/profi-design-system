@@ -1,0 +1,19 @@
+.item {
+  cursor: pointer;
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  padding-left: 15px;
+  padding-right: 15px;
+  &:hover:not([disabled]) {
+    background: var(--ui-color-light);
+  }
+}
+
+.btn-content {
+  justify-content: flex-start;
+}
+
+.active {
+  background: var(--ui-color-light);
+}

@@ -7,7 +7,7 @@ import type {
 } from '@eruditorgroup/profi-toolkit';
 
 export interface DropdownItemProps
-  extends React.HTMLAttributes<HTMLDivElement>,
+  extends React.HTMLAttributes<Omit<HTMLDivElement, 'align'>>,
     AliasProps {
   closable?: boolean;
 }

@@ -13,6 +13,7 @@ import {useClickOutside} from '@eruditorgroup/profi-toolkit';
 
 export interface DropdownPortalProps extends HTMLAttributes<HTMLDivElement> {
   animated?: boolean;
+  block?: boolean;
   position?:
     | 'bottom-left'
     | 'bottom-right'
@@ -32,6 +33,7 @@ const DropdownPortal: ForwardRefExoticComponent<
       position = 'bottom-left',
       fit,
       className,
+      block,
       ...props
     },
     ref,
@@ -53,6 +55,7 @@ const DropdownPortal: ForwardRefExoticComponent<
         className={classNames(
           styles['dropdown-portal'],
           animated && styles['animated'],
+          block && styles['block'],
           styles[`position-${position}`],
           context?.isOpened && styles['opened'],
         )}

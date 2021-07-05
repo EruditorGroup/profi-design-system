@@ -30,6 +30,8 @@ export type DropdownProps = {
   closeRefHandler?: MutableRefObject<(() => void) | undefined>;
   onChange?: (opened: boolean) => void;
   trigger?: 'click' | 'hover';
+  defaultOpened?: boolean;
+  styles?: React.CSSProperties;
 };
 
 interface DropdownComponent extends React.FC<DropdownProps> {
@@ -43,9 +45,11 @@ const Dropdown: DropdownComponent = ({
   onChange,
   className,
   closeRefHandler,
+  defaultOpened,
   trigger = 'click',
+  ...props
 }) => {
-  const [isOpened, setOpened] = useState(false);
+  const [isOpened, setOpened] = useState(!!defaultOpened);
   const dropdownRef = useRef<HTMLDivElement | null>(null);
 
   const context = useMemo<IDropdownContext>(
@@ -82,6 +86,7 @@ const Dropdown: DropdownComponent = ({
         onMouseEnter={onMouseEnter}
         onMouseLeave={onMouseLeave}
         ref={dropdownRef}
+        {...props}
       >
         {children}
       </div>
