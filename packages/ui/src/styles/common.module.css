@@ -30,6 +30,10 @@
   color: var(--ui-color-text-muted);
 }
 
+.color-disabled {
+  color: var(--ui-color-disabled);
+}
+
 .bold {
   font-weight: 600;
 }

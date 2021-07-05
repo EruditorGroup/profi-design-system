@@ -69,3 +69,6 @@ export type {ModalProps} from './Modal';
 
 export {default as Space} from './Space';
 export type {SpaceProps} from './Space';
+
+export {default as List} from './List';
+export type {ListProps} from './List';

@@ -1,0 +1,89 @@
+.list-item {
+    padding: 15px;
+    position: relative;
+    list-style-type: none;
+
+    @each $size in (m, l) {
+        &.size-#{$size} {
+            border-radius: var(--ui-border-radius-#{$size});
+        }
+    }
+
+    &.design-high {
+        &.size-m {
+            padding: 14px 15px 16px 15px;
+        }
+        &.size-l {
+            padding: 15px 15px 18px 15px;
+        }
+    }
+
+    &.design-low {
+        &.size-m {
+            padding: 10px 15px;
+        }
+        &.size-l {
+            padding: 13px 15px 15px 15px;
+        }
+    }
+
+    &:hover, &:focus {
+        &:not(.disabled) {
+            background-color: var(--ui-color-menu-hover);
+            cursor: pointer;
+        }
+    }
+}
+
+.list-item.bordered + .list-item.bordered {
+    &::before {
+        content: '';
+        position: absolute;
+        left: 15px;
+        right: 15px;
+        height: 1px;
+        background-color: var(--ui-color-light);
+        top: 0;
+    }
+}
+
+@mixin hide-border {
+    opacity: 0;
+  }
+
+/* У задизайбленного элемента не делаем ховер, поэтому и не убираем разделитель. */
+.list-item:hover:not(.disabled), .list-item:hover + .list-item {
+    &::before {
+       @include hide-border();
+    }
+}
+
+.list-item:focus:not(.disabled), .list-item:focus + .list-item {
+    &::before {
+        @include hide-border();
+    }
+}
+
+.body {
+    display: flex;
+}
+
+.leading {
+    margin-right: 9px;
+}
+
+.leading {
+    margin-top: 2px;
+
+    &.without-caption {
+        align-self: center;
+        display: flex;
+        margin-top: 0;
+    }
+}
+
+.trailing {
+    align-self: center;
+    margin-left: auto;
+}
+
