@@ -3,6 +3,26 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.19.0](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-toolkit@0.17.0...@eruditorgroup/profi-toolkit@0.19.0) (2021-07-05)
+
+
+
+# 0.10.0 (2021-07-05)
+
+
+### Bug Fixes
+
+* Path versions profi-icons & profi-toolkit ([#170](https://github.com/eruditorgroup/profi-design-system/issues/170)) ([aa4c471](https://github.com/eruditorgroup/profi-design-system/commit/aa4c471e9f84a262769315b2b6049a47ed917e9a))
+
+
+### Features
+
+* **ui:** Autosuggest & Select ([#172](https://github.com/eruditorgroup/profi-design-system/issues/172)) ([7dc8f9f](https://github.com/eruditorgroup/profi-design-system/commit/7dc8f9f1a2aa737591a5dc399278ac2dafd700d8))
+
+
+
+
+
 # [0.18.0](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-toolkit@0.17.0...@eruditorgroup/profi-toolkit@0.18.0) (2021-07-05)
 
 
