@@ -2,13 +2,14 @@ import React, {forwardRef, useCallback, useEffect, useState} from 'react';
 import ReactAutosuggest, {
   AutosuggestPropsSingleSection,
 } from 'react-autosuggest';
+import cx from 'classnames';
 import type {AutosuggestPropsBase} from 'react-autosuggest';
 import {Input, InputProps} from '../Form';
 import Spinner from '../Spinner';
 import Space from '../Space';
-import common from '../styles/common.module.css';
 
 import styles from './Autosuggest.module.scss';
+import common from '../styles/common.module.css';
 
 export type ISuggestValue = {value: string; label?: React.ReactNode};
 type RewritedProps =
@@ -27,8 +28,9 @@ export type AutosuggestProps = Omit<
 > &
   Omit<AutosuggestPropsSingleSection<ISuggestValue>, RewritedProps> &
   InputProps & {
-    onSelected: (value: ISuggestValue | ISuggestValue[]) => void;
+    onSelected: (value: ISuggestValue) => void;
     suggestions: ISuggestValue[];
+    isLoading?: boolean;
   };
 
 const Autosuggest = forwardRef<
@@ -41,8 +43,10 @@ const Autosuggest = forwardRef<
     className,
     size = 'm',
     onSelected,
+    isLoading,
     suggestions: values,
     onSuggestionsFetchRequested,
+    block = false,
 
     inputClassName,
     inputRef,
@@ -50,7 +54,6 @@ const Autosuggest = forwardRef<
     leading,
     trailing,
     withFloatLabel,
-    block,
     invalid,
     disabled,
     style,
@@ -60,7 +63,6 @@ const Autosuggest = forwardRef<
   },
   ref,
 ) {
-  const [isLoading, setLoading] = useState(false);
   const [input, setInput] = useState<string>('');
   const [suggestions, setSuggestions] = useState<ISuggestValue[]>([]);
 
@@ -74,25 +76,27 @@ const Autosuggest = forwardRef<
 
   useEffect(updateSuggestions, [updateSuggestions]);
 
-  console.log(suggestions);
-
   return (
     <ReactAutosuggest<ISuggestValue>
       ref={ref}
       theme={styles}
       suggestions={suggestions}
-      onSuggestionsFetchRequested={async (req) => {
+      onSuggestionsFetchRequested={(req) => {
         if (onSuggestionsFetchRequested) {
-          setLoading(true);
-          await onSuggestionsFetchRequested(req);
-          setLoading(false);
+          onSuggestionsFetchRequested(req);
         } else {
           updateSuggestions();
         }
       }}
       onSuggestionSelected={(_, data) => onSelected(data.suggestion)}
       renderSuggestionsContainer={({containerProps, children}) => (
-        <Space withShadow radius={size} bg="white" {...containerProps}>
+        <Space
+          withShadow
+          radius={size}
+          bg="white"
+          {...containerProps}
+          className={cx(containerProps.className, block && styles['block'])}
+        >
           {isLoading ? (
             <Spinner
               size={size}
@@ -116,7 +120,6 @@ const Autosuggest = forwardRef<
           leading={leading}
           trailing={trailing}
           withFloatLabel={withFloatLabel}
-          block={block}
           invalid={invalid}
           disabled={disabled}
           style={style}
@@ -135,7 +138,15 @@ const Autosuggest = forwardRef<
       )}
       inputProps={{
         value: input,
-        onChange: (_, params) => setInput(params.newValue),
+        onChange: (ev, params) => {
+          if (['enter', 'click'].includes(params.method)) {
+            setInput(params.newValue);
+          } else if (params.method === 'type') {
+            setInput(
+              (ev as React.ChangeEvent<HTMLInputElement>).currentTarget.value,
+            );
+          }
+        },
       }}
       {...props}
     />

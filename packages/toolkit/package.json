@@ -27,6 +27,10 @@
     "/es",
     "/src"
   ],
+  "devDependencies": {
+    "react": "^16.14.0",
+    "react-dom": "^16.14.0"
+  },
   "peerDependencies": {
     "react": "^16.14.0",
     "react-dom": "^16.14.0"

@@ -3608,6 +3608,13 @@
   dependencies:
     "@types/react" "*"
 
+"@types/react-autosuggest@^10.1.4":
+  version "10.1.4"
+  resolved "https://registry.yarnpkg.com/@types/react-autosuggest/-/react-autosuggest-10.1.4.tgz#9e16bf03f68d4fcf98f506e84acb9f200cd3022b"
+  integrity sha512-NdSUpRX6u1VsLpF63ss3yBGGcTFDJZg35D9XPTOgXPaUXZTJcfglcjyYgQwiMYRsbnz438dWt2gff/qIb7sWcw==
+  dependencies:
+    "@types/react" "*"
+
 "@types/react-dom@>=16.9.0", "@types/react-dom@^17.0.3":
   version "17.0.3"
   resolved "https://registry.yarnpkg.com/@types/react-dom/-/react-dom-17.0.3.tgz#7fdf37b8af9d6d40127137865bb3fff8871d7ee1"

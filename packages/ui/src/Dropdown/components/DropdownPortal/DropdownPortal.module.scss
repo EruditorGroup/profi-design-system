@@ -47,6 +47,11 @@
   }
 }
 
+.block {
+  display: block;
+  width: 100%;
+}
+
 .animated {
   transition: transform 0.15s, opacity 0.15s, visibility 0.15s;
 }

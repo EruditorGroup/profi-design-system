@@ -6,6 +6,7 @@ import React, {
   useRef,
   useCallback,
   MutableRefObject,
+  useContext,
 } from 'react';
 import cx from 'classnames';
 
@@ -23,6 +24,9 @@ export interface IDropdownContext {
   trigger: 'click' | 'hover';
 }
 
+const Context = createContext(false);
+export const useDisabledContext = (): boolean => useContext(Context);
+
 export const DropdownContext = createContext<IDropdownContext | null>(null);
 
 export type DropdownProps = {
@@ -30,6 +34,8 @@ export type DropdownProps = {
   closeRefHandler?: MutableRefObject<(() => void) | undefined>;
   onChange?: (opened: boolean) => void;
   trigger?: 'click' | 'hover';
+  defaultOpened?: boolean;
+  styles?: React.CSSProperties;
 };
 
 interface DropdownComponent extends React.FC<DropdownProps> {
@@ -43,9 +49,11 @@ const Dropdown: DropdownComponent = ({
   onChange,
   className,
   closeRefHandler,
+  defaultOpened,
   trigger = 'click',
+  ...props
 }) => {
-  const [isOpened, setOpened] = useState(false);
+  const [isOpened, setOpened] = useState(!!defaultOpened);
   const dropdownRef = useRef<HTMLDivElement | null>(null);
 
   const context = useMemo<IDropdownContext>(
@@ -82,6 +90,7 @@ const Dropdown: DropdownComponent = ({
         onMouseEnter={onMouseEnter}
         onMouseLeave={onMouseLeave}
         ref={dropdownRef}
+        {...props}
       >
         {children}
       </div>
