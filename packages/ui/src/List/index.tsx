@@ -1,6 +1,7 @@
+import {ISize} from '@eruditorgroup/profi-toolkit';
 import React, {createContext, FC, useContext} from 'react';
-import {ISize} from 'uitype';
 import ListItem from './components/ListItem';
+import styles from './List.module.scss';
 
 type TListItemSize = Extract<ISize, 'm' | 'l'>;
 type TListDesign = 'high' | 'low';
@@ -43,7 +44,7 @@ const List: ComponentType = (props) => {
     <ListContext.Provider
       value={{size, bordered: extractBorderValue(props), design}}
     >
-      <ul>{children}</ul>
+      <ul className={styles['list']}>{children}</ul>
     </ListContext.Provider>
   );
 };

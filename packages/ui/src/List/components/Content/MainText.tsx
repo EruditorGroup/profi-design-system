@@ -8,7 +8,7 @@ import {useListItemContext} from '../ListItem';
 export const MainText: React.FC = (props) => {
   const {children} = props;
   const {size} = useListContext();
-  const {disabled} = useListItemContext();
+  const disabled = useListItemContext();
 
   return (
     <div

@@ -10,7 +10,6 @@ export const getChildDisplayName = (Component: React.ReactNode): string => {
   if (isReactElement(Component)) {
     const {type} = Component;
     if (typeof type === 'string') {
-      type;
       return '';
     } else {
       return type.displayName || type.name || 'Component';

@@ -4,7 +4,11 @@ import TableGuides, {
   TableGuidesProps,
 } from '../../../../.storybook/TableGuides';
 import React, {PropsWithChildren} from 'react';
-import {ChevronRightIcon, DotIcon} from '@eruditorgroup/profi-icons';
+import {
+  ChevronRightIcon,
+  DotIcon,
+  HistoryIcon,
+} from '@eruditorgroup/profi-icons';
 import Text from '../Typography/Text';
 
 const LIST_DESIGNS: NonNullable<ListProps['design']>[] = ['high', 'low'];
@@ -89,38 +93,41 @@ BorderedList.args = {
   ),
 };
 
-export const ListWithCaptionBelow = TemplateFactory(
+export const ListWithCaptionBelowAndLeading = TemplateFactory(
   createMeta(LIST_SIZES, ['high']),
 ).bind({});
-ListWithCaptionBelow.args = {
+ListWithCaptionBelowAndLeading.args = {
   bordered: true,
   children: (
     <>
-      <List.Item>
-        <List.Item.MainText>Тестовый тест</List.Item.MainText>
-        <List.Item.Caption>Подтекст</List.Item.Caption>
+      <List.Item leading={<HistoryIcon />}>
+        <List.Item.MainText>Микрорайон Хлебниково</List.Item.MainText>
+        <List.Item.Caption>Московская область, Россия</List.Item.Caption>
       </List.Item>
-      <List.Item>
-        <List.Item.MainText>Тестовый тест</List.Item.MainText>
-        <List.Item.Caption>Подтекст</List.Item.Caption>
+      <List.Item leading={<HistoryIcon />}>
+        <List.Item.MainText>
+          Микрорайон Хлебниково, Фестивальная улица
+        </List.Item.MainText>
+        <List.Item.Caption>Московская область, Россия</List.Item.Caption>
       </List.Item>
-      <List.Item>
-        <List.Item.MainText>Тестовый тест</List.Item.MainText>
-        <List.Item.Caption>Подтекст</List.Item.Caption>
+      <List.Item leading={<HistoryIcon />}>
+        <List.Item.MainText>
+          Микрорайон Хлебниково, Московская улица, 2А
+        </List.Item.MainText>
+        <List.Item.Caption>Московская область, Россия</List.Item.Caption>
       </List.Item>
-      <List.Item>
-        <List.Item.MainText>Тестовый тест</List.Item.MainText>
-        <List.Item.Caption>Подтекст</List.Item.Caption>
+      <List.Item leading={<HistoryIcon />}>
+        <List.Item.MainText>Москва, Фрязевская улица, 9к4</List.Item.MainText>
+        <List.Item.Caption>Россия</List.Item.Caption>
       </List.Item>
     </>
   ),
 };
 
 export const WithLeading = TemplateFactory(
-  createMeta(LIST_SIZES, ['high']),
+  createMeta(LIST_SIZES, ['low']),
 ).bind({});
 WithLeading.args = {
-  bordered: true,
   children: (
     <>
       <List.Item leading={<DotIcon color="#BAD45E" />}>
