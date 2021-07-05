@@ -3,6 +3,39 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.24.0](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.23.0...@eruditorgroup/profi-ui@0.24.0) (2021-07-05)
+
+
+
+# 0.10.0 (2021-07-05)
+
+
+### Features
+
+* **ui:** Autosuggest & Select ([#172](https://github.com/eruditorgroup/profi-design-system/issues/172)) ([7dc8f9f](https://github.com/eruditorgroup/profi-design-system/commit/7dc8f9f1a2aa737591a5dc399278ac2dafd700d8))
+
+
+
+## 0.9.1 (2021-07-02)
+
+
+### Bug Fixes
+
+* **Button:** Неподдерживаемый composes ([#167](https://github.com/eruditorgroup/profi-design-system/issues/167)) ([6298aee](https://github.com/eruditorgroup/profi-design-system/commit/6298aeed9531de3124a0cf5d475003468bde6f26))
+
+
+
+## 0.8.18 (2021-07-01)
+
+
+### Bug Fixes
+
+* **ui:** ci trigger ([bbf24b6](https://github.com/eruditorgroup/profi-design-system/commit/bbf24b647c611c99741d7faff3b71fa8abd255a6))
+
+
+
+
+
 ## [0.23.4](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.23.0...@eruditorgroup/profi-ui@0.23.4) (2021-07-05)
 
 
