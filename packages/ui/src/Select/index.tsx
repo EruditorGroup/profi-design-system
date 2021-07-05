@@ -21,6 +21,7 @@ export interface SelectProps extends Omit<InputProps, 'readonly' | 'onChange'> {
   defaultOpened?: boolean;
   defaultValue?: string;
   size?: InputProps['size'];
+  optionsRef?: React.MutableRefObject<HTMLDivElement | undefined>;
   onChange?: (value: string) => void;
 }
 
@@ -57,12 +58,14 @@ const Select: SelectComponent = function Select({
   block = false,
   size = 'm',
   className,
+  optionsRef,
   ...props
 }) {
   const [opened, setOpened] = useState(defaultOpened);
   const [value, setValue] = useState(defaultValue);
   const context = useMemo(() => ({value, setValue}), [value, setValue]);
-  const portalRef = useRef<HTMLDivElement>();
+  const _optionsRef = useRef<HTMLDivElement>();
+  if (optionsRef) optionsRef.current = _optionsRef.current;
 
   const _onChange = useRef(onChange);
   _onChange.current = onChange;
@@ -70,7 +73,7 @@ const Select: SelectComponent = function Select({
 
   useLayoutEffect(() => {
     if (startScrollFrom) {
-      portalRef.current?.scrollTo(0, startScrollFrom * sizeHeight[size]);
+      _optionsRef.current?.scrollTo(0, startScrollFrom * sizeHeight[size]);
     }
   }, [startScrollFrom, size]);
 
@@ -110,7 +113,7 @@ const Select: SelectComponent = function Select({
         />
         {children && (
           <Dropdown.Portal
-            ref={portalRef as React.Ref<HTMLDivElement>}
+            ref={_optionsRef as React.Ref<HTMLDivElement>}
             block
             animated={false}
             className={styles['options']}
