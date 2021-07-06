@@ -9,8 +9,6 @@ import Spinner from '../Spinner';
 import Space from '../Space';
 import List, {ListProps} from '../List';
 
-import AutosuggestTag from './components/Tag';
-
 import styles from './Autosuggest.module.scss';
 
 export type ISuggestValue = {
@@ -22,7 +20,6 @@ type RewritedProps =
   | 'ref'
   | 'theme'
   | 'getSuggestionValue'
-  | 'onSuggestionSelected'
   | 'renderSuggestionsContainer'
   | 'renderInputComponent'
   | 'shouldRenderSuggestions'
@@ -49,15 +46,12 @@ type IAutosuggestComponent = React.ForwardRefExoticComponent<
   // не знаем что там будет
   // eslint-disable-next-line
   AutosuggestProps & React.RefAttributes<ReactAutosuggest<ISuggestValue, any>>
-> & {
-  Tag: typeof AutosuggestTag;
-};
+>;
 
 const Autosuggest = forwardRef(function Autosuggest(
   {
     className,
     size = 'm',
-    onSelected,
     isLoading,
     suggestions,
     block = false,
@@ -81,7 +75,6 @@ const Autosuggest = forwardRef(function Autosuggest(
       ref={ref}
       theme={styles}
       suggestions={suggestions}
-      onSuggestionSelected={(_, data) => onSelected(data.suggestion)}
       renderSuggestionsContainer={({containerProps, children, query}) =>
         query > '' && (
           <Space
@@ -134,7 +127,5 @@ const Autosuggest = forwardRef(function Autosuggest(
     />
   );
 }) as IAutosuggestComponent;
-
-Autosuggest.Tag = AutosuggestTag;
 
 export default Autosuggest;

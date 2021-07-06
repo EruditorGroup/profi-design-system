@@ -76,6 +76,9 @@ export type {AutosuggestProps} from './Autosuggest';
 export {default as Select} from './Select';
 export type {SelectProps} from './Select';
 
+export {default as Tag} from './Tag';
+export type {TagProps} from './Tag';
+
 export {default as List} from './List';
 export type {ListProps} from './List';
 export type {ListItemProps} from './List/components/ListItem';
