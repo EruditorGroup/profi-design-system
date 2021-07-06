@@ -3,6 +3,75 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.29.0](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.23.0...@eruditorgroup/profi-ui@0.29.0) (2021-07-06)
+
+
+
+# 0.12.0 (2021-07-06)
+
+
+### Features
+
+* **toolkit & ui:** add times connstants & multiple autosuggest api ([#181](https://github.com/eruditorgroup/profi-design-system/issues/181)) ([d55f0bb](https://github.com/eruditorgroup/profi-design-system/commit/d55f0bb486e70dda584068a97655fe526764162d))
+
+
+
+# 0.11.0 (2021-07-06)
+
+
+### Features
+
+* **ui:** Component List ([#173](https://github.com/eruditorgroup/profi-design-system/issues/173)) ([90e1c49](https://github.com/eruditorgroup/profi-design-system/commit/90e1c49c08cdd5351524280c0a29f2a0c0c0b520))
+
+
+
+## 0.10.3 (2021-07-05)
+
+
+### Bug Fixes
+
+* **ui:** add options ref to Select api ([f11b157](https://github.com/eruditorgroup/profi-design-system/commit/f11b15799684817cba5860a58d6b2667681bc4a6))
+
+
+
+## 0.10.1 (2021-07-05)
+
+
+### Bug Fixes
+
+* **ui:** add export ([750a995](https://github.com/eruditorgroup/profi-design-system/commit/750a9951d41ebc522871c5dc6360554aff7e8f41))
+
+
+
+# 0.10.0 (2021-07-05)
+
+
+### Features
+
+* **ui:** Autosuggest & Select ([#172](https://github.com/eruditorgroup/profi-design-system/issues/172)) ([7dc8f9f](https://github.com/eruditorgroup/profi-design-system/commit/7dc8f9f1a2aa737591a5dc399278ac2dafd700d8))
+
+
+
+## 0.9.1 (2021-07-02)
+
+
+### Bug Fixes
+
+* **Button:** Неподдерживаемый composes ([#167](https://github.com/eruditorgroup/profi-design-system/issues/167)) ([6298aee](https://github.com/eruditorgroup/profi-design-system/commit/6298aeed9531de3124a0cf5d475003468bde6f26))
+
+
+
+## 0.8.18 (2021-07-01)
+
+
+### Bug Fixes
+
+* **ui:** ci trigger ([bbf24b6](https://github.com/eruditorgroup/profi-design-system/commit/bbf24b647c611c99741d7faff3b71fa8abd255a6))
+
+
+
+
+
 # [0.28.0](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.23.0...@eruditorgroup/profi-ui@0.28.0) (2021-07-06)
 
 
