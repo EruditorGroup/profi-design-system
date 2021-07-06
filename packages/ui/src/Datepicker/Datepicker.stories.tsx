@@ -18,8 +18,8 @@ const Template: Story<DatepickerProps> = ({...args}) => (
 export const BaseStory = Template.bind({});
 BaseStory.storyName = 'Datepicker';
 BaseStory.args = {
-  value: shiftDate(new Date(), 1),
-  minDate: new Date(),
+  value: shiftDate(new Date('Tue Jul 06 2021 01:01:01 GMT+0300'), 1),
+  minDate: new Date('Tue Jul 04 2021 01:01:01 GMT+0300'),
 };
 
 const StoryStyles = () => (

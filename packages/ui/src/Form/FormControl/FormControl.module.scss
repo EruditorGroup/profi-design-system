@@ -81,7 +81,6 @@
   display: inline-flex;
   align-items: baseline;
   box-sizing: border-box;
-  flex-wrap: wrap;
   width: 100%;
 }
 
@@ -97,6 +96,10 @@
   &_withLabel {
     padding-top: 17px; // Label line-height
   }
+}
+
+.form-control__wrap {
+  flex-wrap: wrap;
 }
 
 .form-control__prefix,

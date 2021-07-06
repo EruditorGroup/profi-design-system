@@ -96,6 +96,7 @@ const Autosuggest = forwardRef(function Autosuggest(
       ) => (
         <Input
           {...props}
+          wrap
           inputRef={inputRef}
           className={className}
           inputClassName={inputClassName}
