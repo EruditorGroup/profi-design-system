@@ -1,8 +1,8 @@
-export {default as Text} from './Typography/Text';
-export type {TextProps} from './Typography/Text';
+export {Text} from './Typography';
+export type {TextProps} from './Typography';
 
-export {default as Title} from './Typography/Title';
-export type {TitleProps} from './Typography/Title';
+export {Title} from './Typography';
+export type {TitleProps} from './Typography';
 
 export {default as Avatar} from './Avatar';
 export type {AvatarProps} from './Avatar';

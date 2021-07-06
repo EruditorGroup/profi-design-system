@@ -2,21 +2,37 @@
   font-size: var(--ui-text-size-m);
   line-height: 1.2;
 
+  /* Text sizes */
   --ui-text-size-xs: 11px;
   --ui-text-size-s: 13px;
   --ui-text-size-m: 15px;
   --ui-text-size-l: 17px;
   --ui-text-size-xl: 22px;
   --ui-text-size-xxl: 28px;
-  --ui-text-size-huge: 88px;
+  /* Laptop 732 - 1023px */
+  --ui-text-size-3xl-laptop: 35px;
+  --ui-text-size-4xl-laptop: 45px;
+  --ui-text-size-5xl-laptop: 60px;
+  /* Desktop > 1024px */
+  --ui-text-size-3xl-desktop: 40px;
+  --ui-text-size-4xl-desktop: 60px;
+  --ui-text-size-5xl-desktop: 80px;
 
+  /* Line heights */
   --ui-text-lineHeight-xs: 13px;
   --ui-text-lineHeight-s: 17px;
   --ui-text-lineHeight-m: 20px;
   --ui-text-lineHeight-l: 22px;
   --ui-text-lineHeight-xl: 26px;
   --ui-text-lineHeight-xxl: 33px;
-  --ui-text-lineHeight-huge: 88px;
+  /* Laptop 732 - 1023px */
+  --ui-text-lineHeight-3xl-laptop: 38px;
+  --ui-text-lineHeight-4xl-laptop: 45px;
+  --ui-text-lineHeight-5xl-laptop: 60px;
+  /* Desktop > 1024px */
+  --ui-text-lineHeight-3xl-desktop: 45px;
+  --ui-text-lineHeight-4xl-desktop: 60px;
+  --ui-text-lineHeight-5xl-desktop: 80px;
 
   --ui-color-primary: #e01935;
   --ui-color-primaryState: #c90c27;

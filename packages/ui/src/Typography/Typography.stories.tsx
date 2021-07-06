@@ -41,23 +41,25 @@ export const Default: Story<TextProps> = (args) => {
               </td>
             </tr>
           ))}
-          {(['xl', 'xxl', 'huge'] as TitleProps['size'][]).map((size) => (
-            <tr>
-              <td style={td} key={size}>
-                Title: {size?.toUpperCase()}
-              </td>
-              <td style={td}>
-                <Title size={size} bold={false}>
-                  Съешь ещё этих мягких французских булок
-                </Title>
-              </td>
-              <td style={td}>
-                <Title size={size}>
-                  Съешь ещё этих мягких французских булок
-                </Title>
-              </td>
-            </tr>
-          ))}
+          {(['xl', 'xxl', '3xl', '4xl', '5xl'] as TitleProps['size'][]).map(
+            (size) => (
+              <tr>
+                <td style={td} key={size}>
+                  Title: {size?.toUpperCase()}
+                </td>
+                <td style={td}>
+                  <Title size={size} bold={false}>
+                    Съешь ещё этих мягких французских булок
+                  </Title>
+                </td>
+                <td style={td}>
+                  <Title size={size}>
+                    Съешь ещё этих мягких французских булок
+                  </Title>
+                </td>
+              </tr>
+            ),
+          )}
         </tbody>
       </table>
     </Text>
