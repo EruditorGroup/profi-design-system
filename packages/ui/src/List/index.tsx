@@ -1,9 +1,5 @@
-import {
-  AliasProps,
-  ForwardingComponent,
-  ISize,
-} from '@eruditorgroup/profi-toolkit';
-import React, {createContext, FC, useContext} from 'react';
+import {ForwardingComponent, ISize} from '@eruditorgroup/profi-toolkit';
+import React, {createContext, useContext} from 'react';
 import ListItem from './components/ListItem';
 import styles from './List.module.scss';
 
