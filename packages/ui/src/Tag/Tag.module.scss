@@ -1,7 +1,7 @@
 .tag {
   border-radius: 100px;
   height: 35px;
-  padding: 0 7px 0 13px;
+  padding: 0 13px 0 13px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -30,6 +30,7 @@
   width: 17px;
   height: 17px;
   margin-left: 3px;
+  margin-right: -5px;
   cursor: pointer;
   border-radius: 50%;
   font-size: 9px;

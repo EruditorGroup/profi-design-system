@@ -1,9 +1,10 @@
 import React, {useCallback, useState} from 'react';
-import {PlaceIcon} from '@eruditorgroup/profi-icons';
+import {CloseIcon, PlaceIcon} from '@eruditorgroup/profi-icons';
 import {Story, Meta} from '@storybook/react';
 
 import Autosuggest, {AutosuggestProps, ISuggestValue} from '../index';
 import List from '../../List';
+import Tag from '../../Tag';
 import metro from './_metro.json';
 import {DotIcon} from '@eruditorgroup/profi-icons';
 import ReactAutosuggest from 'react-autosuggest';
@@ -58,7 +59,11 @@ const Template: Story<Omit<AutosuggestProps, 'suggestions' | 'value'>> = (
     <List.Item
       as="div"
       leading={
-        color ? <DotIcon color={color} /> : <PlaceIcon color="#C4C4C4" />
+        color ? (
+          <DotIcon color={color as string} />
+        ) : (
+          <PlaceIcon color="#C4C4C4" />
+        )
       }
       active={params.isHighlighted}
     >
@@ -78,7 +83,7 @@ const Template: Story<Omit<AutosuggestProps, 'suggestions' | 'value'>> = (
           onChange: (_, params) => setValue(params.newValue),
         }}
         onSuggestionsFetchRequested={updateSuggestions}
-        onSelected={(selected) => setValue(selected.value)}
+        onSuggestionSelected={(_, {suggestion}) => setValue(suggestion.value)}
         renderSuggestion={renderSuggestion}
       />
 
@@ -90,15 +95,16 @@ const Template: Story<Omit<AutosuggestProps, 'suggestions' | 'value'>> = (
         size="l"
         suggestions={suggestions}
         leading={tags.map(({color, value}) => (
-          <Autosuggest.Tag
+          <Tag
             key={value}
-            icon={color ? <DotIcon color={color} /> : <PlaceIcon />}
-            onDelete={() =>
+            icon={color ? <DotIcon color={color as string} /> : <PlaceIcon />}
+            trailing={<CloseIcon />}
+            onClick={() =>
               setTags((old) => old.filter((tag) => tag.value !== value))
             }
           >
             {value}
-          </Autosuggest.Tag>
+          </Tag>
         ))}
         inputProps={{
           placeholder: 'Введите метро или город области…',
@@ -107,7 +113,9 @@ const Template: Story<Omit<AutosuggestProps, 'suggestions' | 'value'>> = (
         }}
         onSuggestionsFetchRequested={updateSuggestions}
         onSuggestionsClearRequested={() => setValue('')}
-        onSelected={(suggestion) => setTags((old) => [...old, suggestion])}
+        onSuggestionSelected={(_, {suggestion}) =>
+          setTags((old) => [...old, suggestion])
+        }
         renderSuggestion={renderSuggestion}
       />
       <h2>Async suggestions</h2>
@@ -122,7 +130,7 @@ const Template: Story<Omit<AutosuggestProps, 'suggestions' | 'value'>> = (
           onChange: (_, params) => setValue(params.newValue),
         }}
         onSuggestionsFetchRequested={reload}
-        onSelected={(selected) => setValue(selected.value)}
+        onSuggestionSelected={(_, {suggestion}) => setValue(suggestion.value)}
         renderSuggestion={renderSuggestion}
       />
     </>
