@@ -27,10 +27,8 @@ export const Default: Story<TextProps> = (args) => {
         </thead>
         <tbody>
           {(['xs', 's', 'm', 'l'] as TextProps['size'][]).map((size) => (
-            <tr>
-              <td style={td} key={size}>
-                Text: {size?.toUpperCase()}
-              </td>
+            <tr key={size}>
+              <td style={td}>Text: {size?.toUpperCase()}</td>
               <td style={td}>
                 <Text size={size}>Съешь ещё этих мягких французских булок</Text>
               </td>
@@ -43,10 +41,8 @@ export const Default: Story<TextProps> = (args) => {
           ))}
           {(['xl', 'xxl', '3xl', '4xl', '5xl'] as TitleProps['size'][]).map(
             (size) => (
-              <tr>
-                <td style={td} key={size}>
-                  Title: {size?.toUpperCase()}
-                </td>
+              <tr key={size}>
+                <td style={td}>Title: {size?.toUpperCase()}</td>
                 <td style={td}>
                   <Title size={size} bold={false}>
                     Съешь ещё этих мягких французских булок
