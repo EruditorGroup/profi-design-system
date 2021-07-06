@@ -36,6 +36,8 @@ export type AutosuggestProps = Omit<
   };
 
 type IAutosuggestComponent = React.ForwardRefExoticComponent<
+  // не знаем что там будет
+  // eslint-disable-next-line
   AutosuggestProps & React.RefAttributes<ReactAutosuggest<ISuggestValue, any>>
 > & {
   Tag: typeof AutosuggestTag;
