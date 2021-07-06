@@ -77,17 +77,15 @@ const FormControl: React.FC<FormControlHTMLProps> = ({
             withFloatLabel && styles['form-control__infix_withLabel'],
           )}
         >
-          {withFloatLabel && (
-            <label
-              className={classnames(
-                styles['form-control__label'],
-                isLabelFloated && styles['form-control__label_floated'],
-              )}
-              htmlFor={labelFor}
-            >
-              {label}
-            </label>
-          )}
+          <label
+            className={classnames(
+              styles['form-control__label'],
+              isLabelFloated && styles['form-control__label_floated'],
+            )}
+            htmlFor={labelFor}
+          >
+            {label}
+          </label>
           {children}
         </div>
       ) : (
