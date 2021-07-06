@@ -12,6 +12,7 @@ import {useListContext} from '../../index';
 import {Caption} from '../Content/Caption';
 import {MainText} from '../Content/MainText';
 import {findChildByName} from './utils';
+import {AliasProps} from '@eruditorgroup/profi-toolkit';
 
 const ListItemContext = createContext<boolean>(null);
 
@@ -21,7 +22,7 @@ export const useListItemContext = (): boolean => {
 
 interface ComponentType
   extends ForwardRefExoticComponent<
-    ListItemProps & RefAttributes<HTMLLIElement>
+    ListItemProps & RefAttributes<HTMLLIElement> & AliasProps
   > {
   MainText: typeof MainText;
   Caption: typeof Caption;
@@ -29,6 +30,7 @@ interface ComponentType
 
 export interface ListItemProps extends React.HTMLAttributes<HTMLLIElement> {
   disabled?: boolean;
+  active?: boolean;
   leading?: ReactNode;
   trailing?: ReactNode;
 }
@@ -42,8 +44,10 @@ const ListItem: ComponentType = forwardRef((props, ref) => {
     leading,
     trailing,
     disabled = false,
+    active,
     onClick,
     className,
+    as: Component = 'li',
     ...rest
   } = props;
   const {size, bordered, design} = useListContext();
@@ -51,7 +55,7 @@ const ListItem: ComponentType = forwardRef((props, ref) => {
   const isCaption = !!findChildByName(children, Caption.displayName);
 
   return (
-    <li
+    <Component
       {...rest}
       className={cx(
         styles['list-item'],
@@ -59,6 +63,7 @@ const ListItem: ComponentType = forwardRef((props, ref) => {
         styles[`design-${design}_size-${size}`],
         disabled && styles['disabled'],
         bordered && styles['bordered'],
+        active && styles['active'],
         className,
       )}
       tabIndex={!disabled && !!onClick ? 0 : undefined}
@@ -84,7 +89,7 @@ const ListItem: ComponentType = forwardRef((props, ref) => {
 
         {!!trailing && <span className={styles['trailing']}>{trailing}</span>}
       </div>
-    </li>
+    </Component>
   );
 }) as ComponentType;
 

@@ -1,4 +1,11 @@
-.root {
+.uilist {
+  padding: 0;
+  margin: 0;
+}
+
+.uilist,
+.listItem {
+  width: 100%;
 }
 
 .spinner {
@@ -6,25 +13,8 @@
 }
 
 .container {
-  position: relative;
-  display: inline-flex;
-}
-
-.container.block {
-  display: block;
   width: 100%;
-}
-
-.containerOpen {
-}
-
-.input {
-}
-
-.inputOpen {
-}
-
-.inputFocused {
+  position: relative;
 }
 
 .suggestionsContainer {
@@ -38,7 +28,7 @@
 }
 
 .suggestionsContainerOpen {
-  padding: 5px 0;
+  padding: 5px;
   margin-top: 5px;
 }
 
@@ -52,19 +42,4 @@
   width: 100%;
   display: block;
   cursor: pointer;
-}
-
-.suggestionFirst {
-}
-
-.suggestionHighlighted {
-}
-
-.sectionContainer {
-}
-
-.sectionContainerFirst {
-}
-
-.sectionTitle {
 }
