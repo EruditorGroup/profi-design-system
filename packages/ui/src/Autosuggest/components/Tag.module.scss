@@ -1,7 +1,7 @@
 .tag {
   border-radius: 100px;
   height: 35px;
-  padding: 0 13px;
+  padding: 0 7px 0 13px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -13,18 +13,22 @@
 
 .leading,
 .trailing {
-  width: 15px;
-  height: 15px;
   display: flex;
   align-items: center;
 }
+
 .leading {
+  width: 15px;
+  height: 15px;
   margin-right: 3px;
   font-size: 12px;
   justify-content: flex-start;
 }
 
 .trailing {
+  color: var(--ui-color-text);
+  width: 17px;
+  height: 17px;
   margin-left: 3px;
   cursor: pointer;
   border-radius: 50%;

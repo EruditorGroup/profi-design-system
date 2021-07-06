@@ -1,88 +1,92 @@
 .list-item {
-    padding: 15px;
-    position: relative;
-    list-style-type: none;
+  padding: 15px;
+  position: relative;
+  list-style-type: none;
 
-    &:hover, &:focus {
-        &:not(.disabled) {
-            background-color: var(--ui-bg-light);
-            cursor: pointer;
-        }
+  &.active,
+  &:hover,
+  &:focus {
+    &:not(.disabled) {
+      background-color: var(--ui-bg-light);
+      cursor: pointer;
     }
+  }
 }
 
 @each $size in (m, l) {
-    .size-#{$size} {
-        border-radius: var(--ui-border-radius-#{$size});
-    }
+  .size-#{$size} {
+    border-radius: var(--ui-border-radius-#{$size});
+    box-sizing: border-box;
+  }
 }
 
 .design-high_size-m {
-    padding: 14px 15px 16px 15px;
+  padding: 14px 15px 16px 15px;
 }
 
 .design-high_size-l {
-    padding: 15px 15px 18px 15px;
+  padding: 15px 15px 18px 15px;
 }
 
 .design-low_size-m {
-    padding: 10px 15px;
+  padding: 10px 15px;
 }
 
 .design-low_size-l {
-    padding: 13px 15px 15px 15px;
+  padding: 13px 15px 15px 15px;
 }
 
 .bordered + .bordered {
-    &::before {
-        content: '';
-        position: absolute;
-        left: 15px;
-        right: 15px;
-        height: 1px;
-        background-color: var(--ui-color-light);
-        top: 0;
-    }
+  &::before {
+    content: '';
+    position: absolute;
+    left: 15px;
+    right: 15px;
+    height: 1px;
+    background-color: var(--ui-color-light);
+    top: 0;
+  }
 }
 
 @mixin hide-border {
-    opacity: 0;
-  }
-
-/* У задизейбленного элемента не делаем ховер, поэтому и не убираем разделитель. */
-.list-item:hover:not(.disabled), .list-item:hover + .list-item {
-    &::before {
-       @include hide-border();
-    }
+  opacity: 0;
 }
 
-.list-item:focus:not(.disabled), .list-item:focus + .list-item {
-    &::before {
-        @include hide-border();
-    }
+/* У задизейбленного элемента не делаем ховер, поэтому и не убираем разделитель. */
+.list-item:hover:not(.disabled),
+.list-item:hover + .list-item {
+  &::before {
+    @include hide-border();
+  }
+}
+
+.list-item:focus:not(.disabled),
+.list-item:focus + .list-item {
+  &::before {
+    @include hide-border();
+  }
 }
 
 .body {
-    display: flex;
+  display: flex;
 }
 
 .leading {
-    margin-right: 9px;
+  margin-right: 9px;
 }
 
 .leading {
-    margin-top: 2px;
+  margin-top: 2px;
 }
 
 .without-caption {
-    align-self: center;
-    display: flex;
-    margin-top: 0;
+  align-self: center;
+  display: flex;
+  margin-top: 0;
 }
 
 .trailing {
-    display: flex;
-    align-self: center;
-    margin-left: auto;
+  display: flex;
+  align-self: center;
+  margin-left: auto;
 }
-

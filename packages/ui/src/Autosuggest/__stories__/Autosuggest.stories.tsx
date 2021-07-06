@@ -18,11 +18,9 @@ const Template: Story<Omit<AutosuggestProps, 'suggestions' | 'value'>> = (
   args,
 ) => {
   const [value, setValue] = useState<string>('');
-  console.log(value);
   const [suggestions, setSuggestions] = useState<ISuggestValue[]>(metros);
 
   const updateSuggestions = useCallback(() => {
-    console.log('fetch', value);
     setSuggestions(() =>
       metros.filter((metro) =>
         metro.value.toLowerCase().includes(value.toLowerCase()),

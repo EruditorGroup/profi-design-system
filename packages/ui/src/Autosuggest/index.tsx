@@ -7,6 +7,7 @@ import type {AutosuggestPropsBase} from 'react-autosuggest';
 import {Input, InputProps} from '../Form';
 import Spinner from '../Spinner';
 import Space from '../Space';
+import List, {ListProps} from '../List';
 
 import AutosuggestTag from './components/Tag';
 
@@ -28,7 +29,8 @@ export type AutosuggestProps = Omit<
   RewritedProps
 > &
   Omit<AutosuggestPropsSingleSection<ISuggestValue>, RewritedProps> &
-  Omit<InputProps, 'value' | 'onChange'> & {
+  Omit<InputProps, 'value' | 'onChange' | 'size'> & {
+    size?: ListProps['size'];
     onSelected: (value: ISuggestValue) => void;
     suggestions: ISuggestValue[];
     isLoading?: boolean;
@@ -72,25 +74,35 @@ const Autosuggest = forwardRef(function Autosuggest(
       theme={styles}
       suggestions={suggestions}
       onSuggestionSelected={(_, data) => onSelected(data.suggestion)}
-      renderSuggestionsContainer={({containerProps, children}) => (
-        <Space
-          withShadow
-          radius={size}
-          bg="white"
-          {...containerProps}
-          className={cx(containerProps.className, block && styles['block'])}
-        >
-          {isLoading ? (
-            <Spinner
-              size={size}
-              className={styles['spinner']}
-              color="primary"
-            />
-          ) : (
-            children
-          )}
-        </Space>
-      )}
+      renderSuggestionsContainer={({containerProps, children, query}) =>
+        query > '' && (
+          <Space
+            withShadow
+            radius={size}
+            bg="white"
+            {...containerProps}
+            className={cx(containerProps.className, block && styles['block'])}
+          >
+            {isLoading ? (
+              <Spinner
+                size={size}
+                className={styles['spinner']}
+                color="primary"
+              />
+            ) : (
+              <List
+                as="div"
+                className={styles['uilist']}
+                design="low"
+                size={size}
+              >
+                {children}
+              </List>
+            )}
+          </Space>
+        )
+      }
+      shouldRenderSuggestions={(value) => value > ''}
       renderInputComponent={(
         props: React.InputHTMLAttributes<HTMLInputElement>,
       ) => (
@@ -111,14 +123,13 @@ const Autosuggest = forwardRef(function Autosuggest(
       )}
       getSuggestionValue={({value}) => value}
       renderSuggestion={({label, value}, params) => (
-        <Space
-          bg={params.isHighlighted ? 'light' : 'transparent'}
-          px={13}
-          py={[13, 15]}
-          className={common[`size-${size}`]}
+        <List.Item
+          as="div"
+          className={styles['listItem']}
+          active={params.isHighlighted}
         >
           {label ?? value}
-        </Space>
+        </List.Item>
       )}
       {...props}
     />

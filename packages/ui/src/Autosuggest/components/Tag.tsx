@@ -31,7 +31,7 @@ function getUrl(icon: IIcon): string {
 }
 
 const Tag: React.FC<TagProps> = function Tag({
-  size = 'l',
+  size = 's',
   children,
   onDelete,
   icon,

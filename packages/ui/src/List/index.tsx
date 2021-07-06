@@ -1,4 +1,8 @@
-import {ISize} from '@eruditorgroup/profi-toolkit';
+import {
+  AliasProps,
+  ForwardingComponent,
+  ISize,
+} from '@eruditorgroup/profi-toolkit';
 import React, {createContext, FC, useContext} from 'react';
 import ListItem from './components/ListItem';
 import styles from './List.module.scss';
@@ -20,9 +24,12 @@ export const useListContext = (): ListContextType => {
   return context;
 };
 
-export type ListProps = {
+export type ListProps = Omit<
+  React.HTMLAttributes<HTMLUListElement> & (HighDesignProps | LowDesignProps),
+  'size'
+> & {
   size?: TListItemSize;
-} & (HighDesignProps | LowDesignProps);
+};
 
 type HighDesignProps = {
   design: 'high';
@@ -33,23 +40,33 @@ type LowDesignProps = {
   design: 'low';
 };
 
-interface ComponentType extends FC<ListProps> {
+interface ComponentType extends ForwardingComponent<'ul', ListProps> {
   Item: typeof ListItem;
 }
 
-const List: ComponentType = (props) => {
-  const {children, size = 'm', design = 'low'} = props;
+const List: ComponentType = function List(props) {
+  const {
+    children,
+    as: Component = 'ul',
+    size = 'm',
+    design = 'low',
+    ...rest
+  } = props;
 
   return (
     <ListContext.Provider
       value={{size, bordered: extractBorderValue(props), design}}
     >
-      <ul className={styles['list']}>{children}</ul>
+      <Component className={styles['list']} {...rest}>
+        {children}
+      </Component>
     </ListContext.Provider>
   );
 };
 
-const extractBorderValue = (props: ListProps): boolean => {
+const extractBorderValue = (
+  props: HighDesignProps | LowDesignProps,
+): boolean => {
   return props.design === 'high' ? props.bordered || false : false;
 };
 
