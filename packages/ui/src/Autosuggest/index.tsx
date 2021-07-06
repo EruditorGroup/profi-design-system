@@ -8,6 +8,8 @@ import {Input, InputProps} from '../Form';
 import Spinner from '../Spinner';
 import Space from '../Space';
 
+import AutosuggestTag from './components/Tag';
+
 import styles from './Autosuggest.module.scss';
 import common from '../styles/common.module.css';
 
@@ -19,35 +21,34 @@ type RewritedProps =
   | 'getSuggestionValue'
   | 'onSuggestionSelected'
   | 'renderSuggestion'
-  | 'renderInputComponent'
-  | 'inputProps';
+  | 'renderInputComponent';
 
 export type AutosuggestProps = Omit<
   AutosuggestPropsBase<ISuggestValue>,
   RewritedProps
 > &
   Omit<AutosuggestPropsSingleSection<ISuggestValue>, RewritedProps> &
-  InputProps & {
+  Omit<InputProps, 'value' | 'onChange'> & {
     onSelected: (value: ISuggestValue) => void;
     suggestions: ISuggestValue[];
     isLoading?: boolean;
+    isMultiple?: boolean;
   };
 
-const Autosuggest = forwardRef<
-  // мы правда не знаем, что тут будет
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  ReactAutosuggest<ISuggestValue, any>,
-  AutosuggestProps
->(function Autosuggest(
+type IAutosuggestComponent = React.ForwardRefExoticComponent<
+  AutosuggestProps & React.RefAttributes<ReactAutosuggest<ISuggestValue, any>>
+> & {
+  Tag: typeof AutosuggestTag;
+};
+
+const Autosuggest = forwardRef(function Autosuggest(
   {
     className,
     size = 'm',
     onSelected,
     isLoading,
-    suggestions: values,
-    onSuggestionsFetchRequested,
+    suggestions,
     block = false,
-
     inputClassName,
     inputRef,
 
@@ -63,31 +64,11 @@ const Autosuggest = forwardRef<
   },
   ref,
 ) {
-  const [input, setInput] = useState<string>('');
-  const [suggestions, setSuggestions] = useState<ISuggestValue[]>([]);
-
-  const updateSuggestions = useCallback(() => {
-    setSuggestions(() =>
-      values.filter(({value}) =>
-        value.toLowerCase().includes(input.toLowerCase()),
-      ),
-    );
-  }, [values, input]);
-
-  useEffect(updateSuggestions, [updateSuggestions]);
-
   return (
     <ReactAutosuggest<ISuggestValue>
       ref={ref}
       theme={styles}
       suggestions={suggestions}
-      onSuggestionsFetchRequested={(req) => {
-        if (onSuggestionsFetchRequested) {
-          onSuggestionsFetchRequested(req);
-        } else {
-          updateSuggestions();
-        }
-      }}
       onSuggestionSelected={(_, data) => onSelected(data.suggestion)}
       renderSuggestionsContainer={({containerProps, children}) => (
         <Space
@@ -136,21 +117,11 @@ const Autosuggest = forwardRef<
           {label ?? value}
         </Space>
       )}
-      inputProps={{
-        value: input,
-        onChange: (ev, params) => {
-          if (['enter', 'click'].includes(params.method)) {
-            setInput(params.newValue);
-          } else if (params.method === 'type') {
-            setInput(
-              (ev as React.ChangeEvent<HTMLInputElement>).currentTarget.value,
-            );
-          }
-        },
-      }}
       {...props}
     />
   );
-});
+}) as IAutosuggestComponent;
+
+Autosuggest.Tag = AutosuggestTag;
 
 export default Autosuggest;

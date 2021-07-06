@@ -81,6 +81,7 @@
   display: inline-flex;
   align-items: baseline;
   box-sizing: border-box;
+  flex-wrap: wrap;
   width: 100%;
 }
 
@@ -101,6 +102,8 @@
 .form-control__prefix,
 .form-control__suffix {
   display: inline-flex;
+  flex-wrap: wrap;
+  max-width: 100%;
 
   flex: none;
 
