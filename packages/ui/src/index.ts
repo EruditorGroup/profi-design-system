@@ -70,6 +70,12 @@ export type {ModalProps} from './Modal';
 export {default as Space} from './Space';
 export type {SpaceProps} from './Space';
 
+export {default as Autosuggest} from './Autosuggest';
+export type {AutosuggestProps} from './Autosuggest';
+
+export {default as Select} from './Select';
+export type {SelectProps} from './Select';
+
 export {default as List} from './List';
 export type {ListProps} from './List';
-export type {ListItemProps} from './List/components/ListItem'
+export type {ListItemProps} from './List/components/ListItem';

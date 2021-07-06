@@ -13,7 +13,7 @@ import type {BareInputProps} from './BareInput';
 import type {BareInputUnitProps} from './BareInputUnit';
 import type {PhoneInputProps} from './BarePhoneInput';
 import type {BareTextareaProps} from './BareTextarea';
-import type {FormControlProps} from './FormControl';
+import type {FormControlProps, FormControlSize} from './FormControl';
 import type {CheckboxProps} from './Checkbox';
 import type {RadioProps} from './Radio';
 
@@ -56,4 +56,5 @@ export type {
   CheckboxProps,
   RadioProps,
   PhoneInputProps,
+  FormControlSize,
 };

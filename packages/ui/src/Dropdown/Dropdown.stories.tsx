@@ -40,7 +40,7 @@ const Template: Story = (args) => {
           >
             Открыть
           </Dropdown.Toggler>
-          <Dropdown.Portal>
+          <Dropdown.Portal animated={args.animated}>
             <Menu.Item rounded={false}>
               <VkIcon /> Пункт c иконкой
             </Menu.Item>
@@ -68,7 +68,7 @@ const Template: Story = (args) => {
           <Dropdown.Toggler as={Button} design="secondary">
             Hover me
           </Dropdown.Toggler>
-          <Dropdown.Portal>
+          <Dropdown.Portal animated={args.animated}>
             <Menu.Item rounded={false}>
               <VkIcon /> Пункт c иконкой
             </Menu.Item>
@@ -94,7 +94,7 @@ const Template: Story = (args) => {
           <Dropdown.Toggler as={Button} design="light" style={{float: 'right'}}>
             Открыть дропдаун
           </Dropdown.Toggler>
-          <Dropdown.Portal position="bottom-right">
+          <Dropdown.Portal animated={args.animated} position="bottom-right">
             <Menu.Item rounded={false}>
               <VkIcon /> Пункт c иконкой
             </Menu.Item>
@@ -120,7 +120,7 @@ const Template: Story = (args) => {
           <Dropdown.Toggler as={Button} style={{float: 'right'}}>
             Открыть дропдаун
           </Dropdown.Toggler>
-          <Dropdown.Portal position="bottom-right">
+          <Dropdown.Portal animated={args.animated} position="bottom-right">
             <Menu.Item rounded={false}>
               <VkIcon /> Пункт c иконкой
             </Menu.Item>
@@ -155,7 +155,7 @@ const Template: Story = (args) => {
           <Dropdown.Toggler as={Link} style={{float: 'right'}}>
             Открыть дропдаун
           </Dropdown.Toggler>
-          <Dropdown.Portal position="top-left">
+          <Dropdown.Portal animated={args.animated} position="top-left">
             <Menu.Item rounded={false}>
               <VkIcon /> Пункт c иконкой
             </Menu.Item>
@@ -179,7 +179,7 @@ const Template: Story = (args) => {
 
         <Dropdown {...args} trigger="hover">
           <Dropdown.Toggler as={Link}>Hover me</Dropdown.Toggler>
-          <Dropdown.Portal position="top-left">
+          <Dropdown.Portal animated={args.animated} position="top-left">
             <Menu.Item rounded={false}>
               <VkIcon /> Пункт c иконкой
             </Menu.Item>
@@ -205,7 +205,7 @@ const Template: Story = (args) => {
           <Dropdown.Toggler as={Button} style={{float: 'right'}}>
             Открыть дропдаун
           </Dropdown.Toggler>
-          <Dropdown.Portal position="top-right">
+          <Dropdown.Portal animated={args.animated} position="top-right">
             <Menu.Item rounded={false}>
               <VkIcon /> Пункт c иконкой
             </Menu.Item>

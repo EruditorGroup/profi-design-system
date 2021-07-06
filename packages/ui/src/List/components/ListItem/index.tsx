@@ -1,6 +1,5 @@
 import React, {
   createContext,
-  FC,
   forwardRef,
   ForwardRefExoticComponent,
   ReactNode,

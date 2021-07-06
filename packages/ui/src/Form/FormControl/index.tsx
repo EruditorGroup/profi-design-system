@@ -5,7 +5,7 @@ import {ISize} from '@eruditorgroup/profi-toolkit';
 
 import styles from './FormControl.module.scss';
 
-type FormControlSize = Extract<ISize, 's' | 'm' | 'l' | 'xl'>;
+export type FormControlSize = Extract<ISize, 's' | 'm' | 'l' | 'xl'>;
 
 type FormControlInternalProps = {
   label?: string;

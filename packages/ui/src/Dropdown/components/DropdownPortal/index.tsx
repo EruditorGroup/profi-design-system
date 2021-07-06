@@ -1,11 +1,7 @@
 import React, {useContext, forwardRef, useRef} from 'react';
 import classNames from 'classnames';
 
-import type {
-  RefAttributes,
-  ForwardRefExoticComponent,
-  HTMLAttributes,
-} from 'react';
+import type {HTMLAttributes} from 'react';
 import {DropdownContext} from '../../';
 
 import styles from './DropdownPortal.module.scss';
@@ -13,6 +9,7 @@ import {useClickOutside} from '@eruditorgroup/profi-toolkit';
 
 export interface DropdownPortalProps extends HTMLAttributes<HTMLDivElement> {
   animated?: boolean;
+  block?: boolean;
   position?:
     | 'bottom-left'
     | 'bottom-right'
@@ -22,9 +19,7 @@ export interface DropdownPortalProps extends HTMLAttributes<HTMLDivElement> {
   fit?: boolean;
 }
 
-const DropdownPortal: ForwardRefExoticComponent<
-  DropdownPortalProps & RefAttributes<HTMLDivElement>
-> = forwardRef(
+const DropdownPortal = forwardRef<HTMLDivElement, DropdownPortalProps>(
   (
     {
       animated = true,
@@ -32,6 +27,7 @@ const DropdownPortal: ForwardRefExoticComponent<
       position = 'bottom-left',
       fit,
       className,
+      block,
       ...props
     },
     ref,
@@ -53,6 +49,7 @@ const DropdownPortal: ForwardRefExoticComponent<
         className={classNames(
           styles['dropdown-portal'],
           animated && styles['animated'],
+          block && styles['block'],
           styles[`position-${position}`],
           context?.isOpened && styles['opened'],
         )}
