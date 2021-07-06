@@ -1,4 +1,4 @@
-import React, {isValidElement, useMemo} from 'react';
+import React from 'react';
 
 import {ISize} from '@eruditorgroup/profi-toolkit';
 import {CloseIcon} from '@eruditorgroup/profi-icons';

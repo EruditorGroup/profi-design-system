@@ -1,4 +1,4 @@
-import React, {forwardRef, useCallback, useEffect, useState} from 'react';
+import React, {forwardRef} from 'react';
 import ReactAutosuggest, {
   AutosuggestPropsSingleSection,
 } from 'react-autosuggest';
