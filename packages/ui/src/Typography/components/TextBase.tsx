@@ -32,7 +32,7 @@ const TextBase = forwardRef<unknown, TextBaseProps & AliasProps>(
         className={classNames(
           styles['text'],
           align && styles[`align-${align}`],
-          color && common[`color-${color}`],
+          color ? common[`color-${color}`] : styles['default-color'],
           size && common[`size-${size}`],
           bold && common[`bold`],
           !bold && common[`regular`],
