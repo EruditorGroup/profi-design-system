@@ -3,15 +3,28 @@ import {PlaceIcon} from '@eruditorgroup/profi-icons';
 import {Story, Meta} from '@storybook/react';
 
 import Autosuggest, {AutosuggestProps, ISuggestValue} from '../index';
+import List from '../../List';
 import metro from './_metro.json';
+import {DotIcon} from '@eruditorgroup/profi-icons';
+import ReactAutosuggest from 'react-autosuggest';
 
 export default {
   title: 'Autosuggest',
   component: Autosuggest,
 } as Meta;
 
+function getRandomColor(): string | undefined {
+  var letters = '0123456789ABCDEF';
+  var color = '#';
+  for (var i = 0; i < 6; i++) {
+    color += letters[Math.floor(Math.random() * 16)];
+  }
+  return Math.random() >= 0.5 ? undefined : color;
+}
+
 const metros = metro.map((station) => ({
   value: station,
+  color: getRandomColor(),
 }));
 
 const Template: Story<Omit<AutosuggestProps, 'suggestions' | 'value'>> = (
@@ -35,22 +48,23 @@ const Template: Story<Omit<AutosuggestProps, 'suggestions' | 'value'>> = (
     setLoading(false);
   }, []);
 
-  const [tags, setTags] = useState<React.ReactNode[]>([]);
-  const addTag = ({value, label}: ISuggestValue): void =>
-    setTags((old) => {
-      const tag = (
-        <Autosuggest.Tag
-          key={old.length}
-          icon={<PlaceIcon />}
-          onDelete={() => setTags((old) => old.filter((node) => node !== tag))}
-        >
-          {value}
-        </Autosuggest.Tag>
-      );
-      return [...old, tag];
-    });
-
+  const [tags, setTags] = useState<ISuggestValue[]>([]);
   const [isLoading, setLoading] = useState(false);
+
+  const renderSuggestion: ReactAutosuggest.RenderSuggestion<ISuggestValue> = (
+    {color, value},
+    params,
+  ) => (
+    <List.Item
+      as="div"
+      leading={
+        color ? <DotIcon color={color} /> : <PlaceIcon color="#C4C4C4" />
+      }
+      active={params.isHighlighted}
+    >
+      {value}
+    </List.Item>
+  );
 
   return (
     <>
@@ -65,6 +79,7 @@ const Template: Story<Omit<AutosuggestProps, 'suggestions' | 'value'>> = (
         }}
         onSuggestionsFetchRequested={updateSuggestions}
         onSelected={(selected) => setValue(selected.value)}
+        renderSuggestion={renderSuggestion}
       />
 
       <h2>Multiple</h2>
@@ -74,7 +89,17 @@ const Template: Story<Omit<AutosuggestProps, 'suggestions' | 'value'>> = (
         block
         size="l"
         suggestions={suggestions}
-        leading={tags.length > 0 && tags}
+        leading={tags.map(({color, value}) => (
+          <Autosuggest.Tag
+            key={value}
+            icon={color ? <DotIcon color={color} /> : <PlaceIcon />}
+            onDelete={() =>
+              setTags((old) => old.filter((tag) => tag.value !== value))
+            }
+          >
+            {value}
+          </Autosuggest.Tag>
+        ))}
         inputProps={{
           placeholder: 'Введите метро или город области…',
           value,
@@ -82,7 +107,8 @@ const Template: Story<Omit<AutosuggestProps, 'suggestions' | 'value'>> = (
         }}
         onSuggestionsFetchRequested={updateSuggestions}
         onSuggestionsClearRequested={() => setValue('')}
-        onSelected={addTag}
+        onSelected={(suggestion) => setTags((old) => [...old, suggestion])}
+        renderSuggestion={renderSuggestion}
       />
       <h2>Async suggestions</h2>
       <Autosuggest
@@ -97,6 +123,7 @@ const Template: Story<Omit<AutosuggestProps, 'suggestions' | 'value'>> = (
         }}
         onSuggestionsFetchRequested={reload}
         onSelected={(selected) => setValue(selected.value)}
+        renderSuggestion={renderSuggestion}
       />
     </>
   );

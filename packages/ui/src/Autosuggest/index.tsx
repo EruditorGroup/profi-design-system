@@ -12,24 +12,32 @@ import List, {ListProps} from '../List';
 import AutosuggestTag from './components/Tag';
 
 import styles from './Autosuggest.module.scss';
-import common from '../styles/common.module.css';
 
-export type ISuggestValue = {value: string; label?: React.ReactNode};
+export type ISuggestValue = {
+  value: string;
+  [key: string]: React.ReactNode;
+};
 type RewritedProps =
   | 'size'
   | 'ref'
   | 'theme'
   | 'getSuggestionValue'
   | 'onSuggestionSelected'
-  | 'renderSuggestion'
-  | 'renderInputComponent';
+  | 'renderSuggestionsContainer'
+  | 'renderInputComponent'
+  | 'shouldRenderSuggestions'
+  | 'value'
+  | 'onChange'
+  | 'size';
 
 export type AutosuggestProps = Omit<
   AutosuggestPropsBase<ISuggestValue>,
   RewritedProps
 > &
-  Omit<AutosuggestPropsSingleSection<ISuggestValue>, RewritedProps> &
-  Omit<InputProps, 'value' | 'onChange' | 'size'> & {
+  Omit<
+    AutosuggestPropsSingleSection<ISuggestValue> & InputProps,
+    RewritedProps
+  > & {
     size?: ListProps['size'];
     onSelected: (value: ISuggestValue) => void;
     suggestions: ISuggestValue[];
@@ -122,15 +130,6 @@ const Autosuggest = forwardRef(function Autosuggest(
         />
       )}
       getSuggestionValue={({value}) => value}
-      renderSuggestion={({label, value}, params) => (
-        <List.Item
-          as="div"
-          className={styles['listItem']}
-          active={params.isHighlighted}
-        >
-          {label ?? value}
-        </List.Item>
-      )}
       {...props}
     />
   );
