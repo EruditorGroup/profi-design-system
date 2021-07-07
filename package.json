@@ -26,7 +26,7 @@
     "build:bundle": "lerna exec --parallel -- 'webpack -c ../../webpack.config.js && if [[ -e ./src/styles/theme.css ]]; then cp ./src/styles/theme.css ./dist/theme.css; fi'",
     "build:storybook": "build-storybook",
     "test": "MODULE_TYPE=cjs jest",
-    "test:storybook": "yarn build:storybook --quiet && MODULE_TYPE=cjs jest --config=storyshots.config.js",
+    "test:storybook": "yarn build:storybook --quiet && MODULE_TYPE=cjs jest --config=storyshots.config.js --detectOpenHandles",
     "test:storybook:update": "yarn clean:storybook && yarn test:storybook",
     "lint": "yarn eslint 'packages/*/src/**' --cache --ext .js,.jsx,.ts,.tsx --max-warnings 0",
     "publish": "lerna publish --conventional-commits --yes",

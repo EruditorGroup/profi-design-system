@@ -5,6 +5,7 @@ import {
   imageSnapshot,
   ImageSnapshotConfig,
 } from '@storybook/addon-storyshots-puppeteer';
+import puppeteer from 'puppeteer';
 
 const getStorybookEntryPath = (): string => {
   const ROOT_DIR = path.resolve(__dirname);
@@ -34,9 +35,22 @@ const beforeScreenshot: ImageSnapshotConfig['beforeScreenshot'] = async (
   }
 };
 
+const getCustomBrowser = () =>
+  puppeteer.launch({
+    headless: true,
+    args: [
+      '--no-sandbox ',
+      '--disable-setuid-sandbox',
+      '--disable-dev-shm-usage',
+      '--disable-gpu',
+      '--font-render-hinting=medium',
+    ],
+  });
+
 initStoryshots({
   test: imageSnapshot({
     storybookUrl: getStorybookEntryPath(),
+    getCustomBrowser,
     beforeScreenshot,
   }),
 });
