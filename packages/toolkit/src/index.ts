@@ -4,7 +4,7 @@ export * from './constants';
 export * from './hooks';
 export * from './utils';
 
-export type ISize = 'xs' | 's' | 'm' | 'l' | 'xl' | 'xxl' | 'huge';
+export type ISize = 'xs' | 's' | 'm' | 'l' | 'xl' | 'xxl';
 
 export type IColor =
   | 'brand'
@@ -16,6 +16,7 @@ export type IColor =
   | 'success'
   | 'warning'
   | 'muted';
+
 export type ISocials = 'vk' | 'ya' | 'fb' | 'apple';
 
 type ReplaceProps<Component extends React.ElementType, P> = Pick<
