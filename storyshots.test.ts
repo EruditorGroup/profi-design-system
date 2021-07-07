@@ -53,10 +53,18 @@ const getCustomBrowser = async () => {
   return browser;
 };
 
+const getMatchOptions: ImageSnapshotConfig['getMatchOptions'] = () => {
+  return {
+    failureThreshold: 0.5,
+    failureThresholdType: 'percent',
+  };
+};
+
 const test = imageSnapshot({
   storybookUrl: getStorybookEntryPath(),
   getCustomBrowser,
   beforeScreenshot,
+  getMatchOptions,
 });
 
 test.afterAll = async () => {
