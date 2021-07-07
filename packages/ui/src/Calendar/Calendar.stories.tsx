@@ -11,7 +11,7 @@ export default {
   component: Calendar,
 } as Meta;
 
-const DATE = new Date('Tue Jul 06 2021 01:01:01 GMT+0300');
+const DATE = new Date('Tue Jan 06 2021 01:01:01 GMT+0300');
 
 const Template: Story<CalendarProps> = ({
   minDate,
