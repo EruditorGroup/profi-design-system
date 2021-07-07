@@ -20,6 +20,7 @@ export interface SelectProps extends Omit<InputProps, 'readonly' | 'onChange'> {
   startScrollFrom?: number;
   defaultOpened?: boolean;
   defaultValue?: string;
+  wrapperClassName?: string;
   size?: InputProps['size'];
   optionsRef?: React.MutableRefObject<HTMLDivElement | undefined>;
   onChange?: (value: string) => void;
@@ -42,12 +43,7 @@ export const useSelectContext = (): ISelectContext => {
   return context;
 };
 
-const sizeHeight: Record<NonNullable<InputProps['size']>, number> = {
-  s: 35,
-  m: 40,
-  l: 50,
-  xl: 50,
-};
+const itemsSize = 40;
 
 const Select: SelectComponent = function Select({
   startScrollFrom,
@@ -58,6 +54,7 @@ const Select: SelectComponent = function Select({
   block = false,
   size = 'm',
   className,
+  wrapperClassName,
   optionsRef,
   ...props
 }) {
@@ -73,7 +70,7 @@ const Select: SelectComponent = function Select({
 
   useLayoutEffect(() => {
     if (startScrollFrom) {
-      _optionsRef.current?.scrollTo(0, startScrollFrom * sizeHeight[size]);
+      _optionsRef.current?.scrollTo(0, startScrollFrom * itemsSize);
     }
   }, [startScrollFrom, size]);
 
@@ -98,7 +95,11 @@ const Select: SelectComponent = function Select({
       <Dropdown
         defaultOpened={defaultOpened}
         onChange={(isOpened) => setOpened(isOpened)}
-        className={cx(styles['inner'], block && styles['block'])}
+        className={cx(
+          styles['inner'],
+          block && styles['block'],
+          wrapperClassName,
+        )}
         {...props}
       >
         <Dropdown.Toggler

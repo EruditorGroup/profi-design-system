@@ -1,4 +1,4 @@
-import React, {forwardRef, useCallback, useEffect, useState} from 'react';
+import React, {forwardRef} from 'react';
 import ReactAutosuggest, {
   AutosuggestPropsSingleSection,
 } from 'react-autosuggest';
@@ -7,47 +7,54 @@ import type {AutosuggestPropsBase} from 'react-autosuggest';
 import {Input, InputProps} from '../Form';
 import Spinner from '../Spinner';
 import Space from '../Space';
+import List, {ListProps} from '../List';
 
 import styles from './Autosuggest.module.scss';
-import common from '../styles/common.module.css';
 
-export type ISuggestValue = {value: string; label?: React.ReactNode};
+export type ISuggestValue = {
+  value: string;
+  [key: string]: React.ReactNode;
+};
 type RewritedProps =
   | 'size'
   | 'ref'
   | 'theme'
   | 'getSuggestionValue'
-  | 'onSuggestionSelected'
-  | 'renderSuggestion'
+  | 'renderSuggestionsContainer'
   | 'renderInputComponent'
-  | 'inputProps';
+  | 'shouldRenderSuggestions'
+  | 'value'
+  | 'onChange'
+  | 'size';
 
 export type AutosuggestProps = Omit<
   AutosuggestPropsBase<ISuggestValue>,
   RewritedProps
 > &
-  Omit<AutosuggestPropsSingleSection<ISuggestValue>, RewritedProps> &
-  InputProps & {
+  Omit<
+    AutosuggestPropsSingleSection<ISuggestValue> & InputProps,
+    RewritedProps
+  > & {
+    size?: ListProps['size'];
     onSelected: (value: ISuggestValue) => void;
     suggestions: ISuggestValue[];
     isLoading?: boolean;
+    isMultiple?: boolean;
   };
 
-const Autosuggest = forwardRef<
-  // мы правда не знаем, что тут будет
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  ReactAutosuggest<ISuggestValue, any>,
-  AutosuggestProps
->(function Autosuggest(
+type IAutosuggestComponent = React.ForwardRefExoticComponent<
+  // не знаем что там будет
+  // eslint-disable-next-line
+  AutosuggestProps & React.RefAttributes<ReactAutosuggest<ISuggestValue, any>>
+>;
+
+const Autosuggest = forwardRef(function Autosuggest(
   {
     className,
     size = 'm',
-    onSelected,
     isLoading,
-    suggestions: values,
-    onSuggestionsFetchRequested,
+    suggestions,
     block = false,
-
     inputClassName,
     inputRef,
 
@@ -63,56 +70,46 @@ const Autosuggest = forwardRef<
   },
   ref,
 ) {
-  const [input, setInput] = useState<string>('');
-  const [suggestions, setSuggestions] = useState<ISuggestValue[]>([]);
-
-  const updateSuggestions = useCallback(() => {
-    setSuggestions(() =>
-      values.filter(({value}) =>
-        value.toLowerCase().includes(input.toLowerCase()),
-      ),
-    );
-  }, [values, input]);
-
-  useEffect(updateSuggestions, [updateSuggestions]);
-
   return (
     <ReactAutosuggest<ISuggestValue>
       ref={ref}
       theme={styles}
       suggestions={suggestions}
-      onSuggestionsFetchRequested={(req) => {
-        if (onSuggestionsFetchRequested) {
-          onSuggestionsFetchRequested(req);
-        } else {
-          updateSuggestions();
-        }
-      }}
-      onSuggestionSelected={(_, data) => onSelected(data.suggestion)}
-      renderSuggestionsContainer={({containerProps, children}) => (
-        <Space
-          withShadow
-          radius={size}
-          bg="white"
-          {...containerProps}
-          className={cx(containerProps.className, block && styles['block'])}
-        >
-          {isLoading ? (
-            <Spinner
-              size={size}
-              className={styles['spinner']}
-              color="primary"
-            />
-          ) : (
-            children
-          )}
-        </Space>
-      )}
+      renderSuggestionsContainer={({containerProps, children, query}) =>
+        query > '' && (
+          <Space
+            withShadow
+            radius={size}
+            bg="white"
+            {...containerProps}
+            className={cx(containerProps.className, block && styles['block'])}
+          >
+            {isLoading ? (
+              <Spinner
+                size={size}
+                className={styles['spinner']}
+                color="primary"
+              />
+            ) : (
+              <List
+                as="div"
+                className={styles['uilist']}
+                design="low"
+                size={size}
+              >
+                {children}
+              </List>
+            )}
+          </Space>
+        )
+      }
+      shouldRenderSuggestions={(value) => value > ''}
       renderInputComponent={(
         props: React.InputHTMLAttributes<HTMLInputElement>,
       ) => (
         <Input
           {...props}
+          wrap
           inputRef={inputRef}
           className={className}
           inputClassName={inputClassName}
@@ -126,31 +123,9 @@ const Autosuggest = forwardRef<
         />
       )}
       getSuggestionValue={({value}) => value}
-      renderSuggestion={({label, value}, params) => (
-        <Space
-          bg={params.isHighlighted ? 'light' : 'transparent'}
-          px={13}
-          py={[13, 15]}
-          className={common[`size-${size}`]}
-        >
-          {label ?? value}
-        </Space>
-      )}
-      inputProps={{
-        value: input,
-        onChange: (ev, params) => {
-          if (['enter', 'click'].includes(params.method)) {
-            setInput(params.newValue);
-          } else if (params.method === 'type') {
-            setInput(
-              (ev as React.ChangeEvent<HTMLInputElement>).currentTarget.value,
-            );
-          }
-        },
-      }}
       {...props}
     />
   );
-});
+}) as IAutosuggestComponent;
 
 export default Autosuggest;

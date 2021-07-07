@@ -11,7 +11,7 @@ export default {
   component: Calendar,
 } as Meta;
 
-const TODAY = new Date();
+const DATE = new Date('Tue Jul 06 2021 01:01:01 GMT+0300');
 
 const Template: Story<CalendarProps> = ({
   minDate,
@@ -21,8 +21,8 @@ const Template: Story<CalendarProps> = ({
 }) => {
   const [dates, setDates] = useState<Date[]>(
     args.selectedDays || [
-      new Date(TODAY.getFullYear(), TODAY.getMonth(), TODAY.getDate() + 1),
-      new Date(TODAY.getFullYear(), TODAY.getMonth(), TODAY.getDate() + 2),
+      new Date(DATE.getFullYear(), DATE.getMonth(), DATE.getDate() + 1),
+      new Date(DATE.getFullYear(), DATE.getMonth(), DATE.getDate() + 2),
     ],
   );
 
@@ -70,9 +70,9 @@ const Template: Story<CalendarProps> = ({
 export const BaseStory = Template.bind({});
 BaseStory.storyName = 'Base';
 BaseStory.args = {
-  selectedDays: [shiftDate(TODAY, 2), shiftDate(TODAY, 3), shiftDate(TODAY, 9)],
+  selectedDays: [shiftDate(DATE, 2), shiftDate(DATE, 3), shiftDate(DATE, 9)],
   selectionMode: 'Multi',
-  minDate: TODAY,
+  minDate: DATE,
 };
 
 const DualTemplate: Story<DualCalendarProps> = ({
@@ -80,11 +80,11 @@ const DualTemplate: Story<DualCalendarProps> = ({
   maxDate,
   ...args
 }) => {
-  const TODAY = new Date();
+  const DATE = new Date('Tue Jul 06 2021 01:01:01 GMT+0300');
   const [dates, setDates] = useState<Date[]>(
     args.selectedDays || [
-      new Date(TODAY.getFullYear(), TODAY.getMonth(), TODAY.getDate() + 1),
-      new Date(TODAY.getFullYear(), TODAY.getMonth(), TODAY.getDate() + 2),
+      new Date(DATE.getFullYear(), DATE.getMonth(), DATE.getDate() + 1),
+      new Date(DATE.getFullYear(), DATE.getMonth(), DATE.getDate() + 2),
     ],
   );
 
@@ -131,7 +131,7 @@ const DualTemplate: Story<DualCalendarProps> = ({
 export const DualStory = DualTemplate.bind({});
 DualStory.storyName = 'Dual Calendar';
 DualStory.args = {
-  selectedDays: [shiftDate(TODAY, 2), shiftDate(TODAY, 3), shiftDate(TODAY, 9)],
+  selectedDays: [shiftDate(DATE, 2), shiftDate(DATE, 3), shiftDate(DATE, 9)],
   selectionMode: 'Multi',
-  minDate: TODAY,
+  minDate: DATE,
 };

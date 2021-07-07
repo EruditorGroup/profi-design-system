@@ -35,3 +35,4 @@ export {default as StarStrokeIcon} from './StarStroke';
 export {default as SupportIcon} from './Support';
 export {default as VkIcon} from './Vk';
 export {default as YoutubeIcon} from './Youtube';
+export {default as PlaceIcon} from './Place';
