@@ -43,4 +43,7 @@ jobs:
         with:
           name: screenshotsDiff
           path: __image_snapshots__/__diff_output__
+
+      - name: Check screenshot testing status
+        if: env.NEEDS_UPLOAD == 'true'
         run: exit 1
