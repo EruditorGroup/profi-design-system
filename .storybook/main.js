@@ -2,6 +2,7 @@ const {
   CSS_MODULE_LOCAL_IDENT_NAME_GENERATOR,
   GET_PACKEGES_INFO,
 } = require('../.config');
+const path = require('path');
 
 module.exports = {
   stories: [
@@ -22,9 +23,16 @@ module.exports = {
           oneOf: [
             {
               test: /\.(png|jpe?g|gif)$/i,
+              use: [{loader: 'file-loader'}],
+            },
+            {
+              test: /\.(woff|woff2|eot|ttf)$/i,
               use: [
                 {
                   loader: 'file-loader',
+                  query: {
+                    name: '[name].[ext]',
+                  },
                 },
               ],
             },
