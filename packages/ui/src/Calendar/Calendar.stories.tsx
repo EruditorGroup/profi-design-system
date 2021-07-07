@@ -69,6 +69,7 @@ const Template: Story<CalendarProps> = ({
 
 export const BaseStory = Template.bind({});
 BaseStory.storyName = 'Base';
+
 BaseStory.args = {
   selectedDays: [shiftDate(DATE, 2), shiftDate(DATE, 3), shiftDate(DATE, 9)],
   selectionMode: 'Multi',
