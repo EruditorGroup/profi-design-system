@@ -31,19 +31,16 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v1
+        continue-on-error: true
         with:
           node-version: 12
       - run: yarn
       - run: yarn build
-      - run: yarn test:storybook || echo "::set-env name=NEEDS_UPLOAD::true"
+      - run: yarn test:storybook
 
       - name: Archive production artifacts
+        if: ${{ failure() }}
         uses: actions/upload-artifact@v2
-        if: env.NEEDS_UPLOAD == 'true'
         with:
           name: screenshotsDiff
           path: __image_snapshots__/__diff_output__
-
-      - name: Check screenshot testing status
-        if: env.NEEDS_UPLOAD == 'true'
-        run: exit 1
