@@ -44,7 +44,7 @@ const getCustomBrowser = async () => {
       '--disable-setuid-sandbox',
       '--disable-dev-shm-usage',
       '--disable-gpu',
-      '--font-render-hinting=medium',
+      '--font-render-hinting=none',
       '--enable-font-antialiasing',
     ],
   });
