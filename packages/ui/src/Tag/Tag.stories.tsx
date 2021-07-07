@@ -1,9 +1,8 @@
 import React from 'react';
-import {CloseIcon} from '@eruditorgroup/profi-icons';
+import {CloseIcon, DotIcon} from '@eruditorgroup/profi-icons';
 import {Story, Meta} from '@storybook/react';
 
 import Tag, {TagProps} from './index';
-import {DotIcon} from '@eruditorgroup/profi-icons';
 import Space from '../Space';
 
 export default {
