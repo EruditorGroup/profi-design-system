@@ -58,6 +58,6 @@ jobs:
           curl \
             -X POST \
             -H "Accept: application/vnd.github.v3+json" \
-            -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
+            -H "Authorization: token ${{ secrets.DEPLOY_GITHUB_TOKEN }}" \
             https://api.github.com/repos/$GITHUB_REPOSITORY/pulls \
             -d '{"head":"release/${{ env.GIT_TAG }}","base":"master", "title": "chore: changelog ${{ env.GIT_TAG }}"}'
