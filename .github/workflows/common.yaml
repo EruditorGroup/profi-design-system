@@ -35,10 +35,12 @@ jobs:
           node-version: 12
       - run: yarn
       - run: yarn build
-      - run: yarn test:storybook
+      - run: yarn test:storybook || echo "::set-env name=NEEDS_UPLOAD::true"
 
       - name: Archive production artifacts
         uses: actions/upload-artifact@v2
+        if: env.NEEDS_UPLOAD == 'true'
         with:
           name: screenshotsDiff
           path: __image_snapshots__/__diff_output__
+        run: exit 1
