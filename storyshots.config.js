@@ -1,6 +1,6 @@
 module.exports = {
   moduleNameMapper: {
-    '.+\\.(css|scss|svg|png|jpg|ttf|woff|woff2)$': 'identity-obj-proxy',
+    '.+\\.(css|scss|svg|png|jpg|ttf|woff|eot|woff2)$': 'identity-obj-proxy',
   },
   moduleFileExtensions: ['js', 'jsx', 'ts', 'tsx', 'json'],
   moduleDirectories: ['node_modules'],
