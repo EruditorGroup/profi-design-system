@@ -49,6 +49,7 @@ const Template: Story<CalendarProps> = ({
       />
       <pre
         style={{
+          width: '450px',
           display: 'inline-block',
           padding: '10px',
           paddingRight: '30px',
@@ -58,7 +59,13 @@ const Template: Story<CalendarProps> = ({
           boxShadow: '0 1px 6px -3px rgba(0,0,0,0.1)',
         }}
       >
-        <div style={{fontSize: '14px', margin: '0 0 5px', opacity: 0.5}}>
+        <div
+          style={{
+            fontSize: '14px',
+            margin: '0 0 5px',
+            opacity: 0.5,
+          }}
+        >
           SELECTED VALUES:
         </div>
         {dates.length ? dates.map((d) => `${d}`).join('\n') : 'none'}
@@ -111,6 +118,7 @@ const DualTemplate: Story<DualCalendarProps> = ({
       />
       <pre
         style={{
+          width: '450px',
           display: 'inline-block',
           padding: '10px',
           paddingRight: '30px',
@@ -120,7 +128,13 @@ const DualTemplate: Story<DualCalendarProps> = ({
           boxShadow: '0 1px 6px -3px rgba(0,0,0,0.1)',
         }}
       >
-        <div style={{fontSize: '14px', margin: '0 0 5px', opacity: 0.5}}>
+        <div
+          style={{
+            fontSize: '14px',
+            margin: '0 0 5px',
+            opacity: 0.5,
+          }}
+        >
           SELECTED VALUES:
         </div>
         {dates.length ? dates.map((d) => `${d}`).join('\n') : 'none'}

@@ -36,6 +36,8 @@ jobs:
           node-version: 12
       - uses: szenius/set-timezone@v1.0
         with:
+          timezoneLinux: 'Europe/Moscow'
+          timezoneWindows: 'Moscow Standard Time'
           timezoneMacos: 'Europe/Moscow'
       - run: yarn
       - run: yarn build

@@ -94,6 +94,7 @@ const templateFactory: (meta: TextareaStoryMeta) => Story<TextareaProps> = (
       <Textarea
         defaultValue={defaultValue}
         placeholder={placeholder}
+        block
         {...args}
         {...props}
       />
