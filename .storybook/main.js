@@ -21,7 +21,7 @@ module.exports = {
         {
           oneOf: [
             {
-              test: /\.(png|jpe?g|gif)$/i,
+              test: /\.(png|woff|woff2|eot|ttf|jpe?g|gif)$/i,
               use: [
                 {
                   loader: 'file-loader',
