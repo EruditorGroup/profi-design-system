@@ -40,11 +40,11 @@ const getCustomBrowser = async () => {
   const browser = await puppeteer.launch({
     headless: true,
     args: [
-      '--no-sandbox ',
+      '--no-sandbox',
       '--disable-setuid-sandbox',
       '--disable-dev-shm-usage',
       '--disable-gpu',
-      '--font-render-hinting=none',
+      '--font-render-hinting=medium',
       '--enable-font-antialiasing',
     ],
   });
