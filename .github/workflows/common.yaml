@@ -34,11 +34,11 @@ jobs:
         with:
           node-version: 12
       - run: yarn
-      - run: NODE_ENV=production yarn build
-      - run: yarn test:storybook:update
+      - run: yarn build
+      - run: yarn test:storybook
 
       - name: Archive production artifacts
         uses: actions/upload-artifact@v2
         with:
           name: screenshotsDiff
-          path: __image_snapshots__
+          path: __image_snapshots__/__diff_output__
