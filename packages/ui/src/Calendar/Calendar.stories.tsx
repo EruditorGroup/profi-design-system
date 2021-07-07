@@ -11,7 +11,7 @@ export default {
   component: Calendar,
 } as Meta;
 
-const DATE = new Date('Tue Jul 06 2021 01:01:01 GMT+0300');
+const DATE = new Date('Tue Jan 06 2021 01:01:01 GMT+0300');
 
 const Template: Story<CalendarProps> = ({
   minDate,
@@ -49,6 +49,7 @@ const Template: Story<CalendarProps> = ({
       />
       <pre
         style={{
+          width: '450px',
           display: 'inline-block',
           padding: '10px',
           paddingRight: '30px',
@@ -58,7 +59,13 @@ const Template: Story<CalendarProps> = ({
           boxShadow: '0 1px 6px -3px rgba(0,0,0,0.1)',
         }}
       >
-        <div style={{fontSize: '14px', margin: '0 0 5px', opacity: 0.5}}>
+        <div
+          style={{
+            fontSize: '14px',
+            margin: '0 0 5px',
+            opacity: 0.5,
+          }}
+        >
           SELECTED VALUES:
         </div>
         {dates.length ? dates.map((d) => `${d}`).join('\n') : 'none'}
@@ -69,6 +76,7 @@ const Template: Story<CalendarProps> = ({
 
 export const BaseStory = Template.bind({});
 BaseStory.storyName = 'Base';
+
 BaseStory.args = {
   selectedDays: [shiftDate(DATE, 2), shiftDate(DATE, 3), shiftDate(DATE, 9)],
   selectionMode: 'Multi',
@@ -110,6 +118,7 @@ const DualTemplate: Story<DualCalendarProps> = ({
       />
       <pre
         style={{
+          width: '450px',
           display: 'inline-block',
           padding: '10px',
           paddingRight: '30px',
@@ -119,7 +128,13 @@ const DualTemplate: Story<DualCalendarProps> = ({
           boxShadow: '0 1px 6px -3px rgba(0,0,0,0.1)',
         }}
       >
-        <div style={{fontSize: '14px', margin: '0 0 5px', opacity: 0.5}}>
+        <div
+          style={{
+            fontSize: '14px',
+            margin: '0 0 5px',
+            opacity: 0.5,
+          }}
+        >
           SELECTED VALUES:
         </div>
         {dates.length ? dates.map((d) => `${d}`).join('\n') : 'none'}

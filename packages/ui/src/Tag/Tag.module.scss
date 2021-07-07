@@ -5,10 +5,14 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #fff;
   cursor: pointer;
+  background: var(--ui-bg-default);
   margin-bottom: 10px;
   margin-right: 5px;
+}
+
+.design-light {
+  background: var(--ui-bg-light);
 }
 
 .leading,
@@ -36,6 +40,6 @@
   font-size: 9px;
   justify-content: center;
   &:hover {
-    background: var(--ui-color-light);
+    background: var(--ui-color-lightState);
   }
 }

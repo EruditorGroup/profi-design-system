@@ -1,5 +1,5 @@
 import React from 'react';
-
+import classnames from 'classnames';
 import {ISize} from '@eruditorgroup/profi-toolkit';
 
 import Text from '../Typography/Text';
@@ -12,6 +12,7 @@ export interface TagProps extends React.HTMLAttributes<HTMLDivElement> {
   size?: ISize;
   icon?: React.ReactNode | IIcon;
   trailing?: React.ReactNode;
+  design?: 'plain' | 'light';
 }
 
 function getIconUrlPrefix(format?: IIconFormat): string {
@@ -42,10 +43,14 @@ const Tag: React.FC<TagProps> = function Tag({
   children,
   trailing,
   icon,
+  design = 'plain',
   ...props
 }) {
   return (
-    <div className={styles['tag']} {...props}>
+    <div
+      className={classnames(styles['tag'], styles[`design-${design}`])}
+      {...props}
+    >
       {icon && <div className={styles['leading']}>{getIcon(icon)}</div>}
       <Text size={size}>{children}</Text>
       {trailing && <div className={styles['trailing']}>{trailing}</div>}
