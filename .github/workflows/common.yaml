@@ -38,9 +38,9 @@ jobs:
       - run: yarn build
       - run: yarn test:storybook
 
-      - name: Archive production artifacts
+      - name: Archive screenshot diffs
         if: ${{ failure() }}
         uses: actions/upload-artifact@v2
         with:
-          name: screenshotsDiff
+          name: image_snapshots_diff_output
           path: __image_snapshots__/__diff_output__
