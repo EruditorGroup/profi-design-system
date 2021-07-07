@@ -55,6 +55,7 @@ const getCustomBrowser = async () => {
 
 const getMatchOptions: ImageSnapshotConfig['getMatchOptions'] = () => {
   return {
+    comparisonMethod: 'ssim',
     failureThreshold: 0.5,
     failureThresholdType: 'percent',
   };
