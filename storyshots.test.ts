@@ -35,6 +35,7 @@ const beforeScreenshot: ImageSnapshotConfig['beforeScreenshot'] = async (
 };
 
 initStoryshots({
+  storyKindRegex: /^((?!.*?Text \& Title).)*$/,
   test: imageSnapshot({
     storybookUrl: getStorybookEntryPath(),
     beforeScreenshot,
