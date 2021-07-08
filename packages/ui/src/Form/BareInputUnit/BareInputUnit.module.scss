@@ -1,5 +1,6 @@
 .input-unit {
   position: relative;
+  width: 100%;
 }
 
 .input-unit__input {
@@ -27,3 +28,6 @@
   min-width: 1px;
 }
 
+.placeholder-mask {
+  color: transparent;
+}

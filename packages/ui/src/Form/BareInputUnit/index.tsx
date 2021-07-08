@@ -1,6 +1,7 @@
 import React, {
   ChangeEventHandler,
   CSSProperties,
+  useMemo,
   useRef,
   useState,
 } from 'react';
@@ -54,6 +55,10 @@ const BareInputUnit: React.FC<BareInputUnitProps> = ({
       : undefined,
   };
 
+  const mask = useMemo(() => {
+    return inputValue?.toString() || placeholder?.toString();
+  }, [inputValue, placeholder]);
+
   return (
     <div
       className={classnames(styles['input-unit'])}
@@ -68,13 +73,13 @@ const BareInputUnit: React.FC<BareInputUnitProps> = ({
         onChange={_onChange}
       />
       <div className={classnames(styles['input-unit__stretcher'])}>
-        <span className={styles['input-unit__value']}>{inputValue}</span>
+        <span className={styles['input-unit__value']}>{mask}</span>
         <span
           ref={unitRef}
           className={classnames(styles['input-unit__unit'], unitClassName)}
           style={unitStyle}
         >
-          {!placeholder || inputValue ? unit : ''}
+          {mask > '' && unit}
         </span>
       </div>
     </div>
