@@ -33,7 +33,7 @@ function getIcon(iconObj: NonNullable<TagProps['icon']>): React.ReactNode {
   return (
     <i
       className={styles['icon']}
-      style={{backgroundImage: `url(${getIconUrlPrefix(format)}${icon}})`}}
+      style={{backgroundImage: `url(${getIconUrlPrefix(format)}${icon})`}}
     />
   );
 }
@@ -43,12 +43,17 @@ const Tag: React.FC<TagProps> = function Tag({
   children,
   trailing,
   icon,
+  className,
   design = 'plain',
   ...props
 }) {
   return (
     <div
-      className={classnames(styles['tag'], styles[`design-${design}`])}
+      className={classnames(
+        styles['tag'],
+        styles[`design-${design}`],
+        className,
+      )}
       {...props}
     >
       {icon && <div className={styles['leading']}>{getIcon(icon)}</div>}
