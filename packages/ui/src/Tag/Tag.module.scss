@@ -15,6 +15,12 @@
   background: var(--ui-bg-light);
 }
 
+.icon {
+  display: block;
+  width: 9px;
+  height: 9px;
+}
+
 .leading,
 .trailing {
   display: flex;
