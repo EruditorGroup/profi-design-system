@@ -3,6 +3,82 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.27.0](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-toolkit@0.17.0...@eruditorgroup/profi-toolkit@0.27.0) (2021-07-08)
+
+
+
+## 0.13.1 (2021-07-07)
+
+
+### Features
+
+* **Typography:** New Title sizes ([#183](https://github.com/eruditorgroup/profi-design-system/issues/183)) ([c89e437](https://github.com/eruditorgroup/profi-design-system/commit/c89e437a95b58c4a650c563f43623931ee6ff1d8))
+
+
+
+# 0.12.0 (2021-07-06)
+
+
+### Features
+
+* **toolkit & ui:** add times connstants & multiple autosuggest api ([#181](https://github.com/eruditorgroup/profi-design-system/issues/181)) ([d55f0bb](https://github.com/eruditorgroup/profi-design-system/commit/d55f0bb486e70dda584068a97655fe526764162d))
+
+
+
+# 0.10.0 (2021-07-05)
+
+
+### Bug Fixes
+
+* Path versions profi-icons & profi-toolkit ([#170](https://github.com/eruditorgroup/profi-design-system/issues/170)) ([aa4c471](https://github.com/eruditorgroup/profi-design-system/commit/aa4c471e9f84a262769315b2b6049a47ed917e9a))
+
+
+### Features
+
+* **ui:** Autosuggest & Select ([#172](https://github.com/eruditorgroup/profi-design-system/issues/172)) ([7dc8f9f](https://github.com/eruditorgroup/profi-design-system/commit/7dc8f9f1a2aa737591a5dc399278ac2dafd700d8))
+
+
+
+
+
+# [0.26.0](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-toolkit@0.17.0...@eruditorgroup/profi-toolkit@0.26.0) (2021-07-08)
+
+
+
+## 0.13.1 (2021-07-07)
+
+
+### Features
+
+* **Typography:** New Title sizes ([#183](https://github.com/eruditorgroup/profi-design-system/issues/183)) ([c89e437](https://github.com/eruditorgroup/profi-design-system/commit/c89e437a95b58c4a650c563f43623931ee6ff1d8))
+
+
+
+# 0.12.0 (2021-07-06)
+
+
+### Features
+
+* **toolkit & ui:** add times connstants & multiple autosuggest api ([#181](https://github.com/eruditorgroup/profi-design-system/issues/181)) ([d55f0bb](https://github.com/eruditorgroup/profi-design-system/commit/d55f0bb486e70dda584068a97655fe526764162d))
+
+
+
+# 0.10.0 (2021-07-05)
+
+
+### Bug Fixes
+
+* Path versions profi-icons & profi-toolkit ([#170](https://github.com/eruditorgroup/profi-design-system/issues/170)) ([aa4c471](https://github.com/eruditorgroup/profi-design-system/commit/aa4c471e9f84a262769315b2b6049a47ed917e9a))
+
+
+### Features
+
+* **ui:** Autosuggest & Select ([#172](https://github.com/eruditorgroup/profi-design-system/issues/172)) ([7dc8f9f](https://github.com/eruditorgroup/profi-design-system/commit/7dc8f9f1a2aa737591a5dc399278ac2dafd700d8))
+
+
+
+
+
 # [0.25.0](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-toolkit@0.17.0...@eruditorgroup/profi-toolkit@0.25.0) (2021-07-07)
 
 
