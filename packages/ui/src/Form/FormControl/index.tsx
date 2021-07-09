@@ -15,7 +15,6 @@ type FormControlInternalProps = {
 
 export type FormControlProps = {
   withFloatLabel?: boolean;
-  wrap?: boolean;
 
   size?: FormControlSize;
   block?: boolean;
@@ -23,6 +22,8 @@ export type FormControlProps = {
   invalid?: boolean;
   disabled?: boolean;
 
+  lower?: React.ReactNode;
+  upper?: React.ReactNode;
   leading?: React.ReactNode;
   trailing?: React.ReactNode;
 };
@@ -40,7 +41,6 @@ const FormControl: React.FC<FormControlHTMLProps> = ({
   label,
   withFloatLabel,
   isLabelFloated,
-  wrap = false,
 
   size = 'l',
   block = true,
@@ -48,6 +48,8 @@ const FormControl: React.FC<FormControlHTMLProps> = ({
   invalid,
   disabled,
 
+  upper,
+  lower,
   leading,
   trailing,
   children,
@@ -68,12 +70,8 @@ const FormControl: React.FC<FormControlHTMLProps> = ({
     onClick={onClick}
     {...props}
   >
-    <div
-      className={classnames(
-        styles['form-control__flex'],
-        wrap && styles['form-control__wrap'],
-      )}
-    >
+    {upper}
+    <div className={styles['form-control__flex']}>
       {leading && (
         <div className={styles['form-control__prefix']}>{leading}</div>
       )}
@@ -103,6 +101,7 @@ const FormControl: React.FC<FormControlHTMLProps> = ({
         <div className={styles['form-control__suffix']}>{trailing}</div>
       )}
     </div>
+    {lower}
   </div>
 );
 

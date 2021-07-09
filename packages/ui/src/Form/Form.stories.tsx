@@ -2,7 +2,9 @@ import React from 'react';
 import {Story, Meta} from '@storybook/react';
 
 import {Input, Textarea} from './index';
-import {LocationIcon} from '@eruditorgroup/profi-icons';
+import {CloseIcon, DotIcon, LocationIcon} from '@eruditorgroup/profi-icons';
+import PhoneInput from './BarePhoneInput';
+import Tag from '../Tag';
 
 export default {
   title: 'Form/Preview',
@@ -23,26 +25,7 @@ const Template: Story = ({placeholder = 'Label', ...args}) => {
         placeholder="Ваш адрес"
         trailing={<LocationIcon onClick={onLocationClick} />}
       />
-      <Input
-        {...args}
-        className="preview-item preview-item_short"
-        mask="+7 999 999-99-99"
-        placeholder="+7 961 903-00-59"
-        leading={
-          // Russian flag
-          <div
-            style={{
-              height: '14px',
-              width: '17px',
-              marginTop: '5px',
-              borderRadius: '2px',
-              background:
-                'linear-gradient(-180deg, #fff 33.3%, #1653EF 33.3%, #1653EF 66.6%, #EE1B39 66.6%)',
-              transform: 'translateY(-0.5px)',
-            }}
-          />
-        }
-      />
+      <PhoneInput {...args} className="preview-item preview-item_short" />
       <Textarea
         {...args}
         minRows={3}
@@ -60,6 +43,21 @@ const Template: Story = ({placeholder = 'Label', ...args}) => {
         className="preview-item"
         placeholder="Поле заблокировано"
         disabled
+      />
+      <Input
+        {...args}
+        upper={
+          <>
+            <Tag icon={<DotIcon color="#f68230" />} trailing={<CloseIcon />}>
+              Профсоюзная
+            </Tag>
+            <Tag icon={<DotIcon color="#f68230" />} trailing={<CloseIcon />}>
+              ВДНХ
+            </Tag>
+          </>
+        }
+        className="preview-item"
+        placeholder="Введите метро"
       />
       <Input
         {...args}

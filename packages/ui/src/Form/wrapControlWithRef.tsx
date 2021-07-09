@@ -23,7 +23,6 @@ const wrapControlWithRef = <
 ) => (props: PropsType, ref: Ref<HTMLElementType>): ReactElement => {
   const {
     withFloatLabel,
-    wrap,
     size = 'l',
     block = true,
     invalid,
@@ -32,6 +31,8 @@ const wrapControlWithRef = <
 
     leading,
     trailing,
+    upper,
+    lower,
 
     id,
     className,
@@ -81,7 +82,8 @@ const wrapControlWithRef = <
     style,
     leading,
     trailing,
-    wrap,
+    upper,
+    lower,
   };
 
   const inputProps = {
