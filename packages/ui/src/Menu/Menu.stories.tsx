@@ -11,7 +11,7 @@ export default {
 
 const Template: Story = (args) => {
   return (
-    <div style={{display: 'flex', justifyContent: 'center'}}>
+    <>
       <Menu {...args}>
         <Menu.Item>
           <VkIcon /> Пункт c иконкой
@@ -32,7 +32,19 @@ const Template: Story = (args) => {
           иконки Многострочный без иконки
         </Menu.Item>
       </Menu>
-    </div>
+      <div style={{marginTop: '10px'}}>
+        <div style={{marginBottom: '10px', fontWeight: 'bold'}}>
+          Меню с бордерами
+        </div>
+        <Menu {...args}>
+          {Array.from({length: 3}, (_, i) => (
+            <Menu.Item bordered current={i === 0}>
+              Пункт {i + 1}
+            </Menu.Item>
+          ))}
+        </Menu>
+      </div>
+    </>
   );
 };
 
