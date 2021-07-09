@@ -1,27 +1,7 @@
 import React, {useEffect, useState, useCallback, useRef} from 'react';
 import Autosuggest, {ISuggestValue} from '../';
-// import {Autosuggest, List} from '@eruditorgroup/profi-ui';
 import {PlaceIcon} from '@eruditorgroup/profi-icons';
 import List from '../../List';
-import ReactAutosuggest from 'react-autosuggest';
-
-let isInitialized = false;
-let isLoading = false;
-const OnLoadCallbackName = 'ymapsOnLoad';
-const successCallbacks = new Set<(ymaps) => void>();
-const OnErrorCallbackName = 'ymapsOnError';
-const errorCallbacks = new Set<(error) => void>();
-
-window[OnErrorCallbackName] = (err) => {
-  alert('Fail to load ymaps. Check console');
-  errorCallbacks.forEach((cb) => cb(err));
-  console.error(err);
-};
-window[OnLoadCallbackName] = (ymaps: any) => {
-  isInitialized = true;
-  successCallbacks.forEach((cb) => cb(ymaps));
-  successCallbacks.clear();
-};
 
 declare global {
   type YandexSuggest = {
@@ -38,6 +18,24 @@ declare global {
     ymaps?: YMaps;
   }
 }
+
+let isInitialized = false;
+let isLoading = false;
+const OnLoadCallbackName = 'ymapsOnLoad';
+const successCallbacks = new Set<(ymaps) => void>();
+const OnErrorCallbackName = 'ymapsOnError';
+const errorCallbacks = new Set<(error) => void>();
+
+window[OnErrorCallbackName] = (err) => {
+  alert('Fail to load ymaps. Check console');
+  errorCallbacks.forEach((cb) => cb(err));
+  console.error(err);
+};
+window[OnLoadCallbackName] = (ymaps: YMaps) => {
+  isInitialized = true;
+  successCallbacks.forEach((cb) => cb(ymaps));
+  successCallbacks.clear();
+};
 
 const loadYmaps = ({apiKey, onLoad}) => {
   if (typeof window.ymaps === 'undefined' || !isInitialized) {
