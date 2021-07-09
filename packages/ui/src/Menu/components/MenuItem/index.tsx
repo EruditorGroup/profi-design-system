@@ -15,6 +15,7 @@ export interface MenuItemProps extends AnchorHTMLAttributes<HTMLAnchorElement> {
   to?: string;
   rounded?: boolean;
   current?: boolean;
+  bordered?: boolean;
 }
 
 const MenuItem: ForwardRefExoticComponent<
@@ -27,6 +28,7 @@ const MenuItem: ForwardRefExoticComponent<
       current = false,
       disabled = false,
       divided = false,
+      bordered = false,
       className,
       ...props
     },
@@ -41,6 +43,7 @@ const MenuItem: ForwardRefExoticComponent<
           styles['design-light'],
           rounded && styles['rounded'],
           current && styles['current'],
+          bordered && styles['bordered'],
           className,
         )}
         href={to}
