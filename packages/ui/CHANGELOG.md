@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.33.1](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.33.0...@eruditorgroup/profi-ui@0.33.1) (2021-07-09)
+
+
+### Bug Fixes
+
+* **MenuItem:** Добавлен проп bordered для установки границы межды элементами ([8d93e90](https://github.com/eruditorgroup/profi-design-system/commit/8d93e903a79e38d1022f9cf426f89e218584eafc))
+
+
+
+
+
 # [0.33.0](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.23.0...@eruditorgroup/profi-ui@0.33.0) (2021-07-08)
 
 
