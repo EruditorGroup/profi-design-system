@@ -1,4 +1,5 @@
-import React from 'react';
+import React, {useState} from 'react';
+import {ISelectValue} from '../Select';
 import {Story, Meta} from '@storybook/react';
 
 import TableGuides, {
@@ -77,33 +78,37 @@ const floatingLabelStoryMeta: InputStoryMeta = {
 
 const templateFactory: (meta: InputStoryMeta) => Story<InputProps> = (
   meta,
-) => ({defaultValue = 'Text', placeholder = 'Label', ...args}) => (
-  <TableGuides
-    cols={meta.cols}
-    rows={meta.rows}
-    forceCollWidth="200px"
-    Component={(props) => (
-      <Space direction="row">
-        <Input
-          defaultValue={defaultValue}
-          placeholder={placeholder}
-          {...args}
-          {...props}
-        />
-        <Select
-          size={props.size as InputProps['size']}
-          placeholder="расстояние"
-          style={{marginLeft: '10px'}}
-        >
-          <Select.Option value="sm">см.</Select.Option>
-          <Select.Option value="dm">дм.</Select.Option>
-          <Select.Option value="m">м.</Select.Option>
-          <Select.Option value="km">км.</Select.Option>
-        </Select>
-      </Space>
-    )}
-  />
-);
+) => ({defaultValue = 'Text', placeholder = 'Label', ...args}) => {
+  const [value, setValue] = useState<ISelectValue>();
+  return (
+    <TableGuides
+      cols={meta.cols}
+      rows={meta.rows}
+      forceCollWidth="200px"
+      Component={(props) => (
+        <Space direction="row">
+          <Input
+            defaultValue={defaultValue}
+            placeholder={placeholder}
+            {...args}
+            {...props}
+          />
+          <Select
+            onChange={setValue}
+            size={props.size as InputProps['size']}
+            placeholder="расстояние"
+            style={{marginLeft: '10px'}}
+          >
+            <Select.Option value="sm">см.</Select.Option>
+            <Select.Option value="dm">дм.</Select.Option>
+            <Select.Option value="m">м.</Select.Option>
+            <Select.Option value="km">км.</Select.Option>
+          </Select>
+        </Space>
+      )}
+    />
+  );
+};
 
 export const TextFieldStory = templateFactory(textFieldStoryMeta).bind({});
 TextFieldStory.storyName = textFieldStoryMeta.name;

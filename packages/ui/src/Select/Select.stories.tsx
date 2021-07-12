@@ -15,9 +15,14 @@ export default {
 } as Meta;
 
 const Template: Story<SelectProps> = (args) => {
+  const [value, setValue] = useState<{value: string; label?: string}>({
+    value: '07:00',
+  });
   return (
     <>
       <Select
+        value={value}
+        onChange={(val) => setValue(val)}
         style={{margin: '10px'}}
         leading={<Text color="muted">От</Text>}
         {...args}
@@ -39,6 +44,8 @@ const Template: Story<SelectProps> = (args) => {
         </Select.Option>
       </Select>
       <Select
+        value={value}
+        onChange={(val) => setValue(val)}
         style={{margin: '10px'}}
         leading={<Text color="muted">До</Text>}
         startScrollFrom={3}
