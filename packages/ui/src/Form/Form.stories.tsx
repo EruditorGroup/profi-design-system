@@ -18,7 +18,6 @@ const Template: Story = ({placeholder = 'Label', ...args}) => {
 
   return (
     <div className="preview">
-      <StoryStyles />
       <Input
         {...args}
         className="preview-item"
@@ -69,17 +68,3 @@ const Template: Story = ({placeholder = 'Label', ...args}) => {
   );
 };
 export const Preview = Template.bind({});
-
-const StoryStyles = () => (
-  <style>{`
-  .preview {
-    width: 320px;
-  }
-  .preview-item {
-    margin-bottom: 30px;
-  }
-  .preview-item_short {
-    width: 220px;
-  }
-`}</style>
-);

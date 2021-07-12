@@ -7,6 +7,7 @@ import React, {
   useRef,
   useState,
 } from 'react';
+import {ChevronDownIcon} from '@eruditorgroup/profi-icons';
 import cx from 'classnames';
 
 import SelectOption from './components/SelectOption';
@@ -52,16 +53,20 @@ const Select: SelectComponent = function Select({
   defaultValue,
   children,
   onChange,
+  placeholder,
   defaultOpened,
   block = false,
-  size = 'm',
+  size,
   className,
   wrapperClassName,
+  inputClassName,
   optionsRef,
   ...props
 }) {
   const [opened, setOpened] = useState(defaultOpened);
-  const [{value, label}, setValue] = useState<ISelectValue>(defaultValue);
+  const [selected, setValue] = useState<ISelectValue>(defaultValue);
+  const {value, label} = selected || {};
+
   const context = useMemo(() => ({value, setValue}), [value, setValue]);
   const _optionsRef = useRef<HTMLDivElement>();
   if (optionsRef) optionsRef.current = _optionsRef.current;
@@ -77,20 +82,6 @@ const Select: SelectComponent = function Select({
   }, [startScrollFrom, size]);
 
   const {leading, trailing, inputRef, withFloatLabel, invalid} = props;
-  const togglerProps = useMemo<InputProps>(
-    () => ({
-      leading,
-      trailing,
-      block,
-      size,
-      inputRef,
-      withFloatLabel,
-      invalid,
-      value: label,
-      readOnly: true,
-    }),
-    [leading, trailing, block, size, label, inputRef, withFloatLabel, invalid],
-  );
 
   return (
     <SelectContext.Provider value={context}>
@@ -106,13 +97,22 @@ const Select: SelectComponent = function Select({
       >
         <Dropdown.Toggler
           as={Input}
-          inputClassName={styles['input']}
+          inputClassName={cx(styles['input'], inputClassName)}
           className={cx(
             styles['toggler'],
             opened && styles['opened'],
             className,
           )}
-          {...togglerProps}
+          leading={leading}
+          trailing={<ChevronDownIcon />}
+          block={block}
+          size={size}
+          inputRef={inputRef}
+          withFloatLabel={withFloatLabel}
+          invalid={invalid}
+          value={label}
+          placeholder={placeholder}
+          readOnly
         />
         {children && (
           <Dropdown.Portal

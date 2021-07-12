@@ -41,6 +41,7 @@ const wrapControlWithRef = <
     defaultValue,
     onFocus,
     onBlur,
+    onClick,
     inputClassName,
     ...restInputProps
   } = props;
@@ -61,6 +62,7 @@ const wrapControlWithRef = <
 
   const onWrapperClick: MouseEventHandler<HTMLDivElement> = useCallback(
     (evt) => {
+      onClick?.(evt);
       if (evt.target !== evt.currentTarget) return;
       if (typeof inputRef === 'object' && inputRef !== null) {
         inputRef.current?.click();

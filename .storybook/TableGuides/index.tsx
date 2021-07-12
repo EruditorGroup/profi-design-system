@@ -42,6 +42,20 @@ const normalizeCells = (cells: TableCell[]): TableCell[] => {
   return result;
 };
 
+const StoryStyles = () => (
+  <style>{`
+  .preview {
+    max-width: 320px;
+  }
+  .preview-item {
+    margin-bottom: 30px;
+  }
+  .preview-item_short {
+    width: 220px;
+  }
+`}</style>
+);
+
 const TableGuides = <PropTypes extends Record<string, unknown> = {}>({
   cols,
   rows,
@@ -66,87 +80,93 @@ const TableGuides = <PropTypes extends Record<string, unknown> = {}>({
   const normalizedCols = normalizeCells(cols);
 
   return (
-    <table className={styles['table']} style={{background: tableBackground}}>
-      <thead>
-        <tr>
-          <th
-            colSpan={hasRowSpan ? 2 : 1}
-            className={classnames(styles['table-th'], styles['table-th_guide'])}
-          />
-          {normalizedCols
-            .filter((c) => !c.skipAsSpanned)
-            .map(({key, label, span = 1, spanLabel}) => (
-              <th
-                key={key}
-                colSpan={span}
-                className={styles['table-th']}
-                style={{
-                  width: forceCollWidth,
-                }}
-              >
-                {spanLabel ?? label ?? key}
-                <div className={styles['table-col-guide']}></div>
-              </th>
-            ))}
-        </tr>
-      </thead>
-      <tbody>
-        {rows.map((row, ri) => {
-          const rowLabel = row.label ?? row.key;
-          return (
-            <tr key={`${row.key}-${ri}`}>
-              {row.span! > 1 && (
+    <>
+      <StoryStyles />
+      <table className={styles['table']} style={{background: tableBackground}}>
+        <thead>
+          <tr>
+            <th
+              colSpan={hasRowSpan ? 2 : 1}
+              className={classnames(
+                styles['table-th'],
+                styles['table-th_guide'],
+              )}
+            />
+            {normalizedCols
+              .filter((c) => !c.skipAsSpanned)
+              .map(({key, label, span = 1, spanLabel}) => (
+                <th
+                  key={key}
+                  colSpan={span}
+                  className={styles['table-th']}
+                  style={{
+                    width: forceCollWidth,
+                  }}
+                >
+                  {spanLabel ?? label ?? key}
+                  <div className={styles['table-col-guide']}></div>
+                </th>
+              ))}
+          </tr>
+        </thead>
+        <tbody>
+          {rows.map((row, ri) => {
+            const rowLabel = row.label ?? row.key;
+            return (
+              <tr key={`${row.key}-${ri}`}>
+                {row.span! > 1 && (
+                  <td
+                    rowSpan={row.span}
+                    className={classnames(
+                      styles['table-td'],
+                      styles['table-variant-guide'],
+                      styles['table-variant-guide_span'],
+                    )}
+                    style={{
+                      height: forceRowHeight,
+                      background: tableBackground,
+                    }}
+                  >
+                    {row.spanLabel && <div>{row.spanLabel}</div>}
+                  </td>
+                )}
                 <td
-                  rowSpan={row.span}
                   className={classnames(
                     styles['table-td'],
                     styles['table-variant-guide'],
-                    styles['table-variant-guide_span'],
                   )}
                   style={{
                     height: forceRowHeight,
                     background: tableBackground,
                   }}
                 >
-                  {row.spanLabel && <div>{row.spanLabel}</div>}
+                  {rowLabel && <div>{rowLabel}</div>}
                 </td>
-              )}
-              <td
-                className={classnames(
-                  styles['table-td'],
-                  styles['table-variant-guide'],
-                )}
-                style={{
-                  height: forceRowHeight,
-                  background: tableBackground,
-                }}
-              >
-                {rowLabel && <div>{rowLabel}</div>}
-              </td>
-              {cols.map((col, ci) => (
-                <td
-                  key={`${row.key}-${ri}-${col.key}-${ci}`}
-                  className={styles['table-td']}
-                >
-                  <Component
-                    {...({
-                      ...row.props,
-                      ...col.props,
-                    } as PropTypes)}
-                    {...(withCellKeyProps
-                      ? {
-                          colKey: col.key,
-                          rowKey: row.key,
-                        }
-                      : {})}
-                  />
-                </td>
-              ))}
-            </tr>
-          );
-        })}
-      </tbody>
-    </table>
+                {cols.map((col, ci) => (
+                  <td
+                    key={`${row.key}-${ri}-${col.key}-${ci}`}
+                    className={styles['table-td']}
+                  >
+                    <Component
+                      {...({
+                        ...row.props,
+                        ...col.props,
+                      } as PropTypes)}
+                      {...(withCellKeyProps
+                        ? {
+                            colKey: col.key,
+                            rowKey: row.key,
+                          }
+                        : {})}
+                    />
+                  </td>
+                ))}
+              </tr>
+            );
+          })}
+        </tbody>
+      </table>
+    </>
   );
 };
 
