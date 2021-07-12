@@ -100,11 +100,11 @@ const Select: SelectComponent = function Select({
           inputClassName={cx(styles['input'], inputClassName)}
           className={cx(
             styles['toggler'],
-            opened && styles['opened'],
+            opened && styles['focused'],
             className,
           )}
           leading={leading}
-          trailing={<ChevronDownIcon />}
+          trailing={trailing || <ChevronDownIcon />}
           block={block}
           size={size}
           inputRef={inputRef}

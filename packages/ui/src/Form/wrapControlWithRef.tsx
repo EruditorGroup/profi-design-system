@@ -60,16 +60,19 @@ const wrapControlWithRef = <
   const internalRef = useRef<HTMLElementType>(null);
   const inputRef = useMemo(() => ref || internalRef, [ref]);
 
+  const _onClick = useRef(onClick);
+  _onClick.current = onClick;
+
   const onWrapperClick: MouseEventHandler<HTMLDivElement> = useCallback(
     (evt) => {
-      onClick?.(evt);
+      _onClick.current?.(evt);
       if (evt.target !== evt.currentTarget) return;
       if (typeof inputRef === 'object' && inputRef !== null) {
         inputRef.current?.click();
         inputRef.current?.focus();
       }
     },
-    [inputRef],
+    [inputRef, _onClick],
   );
 
   const wrapperProps = {

@@ -3,7 +3,7 @@
   cursor: pointer;
 }
 
-.opened {
+.focused {
   background: var(--ui-color-lightState);
 }
 
