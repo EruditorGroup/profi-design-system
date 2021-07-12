@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.34.1](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.34.0...@eruditorgroup/profi-ui@0.34.1) (2021-07-12)
+
+
+### Bug Fixes
+
+* **select:** make is controllable ([01c1405](https://github.com/eruditorgroup/profi-design-system/commit/01c1405dd954c666b006ea3be5e03c46fa8c20ac))
+
+
+
+
+
 # [0.34.0](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.33.1...@eruditorgroup/profi-ui@0.34.0) (2021-07-12)
 
 
