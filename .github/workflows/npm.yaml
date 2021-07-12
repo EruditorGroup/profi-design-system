@@ -59,16 +59,6 @@ jobs:
       - name: Create pull request
         id: create_pr
         run: |
-          PULL_REQ=$(curl \
-            -X POST \
-            -H "Accept: application/vnd.github.v3+json" \
-            -H "Authorization: token ${{ secrets.DEPLOY_GITHUB_TOKEN }}" \
-            https://api.github.com/repos/$GITHUB_REPOSITORY/pulls \
-            -d '{"head":"release/${{ env.GIT_TAG }}","base":"master", "title": "chore: changelog ${{ env.GIT_TAG }}"}')
-          echo "::set-output name=pullRequest::$PULL_REQ"
-
-      - name: Add approve to pull request
-        run: |
           curl \
             -X POST \
             -H "Accept: application/vnd.github.v3+json" \
