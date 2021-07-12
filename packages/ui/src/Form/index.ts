@@ -31,7 +31,7 @@ const InputUnit = forwardRef<HTMLInputElement, InputUnitProps>(
   wrapControlWithRef<HTMLInputElement, InputUnitProps>(BareInputUnit),
 );
 
-type TextareaProps = FormControlProps & BareTextareaProps;
+type TextareaProps = Omit<FormControlProps, 'align'> & BareTextareaProps;
 
 const Textarea = forwardRef<HTMLTextAreaElement, TextareaProps>(
   wrapControlWithRef<HTMLTextAreaElement, TextareaProps>(BareTextarea),

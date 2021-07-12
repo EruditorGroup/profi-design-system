@@ -23,7 +23,6 @@ const wrapControlWithRef = <
 ) => (props: PropsType, ref: Ref<HTMLElementType>): ReactElement => {
   const {
     withFloatLabel,
-    wrap,
     size = 'l',
     block = true,
     invalid,
@@ -32,6 +31,8 @@ const wrapControlWithRef = <
 
     leading,
     trailing,
+    upper,
+    lower,
 
     id,
     className,
@@ -40,6 +41,7 @@ const wrapControlWithRef = <
     defaultValue,
     onFocus,
     onBlur,
+    onClick,
     inputClassName,
     ...restInputProps
   } = props;
@@ -58,15 +60,19 @@ const wrapControlWithRef = <
   const internalRef = useRef<HTMLElementType>(null);
   const inputRef = useMemo(() => ref || internalRef, [ref]);
 
+  const _onClick = useRef(onClick);
+  _onClick.current = onClick;
+
   const onWrapperClick: MouseEventHandler<HTMLDivElement> = useCallback(
     (evt) => {
+      _onClick.current?.(evt);
       if (evt.target !== evt.currentTarget) return;
       if (typeof inputRef === 'object' && inputRef !== null) {
         inputRef.current?.click();
         inputRef.current?.focus();
       }
     },
-    [inputRef],
+    [inputRef, _onClick],
   );
 
   const wrapperProps = {
@@ -81,7 +87,8 @@ const wrapControlWithRef = <
     style,
     leading,
     trailing,
-    wrap,
+    upper,
+    lower,
   };
 
   const inputProps = {

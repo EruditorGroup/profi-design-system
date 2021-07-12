@@ -1,6 +1,6 @@
 import React, {CSSProperties} from 'react';
 import {Story, Meta} from '@storybook/react';
-
+import Text from '../Typography/Text';
 import {InputUnit} from './index';
 import type {InputUnitProps} from './index';
 
@@ -20,7 +20,9 @@ export default {
 } as Meta;
 
 const Prefix: React.FC<{text: React.ReactNode}> = ({text}) => (
-  <span style={prefixStyles}>{text}</span>
+  <Text color="muted" size="l">
+    {text}
+  </Text>
 );
 
 const Template: Story<InputUnitProps> = ({unit = '₽', ...args}) => (
@@ -41,7 +43,8 @@ const Template: Story<InputUnitProps> = ({unit = '₽', ...args}) => (
       />
       <InputUnit
         {...args}
-        value={0}
+        value=""
+        placeholder="0"
         unit={unit}
         unitClassName="customUnitColor"
         leading={<Prefix text="до" />}

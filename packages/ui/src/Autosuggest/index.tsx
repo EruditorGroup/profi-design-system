@@ -36,7 +36,6 @@ export type AutosuggestProps = Omit<
     RewritedProps
   > & {
     size?: ListProps['size'];
-    onSelected: (value: ISuggestValue) => void;
     suggestions: ISuggestValue[];
     isLoading?: boolean;
     isMultiple?: boolean;
@@ -60,6 +59,8 @@ const Autosuggest = forwardRef(function Autosuggest(
 
     leading,
     trailing,
+    upper,
+    lower,
     withFloatLabel,
     invalid,
     disabled,
@@ -109,7 +110,8 @@ const Autosuggest = forwardRef(function Autosuggest(
       ) => (
         <Input
           {...props}
-          wrap
+          upper={upper}
+          lower={lower}
           inputRef={inputRef}
           className={className}
           inputClassName={inputClassName}

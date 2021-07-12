@@ -8,6 +8,7 @@ import Tag from '../../Tag';
 import metro from './_metro.json';
 import {DotIcon} from '@eruditorgroup/profi-icons';
 import ReactAutosuggest from 'react-autosuggest';
+import YandexGeoSuggestion from './YandexGeoSuggestion';
 
 export default {
   title: 'Autosuggest',
@@ -94,7 +95,8 @@ const Template: Story<Omit<AutosuggestProps, 'suggestions' | 'value'>> = (
         block
         size="l"
         suggestions={suggestions}
-        leading={tags.map(({color, value}) => (
+        trailing={<CloseIcon />}
+        upper={tags.map(({color, value}) => (
           <Tag
             key={value}
             icon={color ? <DotIcon color={color as string} /> : <PlaceIcon />}
@@ -133,6 +135,8 @@ const Template: Story<Omit<AutosuggestProps, 'suggestions' | 'value'>> = (
         onSuggestionSelected={(_, {suggestion}) => setValue(suggestion.value)}
         renderSuggestion={renderSuggestion}
       />
+      <h2>Yandex geo suggestions</h2>
+      <YandexGeoSuggestion />
     </>
   );
 };

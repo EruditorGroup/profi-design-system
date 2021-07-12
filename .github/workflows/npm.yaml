@@ -50,14 +50,29 @@ jobs:
           printf "//npm.pkg.github.com/:_authToken=${{ secrets.GITHUB_TOKEN }}\n" > ~/.npmrc
           echo "GIT_TAG=${GITHUB_REF/refs\/tags\//}" >> $GITHUB_ENV
 
-      - name: Create release branch & Publish package & Create pull request
+      - name: Create release branch & Publish package
         run: |
           git checkout -b release/${{ env.GIT_TAG }}
           git push --set-upstream origin release/${{ env.GIT_TAG }}
           yarn run publish
-          curl \
+
+      - name: Create pull request
+        id: create_pr
+        run: |
+          PULL_REQ=$(curl \
             -X POST \
             -H "Accept: application/vnd.github.v3+json" \
             -H "Authorization: token ${{ secrets.DEPLOY_GITHUB_TOKEN }}" \
             https://api.github.com/repos/$GITHUB_REPOSITORY/pulls \
-            -d '{"head":"release/${{ env.GIT_TAG }}","base":"master", "title": "chore: changelog ${{ env.GIT_TAG }}"}'
+            -d '{"head":"release/${{ env.GIT_TAG }}","base":"master", "title": "chore: changelog ${{ env.GIT_TAG }}"}')
+          echo "::set-output name=pullRequest::$PULL_REQ"
+
+      - name: Add approve to pull request
+        run: |
+          PULL_REQUEST_NUM="${{fromJson(steps.create_pr.outputs.pullRequest).number}}"
+          curl \
+            -X POST \
+            -H "Accept: application/vnd.github.v3+json" \
+            -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
+            https://api.github.com/repos/$GITHUB_REPOSITORY/pulls/$PULL_REQUEST_NUM/reviews \
+            -d '{"event":"APPROVE"}'

@@ -12,7 +12,7 @@ interface SelectOptionProps extends Omit<ButtonProps, 'as' | 'size'> {
   value: string;
   disabled?: boolean;
   isActive?: string;
-  children?: React.ReactNode;
+  children?: string;
   size?: SelectProps['size'];
 }
 
@@ -39,7 +39,7 @@ const SelectOption = forwardRef<HTMLButtonElement, SelectOptionProps>(
         )}
         {...props}
         ref={ref}
-        onClick={() => setValue(propValue)}
+        onClick={() => setValue({value: propValue, label: children})}
       >
         {children}
       </Dropdown.Item>
