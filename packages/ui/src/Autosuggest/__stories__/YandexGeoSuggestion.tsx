@@ -67,7 +67,6 @@ export default function YandexGeoSuggestion({
   const [suggestions, setSuggestions] = useState<ISuggestValue[]>([]);
   const debounce = useRef<NodeJS.Timeout>();
 
-  console.log(suggestions);
   const [ymaps, setYMaps] = useState<YMaps>();
 
   const reload = useCallback(
