@@ -18,21 +18,21 @@ import {Input, InputProps} from '../Form';
 import styles from './Select.module.css';
 
 export interface SelectProps
-  extends Omit<InputProps, 'readonly' | 'onChange' | 'defaultValue'> {
+  extends Omit<InputProps, 'readonly' | 'onChange' | 'value'> {
   startScrollFrom?: number;
   defaultOpened?: boolean;
-  defaultValue?: ISelectValue;
+  value: ISelectValue;
+  onChange: (value: ISelectValue) => void;
   wrapperClassName?: string;
   size?: InputProps['size'];
   optionsRef?: React.MutableRefObject<HTMLDivElement | undefined>;
-  onChange?: (value: string) => void;
 }
 
 interface SelectComponent extends React.FC<SelectProps> {
   Option: typeof SelectOption;
 }
 
-type ISelectValue = {value: string; label: string};
+type ISelectValue = {value: string; label?: string};
 type ISelectContext = {
   value: string;
   setValue: (value: ISelectValue) => void;
@@ -50,7 +50,7 @@ const itemsSize = 40;
 
 const Select: SelectComponent = function Select({
   startScrollFrom,
-  defaultValue,
+  value: propValue = {},
   children,
   onChange,
   placeholder,
@@ -64,8 +64,8 @@ const Select: SelectComponent = function Select({
   ...props
 }) {
   const [opened, setOpened] = useState(defaultOpened);
-  const [selected, setValue] = useState<ISelectValue>(defaultValue);
-  const {value, label} = selected || {};
+  const [selected, setValue] = useState<ISelectValue>();
+  const {value, label} = propValue || selected;
 
   const context = useMemo(() => ({value, setValue}), [value, setValue]);
   const _optionsRef = useRef<HTMLDivElement>();
@@ -73,7 +73,10 @@ const Select: SelectComponent = function Select({
 
   const _onChange = useRef(onChange);
   _onChange.current = onChange;
-  useEffect(() => _onChange.current?.(value), [value]);
+  useEffect(() => {
+    _onChange.current(selected);
+    setValue(selected);
+  }, [selected]);
 
   useLayoutEffect(() => {
     if (startScrollFrom) {
@@ -110,7 +113,7 @@ const Select: SelectComponent = function Select({
           inputRef={inputRef}
           withFloatLabel={withFloatLabel}
           invalid={invalid}
-          value={label}
+          value={label ?? value}
           placeholder={placeholder}
           readOnly
         />
