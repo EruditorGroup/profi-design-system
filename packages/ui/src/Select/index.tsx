@@ -32,7 +32,7 @@ interface SelectComponent extends React.FC<SelectProps> {
   Option: typeof SelectOption;
 }
 
-type ISelectValue = {value: string; label?: string};
+export type ISelectValue = {value: string; label?: string};
 type ISelectContext = {
   value: string;
   setValue: (value: ISelectValue) => void;
