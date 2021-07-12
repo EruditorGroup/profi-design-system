@@ -3,6 +3,30 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.34.0](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.33.1...@eruditorgroup/profi-ui@0.34.0) (2021-07-12)
+
+
+### Bug Fixes
+
+* lint & snapshots ([33d01fd](https://github.com/eruditorgroup/profi-design-system/commit/33d01fd409f27e0a86cbf33f822003b95d7b2f8a))
+* types ([660c7b5](https://github.com/eruditorgroup/profi-design-system/commit/660c7b57b2b9543b92cd50800f6746e66e4bca40))
+* **input:** conbine with select ([76ef6f5](https://github.com/eruditorgroup/profi-design-system/commit/76ef6f530e858d589c2a366ddd7237c591c9955d))
+* update snapshots ([cb32db1](https://github.com/eruditorgroup/profi-design-system/commit/cb32db1a6da0538f5c9cdac126485ed923948da5))
+* **select:** add optionsRef ([155197e](https://github.com/eruditorgroup/profi-design-system/commit/155197ede541be441ceb9ac976f1664daf6cbf4d))
+* lint ([d90e88e](https://github.com/eruditorgroup/profi-design-system/commit/d90e88eea7e597637c9a5bf67951bc7401f3f191))
+* **ui:** show input unit when placeholder or value not empty ([f43b5f8](https://github.com/eruditorgroup/profi-design-system/commit/f43b5f8179c594eca853654a6509942bfa19cb52))
+* **ui:** Tag icon bug ([c62cb55](https://github.com/eruditorgroup/profi-design-system/commit/c62cb55074c7966688ef41e86ae28b7e67640470))
+* **ui:** Tag icon picture bug ([4869422](https://github.com/eruditorgroup/profi-design-system/commit/486942232bcc2bb01577859d80c9d236b618c2f3))
+
+
+### Features
+
+* **ui:** new API props: upper, lower ([bd0df6e](https://github.com/eruditorgroup/profi-design-system/commit/bd0df6e15ea5520339bb07a85891afe580c245a1))
+
+
+
+
+
 ## [0.33.1](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.33.0...@eruditorgroup/profi-ui@0.33.1) (2021-07-09)
 
 
