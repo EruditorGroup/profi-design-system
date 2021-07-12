@@ -16,10 +16,11 @@ import {Input, InputProps} from '../Form';
 
 import styles from './Select.module.css';
 
-export interface SelectProps extends Omit<InputProps, 'readonly' | 'onChange'> {
+export interface SelectProps
+  extends Omit<InputProps, 'readonly' | 'onChange' | 'defaultValue'> {
   startScrollFrom?: number;
   defaultOpened?: boolean;
-  defaultValue?: string;
+  defaultValue?: ISelectValue;
   wrapperClassName?: string;
   size?: InputProps['size'];
   optionsRef?: React.MutableRefObject<HTMLDivElement | undefined>;
@@ -30,9 +31,10 @@ interface SelectComponent extends React.FC<SelectProps> {
   Option: typeof SelectOption;
 }
 
+type ISelectValue = {value: string; label: string};
 type ISelectContext = {
   value: string;
-  setValue: (value: string) => void;
+  setValue: (value: ISelectValue) => void;
 };
 
 const SelectContext = createContext<ISelectContext | null>(null);
@@ -47,7 +49,7 @@ const itemsSize = 40;
 
 const Select: SelectComponent = function Select({
   startScrollFrom,
-  defaultValue = '',
+  defaultValue,
   children,
   onChange,
   defaultOpened,
@@ -59,7 +61,7 @@ const Select: SelectComponent = function Select({
   ...props
 }) {
   const [opened, setOpened] = useState(defaultOpened);
-  const [value, setValue] = useState(defaultValue);
+  const [{value, label}, setValue] = useState<ISelectValue>(defaultValue);
   const context = useMemo(() => ({value, setValue}), [value, setValue]);
   const _optionsRef = useRef<HTMLDivElement>();
   if (optionsRef) optionsRef.current = _optionsRef.current;
@@ -81,13 +83,13 @@ const Select: SelectComponent = function Select({
       trailing,
       block,
       size,
-      value,
       inputRef,
       withFloatLabel,
       invalid,
+      value: label,
       readOnly: true,
     }),
-    [leading, trailing, block, size, value, inputRef, withFloatLabel, invalid],
+    [leading, trailing, block, size, label, inputRef, withFloatLabel, invalid],
   );
 
   return (

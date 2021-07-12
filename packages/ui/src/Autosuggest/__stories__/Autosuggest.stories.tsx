@@ -134,9 +134,7 @@ const Template: Story<Omit<AutosuggestProps, 'suggestions' | 'value'>> = (
         onSuggestionsFetchRequested={reload}
         onSuggestionSelected={(_, {suggestion}) => setValue(suggestion.value)}
         renderSuggestion={renderSuggestion}
-      >
-        123
-      </Autosuggest>
+      />
       <h2>Yandex geo suggestions</h2>
       <YandexGeoSuggestion />
     </>

@@ -89,30 +89,28 @@ export default function YandexGeoSuggestion({
   useEffect(() => loadYmaps({apiKey, onLoad: setYMaps}), [apiKey]);
 
   return (
-    <>
-      <Autosuggest
-        block
-        size="l"
-        isLoading={isLoading}
-        suggestions={suggestions} // {value: string, label: string}[]
-        inputProps={{
-          value,
-          onChange: (_, params) => setValue(params.newValue),
-        }}
-        onSuggestionsFetchRequested={({value}) => reload(value)}
-        onSuggestionSelected={(_, {suggestion}) => setValue(suggestion.value)}
-        onSuggestionsClearRequested={() => setSuggestions([])}
-        renderSuggestion={({label, value}, params) => (
-          <List.Item
-            key={value}
-            as="div"
-            leading={<PlaceIcon color="#C4C4C4" />}
-            active={params.isHighlighted}
-          >
-            {label}
-          </List.Item>
-        )}
-      />
-    </>
+    <Autosuggest
+      block
+      size="l"
+      isLoading={isLoading}
+      suggestions={suggestions} // {value: string, label: string}[]
+      inputProps={{
+        value,
+        onChange: (_, params) => setValue(params.newValue),
+      }}
+      onSuggestionsFetchRequested={({value}) => reload(value)}
+      onSuggestionSelected={(_, {suggestion}) => setValue(suggestion.value)}
+      onSuggestionsClearRequested={() => setSuggestions([])}
+      renderSuggestion={({label, value}, params) => (
+        <List.Item
+          key={value}
+          as="div"
+          leading={<PlaceIcon color="#C4C4C4" />}
+          active={params.isHighlighted}
+        >
+          {label}
+        </List.Item>
+      )}
+    />
   );
 }
