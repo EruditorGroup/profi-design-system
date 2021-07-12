@@ -3,6 +3,210 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.33.1](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.33.0...@eruditorgroup/profi-ui@0.33.1) (2021-07-09)
+
+
+### Bug Fixes
+
+* **MenuItem:** Добавлен проп bordered для установки границы межды элементами ([8d93e90](https://github.com/eruditorgroup/profi-design-system/commit/8d93e903a79e38d1022f9cf426f89e218584eafc))
+
+
+
+
+
+# [0.33.0](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.23.0...@eruditorgroup/profi-ui@0.33.0) (2021-07-08)
+
+
+
+## 0.13.3 (2021-07-08)
+
+
+### Bug Fixes
+
+* **ui:** Tag icon pic bug ([#190](https://github.com/eruditorgroup/profi-design-system/issues/190)) ([b486bb6](https://github.com/eruditorgroup/profi-design-system/commit/b486bb690ce5195e9040c1e2bb70e2b55d830164))
+
+
+
+## 0.13.2 (2021-07-08)
+
+
+### Bug Fixes
+
+* **ui:** autosuggest container sizing ([a3cf4e3](https://github.com/eruditorgroup/profi-design-system/commit/a3cf4e336e4b4f12f2055854b96b6e29fe38db98))
+
+
+
+## 0.13.1 (2021-07-07)
+
+
+### Features
+
+* **Typography:** New Title sizes ([#183](https://github.com/eruditorgroup/profi-design-system/issues/183)) ([c89e437](https://github.com/eruditorgroup/profi-design-system/commit/c89e437a95b58c4a650c563f43623931ee6ff1d8))
+* **ui:** Tag light/plain design & fix screenshot testing ([#187](https://github.com/eruditorgroup/profi-design-system/issues/187)) ([29d9c52](https://github.com/eruditorgroup/profi-design-system/commit/29d9c5270e78ebbabdb8b199af863fe21d06a591))
+
+
+
+# 0.13.0 (2021-07-06)
+
+
+
+# 0.12.0 (2021-07-06)
+
+
+### Features
+
+* **toolkit & ui:** add times connstants & multiple autosuggest api ([#181](https://github.com/eruditorgroup/profi-design-system/issues/181)) ([d55f0bb](https://github.com/eruditorgroup/profi-design-system/commit/d55f0bb486e70dda584068a97655fe526764162d))
+
+
+
+# 0.11.0 (2021-07-06)
+
+
+### Features
+
+* **ui:** Component List ([#173](https://github.com/eruditorgroup/profi-design-system/issues/173)) ([90e1c49](https://github.com/eruditorgroup/profi-design-system/commit/90e1c49c08cdd5351524280c0a29f2a0c0c0b520))
+
+
+
+## 0.10.3 (2021-07-05)
+
+
+### Bug Fixes
+
+* **ui:** add options ref to Select api ([f11b157](https://github.com/eruditorgroup/profi-design-system/commit/f11b15799684817cba5860a58d6b2667681bc4a6))
+
+
+
+## 0.10.1 (2021-07-05)
+
+
+### Bug Fixes
+
+* **ui:** add export ([750a995](https://github.com/eruditorgroup/profi-design-system/commit/750a9951d41ebc522871c5dc6360554aff7e8f41))
+
+
+
+# 0.10.0 (2021-07-05)
+
+
+### Features
+
+* **ui:** Autosuggest & Select ([#172](https://github.com/eruditorgroup/profi-design-system/issues/172)) ([7dc8f9f](https://github.com/eruditorgroup/profi-design-system/commit/7dc8f9f1a2aa737591a5dc399278ac2dafd700d8))
+
+
+
+## 0.9.1 (2021-07-02)
+
+
+### Bug Fixes
+
+* **Button:** Неподдерживаемый composes ([#167](https://github.com/eruditorgroup/profi-design-system/issues/167)) ([6298aee](https://github.com/eruditorgroup/profi-design-system/commit/6298aeed9531de3124a0cf5d475003468bde6f26))
+
+
+
+## 0.8.18 (2021-07-01)
+
+
+### Bug Fixes
+
+* **ui:** ci trigger ([bbf24b6](https://github.com/eruditorgroup/profi-design-system/commit/bbf24b647c611c99741d7faff3b71fa8abd255a6))
+
+
+
+
+
+# [0.32.0](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.23.0...@eruditorgroup/profi-ui@0.32.0) (2021-07-08)
+
+
+
+## 0.13.2 (2021-07-08)
+
+
+### Bug Fixes
+
+* **ui:** autosuggest container sizing ([a3cf4e3](https://github.com/eruditorgroup/profi-design-system/commit/a3cf4e336e4b4f12f2055854b96b6e29fe38db98))
+
+
+
+## 0.13.1 (2021-07-07)
+
+
+### Features
+
+* **Typography:** New Title sizes ([#183](https://github.com/eruditorgroup/profi-design-system/issues/183)) ([c89e437](https://github.com/eruditorgroup/profi-design-system/commit/c89e437a95b58c4a650c563f43623931ee6ff1d8))
+* **ui:** Tag light/plain design & fix screenshot testing ([#187](https://github.com/eruditorgroup/profi-design-system/issues/187)) ([29d9c52](https://github.com/eruditorgroup/profi-design-system/commit/29d9c5270e78ebbabdb8b199af863fe21d06a591))
+
+
+
+# 0.13.0 (2021-07-06)
+
+
+
+# 0.12.0 (2021-07-06)
+
+
+### Features
+
+* **toolkit & ui:** add times connstants & multiple autosuggest api ([#181](https://github.com/eruditorgroup/profi-design-system/issues/181)) ([d55f0bb](https://github.com/eruditorgroup/profi-design-system/commit/d55f0bb486e70dda584068a97655fe526764162d))
+
+
+
+# 0.11.0 (2021-07-06)
+
+
+### Features
+
+* **ui:** Component List ([#173](https://github.com/eruditorgroup/profi-design-system/issues/173)) ([90e1c49](https://github.com/eruditorgroup/profi-design-system/commit/90e1c49c08cdd5351524280c0a29f2a0c0c0b520))
+
+
+
+## 0.10.3 (2021-07-05)
+
+
+### Bug Fixes
+
+* **ui:** add options ref to Select api ([f11b157](https://github.com/eruditorgroup/profi-design-system/commit/f11b15799684817cba5860a58d6b2667681bc4a6))
+
+
+
+## 0.10.1 (2021-07-05)
+
+
+### Bug Fixes
+
+* **ui:** add export ([750a995](https://github.com/eruditorgroup/profi-design-system/commit/750a9951d41ebc522871c5dc6360554aff7e8f41))
+
+
+
+# 0.10.0 (2021-07-05)
+
+
+### Features
+
+* **ui:** Autosuggest & Select ([#172](https://github.com/eruditorgroup/profi-design-system/issues/172)) ([7dc8f9f](https://github.com/eruditorgroup/profi-design-system/commit/7dc8f9f1a2aa737591a5dc399278ac2dafd700d8))
+
+
+
+## 0.9.1 (2021-07-02)
+
+
+### Bug Fixes
+
+* **Button:** Неподдерживаемый composes ([#167](https://github.com/eruditorgroup/profi-design-system/issues/167)) ([6298aee](https://github.com/eruditorgroup/profi-design-system/commit/6298aeed9531de3124a0cf5d475003468bde6f26))
+
+
+
+## 0.8.18 (2021-07-01)
+
+
+### Bug Fixes
+
+* **ui:** ci trigger ([bbf24b6](https://github.com/eruditorgroup/profi-design-system/commit/bbf24b647c611c99741d7faff3b71fa8abd255a6))
+
+
+
+
+
 # [0.31.0](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.23.0...@eruditorgroup/profi-ui@0.31.0) (2021-07-07)
 
 
