@@ -27,7 +27,7 @@ export type FormControlProps = {
   leading?: React.ReactNode;
   trailing?: React.ReactNode;
 
-  onClick?: React.MouseEventHandler<HTMLDivElement>;
+  onClick?: React.MouseEventHandler<HTMLElement>;
 };
 
 export type FormControlHTMLProps = Omit<
