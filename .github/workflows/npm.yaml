@@ -57,22 +57,19 @@ jobs:
           yarn run publish
 
       - name: Create pull request
+        uses: actions/github-script@v4
         id: create_pr
-        run: |
-          PULL_REQ=$(curl \
-            -X POST \
-            -H "Accept: application/vnd.github.v3+json" \
-            -H "Authorization: token ${{ secrets.DEPLOY_GITHUB_TOKEN }}" \
-            https://api.github.com/repos/$GITHUB_REPOSITORY/pulls \
-            -d '{"head":"release/${{ env.GIT_TAG }}","base":"master", "title": "chore: changelog ${{ env.GIT_TAG }}"}')
-          echo "::set-output name=pullRequest::$PULL_REQ"
+        with:
+          github-token: ${{ secrets.DEPLOY_GITHUB_TOKEN }}
+          script: |
+            github.pulls.create({
+              owner: "mischenkoav",
+              repo: "$GITHUB_REPOSITORY",
+              head: "release/${{ env.GIT_TAG }}",
+              base: "master",
+              title: "chore: changelog ${{ env.GIT_TAG }}"}
+            })
 
       - name: Add approve to pull request
-        run: |
-          PULL_REQUEST_NUM="${{fromJson(steps.create_pr.outputs.pullRequest).number}}"
-          curl \
-            -X POST \
-            -H "Accept: application/vnd.github.v3+json" \
-            -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
-            https://api.github.com/repos/$GITHUB_REPOSITORY/pulls/$PULL_REQUEST_NUM/reviews \
-            -d '{"event":"APPROVE"}'
+      - uses: actions/github-script@v4
+        run: echo "${{steps.create_pr.outputs.result}}"

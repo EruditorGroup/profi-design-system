@@ -1,0 +1,27 @@
+# This workflow will do a clean install of node dependencies, build the source code and run tests across different versions of node
+# For more information see: https://help.github.com/actions/language-and-framework-guides/using-nodejs-with-github-actions
+
+name: 'Push/PR checks'
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  jest:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Create pull request
+        uses: actions/github-script@v4
+        id: create_pr
+        with:
+          github-token: ${{ secrets.DEPLOY_GITHUB_TOKEN }}
+          script: |
+            github.pulls.create({
+              owner: "mischenkoav",
+              repo: "$GITHUB_REPOSITORY",
+              head: "release/0.13.5",
+              base: "master",
+              title: "chore: changelog ${{ env.GIT_TAG }}"}
+            })
