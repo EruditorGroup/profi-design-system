@@ -1,6 +1,6 @@
 name: 'npm package: publish'
 on:
-  branches:
+  branch:
     master: [push]
 
 jobs:
