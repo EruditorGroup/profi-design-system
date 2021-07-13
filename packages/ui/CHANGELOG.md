@@ -3,6 +3,24 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.34.2](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.34.1...@eruditorgroup/profi-ui@0.34.2) (2021-07-13)
+
+
+
+## 0.13.7 (2021-07-13)
+
+
+### Bug Fixes
+
+* **ui:** make modal scrollable ([aa1d507](https://github.com/eruditorgroup/profi-design-system/commit/aa1d507df611f178585a8af0a5eff458ae2f6887))
+* **ui:** modal fullscreen api ([0da3079](https://github.com/eruditorgroup/profi-design-system/commit/0da3079d751214d2b06659d83ed8d70fa2da69ea))
+* **ui:** show button leading & trailing if any is passed ([3b68c86](https://github.com/eruditorgroup/profi-design-system/commit/3b68c86c4fd90f1de9c66cef81630091238f1cd9))
+* **ui:** storybook ([0cd48ce](https://github.com/eruditorgroup/profi-design-system/commit/0cd48ce0c462c75ad893d5f06e5abc8e0db93d71))
+
+
+
+
+
 ## [0.34.1](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.34.0...@eruditorgroup/profi-ui@0.34.1) (2021-07-12)
 
 
