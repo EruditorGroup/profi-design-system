@@ -27,37 +27,23 @@ const BareInputUnit: React.FC<BareInputUnitProps> = ({
   unitClassName,
   unitStyle,
   value,
-  defaultValue,
   placeholder,
   className,
   onChange,
   inputRef,
   ...props
 }) => {
-  const [inputValue, setInputValue] = useState(value ?? defaultValue ?? '');
   const unitRef = useRef<HTMLSpanElement>(null);
 
-  const _onChange: ChangeEventHandler<HTMLInputElement> = (evt) => {
-    const numericValue = evt.target.value.replace(/[^\d]/g, '');
-    if (numericValue === inputValue) return;
-
-    evt.target.value = numericValue;
-
-    onChange && onChange(evt);
-    setInputValue(numericValue);
-  };
+  const {width} = unitRef.current?.getBoundingClientRect() || {};
 
   const overflowUnitPadStyles = {
-    paddingRight: unitRef.current
-      ? `${
-          unitRef.current.getBoundingClientRect().width + UNIT_TO_INPUT_MARGIN
-        }px`
-      : undefined,
+    paddingRight: width ? `${width + UNIT_TO_INPUT_MARGIN}px` : undefined,
   };
 
   const mask = useMemo(() => {
-    return inputValue?.toString() || placeholder?.toString();
-  }, [inputValue, placeholder]);
+    return value?.toString() || placeholder?.toString();
+  }, [value, placeholder]);
 
   return (
     <div
@@ -67,10 +53,10 @@ const BareInputUnit: React.FC<BareInputUnitProps> = ({
       <BareInput
         inputRef={inputRef}
         {...props}
-        value={inputValue}
+        value={value}
         placeholder={placeholder}
         className={classnames(styles['input-unit__input'], className)}
-        onChange={_onChange}
+        onChange={onChange}
       />
       <div className={classnames(styles['input-unit__stretcher'])}>
         <span className={styles['input-unit__value']}>{mask}</span>
