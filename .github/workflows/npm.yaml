@@ -67,5 +67,5 @@ jobs:
               repo: context.repo.repo,
               head: "release/${{ env.GIT_TAG }}",
               base: "master",
-              title: 'chore: changelog ${{ env.GIT_TAG }}"
+              title: "chore: changelog ${{ env.GIT_TAG }}"
             })
