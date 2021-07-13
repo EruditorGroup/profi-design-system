@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.34.3](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.34.2...@eruditorgroup/profi-ui@0.34.3) (2021-07-13)
+
+
+### Bug Fixes
+
+* lint ([1b15e18](https://github.com/eruditorgroup/profi-design-system/commit/1b15e186f71ba65b41313d3febaff830812d9b8d))
+* **ui:** input placeholder color ([f670e99](https://github.com/eruditorgroup/profi-design-system/commit/f670e99c009b245435fcc021d566db8ab6918f27))
+
+
+
+
+
 ## [0.34.2](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.34.1...@eruditorgroup/profi-ui@0.34.2) (2021-07-13)
 
 
