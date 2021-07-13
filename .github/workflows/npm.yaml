@@ -65,7 +65,7 @@ jobs:
             github.pulls.create({
               owner: context.repo.owner,
               repo: context.repo.repo,
-              head: "release/${{ env.GIT_TAG }}"}",
+              head: "release/${{ env.GIT_TAG }}",
               base: "master",
-              title: 'chore: changelog ${{ env.GIT_TAG }}"}'
+              title: 'chore: changelog ${{ env.GIT_TAG }}"
             })
