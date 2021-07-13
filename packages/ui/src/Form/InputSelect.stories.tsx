@@ -94,6 +94,7 @@ const templateFactory: (meta: InputStoryMeta) => Story<InputProps> = (
             {...props}
           />
           <Select
+            value={value}
             onChange={setValue}
             size={props.size as InputProps['size']}
             placeholder="расстояние"

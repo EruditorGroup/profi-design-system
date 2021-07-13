@@ -50,7 +50,7 @@ const itemsSize = 40;
 
 const Select: SelectComponent = function Select({
   startScrollFrom,
-  value: propValue = {},
+  value: propValue,
   children,
   onChange,
   placeholder,
@@ -65,7 +65,7 @@ const Select: SelectComponent = function Select({
 }) {
   const [opened, setOpened] = useState(defaultOpened);
   const [selected, setValue] = useState<ISelectValue>(propValue);
-  const {value, label} = propValue || selected;
+  const {value, label} = propValue || selected || {};
 
   const context = useMemo(() => ({value, setValue}), [value, setValue]);
   const _optionsRef = useRef<HTMLDivElement>();
