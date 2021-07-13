@@ -1,7 +1,8 @@
 name: 'npm package: publish'
 on:
-  branch:
-    master: [push]
+  push:
+    branches:
+      - master
 
 jobs:
   test:
