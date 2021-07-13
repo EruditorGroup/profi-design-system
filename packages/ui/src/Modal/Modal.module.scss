@@ -14,10 +14,6 @@
   overflow-y: auto;
 }
 
-.position-center {
-  align-items: center;
-}
-
 .overlay {
   position: fixed;
   z-index: 999;
@@ -34,10 +30,17 @@
   display: flex;
   width: 100%;
   background: var(--ui-bg-light);
-  border-radius: 10px;
+  border-radius: var(--ui-border-radius-l);
   box-sizing: border-box;
   flex-direction: column;
   margin: 80px auto;
+}
+
+.fullscreen {
+  width: 100%;
+  min-height: 100%;
+  margin-top: 0;
+  border-radius: 0;
 }
 
 .head {
@@ -90,15 +93,4 @@
 .body-withPadding {
   padding: 24px 20px 35px;
   box-sizing: border-box;
-}
-
-.autoSize {
-  position: relative;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  width: auto;
-  height: auto;
-  margin: auto;
 }

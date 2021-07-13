@@ -27,10 +27,9 @@ import fadeInTransition from '../styles/transitions/FadeIn.module.scss';
 
 export interface ModalProps
   extends Omit<HTMLAttributes<HTMLDivElement>, 'width'> {
-  centred?: boolean;
+  fullscreen?: boolean;
   withCloseButton?: boolean;
   withPadding?: boolean;
-  autoSize?: boolean;
   width?: string | number;
   visible: boolean;
   title?: string | undefined;
@@ -46,12 +45,11 @@ const Modal: ForwardRefExoticComponent<
   (
     {
       width,
-      autoSize,
       visible,
       title,
       children,
       className,
-      centred,
+      fullscreen,
       withPadding = true,
       withCloseButton = true,
       onClose,
@@ -77,6 +75,7 @@ const Modal: ForwardRefExoticComponent<
       onClose(event);
     };
 
+    console.log(fullscreen);
     return (
       <>
         <CSSTransition
@@ -95,22 +94,17 @@ const Modal: ForwardRefExoticComponent<
           unmountOnExit
           mountOnEnter
           in={visible}
-          timeout={DEFAULT_ANIMATION_DURATION}
+          timeout={!fullscreen && DEFAULT_ANIMATION_DURATION}
           classNames={slideUpTransition}
         >
-          <BodyPortal
-            className={classNames(
-              styles['root'],
-              centred && styles['position-center'],
-            )}
-          >
+          <BodyPortal className={classNames(styles['root'])}>
             <div
               className={classNames(
                 styles['modal'],
+                fullscreen && styles['fullscreen'],
                 className,
-                autoSize && styles['autoSize'],
               )}
-              style={{width}}
+              style={{width: !fullscreen && width}}
               ref={ref}
               {...props}
             >

@@ -14,7 +14,12 @@ const Template: Story = ({placeholder = 'Label', ...args}) => {
   return (
     <div className="preview">
       <Button onClick={() => setOpened(true)}>Open</Button>
-      <Modal visible={opened} width={500} onClose={() => setOpened(false)}>
+      <Modal
+        visible={opened}
+        width={500}
+        onClose={() => setOpened(false)}
+        {...args}
+      >
         <Button onClick={() => setOpened(false)}>Close</Button>
         {args.children}
       </Modal>
@@ -35,7 +40,7 @@ With_scroll.args = {
   ),
 };
 
-export const Fullscreen = Template.bind({});
-Fullscreen.args = {
+export const Full_screen = Template.bind({});
+Full_screen.args = {
   fullscreen: true,
 };
