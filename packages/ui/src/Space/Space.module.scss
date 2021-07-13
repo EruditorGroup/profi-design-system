@@ -1,9 +1,11 @@
-.space {
+.block {
   display: flex;
+  width: 100%;
 }
 
 .inline {
   display: inline-flex;
+  width: auto;
 }
 
 .justify-start {

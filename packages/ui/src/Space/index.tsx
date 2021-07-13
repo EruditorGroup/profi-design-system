@@ -68,7 +68,7 @@ const Space: ForwardRefExoticComponent<
       className={cx(
         className,
         styles['space'],
-        inline && styles['inline'],
+        inline ? styles['inline'] : styles['block'],
         justify && styles[`justify-${justify}`],
         align && styles[`align-${align}`],
         direction && styles[`direction-${direction}`],

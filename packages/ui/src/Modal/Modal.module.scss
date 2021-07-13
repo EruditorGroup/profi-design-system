@@ -6,13 +6,12 @@
   left: 0;
   right: 0;
   display: flex;
-  max-width: calc(100% - 40px);
-  max-height: calc(100% - 40px);
   width: 100%;
-  margin: auto;
   overflow: hidden;
   align-items: flex-start;
   justify-content: center;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 
 .position-center {
@@ -38,6 +37,7 @@
   border-radius: 10px;
   box-sizing: border-box;
   flex-direction: column;
+  margin: 80px auto;
 }
 
 .head {

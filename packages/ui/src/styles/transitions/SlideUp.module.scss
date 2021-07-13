@@ -1,5 +1,5 @@
 .enter {
-  transform: translateY(15%);
+  transform: translateY(5%);
   opacity: 0;
 }
 
@@ -15,7 +15,7 @@
 }
 
 .exitActive {
-  transform: translateY(15%);
+  transform: translateY(5%);
   transition: transform 0.3s ease, opacity 0.3s;
   opacity: 0;
 }
