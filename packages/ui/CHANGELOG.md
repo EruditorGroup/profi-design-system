@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.34.5](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.34.4...@eruditorgroup/profi-ui@0.34.5) (2021-07-13)
+
+
+### Bug Fixes
+
+* create PR ([4ad70c4](https://github.com/eruditorgroup/profi-design-system/commit/4ad70c466d3209df9decf81ba979ea82a9954c9c))
+
+
+
+
+
 ## [0.34.4](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.34.3...@eruditorgroup/profi-ui@0.34.4) (2021-07-13)
 
 **Note:** Version bump only for package @eruditorgroup/profi-ui
