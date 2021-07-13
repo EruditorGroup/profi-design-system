@@ -1,0 +1,38 @@
+name: 'npm package: publish'
+on:
+  branches:
+    master: [push]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 1
+
+      - name: Create pull request
+        id: create-pr
+        uses: actions/github-script@v4
+        with:
+          script: |
+            github.pulls.create({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              head: "release/0.13.8",
+              base: "master",
+              title: 'chore(changelog): publish 0.13.8'
+            })
+
+      - name: Add approve to pull request
+        id: create_pr
+        uses: actions/github-script@v4
+        with:
+          github-token: ${{ secrets.DEPLOY_GITHUB_TOKEN }}
+          script: |
+            github.pulls.createReview({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              pull_number: "${{steps.create-pr.outputs.result.number}}",
+              comments: [{path: "", body: ""}]
+            })
