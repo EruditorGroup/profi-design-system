@@ -57,11 +57,15 @@ jobs:
           yarn run publish
 
       - name: Create pull request
-        id: create_pr
-        run: |
-          curl \
-            -X POST \
-            -H "Accept: application/vnd.github.v3+json" \
-            -H "Authorization: token ${{ secrets.DEPLOY_GITHUB_TOKEN }}" \
-            https://api.github.com/repos/$GITHUB_REPOSITORY/pulls \
-            -d '{"head":"release/${{ env.GIT_TAG }}","base":"master", "title": "chore: changelog ${{ env.GIT_TAG }}"}'
+        id: create-pr
+        uses: actions/github-script@v4
+        with:
+          github-token: ${{ secrets.DEPLOY_GITHUB_TOKEN }}
+          script: |
+            github.pulls.create({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              head: "release/${{ env.GIT_TAG }}"}",
+              base: "master",
+              title: 'chore: changelog ${{ env.GIT_TAG }}"}'
+            })
