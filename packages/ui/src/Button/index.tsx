@@ -1,4 +1,4 @@
-import React, {forwardRef, ButtonHTMLAttributes} from 'react';
+import React, {forwardRef, ButtonHTMLAttributes, useMemo} from 'react';
 import classnames from 'classnames';
 
 import styles from './Button.module.scss';
@@ -49,6 +49,10 @@ const Button: ForwardingComponent<'button', ButtonProps> = forwardRef(
     },
     ref,
   ) => {
+    const shouldRenderSuffix = useMemo<boolean>(() => !!(trailing || leading), [
+      trailing,
+      leading,
+    ]);
     return (
       <Component
         type={type}
@@ -65,11 +69,15 @@ const Button: ForwardingComponent<'button', ButtonProps> = forwardRef(
         ref={ref}
         onClick={props.disabled ? null : props.onClick}
       >
-        {leading && <span className={styles['leading']}>{leading}</span>}
+        {shouldRenderSuffix && (
+          <span className={styles['leading']}>{leading}</span>
+        )}
         <span className={classnames(styles['content'], contentClassName)}>
           {children}
         </span>
-        {trailing && <span className={styles['trailing']}>{trailing}</span>}
+        {shouldRenderSuffix && (
+          <span className={styles['trailing']}>{trailing}</span>
+        )}
       </Component>
     );
   },

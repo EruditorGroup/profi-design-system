@@ -64,7 +64,7 @@ const Select: SelectComponent = function Select({
   ...props
 }) {
   const [opened, setOpened] = useState(defaultOpened);
-  const [selected, setValue] = useState<ISelectValue>();
+  const [selected, setValue] = useState<ISelectValue>(propValue);
   const {value, label} = propValue || selected;
 
   const context = useMemo(() => ({value, setValue}), [value, setValue]);
