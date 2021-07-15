@@ -96,6 +96,7 @@ AsLinkStory.args = {
   // не одупляет, что мы передали as={Link} и надо забрать его пропы.
   // Но тут и не сильно нужен тайп-чекинг
   to: '#',
+  clear: true,
 };
 
 export const RoundedStory = templateFactory(fullStoryMeta).bind({});
