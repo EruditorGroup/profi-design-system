@@ -6,12 +6,13 @@ import common from '../styles/common.module.css';
 import {ISize} from '@eruditorgroup/profi-toolkit';
 
 export interface AvatarProps
-  extends Omit<React.HTMLAttributes<HTMLImageElement>, 'children'> {
+  extends Omit<
+    React.ImgHTMLAttributes<HTMLImageElement>,
+    'children' | 'loading'
+  > {
   design?: 'circle' | 'rect';
   size?: ISize;
   isOnline?: boolean;
-  src?: string;
-  alt?: string;
   username?: string;
   lazy?: boolean;
 }
@@ -23,11 +24,11 @@ const Avatar = forwardRef<HTMLDivElement, AvatarProps>(
       style,
       isOnline,
       design = 'circle',
-      src,
-      alt = '',
       username,
-      className,
+      src,
+      alt = `Аватар ${username ?? 'пользователя'}`,
       lazy,
+      className,
       ...props
     },
     ref,
