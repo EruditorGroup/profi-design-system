@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.35.0](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.34.5...@eruditorgroup/profi-ui@0.35.0) (2021-07-16)
+
+
+### Bug Fixes
+
+* **Avatar:** Добавлена Placeholder story ([3560fea](https://github.com/eruditorgroup/profi-design-system/commit/3560fea58e4cefeb9ecbc71b11af00d035f869f3))
+* **tests:** story with trailing screenshots ([9ad8d28](https://github.com/eruditorgroup/profi-design-system/commit/9ad8d28f017b3d5787f86f2a5bbe92322c7cad75))
+
+
+### Features
+
+* **Avatar:** Переделан на тег img + добавлен lazy ([1e0431d](https://github.com/eruditorgroup/profi-design-system/commit/1e0431d61d3b7b6eeac55660ac672708c50b2d76))
+
+
+
+
+
 ## [0.34.5](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.34.4...@eruditorgroup/profi-ui@0.34.5) (2021-07-13)
 
 
