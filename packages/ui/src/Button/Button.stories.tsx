@@ -114,6 +114,7 @@ LeadingAndTrailingComponentsStory.args = {
   children: 'Василий Петрович',
   leading: <Avatar src={src} isOnline />,
   trailing: <ChevronDownIcon />,
+  style: {width: '16em'},
 };
 
 export const WithLeftSpinnerStory = templateFactory(templateStoryMeta).bind({});

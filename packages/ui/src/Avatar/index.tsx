@@ -6,12 +6,15 @@ import common from '../styles/common.module.css';
 import {ISize} from '@eruditorgroup/profi-toolkit';
 
 export interface AvatarProps
-  extends Omit<React.HTMLAttributes<HTMLDivElement>, 'children'> {
+  extends Omit<
+    React.ImgHTMLAttributes<HTMLImageElement>,
+    'children' | 'loading'
+  > {
   design?: 'circle' | 'rect';
   size?: ISize;
   isOnline?: boolean;
-  src?: string;
   username?: string;
+  lazy?: boolean;
 }
 
 const Avatar = forwardRef<HTMLDivElement, AvatarProps>(
@@ -21,8 +24,10 @@ const Avatar = forwardRef<HTMLDivElement, AvatarProps>(
       style,
       isOnline,
       design = 'circle',
-      src,
       username,
+      src,
+      alt = `Аватар ${username ?? 'пользователя'}`,
+      lazy,
       className,
       ...props
     },
@@ -31,16 +36,31 @@ const Avatar = forwardRef<HTMLDivElement, AvatarProps>(
     return (
       <div
         ref={ref}
-        style={src ? {backgroundImage: `url(${src})`, ...style} : style}
+        style={style}
         className={classnames(
           styles['avatar'],
-          size && common[`size-${size}`],
           styles[`design-${design}`],
+          size && common[`size-${size}`],
           className,
         )}
-        {...props}
       >
-        {!src && username?.slice(0, 1)}
+        <div
+          className={classnames(
+            styles['container'],
+            !src && styles['container_placeholder'],
+          )}
+        >
+          {src && (
+            <img
+              src={src}
+              alt={alt}
+              loading={lazy ? 'lazy' : 'eager'}
+              className={styles['image']}
+              {...props}
+            />
+          )}
+          {!src && username?.slice(0, 1)}
+        </div>
         {isOnline && <i className={styles['onlineDot']} />}
       </div>
     );
