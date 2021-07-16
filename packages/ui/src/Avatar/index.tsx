@@ -43,7 +43,12 @@ const Avatar = forwardRef<HTMLDivElement, AvatarProps>(
           className,
         )}
       >
-        <div className={styles['container']}>
+        <div
+          className={classnames(
+            styles['container'],
+            !src && styles['container_placeholder'],
+          )}
+        >
           {src && (
             <img
               src={src}

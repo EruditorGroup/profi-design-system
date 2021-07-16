@@ -4,13 +4,16 @@
 }
 
 .container {
-  background: var(--ui-color-light);
   width: 100%;
   height: 100%;
   overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.container_placeholder {
+  background: var(--ui-color-light);
 }
 
 .image {

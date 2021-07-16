@@ -56,3 +56,9 @@ export const Online = Template.bind({});
 Online.args = {
   isOnline: true,
 };
+
+export const Placeholder = Template.bind({});
+Placeholder.args = {
+  src: undefined,
+  username: 'Username',
+};
