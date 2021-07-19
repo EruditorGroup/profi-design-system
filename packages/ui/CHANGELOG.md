@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.35.4](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.35.3...@eruditorgroup/profi-ui@0.35.4) (2021-07-19)
+
+
+### Bug Fixes
+
+* **ui:** modal drop scroll lock ([c95da98](https://github.com/eruditorgroup/profi-design-system/commit/c95da984a4c7f228ca1c6a52ce244dce4e17f2e9))
+* **ui:** modal latour effect -> effect ([1860436](https://github.com/eruditorgroup/profi-design-system/commit/18604360b035b8e25cd08273ca3b326a09969a55))
+
+
+
+
+
 ## [0.35.3](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.35.2...@eruditorgroup/profi-ui@0.35.3) (2021-07-19)
 
 
