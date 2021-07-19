@@ -144,7 +144,7 @@ const Modal: ForwardRefExoticComponent<
                 className={classNames(
                   styles['body'],
                   withPadding && styles['body-withPadding'],
-                  fullscreen && styles['fullscreen'],
+                  fullscreen && styles['body_h100'],
                 )}
                 ref={bodyEl}
               >
