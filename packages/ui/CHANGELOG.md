@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.35.1](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.35.0...@eruditorgroup/profi-ui@0.35.1) (2021-07-19)
+
+
+### Bug Fixes
+
+* **autosuggest:** patch api ([a5bfcbe](https://github.com/eruditorgroup/profi-design-system/commit/a5bfcbe39a52123091e3e5d498cbe1ac95f54cfa))
+* **ui:** modal 100% height ([75d51e3](https://github.com/eruditorgroup/profi-design-system/commit/75d51e33979ea4a5b16e363051d4ab03cafd5bbc))
+
+
+
+
+
 # [0.35.0](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.34.5...@eruditorgroup/profi-ui@0.35.0) (2021-07-16)
 
 
