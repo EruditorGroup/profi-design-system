@@ -22,7 +22,6 @@ type RewritedProps =
   | 'getSuggestionValue'
   | 'renderSuggestionsContainer'
   | 'renderInputComponent'
-  | 'shouldRenderSuggestions'
   | 'value'
   | 'onChange'
   | 'size';
@@ -56,6 +55,7 @@ const Autosuggest = forwardRef(function Autosuggest(
     block = false,
     inputClassName,
     inputRef,
+    shouldRenderSuggestions,
 
     leading,
     trailing,
@@ -104,7 +104,9 @@ const Autosuggest = forwardRef(function Autosuggest(
           </Space>
         )
       }
-      shouldRenderSuggestions={(value) => value > ''}
+      shouldRenderSuggestions={
+        shouldRenderSuggestions ?? ((value) => value > '')
+      }
       renderInputComponent={(
         props: React.InputHTMLAttributes<HTMLInputElement>,
       ) => (
