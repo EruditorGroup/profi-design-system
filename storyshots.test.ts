@@ -35,7 +35,9 @@ const beforeScreenshot: ImageSnapshotConfig['beforeScreenshot'] = async (
 };
 
 initStoryshots({
-  storyKindRegex: /^((?!.*?Text \& Title).)*$/,
+  // текст чуть-чуть по-разному рендерится на разных осях,
+  // а у спиннера анимация снапшот постоянно меняется
+  storyKindRegex: /^((?!.*?(Text \& Title|Spinner)).)*$/,
   test: imageSnapshot({
     storybookUrl: getStorybookEntryPath(),
     beforeScreenshot,

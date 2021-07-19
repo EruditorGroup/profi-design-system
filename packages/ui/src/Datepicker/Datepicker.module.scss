@@ -19,6 +19,7 @@
   right: 0;
   background: rgba(0, 0, 0, 0.2);
   animation: slide-up 0.15s linear;
+  z-index: 9999;
 }
 
 .mobile-dropdown {

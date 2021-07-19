@@ -6,7 +6,7 @@ import cx from 'classnames';
 import type {AutosuggestPropsBase} from 'react-autosuggest';
 import {Input, InputProps} from '../Form';
 import Spinner from '../Spinner';
-import Space from '../Space';
+import Space, {SpaceProps} from '../Space';
 import List, {ListProps} from '../List';
 
 import styles from './Autosuggest.module.scss';
@@ -22,7 +22,6 @@ type RewritedProps =
   | 'getSuggestionValue'
   | 'renderSuggestionsContainer'
   | 'renderInputComponent'
-  | 'shouldRenderSuggestions'
   | 'value'
   | 'onChange'
   | 'size';
@@ -39,6 +38,7 @@ export type AutosuggestProps = Omit<
     suggestions: ISuggestValue[];
     isLoading?: boolean;
     isMultiple?: boolean;
+    suggestionsContainerProps: SpaceProps;
   };
 
 type IAutosuggestComponent = React.ForwardRefExoticComponent<
@@ -55,7 +55,10 @@ const Autosuggest = forwardRef(function Autosuggest(
     suggestions,
     block = false,
     inputClassName,
+    containerProps,
+    suggestionsContainerProps,
     inputRef,
+    shouldRenderSuggestions,
 
     leading,
     trailing,
@@ -76,35 +79,47 @@ const Autosuggest = forwardRef(function Autosuggest(
       ref={ref}
       theme={styles}
       suggestions={suggestions}
-      renderSuggestionsContainer={({containerProps, children, query}) =>
+      containerProps={{
+        ...containerProps,
+        className: cx(containerProps?.className, styles['root']),
+      }}
+      renderSuggestionsContainer={({containerProps: props, children, query}) =>
         query > '' && (
           <Space
             withShadow
             radius={size}
             bg="white"
-            {...containerProps}
-            className={cx(containerProps.className, block && styles['block'])}
-          >
-            {isLoading ? (
-              <Spinner
-                size={size}
-                className={styles['spinner']}
-                color="primary"
-              />
-            ) : (
-              <List
-                as="div"
-                className={styles['uilist']}
-                design="low"
-                size={size}
-              >
-                {children}
-              </List>
+            {...props}
+            {...suggestionsContainerProps}
+            className={cx(
+              containerProps.className,
+              suggestionsContainerProps.className,
+              styles['suggestions'],
+              block && styles['block'],
             )}
+          >
+            <List
+              as="div"
+              className={styles['uilist']}
+              design="low"
+              size={size}
+            >
+              {isLoading ? (
+                <Spinner
+                  size={size}
+                  className={styles['spinner']}
+                  color="primary"
+                />
+              ) : (
+                children
+              )}
+            </List>
           </Space>
         )
       }
-      shouldRenderSuggestions={(value) => value > ''}
+      shouldRenderSuggestions={
+        shouldRenderSuggestions ?? ((value) => value > '')
+      }
       renderInputComponent={(
         props: React.InputHTMLAttributes<HTMLInputElement>,
       ) => (

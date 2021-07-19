@@ -97,7 +97,12 @@ const Modal: ForwardRefExoticComponent<
           timeout={!fullscreen && DEFAULT_ANIMATION_DURATION}
           classNames={slideUpTransition}
         >
-          <BodyPortal className={classNames(styles['root'])}>
+          <BodyPortal
+            className={classNames(
+              styles['root'],
+              fullscreen && styles['fullscreen'],
+            )}
+          >
             <div
               className={classNames(
                 styles['modal'],
@@ -139,6 +144,7 @@ const Modal: ForwardRefExoticComponent<
                 className={classNames(
                   styles['body'],
                   withPadding && styles['body-withPadding'],
+                  fullscreen && styles['fullscreen'],
                 )}
                 ref={bodyEl}
               >

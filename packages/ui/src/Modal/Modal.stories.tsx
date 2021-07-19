@@ -8,6 +8,14 @@ export default {
   title: 'Modal',
 } as Meta;
 
+const cube: Record<string, string> = {
+  position: 'absolute',
+  bottom: '20px',
+  width: '50px',
+  height: '50px',
+  background: 'red',
+};
+
 const Template: Story = ({placeholder = 'Label', ...args}) => {
   const [opened, setOpened] = useState(true);
 
@@ -22,6 +30,8 @@ const Template: Story = ({placeholder = 'Label', ...args}) => {
       >
         <Button onClick={() => setOpened(false)}>Close</Button>
         {args.children}
+        <div style={{...cube, left: '20px'}} />
+        <div style={{...cube, right: '20px'}} />
       </Modal>
     </div>
   );
