@@ -1,4 +1,4 @@
-import React, {useEffect, useRef, forwardRef} from 'react';
+import React, {useEffect, useRef, forwardRef, useLayoutEffect} from 'react';
 
 import type {
   HTMLAttributes,
@@ -61,10 +61,10 @@ const Modal: ForwardRefExoticComponent<
     const bodyEl = useRef(null);
 
     // Отключаем промотку body
-    useEffect(() => {
-      visible
-        ? disableBodyScroll(bodyEl.current)
-        : enableBodyScroll(bodyEl.current);
+    useLayoutEffect(() => {
+      const {current: element} = bodyEl;
+      visible ? disableBodyScroll(element) : enableBodyScroll(element);
+      return () => enableBodyScroll(element);
     }, [visible]);
 
     if (!canUseDom()) return null;
