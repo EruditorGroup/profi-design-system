@@ -92,7 +92,7 @@ const Autosuggest = forwardRef(function Autosuggest(
             {..._props}
             {...(suggestionsContainerProps || {})}
             className={cx(
-              containerProps?.className,
+              _props?.className,
               suggestionsContainerProps?.className,
               styles['suggestions'],
               block && styles['block'],
