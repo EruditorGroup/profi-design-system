@@ -83,17 +83,17 @@ const Autosuggest = forwardRef(function Autosuggest(
         ...containerProps,
         className: cx(containerProps?.className, styles['root']),
       }}
-      renderSuggestionsContainer={({containerProps: props, children, query}) =>
+      renderSuggestionsContainer={({containerProps: _props, children, query}) =>
         query > '' && (
           <Space
             withShadow
             radius={size}
             bg="white"
-            {...props}
-            {...suggestionsContainerProps}
+            {..._props}
+            {...(suggestionsContainerProps || {})}
             className={cx(
-              containerProps.className,
-              suggestionsContainerProps.className,
+              containerProps?.className,
+              suggestionsContainerProps?.className,
               styles['suggestions'],
               block && styles['block'],
             )}
