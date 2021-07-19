@@ -62,9 +62,9 @@ const Modal: ForwardRefExoticComponent<
 
     // Отключаем промотку body
     useEffect(() => {
-      visible
-        ? disableBodyScroll(bodyEl.current)
-        : enableBodyScroll(bodyEl.current);
+      const {current: element} = bodyEl;
+      visible ? disableBodyScroll(element) : enableBodyScroll(element);
+      return () => enableBodyScroll(element);
     }, [visible]);
 
     if (!canUseDom()) return null;
