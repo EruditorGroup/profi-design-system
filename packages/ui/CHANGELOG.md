@@ -3,6 +3,21 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.35.5](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.35.4...@eruditorgroup/profi-ui@0.35.5) (2021-07-19)
+
+
+
+## 0.13.16 (2021-07-19)
+
+
+### Bug Fixes
+
+* **ui:** Suggestion container classnames bug ([34cec51](https://github.com/eruditorgroup/profi-design-system/commit/34cec51a341c068a5a55d23fe14510f6324eca7c))
+
+
+
+
+
 ## [0.35.4](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.35.3...@eruditorgroup/profi-ui@0.35.4) (2021-07-19)
 
 
