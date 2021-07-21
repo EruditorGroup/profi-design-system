@@ -5,7 +5,7 @@ import {StarIcon, SparkIcon} from '@eruditorgroup/profi-icons';
 import {Text} from '../Typography';
 import Button from '../Button';
 import Space from '../Space';
-import Tooltip from '../Tooltip';
+import WithTooltip from './WithTooltip';
 
 import type {
   HTMLAttributes,
@@ -65,7 +65,7 @@ const Rate: ForwardRefExoticComponent<
 
     return (
       <>
-        <Tooltip persist={isBest} className={styles['tooltip']}>
+        <WithTooltip show={isBest} size={size} className={styles['tooltip']}>
           <div
             className={cx(
               styles['rate'],
@@ -114,15 +114,7 @@ const Rate: ForwardRefExoticComponent<
               </>
             )}
           </div>
-          <Tooltip.Content
-            className={styles['tooltipContent']}
-            position="top-center"
-          >
-            <Text size={size} bold>
-              Пять&nbsp;с&nbsp;плюсом
-            </Text>
-          </Tooltip.Content>
-        </Tooltip>
+        </WithTooltip>
         {showBestDialog && (
           <div
             className={cx(

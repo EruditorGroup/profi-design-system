@@ -1,5 +1,6 @@
 .rate {
   position: relative;
+  display: inline-block;
 
   &_best {
     padding-right: 9px;
@@ -170,17 +171,6 @@
   &_active {
     color: #fff;
   }
-}
-
-.tooltip {
-  display: inline-block;
-}
-
-.tooltipContent {
-  padding-left: 20px;
-  padding-right: 20px;
-  text-align: center;
-  background-color: var(--ui-color-warning);
 }
 
 @keyframes scaleSpark {
