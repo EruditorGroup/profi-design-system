@@ -5,6 +5,7 @@ import {StarIcon, SparkIcon} from '@eruditorgroup/profi-icons';
 import {Text} from '../Typography';
 import Button from '../Button';
 import Space from '../Space';
+import Tooltip from '../Tooltip';
 
 import type {
   HTMLAttributes,
@@ -64,55 +65,64 @@ const Rate: ForwardRefExoticComponent<
 
     return (
       <>
-        <div
-          className={cx(
-            styles['rate'],
-            styles[`rate_size-${size}`],
-            isBest && styles['rate_best'],
-            className,
-          )}
-          {...props}
-          ref={ref}
-        >
-          {MARKS_ARRAY.map((mark, index) => {
-            return (
-              <StarIcon
-                key={index}
-                className={cx(styles['star'], styles[`star_size-${size}`], {
-                  [styles['star_filled']]: parseInt(value) >= parseInt(mark),
-                  [styles['star_disabled']]: disabled,
-                  [styles['star_scalled']]: isFive && !isBest,
-                  [styles['star_best']]: index === 4 && isBest,
-                })}
-                onClick={(e) => onClick(e, mark)}
-                onKeyDown={(e) => onKeyDown(e, mark)}
-                aria-checked={parseInt(value) > index ? 'true' : 'false'}
-                aria-posinset={index + 1}
-                aria-setsize={MARKS_ARRAY.length}
-                tabIndex={disabled ? -1 : 0}
-              />
-            );
-          })}
-          {isBest && (
-            <>
-              <SparkIcon
-                className={cx(
-                  styles['spark'],
-                  styles['spark_mini'],
-                  styles[`spark_mini-${size}`],
-                )}
-              />
-              <SparkIcon
-                className={cx(
-                  styles['spark'],
-                  styles['spark_big'],
-                  styles[`spark_big-${size}`],
-                )}
-              />
-            </>
-          )}
-        </div>
-
+        <Tooltip persist={isBest} className={styles['tooltip']}>
+          <div
+            className={cx(
+              styles['rate'],
+              styles[`rate_size-${size}`],
+              isBest && styles['rate_best'],
+              className,
+            )}
+            {...props}
+            ref={ref}
+          >
+            {MARKS_ARRAY.map((mark, index) => {
+              return (
+                <StarIcon
+                  key={index}
+                  className={cx(styles['star'], styles[`star_size-${size}`], {
+                    [styles['star_filled']]: parseInt(value) >= parseInt(mark),
+                    [styles['star_disabled']]: disabled,
+                    [styles['star_scalled']]: isFive && !isBest,
+                    [styles['star_best']]: index === 4 && isBest,
+                  })}
+                  onClick={(e) => onClick(e, mark)}
+                  onKeyDown={(e) => onKeyDown(e, mark)}
+                  aria-checked={parseInt(value) > index ? 'true' : 'false'}
+                  aria-posinset={index + 1}
+                  aria-setsize={MARKS_ARRAY.length}
+                  tabIndex={disabled ? -1 : 0}
+                />
+              );
+            })}
+            {isBest && (
+              <>
+                <SparkIcon
+                  className={cx(
+                    styles['spark'],
+                    styles['spark_mini'],
+                    styles[`spark_mini-${size}`],
+                  )}
+                />
+                <SparkIcon
+                  className={cx(
+                    styles['spark'],
+                    styles['spark_big'],
+                    styles[`spark_big-${size}`],
+                  )}
+                />
+              </>
+            )}
+          </div>
+          <Tooltip.Content
+            className={styles['tooltipContent']}
+            position="top-center"
+          >
+            <Text size={size} bold>
+              Пять&nbsp;с&nbsp;плюсом
+            </Text>
+          </Tooltip.Content>
+        </Tooltip>
         {showBestDialog && (
           <div
             className={cx(
@@ -121,7 +131,7 @@ const Rate: ForwardRefExoticComponent<
             )}
           >
             <Space className={styles['bestDialog']} radius="l" px={16} py={16}>
-              <Text className={styles[`bestText`]} size="l" bold>
+              <Text className={styles['bestText']} size="l" bold>
                 Пятёрки бывают разные. Какая ваша?
               </Text>
               <div className={styles['bestButtons']}>
