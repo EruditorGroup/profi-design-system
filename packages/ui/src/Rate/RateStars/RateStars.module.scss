@@ -27,13 +27,8 @@
   }
 }
 
-.rate_best {
-  padding-right: 8px;
-}
-
 .star {
   color: var(--ui-color-light);
-  cursor: pointer;
   transition: 0.1s color ease-in-out;
   line-height: 1;
   outline: none;
@@ -54,8 +49,8 @@
     color: var(--ui-color-warning);
   }
 
-  &_disabled {
-    cursor: auto;
+  &_pointer {
+    cursor: pointer;
   }
 
   &_scalled {
@@ -121,55 +116,6 @@
     right: 8px;
     width: 25px;
     height: 25px;
-  }
-}
-
-.bestDialog {
-  position: relative;
-  margin-top: 10px;
-  background: var(--ui-bg-light);
-}
-
-.bestDialog_container {
-  max-height: 0;
-  opacity: 0;
-  transition: opacity 0.4s ease-in-out, max-height 0.4s ease-in-out;
-  overflow: hidden;
-}
-
-.bestDialog_showed {
-  max-height: 500px;
-  opacity: 1;
-}
-
-.bestLink {
-  margin-right: 9px;
-  vertical-align: bottom;
-
-  &:last-child {
-    margin-right: 0;
-  }
-}
-
-.bestText {
-  margin-bottom: 12px;
-}
-
-.bestLinkActive {
-  background-color: var(--ui-color-warning);
-  color: #fff;
-
-  &:hover:not([disabled]) {
-    background-color: var(--ui-color-warning);
-    color: #fff;
-  }
-}
-
-.bestIcon {
-  color: var(--ui-color-warning);
-
-  &_active {
-    color: #fff;
   }
 }
 

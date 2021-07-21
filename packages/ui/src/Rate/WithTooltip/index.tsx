@@ -1,7 +1,7 @@
 import React from 'react';
 
-import Tooltip from '../Tooltip';
-import {Text} from '../Typography';
+import Tooltip from '../../Tooltip';
+import {Text} from '../../Typography';
 
 import styles from './WithTooltip.module.scss';
 
@@ -9,7 +9,6 @@ type Props = {
   show: boolean;
   size: 's' | 'm' | 'l';
   children: React.ReactNode;
-  className?: string;
 };
 
 export default function WithTooltip({
