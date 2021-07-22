@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.36.0](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.35.5...@eruditorgroup/profi-ui@0.36.0) (2021-07-22)
+
+
+### Features
+
+* **Rate:** Добавлен компонент Rate ([5586259](https://github.com/eruditorgroup/profi-design-system/commit/55862597060a9b9a6fa3c806ba21c0ce6ba741f6))
+
+
+
+
+
 ## [0.35.5](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.35.4...@eruditorgroup/profi-ui@0.35.5) (2021-07-19)
 
 
