@@ -66,7 +66,6 @@ const Space: ForwardRefExoticComponent<
   return (
     <div
       className={cx(
-        className,
         styles['space'],
         inline ? styles['inline'] : styles['block'],
         justify && styles[`justify-${justify}`],
@@ -75,6 +74,7 @@ const Space: ForwardRefExoticComponent<
         withShadow && styles['withShadow'],
         radius && styles[`radius-${radius}`],
         bg && styles[`bg-${bg}`],
+        className,
       )}
       {...props}
       style={{padding, ...(style || {})}}
