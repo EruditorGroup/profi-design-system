@@ -12,6 +12,7 @@
   color: transparent;
   background-color: var(--ui-color-light);
   transition: background-color 0.3s;
+  box-sizing: border-box;
 
   &_size-m {
     width: var(--ui-text-size-m);
@@ -39,6 +40,7 @@
     height: var(--ui-text-size-xxl);
     border-radius: 6px;
     font-size: var(--ui-text-size-l);
+    padding: 2px 0 0 2px;
   }
 
   &_type-radio {
