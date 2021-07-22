@@ -17,8 +17,8 @@ export default {
 const Template: Story<PhoneInputProps> = ({...args}) => (
   <div>
     <div style={containerStyles}>
-      <PhoneInput {...args} defaultCountryCode="by" style={itemStyles} />
       <PhoneInput {...args} style={itemStyles} />
+      <PhoneInput {...args} defaultCountryCode="by" style={itemStyles} />
       <PhoneInput {...args} defaultCountryCode="ua" style={itemStyles} />
     </div>
   </div>
