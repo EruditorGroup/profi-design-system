@@ -2,7 +2,7 @@ import React, {forwardRef} from 'react';
 import cx from 'classnames';
 
 import {StarIcon, SparkIcon} from '@eruditorgroup/profi-icons';
-import WithTooltip from '../WithTooltip/index';
+import RateTooltip from '../RateTooltip';
 
 import type {
   HTMLAttributes,
@@ -36,7 +36,7 @@ const RateStars: ForwardRefExoticComponent<
   }
 
   return (
-    <WithTooltip show={isBest} size={size}>
+    <RateTooltip show={isBest} size={size}>
       <div
         className={cx(
           styles['rate'],
@@ -89,7 +89,7 @@ const RateStars: ForwardRefExoticComponent<
           </>
         )}
       </div>
-    </WithTooltip>
+    </RateTooltip>
   );
 });
 

@@ -3,7 +3,7 @@ import React from 'react';
 import Tooltip from '../../Tooltip';
 import {Text} from '../../Typography';
 
-import styles from './WithTooltip.module.scss';
+import styles from './RateTooltip.module.scss';
 
 type Props = {
   show: boolean;
@@ -18,7 +18,7 @@ export default function WithTooltip({
 }: Props): JSX.Element {
   if (show) {
     return (
-      <Tooltip persist={true} className={styles['tooltip']}>
+      <Tooltip persist className={styles['tooltip']}>
         <Tooltip.Content
           className={styles['tooltipContent']}
           position="top-center"
