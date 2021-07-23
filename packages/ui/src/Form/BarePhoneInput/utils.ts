@@ -16,7 +16,7 @@ export const getCountryByCode = (code?: ICountryCode): ICountryData => {
 
 // если телефон не распознан – по дефолту ставим россию, и разрешаем
 // вводить дофига символов
-const DEFAULT_COUNTRY: ICountryData = BASE_COUNTRIES[0];
+export const DEFAULT_COUNTRY: ICountryData = BASE_COUNTRIES[0];
 
 /**
  * Returns [ICountryData] by provided phone number.
@@ -39,4 +39,18 @@ export function getCountryByPhone(
     );
   });
   return result || getCountryByCode(defaultCountryCode);
+}
+
+/** Returns phone with code prefix if nesessary */
+export function correctPhone(value: string, phoneCode: string): string {
+  const clearValue: string = value.replace(/[^\d]/g, '');
+  if (clearValue.startsWith(phoneCode)) {
+    return clearValue;
+  } else if (clearValue.startsWith('8') && clearValue.length === 11) {
+    // paste 89031111111 -> 79031111111
+    return clearValue.replace('8', '7');
+  } else {
+    // paste 9031111111 -> 79031111111
+    return `${phoneCode}${clearValue}`;
+  }
 }

@@ -19,7 +19,12 @@ const Template: Story<PhoneInputProps> = ({...args}) => (
     <div style={containerStyles}>
       <PhoneInput {...args} style={itemStyles} />
       <PhoneInput {...args} defaultCountryCode="by" style={itemStyles} />
-      <PhoneInput {...args} defaultCountryCode="ua" style={itemStyles} />
+      <PhoneInput
+        {...args}
+        defaultCountryCode="ua"
+        style={itemStyles}
+        withFocusScroll
+      />
     </div>
   </div>
 );

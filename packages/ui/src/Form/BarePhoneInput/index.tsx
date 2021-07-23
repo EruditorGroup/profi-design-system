@@ -2,7 +2,7 @@ import React, {useState, useRef, useCallback} from 'react';
 import cx from 'classnames';
 import {Input, InputProps} from '../index';
 
-import {getCountryByPhone} from './utils';
+import {getCountryByPhone, correctPhone} from './utils';
 import {ICountryCode} from './constants';
 import {useAutoFocus} from '@eruditorgroup/profi-toolkit';
 
@@ -66,19 +66,7 @@ export default function PhoneInput({
   const handlePaste = useCallback(
     (ev: React.ClipboardEvent<HTMLInputElement>) => {
       ev.preventDefault();
-      const clearValue: string = ev.clipboardData
-        .getData('Text')
-        .replace(/[^\d]/g, '');
-      console.log(clearValue);
-      if (clearValue.startsWith(phoneCode)) {
-        handleChange(clearValue);
-      } else if (clearValue.startsWith('8') && clearValue.length === 11) {
-        // paste 89031111111 -> 79031111111
-        handleChange(clearValue.replace('8', '7'));
-      } else {
-        // paste 9031111111 -> 79031111111
-        handleChange(`${phoneCode}${clearValue}`);
-      }
+      handleChange(correctPhone(ev.clipboardData.getData('Text'), phoneCode));
     },
     [handleChange, phoneCode],
   );

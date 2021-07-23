@@ -1,13 +1,16 @@
 import {useLayoutEffect, useCallback} from 'react';
+import {smoothScroll} from '../utils';
 
 export default function useFocusScroll<
   R extends React.RefObject<HTMLInputElement | null>
 >(inputRef: R, enabled?: boolean): void {
-  const scrollIntoView: EventListener = useCallback(() => {
-    const {top} = inputRef.current.getBoundingClientRect() || {};
-    if (top > window.innerHeight / 2) {
-      window.scrollTo(0, top + 40);
-    }
+  const scrollIntoView = useCallback(() => {
+    setTimeout(() => {
+      const {top} = inputRef.current.getBoundingClientRect() || {};
+      if (top > window.innerHeight / 2) {
+        smoothScroll(top + 40);
+      }
+    }, 1000);
   }, [inputRef]);
 
   useLayoutEffect(() => {
