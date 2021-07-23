@@ -37,6 +37,7 @@ const TooltipContent: ForwardRefExoticComponent<
           styles['inner'],
           styles[`position-${position}`],
           opened && styles['opened'],
+          animated && styles['animated'],
         )}
       >
         <div
@@ -44,7 +45,6 @@ const TooltipContent: ForwardRefExoticComponent<
             className,
             styles['content'],
             fit && styles['fit'],
-            animated && styles['animated'],
           )}
           {...props}
           ref={ref}

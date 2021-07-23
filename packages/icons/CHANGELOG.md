@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.28.0](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-icons@0.27.13...@eruditorgroup/profi-icons@0.28.0) (2021-07-22)
+
+
+### Features
+
+* **Rate:** Добавлен компонент Rate ([5586259](https://github.com/eruditorgroup/profi-design-system/commit/55862597060a9b9a6fa3c806ba21c0ce6ba741f6))
+
+
+
+
+
 ## [0.27.13](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-icons@0.27.12...@eruditorgroup/profi-icons@0.27.13) (2021-07-19)
 
 **Note:** Version bump only for package @eruditorgroup/profi-icons

@@ -30,6 +30,7 @@ export {default as ReviewIcon} from './Review';
 export {default as SearchIcon} from './Search';
 export {default as ClearIcon} from './Clear';
 export {default as SettingsIcon} from './Settings';
+export {default as SparkIcon} from './Spark';
 export {default as StarIcon} from './Star';
 export {default as StarStrokeIcon} from './StarStroke';
 export {default as SupportIcon} from './Support';
