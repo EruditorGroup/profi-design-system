@@ -67,6 +67,9 @@ export type {ToggleProps} from './Toggle';
 export {default as Modal} from './Modal';
 export type {ModalProps} from './Modal';
 
+export {RateStars, RateForm} from './Rate';
+export type {RateStarsProps, RateFormProps} from './Rate';
+
 export {default as Space} from './Space';
 export type {SpaceProps} from './Space';
 
