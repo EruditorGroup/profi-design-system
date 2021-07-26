@@ -29,7 +29,6 @@ const errorCallbacks = new Set<(error) => void>();
 window[OnErrorCallbackName] = (err) => {
   alert('Fail to load ymaps. Check console');
   errorCallbacks.forEach((cb) => cb(err));
-  console.error(err);
 };
 window[OnLoadCallbackName] = (ymaps: YMaps) => {
   isInitialized = true;
