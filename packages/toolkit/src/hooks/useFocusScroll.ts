@@ -8,9 +8,10 @@ export default function useFocusScroll<
     setTimeout(() => {
       const {top} = inputRef.current.getBoundingClientRect() || {};
       if (top > window.innerHeight / 2) {
-        smoothScroll(top + 40);
+        console.log(window.pageYOffset + top - window.innerHeight / 2);
+        smoothScroll(window.pageYOffset + top - window.innerHeight / 2);
       }
-    }, 1000);
+    }, 500);
   }, [inputRef]);
 
   useLayoutEffect(() => {

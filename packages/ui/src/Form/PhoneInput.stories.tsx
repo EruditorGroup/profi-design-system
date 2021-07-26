@@ -22,7 +22,7 @@ const Template: Story<PhoneInputProps> = ({...args}) => (
       <PhoneInput
         {...args}
         defaultCountryCode="ua"
-        style={itemStyles}
+        style={{margin: '600px 0 600px'}}
         withFocusScroll
       />
     </div>
