@@ -7,7 +7,7 @@ import {ICountryCode} from './constants';
 import {useAutoFocus} from '@eruditorgroup/profi-toolkit';
 
 import styles from './BarePhoneInput.module.scss';
-import {ErrorIcon} from '../../../../icons/es';
+import {ErrorIcon} from '@eruditorgroup/profi-icons';
 
 export interface PhoneInputProps
   extends Omit<InputProps, 'onChange' | 'onPaste' | 'placeholder' | 'mask'> {
