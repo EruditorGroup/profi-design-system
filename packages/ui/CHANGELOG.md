@@ -3,6 +3,21 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.37.2](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.37.1...@eruditorgroup/profi-ui@0.37.2) (2021-07-26)
+
+
+
+## 0.15.2 (2021-07-26)
+
+
+### Bug Fixes
+
+* **ui:** radio checked position ([5ff2d97](https://github.com/eruditorgroup/profi-design-system/commit/5ff2d97a5bf4a58b063557d0403c493fdcedba18))
+
+
+
+
+
 ## [0.37.1](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.37.0...@eruditorgroup/profi-ui@0.37.1) (2021-07-26)
 
 
