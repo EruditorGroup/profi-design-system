@@ -7,7 +7,6 @@ import {ICountryCode} from './constants';
 import {useAutoFocus} from '@eruditorgroup/profi-toolkit';
 
 import styles from './BarePhoneInput.module.scss';
-import {ErrorIcon} from '../../../../icons/es';
 
 export interface PhoneInputProps
   extends Omit<InputProps, 'onChange' | 'onPaste' | 'placeholder' | 'mask'> {
@@ -84,9 +83,7 @@ export default function PhoneInput({
     <Input
       leading={
         <div className={styles['leading']}>
-          <div className={cx(styles['flag'], styles[countryCode])}>
-            {!countryCode && <ErrorIcon />}
-          </div>
+          <div className={cx(styles['flag'], styles[countryCode])} />
           <div className={styles['plus']}>+</div>
         </div>
       }
