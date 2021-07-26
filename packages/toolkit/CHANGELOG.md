@@ -3,6 +3,25 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.28.0](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-toolkit@0.27.14...@eruditorgroup/profi-toolkit@0.28.0) (2021-07-26)
+
+
+### Bug Fixes
+
+* **toolkit:** finish focus scroll ([f0bb4e4](https://github.com/eruditorgroup/profi-design-system/commit/f0bb4e48ab339456cc92089be37cda3a1394ec66))
+* **ui:** clear trash & phone input story ([5d976b8](https://github.com/eruditorgroup/profi-design-system/commit/5d976b883a1a6e3cb50a801fd5d22f0f7846e016))
+* **ui:** lint ([50dd044](https://github.com/eruditorgroup/profi-design-system/commit/50dd044d68580a1e5ca939b01f4dd468fcb57968))
+* **ui:** put back flags & handle phone input paste action ([7c7b79e](https://github.com/eruditorgroup/profi-design-system/commit/7c7b79e1fc7466b597886170ab193352b82e8d39))
+
+
+### Features
+
+* **toolkit & ui:** new hook useFocusScroll to fix android input hidden bug ([633fef8](https://github.com/eruditorgroup/profi-design-system/commit/633fef84c1bbf94d27b50406c57076bf78b67fbb))
+
+
+
+
+
 ## [0.27.14](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-toolkit@0.27.13...@eruditorgroup/profi-toolkit@0.27.14) (2021-07-22)
 
 **Note:** Version bump only for package @eruditorgroup/profi-toolkit

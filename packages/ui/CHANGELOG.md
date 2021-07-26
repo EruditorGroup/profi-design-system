@@ -3,6 +3,26 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.37.0](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.36.0...@eruditorgroup/profi-ui@0.37.0) (2021-07-26)
+
+
+### Bug Fixes
+
+* **ci:** add no-console lint rule ([f4dc4b5](https://github.com/eruditorgroup/profi-design-system/commit/f4dc4b59230962a1c3c21a2b9153ca08d3e3c4b1))
+* **ui:** checkbox xxl positioning ([69e55e8](https://github.com/eruditorgroup/profi-design-system/commit/69e55e8c1f907d7ccefff00a91d093a9aff4c0ac))
+* **ui:** clear trash & phone input story ([5d976b8](https://github.com/eruditorgroup/profi-design-system/commit/5d976b883a1a6e3cb50a801fd5d22f0f7846e016))
+* **ui:** placeholder font-weight ([dd6b0ee](https://github.com/eruditorgroup/profi-design-system/commit/dd6b0eea00aadbcfdc9ea33e07a4cae794d339f2))
+* **ui:** put back flags & handle phone input paste action ([7c7b79e](https://github.com/eruditorgroup/profi-design-system/commit/7c7b79e1fc7466b597886170ab193352b82e8d39))
+
+
+### Features
+
+* **toolkit & ui:** new hook useFocusScroll to fix android input hidden bug ([633fef8](https://github.com/eruditorgroup/profi-design-system/commit/633fef84c1bbf94d27b50406c57076bf78b67fbb))
+
+
+
+
+
 # [0.36.0](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.35.5...@eruditorgroup/profi-ui@0.36.0) (2021-07-22)
 
 
