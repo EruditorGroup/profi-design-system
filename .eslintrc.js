@@ -25,10 +25,12 @@ module.exports = {
     'jest',
     'prettier',
   ],
-  rules: {},
+  rules: {
+    'no-console': 'error',
+  },
   settings: {
     jest: {
-      version: 26
-    }
-  }
+      version: 26,
+    },
+  },
 };

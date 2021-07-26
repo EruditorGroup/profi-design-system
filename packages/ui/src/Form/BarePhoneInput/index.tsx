@@ -2,14 +2,15 @@ import React, {useState, useRef, useCallback} from 'react';
 import cx from 'classnames';
 import {Input, InputProps} from '../index';
 
-import {getCountryByPhone} from './utils';
+import {getCountryByPhone, correctPhone} from './utils';
 import {ICountryCode} from './constants';
 import {useAutoFocus} from '@eruditorgroup/profi-toolkit';
 
 import styles from './BarePhoneInput.module.scss';
+import {ErrorIcon} from '../../../../icons/es';
 
 export interface PhoneInputProps
-  extends Omit<InputProps, 'onChange' | 'placeholder' | 'mask'> {
+  extends Omit<InputProps, 'onChange' | 'onPaste' | 'placeholder' | 'mask'> {
   defaultValue?: string;
   defaultCountryCode?: ICountryCode;
   autoFocus?: boolean;
@@ -51,16 +52,30 @@ export default function PhoneInput({
     [mask],
   );
 
+  const _onChange = useRef(onChange);
+  _onChange.current = onChange;
+
+  const handleChange = useCallback(
+    (val: string) => {
+      if (propValue === undefined) setStateValue(val);
+      _onChange.current?.(val);
+    },
+    [propValue, _onChange],
+  );
+
+  const handlePaste = useCallback(
+    (ev: React.ClipboardEvent<HTMLInputElement>) => {
+      ev.preventDefault();
+      handleChange(correctPhone(ev.clipboardData.getData('Text'), phoneCode));
+    },
+    [handleChange, phoneCode],
+  );
+
   const ref = useRef<HTMLInputElement | null>(null);
 
   function handleFocus(ev: React.FocusEvent<HTMLInputElement>) {
     if (onFocus) onFocus(ev);
     if (!value) handleChange(phoneCode);
-  }
-
-  function handleChange(val: string) {
-    if (propValue === undefined) setStateValue(val);
-    if (onChange) onChange(val);
   }
 
   useAutoFocus(ref, autoFocus);
@@ -69,7 +84,9 @@ export default function PhoneInput({
     <Input
       leading={
         <div className={styles['leading']}>
-          <div className={cx(styles['flag'], styles[countryCode])} />
+          <div className={cx(styles['flag'], styles[countryCode])}>
+            {!countryCode && <ErrorIcon />}
+          </div>
           <div className={styles['plus']}>+</div>
         </div>
       }
@@ -80,6 +97,7 @@ export default function PhoneInput({
       type="tel"
       autoComplete="tel"
       {...props}
+      onPaste={handlePaste}
       mask={mask}
       inputRef={(element) => {
         ref.current = element;

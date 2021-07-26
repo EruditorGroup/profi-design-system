@@ -18,6 +18,7 @@ const Template: Story = ({placeholder = 'Label', ...args}) => {
 
   return (
     <div className="preview">
+      <style>{`.preview-item {margin: 20px 5px;}`}</style>
       <Input
         {...args}
         className="preview-item"

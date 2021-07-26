@@ -75,7 +75,6 @@ const Modal: ForwardRefExoticComponent<
       onClose(event);
     };
 
-    console.log(fullscreen);
     return (
       <>
         <CSSTransition
