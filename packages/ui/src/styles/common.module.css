@@ -11,7 +11,7 @@
 }
 
 .color-light {
-  color: var(--ui-color-secondary);
+  color: var( --ui-color-light);
 }
 
 .color-danger {

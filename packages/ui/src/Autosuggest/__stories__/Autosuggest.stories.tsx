@@ -4,7 +4,7 @@ import {Story, Meta} from '@storybook/react';
 
 import Autosuggest, {AutosuggestProps, ISuggestValue} from '../index';
 import List from '../../List';
-import Tag from '../../Tag';
+import GeoTag from '../../GeoTag';
 import metro from './_metro.json';
 import {DotIcon} from '@eruditorgroup/profi-icons';
 import ReactAutosuggest from 'react-autosuggest';
@@ -97,7 +97,7 @@ const Template: Story<Omit<AutosuggestProps, 'suggestions' | 'value'>> = (
         suggestions={suggestions}
         trailing={<CloseIcon />}
         upper={tags.map(({color, value}) => (
-          <Tag
+          <GeoTag
             key={value}
             icon={color ? <DotIcon color={color as string} /> : <PlaceIcon />}
             trailing={<CloseIcon />}
@@ -106,7 +106,7 @@ const Template: Story<Omit<AutosuggestProps, 'suggestions' | 'value'>> = (
             }
           >
             {value}
-          </Tag>
+          </GeoTag>
         ))}
         inputProps={{
           placeholder: 'Введите метро или город области…',
