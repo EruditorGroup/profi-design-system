@@ -1,4 +1,4 @@
-import React, {useCallback, useRef} from 'react';
+import React, {useCallback} from 'react';
 import InputMask, {Props as InputMaskProps, InputState} from 'react-input-mask';
 import {useFocusScroll, useCombinedRef} from '@eruditorgroup/profi-toolkit';
 import classnames from 'classnames';
