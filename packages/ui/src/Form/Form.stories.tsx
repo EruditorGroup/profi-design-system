@@ -23,6 +23,8 @@ const Template: Story = ({placeholder = 'Label', ...args}) => {
         {...args}
         className="preview-item"
         placeholder="Ваш адрес"
+        withFloatLabel
+        autoFocus
         trailing={<LocationIcon onClick={onLocationClick} />}
       />
       <PhoneInput {...args} className="preview-item preview-item_short" />
