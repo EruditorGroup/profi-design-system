@@ -1,4 +1,4 @@
-import {useRef} from 'react';
+import {useCallback, useRef} from 'react';
 
 import type {RefCallback, MutableRefObject} from 'react';
 
@@ -8,14 +8,19 @@ import type {RefCallback, MutableRefObject} from 'react';
  * @param  {...React.Ref} refs - массив рефов
  */
 export default function useCombinedRef<T>(
-  ...refs: (RefCallback<T> | MutableRefObject<T> | null)[]
-): (arg: T | null) => void {
-  const combinedRef = useRef(function setRefs(arg: T | null) {
-    refs.forEach((ref) => {
-      if (typeof ref === 'function') ref(arg);
-      else if (ref !== null && arg) ref.current = arg;
-    });
-  });
+  ref: RefCallback<T> | MutableRefObject<T> | null,
+): [React.MutableRefObject<T>, (arg: T | null) => void] {
+  const newRef = useRef<T>();
 
-  return combinedRef.current;
+  const setRefs = useCallback(
+    function (arg: T | null) {
+      [ref, newRef].forEach((ref) => {
+        if (typeof ref === 'function') ref(arg);
+        else if (ref) ref.current = arg;
+      });
+    },
+    [ref],
+  );
+
+  return [newRef, setRefs];
 }

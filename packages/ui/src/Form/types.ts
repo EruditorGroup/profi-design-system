@@ -18,7 +18,7 @@ type MutableRef<HTMLElementType> =
 export type BaseControlProps<HTMLElementType = HTMLInputElement> = Partial<
   Pick<
     InputHTMLAttributes<HTMLInputElement>,
-    'id' | 'className' | 'placeholder' | 'value' | 'defaultValue'
+    'id' | 'className' | 'placeholder' | 'value' | 'defaultValue' | 'autoFocus'
   >
 > &
   React.PropsWithChildren<{
@@ -31,4 +31,6 @@ export type BaseControlProps<HTMLElementType = HTMLInputElement> = Partial<
     inputClassName?: string;
   }>;
 
-export type HTMLElementWithValue = HTMLElement & {value: string};
+export type HTMLElementWithValue = HTMLElement & {
+  value: string;
+};

@@ -6,6 +6,7 @@ import {useFloatLabel} from '@eruditorgroup/profi-toolkit';
 import type {BaseControlProps, HTMLElementWithValue} from './types';
 import FormControl from './FormControl';
 import type {FormControlProps} from './FormControl';
+import {useCombinedRef} from '@eruditorgroup/profi-toolkit';
 
 const GLOBAL_ID_PREFIX = 'profi-ui-';
 let globalIdCount = 0;
@@ -49,16 +50,17 @@ const wrapControlWithRef = <
     id,
   ]);
 
-  const [isFloated, focusHandlers] = useFloatLabel<HTMLElementType>(
-    Boolean(value || defaultValue),
-    {
-      onFocus,
-      onBlur,
-    },
-  );
+  const [inputRef, setRef] = useCombinedRef(ref);
 
-  const internalRef = useRef<HTMLElementType>(null);
-  const inputRef = useMemo(() => ref || internalRef, [ref]);
+  const [isFloated, focusHandlers] = useFloatLabel<HTMLElementType>(
+    !!(
+      value ||
+      defaultValue ||
+      restInputProps.autoFocus ||
+      inputRef.current === document.activeElement
+    ),
+    {onFocus, onBlur},
+  );
 
   const _onClick = useRef(onClick);
   _onClick.current = onClick;
@@ -104,7 +106,7 @@ const wrapControlWithRef = <
 
   return (
     <FormControl labelFor={inputId} onClick={onWrapperClick} {...wrapperProps}>
-      <Component {...inputProps} inputRef={inputRef} />
+      <Component {...inputProps} inputRef={setRef} />
     </FormControl>
   );
 };
