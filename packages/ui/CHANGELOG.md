@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.37.3](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.37.2...@eruditorgroup/profi-ui@0.37.3) (2021-07-28)
+
+
+### Bug Fixes
+
+* **ui:** float label by default when autoFocus is passed ([00208f9](https://github.com/eruditorgroup/profi-design-system/commit/00208f9ccea566ad0a169e5dc13bb937fe872f27))
+* **ui:** lint ([595a53e](https://github.com/eruditorgroup/profi-design-system/commit/595a53e0346408eb378ce2d43a880a4f26ee81b1))
+
+
+
+
+
 ## [0.37.2](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.37.1...@eruditorgroup/profi-ui@0.37.2) (2021-07-26)
 
 

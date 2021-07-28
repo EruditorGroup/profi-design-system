@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.28.3](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-toolkit@0.28.2...@eruditorgroup/profi-toolkit@0.28.3) (2021-07-28)
+
+
+### Bug Fixes
+
+* rename test ([b1c3bb3](https://github.com/eruditorgroup/profi-design-system/commit/b1c3bb30dbbccba7981ffb69e453413fbd633e47))
+* **ui:** float label by default when autoFocus is passed ([00208f9](https://github.com/eruditorgroup/profi-design-system/commit/00208f9ccea566ad0a169e5dc13bb937fe872f27))
+
+
+
+
+
 ## [0.28.2](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-toolkit@0.28.1...@eruditorgroup/profi-toolkit@0.28.2) (2021-07-26)
 
 **Note:** Version bump only for package @eruditorgroup/profi-toolkit
