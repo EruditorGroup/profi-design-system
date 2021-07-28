@@ -1,12 +1,11 @@
-// yarn test src/client/hooks/__tests__/useCombinedRef.js
 import {act, renderHook} from '@testing-library/react-hooks';
 import {useRef} from 'react';
 import useCombinedRef from '../useCombinedRef';
 
-jest.unmock('../useRelativePosition');
+jest.unmock('../useCombinedRef');
 jest.useRealTimers();
 
-describe('useRelativePosition', () => {
+describe('useCombinedRef', () => {
   it('should be defined', () => {
     expect(useCombinedRef).toBeDefined();
   });
