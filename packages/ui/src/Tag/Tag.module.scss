@@ -1,52 +1,59 @@
 .tag {
-  border-radius: 100px;
-  height: 35px;
-  padding: 0 13px 0 13px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-  background: var(--ui-bg-default);
-  margin-bottom: 10px;
-  margin-right: 5px;
+    background-color: var(--ui-color-light);
+    cursor: pointer;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+
+    &.active,
+    &:focus,
+    &:hover {
+        &:not(.current):not(.disabled) {
+            background-color: var(--ui-color-lightState);
+        }
+        
+    }
+
+    &.disabled {
+        color: var(--ui-color-lightInverseState);
+        cursor: default;
+    }
 }
 
-.design-light {
-  background: var(--ui-bg-light);
+.disabled {
+    color: var(--ui-color-lightInverseState);
 }
 
-.icon {
-  display: block;
-  width: 9px;
-  height: 9px;
-  background: center center/contain transparent no-repeat;
+.current {
+    background-color: var(--ui-color-lightInverse);
+    color: var(--ui-color-light);
+}
+
+.size-l {
+    padding: 13px 15px 15px;
+    border-radius: 25px;
+}
+
+.size-m {
+    padding: 10px 15px;
+    border-radius: 20px;
+}
+
+.size-s {
+    padding: 9px 15px;
+    border-radius: 18px;
 }
 
 .leading,
 .trailing {
-  display: flex;
-  align-items: center;
+  display: inline-flex;
+  flex-shrink: 0;
 }
 
 .leading {
-  width: 15px;
-  height: 15px;
-  margin-right: 3px;
-  font-size: 12px;
-  justify-content: flex-start;
+  padding-right: 7px;
 }
 
 .trailing {
-  color: var(--ui-color-text);
-  width: 17px;
-  height: 17px;
-  margin-left: 3px;
-  margin-right: -5px;
-  cursor: pointer;
-  border-radius: 50%;
-  font-size: 9px;
-  justify-content: center;
-  &:hover {
-    background: var(--ui-color-lightState);
-  }
+  padding-left: 7px;
 }

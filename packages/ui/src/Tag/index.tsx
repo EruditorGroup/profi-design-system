@@ -1,64 +1,46 @@
-import React from 'react';
-import classnames from 'classnames';
-import {ISize} from '@eruditorgroup/profi-toolkit';
+import * as React from 'react';
+import cx from 'classnames';
 
 import Text from '../Typography/Text';
 
+import {ISize} from '@eruditorgroup/profi-toolkit';
+
 import styles from './Tag.module.scss';
 
-type IIconFormat = 'base64Svg' | 'base64Png';
-type IIcon = {icon: string; format?: IIconFormat};
+type TagSize = Extract<ISize, 'l' | 'm' | 's'>;
+
 export interface TagProps extends React.HTMLAttributes<HTMLDivElement> {
-  size?: ISize;
-  icon?: React.ReactNode | IIcon;
+  size?: TagSize;
+  active?: boolean;
+  current?: boolean;
+  leading?: React.ReactNode;
   trailing?: React.ReactNode;
-  design?: 'plain' | 'light';
+  disabled?: boolean;
 }
 
-function getIconUrlPrefix(format?: IIconFormat): string {
-  switch (format) {
-    case 'base64Svg':
-      return `data:image/svg+xml;base64,`;
-    case 'base64Png':
-      return `data:image/png;base64,`;
-    default:
-      return '';
-  }
-}
+const Tag: React.FC<TagProps> = (props) => {
+  const {size = 'm', children, current, leading, trailing, active, disabled, onClick, ...rest} = props;
 
-function getIcon(iconObj: NonNullable<TagProps['icon']>): React.ReactNode {
-  if (React.isValidElement(iconObj)) return iconObj;
-
-  const {format, icon} = iconObj as IIcon;
-  return (
-    <i
-      className={styles['icon']}
-      style={{backgroundImage: `url(${getIconUrlPrefix(format)}${icon})`}}
-    />
-  );
-}
-
-const Tag: React.FC<TagProps> = function Tag({
-  size = 's',
-  children,
-  trailing,
-  icon,
-  className,
-  design = 'plain',
-  ...props
-}) {
   return (
     <div
-      className={classnames(
+      className={cx(
         styles['tag'],
-        styles[`design-${design}`],
-        className,
+        styles[`size-${size}`],
+        current && styles['current'],
+        active && styles['active'],
+        disabled && styles['disabled']
       )}
-      {...props}
+      aria-disabled={disabled}
+      role = "button"
+      tabIndex={!disabled && !!onClick ? 0 : undefined}
+      onClick={onClick}
+      {...rest}
     >
-      {icon && <div className={styles['leading']}>{getIcon(icon)}</div>}
-      <Text size={size}>{children}</Text>
-      {trailing && <div className={styles['trailing']}>{trailing}</div>}
+      {leading && <div className={styles['leading']}>{leading}</div>}
+      <Text className={cx(disabled && styles['disabled'])} size={size} color={current ? 'light' : undefined}>
+        {children}
+      </Text>
+      {leading && <div className={styles['trailing']}>{trailing}</div>}
     </div>
   );
 };

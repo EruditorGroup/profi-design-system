@@ -5,11 +5,13 @@ import styles from './List.module.scss';
 
 type TListItemSize = Extract<ISize, 'm' | 'l'>;
 type TListDesign = 'high' | 'low';
+export type BorderedModeType = 'default' | 'header-borderless';
 
 interface ListContextType {
   size: TListItemSize;
   bordered: boolean;
   design: TListDesign;
+  borderedMode: BorderedModeType;
 }
 
 const ListContext = createContext<ListContextType | null>(null);
@@ -25,11 +27,12 @@ export type ListProps = Omit<
   'size'
 > & {
   size?: TListItemSize;
+  bordered?: boolean;
+  borderedMode?: BorderedModeType;
 };
 
 type HighDesignProps = {
   design: 'high';
-  bordered?: boolean;
 };
 
 type LowDesignProps = {
@@ -43,6 +46,8 @@ interface ComponentType extends ForwardingComponent<'ul', ListProps> {
 const List: ComponentType = function List(props) {
   const {
     children,
+    bordered,
+    borderedMode = 'default',
     as: Component = 'ul',
     size = 'm',
     design = 'low',
@@ -51,7 +56,7 @@ const List: ComponentType = function List(props) {
 
   return (
     <ListContext.Provider
-      value={{size, bordered: extractBorderValue(props), design}}
+      value={{size, bordered, design, borderedMode}}
     >
       <Component className={styles['list']} {...rest}>
         {children}
@@ -60,11 +65,6 @@ const List: ComponentType = function List(props) {
   );
 };
 
-const extractBorderValue = (
-  props: HighDesignProps | LowDesignProps,
-): boolean => {
-  return props.design === 'high' ? props.bordered || false : false;
-};
-
 List.Item = ListItem;
 export default List;
+

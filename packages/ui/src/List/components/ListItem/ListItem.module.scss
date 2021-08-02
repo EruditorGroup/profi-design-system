@@ -53,6 +53,12 @@
   opacity: 0;
 }
 
+.bordered.header-borderless:first-child + .bordered {
+  &::before {
+    @include hide-border();
+  }
+}
+
 /* У задизейбленного элемента не делаем ховер, поэтому и не убираем разделитель. */
 .list-item:hover:not(.disabled),
 .list-item:hover + .list-item {

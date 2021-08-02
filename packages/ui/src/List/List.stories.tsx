@@ -60,12 +60,8 @@ ListStory.storyName = 'List';
 ListStory.args = {
   children: (
     <>
-      <List.Item>
-        <List.Item.MainText>Тестовый тест</List.Item.MainText>
-      </List.Item>
-      <List.Item>
-        <List.Item.MainText>Тестовый тест</List.Item.MainText>
-      </List.Item>
+      <List.Item>Тестовый тест</List.Item>
+      <List.Item>Тестовый тест</List.Item>
     </>
   ),
 };
@@ -77,18 +73,26 @@ BorderedList.args = {
   bordered: true,
   children: (
     <>
-      <List.Item>
-        <List.Item.MainText>Тестовый тест</List.Item.MainText>
-      </List.Item>
-      <List.Item>
-        <List.Item.MainText>Тестовый тест</List.Item.MainText>
-      </List.Item>
-      <List.Item>
-        <List.Item.MainText>Тестовый тест</List.Item.MainText>
-      </List.Item>
-      <List.Item>
-        <List.Item.MainText>Тестовый тест</List.Item.MainText>
-      </List.Item>
+      <List.Item>Тестовый тест</List.Item>
+      <List.Item>Тестовый тест</List.Item>
+      <List.Item>Тестовый тест</List.Item>
+      <List.Item>Тестовый тест</List.Item>
+    </>
+  ),
+};
+
+export const BorderedModeList = TemplateFactory(
+  createMeta(LIST_SIZES, ['high']),
+).bind({});
+BorderedModeList.args = {
+  bordered: true,
+  borderedMode: 'header-borderless',
+  children: (
+    <>
+      <List.Item><Text bold>Заголовок</Text></List.Item>
+      <List.Item>Тестовый тест</List.Item>
+      <List.Item>Тестовый тест</List.Item>
+      <List.Item>Тестовый тест</List.Item>
     </>
   ),
 };
@@ -131,36 +135,28 @@ WithLeading.args = {
   children: (
     <>
       <List.Item leading={<DotIcon color="#BAD45E" />}>
-        <List.Item.MainText>
-          Кожуховская{' '}
-          <Text as="span" size="l" color="muted">
-            метро
-          </Text>
-        </List.Item.MainText>
+        Кожуховская{' '}
+        <Text as="span" size="l" color="muted">
+          метро
+        </Text>
       </List.Item>
       <List.Item leading={<DotIcon color="#83513A" />}>
-        <List.Item.MainText>
-          Комсомольская{' '}
-          <Text as="span" size="l" color="muted">
-            метро
-          </Text>
-        </List.Item.MainText>
+        Комсомольская{' '}
+        <Text as="span" size="l" color="muted">
+          метро
+        </Text>
       </List.Item>
       <List.Item leading={<DotIcon color="#E68845" />}>
-        <List.Item.MainText>
-          Коньково{' '}
-          <Text as="span" size="l" color="muted">
-            метро
-          </Text>
-        </List.Item.MainText>
+        Коньково{' '}
+        <Text as="span" size="l" color="muted">
+          метро
+        </Text>
       </List.Item>
       <List.Item leading={<DotIcon color="#854A98" />}>
-        <List.Item.MainText>
-          Косино{' '}
-          <Text size="l" as="span" color="muted">
-            метро
-          </Text>
-        </List.Item.MainText>
+        Косино{' '}
+        <Text size="l" as="span" color="muted">
+          метро
+        </Text>
       </List.Item>
     </>
   ),
