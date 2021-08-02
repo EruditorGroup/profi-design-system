@@ -1,6 +1,6 @@
-import React, {useCallback, useRef} from 'react';
+import React, {useCallback} from 'react';
 import InputMask, {Props as InputMaskProps, InputState} from 'react-input-mask';
-import {useFocusScroll} from '@eruditorgroup/profi-toolkit';
+import {useFocusScroll, useCombinedRef} from '@eruditorgroup/profi-toolkit';
 import classnames from 'classnames';
 
 import styles from './BareInput.module.scss';
@@ -24,15 +24,7 @@ const BareInput: React.FC<BareInputProps> = ({
   inputRef,
   ...props
 }) => {
-  const ref = useRef<HTMLInputElement>();
-  const replaceRef = useCallback(
-    (el: HTMLInputElement) => {
-      ref.current = el;
-      if (typeof inputRef === 'function') inputRef(el);
-      else if (inputRef) inputRef.current = el;
-    },
-    [inputRef],
-  );
+  const [ref, setRef] = useCombinedRef<HTMLInputElement>(inputRef);
 
   useFocusScroll(ref, withFocusScroll);
 
@@ -41,14 +33,14 @@ const BareInput: React.FC<BareInputProps> = ({
       mask ? (
         <InputMask
           {...inputProps}
-          inputRef={replaceRef}
+          inputRef={setRef}
           mask={mask}
           alwaysShowMask={alwaysShowMask}
         />
       ) : (
-        <input {...inputProps} ref={replaceRef} />
+        <input {...inputProps} ref={setRef} />
       ),
-    [mask, alwaysShowMask, replaceRef],
+    [mask, alwaysShowMask, setRef],
   );
 
   return InputComponent({
