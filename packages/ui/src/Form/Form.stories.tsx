@@ -4,7 +4,7 @@ import {Story, Meta} from '@storybook/react';
 import {Input, Textarea} from './index';
 import {CloseIcon, DotIcon, LocationIcon} from '@eruditorgroup/profi-icons';
 import PhoneInput from './BarePhoneInput';
-import Tag from '../Tag';
+import GeoTag from '../GeoTag';
 
 export default {
   title: 'Form/Preview',
@@ -50,12 +50,12 @@ const Template: Story = ({placeholder = 'Label', ...args}) => {
         {...args}
         upper={
           <>
-            <Tag icon={<DotIcon color="#f68230" />} trailing={<CloseIcon />}>
+            <GeoTag icon={<DotIcon color="#f68230" />} trailing={<CloseIcon />}>
               Профсоюзная
-            </Tag>
-            <Tag icon={<DotIcon color="#f68230" />} trailing={<CloseIcon />}>
+            </GeoTag>
+            <GeoTag icon={<DotIcon color="#f68230" />} trailing={<CloseIcon />}>
               ВДНХ
-            </Tag>
+            </GeoTag>
           </>
         }
         className="preview-item"

@@ -1,0 +1,52 @@
+.tag {
+  border-radius: 100px;
+  height: 35px;
+  padding: 0 13px 0 13px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  background: var(--ui-bg-default);
+  margin-bottom: 10px;
+  margin-right: 5px;
+}
+
+.design-light {
+  background: var(--ui-bg-light);
+}
+
+.icon {
+  display: block;
+  width: 9px;
+  height: 9px;
+  background: center center/contain transparent no-repeat;
+}
+
+.leading,
+.trailing {
+  display: flex;
+  align-items: center;
+}
+
+.leading {
+  width: 15px;
+  height: 15px;
+  margin-right: 3px;
+  font-size: 12px;
+  justify-content: flex-start;
+}
+
+.trailing {
+  color: var(--ui-color-text);
+  width: 17px;
+  height: 17px;
+  margin-left: 3px;
+  margin-right: -5px;
+  cursor: pointer;
+  border-radius: 50%;
+  font-size: 9px;
+  justify-content: center;
+  &:hover {
+    background: var(--ui-color-lightState);
+  }
+}

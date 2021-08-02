@@ -50,9 +50,12 @@ const ListItem: ComponentType = forwardRef((props, ref) => {
     as: Component = 'li',
     ...rest
   } = props;
-  const {size, bordered, design} = useListContext();
+  const {size, bordered, design, borderedMode} = useListContext();
 
   const isCaption = !!findChildByName(children, Caption.displayName);
+  const isMainText = !!findChildByName(children, MainText.displayName);
+
+  const wrappedChildren = !isMainText ? <MainText>{children}</MainText> : children;
 
   return (
     <Component
@@ -63,6 +66,7 @@ const ListItem: ComponentType = forwardRef((props, ref) => {
         styles[`design-${design}_size-${size}`],
         disabled && styles['disabled'],
         bordered && styles['bordered'],
+        styles[borderedMode],
         active && styles['active'],
         className,
       )}
@@ -84,7 +88,7 @@ const ListItem: ComponentType = forwardRef((props, ref) => {
           </span>
         )}
         <ListItemContext.Provider value={disabled}>
-          <div className={styles['content']}>{children}</div>
+          <div className={styles['content']}>{wrappedChildren}</div>
         </ListItemContext.Provider>
 
         {!!trailing && <span className={styles['trailing']}>{trailing}</span>}
