@@ -64,8 +64,10 @@ export default function PhoneInput({
 
   const handlePaste = useCallback(
     (ev: React.ClipboardEvent<HTMLInputElement>) => {
-      ev.preventDefault();
-      handleChange(correctPhone(ev.clipboardData.getData('Text'), phoneCode));
+      try {
+        handleChange(correctPhone(ev.clipboardData.getData('Text'), phoneCode));
+        ev.preventDefault();
+      } catch (err) {}
     },
     [handleChange, phoneCode],
   );
