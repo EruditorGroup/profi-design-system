@@ -1,7 +1,7 @@
 import React, {MouseEventHandler, useCallback, useMemo, useRef} from 'react';
 import type {ComponentProps, ComponentType, ReactElement, Ref} from 'react';
 
-import {useFloatLabel} from '@eruditorgroup/profi-toolkit';
+import {useFloatLabel, canUseDom} from '@eruditorgroup/profi-toolkit';
 
 import type {BaseControlProps, HTMLElementWithValue} from './types';
 import FormControl from './FormControl';
@@ -10,6 +10,8 @@ import {useCombinedRef} from '@eruditorgroup/profi-toolkit';
 
 const GLOBAL_ID_PREFIX = 'profi-ui-';
 let globalIdCount = 0;
+
+const isClientSide = canUseDom();
 
 export type ControlProps<T extends BaseControlProps = BaseControlProps> = T &
   FormControlProps & {
@@ -57,7 +59,7 @@ const wrapControlWithRef = <
       value ||
       defaultValue ||
       restInputProps.autoFocus ||
-      inputRef.current === document.activeElement
+      (isClientSide && inputRef.current === document.activeElement)
     ),
     {onFocus, onBlur},
   );
