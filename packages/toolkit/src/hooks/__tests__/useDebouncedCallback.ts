@@ -59,4 +59,21 @@ describe('useDebouncedCallback', () => {
 
     expect(timesCalled).toBe(2);
   });
+
+  it('should be cleaned after unmount ', async () => {
+    let timesCalled = 0;
+    let debouncedFn;
+
+    const hook = renderHook(() => {
+      debouncedFn = useDebouncedCallback(() => (timesCalled += 1), 300, [
+        timesCalled,
+      ]);
+    });
+
+    debouncedFn(timesCalled);
+    await waitFor(50);
+    hook.unmount();
+    await waitFor(350);
+    expect(timesCalled).toBe(0);
+  });
 });
