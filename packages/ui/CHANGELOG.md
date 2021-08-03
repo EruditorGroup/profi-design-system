@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.37.5](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.37.4...@eruditorgroup/profi-ui@0.37.5) (2021-08-03)
+
+
+### Bug Fixes
+
+* **ui:** adapt to ssr ([ce2fec7](https://github.com/eruditorgroup/profi-design-system/commit/ce2fec7dd00bdb3e7c6737f5358ec5da48bcb715))
+* **ui:** Input onPaste catch fails ([6836180](https://github.com/eruditorgroup/profi-design-system/commit/683618009bc497ce7f4be8b5f61c2e224e948436))
+
+
+
+
+
 ## [0.37.4](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.37.3...@eruditorgroup/profi-ui@0.37.4) (2021-08-02)
 
 **Note:** Version bump only for package @eruditorgroup/profi-ui
