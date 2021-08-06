@@ -88,3 +88,9 @@ export type {TagProps} from './Tag';
 export {default as List} from './List';
 export type {ListProps} from './List';
 export type {ListItemProps} from './List/components/ListItem';
+
+export {default as CurrencySymbol} from './CurrencySymbol';
+export type {CurrencySymbolProps} from './CurrencySymbol';
+
+export {default as Price} from './Price';
+export type {PriceProps} from './Price';
