@@ -10,8 +10,12 @@ import type {TextProps} from '../';
 export interface PriceProps extends TextProps {
   value: number;
   currencyCode: string;
-  minority?: number; // разряд числа после запятой
+  decimals?: number;
   pretty?: boolean;
+}
+
+function isInteger(n: number) {
+  return n % 1 === 0;
 }
 
 const Price = forwardRef<HTMLSpanElement, PriceProps>(
@@ -20,7 +24,7 @@ const Price = forwardRef<HTMLSpanElement, PriceProps>(
       as: Component = 'span',
       value,
       currencyCode,
-      minority = 100,
+      decimals = 2,
       pretty,
       ...props
     },
@@ -28,10 +32,10 @@ const Price = forwardRef<HTMLSpanElement, PriceProps>(
   ) => {
     if (isNaN(value)) return null;
 
-    const roundedValue = Math.round(value * minority) / minority;
+    const formattedValue = isInteger(value) ? value : value.toFixed(decimals);
     return (
       <Text as={Component} ref={ref} {...props}>
-        {pretty ? prettyNumber(roundedValue) : roundedValue}&nbsp;
+        {pretty ? prettyNumber(formattedValue) : formattedValue}&nbsp;
         <CurrencySymbol code={currencyCode} />
       </Text>
     );

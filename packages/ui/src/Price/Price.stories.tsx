@@ -13,7 +13,7 @@ const labelStyles = {marginBottom: '4px'};
 
 const Template: Story<PriceProps> = (args) => {
   return (
-    <div>
+    <>
       <Title level={1} style={{marginBottom: '24px'}}>
         Компонент Price
       </Title>
@@ -35,7 +35,13 @@ const Template: Story<PriceProps> = (args) => {
         </Text>
         <Price value={999.26} currencyCode="KZT" size="xl" pretty {...args} />
       </div>
-    </div>
+      <div style={blockStyles}>
+        <Text color="muted" size="m" style={labelStyles}>
+          Цена с копейками (должно быть два знака после запятой)
+        </Text>
+        <Price value={1099.9} currencyCode="RUB" size="xl" pretty {...args} />
+      </div>
+    </>
   );
 };
 
