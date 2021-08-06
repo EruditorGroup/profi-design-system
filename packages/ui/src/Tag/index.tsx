@@ -19,7 +19,7 @@ export interface TagProps extends React.HTMLAttributes<HTMLDivElement> {
 }
 
 const Tag: React.FC<TagProps> = (props) => {
-  const {size = 'm', children, current, leading, trailing, active, disabled, onClick, ...rest} = props;
+  const {size = 'm', children, current, leading, trailing, active, disabled, onClick, className, ...rest} = props;
 
   return (
     <div
@@ -28,7 +28,8 @@ const Tag: React.FC<TagProps> = (props) => {
         styles[`size-${size}`],
         current && styles['current'],
         active && styles['active'],
-        disabled && styles['disabled']
+        disabled && styles['disabled'],
+        className,
       )}
       aria-disabled={disabled}
       role = "button"

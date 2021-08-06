@@ -1,5 +1,6 @@
-import {useLayoutEffect, useCallback} from 'react';
+import {useCallback} from 'react';
 import {smoothScroll} from '../utils';
+import useSafeLayoutEffect from './useSafeLayoutEffect';
 
 export default function useFocusScroll<
   R extends React.RefObject<HTMLInputElement | null>
@@ -13,7 +14,7 @@ export default function useFocusScroll<
     }, 500);
   }, [inputRef]);
 
-  useLayoutEffect(() => {
+  useSafeLayoutEffect(() => {
     const {current: element} = inputRef;
     if (enabled && element) {
       element.addEventListener('focus', scrollIntoView);
