@@ -1,6 +1,7 @@
 .link {
   color: var(--ui-color-link);
   text-decoration: none;
+  cursor: pointer;
 
   &:hover {
     color: var(--ui-color-primary);
@@ -11,6 +12,7 @@
 .disabled:hover,
 .disabled:active {
   color: var(--ui-color-lightState);
+  cursor: default;
 }
 
 .underlined {
