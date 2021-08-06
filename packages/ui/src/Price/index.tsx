@@ -14,10 +14,6 @@ export interface PriceProps extends TextProps {
   pretty?: boolean;
 }
 
-function isInteger(n: number) {
-  return n % 1 === 0;
-}
-
 const Price = forwardRef<HTMLSpanElement, PriceProps>(
   (
     {
@@ -32,7 +28,10 @@ const Price = forwardRef<HTMLSpanElement, PriceProps>(
   ) => {
     if (isNaN(value)) return null;
 
-    const formattedValue = isInteger(value) ? value : value.toFixed(decimals);
+    const formattedValue = Number.isInteger(value)
+      ? value
+      : value.toFixed(decimals);
+
     return (
       <Text as={Component} ref={ref} {...props}>
         {pretty ? prettyNumber(formattedValue) : formattedValue}&nbsp;
