@@ -42,4 +42,5 @@ export interface ForwardingComponent<
     context?: Context,
   ): React.ReactElement | null;
   defaultProps?: Partial<P>;
+  displayName?: string;
 }
