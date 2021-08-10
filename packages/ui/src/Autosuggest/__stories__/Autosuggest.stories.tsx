@@ -78,6 +78,7 @@ const Template: Story<Omit<AutosuggestProps, 'suggestions' | 'value'>> = (
       <Autosuggest
         {...args}
         size="l"
+        suggestionsSize="l"
         suggestions={suggestions}
         inputProps={{
           value,
@@ -94,6 +95,7 @@ const Template: Story<Omit<AutosuggestProps, 'suggestions' | 'value'>> = (
         isMultiple
         block
         size="l"
+        suggestionsSize="l"
         suggestions={suggestions}
         trailing={<CloseIcon />}
         upper={tags.map(({color, value}) => (
@@ -125,6 +127,7 @@ const Template: Story<Omit<AutosuggestProps, 'suggestions' | 'value'>> = (
         {...args}
         block
         size="l"
+        suggestionsSize="l"
         isLoading={isLoading}
         suggestions={suggestions}
         inputProps={{
@@ -137,6 +140,22 @@ const Template: Story<Omit<AutosuggestProps, 'suggestions' | 'value'>> = (
       />
       <h2>Yandex geo suggestions</h2>
       <YandexGeoSuggestion />
+
+      <h2>Opened suggestions view without interactive</h2>
+      <Autosuggest
+        {...args}
+        size="xl"
+        suggestionsSize="l"
+        suggestions={suggestions}
+        inputProps={{
+          value: 'П',
+          onChange: (_, params) => {},
+        }}
+        onSuggestionsFetchRequested={updateSuggestions}
+        onSuggestionSelected={(_, {suggestion}) => setValue(suggestion.value)}
+        renderSuggestion={renderSuggestion}
+        alwaysRenderSuggestions
+      />
     </>
   );
 };

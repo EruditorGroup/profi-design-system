@@ -16,15 +16,13 @@ export type ISuggestValue = {
   [key: string]: React.ReactNode;
 };
 type RewritedProps =
-  | 'size'
   | 'ref'
   | 'theme'
   | 'getSuggestionValue'
   | 'renderSuggestionsContainer'
   | 'renderInputComponent'
   | 'value'
-  | 'onChange'
-  | 'size';
+  | 'onChange';
 
 export type AutosuggestProps = Omit<
   AutosuggestPropsBase<ISuggestValue>,
@@ -34,7 +32,7 @@ export type AutosuggestProps = Omit<
     AutosuggestPropsSingleSection<ISuggestValue> & InputProps,
     RewritedProps
   > & {
-    size?: ListProps['size'];
+    suggestionsSize?: ListProps['size'];
     suggestions: ISuggestValue[];
     isLoading?: boolean;
     isMultiple?: boolean;
@@ -51,6 +49,7 @@ const Autosuggest = forwardRef(function Autosuggest(
   {
     className,
     size = 'm',
+    suggestionsSize = 'm',
     isLoading,
     suggestions,
     block = false,
@@ -87,7 +86,7 @@ const Autosuggest = forwardRef(function Autosuggest(
         query > '' && (
           <Space
             withShadow
-            radius={size}
+            radius={suggestionsSize}
             bg="white"
             {..._props}
             {...(suggestionsContainerProps || {})}
@@ -102,11 +101,11 @@ const Autosuggest = forwardRef(function Autosuggest(
               as="div"
               className={styles['uilist']}
               design="low"
-              size={size}
+              size={suggestionsSize}
             >
               {isLoading ? (
                 <Spinner
-                  size={size}
+                  size={suggestionsSize}
                   className={styles['spinner']}
                   color="primary"
                 />
