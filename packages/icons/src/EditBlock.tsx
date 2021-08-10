@@ -2,7 +2,7 @@ import React, {forwardRef} from 'react';
 import type {ForwardRefExoticComponent} from 'react';
 import type {IconPropsType} from './_types';
 
-const BlockIcon: ForwardRefExoticComponent<IconPropsType> = forwardRef(
+const EditBlockIcon: ForwardRefExoticComponent<IconPropsType> = forwardRef(
   (props, ref) => {
     return (
       <svg
@@ -32,6 +32,6 @@ const BlockIcon: ForwardRefExoticComponent<IconPropsType> = forwardRef(
   },
 );
 
-BlockIcon.displayName = 'BlockIcon';
+EditBlockIcon.displayName = 'EditBlockIcon';
 
-export default BlockIcon;
+export default EditBlockIcon;
