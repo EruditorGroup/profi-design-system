@@ -12,6 +12,7 @@ export {default as CloseIcon} from './Close';
 export {default as DiagramIcon} from './Diagram';
 export {default as DotIcon} from './Dot';
 export {default as EditIcon} from './Edit';
+export {default as EditBlockIcon} from './EditBlock';
 export {default as FbIcon} from './Fb';
 export {default as GalleryIcon} from './Gallery';
 export {default as HistoryIcon} from './History';
