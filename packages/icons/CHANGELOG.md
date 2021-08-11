@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.29.0](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-icons@0.28.8...@eruditorgroup/profi-icons@0.29.0) (2021-08-11)
+
+
+### Bug Fixes
+
+* **icons:** update snapshots ([97381b8](https://github.com/eruditorgroup/profi-design-system/commit/97381b89440b4dd787cd015e36f7df015c1e0275))
+
+
+### Features
+
+* **icons:** EditBlock ([524ae25](https://github.com/eruditorgroup/profi-design-system/commit/524ae250f76b13d18651e346c706d977cd509ab5))
+
+
+
+
+
 ## [0.28.8](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-icons@0.28.7...@eruditorgroup/profi-icons@0.28.8) (2021-08-10)
 
 **Note:** Version bump only for package @eruditorgroup/profi-icons
