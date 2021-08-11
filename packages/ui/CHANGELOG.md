@@ -3,6 +3,27 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.38.1](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.38.0...@eruditorgroup/profi-ui@0.38.1) (2021-08-10)
+
+**Note:** Version bump only for package @eruditorgroup/profi-ui
+
+
+
+
+
+# [0.38.0](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.37.5...@eruditorgroup/profi-ui@0.38.0) (2021-08-09)
+
+
+### Features
+
+* **Link:** cursor: pointer по умолчанию ([69baec3](https://github.com/eruditorgroup/profi-design-system/commit/69baec351fd9af6dcb13ad68c0a386beb9fd3a9f))
+* Компонент CurrencySymbol ([c730597](https://github.com/eruditorgroup/profi-design-system/commit/c730597594ffe4f152d055b0b4ee57995a48b629))
+* Компонент Price ([4c429b2](https://github.com/eruditorgroup/profi-design-system/commit/4c429b2ae31f273505ef25be6d7a691a6a7c1011))
+
+
+
+
+
 ## [0.37.5](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.37.4...@eruditorgroup/profi-ui@0.37.5) (2021-08-03)
 
 

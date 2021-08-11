@@ -10,3 +10,4 @@ export {default as useWatcher} from './useCombinedRef';
 export {default as useAutoFocus} from './useAutoFocus';
 export {default as useFocusScroll} from './useFocusScroll';
 export {default as useDebouncedCallback} from './useDebouncedCallback';
+export {default as useSafeLayoutEffect} from './useSafeLayoutEffect';

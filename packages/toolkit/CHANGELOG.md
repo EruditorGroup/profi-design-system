@@ -3,6 +3,31 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.29.1](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-toolkit@0.29.0...@eruditorgroup/profi-toolkit@0.29.1) (2021-08-10)
+
+**Note:** Version bump only for package @eruditorgroup/profi-toolkit
+
+
+
+
+
+# [0.29.0](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-toolkit@0.28.5...@eruditorgroup/profi-toolkit@0.29.0) (2021-08-09)
+
+
+### Bug Fixes
+
+* DisplayName в type ForwardingComponent ([83ba9e3](https://github.com/eruditorgroup/profi-design-system/commit/83ba9e39a1ff8246cd1782c80d9e68c2e8ea4c3a))
+
+
+### Features
+
+* Добавлена утилита plural ([d465ba1](https://github.com/eruditorgroup/profi-design-system/commit/d465ba1187946415941ff2a44ceadc55d733702c))
+* Добавлена утилита prettyNumber ([7ce80c0](https://github.com/eruditorgroup/profi-design-system/commit/7ce80c0550544a5b9eb4a1ed653e8cf5c005f279))
+
+
+
+
+
 ## [0.28.5](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-toolkit@0.28.4...@eruditorgroup/profi-toolkit@0.28.5) (2021-08-03)
 
 **Note:** Version bump only for package @eruditorgroup/profi-toolkit
