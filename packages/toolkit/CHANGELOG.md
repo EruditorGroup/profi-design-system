@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.31.0](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-toolkit@0.30.0...@eruditorgroup/profi-toolkit@0.31.0) (2021-08-16)
+
+
+### Features
+
+* **useStateSafe:** Добавлен новый хук для безопасного изменения стейта ([9747e44](https://github.com/eruditorgroup/profi-design-system/commit/9747e44dcdd70dbc31307d38d91d1135612e376a))
+
+
+
+
+
 # [0.30.0](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-toolkit@0.29.1...@eruditorgroup/profi-toolkit@0.30.0) (2021-08-11)
 
 
