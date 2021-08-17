@@ -1,8 +1,14 @@
-import React, {createContext, forwardRef, useContext, useState} from 'react';
+import React, {
+  createContext,
+  forwardRef,
+  useContext,
+  useState,
+  useRef,
+} from 'react';
 import classNames from 'classnames';
 import TooltipContent from './components/TooltipContent';
 import TooltipToggler from './components/TooltipToggler';
-
+import {useClickOutside} from '@eruditorgroup/profi-toolkit';
 import type {ForwardRefExoticComponent, HTMLAttributes} from 'react';
 
 import styles from './Tooltip.module.scss';
@@ -50,6 +56,13 @@ const Tooltip = forwardRef<HTMLDivElement, TooltipProps>(
     ref,
   ) => {
     const [opened, setOpened] = useState(false);
+    const _ref = useRef<HTMLDivElement | null>(null);
+
+    useClickOutside(_ref, () => {
+      if (trigger === 'click') {
+        opened && setOpened(false);
+      }
+    });
 
     return (
       <TooltipContext.Provider value={{opened, setOpened, trigger, persist}}>
@@ -64,7 +77,11 @@ const Tooltip = forwardRef<HTMLDivElement, TooltipProps>(
             if (onMouseLeave) onMouseLeave(ev);
           }}
           {...props}
-          ref={ref}
+          ref={(el) => {
+            _ref.current = el;
+            if (typeof ref === 'function') ref(el);
+            else if (ref) ref.current = el;
+          }}
         />
       </TooltipContext.Provider>
     );

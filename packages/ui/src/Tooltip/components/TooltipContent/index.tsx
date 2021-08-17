@@ -13,6 +13,7 @@ import styles from './TooltipContent.module.scss';
 export interface TooltipProps extends HTMLAttributes<HTMLDivElement> {
   animated?: boolean;
   fit?: boolean;
+  overlayClassName?: string;
   position?:
     | 'bottom-left'
     | 'bottom-right'
@@ -26,7 +27,14 @@ const TooltipContent: ForwardRefExoticComponent<
   TooltipProps & RefAttributes<HTMLDivElement>
 > = forwardRef(
   (
-    {animated = true, position = 'bottom-left', fit, className, ...props},
+    {
+      animated = true,
+      position = 'bottom-left',
+      fit,
+      className,
+      overlayClassName,
+      ...props
+    },
     ref,
   ) => {
     const {opened} = useTooltipContext();
@@ -38,6 +46,7 @@ const TooltipContent: ForwardRefExoticComponent<
           styles[`position-${position}`],
           opened && styles['opened'],
           animated && styles['animated'],
+          overlayClassName,
         )}
       >
         <div
