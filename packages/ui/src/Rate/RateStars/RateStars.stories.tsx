@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useLayoutEffect, useRef} from 'react';
 import {Story, Meta} from '@storybook/react';
 
 import RateStars, {RateStarsProps, MARKS_ARRAY} from './';
@@ -9,7 +9,7 @@ import TableGuides, {
 const RATE_SIZES: NonNullable<RateStarsProps['size']>[] = ['s', 'm', 'l'];
 
 export default {
-  title: 'Rate/RateStars',
+  title: 'RateStars',
 } as Meta;
 
 type RateStoryMeta = Omit<
@@ -31,16 +31,56 @@ const rateStoryMeta: RateStoryMeta = {
   })),
 };
 
-const Template: Story<RateStarsProps> = (args) => (
-  <TableGuides
-    cols={rateStoryMeta.cols}
-    rows={rateStoryMeta.rows}
-    Component={(props) => <RateStars {...args} {...props} />}
-  />
+const Template: Story<RateStarsProps & {hovered?: boolean}> = ({
+  hovered,
+  ...args
+}) => (
+  <>
+    <StoryStyles hovered={hovered} />
+    <TableGuides
+      cols={rateStoryMeta.cols}
+      rows={rateStoryMeta.rows}
+      Component={(props) => {
+        const ref = useRef<HTMLDivElement | null>(null);
+        useLayoutEffect(() => {
+          if (!hovered) return;
+          const event = new MouseEvent('mouseover', {
+            bubbles: true,
+            cancelable: true,
+          });
+
+          ref.current.dispatchEvent(event);
+        }, [hovered]);
+
+        return <RateStars ref={ref} {...args} {...props} />;
+      }}
+    />
+  </>
 );
 
 export const Default = Template.bind({});
-Default.storyName = 'RateStars';
+Default.storyName = 'Default';
 Default.args = {
   onChange: undefined,
+};
+
+export const Hover = Template.bind({});
+Hover.storyName = 'Hover';
+Hover.args = {
+  onChange: undefined,
+  hovered: true,
+};
+
+// Отключаем анимацию для Hover Story (иначе на скриншотах не успевает transition отрабатывать)
+const StoryStyles = ({hovered}: {hovered?: boolean}) => {
+  if (!hovered) return null;
+  return (
+    <style>
+      {`
+      * {
+        transition: none !important;
+      }
+    `}
+    </style>
+  );
 };
