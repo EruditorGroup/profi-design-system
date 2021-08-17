@@ -3,6 +3,20 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.39.1](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.39.0...@eruditorgroup/profi-ui@0.39.1) (2021-08-17)
+
+
+### Bug Fixes
+
+* **List:** Prettier ([ebf9e16](https://github.com/eruditorgroup/profi-design-system/commit/ebf9e161b368650fe484325cee0732ef79557b61))
+* **RateForm:** Перенесён в profi-front ([1890a60](https://github.com/eruditorgroup/profi-design-system/commit/1890a6096ddeafe294180ce86197565b1a575d59))
+* **RateStars:** Тултип на клик и меньше padding-bottom ([eade70a](https://github.com/eruditorgroup/profi-design-system/commit/eade70a7575c84f2b3088c3e59b292f22274fad6))
+* **Tooltip:** useClickOutside на клик и overlayClassName ([d61be0a](https://github.com/eruditorgroup/profi-design-system/commit/d61be0a633462e3697b39977c6d131735bd41956))
+
+
+
+
+
 # [0.39.0](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.38.2...@eruditorgroup/profi-ui@0.39.0) (2021-08-16)
 
 
