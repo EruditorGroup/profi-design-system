@@ -9,7 +9,7 @@ import TableGuides, {
 const RATE_SIZES: NonNullable<RateStarsProps['size']>[] = ['s', 'm', 'l'];
 
 export default {
-  title: 'Rate/RateStars',
+  title: 'RateStars',
 } as Meta;
 
 type RateStoryMeta = Omit<
@@ -40,7 +40,7 @@ const Template: Story<RateStarsProps> = (args) => (
 );
 
 export const Default = Template.bind({});
-Default.storyName = 'RateStars';
+Default.storyName = 'Default';
 Default.args = {
   onChange: undefined,
 };
