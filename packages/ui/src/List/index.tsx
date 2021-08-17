@@ -55,9 +55,7 @@ const List: ComponentType = function List(props) {
   } = props;
 
   return (
-    <ListContext.Provider
-      value={{size, bordered, design, borderedMode}}
-    >
+    <ListContext.Provider value={{size, bordered, design, borderedMode}}>
       <Component className={styles['list']} {...rest}>
         {children}
       </Component>
@@ -67,4 +65,3 @@ const List: ComponentType = function List(props) {
 
 List.Item = ListItem;
 export default List;
-
