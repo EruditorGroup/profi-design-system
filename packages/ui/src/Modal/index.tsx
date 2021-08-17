@@ -16,7 +16,7 @@ import BodyPortal from '../BodyPortal';
 import Button from '../Button';
 import Text from '../Typography/Text';
 
-import {canUseDom} from '@eruditorgroup/profi-toolkit';
+import {canUseDom, useClickOutside, useCombinedRef} from '@eruditorgroup/profi-toolkit';
 
 import classNames from 'classnames';
 
@@ -33,6 +33,7 @@ export interface ModalProps
   width?: string | number;
   visible: boolean;
   title?: string | undefined;
+  closeOnOverlayClick?: boolean;
   onClickBack?: MouseEventHandler<HTMLElement>;
   onClose: MouseEventHandler<HTMLElement>;
 }
@@ -52,6 +53,7 @@ const Modal: ForwardRefExoticComponent<
       fullscreen,
       withPadding = true,
       withCloseButton = true,
+      closeOnOverlayClick,
       onClose,
       onClickBack,
       ...props
@@ -66,6 +68,12 @@ const Modal: ForwardRefExoticComponent<
       visible ? disableBodyScroll(element) : enableBodyScroll(element);
       return () => enableBodyScroll(element);
     }, [visible]);
+
+    const [modalRef, setModalRef] = useCombinedRef(ref);
+
+    useClickOutside(modalRef, () => {
+      closeOnOverlayClick && onClose(null);
+    });
 
     if (!canUseDom()) return null;
 
@@ -109,7 +117,7 @@ const Modal: ForwardRefExoticComponent<
                 className,
               )}
               style={{width: !fullscreen && width}}
-              ref={ref}
+              ref={setModalRef}
               {...props}
             >
               {onClickBack && (

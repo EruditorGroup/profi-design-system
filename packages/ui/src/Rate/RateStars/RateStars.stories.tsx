@@ -1,4 +1,4 @@
-import React, {useEffect, useRef} from 'react';
+import React, {useLayoutEffect, useRef} from 'react';
 import {Story, Meta} from '@storybook/react';
 
 import RateStars, {RateStarsProps, MARKS_ARRAY} from './';
@@ -42,7 +42,7 @@ const Template: Story<RateStarsProps & {hovered?: boolean}> = ({
       rows={rateStoryMeta.rows}
       Component={(props) => {
         const ref = useRef<HTMLDivElement | null>(null);
-        useEffect(() => {
+        useLayoutEffect(() => {
           if (!hovered) return;
           const event = new MouseEvent('mouseover', {
             bubbles: true,

@@ -3,7 +3,6 @@ import React, {
   forwardRef,
   ForwardRefExoticComponent,
   ReactNode,
-  RefAttributes,
   useContext,
 } from 'react';
 import styles from './ListItem.module.scss';
@@ -12,7 +11,7 @@ import {useListContext} from '../../index';
 import {Caption} from '../Content/Caption';
 import {MainText} from '../Content/MainText';
 import {findChildByName} from './utils';
-import {AliasProps} from '@eruditorgroup/profi-toolkit';
+import {AliasProps, ForwardingComponent} from '@eruditorgroup/profi-toolkit';
 
 const ListItemContext = createContext<boolean>(null);
 
@@ -20,15 +19,22 @@ export const useListItemContext = (): boolean => {
   return useContext(ListItemContext);
 };
 
-interface ComponentType
-  extends ForwardRefExoticComponent<
-    ListItemProps & RefAttributes<HTMLLIElement> & AliasProps
-  > {
+type WithChidlrenComponent<MainComponentType> = {
   MainText: typeof MainText;
   Caption: typeof Caption;
-}
+} & MainComponentType;
 
-export interface ListItemProps extends React.HTMLAttributes<HTMLLIElement> {
+type ExoticRefComponentType = WithChidlrenComponent<
+  ForwardRefExoticComponent<ListItemProps>
+>;
+
+type ForwardingComponentType = WithChidlrenComponent<
+  ForwardingComponent<'li', ListItemProps>
+>;
+
+export interface ListItemProps
+  extends React.HTMLAttributes<HTMLLIElement>,
+    AliasProps {
   disabled?: boolean;
   active?: boolean;
   leading?: ReactNode;
@@ -38,7 +44,7 @@ export interface ListItemProps extends React.HTMLAttributes<HTMLLIElement> {
 // eslint-disable-next-line @typescript-eslint/no-empty-function
 const noop = () => {};
 
-const ListItem: ComponentType = forwardRef((props, ref) => {
+const ListItem: ForwardingComponentType = forwardRef((props, ref) => {
   const {
     children,
     leading,
@@ -55,7 +61,11 @@ const ListItem: ComponentType = forwardRef((props, ref) => {
   const isCaption = !!findChildByName(children, Caption.displayName);
   const isMainText = !!findChildByName(children, MainText.displayName);
 
-  const wrappedChildren = !isMainText ? <MainText>{children}</MainText> : children;
+  const wrappedChildren = !isMainText ? (
+    <MainText>{children}</MainText>
+  ) : (
+    children
+  );
 
   return (
     <Component
@@ -95,7 +105,7 @@ const ListItem: ComponentType = forwardRef((props, ref) => {
       </div>
     </Component>
   );
-}) as ComponentType;
+}) as ExoticRefComponentType;
 
 ListItem.MainText = MainText;
 ListItem.Caption = Caption;
