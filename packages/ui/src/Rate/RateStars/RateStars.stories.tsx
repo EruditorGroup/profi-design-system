@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect, useRef} from 'react';
 import {Story, Meta} from '@storybook/react';
 
 import RateStars, {RateStarsProps, MARKS_ARRAY} from './';
@@ -31,11 +31,27 @@ const rateStoryMeta: RateStoryMeta = {
   })),
 };
 
-const Template: Story<RateStarsProps> = (args) => (
+const Template: Story<RateStarsProps & {hovered?: boolean}> = ({
+  hovered,
+  ...args
+}) => (
   <TableGuides
     cols={rateStoryMeta.cols}
     rows={rateStoryMeta.rows}
-    Component={(props) => <RateStars {...args} {...props} />}
+    Component={(props) => {
+      const ref = useRef<HTMLDivElement | null>(null);
+      useEffect(() => {
+        if (!hovered) return;
+        const event = new MouseEvent('mouseover', {
+          bubbles: true,
+          cancelable: true,
+        });
+
+        ref.current.dispatchEvent(event);
+      }, [hovered]);
+
+      return <RateStars ref={ref} {...args} {...props} />;
+    }}
   />
 );
 
@@ -43,4 +59,11 @@ export const Default = Template.bind({});
 Default.storyName = 'Default';
 Default.args = {
   onChange: undefined,
+};
+
+export const Hover = Template.bind({});
+Hover.storyName = 'Hover';
+Hover.args = {
+  onChange: undefined,
+  hovered: true,
 };

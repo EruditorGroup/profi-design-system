@@ -30,7 +30,7 @@ const RateStars: ForwardRefExoticComponent<
   ({value, onChange, className, size = 's', tooltipTrigger, ...props}, ref) => {
     const isFive = value === '5';
     const isBest = value === '5+';
-    const onlyReading = !onChange;
+    const readonly = !onChange;
 
     function onKeyDown(e: KeyboardEvent<SVGSVGElement>, newValue: string) {
       if (e.key === 'Enter') {
@@ -57,10 +57,10 @@ const RateStars: ForwardRefExoticComponent<
                 className={cx(styles['star'], styles[`star_size-${size}`], {
                   [styles['star_filled']]: parseInt(value) >= parseInt(mark),
                   [styles['star_best']]: index === 4 && isBest,
-                  [styles['star_pointer']]: !onlyReading,
-                  [styles['star_scalled']]: !onlyReading && isFive && !isBest,
+                  [styles['star_pointer']]: !readonly,
+                  [styles['star_scalled']]: !readonly && isFive && !isBest,
                 })}
-                {...(!onlyReading
+                {...(!readonly
                   ? {
                       onClick: () => onChange(mark),
                       onKeyDown: (e) => onKeyDown(e, mark),
