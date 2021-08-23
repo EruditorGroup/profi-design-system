@@ -1,10 +1,4 @@
-import React, {
-  createContext,
-  forwardRef,
-  useContext,
-  useState,
-  useRef,
-} from 'react';
+import React, {createContext, forwardRef, useContext, useState} from 'react';
 import classNames from 'classnames';
 import TooltipContent from './components/TooltipContent';
 import TooltipToggler from './components/TooltipToggler';

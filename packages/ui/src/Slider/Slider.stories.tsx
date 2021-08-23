@@ -56,7 +56,7 @@ const TemplateFactory = ({
       <StoryStyles />
       <div style={containerStyles}>
         <Title style={titleStyles}>{title}</Title>
-        <Slider style={{maxWidth: '1180px'}} {...args}>
+        <Slider style={{width: '1180px'}} {...args}>
           {[...Array(15)].map((_v, index) => (
             <Space
               radius="l"
