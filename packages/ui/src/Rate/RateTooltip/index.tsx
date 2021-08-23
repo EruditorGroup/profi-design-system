@@ -14,7 +14,7 @@ type Props = {
   trigger?: ITrigger;
 };
 
-export default function WithTooltip({
+export default function RateTooltip({
   show,
   size,
   children,

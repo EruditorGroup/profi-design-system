@@ -3,6 +3,50 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.39.2](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.39.1...@eruditorgroup/profi-ui@0.39.2) (2021-08-18)
+
+
+### Bug Fixes
+
+* **Link:** Изменил подчеркивание ([7ff0e04](https://github.com/eruditorgroup/profi-design-system/commit/7ff0e04cd2a5b63e86b2d174d22a72f35a2ad7d5))
+
+
+
+
+
+## [0.39.1](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.39.0...@eruditorgroup/profi-ui@0.39.1) (2021-08-17)
+
+
+### Bug Fixes
+
+* **List:** Prettier ([ebf9e16](https://github.com/eruditorgroup/profi-design-system/commit/ebf9e161b368650fe484325cee0732ef79557b61))
+* **RateForm:** Перенесён в profi-front ([1890a60](https://github.com/eruditorgroup/profi-design-system/commit/1890a6096ddeafe294180ce86197565b1a575d59))
+* **RateStars:** Тултип на клик и меньше padding-bottom ([eade70a](https://github.com/eruditorgroup/profi-design-system/commit/eade70a7575c84f2b3088c3e59b292f22274fad6))
+* **Tooltip:** useClickOutside на клик и overlayClassName ([d61be0a](https://github.com/eruditorgroup/profi-design-system/commit/d61be0a633462e3697b39977c6d131735bd41956))
+
+
+
+
+
+# [0.39.0](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.38.2...@eruditorgroup/profi-ui@0.39.0) (2021-08-16)
+
+
+### Features
+
+* **useStateSafe:** Добавлен новый хук для безопасного изменения стейта ([9747e44](https://github.com/eruditorgroup/profi-design-system/commit/9747e44dcdd70dbc31307d38d91d1135612e376a))
+
+
+
+
+
+## [0.38.2](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.38.1...@eruditorgroup/profi-ui@0.38.2) (2021-08-11)
+
+**Note:** Version bump only for package @eruditorgroup/profi-ui
+
+
+
+
+
 ## [0.38.1](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.38.0...@eruditorgroup/profi-ui@0.38.1) (2021-08-10)
 
 **Note:** Version bump only for package @eruditorgroup/profi-ui

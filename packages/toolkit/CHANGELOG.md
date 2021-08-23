@@ -3,6 +3,49 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.31.2](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-toolkit@0.31.1...@eruditorgroup/profi-toolkit@0.31.2) (2021-08-18)
+
+**Note:** Version bump only for package @eruditorgroup/profi-toolkit
+
+
+
+
+
+## [0.31.1](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-toolkit@0.31.0...@eruditorgroup/profi-toolkit@0.31.1) (2021-08-17)
+
+**Note:** Version bump only for package @eruditorgroup/profi-toolkit
+
+
+
+
+
+# [0.31.0](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-toolkit@0.30.0...@eruditorgroup/profi-toolkit@0.31.0) (2021-08-16)
+
+
+### Features
+
+* **useStateSafe:** Добавлен новый хук для безопасного изменения стейта ([9747e44](https://github.com/eruditorgroup/profi-design-system/commit/9747e44dcdd70dbc31307d38d91d1135612e376a))
+
+
+
+
+
+# [0.30.0](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-toolkit@0.29.1...@eruditorgroup/profi-toolkit@0.30.0) (2021-08-11)
+
+
+### Bug Fixes
+
+* **ui:** add cleanUp to useDebouncedCallback ([100458a](https://github.com/eruditorgroup/profi-design-system/commit/100458a87170ac5cc496c9913eb1460ec828da23))
+
+
+### Features
+
+* **toolkit:** useDebouncedCallback ([38f56b4](https://github.com/eruditorgroup/profi-design-system/commit/38f56b4b03667982aaa20d64635b5942d95874f2))
+
+
+
+
+
 ## [0.29.1](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-toolkit@0.29.0...@eruditorgroup/profi-toolkit@0.29.1) (2021-08-10)
 
 **Note:** Version bump only for package @eruditorgroup/profi-toolkit

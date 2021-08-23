@@ -16,7 +16,11 @@
 }
 
 .underlined {
-  text-decoration: underline;
+  box-shadow: inset 0px -1px 0px #D9D9D9;
+
+  &:hover {
+    box-shadow: inset 0px -1px 0px rgba(224, 25, 53, 0.3);
+  }
 }
 
 .block {

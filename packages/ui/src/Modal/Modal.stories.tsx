@@ -54,3 +54,8 @@ export const Full_screen = Template.bind({});
 Full_screen.args = {
   fullscreen: true,
 };
+
+export const CloseOnOverlayClick = Template.bind({});
+CloseOnOverlayClick.args = {
+  closeOnOverlayClick: true,
+}
