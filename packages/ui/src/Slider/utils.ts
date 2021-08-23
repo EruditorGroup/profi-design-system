@@ -4,7 +4,7 @@ export type ChildrenSize = {
   offsetLeft: number;
 };
 
-// Смещаем элементы так, чтобы на новый слайд начинался с края карточки
+// Смещаем элементы так, чтобы новый слайд начинался с края карточки
 export function calcShiftContainer(
   container: HTMLDivElement,
   childrenSizes: Array<ChildrenSize>,
@@ -25,7 +25,7 @@ export function calcShiftContainer(
     }
   }
 
-  // Добавляем offset от неполного элемента (если помещается)
+  // Добавляем offset от неполного элемента (либо невидимого)
   if (childrenSizes[slideElements + 1]) {
     const {offsetLeft} = childrenSizes[slideElements + 1];
     shift = shift + offsetLeft;

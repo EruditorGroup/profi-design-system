@@ -79,6 +79,9 @@ export type {AutosuggestProps} from './Autosuggest';
 export {default as Select} from './Select';
 export type {SelectProps} from './Select';
 
+export {default as Slider} from './Slider';
+export type {SliderProps} from './Slider';
+
 export {default as GeoTag} from './GeoTag';
 export type {GeoTagProps} from './GeoTag';
 
