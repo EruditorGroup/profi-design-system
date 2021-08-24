@@ -72,7 +72,7 @@
   --ui-border-radius-xl: 12px;
   --ui-border-radius-xxl: 50px;
 
-  --ui-box-shadow: 0px 5px 30px rgba(0, 0, 0, 0.1);
+  --ui-box-shadow: 0px 5px 30px rgba(0, 0, 0, 0.05);
 
   --ui-bg-default: #fff;
   --ui-bg-light: #f2f2f2;
