@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.39.5](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.39.4...@eruditorgroup/profi-ui@0.39.5) (2021-08-24)
+
+
+
+## 0.17.15 (2021-08-24)
+
+
+### Bug Fixes
+
+* **button:** rounded sizes sync with design-system ([667c8c3](https://github.com/eruditorgroup/profi-design-system/commit/667c8c32bbd90793f9db761de3129a9cf58f24e5))
+* **theme:** change box-shadow to 5% ([#252](https://github.com/eruditorgroup/profi-design-system/issues/252)) ([4722979](https://github.com/eruditorgroup/profi-design-system/commit/47229796009e913f7c1ba6ef823b6d771a2c76cb))
+
+
+
+
+
 ## [0.39.4](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.39.2...@eruditorgroup/profi-ui@0.39.4) (2021-08-23)
 
 
