@@ -1,5 +1,5 @@
 import React, {
-  useEffect,
+  useLayoutEffect,
   useState,
   useCallback,
   forwardRef,
@@ -8,6 +8,7 @@ import React, {
 
 import SliderArrow from './SliderArrow';
 
+import {useMouseWheel} from '@eruditorgroup/profi-toolkit';
 import {
   checkScrollOnBorder,
   calcShiftContainer,
@@ -57,7 +58,7 @@ const Slider = forwardRef<HTMLDivElement, SliderProps>(
 
       const isBorder = checkScrollOnBorder(container);
       const {shift, slideElements} = calcShiftContainer(container, sizes);
-      if (!centeredSlides) return shift;
+      if (!centeredSlides || isBorder) return shift;
 
       // Смещаем элементы так, чтобы по краям торчало по половине элемента
       const trimmedElementSize = sizes[slideElements];
@@ -65,7 +66,7 @@ const Slider = forwardRef<HTMLDivElement, SliderProps>(
       const centeredShift =
         shift - trimmedElementWidth / 2 - trimmedElementSize.offsetLeft / 2;
 
-      return isBorder ? centeredShift : shift;
+      return centeredShift;
     }, [centeredSlides]);
 
     const checkArrows = () => {
@@ -98,7 +99,20 @@ const Slider = forwardRef<HTMLDivElement, SliderProps>(
       slide(shift);
     };
 
-    useEffect(() => {
+    const onWheel = useCallback(
+      (e: WheelEvent) => {
+        if (!moveMouseWheel) return;
+
+        e.preventDefault();
+        const {current: el} = containerRef;
+        const {deltaX, deltaY} = e;
+
+        el.scrollLeft += Math.abs(deltaY) > Math.abs(deltaX) ? deltaY : deltaX;
+      },
+      [moveMouseWheel],
+    );
+
+    useLayoutEffect(() => {
       if (!containerRef) return;
       const {current: container} = containerRef;
 
@@ -106,21 +120,7 @@ const Slider = forwardRef<HTMLDivElement, SliderProps>(
       checkArrows();
     }, [children]);
 
-    useEffect(() => {
-      if (!containerRef || !moveMouseWheel) return;
-      const {current: container} = containerRef;
-
-      const onWheel = (e: WheelEvent) => {
-        e.preventDefault();
-        const {current: el} = containerRef;
-        const {deltaX, deltaY} = e;
-
-        el.scrollLeft += Math.abs(deltaY) > Math.abs(deltaX) ? deltaY : deltaX;
-      };
-
-      container.addEventListener('wheel', onWheel);
-      return () => container.removeEventListener('wheel', onWheel);
-    }, [moveMouseWheel]);
+    useMouseWheel(containerRef, onWheel);
 
     return (
       <div ref={ref} className={styles['slider']} {...props}>

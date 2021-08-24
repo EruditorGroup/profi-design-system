@@ -6,7 +6,7 @@ import Button from '../../Button';
 
 import type {MouseEventHandler} from 'react';
 
-import styles from './Slider.module.scss';
+import styles from './SliderArrow.module.scss';
 
 type Props = {
   direction: 'left' | 'right';
@@ -16,15 +16,15 @@ type Props = {
 };
 
 function compileGradient(
-  hex: string,
+  color: string,
   direction: 'left' | 'right',
 ): {background: string} {
-  if (hex === 'transparent') return undefined;
+  if (color === 'transparent') return undefined;
 
   return {
     background: `linear-gradient(${
       direction === 'left' ? '270deg' : '90deg'
-    }, rgba(250, 250, 250, 0) 0%, ${hex} 100%)`,
+    }, rgba(250, 250, 250, 0) 0%, ${color} 100%)`,
   };
 }
 
@@ -39,9 +39,11 @@ export default function SliderArrow({
   return (
     <div className={styles['wrapper']}>
       <div
-        className={cx(styles['gradient'], styles[`gradient_${direction}`], {
-          [styles['gradient_show']]: visible,
-        })}
+        className={cx(
+          styles['gradient'],
+          styles[`gradient_${direction}`],
+          visible && styles['gradient_show'],
+        )}
         style={compileGradient(background, direction)}
       />
       <Button

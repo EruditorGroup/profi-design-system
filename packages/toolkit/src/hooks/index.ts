@@ -12,3 +12,4 @@ export {default as useFocusScroll} from './useFocusScroll';
 export {default as useDebouncedCallback} from './useDebouncedCallback';
 export {default as useSafeLayoutEffect} from './useSafeLayoutEffect';
 export {default as useStateSafe} from './useStateSafe';
+export {default as useMouseWheel} from './useMouseWheel';

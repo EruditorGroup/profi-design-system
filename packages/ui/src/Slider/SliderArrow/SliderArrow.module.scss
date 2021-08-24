@@ -44,9 +44,7 @@
   top: 0;
   visibility: hidden;
   opacity: 0;
-  transition-duration: 0.1s;
-  transition-property: visibility, opacity;
-  transition-timing-function: ease-in-out;
+  transition: opacity 0.15s ease-in-out, visibility 0.15s ease-in-out;
   z-index: 1;
 
   &_show {
