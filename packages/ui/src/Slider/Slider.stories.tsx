@@ -13,6 +13,7 @@ export default {
 type FactoryParams = {
   title: string;
   cardWidth?: string;
+  cardLength?: number;
 };
 
 const StoryStyles = () => {
@@ -36,12 +37,13 @@ const StoryStyles = () => {
 };
 
 const TemplateFactory = ({
-  cardWidth,
+  cardWidth = '350px',
   title,
+  cardLength = 15,
 }: FactoryParams): Story<SliderProps> => (args) => {
   const titleStyles = {marginBottom: '32px'};
   const blockStyles = {
-    width: cardWidth || '350px',
+    width: cardWidth,
     height: '500px',
     background: '#f2f2f2',
     display: 'inline-block',
@@ -56,8 +58,8 @@ const TemplateFactory = ({
       <StoryStyles />
       <div style={containerStyles}>
         <Title style={titleStyles}>{title}</Title>
-        <Slider style={{width: '1180px'}} {...args}>
-          {[...Array(15)].map((_v, index) => (
+        <Slider style={{width: '810px'}} {...args}>
+          {[...Array(cardLength)].map((_v, index) => (
             <Space
               radius="l"
               px={20}
@@ -83,10 +85,21 @@ Default.args = {};
 
 export const FullSlide = TemplateFactory({
   title: 'Слайдер с карточками на всю ширину',
-  cardWidth: '1180px',
+  cardWidth: '810px',
 }).bind({});
 FullSlide.storyName = 'Full slide';
 FullSlide.args = {
+  centeredSlides: false,
+  moveMouseWheel: false,
+  arrowBackground: 'transparent',
+};
+
+export const FewElements = TemplateFactory({
+  title: 'Слайдер, когда меньше элементов меньше ширины контейнера',
+  cardLength: 2,
+}).bind({});
+FewElements.storyName = 'Few elements';
+FewElements.args = {
   centeredSlides: false,
   moveMouseWheel: false,
   arrowBackground: 'transparent',
