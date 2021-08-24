@@ -107,7 +107,7 @@ const Autosuggest = forwardRef(function Autosuggest(
                 <Spinner
                   size={suggestionsSize}
                   className={styles['spinner']}
-                  color="primary"
+                  color="secondary"
                 />
               ) : (
                 children
