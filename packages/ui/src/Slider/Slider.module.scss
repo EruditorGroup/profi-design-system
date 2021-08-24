@@ -1,0 +1,13 @@
+.slider {
+  position: relative;
+}
+
+.container {
+  white-space: nowrap;
+  overflow: hidden;
+
+  @media (max-width: 1023px) {
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+}
