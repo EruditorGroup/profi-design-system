@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.39.4](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.39.2...@eruditorgroup/profi-ui@0.39.4) (2021-08-23)
+
+
+
+## 0.17.4 (2021-08-23)
+
+
+### Bug Fixes
+
+* **Link:** Revert last changes ([23cefab](https://github.com/eruditorgroup/profi-design-system/commit/23cefabfd08b779bcd724514c40a97ee3631a283))
+* **Link:** Исправление ширины подчеркивания ([451ff83](https://github.com/eruditorgroup/profi-design-system/commit/451ff83e8af91c488d74b9b04d9a029013d84c01))
+
+
+
+
+
 ## [0.39.2](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.39.1...@eruditorgroup/profi-ui@0.39.2) (2021-08-18)
 
 
