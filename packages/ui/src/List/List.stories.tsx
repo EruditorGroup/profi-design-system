@@ -190,16 +190,22 @@ WithTrailing.args = {
   ),
 };
 
-export const ActiveDisabledItems = TemplateFactory(createMeta(['l'], ['high'])).bind({});
+export const ActiveDisabledItems = TemplateFactory(
+  createMeta(['l'], ['high']),
+).bind({});
 ActiveDisabledItems.storyName = 'Active item background color';
 ActiveDisabledItems.args = {
   bordered: true,
   boldItemMainText: true,
   children: (
     <>
-      <List.Item onClick={noop} active>Заказ</List.Item>
+      <List.Item onClick={noop} active>
+        Заказ
+      </List.Item>
       <List.Item onClick={noop}>Поддержка</List.Item>
-      <List.Item onClick={noop} disabled>Специалисты</List.Item>
+      <List.Item onClick={noop} disabled>
+        <List.Item.MainText bold={false}>Специалисты</List.Item.MainText>
+      </List.Item>
     </>
   ),
 };
