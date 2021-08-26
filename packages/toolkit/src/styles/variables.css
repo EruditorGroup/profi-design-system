@@ -2,6 +2,10 @@
   font-size: var(--ui-text-size-m);
   line-height: 1.2;
 
+  --ui-font-family: -apple-system, BlinkMacSystemFont, Roboto, Arial, sans-serif;
+  --ui-font-family-secondary: 'ONY-FORM', -apple-system, BlinkMacSystemFont,
+    Roboto, Arial, sans-serif;
+
   /* Text sizes */
   --ui-text-size-xs: 11px;
   --ui-text-size-s: 13px;
