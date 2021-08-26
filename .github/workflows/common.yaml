@@ -6,6 +6,17 @@ name: 'Push/PR checks'
 on: [pull_request]
 
 jobs:
+
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 12
+          cache: 'yarn'
+      - run: yarn --frozen-lockfile
+
   jest:
     runs-on: ubuntu-latest
     steps:
@@ -13,8 +24,10 @@ jobs:
       - uses: actions/setup-node@v1
         with:
           node-version: 12
-      - run: yarn
-      - run: yarn test
+          cache: 'yarn'
+      - run: |
+        yarn build
+        yarn test
 
   lint:
     runs-on: ubuntu-latest
@@ -23,7 +36,7 @@ jobs:
       - uses: actions/setup-node@v1
         with:
           node-version: 12
-      - run: yarn
+          cache: 'yarn'
       - run: yarn lint
 
   screenshot-testing:
@@ -34,12 +47,12 @@ jobs:
         continue-on-error: true
         with:
           node-version: 12
+          cache: 'yarn'
       - uses: szenius/set-timezone@v1.0
         with:
           timezoneLinux: 'Europe/Moscow'
           timezoneWindows: 'Moscow Standard Time'
           timezoneMacos: 'Europe/Moscow'
-      - run: yarn
       - run: yarn build
       - run: yarn test:storybook
 

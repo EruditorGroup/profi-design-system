@@ -4,28 +4,60 @@ on:
     types: [published]
 
 jobs:
-  test:
+  dependencies: 
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v1
         with:
           node-version: 12
+          cache: 'yarn'
       - run: yarn
+      
+    
+  build: 
+    needs: dependencies
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 12
+          cache: 'yarn'
+      - run: NODE_ENV=production yarn build
+      - uses: actions/upload-artifact@v2
+        with:
+          name: build
+          path: |
+            packages/*/lib
+            packages/*/es
+
+  test:
+    needs: dependencies
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 12
+          cache: 'yarn'
       - run: yarn test
 
   lint:
+    needs: dependencies
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v1
         with:
           node-version: 12
-      - run: yarn
+          cache: 'yarn'
       - run: yarn lint
 
   npm_package_publish:
     needs:
+      - dependencies
+      - build
       - lint
       - test
     runs-on: ubuntu-latest
@@ -37,8 +69,11 @@ jobs:
       - uses: actions/setup-node@v1
         with:
           node-version: 12
-      - run: yarn
-      - run: NODE_ENV=production yarn build
+          cache: 'yarn'
+            
+      - uses: actions/download-artifact@v2
+        with:
+          name: build
 
       - name: Configure CI Git User
         run: |
