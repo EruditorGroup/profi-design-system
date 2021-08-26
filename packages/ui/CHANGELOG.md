@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.40.0](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.39.5...@eruditorgroup/profi-ui@0.40.0) (2021-08-25)
+
+
+### Bug Fixes
+
+* **Autosuggest:** Изменен цвет спиннера на черный ([1009fca](https://github.com/eruditorgroup/profi-design-system/commit/1009fca03c24b8ce4f9f7de7a86fdb6e93449a15))
+
+
+### Features
+
+* Добавлен компонент Slider ([0dc7534](https://github.com/eruditorgroup/profi-design-system/commit/0dc7534bbf57f42882ddfcae253041db87d00829))
+
+
+
+
+
 ## [0.39.5](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.39.4...@eruditorgroup/profi-ui@0.39.5) (2021-08-24)
 
 
