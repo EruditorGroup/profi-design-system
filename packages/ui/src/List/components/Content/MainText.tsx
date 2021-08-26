@@ -1,5 +1,5 @@
 import cx from 'classnames';
-import common from '../../../styles/common.module.css';
+import {theme} from '@eruditorgroup/profi-toolkit';
 import React from 'react';
 import styles from './Content.module.scss';
 import {useListContext} from '../..';
@@ -14,8 +14,8 @@ export const MainText: React.FC = (props) => {
     <div
       className={cx(
         styles['main-text'],
-        common[`size-${size}`],
-        disabled ? common['color-disabled'] : common['color-secondary'],
+        theme.common[`size-${size}`],
+        theme.common[`color-${disabled ? 'disabled' : 'secondary'}`],
       )}
     >
       {children}

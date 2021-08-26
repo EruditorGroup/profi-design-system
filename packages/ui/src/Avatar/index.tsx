@@ -2,8 +2,7 @@ import React, {forwardRef} from 'react';
 import classnames from 'classnames';
 
 import styles from './Avatar.module.scss';
-import common from '../styles/common.module.css';
-import {ISize} from '@eruditorgroup/profi-toolkit';
+import {ISize, theme} from '@eruditorgroup/profi-toolkit';
 
 export interface AvatarProps
   extends Omit<
@@ -40,7 +39,7 @@ const Avatar = forwardRef<HTMLDivElement, AvatarProps>(
         className={classnames(
           styles['avatar'],
           styles[`design-${design}`],
-          size && common[`size-${size}`],
+          size && theme.common[`size-${size}`],
           className,
         )}
       >

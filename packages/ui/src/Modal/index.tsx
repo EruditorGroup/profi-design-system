@@ -16,14 +16,19 @@ import BodyPortal from '../BodyPortal';
 import Button from '../Button';
 import Text from '../Typography/Text';
 
-import {canUseDom, useClickOutside, useCombinedRef} from '@eruditorgroup/profi-toolkit';
+import {
+  canUseDom,
+  useClickOutside,
+  useCombinedRef,
+  theme,
+} from '@eruditorgroup/profi-toolkit';
 
 import classNames from 'classnames';
 
 import styles from './Modal.module.scss';
 
-import slideUpTransition from '../styles/transitions/SlideUp.module.scss';
-import fadeInTransition from '../styles/transitions/FadeIn.module.scss';
+// import slideUpTransition from '../styles/transitions/SlideUp.module.scss';
+// import fadeInTransition from '../styles/transitions/FadeIn.module.scss';
 
 export interface ModalProps
   extends Omit<HTMLAttributes<HTMLDivElement>, 'width'> {
@@ -90,7 +95,7 @@ const Modal: ForwardRefExoticComponent<
           mountOnEnter
           in={visible}
           timeout={DEFAULT_ANIMATION_DURATION}
-          classNames={fadeInTransition}
+          classNames={theme.transitions.fade}
         >
           <BodyPortal>
             <div className={styles['overlay']} onClick={handleCloseClick} />
@@ -102,7 +107,7 @@ const Modal: ForwardRefExoticComponent<
           mountOnEnter
           in={visible}
           timeout={!fullscreen && DEFAULT_ANIMATION_DURATION}
-          classNames={slideUpTransition}
+          classNames={theme.transitions.slide}
         >
           <BodyPortal
             className={classNames(

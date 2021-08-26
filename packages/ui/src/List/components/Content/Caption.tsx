@@ -1,5 +1,5 @@
 import cx from 'classnames';
-import common from '../../../styles/common.module.css';
+import {theme} from '@eruditorgroup/profi-toolkit';
 import React from 'react';
 import styles from './Content.module.scss';
 
@@ -8,7 +8,11 @@ export const Caption: React.FC = (props) => {
 
   return (
     <div
-      className={cx(styles['caption'], common['color-muted'], common['size-s'])}
+      className={cx(
+        styles['caption'],
+        theme.common['color-muted'],
+        theme.common['size-s'],
+      )}
     >
       {children}
     </div>

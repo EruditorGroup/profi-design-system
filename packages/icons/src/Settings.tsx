@@ -1,6 +1,7 @@
 import React, {forwardRef} from 'react';
 import type {ForwardRefExoticComponent} from 'react';
 import type {IconPropsType} from './_types';
+import {combineCommonProps} from './_helpers';
 
 const SettingsIcon: ForwardRefExoticComponent<IconPropsType> = forwardRef(
   (props, ref) => {
@@ -10,7 +11,7 @@ const SettingsIcon: ForwardRefExoticComponent<IconPropsType> = forwardRef(
         height="1em"
         viewBox="0 0 22 22"
         xmlns="http://www.w3.org/2000/svg"
-        {...props}
+        {...combineCommonProps(props)}
         ref={ref}
       >
         <path

@@ -7,8 +7,7 @@ import type {
 } from 'react';
 
 import styles from './Link.module.scss';
-import common from '../styles/common.module.css';
-
+import {theme} from '@eruditorgroup/profi-toolkit';
 import type {IColor, ISize} from '@eruditorgroup/profi-toolkit';
 
 export interface LinkProps
@@ -61,9 +60,9 @@ const Link: ForwardRefExoticComponent<
           block && styles['block'],
           disabled && styles['disabled'],
           underlined && styles['underlined'],
-          bold && common['bold'],
-          size && common[`size-${size}`],
-          color && common[`color-${color}`],
+          bold && theme.common['bold'],
+          size && theme.common[`size-${size}`],
+          color && theme.common[`color-${color}`],
           className,
         )}
         onClick={onClick}

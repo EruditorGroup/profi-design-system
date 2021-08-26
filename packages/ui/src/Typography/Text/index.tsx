@@ -1,13 +1,11 @@
 import React, {forwardRef} from 'react';
 import cx from 'classnames';
-import {ForwardingComponent} from '@eruditorgroup/profi-toolkit';
+import {theme} from '@eruditorgroup/profi-toolkit';
 
 import Link from '../../Link';
 import BaseText, {BaseTextProps} from '../BaseText';
 
-import type {ISize} from '@eruditorgroup/profi-toolkit';
-
-import commonStyles from '../../styles/common.module.css';
+import type {ISize, ForwardingComponent} from '@eruditorgroup/profi-toolkit';
 
 export interface TextProps extends Omit<BaseTextProps, 'as'> {
   as?: 'p' | 'span' | 'div' | typeof Link;
@@ -21,7 +19,7 @@ const Text: ForwardingComponent<'p', TextProps> = forwardRef(function Text(
   return (
     <BaseText
       as={Component}
-      className={cx(commonStyles[`size-${size}`], className)}
+      className={cx(theme.common[`size-${size}`], className)}
       {...props}
       ref={ref}
     />
