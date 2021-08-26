@@ -38,6 +38,7 @@
     }
   },
   "devDependencies": {
+    "postcss-custom-properties": "^11.0.0",
     "@babel/cli": "^7.13.16",
     "@babel/core": "^7.13.16",
     "@babel/plugin-proposal-nullish-coalescing-operator": "^7.13.8",
@@ -130,10 +131,9 @@
       "<rootDir>/scripts/jest/setupTests.js"
     ],
     "testPathIgnorePatterns": [
-      "storyshots.test.(j|t)s"
+      "storyshots.test.(j|t)s",
+      "\\/es\\/",
+      "\\/lib\\/"
     ]
-  },
-  "dependencies": {
-    "postcss-custom-properties": "^11.0.0"
   }
 }
