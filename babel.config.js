@@ -47,6 +47,7 @@ module.exports = {
     '@babel/preset-react',
   ].filter(Boolean),
   plugins: [
+    '@babel/plugin-transform-react-pure-annotations', // optimize output for webpack tree-shaking
     '@babel/plugin-transform-async-to-generator', // async/await
     '@babel/plugin-transform-spread', // destructing e.g {x, y} = z
     '@babel/plugin-proposal-object-rest-spread', // rest props e.g {x, y, ...rest}

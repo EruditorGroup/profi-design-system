@@ -58,7 +58,7 @@ const Slider = forwardRef<HTMLDivElement, SliderProps>(
 
       const isBorder = checkScrollOnBorder(container);
       const {shift, slideElements} = calcShiftContainer(container, sizes);
-      if (!centeredSlides || isBorder) return shift;
+      if (!centeredSlides || !isBorder) return shift;
 
       // Смещаем элементы так, чтобы по краям торчало по половине элемента
       const trimmedElementSize = sizes[slideElements];
