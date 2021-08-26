@@ -6,38 +6,53 @@ name: 'Push/PR checks'
 on: [pull_request]
 
 jobs:
-
-  jest:
+  dependencies: 
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - uses: actions/setup-node@v1
+      - uses: actions/setup-node@v2
         with:
           node-version: 14
+          cache: 'yarn'
+      - run: yarn --frozen-lockfile
+
+  jest:
+    needs: dependencies
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          node-version: 14
+          cache: 'yarn'
 
       - run: yarn --frozen-lockfile
       - run: NODE_ENV=production yarn build
       - run: yarn test
 
   lint:
+    needs: dependencies
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - uses: actions/setup-node@v1
+      - uses: actions/setup-node@v2
         with:
           node-version: 14
+          cache: 'yarn'
 
       - run: yarn --frozen-lockfile
       - run: yarn lint
 
   screenshot-testing:
+    needs: dependencies
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - uses: actions/setup-node@v1
+      - uses: actions/setup-node@v2
         continue-on-error: true
         with:
           node-version: 14
+          cache: 'yarn'
       - run: yarn --frozen-lockfile
       - run: NODE_ENV=production yarn build
 
