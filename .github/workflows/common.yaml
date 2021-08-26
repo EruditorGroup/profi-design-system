@@ -8,9 +8,6 @@ on: [pull_request]
 jobs:
 
   jest:
-    needs: 
-      - dependencies
-      - build
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -27,7 +24,6 @@ jobs:
       - run: yarn test
 
   lint:
-    needs: dependencies
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -39,9 +35,6 @@ jobs:
       - run: yarn lint
 
   screenshot-testing:
-    needs: 
-      - dependencies
-      - build
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
