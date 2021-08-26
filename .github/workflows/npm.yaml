@@ -24,6 +24,7 @@ jobs:
         with:
           node-version: 12
           cache: 'yarn'
+      - run: yarn
       - run: NODE_ENV=production yarn build
       - uses: actions/upload-artifact@v2
         with:
@@ -41,6 +42,7 @@ jobs:
         with:
           node-version: 12
           cache: 'yarn'
+      - run: yarn
       - run: yarn test
 
   lint:
@@ -52,6 +54,7 @@ jobs:
         with:
           node-version: 12
           cache: 'yarn'
+      - run: yarn
       - run: yarn lint
 
   npm_package_publish:
@@ -66,14 +69,15 @@ jobs:
         with:
           fetch-depth: 0
 
+      - uses: actions/download-artifact@v2
+        with:
+          name: build
+
       - uses: actions/setup-node@v1
         with:
           node-version: 12
           cache: 'yarn'
-            
-      - uses: actions/download-artifact@v2
-        with:
-          name: build
+      - run: yarn
 
       - name: Configure CI Git User
         run: |

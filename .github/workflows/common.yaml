@@ -26,6 +26,7 @@ jobs:
         with:
           node-version: 12
           cache: 'yarn'
+      - run: yarn
       - run: NODE_ENV=production yarn build
       - uses: actions/upload-artifact@v2
         with:
@@ -50,6 +51,7 @@ jobs:
           node-version: 12
           cache: 'yarn'
 
+      - run: yarn
       - run: yarn test
 
   lint:
@@ -61,6 +63,8 @@ jobs:
         with:
           node-version: 12
           cache: 'yarn'
+
+      - run: yarn
       - run: yarn lint
 
   screenshot-testing:
@@ -70,15 +74,16 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+      - uses: actions/download-artifact@v2
+        with:
+          name: build
+
       - uses: actions/setup-node@v1
         continue-on-error: true
         with:
           node-version: 12
           cache: 'yarn'
-
-      - uses: actions/download-artifact@v2
-        with:
-          name: build
+      - run: yarn
 
       - uses: szenius/set-timezone@v1.0
         with:
