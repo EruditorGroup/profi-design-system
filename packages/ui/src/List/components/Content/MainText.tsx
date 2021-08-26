@@ -7,7 +7,7 @@ import {useListItemContext} from '../ListItem';
 
 export const MainText: React.FC = (props) => {
   const {children} = props;
-  const {size} = useListContext();
+  const {size, boldItemMainText} = useListContext();
   const disabled = useListItemContext();
 
   return (
@@ -16,6 +16,7 @@ export const MainText: React.FC = (props) => {
         styles['main-text'],
         theme.common[`size-${size}`],
         theme.common[`color-${disabled ? 'disabled' : 'secondary'}`],
+        boldItemMainText && theme.common['bold'],
       )}
     >
       {children}
