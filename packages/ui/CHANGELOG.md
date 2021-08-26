@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.41.0](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.40.1...@eruditorgroup/profi-ui@0.41.0) (2021-08-26)
+
+
+### Bug Fixes
+
+* **List:** Add `active` background color, remove borders from active items ([bb7fe21](https://github.com/eruditorgroup/profi-design-system/commit/bb7fe21d6fedf2f35927a0713839f29f1674b6cd))
+* **ListItem:** control hover style via onClick ([1b38be1](https://github.com/eruditorgroup/profi-design-system/commit/1b38be15ee0aace99b1dc7a3f0e1f6094b507907))
+
+
+### Features
+
+* **List.Item.MainText:** Add `bold` prop ([3249a5c](https://github.com/eruditorgroup/profi-design-system/commit/3249a5cc42183a816c467554ea6ab3a16523512e))
+
+
+
+
+
 ## [0.40.1](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.40.0...@eruditorgroup/profi-ui@0.40.1) (2021-08-26)
 
 
