@@ -186,20 +186,30 @@ WithTrailing.args = {
         <List.Item.Caption>Остались пожелания к заказу?</List.Item.Caption>
         <List.Item.MainText>Не указано</List.Item.MainText>
       </List.Item>
+      <List.Item trailing={<ChevronRightIcon />}>
+        <List.Item.Caption>Остались пожелания к заказу?</List.Item.Caption>
+        <List.Item.MainText>Не указано</List.Item.MainText>
+      </List.Item>
     </>
   ),
 };
 
-export const ActiveDisabledItems = TemplateFactory(createMeta(['l'], ['high'])).bind({});
+export const ActiveDisabledItems = TemplateFactory(
+  createMeta(['l'], ['high']),
+).bind({});
 ActiveDisabledItems.storyName = 'Active item background color';
 ActiveDisabledItems.args = {
   bordered: true,
   boldItemMainText: true,
   children: (
     <>
-      <List.Item onClick={noop} active>Заказ</List.Item>
+      <List.Item onClick={noop} active>
+        Заказ
+      </List.Item>
       <List.Item onClick={noop}>Поддержка</List.Item>
-      <List.Item onClick={noop} disabled>Специалисты</List.Item>
+      <List.Item onClick={noop} disabled>
+        Специалисты
+      </List.Item>
     </>
   ),
 };
