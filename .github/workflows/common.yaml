@@ -13,7 +13,6 @@ jobs:
       - uses: actions/setup-node@v2
         with:
           node-version: 14
-          cache: 'yarn'
 
       - run: yarn --frozen-lockfile
       - run: NODE_ENV=production yarn build
@@ -26,7 +25,6 @@ jobs:
       - uses: actions/setup-node@v2
         with:
           node-version: 14
-          cache: 'yarn'
 
       - run: yarn --frozen-lockfile
       - run: yarn lint
@@ -39,7 +37,6 @@ jobs:
         continue-on-error: true
         with:
           node-version: 14
-          cache: 'yarn'
       - run: yarn --frozen-lockfile
       - run: NODE_ENV=production yarn build
 
