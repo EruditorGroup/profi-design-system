@@ -7,34 +7,6 @@ on: [pull_request]
 
 jobs:
 
-  dependencies:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v1
-        with:
-          node-version: 14
-          cache: 'yarn'
-      - run: yarn --frozen-lockfile
-
-  build: 
-    needs: dependencies
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v1
-        with:
-          node-version: 14
-          cache: 'yarn'
-      - run: yarn --frozen-lockfile
-      - run: NODE_ENV=production yarn build
-      - uses: actions/upload-artifact@v2
-        with:
-          name: build
-          path: |
-            packages/*/lib
-            packages/*/es
-
   jest:
     needs: 
       - dependencies
@@ -49,9 +21,9 @@ jobs:
       - uses: actions/setup-node@v1
         with:
           node-version: 14
-          cache: 'yarn'
 
       - run: yarn --frozen-lockfile
+      - run: NODE_ENV=production yarn build
       - run: yarn test
 
   lint:
@@ -62,7 +34,6 @@ jobs:
       - uses: actions/setup-node@v1
         with:
           node-version: 14
-          cache: 'yarn'
 
       - run: yarn --frozen-lockfile
       - run: yarn lint
@@ -84,6 +55,7 @@ jobs:
           node-version: 14
           cache: 'yarn'
       - run: yarn --frozen-lockfile
+      - run: NODE_ENV=production yarn build
 
       - uses: szenius/set-timezone@v1.0
         with:
