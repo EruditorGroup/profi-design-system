@@ -4,13 +4,16 @@
   list-style-type: none;
   width: 100%;
 
-  &.active,
   &:hover,
   &:focus {
-    &:not(.disabled) {
+    &:not(.disabled):not(.noHover) {
       background-color: var(--ui-bg-light);
       cursor: pointer;
     }
+  }
+
+  &.active:not(.disabled):not(.noHover) {
+    background-color: var(--ui-bg-lightState);
   }
 }
 
@@ -60,15 +63,12 @@
 }
 
 /* У задизейбленного элемента не делаем ховер, поэтому и не убираем разделитель. */
-.list-item:hover:not(.disabled),
-.list-item:hover + .list-item {
-  &::before {
-    @include hide-border();
-  }
-}
-
-.list-item:focus:not(.disabled),
-.list-item:focus + .list-item {
+.list-item:hover:not(.disabled):not(.noHover),
+.list-item:focus:not(.disabled):not(.noHover),
+.list-item.active:not(.disabled):not(.noHover),
+.list-item:hover:not(.disabled):not(.noHover) + .list-item,
+.list-item:focus:not(.disabled):not(.noHover) + .list-item,
+.list-item.active:not(.disabled):not(.noHover) + .list-item {
   &::before {
     @include hide-border();
   }

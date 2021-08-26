@@ -12,6 +12,7 @@ interface ListContextType {
   bordered: boolean;
   design: TListDesign;
   borderedMode: BorderedModeType;
+  boldItemMainText: boolean;
 }
 
 const ListContext = createContext<ListContextType | null>(null);
@@ -29,6 +30,7 @@ export type ListProps = Omit<
   size?: TListItemSize;
   bordered?: boolean;
   borderedMode?: BorderedModeType;
+  boldItemMainText?: boolean;
 };
 
 type HighDesignProps = {
@@ -46,6 +48,7 @@ interface ComponentType extends ForwardingComponent<'ul', ListProps> {
 const List: ComponentType = function List(props) {
   const {
     children,
+    boldItemMainText,
     bordered,
     borderedMode = 'default',
     as: Component = 'ul',
@@ -55,7 +58,9 @@ const List: ComponentType = function List(props) {
   } = props;
 
   return (
-    <ListContext.Provider value={{size, bordered, design, borderedMode}}>
+    <ListContext.Provider
+      value={{size, bordered, design, borderedMode, boldItemMainText}}
+    >
       <Component className={styles['list']} {...rest}>
         {children}
       </Component>

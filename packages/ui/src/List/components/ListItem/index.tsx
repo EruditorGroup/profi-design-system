@@ -78,6 +78,7 @@ const ListItem: ForwardingComponentType = forwardRef((props, ref) => {
         bordered && styles['bordered'],
         styles[borderedMode],
         active && styles['active'],
+        !onClick && styles['noHover'],
         className,
       )}
       tabIndex={!disabled && !!onClick ? 0 : undefined}
