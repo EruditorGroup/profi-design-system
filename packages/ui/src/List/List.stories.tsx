@@ -208,7 +208,7 @@ ActiveDisabledItems.args = {
       </List.Item>
       <List.Item onClick={noop}>Поддержка</List.Item>
       <List.Item onClick={noop} disabled>
-        Специалисты
+        <List.Item.MainText bold={false}>Специалисты</List.Item.MainText>
       </List.Item>
     </>
   ),
