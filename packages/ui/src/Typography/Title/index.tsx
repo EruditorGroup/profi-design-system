@@ -5,7 +5,7 @@ import {ForwardingComponent} from '@eruditorgroup/profi-toolkit';
 
 import BaseText, {BaseTextProps} from '../BaseText';
 
-import commonStyles from '../../styles/common.module.css';
+import {theme} from '@eruditorgroup/profi-toolkit';
 import styles from './Title.module.css';
 
 export interface TitleProps extends Omit<BaseTextProps, 'as'> {
@@ -22,7 +22,7 @@ const Title: ForwardingComponent<'h3', TitleProps> = forwardRef(function Title(
       as={`h${level}` as keyof JSX.IntrinsicElements}
       bold={bold}
       className={cx(
-        commonStyles[`size-${size}`] || styles[`size-${size}`],
+        theme.common[`size-${size}`] || styles[`size-${size}`],
         className,
       )}
       {...props}

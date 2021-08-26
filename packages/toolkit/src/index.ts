@@ -3,6 +3,20 @@ import React from 'react';
 export * from './constants';
 export * from './hooks';
 export * from './utils';
+import common from './styles/common.module.css';
+import variables from './styles/variables.css';
+
+import fadeTransition from './styles/FadeIn.module.css';
+import slideTransition from './styles/SlideUp.module.css';
+
+export const theme = {
+  common,
+  variables,
+  transitions: {
+    slide: slideTransition,
+    fade: fadeTransition,
+  },
+};
 
 export type ISize = 'xs' | 's' | 'm' | 'l' | 'xl' | 'xxl';
 

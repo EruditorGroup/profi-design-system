@@ -1,6 +1,7 @@
 import React, {forwardRef} from 'react';
 import type {ForwardRefExoticComponent} from 'react';
 import type {IconPropsType} from './_types';
+import {combineCommonProps} from './_helpers';
 
 const RepeatIcon: ForwardRefExoticComponent<IconPropsType> = forwardRef(
   (props, ref) => {
@@ -11,7 +12,7 @@ const RepeatIcon: ForwardRefExoticComponent<IconPropsType> = forwardRef(
         viewBox="0 0 16 16"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
-        {...props}
+        {...combineCommonProps(props)}
         ref={ref}
       >
         <path

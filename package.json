@@ -23,7 +23,7 @@
     "build:types": "lerna exec -- tsc src/*.ts --declaration --emitDeclarationOnly --jsx react --esModuleInterop",
     "build:cjs": "lerna exec --parallel -- MODULE_TYPE=cjs CSS_MODULES=1 yarn babel --root-mode upward src -x '.ts','.tsx' --ignore '**/*.test.tsx','**/*.stories.tsx','**/*.d.ts','**/__mocks__' -d lib",
     "build:esm": "lerna exec --parallel -- MODULE_TYPE=esm CSS_MODULES=1 yarn babel --root-mode upward src -x '.ts','.tsx' --ignore '**/*.test.tsx','**/*.stories.tsx','**/*.d.ts','**/__mocks__' -d es",
-    "copy-theme": "if [[ -e ./src/styles/theme.css ]]; then cp ./src/styles/theme.css ./dist/theme.css; fi;",
+    "copy-theme": "if [[ -e ./src/styles/variables.css ]]; then cp ./src/styles/variables.css ./dist/variables.css; fi;",
     "build:storybook": "build-storybook",
     "test": "MODULE_TYPE=cjs jest",
     "test:storybook": "yarn build:storybook --quiet && MODULE_TYPE=cjs jest --config=storyshots.config.js",
@@ -38,14 +38,15 @@
     }
   },
   "devDependencies": {
+    "postcss-custom-properties": "^11.0.0",
     "@babel/cli": "^7.13.16",
     "@babel/core": "^7.13.16",
-    "@babel/plugin-transform-react-pure-annotations": "^7.14.5",
     "@babel/plugin-proposal-nullish-coalescing-operator": "^7.13.8",
     "@babel/plugin-proposal-object-rest-spread": "^7.14.7",
     "@babel/plugin-proposal-optional-chaining": "^7.13.12",
     "@babel/plugin-transform-async-to-generator": "^7.14.5",
     "@babel/plugin-transform-block-scoping": "^7.14.5",
+    "@babel/plugin-transform-react-pure-annotations": "^7.14.5",
     "@babel/plugin-transform-spread": "^7.14.6",
     "@babel/preset-react": "^7.13.13",
     "@babel/preset-typescript": "^7.13.0",
@@ -88,7 +89,6 @@
     "optimize-css-assets-webpack-plugin": "^5.0.4",
     "postcss": "^8.2.8",
     "postcss-loader": "^4.2.0",
-    "postcss-preset-env": "^6.7.0",
     "postcss-scss": "^3.0.5",
     "prettier": "^2.2.1",
     "puppeteer": "^10.0.0",
@@ -98,9 +98,7 @@
     "sass-loader": "^10.0.1",
     "style-loader": "^2.0.0",
     "terser-webpack-plugin": "^4.2.3",
-    "typescript": "4.2.4",
-    "webpack": "^4.46.0",
-    "webpack-cli": "^4.6.0"
+    "typescript": "4.2.4"
   },
   "browserslist": {
     "production": [
@@ -133,7 +131,9 @@
       "<rootDir>/scripts/jest/setupTests.js"
     ],
     "testPathIgnorePatterns": [
-      "storyshots.test.(j|t)s"
+      "storyshots.test.(j|t)s",
+      "\\/es\\/",
+      "\\/lib\\/"
     ]
   }
 }

@@ -27,6 +27,9 @@
     "/es",
     "/src"
   ],
+  "dependencies": {
+    "@eruditorgroup/profi-toolkit": "^0.31.5"
+  },
   "peerDependencies": {
     "react": "^16.14.0",
     "react-dom": "^16.14.0"

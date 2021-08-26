@@ -7,8 +7,7 @@ import type {
 import classnames from 'classnames';
 
 import styles from './Spinner.module.scss';
-import common from '../styles/common.module.css';
-import {IColor, ISize} from '@eruditorgroup/profi-toolkit';
+import {IColor, ISize, theme} from '@eruditorgroup/profi-toolkit';
 
 export interface SpinnerProps
   extends HTMLAttributes<HTMLDivElement>,
@@ -50,8 +49,8 @@ const Spinner: ForwardRefExoticComponent<SpinnerProps> = forwardRef(
           [styles['showed']]: showed,
           [styles['withRightPadding']]: withRightPadding,
           [styles['withLeftPadding']]: withLeftPadding,
-          [common[`size-${size}`]]: size,
-          [common[`color-${color}`]]: color,
+          [theme.common[`size-${size}`]]: size,
+          [theme.common[`color-${color}`]]: color,
         })}
         {...props}
       >

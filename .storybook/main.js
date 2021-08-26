@@ -1,8 +1,33 @@
-const {
-  CSS_MODULE_LOCAL_IDENT_NAME_GENERATOR,
-  GET_PACKEGES_INFO,
-} = require('../.config');
+const {CSS_MODULE_LOCAL_IDENT_NAME_GENERATOR} = require('../.config');
 const path = require('path');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+
+const styleLoaders = [
+  {
+    loader: 'postcss-loader',
+    options: {
+      postcssOptions: {
+        plugins: [
+          [
+            require('postcss-custom-properties')({
+              preserve: false,
+              importFrom:
+                'node_modules/@eruditorgroup/profi-toolkit/src/styles/variables.css',
+            }),
+          ],
+        ],
+      },
+    },
+  },
+  {
+    loader: 'sass-loader',
+    options: {
+      sassOptions: {
+        precision: 10,
+      },
+    },
+  },
+];
 
 module.exports = {
   stories: [
@@ -16,6 +41,7 @@ module.exports = {
   ],
   webpackFinal: async (config, {configType}) => ({
     ...config,
+    plugins: [new MiniCssExtractPlugin(), ...config.plugins],
     module: {
       ...config.module,
       rules: [
@@ -37,7 +63,23 @@ module.exports = {
               ],
             },
             {
-              test: /\.(css|scss)$/,
+              // для не css модулей
+              test: /(?<!module)\.(css|scss)$/i,
+              use: [
+                {
+                  loader: MiniCssExtractPlugin.loader,
+                },
+                {
+                  loader: 'css-loader',
+                  options: {importLoaders: 1},
+                },
+                ...styleLoaders,
+              ],
+            },
+
+            {
+              // для css модулей
+              test: /\.module\.(css|scss)$/,
               use: [
                 'style-loader',
                 {
@@ -54,33 +96,7 @@ module.exports = {
                     },
                   },
                 },
-                {
-                  loader: 'postcss-loader',
-                  options: {
-                    postcssOptions: {
-                      plugins: [
-                        [
-                          'postcss-preset-env',
-                          {
-                            preserve: false,
-                            browsers: ['>0.2%', 'not dead', 'not op_mini all'],
-                            importFrom: GET_PACKEGES_INFO()
-                              .map((p) => p.themePath)
-                              .filter(Boolean),
-                          },
-                        ],
-                      ],
-                    },
-                  },
-                },
-                {
-                  loader: 'sass-loader',
-                  options: {
-                    sassOptions: {
-                      precision: 10,
-                    },
-                  },
-                },
+                ...styleLoaders,
               ],
             },
             ...config.module.rules,

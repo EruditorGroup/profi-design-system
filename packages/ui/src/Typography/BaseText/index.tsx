@@ -2,7 +2,7 @@ import React, {forwardRef, HTMLAttributes} from 'react';
 import classNames from 'classnames';
 
 import styles from './BaseText.module.scss';
-import common from '../../styles/common.module.css';
+import {theme} from '@eruditorgroup/profi-toolkit';
 
 import type {IColor, AliasProps} from '@eruditorgroup/profi-toolkit';
 
@@ -24,9 +24,9 @@ const BaseText = forwardRef<unknown, BaseTextProps & AliasProps>(
         className={classNames(
           styles['text'],
           align && styles[`align-${align}`],
-          color ? common[`color-${color}`] : styles['default-color'],
-          bold && common[`bold`],
-          !bold && common[`regular`],
+          color ? theme.common[`color-${color}`] : styles['default-color'],
+          bold && theme.common[`bold`],
+          !bold && theme.common[`regular`],
           className,
         )}
       />

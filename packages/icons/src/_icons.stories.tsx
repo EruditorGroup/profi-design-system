@@ -5,6 +5,7 @@ import TableGuides, {TableGuidesProps} from '../../../.storybook/TableGuides';
 
 import * as icons from './index';
 import {IconPropsType} from './_types';
+import {IColor} from '@eruditorgroup/profi-toolkit';
 
 export default {
   title: 'Icons',
@@ -50,7 +51,7 @@ const iconStoryMeta: IconStoryMeta = {
 };
 
 // To add icon to this story you should add export your icon inside './index.tsx'
-const Template: Story = (args) => (
+export const IconsStory: Story<{color: IColor}> = (args) => (
   <TableGuides
     withCellKeyProps
     cols={iconStoryMeta.cols}
@@ -66,5 +67,5 @@ const Template: Story = (args) => (
   />
 );
 
-export const IconsStory = Template.bind({});
+IconsStory.args = {color: 'primary'};
 IconsStory.storyName = 'Icons';
