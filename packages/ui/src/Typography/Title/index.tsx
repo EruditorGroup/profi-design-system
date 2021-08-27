@@ -1,12 +1,13 @@
 import React, {forwardRef} from 'react';
 import cx from 'classnames';
 
-import {ForwardingComponent} from '@eruditorgroup/profi-toolkit';
-
 import BaseText, {BaseTextProps} from '../BaseText';
 
 import {theme} from '@eruditorgroup/profi-toolkit';
-import styles from './Title.module.css';
+
+import type {ForwardingComponent} from '@eruditorgroup/profi-toolkit';
+
+import styles from './Title.module.scss';
 
 export interface TitleProps extends Omit<BaseTextProps, 'as'> {
   level?: 1 | 2 | 3 | 4 | 5 | 6;
