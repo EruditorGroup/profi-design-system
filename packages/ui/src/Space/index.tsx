@@ -82,5 +82,4 @@ const Space: ForwardRefExoticComponent<
     />
   );
 });
-
 export default Space;

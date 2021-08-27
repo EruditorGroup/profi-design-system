@@ -22,19 +22,23 @@ import {default as FormControl} from './FormControl';
 type InputProps = React.PropsWithChildren<FormControlProps & BareInputProps>;
 
 const Input = forwardRef<HTMLInputElement, InputProps>(
-  wrapControlWithRef<HTMLInputElement, InputProps>(BareInput),
+  /*#__PURE__*/ wrapControlWithRef<HTMLInputElement, InputProps>(BareInput),
 );
 
 type InputUnitProps = FormControlProps & BareInputUnitProps;
 
 const InputUnit = forwardRef<HTMLInputElement, InputUnitProps>(
-  wrapControlWithRef<HTMLInputElement, InputUnitProps>(BareInputUnit),
+  /*#__PURE__*/ wrapControlWithRef<HTMLInputElement, InputUnitProps>(
+    BareInputUnit,
+  ),
 );
 
 type TextareaProps = Omit<FormControlProps, 'align'> & BareTextareaProps;
 
 const Textarea = forwardRef<HTMLTextAreaElement, TextareaProps>(
-  wrapControlWithRef<HTMLTextAreaElement, TextareaProps>(BareTextarea),
+  /*#__PURE__*/ wrapControlWithRef<HTMLTextAreaElement, TextareaProps>(
+    BareTextarea,
+  ),
 );
 
 export {
