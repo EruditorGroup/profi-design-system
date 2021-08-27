@@ -61,6 +61,7 @@ const Space: ForwardRefExoticComponent<
   // так как px и py могут быть массивами, приводим их к строке, иначе они будут новыми ссылками
   // react-hooks/exhaustive-deps не понимает такого :(
   // eslint-disable-next-line react-hooks/exhaustive-deps
+
   const padding = useMemo(() => getPadding({x: px, y: py}), [`${px}${py}`]);
 
   return (
