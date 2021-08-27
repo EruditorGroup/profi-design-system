@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.32.0](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-toolkit@0.31.9...@eruditorgroup/profi-toolkit@0.32.0) (2021-08-27)
+
+
+### Features
+
+* Добавлен дополнительный шрифт для заголовка ([3b560ca](https://github.com/eruditorgroup/profi-design-system/commit/3b560ca3d904ec7dfecaa576947f8bd37a8aa1c5))
+
+
+
+
+
 ## [0.31.9](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-toolkit@0.31.8...@eruditorgroup/profi-toolkit@0.31.9) (2021-08-27)
 
 **Note:** Version bump only for package @eruditorgroup/profi-toolkit
