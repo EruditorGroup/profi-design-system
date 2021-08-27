@@ -39,28 +39,39 @@ module.exports = {
     isCommonJS && [
       '@babel/preset-env',
       {
-        loose: false,
+        useBuiltIns: 'entry',
         shippedProposals: true,
         targets: {node: 'current'},
       },
     ],
     [
       '@babel/preset-typescript',
-      {allExtensions: true, allowDeclareFields: true, isTSX: true},
+      {
+        allExtensions: true,
+        allowDeclareFields: true,
+        isTSX: true,
+      },
     ],
     '@babel/preset-react',
   ].filter(Boolean),
   plugins: [
     '@babel/plugin-transform-react-pure-annotations', // optimize output for webpack tree-shaking
-    !isCommonJS && '@babel/plugin-transform-async-to-generator', // async/await
-    !isCommonJS && '@babel/plugin-transform-spread', // destructing e.g {x, y} = z
-    !isCommonJS && [
-      '@babel/plugin-proposal-object-rest-spread',
-      {loose: false, useBuiltIns: true},
-    ], // rest props e.g {x, y, ...rest}
-    !isCommonJS && '@babel/plugin-transform-block-scoping', // convert "let" and "const" to var
+    '@babel/plugin-transform-async-to-generator', // async/await
+    '@babel/plugin-transform-spread', // destructing e.g {x, y} = z
+    ['@babel/plugin-proposal-object-rest-spread', {useBuiltIns: true}], // rest props e.g {x, y, ...rest}
+    '@babel/plugin-transform-block-scoping', // convert "let" and "const" to var
     '@babel/plugin-proposal-nullish-coalescing-operator', // e.g foo ?? bar
     '@babel/plugin-proposal-optional-chaining', // e.g foo?.bar
     transformCssImports && ['css-modules-transform', transformCssModulesConfig],
+    [
+      '@babel/plugin-transform-runtime',
+      {
+        absoluteRuntime: false,
+        corejs: false,
+        helpers: true,
+        regenerator: false,
+        version: '^7.0.0',
+      },
+    ],
   ].filter(Boolean),
 };
