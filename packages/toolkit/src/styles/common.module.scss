@@ -19,9 +19,7 @@
   }
 }
 
-@each $color
-  in (brand, primary, secondary, light, danger, success, warning, disabled)
-{
+@each $color in (brand, primary, secondary, light, danger, success, warning) {
   .color-#{$color} {
     color: var(--ui-color-#{$color});
   }
