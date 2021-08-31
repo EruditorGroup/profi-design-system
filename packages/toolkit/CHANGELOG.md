@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.33.0](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-toolkit@0.32.0...@eruditorgroup/profi-toolkit@0.33.0) (2021-08-31)
+
+
+### Features
+
+* **Toolkit:** Добавлен border-radius в theme ([0b8b360](https://github.com/eruditorgroup/profi-design-system/commit/0b8b360958ef2807a45f4a47f065796ab46ff48c))
+
+
+
+
+
 # [0.32.0](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-toolkit@0.31.9...@eruditorgroup/profi-toolkit@0.32.0) (2021-08-27)
 
 

@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.43.0](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.42.0...@eruditorgroup/profi-ui@0.43.0) (2021-08-31)
+
+
+### Bug Fixes
+
+* **ui:** rounded btn default display ([8fe11db](https://github.com/eruditorgroup/profi-design-system/commit/8fe11dbb0d9ef9367495f8e8755869b89c3ccd85))
+
+
+### Features
+
+* Добавлен компонент Image ([6a3a392](https://github.com/eruditorgroup/profi-design-system/commit/6a3a3929c3e5644bd19a211546789f1affd2aec5))
+
+
+
+
+
 # [0.42.0](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.41.1...@eruditorgroup/profi-ui@0.42.0) (2021-08-27)
 
 
