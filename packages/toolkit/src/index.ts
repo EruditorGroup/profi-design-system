@@ -3,7 +3,7 @@ import React from 'react';
 export * from './constants';
 export * from './hooks';
 export * from './utils';
-import common from './styles/common.module.css';
+import common from './styles/common.module.scss';
 import variables from './styles/variables.css';
 
 import fadeTransition from './styles/FadeIn.module.css';

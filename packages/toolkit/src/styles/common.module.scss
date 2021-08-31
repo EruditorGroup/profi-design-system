@@ -1,0 +1,38 @@
+.bold {
+  font-weight: 600;
+}
+
+.regular {
+  font-weight: 400;
+}
+
+@each $size in (xs, s, m, l, xl, xxl) {
+  .size-#{$size} {
+    font-size: var(--ui-text-size-#{$size});
+    line-height: var(--ui-text-lineHeight-#{$size});
+  }
+}
+
+@each $radius in (xs, s, m, l, xl, xxl) {
+  .radius-#{$radius} {
+    border-radius: var(--ui-border-radius-#{$radius});
+  }
+}
+
+@each $color
+  in (
+    brand,
+    primary,
+    secondary,
+    light,
+    danger,
+    success,
+    warning,
+    muted,
+    disabled
+  )
+{
+  .color-#{$color} {
+    background: var(--ui-color-#{$color});
+  }
+}
