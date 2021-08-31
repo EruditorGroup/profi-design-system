@@ -33,6 +33,6 @@
   )
 {
   .color-#{$color} {
-    background: var(--ui-color-#{$color});
+    color: var(--ui-color-#{$color});
   }
 }
