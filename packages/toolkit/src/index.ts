@@ -28,8 +28,7 @@ export type IColor =
   | 'transparent'
   | 'danger'
   | 'success'
-  | 'warning'
-  | 'muted';
+  | 'warning';
 
 export type ISocials = 'vk' | 'ya' | 'fb' | 'apple';
 
