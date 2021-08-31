@@ -2,8 +2,16 @@
   margin: 0;
 }
 
-.default-color {
+.color-default {
   color: var(--ui-color-text);
+}
+
+.color-muted {
+  color: var(--ui-color-text-muted);
+}
+
+.color-disabled {
+  color: var(--ui-color-text-disabled);
 }
 
 .align-center {
