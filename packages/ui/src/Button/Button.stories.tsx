@@ -92,6 +92,7 @@ AsLinkStory.args = {
   as: Link,
   children: 'Close',
   leading: <CloseIcon />,
+  clear: true,
   // @ts-ignore
   // не одупляет, что мы передали as={Link} и надо забрать его пропы.
   // Но тут и не сильно нужен тайп-чекинг
