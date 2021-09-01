@@ -56,12 +56,6 @@
   box-shadow: var(--ui-box-shadow);
 }
 
-@each $size in (xs, s, m, l, xl, xxl) {
-  .radius-#{$size} {
-    border-radius: var(--ui-border-radius-#{$size});
-  }
-}
-
 @each $color
   in (
     brand,

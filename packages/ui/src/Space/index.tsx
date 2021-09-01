@@ -1,6 +1,8 @@
 import React, {forwardRef, useMemo} from 'react';
 import cx from 'classnames';
+import {theme} from '@eruditorgroup/profi-toolkit';
 
+import {IColor, ISize} from '@eruditorgroup/profi-toolkit';
 import type {
   RefAttributes,
   ForwardRefExoticComponent,
@@ -8,7 +10,6 @@ import type {
 } from 'react';
 
 import styles from './Space.module.scss';
-import {IColor, ISize} from '@eruditorgroup/profi-toolkit';
 
 type IPadding = string | number | [string | number, string | number];
 
@@ -72,7 +73,7 @@ const Space: ForwardRefExoticComponent<
         align && styles[`align-${align}`],
         direction && styles[`direction-${direction}`],
         withShadow && styles['withShadow'],
-        radius && styles[`radius-${radius}`],
+        radius && theme.common[`radius-${radius}`],
         bg && styles[`bg-${bg}`],
         className,
       )}
