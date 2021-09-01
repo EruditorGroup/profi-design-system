@@ -26,6 +26,7 @@ export {default as MoreVerticalIcon} from './MoreVertical';
 export {default as OkIcon} from './Ok';
 export {default as ParametersIcon} from './Parameters';
 export {default as PeopleIcon} from './People';
+export {default as PhoneIcon} from './Phone';
 export {default as ProfileIcon} from './Profile';
 export {default as RepeatIcon} from './Repeat';
 export {default as ReviewIcon} from './Review';
