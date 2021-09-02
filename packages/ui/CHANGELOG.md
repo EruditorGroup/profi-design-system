@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.43.1](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.43.0...@eruditorgroup/profi-ui@0.43.1) (2021-09-01)
+
+
+### Bug Fixes
+
+* **Space:** Border-radius из @eruditorgroup/profi-toolkit ([35e2599](https://github.com/eruditorgroup/profi-design-system/commit/35e2599637770e8bd686339675d3d2117e163e59))
+
+
+
+
+
 # [0.43.0](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.42.0...@eruditorgroup/profi-ui@0.43.0) (2021-08-31)
 
 
