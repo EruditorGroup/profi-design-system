@@ -39,6 +39,7 @@ export interface ListItemProps
   active?: boolean;
   leading?: ReactNode;
   trailing?: ReactNode;
+  disableHover?: boolean;
 }
 
 // eslint-disable-next-line @typescript-eslint/no-empty-function
@@ -53,6 +54,7 @@ const ListItem: ForwardingComponentType = forwardRef((props, ref) => {
     active,
     onClick,
     className,
+    disableHover,
     as: Component = 'li',
     ...rest
   } = props;
@@ -78,7 +80,7 @@ const ListItem: ForwardingComponentType = forwardRef((props, ref) => {
         bordered && styles['bordered'],
         styles[borderedMode],
         active && styles['active'],
-        !onClick && styles['noHover'],
+        disableHover && styles['noHover'],
         className,
       )}
       tabIndex={!disabled && !!onClick ? 0 : undefined}

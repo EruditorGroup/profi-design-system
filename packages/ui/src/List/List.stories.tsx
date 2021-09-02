@@ -186,7 +186,7 @@ WithTrailing.args = {
         <List.Item.Caption>Остались пожелания к заказу?</List.Item.Caption>
         <List.Item.MainText>Не указано</List.Item.MainText>
       </List.Item>
-      <List.Item trailing={<ChevronRightIcon />}>
+      <List.Item trailing={<ChevronRightIcon />} disableHover>
         <List.Item.Caption>Остались пожелания к заказу?</List.Item.Caption>
         <List.Item.MainText>Не указано</List.Item.MainText>
       </List.Item>
