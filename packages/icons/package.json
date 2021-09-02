@@ -1,6 +1,6 @@
 {
   "name": "@eruditorgroup/profi-icons",
-  "version": "0.31.12",
+  "version": "0.31.13",
   "description": "Common icon set for Eruditor Group",
   "author": "eruditorgroup",
   "license": "ISC",
@@ -28,7 +28,7 @@
     "/src"
   ],
   "dependencies": {
-    "@eruditorgroup/profi-toolkit": "^0.33.2"
+    "@eruditorgroup/profi-toolkit": "^0.33.3"
   },
   "peerDependencies": {
     "react": "^16.14.0",
