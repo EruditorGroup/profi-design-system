@@ -16,6 +16,9 @@ export type {DatepickerProps} from './Datepicker';
 export {default as Menu} from './Menu';
 export type {MenuProps} from './Menu';
 
+export {default as Image} from './Image';
+export type {ImageProps} from './Image';
+
 export {Calendar, DualCalendar} from './Calendar';
 export type {CalendarProps, DualCalendarProps} from './Calendar';
 
