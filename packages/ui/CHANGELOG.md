@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.43.3](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.43.2...@eruditorgroup/profi-ui@0.43.3) (2021-09-02)
+
+
+### Bug Fixes
+
+* **ui:** forgotten Image export ([50c9b5f](https://github.com/eruditorgroup/profi-design-system/commit/50c9b5f0a328b62ab25d12f604603782b09022f2))
+
+
+
+
+
 ## [0.43.2](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.43.1...@eruditorgroup/profi-ui@0.43.2) (2021-09-02)
 
 
