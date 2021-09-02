@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.43.2](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.43.1...@eruditorgroup/profi-ui@0.43.2) (2021-09-02)
+
+
+### Bug Fixes
+
+* **ui:** List disableHover prop ([dee0d6a](https://github.com/eruditorgroup/profi-design-system/commit/dee0d6a3070a19375b51cabf2e9ad02b2ab5097e))
+
+
+
+
+
 ## [0.43.1](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.43.0...@eruditorgroup/profi-ui@0.43.1) (2021-09-01)
 
 
