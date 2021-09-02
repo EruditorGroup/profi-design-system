@@ -13,7 +13,7 @@ jobs:
           node-version: 14
           cache: 'yarn'
       - run: yarn --frozen-lockfile
-      - run: NODE_ENV=production yarn build
+      - run: yarn build:cjs
       - run: yarn test
 
   lint:
