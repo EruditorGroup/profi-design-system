@@ -40,6 +40,7 @@ export interface ListItemProps
   leading?: ReactNode;
   trailing?: ReactNode;
   disableHover?: boolean;
+  bodyClassName?: string;
 }
 
 // eslint-disable-next-line @typescript-eslint/no-empty-function
@@ -54,6 +55,7 @@ const ListItem: ForwardingComponentType = forwardRef((props, ref) => {
     active,
     onClick,
     className,
+    bodyClassName,
     disableHover,
     as: Component = 'li',
     ...rest
@@ -89,23 +91,21 @@ const ListItem: ForwardingComponentType = forwardRef((props, ref) => {
       onClick={disabled ? noop : onClick}
       ref={ref}
     >
-      <div className={styles['body']}>
-        {!!leading && (
-          <span
-            className={cx(
-              styles['leading'],
-              !isCaption && styles['without-caption'],
-            )}
-          >
-            {leading}
-          </span>
-        )}
-        <ListItemContext.Provider value={disabled}>
-          <div className={styles['content']}>{wrappedChildren}</div>
-        </ListItemContext.Provider>
+      {!!leading && (
+        <span
+          className={cx(
+            styles['leading'],
+            !isCaption && styles['without-caption'],
+          )}
+        >
+          {leading}
+        </span>
+      )}
+      <ListItemContext.Provider value={disabled}>
+        <div className={bodyClassName}>{wrappedChildren}</div>
+      </ListItemContext.Provider>
 
-        {!!trailing && <span className={styles['trailing']}>{trailing}</span>}
-      </div>
+      {!!trailing && <span className={styles['trailing']}>{trailing}</span>}
     </Component>
   );
 }) as ExoticRefComponentType;
