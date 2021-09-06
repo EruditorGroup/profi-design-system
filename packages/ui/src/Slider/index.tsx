@@ -4,9 +4,13 @@ import React, {
   useCallback,
   forwardRef,
   useRef,
+  createContext,
+  useMemo,
 } from 'react';
+import cx from 'classnames';
 
 import SliderArrow from './SliderArrow';
+import SliderItem from './SliderItem';
 
 import {useMouseWheel} from '@eruditorgroup/profi-toolkit';
 import {
@@ -15,24 +19,42 @@ import {
   reduceChildrenSizes,
 } from './utils';
 
-import type {HTMLAttributes} from 'react';
+import type {ForwardRefExoticComponent, HTMLAttributes} from 'react';
 import type {ChildrenSize} from './utils';
 
 import styles from './Slider.module.scss';
 
+type ISliderContext = {
+  flex?: boolean;
+  offset?: number;
+};
+
+export const SliderContext = createContext<ISliderContext | null>(null);
+
 export interface SliderProps extends HTMLAttributes<HTMLDivElement> {
+  areaClassName?: string;
   centeredSlides?: boolean;
-  moveMouseWheel?: boolean;
+  scrollable?: boolean;
   arrowBackground?: string;
+  flex?: boolean;
+  offset?: number;
+  children?: Array<React.ReactElement>;
+}
+
+interface SliderComponent extends ForwardRefExoticComponent<SliderProps> {
+  Item: typeof SliderItem;
 }
 
 const Slider = forwardRef<HTMLDivElement, SliderProps>(
   (
     {
       children,
-      moveMouseWheel = true,
+      scrollable = false,
       centeredSlides = true,
       arrowBackground,
+      flex,
+      areaClassName,
+      offset = 10,
       ...props
     },
     ref,
@@ -42,6 +64,13 @@ const Slider = forwardRef<HTMLDivElement, SliderProps>(
 
     const containerRef = useRef<HTMLDivElement | null>(null);
     const childrenSizes = useRef<Array<ChildrenSize>>([]);
+    const context = useMemo(
+      () => ({
+        flex,
+        offset,
+      }),
+      [flex, offset],
+    );
 
     const slide = useCallback((offset: number) => {
       const {current: el} = containerRef;
@@ -101,7 +130,7 @@ const Slider = forwardRef<HTMLDivElement, SliderProps>(
 
     const onWheel = useCallback(
       (e: WheelEvent) => {
-        if (!moveMouseWheel) return;
+        if (!scrollable) return;
 
         e.preventDefault();
         const {current: el} = containerRef;
@@ -109,7 +138,7 @@ const Slider = forwardRef<HTMLDivElement, SliderProps>(
 
         el.scrollLeft += Math.abs(deltaY) > Math.abs(deltaX) ? deltaY : deltaX;
       },
-      [moveMouseWheel],
+      [scrollable],
     );
 
     useLayoutEffect(() => {
@@ -123,32 +152,41 @@ const Slider = forwardRef<HTMLDivElement, SliderProps>(
     useMouseWheel(containerRef, onWheel);
 
     return (
-      <div ref={ref} className={styles['slider']} {...props}>
-        <SliderArrow
-          direction="left"
-          visible={showLeftArrow}
-          onClick={onClickLeft}
-          background={arrowBackground}
-        />
+      <SliderContext.Provider value={context}>
+        <div ref={ref} className={styles['slider']} {...props}>
+          <SliderArrow
+            direction="left"
+            visible={showLeftArrow}
+            onClick={onClickLeft}
+            background={arrowBackground}
+          />
 
-        <div
-          className={styles['container']}
-          ref={containerRef}
-          onScroll={onScroll}
-        >
-          {children}
+          <div
+            className={cx(
+              styles['container'],
+              flex && styles['container_flex'],
+              areaClassName,
+            )}
+            ref={containerRef}
+            onScroll={onScroll}
+          >
+            {React.Children.map(children, (child, index) =>
+              React.cloneElement(child, {index}),
+            )}
+          </div>
+
+          <SliderArrow
+            direction="right"
+            visible={showRightArrow}
+            onClick={onClickRight}
+            background={arrowBackground}
+          />
         </div>
-
-        <SliderArrow
-          direction="right"
-          visible={showRightArrow}
-          onClick={onClickRight}
-          background={arrowBackground}
-        />
-      </div>
+      </SliderContext.Provider>
     );
   },
-);
+) as SliderComponent;
 
+Slider.Item = SliderItem;
 Slider.displayName = 'Slider';
 export default Slider;

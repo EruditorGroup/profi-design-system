@@ -10,8 +10,10 @@
   transition: opacity 0.1s ease, visibility 0.1s ease, transform 0.3s ease;
   opacity: 0;
   z-index: 2;
+  pointer-events: none;
 
   &_show {
+    pointer-events: initial;
     visibility: visible;
     opacity: 1;
 

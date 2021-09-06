@@ -2,6 +2,7 @@ import React from 'react';
 import {Story, Meta} from '@storybook/react';
 
 import Slider, {SliderProps} from './';
+import SliderItem from './SliderItem';
 
 import {Title} from '../Typography';
 import Space from '../Space';
@@ -16,26 +17,6 @@ type FactoryParams = {
   cardLength?: number;
 };
 
-const StoryStyles = () => {
-  return (
-    <style>
-      {`
-        .card {
-          margin: 0 10px;
-        }
-
-        .card:first-child {
-          margin-left: 0;
-        }
-        
-        .card:last-child {
-          margin-right: 0;
-        }
-    `}
-    </style>
-  );
-};
-
 const TemplateFactory = ({
   cardWidth = '350px',
   title,
@@ -46,7 +27,6 @@ const TemplateFactory = ({
     width: cardWidth,
     height: '500px',
     background: '#f2f2f2',
-    display: 'inline-block',
   };
 
   const containerStyles = {
@@ -55,12 +35,12 @@ const TemplateFactory = ({
 
   return (
     <>
-      <StoryStyles />
       <div style={containerStyles}>
         <Title style={titleStyles}>{title}</Title>
-        <Slider style={{width: '810px'}} {...args}>
+        <Slider offset={20} style={{width: '810px'}} {...args}>
           {[...Array(cardLength)].map((_v, index) => (
-            <Space
+            <SliderItem
+              as={Space}
               radius="l"
               px={20}
               py={20}
@@ -68,7 +48,7 @@ const TemplateFactory = ({
               style={blockStyles}
             >
               Card {index + 1}
-            </Space>
+            </SliderItem>
           ))}
         </Slider>
       </div>
@@ -103,4 +83,13 @@ FewElements.args = {
   centeredSlides: false,
   moveMouseWheel: false,
   arrowBackground: 'transparent',
+};
+
+export const Flex = TemplateFactory({
+  title: 'Слайдер (flex)',
+  cardWidth: '350px',
+}).bind({});
+Flex.storyName = 'Flex';
+Flex.args = {
+  flex: true,
 };
