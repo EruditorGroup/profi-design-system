@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.44.0](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.43.4...@eruditorgroup/profi-ui@0.44.0) (2021-09-06)
+
+
+### Features
+
+* **Slider:** Доработки Slider ([fb7b8fd](https://github.com/eruditorgroup/profi-design-system/commit/fb7b8fd890b004677027b570159313ff8c9e9ddc))
+
+
+
+
+
 ## [0.43.4](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.43.3...@eruditorgroup/profi-ui@0.43.4) (2021-09-02)
 
 
