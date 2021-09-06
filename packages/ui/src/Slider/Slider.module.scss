@@ -6,6 +6,12 @@
   white-space: nowrap;
   overflow: hidden;
 
+  &_flex {
+    display: flex;
+    flex-wrap: nowrap;
+    white-space: normal;
+  }
+
   @media (max-width: 1023px) {
     overflow: auto;
     -webkit-overflow-scrolling: touch;
