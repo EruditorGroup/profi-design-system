@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.43.4](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.43.3...@eruditorgroup/profi-ui@0.43.4) (2021-09-02)
+
+
+### Bug Fixes
+
+* **ui:** bodyClassName in ListItem ([95697b9](https://github.com/eruditorgroup/profi-design-system/commit/95697b9778b17c8e7463083d983cb02048d08b86))
+
+
+
+
+
 ## [0.43.3](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.43.2...@eruditorgroup/profi-ui@0.43.3) (2021-09-02)
 
 
