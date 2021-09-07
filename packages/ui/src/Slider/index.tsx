@@ -54,6 +54,7 @@ const Slider = forwardRef<HTMLDivElement, SliderProps>(
       arrowBackground,
       flex,
       areaClassName,
+      className,
       offset = 10,
       ...props
     },
@@ -153,7 +154,7 @@ const Slider = forwardRef<HTMLDivElement, SliderProps>(
 
     return (
       <SliderContext.Provider value={context}>
-        <div ref={ref} className={styles['slider']} {...props}>
+        <div ref={ref} className={cx(styles['slider'], className)} {...props}>
           <SliderArrow
             direction="left"
             visible={showLeftArrow}
