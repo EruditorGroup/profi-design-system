@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.44.1](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.44.0...@eruditorgroup/profi-ui@0.44.1) (2021-09-08)
+
+
+### Bug Fixes
+
+* **Autosuggest:** Увеличил максимальную высоту контейнера подсказок ([6ea082a](https://github.com/eruditorgroup/profi-design-system/commit/6ea082ac025b1450b864044f0509ca0cb4376791))
+
+
+
+
+
 # [0.44.0](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.43.4...@eruditorgroup/profi-ui@0.44.0) (2021-09-06)
 
 
