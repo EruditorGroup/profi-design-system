@@ -1,0 +1,17 @@
+.root {
+  height: 100%;
+  background: var(--lightest-grey);
+}
+
+.fileAttached {
+  margin-left: 29px;
+  margin-top: 11px;
+}
+
+.fileName {
+  overflow-wrap: break-word;
+  width: 100px;
+  margin-left: 5px;
+  margin-right: 5px;
+  margin-bottom: 8px;
+}

@@ -58,6 +58,9 @@ export const IconsStory: Story<{color: IColor}> = (args) => (
     rows={iconStoryMeta.rows}
     Component={({colKey, rowKey, ...props}) => {
       const Component = (icons as Icons)[colKey ?? ''];
+      if (!Component) {
+        throw new Error(`Fail to render ${colKey}: got ${Component}`);
+      }
       return (
         <div style={{textAlign: 'center'}}>
           <Component {...args} {...props} />

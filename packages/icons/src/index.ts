@@ -19,6 +19,7 @@ export {default as HistoryIcon} from './History';
 export {default as InstagramIcon} from './Instagram';
 export {default as LocationIcon} from './Location';
 export {default as MenuIcon} from './Menu';
+export {default as FileAttachIcon} from './FileAttach';
 export {default as VerifiedIcon} from './Verified';
 export {default as MessagesIcon} from './Messages';
 export {default as MoreHorizontalIcon} from './MoreHorizontal';

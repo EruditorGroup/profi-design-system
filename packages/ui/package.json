@@ -35,7 +35,8 @@
     "react-autosuggest": "^10.1.0",
     "react-input-mask": "^2.0.4",
     "react-textarea-autosize": "^8.3.0",
-    "react-transition-group": "^4.4.1"
+    "react-transition-group": "^4.4.1",
+    "react-dropzone": "^11.3.4"
   },
   "devDependencies": {
     "@types/react-autosuggest": "^10.1.4",

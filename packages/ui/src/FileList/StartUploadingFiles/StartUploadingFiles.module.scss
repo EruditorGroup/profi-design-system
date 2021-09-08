@@ -1,0 +1,56 @@
+.root {
+    border: 1px dashed var(--ui-color-lightInverseState);
+    border-radius: var(--ui-border-radius-l);
+    width: auto;
+    cursor: pointer;
+    padding: 60px 0 50px;
+}
+
+.icon {
+    color: var(--ui-color-lightInverseState);
+}
+
+.design-minimal  {
+    display: inline-flex;
+    padding: 45px;
+    &__icon {
+      font-size: 20px;
+    }
+}
+
+.design-button {
+    padding: 22px 15px;
+    &__icon {
+      font-size: 17px;
+    }
+}
+
+.design-area {
+    &__icon {
+      font-size: 39px;
+    }
+}
+
+.design-button .content {
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+.root.design-button:hover, 
+.root.design-minimal:hover {
+    background-color: var(--ui-color-light);
+}
+
+
+.content {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.button {
+    margin-top: 30px;
+}
+
