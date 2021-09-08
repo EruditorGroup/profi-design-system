@@ -1,5 +1,4 @@
 import React from 'react';
-import {Text, Button} from '@eruditorgroup/profi-ui';
 import {PlusIcon} from '@eruditorgroup/profi-icons';
 import cx from 'classnames';
 

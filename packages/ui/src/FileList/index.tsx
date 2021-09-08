@@ -95,7 +95,7 @@ const FileList = ({
                   design="secondary"
                   size="custom"
                   className={styles['remove-btn']}
-                  onClick={(ev) => onDelete(file)}
+                  onClick={() => onDelete(file)}
                 >
                   <CloseIcon />
                 </Button>
