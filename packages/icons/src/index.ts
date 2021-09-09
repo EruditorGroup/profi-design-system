@@ -34,6 +34,7 @@ export {default as OkIcon} from './Ok';
 export {default as ParametersIcon} from './Parameters';
 export {default as PeopleIcon} from './People';
 export {default as PhoneIcon} from './Phone';
+export {default as PinIcon} from './Pin';
 export {default as PhoneStrokeIcon} from './PhoneStroke';
 export {default as PlaceIcon} from './Place';
 export {default as PlusIcon} from './Plus';
