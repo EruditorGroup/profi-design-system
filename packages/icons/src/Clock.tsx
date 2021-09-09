@@ -3,7 +3,7 @@ import type {ForwardRefExoticComponent} from 'react';
 import type {IconPropsType} from './_types';
 import {combineCommonProps} from './_helpers';
 
-const ClearIcon: ForwardRefExoticComponent<IconPropsType> = forwardRef(
+const ClockIcon: ForwardRefExoticComponent<IconPropsType> = forwardRef(
   (props, ref) => {
     return (
       <svg
@@ -19,15 +19,15 @@ const ClearIcon: ForwardRefExoticComponent<IconPropsType> = forwardRef(
         <path
           d="M6 6L11 11M6 11L11 6"
           stroke="white"
-          stroke-width="1.5"
-          stroke-linecap="round"
-          stroke-linejoin="round"
+          strokeWidth="1.5"
+          strokeLinecap="round"
+          strokeLinejoin="round"
         />
       </svg>
     );
   },
 );
 
-ClearIcon.displayName = 'ClearIcon';
+ClockIcon.displayName = 'ClockIcon';
 
-export default ClearIcon;
+export default ClockIcon;

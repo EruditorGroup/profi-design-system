@@ -18,9 +18,9 @@ const PlusIcon: ForwardRefExoticComponent<IconPropsType> = forwardRef(
         <path
           d="M1.808 11H11m0 0h9.192M11 11v9.192M11 11V1.808"
           stroke="currentColor"
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
         />
       </svg>
     );
