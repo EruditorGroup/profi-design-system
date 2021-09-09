@@ -1,0 +1,50 @@
+.root {
+  z-index: 1000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.overlay {
+  z-index: 999;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  height: 100%;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.sheet {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  box-sizing: border-box;
+  width: 100%;
+  max-height: 90vh;
+
+  background: var(--ui-bg-lighter);
+  border-radius: 20px 20px 0 0;
+  box-shadow: 0px 5px 30px 5px rgba(0, 0, 0, 0.05);
+
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.body {
+  box-sizing: border-box;
+  overflow: auto;
+  min-height: 100%;
+  height: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.body_withPadding {
+  padding: 10px;
+}
