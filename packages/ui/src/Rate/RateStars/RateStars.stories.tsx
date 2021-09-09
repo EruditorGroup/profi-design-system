@@ -79,6 +79,7 @@ const StoryStyles = ({hovered}: {hovered?: boolean}) => {
       {`
       * {
         transition: none !important;
+        animation: none !important;
       }
     `}
     </style>
