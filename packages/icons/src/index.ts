@@ -32,6 +32,7 @@ export {default as PeopleIcon} from './People';
 export {default as PhoneIcon} from './Phone';
 export {default as PhoneStrokeIcon} from './PhoneStroke';
 export {default as ProfileIcon} from './Profile';
+export {default as ProfileStrokeIcon} from './ProfileStroke';
 export {default as RepeatIcon} from './Repeat';
 export {default as ReviewIcon} from './Review';
 export {default as SearchIcon} from './Search';
