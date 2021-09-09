@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.45.0](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.44.2...@eruditorgroup/profi-ui@0.45.0) (2021-09-09)
+
+
+### Bug Fixes
+
+* **Autosuggest:** Откат изменения высоты. ([1b1a2fd](https://github.com/eruditorgroup/profi-design-system/commit/1b1a2fd6b25951101178912550366863271bd379))
+
+
+### Features
+
+* **ui:** Bottom Sheet ([7a1f755](https://github.com/eruditorgroup/profi-design-system/commit/7a1f75582715d0eabca4e95f484b0b5a1c0696c0))
+
+
+
+
+
 ## [0.44.2](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.44.1...@eruditorgroup/profi-ui@0.44.2) (2021-09-08)
 
 

@@ -3,6 +3,32 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.32.0](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-icons@0.31.17...@eruditorgroup/profi-icons@0.32.0) (2021-09-09)
+
+
+### Bug Fixes
+
+* **icons:** fix attributes naming ([3b5de5f](https://github.com/eruditorgroup/profi-design-system/commit/3b5de5f0e39a6b1c59bfe9abb141e513da2de1b1))
+
+
+### Features
+
+* **icons:** Delete icon ([60d1729](https://github.com/eruditorgroup/profi-design-system/commit/60d172979cb4fae57481269542430dcaae20b7c8))
+* **icons:** Details icon ([e6c920c](https://github.com/eruditorgroup/profi-design-system/commit/e6c920cad04ce82566ad738cd245f3f93e23b67d))
+* **icons:** Google icon ([191a09d](https://github.com/eruditorgroup/profi-design-system/commit/191a09d450c021c765c392fbc3530ab1827e56f4))
+* **icons:** Lock icon ([716020d](https://github.com/eruditorgroup/profi-design-system/commit/716020d54adb3b8c652eb053d182518c292244af))
+* **icons:** LockStroke icon ([26fa436](https://github.com/eruditorgroup/profi-design-system/commit/26fa436aab13228ff7db35dae4268c7c73bb3cda))
+* **icons:** PhoneStroke icon ([f7ed28e](https://github.com/eruditorgroup/profi-design-system/commit/f7ed28e2ee5b7a378d9062d617ecadff5f89772f))
+* **icons:** Pin icon ([f6d23e0](https://github.com/eruditorgroup/profi-design-system/commit/f6d23e000e17d964bf6be87759bfbad1e4b9e338))
+* **icons:** ProfileStroke icon ([a0fe548](https://github.com/eruditorgroup/profi-design-system/commit/a0fe5483b8654a7017e6ada4df1365765e5e9e3b))
+* **icons:** SupportThin icon ([9e33b27](https://github.com/eruditorgroup/profi-design-system/commit/9e33b2799b1022694cd1281418d182d80ee193f0))
+* **icons:** ThumbUp icon ([bfd2f69](https://github.com/eruditorgroup/profi-design-system/commit/bfd2f698cda8c8f5737139077c3f13ffb108df2d))
+* **icons:** Warranty icon ([cc31903](https://github.com/eruditorgroup/profi-design-system/commit/cc31903f13134044ea8e5a83692f2e972959652f))
+
+
+
+
+
 ## [0.31.17](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-icons@0.31.16...@eruditorgroup/profi-icons@0.31.17) (2021-09-08)
 
 **Note:** Version bump only for package @eruditorgroup/profi-icons
