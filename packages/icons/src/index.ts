@@ -20,6 +20,7 @@ export {default as HistoryIcon} from './History';
 export {default as InstagramIcon} from './Instagram';
 export {default as LocationIcon} from './Location';
 export {default as LockIcon} from './Lock';
+export {default as LockStrokeIcon} from './LockStroke';
 export {default as MenuIcon} from './Menu';
 export {default as VerifiedIcon} from './Verified';
 export {default as MessagesIcon} from './Messages';
