@@ -15,6 +15,7 @@ export {default as EditIcon} from './Edit';
 export {default as EditBlockIcon} from './EditBlock';
 export {default as FbIcon} from './Fb';
 export {default as GalleryIcon} from './Gallery';
+export {default as GoogleIcon} from './Google';
 export {default as HistoryIcon} from './History';
 export {default as InstagramIcon} from './Instagram';
 export {default as LocationIcon} from './Location';
