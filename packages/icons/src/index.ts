@@ -12,6 +12,7 @@ export {default as ClearIcon} from './Clear';
 export {default as ClockIcon} from './Clock';
 export {default as CloseIcon} from './Close';
 export {default as DeleteIcon} from './Delete';
+export {default as DetailsIcon} from './Details';
 export {default as DiagramIcon} from './Diagram';
 export {default as DotIcon} from './Dot';
 export {default as EditIcon} from './Edit';
