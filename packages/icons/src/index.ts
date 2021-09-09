@@ -45,6 +45,7 @@ export {default as SupportIcon} from './Support';
 export {default as SupportThinIcon} from './SupportThin';
 export {default as ThumbUpIcon} from './ThumbUp';
 export {default as VkIcon} from './Vk';
+export {default as WarrantyIcon} from './Warranty';
 export {default as YoutubeIcon} from './Youtube';
 export {default as PlaceIcon} from './Place';
 export {default as ErrorIcon} from './Error';
