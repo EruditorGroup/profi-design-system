@@ -17,11 +17,10 @@ const getStorybookEntryPath = (): string => {
 
 const beforeScreenshot: ImageSnapshotConfig['beforeScreenshot'] = async (
   page,
-  {context: {parameters}, context},
+  {context: {parameters}},
 ) => {
   const viewport = parameters.viewport;
 
-  console.log('page', page);
   if (viewport?.defaultViewport) {
     const defaultViewport = viewport.viewports[viewport.defaultViewport];
     const height =
