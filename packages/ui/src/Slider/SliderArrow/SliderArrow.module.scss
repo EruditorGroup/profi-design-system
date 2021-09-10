@@ -39,15 +39,20 @@
   }
 }
 
-.gradient {
+.gradient,
+.fill {
+  position: absolute;
   width: 20px;
   height: 100%;
-  position: absolute;
   top: 0;
+  z-index: 1;
+}
+
+.gradient {
   visibility: hidden;
   opacity: 0;
-  transition: opacity 0.15s ease-in-out, visibility 0.15s ease-in-out;
-  z-index: 1;
+  transition: opacity 0.15s ease-in-out, visibility 0.15s ease-in-out,
+    transform 0.15s ease-in-out;
 
   &_show {
     visibility: visible;
@@ -56,9 +61,35 @@
 
   &_left {
     left: 0;
+
+    &.shift {
+      transform: translateX(20px);
+    }
   }
 
   &_right {
     right: 0;
+
+    &.shift {
+      transform: translateX(-20px);
+    }
+  }
+}
+
+.fill {
+  transition: transform 0.15s ease-in-out;
+
+  &_left {
+    transform: translateX(-20px);
+    left: 0;
+  }
+
+  &_right {
+    transform: translateX(20px);
+    right: 0;
+  }
+
+  &_show {
+    transform: translateX(0);
   }
 }

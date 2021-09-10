@@ -11,6 +11,7 @@ import styles from './SliderArrow.module.scss';
 type Props = {
   direction: 'left' | 'right';
   visible?: boolean;
+  withFill?: boolean;
   background?: string;
   onClick: MouseEventHandler<HTMLButtonElement>;
 };
@@ -19,8 +20,6 @@ function compileGradient(
   color: string,
   direction: 'left' | 'right',
 ): {background: string} {
-  if (color === 'transparent') return undefined;
-
   return {
     background: `linear-gradient(${
       direction === 'left' ? '270deg' : '90deg'
@@ -33,19 +32,35 @@ export default function SliderArrow({
   visible,
   onClick,
   background = '#fff',
+  withFill,
 }: Props): JSX.Element {
   const Icon = direction === 'left' ? ChevronLeftIcon : ChevronRightIcon;
 
   return (
     <div className={styles['wrapper']}>
-      <div
-        className={cx(
-          styles['gradient'],
-          styles[`gradient_${direction}`],
-          visible && styles['gradient_show'],
-        )}
-        style={compileGradient(background, direction)}
-      />
+      {background !== 'transparent' && (
+        <>
+          <div
+            className={cx(
+              styles['gradient'],
+              styles[`gradient_${direction}`],
+              visible && styles['gradient_show'],
+              withFill && styles['shift'],
+            )}
+            style={compileGradient(background, direction)}
+          />
+
+          <div
+            className={cx(
+              styles['fill'],
+              styles[`fill_${direction}`],
+              visible && withFill && styles['fill_show'],
+            )}
+            style={{background}}
+          />
+        </>
+      )}
+
       <Button
         rounded
         size="l"

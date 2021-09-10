@@ -35,27 +35,24 @@ const Template: Story<RateStarsProps & {hovered?: boolean}> = ({
   hovered,
   ...args
 }) => (
-  <>
-    <StoryStyles hovered={hovered} />
-    <TableGuides
-      cols={rateStoryMeta.cols}
-      rows={rateStoryMeta.rows}
-      Component={(props) => {
-        const ref = useRef<HTMLDivElement | null>(null);
-        useLayoutEffect(() => {
-          if (!hovered) return;
-          const event = new MouseEvent('mouseover', {
-            bubbles: true,
-            cancelable: true,
-          });
+  <TableGuides
+    cols={rateStoryMeta.cols}
+    rows={rateStoryMeta.rows}
+    Component={(props) => {
+      const ref = useRef<HTMLDivElement | null>(null);
+      useLayoutEffect(() => {
+        if (!hovered) return;
+        const event = new MouseEvent('mouseover', {
+          bubbles: true,
+          cancelable: true,
+        });
 
-          ref.current.dispatchEvent(event);
-        }, [hovered]);
+        ref.current.dispatchEvent(event);
+      }, [hovered]);
 
-        return <RateStars ref={ref} {...args} {...props} />;
-      }}
-    />
-  </>
+      return <RateStars ref={ref} {...args} {...props} />;
+    }}
+  />
 );
 
 export const Default = Template.bind({});
@@ -69,18 +66,4 @@ Hover.storyName = 'Hover';
 Hover.args = {
   onChange: undefined,
   hovered: true,
-};
-
-// Отключаем анимацию для Hover Story (иначе на скриншотах не успевает transition отрабатывать)
-const StoryStyles = ({hovered}: {hovered?: boolean}) => {
-  if (!hovered) return null;
-  return (
-    <style>
-      {`
-      * {
-        transition: none !important;
-      }
-    `}
-    </style>
-  );
 };

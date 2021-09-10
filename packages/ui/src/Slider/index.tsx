@@ -135,9 +135,7 @@ const Slider = forwardRef<HTMLDivElement, SliderProps>(
 
         e.preventDefault();
         const {current: el} = containerRef;
-        const {deltaX, deltaY} = e;
-
-        el.scrollLeft += Math.abs(deltaY) > Math.abs(deltaX) ? deltaY : deltaX;
+        el.scrollLeft = el.scrollLeft + e.deltaX;
       },
       [scrollable],
     );
@@ -158,6 +156,7 @@ const Slider = forwardRef<HTMLDivElement, SliderProps>(
           <SliderArrow
             direction="left"
             visible={showLeftArrow}
+            withFill={!showRightArrow}
             onClick={onClickLeft}
             background={arrowBackground}
           />
@@ -179,6 +178,7 @@ const Slider = forwardRef<HTMLDivElement, SliderProps>(
           <SliderArrow
             direction="right"
             visible={showRightArrow}
+            withFill={!showLeftArrow}
             onClick={onClickRight}
             background={arrowBackground}
           />

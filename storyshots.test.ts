@@ -32,6 +32,11 @@ const beforeScreenshot: ImageSnapshotConfig['beforeScreenshot'] = async (
       height: height,
     });
   }
+
+  // Убираем анимацию
+  await page.addStyleTag({
+    content: '* {transition: none !important; animation: none !important;}',
+  });
 };
 
 initStoryshots({
