@@ -17,10 +17,11 @@ const getStorybookEntryPath = (): string => {
 
 const beforeScreenshot: ImageSnapshotConfig['beforeScreenshot'] = async (
   page,
-  {context: {parameters}},
+  {context: {parameters}, context},
 ) => {
   const viewport = parameters.viewport;
 
+  console.log('page', page);
   if (viewport?.defaultViewport) {
     const defaultViewport = viewport.viewports[viewport.defaultViewport];
     const height =
@@ -32,6 +33,11 @@ const beforeScreenshot: ImageSnapshotConfig['beforeScreenshot'] = async (
       height: height,
     });
   }
+
+  // Убираем анимацию
+  await page.addStyleTag({
+    content: '* {transition: none !important; animation: none !important;}',
+  });
 };
 
 initStoryshots({
