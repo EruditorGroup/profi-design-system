@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.45.1](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.45.0...@eruditorgroup/profi-ui@0.45.1) (2021-09-10)
+
+
+
+## 0.18.11 (2021-09-10)
+
+
+### Bug Fixes
+
+* **Slider:** Добавлена заливка вместе с градиентом у стрелки слайдера ([#290](https://github.com/eruditorgroup/profi-design-system/issues/290)) ([5dbcdaf](https://github.com/eruditorgroup/profi-design-system/commit/5dbcdaf6d3eea2bf65a1fe339a7c236f58d59e58))
+* **ui:** BottomSheet export ([cbf7cee](https://github.com/eruditorgroup/profi-design-system/commit/cbf7cee93e7b53c1b3d907e268c6efca649c999c))
+
+
+
+
+
 # [0.45.0](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.44.2...@eruditorgroup/profi-ui@0.45.0) (2021-09-09)
 
 
