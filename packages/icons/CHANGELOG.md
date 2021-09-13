@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.33.0](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-icons@0.32.1...@eruditorgroup/profi-icons@0.33.0) (2021-09-13)
+
+
+### Features
+
+* **icons:** Microphone ([fd38af1](https://github.com/eruditorgroup/profi-design-system/commit/fd38af119ada2da8427578399cc4afbc151afa31))
+
+
+
+
+
 ## [0.32.1](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-icons@0.32.0...@eruditorgroup/profi-icons@0.32.1) (2021-09-10)
 
 **Note:** Version bump only for package @eruditorgroup/profi-icons
