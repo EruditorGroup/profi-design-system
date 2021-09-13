@@ -131,11 +131,12 @@ const Slider = forwardRef<HTMLDivElement, SliderProps>(
 
     const onWheel = useCallback(
       (e: WheelEvent) => {
-        if (!scrollable) return;
-
-        e.preventDefault();
-        const {current: el} = containerRef;
-        el.scrollLeft = el.scrollLeft + e.deltaX;
+        // Перехватываем только горизонтальный скролл
+        if (scrollable && Math.abs(e.deltaX) > Math.abs(e.deltaY)) {
+          e.preventDefault();
+          const {current: el} = containerRef;
+          el.scrollLeft = el.scrollLeft + e.deltaX;
+        }
       },
       [scrollable],
     );

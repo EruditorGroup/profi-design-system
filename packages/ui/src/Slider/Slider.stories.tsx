@@ -61,7 +61,9 @@ export const Default = TemplateFactory({
   cardWidth: '350px',
 }).bind({});
 Default.storyName = 'Default';
-Default.args = {};
+Default.args = {
+  scrollable: true,
+};
 
 export const FullSlide = TemplateFactory({
   title: 'Слайдер с карточками на всю ширину',
