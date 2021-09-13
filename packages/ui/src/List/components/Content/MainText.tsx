@@ -7,15 +7,13 @@ import {useListItemContext} from '../ListItem';
 
 import styles from './Content.module.scss';
 
-interface MainTextProps {
-  className?: string;
-  bold?: boolean;
-}
+import type {TextProps} from '../../../Typography';
 
-export const MainText: React.FC<MainTextProps> = ({
+export const MainText: React.FC<TextProps> = ({
   className,
   children,
   bold,
+  ...props
 }) => {
   const {size, boldItemMainText} = useListContext();
   const disabled = useListItemContext();
@@ -27,6 +25,7 @@ export const MainText: React.FC<MainTextProps> = ({
       color={disabled ? 'disabled' : 'secondary'}
       size={size}
       className={cx(styles['main-text'], className)}
+      {...props}
     >
       {children}
     </Text>
