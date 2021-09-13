@@ -1,9 +1,11 @@
 import cx from 'classnames';
-import {theme} from '@eruditorgroup/profi-toolkit';
 import React from 'react';
-import styles from './Content.module.scss';
+
+import {Text} from '../../../Typography';
 import {useListContext} from '../..';
 import {useListItemContext} from '../ListItem';
+
+import styles from './Content.module.scss';
 
 interface MainTextProps {
   className?: string;
@@ -17,19 +19,16 @@ export const MainText: React.FC<MainTextProps> = ({
 }) => {
   const {size, boldItemMainText} = useListContext();
   const disabled = useListItemContext();
-  const boldText = bold ?? boldItemMainText;
 
   return (
-    <div
-      className={cx(
-        className,
-        styles['main-text'],
-        theme.common[`size-${size}`],
-        theme.common[`color-${disabled ? 'disabled' : 'secondary'}`],
-        boldText && theme.common['bold'],
-      )}
+    <Text
+      as="div"
+      bold={bold ?? boldItemMainText}
+      color={disabled ? 'disabled' : 'secondary'}
+      size={size}
+      className={cx(styles['main-text'], className)}
     >
       {children}
-    </div>
+    </Text>
   );
 };
