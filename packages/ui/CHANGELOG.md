@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.45.2](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.45.1...@eruditorgroup/profi-ui@0.45.2) (2021-09-13)
+
+
+### Bug Fixes
+
+* **List.Item.MainText:** Add className prop ([c4fcaa5](https://github.com/eruditorgroup/profi-design-system/commit/c4fcaa54c5ef0090dc06a7e5f1fc6aa2f1e29665))
+
+
+
+
+
 ## [0.45.1](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.45.0...@eruditorgroup/profi-ui@0.45.1) (2021-09-10)
 
 
