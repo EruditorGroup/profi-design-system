@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.45.3](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.45.2...@eruditorgroup/profi-ui@0.45.3) (2021-09-13)
+
+
+### Bug Fixes
+
+* **Avatar:** Online, чтобы не зависил от размера текста ([9419d38](https://github.com/eruditorgroup/profi-design-system/commit/9419d389bafcac05a530ceff3f69b7f3c123e293))
+* **Slider:** Перехватываем только горизонтальный скролл ([fb3d1d6](https://github.com/eruditorgroup/profi-design-system/commit/fb3d1d606eca0f083e9e71f0b3dfd31cfb3883fd))
+* **Slider:** Событие onWheel заменено на overflow: auto ([fb48316](https://github.com/eruditorgroup/profi-design-system/commit/fb4831681536867cc053496e1ee5a0378bfaf2d2))
+
+
+
+
+
 ## [0.45.2](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.45.1...@eruditorgroup/profi-ui@0.45.2) (2021-09-13)
 
 
