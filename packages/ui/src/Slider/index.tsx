@@ -12,7 +12,6 @@ import cx from 'classnames';
 import SliderArrow from './SliderArrow';
 import SliderItem from './SliderItem';
 
-import {useMouseWheel} from '@eruditorgroup/profi-toolkit';
 import {
   checkScrollOnBorder,
   calcShiftContainer,
@@ -129,17 +128,6 @@ const Slider = forwardRef<HTMLDivElement, SliderProps>(
       slide(shift);
     };
 
-    const onWheel = useCallback(
-      (e: WheelEvent) => {
-        if (!scrollable) return;
-
-        e.preventDefault();
-        const {current: el} = containerRef;
-        el.scrollLeft = el.scrollLeft + e.deltaX;
-      },
-      [scrollable],
-    );
-
     useLayoutEffect(() => {
       if (!containerRef) return;
       const {current: container} = containerRef;
@@ -147,8 +135,6 @@ const Slider = forwardRef<HTMLDivElement, SliderProps>(
       childrenSizes.current = reduceChildrenSizes(container);
       checkArrows();
     }, [children]);
-
-    useMouseWheel(containerRef, onWheel);
 
     return (
       <SliderContext.Provider value={context}>
@@ -164,7 +150,8 @@ const Slider = forwardRef<HTMLDivElement, SliderProps>(
           <div
             className={cx(
               styles['container'],
-              flex && styles['container_flex'],
+              flex ? styles['container_flex'] : styles['container_inline'],
+              scrollable && styles['container_scrollable'],
               areaClassName,
             )}
             ref={containerRef}

@@ -3,17 +3,30 @@
 }
 
 .container {
-  white-space: nowrap;
-  overflow: hidden;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+
+  &_inline {
+    white-space: nowrap;
+  }
 
   &_flex {
     display: flex;
     flex-wrap: nowrap;
-    white-space: normal;
   }
 
-  @media (max-width: 1023px) {
-    overflow: auto;
-    -webkit-overflow-scrolling: touch;
+  @media (min-width: 1024px) {
+    overflow: hidden;
+
+    &_scrollable {
+      overflow: auto;
+      -ms-overflow-style: none; /* IE and Edge */
+      scrollbar-width: none; /* Firefox */
+
+      /* Chrome, Safari */
+      &::-webkit-scrollbar {
+        display: none;
+      }
+    }
   }
 }
