@@ -30,6 +30,7 @@ export {default as MenuIcon} from './Menu';
 export {default as MessagesIcon} from './Messages';
 export {default as MoreHorizontalIcon} from './MoreHorizontal';
 export {default as MoreVerticalIcon} from './MoreVertical';
+export {default as MicrophoneIcon} from './Microphone';
 export {default as OkIcon} from './Ok';
 export {default as ParametersIcon} from './Parameters';
 export {default as PeopleIcon} from './People';
