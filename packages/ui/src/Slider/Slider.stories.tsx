@@ -34,25 +34,23 @@ const TemplateFactory = ({
   };
 
   return (
-    <>
-      <div style={containerStyles}>
-        <Title style={titleStyles}>{title}</Title>
-        <Slider offset={20} style={{width: '810px'}} {...args}>
-          {[...Array(cardLength)].map((_v, index) => (
-            <SliderItem
-              as={Space}
-              radius="l"
-              px={20}
-              py={20}
-              className="card"
-              style={blockStyles}
-            >
-              Card {index + 1}
-            </SliderItem>
-          ))}
-        </Slider>
-      </div>
-    </>
+    <div style={containerStyles}>
+      <Title style={titleStyles}>{title}</Title>
+      <Slider offset={20} style={{width: '810px'}} {...args}>
+        {[...Array(cardLength)].map((_v, index) => (
+          <SliderItem
+            as={Space}
+            radius="l"
+            px={20}
+            py={20}
+            className="card"
+            style={blockStyles}
+          >
+            Card {index + 1}
+          </SliderItem>
+        ))}
+      </Slider>
+    </div>
   );
 };
 
@@ -61,7 +59,9 @@ export const Default = TemplateFactory({
   cardWidth: '350px',
 }).bind({});
 Default.storyName = 'Default';
-Default.args = {};
+Default.args = {
+  scrollable: true,
+};
 
 export const FullSlide = TemplateFactory({
   title: 'Слайдер с карточками на всю ширину',
@@ -92,4 +92,5 @@ export const Flex = TemplateFactory({
 Flex.storyName = 'Flex';
 Flex.args = {
   flex: true,
+  scrollable: true,
 };

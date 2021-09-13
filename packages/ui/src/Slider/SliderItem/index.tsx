@@ -44,4 +44,4 @@ const SliderItem: ForwardingComponent<'div', SliderItemProps> = forwardRef(
 );
 
 SliderItem.displayName = 'SliderItem';
-export default SliderItem;
+export default React.memo(SliderItem);

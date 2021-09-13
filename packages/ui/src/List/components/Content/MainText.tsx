@@ -1,35 +1,33 @@
 import cx from 'classnames';
-import {theme} from '@eruditorgroup/profi-toolkit';
 import React from 'react';
-import styles from './Content.module.scss';
+
+import {Text} from '../../../Typography';
 import {useListContext} from '../..';
 import {useListItemContext} from '../ListItem';
 
-interface MainTextProps {
-  className?: string;
-  bold?: boolean;
-}
+import styles from './Content.module.scss';
 
-export const MainText: React.FC<MainTextProps> = ({
+import type {TextProps} from '../../../Typography';
+
+export const MainText: React.FC<TextProps> = ({
   className,
   children,
   bold,
+  ...props
 }) => {
   const {size, boldItemMainText} = useListContext();
   const disabled = useListItemContext();
-  const boldText = bold ?? boldItemMainText;
 
   return (
-    <div
-      className={cx(
-        className,
-        styles['main-text'],
-        theme.common[`size-${size}`],
-        theme.common[`color-${disabled ? 'disabled' : 'secondary'}`],
-        boldText && theme.common['bold'],
-      )}
+    <Text
+      as="div"
+      bold={bold ?? boldItemMainText}
+      color={disabled ? 'disabled' : 'secondary'}
+      size={size}
+      className={cx(styles['main-text'], className)}
+      {...props}
     >
       {children}
-    </div>
+    </Text>
   );
 };
