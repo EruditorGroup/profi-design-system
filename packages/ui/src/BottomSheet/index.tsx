@@ -21,6 +21,7 @@ import {
 import BodyPortal from '../BodyPortal';
 
 import styles from './BottomSheet.module.scss';
+import animation from './animation.module.scss';
 
 export interface BottomSheetProps
   extends Omit<HTMLAttributes<HTMLDivElement>, 'width'> {
@@ -30,7 +31,7 @@ export interface BottomSheetProps
   onClose: MouseEventHandler<HTMLElement>;
 }
 
-const DEFAULT_ANIMATION_DURATION = 300;
+const DEFAULT_ANIMATION_DURATION = 150;
 
 const BottomSheet: ForwardRefExoticComponent<
   BottomSheetProps & RefAttributes<HTMLDivElement>
@@ -89,7 +90,7 @@ const BottomSheet: ForwardRefExoticComponent<
           mountOnEnter
           in={visible}
           timeout={DEFAULT_ANIMATION_DURATION}
-          classNames={theme.transitions.slide}
+          classNames={animation}
         >
           <BodyPortal className={cx(styles['root'])}>
             <div
