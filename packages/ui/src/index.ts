@@ -73,6 +73,9 @@ export type {FileListProps} from './FileList';
 export {default as Modal} from './Modal';
 export type {ModalProps} from './Modal';
 
+export {default as BottomSheet} from './BottomSheet';
+export type {BottomSheetProps} from './BottomSheet';
+
 export {RateStars} from './Rate';
 export type {RateStarsProps} from './Rate';
 

@@ -3,6 +3,62 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.45.3](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.45.2...@eruditorgroup/profi-ui@0.45.3) (2021-09-13)
+
+
+### Bug Fixes
+
+* **Avatar:** Online, чтобы не зависил от размера текста ([9419d38](https://github.com/eruditorgroup/profi-design-system/commit/9419d389bafcac05a530ceff3f69b7f3c123e293))
+* **Slider:** Перехватываем только горизонтальный скролл ([fb3d1d6](https://github.com/eruditorgroup/profi-design-system/commit/fb3d1d606eca0f083e9e71f0b3dfd31cfb3883fd))
+* **Slider:** Событие onWheel заменено на overflow: auto ([fb48316](https://github.com/eruditorgroup/profi-design-system/commit/fb4831681536867cc053496e1ee5a0378bfaf2d2))
+
+
+
+
+
+## [0.45.2](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.45.1...@eruditorgroup/profi-ui@0.45.2) (2021-09-13)
+
+
+### Bug Fixes
+
+* **List.Item.MainText:** Add className prop ([c4fcaa5](https://github.com/eruditorgroup/profi-design-system/commit/c4fcaa54c5ef0090dc06a7e5f1fc6aa2f1e29665))
+
+
+
+
+
+## [0.45.1](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.45.0...@eruditorgroup/profi-ui@0.45.1) (2021-09-10)
+
+
+
+## 0.18.11 (2021-09-10)
+
+
+### Bug Fixes
+
+* **Slider:** Добавлена заливка вместе с градиентом у стрелки слайдера ([#290](https://github.com/eruditorgroup/profi-design-system/issues/290)) ([5dbcdaf](https://github.com/eruditorgroup/profi-design-system/commit/5dbcdaf6d3eea2bf65a1fe339a7c236f58d59e58))
+* **ui:** BottomSheet export ([cbf7cee](https://github.com/eruditorgroup/profi-design-system/commit/cbf7cee93e7b53c1b3d907e268c6efca649c999c))
+
+
+
+
+
+# [0.45.0](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.44.2...@eruditorgroup/profi-ui@0.45.0) (2021-09-09)
+
+
+### Bug Fixes
+
+* **Autosuggest:** Откат изменения высоты. ([1b1a2fd](https://github.com/eruditorgroup/profi-design-system/commit/1b1a2fd6b25951101178912550366863271bd379))
+
+
+### Features
+
+* **ui:** Bottom Sheet ([7a1f755](https://github.com/eruditorgroup/profi-design-system/commit/7a1f75582715d0eabca4e95f484b0b5a1c0696c0))
+
+
+
+
+
 ## [0.44.2](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.44.1...@eruditorgroup/profi-ui@0.44.2) (2021-09-08)
 
 

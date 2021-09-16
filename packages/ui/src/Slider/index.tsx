@@ -12,7 +12,6 @@ import cx from 'classnames';
 import SliderArrow from './SliderArrow';
 import SliderItem from './SliderItem';
 
-import {useMouseWheel} from '@eruditorgroup/profi-toolkit';
 import {
   checkScrollOnBorder,
   calcShiftContainer,
@@ -129,19 +128,6 @@ const Slider = forwardRef<HTMLDivElement, SliderProps>(
       slide(shift);
     };
 
-    const onWheel = useCallback(
-      (e: WheelEvent) => {
-        if (!scrollable) return;
-
-        e.preventDefault();
-        const {current: el} = containerRef;
-        const {deltaX, deltaY} = e;
-
-        el.scrollLeft += Math.abs(deltaY) > Math.abs(deltaX) ? deltaY : deltaX;
-      },
-      [scrollable],
-    );
-
     useLayoutEffect(() => {
       if (!containerRef) return;
       const {current: container} = containerRef;
@@ -150,14 +136,13 @@ const Slider = forwardRef<HTMLDivElement, SliderProps>(
       checkArrows();
     }, [children]);
 
-    useMouseWheel(containerRef, onWheel);
-
     return (
       <SliderContext.Provider value={context}>
         <div ref={ref} className={cx(styles['slider'], className)} {...props}>
           <SliderArrow
             direction="left"
             visible={showLeftArrow}
+            withFill={!showRightArrow}
             onClick={onClickLeft}
             background={arrowBackground}
           />
@@ -165,7 +150,8 @@ const Slider = forwardRef<HTMLDivElement, SliderProps>(
           <div
             className={cx(
               styles['container'],
-              flex && styles['container_flex'],
+              flex ? styles['container_flex'] : styles['container_inline'],
+              scrollable && styles['container_scrollable'],
               areaClassName,
             )}
             ref={containerRef}
@@ -179,6 +165,7 @@ const Slider = forwardRef<HTMLDivElement, SliderProps>(
           <SliderArrow
             direction="right"
             visible={showRightArrow}
+            withFill={!showLeftArrow}
             onClick={onClickRight}
             background={arrowBackground}
           />
