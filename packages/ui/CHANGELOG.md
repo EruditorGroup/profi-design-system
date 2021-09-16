@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.46.0](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.45.3...@eruditorgroup/profi-ui@0.46.0) (2021-09-16)
+
+
+### Bug Fixes
+
+* **ui:** add custom BottomSheet animation ([044ec36](https://github.com/eruditorgroup/profi-design-system/commit/044ec3669c39e19ea1c1f9f9a82d8618a2c33559))
+
+
+### Features
+
+* **Autosuggest:** Добавлены секции в подсказки ([10692c9](https://github.com/eruditorgroup/profi-design-system/commit/10692c90fe4c1de7b6a2144dbbc46dfd669b17c9))
+
+
+
+
+
 ## [0.45.3](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.45.2...@eruditorgroup/profi-ui@0.45.3) (2021-09-13)
 
 
