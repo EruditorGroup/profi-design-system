@@ -2,13 +2,14 @@ import React, {useCallback, useState} from 'react';
 import {CloseIcon, PlaceIcon} from '@eruditorgroup/profi-icons';
 import {Story, Meta} from '@storybook/react';
 
-import Autosuggest, {AutosuggestProps, ISuggestValue} from '../index';
+import Autosuggest, {AutosuggestProps, ISuggestValue, TSection} from '../index';
 import List from '../../List';
 import GeoTag from '../../GeoTag';
 import metro from './_metro.json';
 import {DotIcon} from '@eruditorgroup/profi-icons';
 import ReactAutosuggest from 'react-autosuggest';
 import YandexGeoSuggestion from './YandexGeoSuggestion';
+import styles from './AutosuggestStories.module.scss';
 
 export default {
   title: 'Autosuggest',
@@ -77,6 +78,7 @@ const Template: Story<Omit<AutosuggestProps, 'suggestions' | 'value'>> = (
       <h2>Static suggestions</h2>
       <Autosuggest
         {...args}
+        multiSection={false}
         size="l"
         suggestionsSize="l"
         suggestions={suggestions}
@@ -92,6 +94,7 @@ const Template: Story<Omit<AutosuggestProps, 'suggestions' | 'value'>> = (
       <h2>Multiple</h2>
       <Autosuggest
         {...args}
+        multiSection={false}
         isMultiple
         block
         size="l"
@@ -125,6 +128,7 @@ const Template: Story<Omit<AutosuggestProps, 'suggestions' | 'value'>> = (
       <h2>Async suggestions</h2>
       <Autosuggest
         {...args}
+        multiSection={false}
         block
         size="l"
         suggestionsSize="l"
@@ -144,6 +148,7 @@ const Template: Story<Omit<AutosuggestProps, 'suggestions' | 'value'>> = (
       <h2>Opened suggestions view without interactive</h2>
       <Autosuggest
         {...args}
+        multiSection={false}
         size="xl"
         suggestionsSize="l"
         suggestions={suggestions}
@@ -162,3 +167,79 @@ const Template: Story<Omit<AutosuggestProps, 'suggestions' | 'value'>> = (
 
 export const Default = Template.bind({});
 Default.args = {};
+
+const books = [
+  {
+    title: 'Фантастика',
+    suggestions: [
+      {value: 'Гарри Поттер'},
+      {value: 'Властелин колец'},
+      {value: 'Ведьмак'},
+    ],
+  },
+  {
+    title: 'Детектив',
+    suggestions: [
+      {value: 'Восточный экспресс'},
+      {value: 'Убийство по алфавиту'},
+      {value: 'Шерлок Холмс'},
+    ],
+  },
+  {
+    title: 'Классика',
+    suggestions: [{value: 'Капитанская дочь'}, {value: 'Отцы и дети'}],
+  },
+  {
+    title: 'Зарубежная',
+    suggestions: [{value: 'Триумфальная арка'}, {value: 'Зеленая миля'}],
+  },
+];
+
+export const MultiSection = () => {
+  const [value, setValue] = useState<string>('');
+  const [suggestions, setSuggestions] = useState<TSection[]>([]);
+
+  const updateSuggestions = useCallback(({value}) => {
+    setSuggestions(() => {
+      const result: TSection[] = [];
+      books.forEach(({title, suggestions}) => {
+        const filtered = suggestions.filter((book) =>
+          book.value.toLowerCase().includes(value.toLowerCase()),
+        );
+        filtered.length && result.push({title, suggestions: filtered});
+      });
+      return result;
+    });
+  }, []);
+
+  const renderSuggestion: ReactAutosuggest.RenderSuggestion<ISuggestValue> = (
+    {value},
+    params,
+  ) => (
+    <List.Item
+      as="div"
+      active={params.isHighlighted}
+    >
+      {value}
+    </List.Item>
+  );
+
+  return (
+    <Autosuggest
+      multiSection={true}
+      renderSectionTitle={() => null}
+      sectionClassName={styles['section']}
+      size="l"
+      suggestionsSize="l"
+      suggestions={suggestions}
+      inputProps={{
+        value,
+        placeholder: 'Начните вводить "В"',
+        onChange: (_, params) => setValue(params.newValue),
+      }}
+      onSuggestionsFetchRequested={updateSuggestions}
+      onSuggestionSelected={(_, {suggestion}) => setValue(suggestion.value)}
+      renderSuggestion={renderSuggestion}
+    />
+  );
+};
