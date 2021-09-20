@@ -1,0 +1,93 @@
+.modal {
+  width: calc(100vw - 160px);
+  max-width: 1400px;
+  height: calc(100vh - 40px);
+  margin: 20px auto;
+  border-radius: 16px;
+}
+
+.wrapper {
+  display: flex;
+  height: 100%;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.image {
+  display: flex;
+  flex: 1 1 0;
+  background: #333 center/contain no-repeat;
+}
+
+.info {
+  padding: 25px;
+  width: 360px;
+  box-sizing: border-box;
+  overflow-y: auto;
+}
+
+.info > * + * {
+  margin-top: 15px;
+}
+
+.mainInfo {
+  display: flex;
+  align-items: flex-start;
+
+  &_align-center {
+    align-items: center;
+  }
+}
+
+.avatar {
+  margin-right: 10px;
+}
+
+.description {
+  white-space: pre-line;
+}
+
+.buttonArea {
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  width: 50%;
+  height: 100%;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.1s 1s ease;
+
+  &_left {
+    justify-content: flex-start;
+    width: 33.3333333333%;
+  }
+
+  &_right {
+    justify-content: flex-end;
+    width: 66.3333333337%;
+  }
+}
+
+.image:hover > .buttonArea {
+  opacity: 1;
+  transition-delay: 0s;
+}
+
+.button {
+  background-color: #fff;
+
+  &_nav {
+    opacity: 0.5;
+  }
+
+  &_close {
+    position: absolute;
+    top: 0;
+    left: 100%;
+    margin-left: 10px;
+  }
+}
+
+.buttonArea:hover > .button_nav {
+  opacity: 1;
+}
