@@ -111,7 +111,7 @@ const FileList = ({
                   radius="s"
                   className={styles['spinner']}
                 >
-                  <Spinner size="xl" />
+                  {file.type !== 'Document' && <Spinner size="xl" />}
                 </Space>
                 {file.type === 'Document' ? (
                   <FilePreview fileName={file.name} />

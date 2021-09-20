@@ -1,17 +1,19 @@
 .root {
   height: 100%;
   background: var(--lightest-grey);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
 }
 
 .fileAttached {
-  margin-left: 29px;
-  margin-top: 11px;
+  flex-shrink: 0;
 }
 
 .fileName {
-  overflow-wrap: break-word;
-  width: 100px;
+  word-break: break-all;
+  width: auto;
+  max-width: calc(100px - 35px);
   margin-left: 5px;
-  margin-right: 5px;
-  margin-bottom: 8px;
 }
