@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.35.1](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-toolkit@0.35.0...@eruditorgroup/profi-toolkit@0.35.1) (2021-09-20)
+
+
+### Bug Fixes
+
+* **Contants:** Fix constants es re-exports ([28a0fd4](https://github.com/eruditorgroup/profi-design-system/commit/28a0fd4d95ad9e60b1a9875c542c1a846b3a205c))
+
+
+
+
+
 # [0.35.0](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-toolkit@0.34.4...@eruditorgroup/profi-toolkit@0.35.0) (2021-09-20)
 
 
