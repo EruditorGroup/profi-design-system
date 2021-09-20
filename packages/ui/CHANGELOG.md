@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.47.0](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.46.0...@eruditorgroup/profi-ui@0.47.0) (2021-09-20)
+
+
+### Features
+
+* **UI:** Add Gallery.Image component ([061765a](https://github.com/eruditorgroup/profi-design-system/commit/061765acd096a49000f66e6c1e3084465892e527))
+
+
+
+
+
 # [0.46.0](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.45.3...@eruditorgroup/profi-ui@0.46.0) (2021-09-16)
 
 

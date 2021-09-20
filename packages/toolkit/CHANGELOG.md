@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.35.0](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-toolkit@0.34.4...@eruditorgroup/profi-toolkit@0.35.0) (2021-09-20)
+
+
+### Features
+
+* **Toolkit:** Add capitalize util function ([0db1fd1](https://github.com/eruditorgroup/profi-design-system/commit/0db1fd1ee00dcdf8685fa2f87c99a32d2d896609))
+* **Toolkit:** Add keyboard KEY_CODES constants ([98e1902](https://github.com/eruditorgroup/profi-design-system/commit/98e1902bd19b0292f1100c154e0c5a80022ae648))
+
+
+
+
+
 ## [0.34.4](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-toolkit@0.34.3...@eruditorgroup/profi-toolkit@0.34.4) (2021-09-16)
 
 **Note:** Version bump only for package @eruditorgroup/profi-toolkit
