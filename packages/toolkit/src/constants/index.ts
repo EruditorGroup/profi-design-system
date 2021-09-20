@@ -1,3 +1,4 @@
+import * as KEY_CODES from './keyCodes';
 export * from './date';
 export * from './time';
-export * as KEY_CODES from './keyCodes';
+export {KEY_CODES};
