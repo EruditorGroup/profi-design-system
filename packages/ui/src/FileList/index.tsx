@@ -50,7 +50,7 @@ const FileList = ({
   const dropzoneRef = useRef<DropzoneRef | null>(null);
 
   const hasFiles = !!files.length;
-  const canAddFiles = files.length < maxFiles && !disabled;
+  const canAddFiles = files.length < maxFiles && !disabled && onDrop;
 
   const openDropzone = useCallback(() => dropzoneRef.current?.open(), [
     dropzoneRef,
@@ -80,7 +80,7 @@ const FileList = ({
 
   return (
     <div className={className}>
-      {!hasFiles && !disabled && (
+      {!hasFiles && canAddFiles && (
         <StartUploadingFiles design={design} onClick={openDropzone}>
           {children}
         </StartUploadingFiles>
@@ -127,13 +127,10 @@ const FileList = ({
             </div>
           </div>
         ))}
-        {hasFiles && (
-          <AddFilesLabel
-            canAddFiles={canAddFiles}
-            onClick={() => dropzoneRef.current?.open()}
-          />
+        {hasFiles && canAddFiles && (
+          <AddFilesLabel onClick={() => dropzoneRef.current?.open()} />
         )}
-        {onDrop && (
+        {canAddFiles && (
           <Dropzone
             ref={dropzoneRef}
             onDrop={handleDrop}

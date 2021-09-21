@@ -5,16 +5,10 @@ import {PlusIcon} from '@eruditorgroup/profi-icons';
 import styles from './AddFilesLabel.module.css';
 
 type AddFilesLabelProps = {
-  canAddFiles: boolean;
   onClick: () => void;
 };
 
-const AddFilesLabel = ({
-  canAddFiles,
-  onClick,
-}: AddFilesLabelProps): React.ReactElement => {
-  if (!canAddFiles) return null;
-
+const AddFilesLabel = ({onClick}: AddFilesLabelProps): React.ReactElement => {
   return (
     <div className={styles['label']} onClick={onClick}>
       <PlusIcon className={styles['icon']} />
