@@ -29,11 +29,7 @@ type RewritedProps =
 export type TSection = {suggestions: ISuggestValue[]; title: string};
 
 type SetDifference<A, B> = A extends B ? never : A;
-// eslint-disable-next-line
-type Diff<T extends object, U extends object> = Pick<
-  T,
-  SetDifference<keyof T, keyof U>
->;
+type Diff<T, U> = Pick<T, SetDifference<keyof T, keyof U>>;
 
 type DiffAutosuggestProps<T extends AutosuggestPropsBase<ISuggestValue>> = Diff<
   T,
