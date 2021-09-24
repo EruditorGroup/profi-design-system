@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.47.3](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.47.2...@eruditorgroup/profi-ui@0.47.3) (2021-09-24)
+
+
+### Bug Fixes
+
+* **Gallery.Image:** Заменил рендеринг изображения через background на компонент Image ([fbcd518](https://github.com/eruditorgroup/profi-design-system/commit/fbcd51863f699e8e36a4ed7aa19d9d52423de2f7))
+
+
+
+
+
 ## [0.47.2](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.47.1...@eruditorgroup/profi-ui@0.47.2) (2021-09-21)
 
 
