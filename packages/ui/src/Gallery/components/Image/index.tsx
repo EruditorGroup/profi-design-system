@@ -6,7 +6,7 @@ import {
   CloseIcon,
 } from '@eruditorgroup/profi-icons';
 import {KEY_CODES, capitalize} from '@eruditorgroup/profi-toolkit';
-import {Avatar, Button, Modal, Text} from '../../../index';
+import {Avatar, Button, Image as ProfiImage, Modal, Text} from '../../../index';
 
 import type {Image as IImage} from '../../types';
 
@@ -72,10 +72,8 @@ function Image({
         <CloseIcon />
       </Button>
       <div className={styles['wrapper']}>
-        <div
-          className={styles['image']}
-          style={{backgroundImage: `url(${src})`}}
-        >
+        <div className={styles['imageContainer']}>
+          <ProfiImage className={styles['image']} src={src} fit="contain" />
           {onBack && (
             <div
               className={cx(styles['buttonArea'], styles['buttonArea_left'])}
