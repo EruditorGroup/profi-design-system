@@ -21,14 +21,10 @@ const transformCssModulesConfig = {
 };
 
 if (isESM) {
-  transformCssModulesConfig.keepImport = true;
   transformCssModulesConfig.importPathFormatter = (path) =>
     path.replace(/(scss|css)$/, 'build.css');
-  transformCssModulesConfig.extractCss = {
-    dir: './es/',
-    relativeRoot: './src/',
-    filename: '[path]/[name].build.css',
-  };
+  const dist = isCommonJS ? 'cjs' : 'es';
+  transformCssModulesConfig.extractCss = `./${dist}/styles.css`;
 }
 
 module.exports = {
@@ -39,6 +35,8 @@ module.exports = {
     isCommonJS && [
       '@babel/preset-env',
       {
+        corejs: 3,
+        loose: false,
         useBuiltIns: 'entry',
         shippedProposals: true,
         targets: {node: 'current'},
@@ -52,7 +50,7 @@ module.exports = {
         isTSX: true,
       },
     ],
-    '@babel/preset-react',
+    ['@babel/preset-react', {runtime: 'automatic'}],
   ].filter(Boolean),
   plugins: [
     '@babel/plugin-transform-react-pure-annotations', // optimize output for webpack tree-shaking
