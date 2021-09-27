@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.47.4](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.47.3...@eruditorgroup/profi-ui@0.47.4) (2021-09-27)
+
+
+### Bug Fixes
+
+* **Gallery.Image:** Фикс высоты модалки с фото в Safari 14.0.3 ([075eca1](https://github.com/eruditorgroup/profi-design-system/commit/075eca195ffc2c04bb2db947c2c1d20bc3d5d49c))
+
+
+
+
+
 ## [0.47.3](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.47.2...@eruditorgroup/profi-ui@0.47.3) (2021-09-24)
 
 
