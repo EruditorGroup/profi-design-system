@@ -1,14 +1,13 @@
 .modal {
   width: calc(100vw - 160px);
   max-width: 1400px;
-  height: calc(100vh - 40px);
   margin: 20px auto;
   border-radius: 16px;
 }
 
 .wrapper {
   display: flex;
-  height: 100%;
+  height: calc(100vh - 40px);
   border-radius: 16px;
   overflow: hidden;
 }
