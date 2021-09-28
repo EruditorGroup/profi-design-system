@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.47.5](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.47.4...@eruditorgroup/profi-ui@0.47.5) (2021-09-28)
+
+
+### Bug Fixes
+
+* **Modal:** Увеличил z-index ([fe27818](https://github.com/eruditorgroup/profi-design-system/commit/fe278184727624b83ac09e877765169c3ea04d14))
+
+
+
+
+
 ## [0.47.4](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.47.3...@eruditorgroup/profi-ui@0.47.4) (2021-09-27)
 
 
