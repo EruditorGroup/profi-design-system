@@ -1,0 +1,93 @@
+.wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -10px;
+}
+
+.col {
+  padding: 0 10px;
+  margin-bottom: 20px;
+}
+
+.item {
+  position: relative;
+  width: 110px;
+  height: 110px;
+}
+
+.item-wrapper {
+  width: 110px;
+  height: 110px;
+  border-radius: var(--ui-border-radius-l);
+  overflow: hidden;
+  border: 1px solid var(--icon-grey);
+}
+
+.image {
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+}
+
+.remove-btn {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  z-index: 2;
+  width: 20px;
+  height: 20px;
+  font-size: 12px;
+}
+
+.loader {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.dropzone {
+  display: none;
+}
+
+.dropzone_active {
+  position: fixed;
+  top: 50px;
+  right: 10px;
+  bottom: 10px;
+  left: 10px;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.8);
+  border: 2px dashed var(--ui-color-brand);
+  border-radius: var(--ui-border-radius-xxl);
+}
+
+.holder {
+  text-align: center;
+}
+
+.input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: copy;
+}
+
+.spinner {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}

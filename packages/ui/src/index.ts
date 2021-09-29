@@ -67,6 +67,9 @@ export type {NotificationProps} from './Notification';
 export {default as Toggle} from './Toggle';
 export type {ToggleProps} from './Toggle';
 
+export {default as FileList} from './FileList';
+export type {FileListProps} from './FileList';
+
 export {default as Modal} from './Modal';
 export type {ModalProps} from './Modal';
 

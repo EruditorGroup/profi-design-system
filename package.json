@@ -138,6 +138,7 @@
     ]
   },
   "dependencies": {
-    "@babel/runtime": "^7.15.3"
+    "@babel/runtime": "^7.15.3",
+    "core-js": "3"
   }
 }

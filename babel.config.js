@@ -39,8 +39,10 @@ module.exports = {
     isCommonJS && [
       '@babel/preset-env',
       {
+        loose: true,
         useBuiltIns: 'entry',
         shippedProposals: true,
+        corejs: 3,
         targets: {node: 'current'},
       },
     ],

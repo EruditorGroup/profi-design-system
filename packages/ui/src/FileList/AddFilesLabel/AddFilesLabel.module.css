@@ -1,0 +1,27 @@
+.label {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border: 1px dashed var(--ui-color-lightInverseState);
+  border-radius: var(--ui-border-radius-l);
+  cursor: pointer;
+  box-sizing: border-box;
+  transition: background-color 0.3s;
+  margin: 0 10px 20px;
+  width: 110px;
+  height: 110px;
+}
+
+.label:hover {
+  background-color: var(--ui-color-light);
+}
+
+.button {
+  margin-top: 30px;
+}
+
+.icon {
+  color: var(--ui-color-lightInverseState);
+  font-size: 22px;
+}
