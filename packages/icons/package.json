@@ -1,6 +1,6 @@
 {
   "name": "@eruditorgroup/profi-icons",
-  "version": "1.0.0-alpha.0",
+  "version": "1.0.0-alpha.1",
   "description": "Common icon set for Eruditor Group",
   "author": "eruditorgroup",
   "license": "ISC",
@@ -28,7 +28,7 @@
     "/src"
   ],
   "dependencies": {
-    "@eruditorgroup/profi-toolkit": "^1.0.0-alpha.0"
+    "@eruditorgroup/profi-toolkit": "^1.0.0-alpha.1"
   },
   "peerDependencies": {
     "react": "^16.14.0",
@@ -41,5 +41,6 @@
   "eruditorgroup": {
     "libName": "ProfiIcons",
     "libFilename": "profi-icons"
-  }
+  },
+  "gitHead": "dd1534f69e01232a5d3176dda5142e140b413d1c"
 }
