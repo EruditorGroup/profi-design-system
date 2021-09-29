@@ -1,6 +1,6 @@
 {
   "name": "@eruditorgroup/profi-ui",
-  "version": "1.0.0-alpha.2",
+  "version": "1.0.0-alpha.3",
   "description": "Essential cross-platform UI components for React for Eruditor Group",
   "author": "eruditorgroup",
   "license": "ISC",
@@ -35,8 +35,8 @@
     "react-transition-group": "^4.4.1"
   },
   "devDependencies": {
-    "@eruditorgroup/profi-icons": "^1.0.0-alpha.2",
-    "@eruditorgroup/profi-toolkit": "^1.0.0-alpha.2",
+    "@eruditorgroup/profi-icons": "^1.0.0-alpha.3",
+    "@eruditorgroup/profi-toolkit": "^1.0.0-alpha.3",
     "@types/react-autosuggest": "^10.1.4",
     "classnames": "^2.3.1",
     "react": "^17.0.2",
@@ -53,5 +53,5 @@
     "libName": "ProfiUI",
     "libFilename": "profi-ui"
   },
-  "gitHead": "dd1534f69e01232a5d3176dda5142e140b413d1c"
+  "gitHead": "154e80bb9676c4d9bc251aa2094bc94092ab0d39"
 }
