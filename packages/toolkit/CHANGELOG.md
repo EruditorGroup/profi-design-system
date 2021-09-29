@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.0.0-alpha.2](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-toolkit@1.0.0-alpha.1...@eruditorgroup/profi-toolkit@1.0.0-alpha.2) (2021-09-29)
+
+
+### Bug Fixes
+
+* version dependency & build for react@^17 ([6e77773](https://github.com/eruditorgroup/profi-design-system/commit/6e777735d98c6ea70a645dbff3d1ad8da7ef0b8e))
+
+
+
+
+
 # [1.0.0-alpha.1](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-toolkit@1.0.0-alpha.0...@eruditorgroup/profi-toolkit@1.0.0-alpha.1) (2021-09-29)
 
 **Note:** Version bump only for package @eruditorgroup/profi-toolkit
