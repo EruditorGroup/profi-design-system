@@ -27,16 +27,15 @@
     "/es",
     "/src"
   ],
-  "dependencies": {
+  "peerDependencies": {
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
     "@eruditorgroup/profi-toolkit": "^1.0.0-alpha.1"
   },
-  "peerDependencies": {
-    "react": "^16.14.0",
-    "react-dom": "^16.14.0"
-  },
   "devDependencies": {
-    "react": "^16.14.0",
-    "react-dom": "^16.14.0"
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "@eruditorgroup/profi-toolkit": "^1.0.0-alpha.1"
   },
   "eruditorgroup": {
     "libName": "ProfiIcons",
