@@ -1,8 +1,11 @@
 import React from 'react';
 
+import * as gestures from '@use-gesture/react';
+
 export * from './constants';
 export * from './hooks';
 export * from './utils';
+export {gestures};
 import common from './styles/common.module.scss';
 import variables from './styles/variables.css';
 

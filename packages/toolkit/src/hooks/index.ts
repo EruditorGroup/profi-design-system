@@ -15,3 +15,4 @@ export {default as useStateSafe} from './useStateSafe';
 export {default as useMouseWheel} from './useMouseWheel';
 export {default as useMoveCaretToEndOnFocus} from './useMoveCaretToEndOnFocus';
 export {default as useThrottledCallback} from './useThrottledCallback';
+export {default as useDisableBodyScroll} from './useDisableBodyScroll';
