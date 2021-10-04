@@ -20,3 +20,40 @@
 .section:last-of-type {
     padding-bottom: 0px;
 }
+
+.fullscreen-input-panel {
+    display: flex;
+    align-items: center;
+
+    > * {
+        margin-right: 15px;
+        width: 100%;
+    }
+
+    *:last-child {
+        margin-right: 0;
+    }
+
+    > button {
+        flex-shrink: 0;
+    }
+}
+
+.fullscreen-list-tag {
+    margin: 5px 0;
+}
+
+.fullscreen-tag {
+    margin: 10px 0;
+}
+
+.fullscreen-tag + .fullscreen-tag {
+    margin-left: 5px;
+}
+
+.test {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+}

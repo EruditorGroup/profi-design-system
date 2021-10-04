@@ -2,14 +2,21 @@ import React, {useCallback, useState} from 'react';
 import {CloseIcon, PlaceIcon} from '@eruditorgroup/profi-icons';
 import {Story, Meta} from '@storybook/react';
 
-import Autosuggest, {AutosuggestProps, ISuggestValue, TSection} from '../index';
+import Autosuggest from '../components/Default/index';
+import {ChevronLeftIcon, SearchIcon} from '@eruditorgroup/profi-icons';
+
+import Button from '../../Button';
+import {Input} from '../../Form';
 import List from '../../List';
 import GeoTag from '../../GeoTag';
+import Tag from '../../Tag';
 import metro from './_metro.json';
 import {DotIcon} from '@eruditorgroup/profi-icons';
 import ReactAutosuggest from 'react-autosuggest';
 import YandexGeoSuggestion from './YandexGeoSuggestion';
 import styles from './AutosuggestStories.module.scss';
+import Fullscreen from '../components/Fullscreen';
+import { AutosuggestProps, ISuggestValue, TSection } from '../types';
 
 export default {
   title: 'Autosuggest',
@@ -69,6 +76,15 @@ const Template: Story<Omit<AutosuggestProps, 'suggestions' | 'value'>> = (
       }
       active={params.isHighlighted}
     >
+      {value}
+    </List.Item>
+  );
+
+  const renderFullscreenSuggestion: ReactAutosuggest.RenderSuggestion<ISuggestValue> = (
+    {value},
+    params,
+  ) => (
+    <List.Item as="div" active={params.isHighlighted}>
       {value}
     </List.Item>
   );
@@ -145,6 +161,48 @@ const Template: Story<Omit<AutosuggestProps, 'suggestions' | 'value'>> = (
       <h2>Yandex geo suggestions</h2>
       <YandexGeoSuggestion />
 
+      <h2>Fullscreen</h2>
+      <Fullscreen
+        {...args}
+        inputRef={null}
+        multiSection={false}
+        inputProps={{
+          value,
+          onChange: (_, params) => setValue(params.newValue),
+        }}
+        suggestions={suggestions.slice(0, 10)}
+        onSuggestionsFetchRequested={updateSuggestions}
+        onSuggestionSelected={(_, {suggestion}) => setValue(suggestion.value)}
+        renderSuggestion={renderFullscreenSuggestion}
+      >
+        <Fullscreen.ActiveInput iconPostion="none">
+          {(input, {onClose}) => (
+            <div className={styles['fullscreen-input-panel']}>
+              <Button design="light" rounded onClick={onClose}>
+                <ChevronLeftIcon />
+              </Button>
+              {input}
+              <Button rounded>
+                <SearchIcon />
+              </Button>
+            </div>
+          )}
+        </Fullscreen.ActiveInput>
+        <Fullscreen.DefaultInput iconPostion="trailing" size="l" />
+        <Fullscreen.RestModalSlot>
+          <div className={styles['test']}>Info</div>
+        </Fullscreen.RestModalSlot>
+        <Fullscreen.SuggestionListSlot>
+          <div className={styles['fullscreen-list-tag']}>
+            {['Тэг1', 'Тэг2'].map((x) => (
+              <Tag className={styles['fullscreen-tag']} size="m" key={x}>
+                {x}
+              </Tag>
+            ))}
+          </div>
+        </Fullscreen.SuggestionListSlot>
+      </Fullscreen>
+
       <h2>Opened suggestions view without interactive</h2>
       <Autosuggest
         {...args}
@@ -216,10 +274,7 @@ export const MultiSection = () => {
     {value},
     params,
   ) => (
-    <List.Item
-      as="div"
-      active={params.isHighlighted}
-    >
+    <List.Item as="div" active={params.isHighlighted}>
       {value}
     </List.Item>
   );

@@ -1,7 +1,8 @@
 import React, {useEffect, useState, useCallback, useRef} from 'react';
-import Autosuggest, {ISuggestValue} from '../';
+import Autosuggest from '../components/Default';
 import {PlaceIcon} from '@eruditorgroup/profi-icons';
 import List from '../../List';
+import {ISuggestValue} from '../types';
 
 declare global {
   type YandexSuggest = {
