@@ -1,44 +1,35 @@
 import React from 'react';
 import {SearchIcon} from '@eruditorgroup/profi-icons';
-import {useActiveInputContext, useFullscreenContext} from './contexts';
+import {useFullscreenContext} from './contexts';
 import {Input} from '../../../Form';
 import {TIconPosition, TInputPropsWithoutAddons} from './types';
 
-
-interface IActiveInputProps extends TInputPropsWithoutAddons {
+type TActiveInputProps = {
   fontSize?: string;
   iconPostion?: Exclude<TIconPosition, 'trailing'>;
   children?: (
     input: JSX.Element,
-    handlers: {
-      onClose: () => void;
-    },
+    handler: {onClose: () => void},
   ) => JSX.Element;
-}
+} & TInputPropsWithoutAddons;
 
-const ActiveInput: React.FC<IActiveInputProps> = ({
+const ActiveInput: React.FC<TActiveInputProps> = ({
   iconPostion,
   fontSize = '15px',
   size = 'm',
   children,
-  ...inputViewProps
+  ...inputProps
 }) => {
-  const {setInputRef, ...inputProps} = useActiveInputContext();
-  const {handleClose} = useFullscreenContext();
+  const {setInputRef, handleClose} = useFullscreenContext();
   const input = (
     <Input
-      {...inputViewProps}
       {...inputProps}
       leading={iconPostion === 'leading' && <SearchIcon style={{fontSize}} />}
       ref={setInputRef}
       size={size}
     />
   );
-  return children
-    ? children(input, {
-        onClose: handleClose,
-      })
-    : input;
+  return children ? children(input, {onClose: handleClose}) : input;
 };
 
 ActiveInput.displayName = 'ActiveInput';

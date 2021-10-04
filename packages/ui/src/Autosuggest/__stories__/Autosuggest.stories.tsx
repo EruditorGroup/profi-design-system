@@ -16,7 +16,7 @@ import ReactAutosuggest from 'react-autosuggest';
 import YandexGeoSuggestion from './YandexGeoSuggestion';
 import styles from './AutosuggestStories.module.scss';
 import Fullscreen from '../components/Fullscreen';
-import { AutosuggestProps, ISuggestValue, TSection } from '../types';
+import {AutosuggestProps, ISuggestValue, TSection} from '../types';
 
 export default {
   title: 'Autosuggest',
@@ -174,25 +174,28 @@ const Template: Story<Omit<AutosuggestProps, 'suggestions' | 'value'>> = (
         onSuggestionsFetchRequested={updateSuggestions}
         onSuggestionSelected={(_, {suggestion}) => setValue(suggestion.value)}
         renderSuggestion={renderFullscreenSuggestion}
-      >
-        <Fullscreen.ActiveInput iconPostion="none">
-          {(input, {onClose}) => (
-            <div className={styles['fullscreen-input-panel']}>
-              <Button design="light" rounded onClick={onClose}>
-                <ChevronLeftIcon />
-              </Button>
-              {input}
-              <Button rounded>
-                <SearchIcon />
-              </Button>
-            </div>
-          )}
-        </Fullscreen.ActiveInput>
-        <Fullscreen.DefaultInput iconPostion="trailing" size="l" />
-        <Fullscreen.RestModalSlot>
+        activeInput={
+          <Fullscreen.ActiveInput iconPostion="none">
+            {(input, {onClose}) => (
+              <div className={styles['fullscreen-input-panel']}>
+                <Button design="light" rounded onClick={onClose}>
+                  <ChevronLeftIcon />
+                </Button>
+                {input}
+                <Button rounded>
+                  <SearchIcon />
+                </Button>
+              </div>
+            )}
+          </Fullscreen.ActiveInput>
+        }
+        defaultInput={
+          <Fullscreen.DefaultInput iconPostion="trailing" size="l" />
+        }
+        renderModalAvailableSpace={() => (
           <div className={styles['test']}>Info</div>
-        </Fullscreen.RestModalSlot>
-        <Fullscreen.SuggestionListSlot>
+        )}
+        renderSuggesctionListAddon={() => (
           <div className={styles['fullscreen-list-tag']}>
             {['Тэг1', 'Тэг2'].map((x) => (
               <Tag className={styles['fullscreen-tag']} size="m" key={x}>
@@ -200,8 +203,8 @@ const Template: Story<Omit<AutosuggestProps, 'suggestions' | 'value'>> = (
               </Tag>
             ))}
           </div>
-        </Fullscreen.SuggestionListSlot>
-      </Fullscreen>
+        )}
+      />
 
       <h2>Opened suggestions view without interactive</h2>
       <Autosuggest

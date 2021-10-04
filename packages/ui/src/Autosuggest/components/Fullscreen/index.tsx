@@ -4,27 +4,34 @@ import React, {
   PropsWithChildren,
   useEffect,
   useState,
+  useCallback,
 } from 'react';
 import noop from 'lodash/noop';
-import {useCombinedRef, findComponentInChildren} from '@eruditorgroup/profi-toolkit';
+import {useCombinedRef} from '@eruditorgroup/profi-toolkit';
 import Modal from '../../../Modal';
 import List from '../../../List';
 import Spinner from '../../../Spinner';
 import cx from 'classnames';
 
-import {IAutosuggestComponent, ISuggestValue, AutosuggestProps} from '../../types';
+import {
+  IAutosuggestComponent,
+  ISuggestValue,
+  AutosuggestProps,
+} from '../../types';
 import AutosuggestVariant from '../AutosuggestVariant';
-import {ActiveInputContext, FullscreenContext} from './contexts';
+import {FullscreenContext} from './contexts';
 import ActiveInput from './ActiveInput';
 import DefaultInput from './DefaultInput';
-import RestModalSlot from './RestModalSlot';
-import SuggestionListSlot from './SuggestionListSlot';
 
 import styles from './Fullscreen.module.scss';
 import ListItemStyles from '../../../List/components/ListItem/ListItem.module.scss';
 
 interface IFullscreenProps {
   inputRef?: MutableRefObject<HTMLInputElement>;
+  renderModalAvailableSpace?: () => JSX.Element;
+  renderSuggesctionListAddon?: () => JSX.Element;
+  activeInput: JSX.Element;
+  defaultInput: JSX.Element;
 }
 
 export type FullscreenAutosuggestProps = AutosuggestProps<IFullscreenProps>;
@@ -37,7 +44,10 @@ const Fullscreen = forwardRef(function Fullscreen(
     shouldRenderSuggestions,
     inputRef,
     onSuggestionSelected,
-    children,
+    renderModalAvailableSpace,
+    renderSuggesctionListAddon,
+    defaultInput,
+    activeInput,
     // div props
     ...props
   },
@@ -50,41 +60,22 @@ const Fullscreen = forwardRef(function Fullscreen(
     localInputRef.current && localInputRef.current.focus();
   }, [isFullscreenActive, localInputRef]);
 
-  const handleFocus = () => {
+  const handleFocus = useCallback(() => {
     setFullscreenActive(true);
-  };
+  }, []);
 
-  const handleClose = () => {
+  const handleClose = useCallback(() => {
     setFullscreenActive(false);
-  };
-
-  const renderActiveInput = (
-    props: React.InputHTMLAttributes<HTMLInputElement>,
-  ) => {
-    const customActiveInput = findComponentInChildren(
-      children,
-      ActiveInput,
-    );
-    return (
-      <ActiveInputContext.Provider
-        value={{setInputRef: setLocalInputRef, ...props}}
-      >
-        {customActiveInput || <ActiveInput iconPostion="leading" />}
-      </ActiveInputContext.Provider>
-    );
-  };
-
-  const renderDefaultInput = () => {
-    const customDefaultInput = findComponentInChildren(
-      children,
-      DefaultInput,
-    );
-    return customDefaultInput || <DefaultInput iconPostion="leading" />;
-  };
+  }, []);
 
   return (
     <FullscreenContext.Provider
-      value={{handleClose, value: props.inputProps.value, handleFocus}}
+      value={{
+        handleClose,
+        value: props.inputProps.value,
+        handleFocus,
+        setInputRef: setLocalInputRef,
+      }}
     >
       {isFullscreenActive ? (
         <Modal
@@ -111,8 +102,7 @@ const Fullscreen = forwardRef(function Fullscreen(
             }) =>
               query > '' && (
                 <div {..._props}>
-                  {containerChildren &&
-                    findComponentInChildren(children, SuggestionListSlot)}
+                  {containerChildren && renderSuggesctionListAddon?.()}
                   <List
                     as="div"
                     size={suggestionsSize}
@@ -132,7 +122,9 @@ const Fullscreen = forwardRef(function Fullscreen(
                 </div>
               )
             }
-            renderInputComponent={renderActiveInput}
+            renderInputComponent={(props) =>
+              React.cloneElement(activeInput, {...props})
+            }
             getSuggestionValue={({value}) => value}
             renderSuggestion={(suggestion: ISuggestValue, {isHighlighted}) => {
               return (
@@ -147,23 +139,19 @@ const Fullscreen = forwardRef(function Fullscreen(
               onSuggestionSelected(e, data);
             }}
           />
-          {findComponentInChildren(children, RestModalSlot)}
+          {renderModalAvailableSpace?.()}
         </Modal>
       ) : (
-        renderDefaultInput()
+        defaultInput
       )}
     </FullscreenContext.Provider>
   );
 }) as IAutosuggestComponent<PropsWithChildren<IFullscreenProps>> & {
   ActiveInput: typeof ActiveInput;
   DefaultInput: typeof DefaultInput;
-  RestModalSlot: typeof RestModalSlot;
-  SuggestionListSlot: typeof SuggestionListSlot;
 };
 
 Fullscreen.ActiveInput = ActiveInput;
 Fullscreen.DefaultInput = DefaultInput;
-Fullscreen.RestModalSlot = RestModalSlot;
-Fullscreen.SuggestionListSlot = SuggestionListSlot;
 
 export default Fullscreen;

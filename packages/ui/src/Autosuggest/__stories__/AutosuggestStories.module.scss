@@ -1,59 +1,59 @@
 .section + .section::after {
-    content: '';
-    position: absolute;
-    left: 15px;
-    right: 15px;
-    height: 1px;
-    background-color: #D9D9D9;
-    top: 0;
+  content: '';
+  position: absolute;
+  left: 15px;
+  right: 15px;
+  height: 1px;
+  background-color: #D9D9D9;
+  top: 0;
 }
 
 .section + .section {
-    padding-top: 5px;
+  padding-top: 5px;
 }
 
 .section {
-    padding-bottom: 5px;
-    position: relative;
+  padding-bottom: 5px;
+  position: relative;
 }
 
 .section:last-of-type {
-    padding-bottom: 0px;
+  padding-bottom: 0px;
 }
 
 .fullscreen-input-panel {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 
-    > * {
-        margin-right: 15px;
-        width: 100%;
-    }
+  > * {
+      margin-right: 15px;
+      width: 100%;
+  }
 
-    *:last-child {
-        margin-right: 0;
-    }
+  *:last-child {
+      margin-right: 0;
+  }
 
-    > button {
-        flex-shrink: 0;
-    }
+  > button {
+      flex-shrink: 0;
+  }
 }
 
 .fullscreen-list-tag {
-    margin: 5px 0;
+  margin: 5px 0;
 }
 
 .fullscreen-tag {
-    margin: 10px 0;
+  margin: 10px 0;
 }
 
 .fullscreen-tag + .fullscreen-tag {
-    margin-left: 5px;
+  margin-left: 5px;
 }
 
 .test {
-    display: flex;
-    height: 100%;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
 }

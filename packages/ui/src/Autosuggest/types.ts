@@ -41,8 +41,7 @@ export type TSingleVariantProps = DiffAutosuggestProps<
   AutosuggestPropsSingleSection<ISuggestValue>
 >;
 
-// eslint-disable-next-line
-export type AutosuggestProps<T = {}> = Omit<
+export type AutosuggestProps<T = Record<string, unknown>> = Omit<
   AutosuggestPropsBase<ISuggestValue>,
   RewritedProps
 > &
