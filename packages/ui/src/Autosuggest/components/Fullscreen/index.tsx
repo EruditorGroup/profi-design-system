@@ -6,7 +6,7 @@ import React, {
   useState,
 } from 'react';
 import noop from 'lodash/noop';
-import {useCombinedRef} from '@eruditorgroup/profi-toolkit';
+import {useCombinedRef, findComponentInChildren} from '@eruditorgroup/profi-toolkit';
 import Modal from '../../../Modal';
 import List from '../../../List';
 import Spinner from '../../../Spinner';
@@ -14,7 +14,6 @@ import cx from 'classnames';
 
 import {IAutosuggestComponent, ISuggestValue, AutosuggestProps} from '../../types';
 import AutosuggestVariant from '../AutosuggestVariant';
-import {findChildByName} from '../../../List/components/ListItem/utils';
 import {ActiveInputContext, FullscreenContext} from './contexts';
 import ActiveInput from './ActiveInput';
 import DefaultInput from './DefaultInput';
@@ -62,9 +61,9 @@ const Fullscreen = forwardRef(function Fullscreen(
   const renderActiveInput = (
     props: React.InputHTMLAttributes<HTMLInputElement>,
   ) => {
-    const customActiveInput = findChildByName(
+    const customActiveInput = findComponentInChildren(
       children,
-      ActiveInput.displayName,
+      ActiveInput,
     );
     return (
       <ActiveInputContext.Provider
@@ -76,9 +75,9 @@ const Fullscreen = forwardRef(function Fullscreen(
   };
 
   const renderDefaultInput = () => {
-    const customDefaultInput = findChildByName(
+    const customDefaultInput = findComponentInChildren(
       children,
-      DefaultInput.displayName,
+      DefaultInput,
     );
     return customDefaultInput || <DefaultInput iconPostion="leading" />;
   };
@@ -113,7 +112,7 @@ const Fullscreen = forwardRef(function Fullscreen(
               query > '' && (
                 <div {..._props}>
                   {containerChildren &&
-                    findChildByName(children, SuggestionListSlot.displayName)}
+                    findComponentInChildren(children, SuggestionListSlot)}
                   <List
                     as="div"
                     size={suggestionsSize}
@@ -148,7 +147,7 @@ const Fullscreen = forwardRef(function Fullscreen(
               onSuggestionSelected(e, data);
             }}
           />
-          {findChildByName(children, RestModalSlot.displayName)}
+          {findComponentInChildren(children, RestModalSlot)}
         </Modal>
       ) : (
         renderDefaultInput()
