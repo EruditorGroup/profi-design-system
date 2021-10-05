@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.48.0](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.47.5...@eruditorgroup/profi-ui@0.48.0) (2021-10-05)
+
+
+### Features
+
+* **Autosuggest:** Добавление полноэкранного варианта. ([c28a7af](https://github.com/eruditorgroup/profi-design-system/commit/c28a7afa0e730f6bf9cea13597e52b63e75137a1))
+* **Toolkit:** Добавлена функцию поиска компонента по сылке в чилдренах ([7e247da](https://github.com/eruditorgroup/profi-design-system/commit/7e247da3fdf5155a714cc9cda4b9c89893016859))
+
+
+
+
+
 ## [0.47.5](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.47.4...@eruditorgroup/profi-ui@0.47.5) (2021-09-28)
 
 
