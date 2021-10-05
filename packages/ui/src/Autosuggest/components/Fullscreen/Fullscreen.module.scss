@@ -1,0 +1,51 @@
+.root {
+  background-color: var(--ui-bg-primary);
+  position: relative;
+}
+
+.fullscreen-input-panel {
+  display: flex;
+  align-items: center;
+
+  > * {
+      margin-right: 15px;
+      width: 100%;
+  }
+
+  *:last-child {
+      margin-right: 0;
+  }
+
+  > button {
+      flex-shrink: 0;
+  }
+}
+
+.container {
+  width: 100%;
+  position: relative;
+}
+
+.suggestionsContainer {
+  overflow: auto;
+  box-sizing: border-box;
+  position: absolute;
+  width: 100%;
+  left: 0;
+  z-index: 9999;
+  background-color: var(--ui-bg-primary);
+}
+  
+.suggestionsContainerOpen {
+  margin-top: 5px;
+}
+
+.suggestionsList {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.suggestion {
+  position: relative;
+}
