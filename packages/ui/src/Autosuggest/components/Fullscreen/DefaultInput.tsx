@@ -1,10 +1,10 @@
 import {SearchIcon} from '@eruditorgroup/profi-icons';
 import React from 'react';
-import {Input} from '../../../Form';
+import {Input, InputProps} from '../../../Form';
 import {useFullscreenContext} from './contexts';
-import {TInputPropsWithoutAddons, TIconPosition} from './types';
+import {TWithoutAddons, TIconPosition} from './types';
 
-interface IDefaultInputProps extends TInputPropsWithoutAddons {
+interface IDefaultInputProps extends TWithoutAddons<InputProps> {
   iconPostion?: TIconPosition;
   fontSize?: string;
 }

@@ -174,32 +174,33 @@ const Template: Story<Omit<AutosuggestProps, 'suggestions' | 'value'>> = (
         onSuggestionsFetchRequested={updateSuggestions}
         onSuggestionSelected={(_, {suggestion}) => setValue(suggestion.value)}
         renderSuggestion={renderFullscreenSuggestion}
-        activeInput={
-          <Fullscreen.ActiveInput iconPostion="none">
-            {(input, {onClose}) => (
+        alwaysRenderSuggestions
+        activeField={
+          <Fullscreen.ActiveField iconPostion="none" textarea>
+            {(field, {onClose}) => (
               <div className={styles['fullscreen-input-panel']}>
                 <Button design="light" rounded onClick={onClose}>
                   <ChevronLeftIcon />
                 </Button>
-                {input}
+                {field}
                 <Button rounded>
                   <SearchIcon />
                 </Button>
               </div>
             )}
-          </Fullscreen.ActiveInput>
+          </Fullscreen.ActiveField>
         }
         defaultInput={
           <Fullscreen.DefaultInput iconPostion="trailing" size="l" />
         }
         renderModalAvailableSpace={() => (
-          <div className={styles['test']}>Info</div>
+          <div className={styles['fullscreen-modal-space']}>Info</div>
         )}
-        renderSuggesctionListAddon={() => (
+        renderSuggestionListAddon={() => (
           <div className={styles['fullscreen-list-tag']}>
-            {['Тэг1', 'Тэг2'].map((x) => (
-              <Tag className={styles['fullscreen-tag']} size="m" key={x}>
-                {x}
+            {suggestions.slice(0, 3).map((x) => (
+              <Tag className={styles['fullscreen-tag']} size="m" key={x.value}>
+                {x.value}
               </Tag>
             ))}
           </div>
