@@ -10,8 +10,7 @@ import cx from 'classnames';
 import {useListContext} from '../../index';
 import {Caption} from '../Content/Caption';
 import {MainText} from '../Content/MainText';
-import {findChildByName} from './utils';
-import {AliasProps, ForwardingComponent} from '@eruditorgroup/profi-toolkit';
+import {AliasProps, ForwardingComponent, findComponentInChildren} from '@eruditorgroup/profi-toolkit';
 
 const ListItemContext = createContext<boolean>(null);
 
@@ -62,8 +61,8 @@ const ListItem: ForwardingComponentType = forwardRef((props, ref) => {
   } = props;
   const {size, bordered, design, borderedMode} = useListContext();
 
-  const isCaption = !!findChildByName(children, Caption.displayName);
-  const isMainText = !!findChildByName(children, MainText.displayName);
+  const isCaption = !!findComponentInChildren(children, Caption);
+  const isMainText = !!findComponentInChildren(children, MainText);
 
   const wrappedChildren = !isMainText ? (
     <MainText>{children}</MainText>

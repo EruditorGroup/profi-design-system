@@ -3,6 +3,33 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.36.1](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-toolkit@0.36.0...@eruditorgroup/profi-toolkit@0.36.1) (2021-10-07)
+
+**Note:** Version bump only for package @eruditorgroup/profi-toolkit
+
+
+
+
+
+# [0.36.0](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-toolkit@0.35.5...@eruditorgroup/profi-toolkit@0.36.0) (2021-10-05)
+
+
+### Features
+
+* **Toolkit:** Добавлена функцию поиска компонента по сылке в чилдренах ([7e247da](https://github.com/eruditorgroup/profi-design-system/commit/7e247da3fdf5155a714cc9cda4b9c89893016859))
+
+
+
+
+
+## [0.35.5](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-toolkit@0.35.4...@eruditorgroup/profi-toolkit@0.35.5) (2021-09-28)
+
+**Note:** Version bump only for package @eruditorgroup/profi-toolkit
+
+
+
+
+
 ## [0.35.4](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-toolkit@0.35.3...@eruditorgroup/profi-toolkit@0.35.4) (2021-09-27)
 
 **Note:** Version bump only for package @eruditorgroup/profi-toolkit
