@@ -1,6 +1,7 @@
 .root {
   background-color: var(--ui-bg-primary);
   position: relative;
+  padding: 10px 15px;
 }
 
 .fullscreen-input-panel {
@@ -37,7 +38,7 @@
 }
   
 .suggestionsContainerOpen {
-  margin-top: 5px;
+  margin-top: 10px;
 }
 
 .suggestionsList {

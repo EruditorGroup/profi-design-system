@@ -3,7 +3,7 @@ import {createContext, useContext} from 'react';
 interface FullscreenContextType {
   handleClose: () => void;
   handleFocus: () => void;
-  setInputRef: (arg: HTMLInputElement) => void;
+  setInputRef: (arg: HTMLInputElement | HTMLTextAreaElement) => void;
   value: string;
 }
 

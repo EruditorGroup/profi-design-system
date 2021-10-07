@@ -20,18 +20,20 @@ import {
 } from '../../types';
 import AutosuggestVariant from '../AutosuggestVariant';
 import {FullscreenContext} from './contexts';
-import ActiveInput from './ActiveInput';
+import ActiveField from './ActiveField';
 import DefaultInput from './DefaultInput';
 
 import styles from './Fullscreen.module.scss';
 import ListItemStyles from '../../../List/components/ListItem/ListItem.module.scss';
 
 interface IFullscreenProps {
-  inputRef?: MutableRefObject<HTMLInputElement>;
+  inputRef?: MutableRefObject<HTMLInputElement | HTMLTextAreaElement>;
   renderModalAvailableSpace?: () => JSX.Element;
-  renderSuggesctionListAddon?: () => JSX.Element;
-  activeInput: JSX.Element;
+  renderSuggestionListAddon?: () => JSX.Element;
+  activeField: JSX.Element;
   defaultInput: JSX.Element;
+  suggestionContainerClassName?: string;
+  modalClassName?: string;
 }
 
 export type FullscreenAutosuggestProps = AutosuggestProps<IFullscreenProps>;
@@ -45,9 +47,11 @@ const Fullscreen = forwardRef(function Fullscreen(
     inputRef,
     onSuggestionSelected,
     renderModalAvailableSpace,
-    renderSuggesctionListAddon,
+    renderSuggestionListAddon,
     defaultInput,
-    activeInput,
+    activeField,
+    suggestionContainerClassName,
+    modalClassName,
     // div props
     ...props
   },
@@ -79,11 +83,12 @@ const Fullscreen = forwardRef(function Fullscreen(
     >
       {isFullscreenActive ? (
         <Modal
-          className={styles['root']}
+          className={cx(styles['root'], modalClassName)}
           visible
           fullscreen
           onClose={noop}
           withCloseButton={false}
+          withPadding={false}
         >
           <AutosuggestVariant
             ref={ref}
@@ -97,12 +102,15 @@ const Fullscreen = forwardRef(function Fullscreen(
             }
             renderSuggestionsContainer={({
               containerProps: _props,
-              children: containerChildren,
+              children,
               query,
             }) =>
               query > '' && (
-                <div {..._props}>
-                  {containerChildren && renderSuggesctionListAddon?.()}
+                <div
+                  {..._props}
+                  className={cx(_props.className, suggestionContainerClassName)}
+                >
+                  {renderSuggestionListAddon?.()}
                   <List
                     as="div"
                     size={suggestionsSize}
@@ -116,14 +124,14 @@ const Fullscreen = forwardRef(function Fullscreen(
                         color="secondary"
                       />
                     ) : (
-                      containerChildren
+                      children
                     )}
                   </List>
                 </div>
               )
             }
             renderInputComponent={(props) =>
-              React.cloneElement(activeInput, {...props})
+              React.cloneElement(activeField, {...props})
             }
             getSuggestionValue={({value}) => value}
             renderSuggestion={(suggestion: ISuggestValue, {isHighlighted}) => {
@@ -147,11 +155,11 @@ const Fullscreen = forwardRef(function Fullscreen(
     </FullscreenContext.Provider>
   );
 }) as IAutosuggestComponent<PropsWithChildren<IFullscreenProps>> & {
-  ActiveInput: typeof ActiveInput;
+  ActiveField: typeof ActiveField;
   DefaultInput: typeof DefaultInput;
 };
 
-Fullscreen.ActiveInput = ActiveInput;
+Fullscreen.ActiveField = ActiveField;
 Fullscreen.DefaultInput = DefaultInput;
 
 export default Fullscreen;

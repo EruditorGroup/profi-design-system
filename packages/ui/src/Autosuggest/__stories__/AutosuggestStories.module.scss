@@ -40,18 +40,14 @@
 }
 
 .fullscreen-list-tag {
-  margin: 5px 0;
+  margin: 15px 0 5px;
 }
 
 .fullscreen-tag {
-  margin: 10px 0;
+  margin: 0 5px 10px 0;
 }
 
-.fullscreen-tag + .fullscreen-tag {
-  margin-left: 5px;
-}
-
-.test {
+.fullscreen-modal-space {
   display: flex;
   height: 100%;
   align-items: center;
