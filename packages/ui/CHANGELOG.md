@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.48.1](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.48.0...@eruditorgroup/profi-ui@0.48.1) (2021-10-07)
+
+
+### Bug Fixes
+
+* **Autosuggest:** Правка стилей, добавление textarea ([e60fb51](https://github.com/eruditorgroup/profi-design-system/commit/e60fb5174035a1b1358e1b41d1b9f872f3750a0e))
+
+
+
+
+
 # [0.48.0](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.47.5...@eruditorgroup/profi-ui@0.48.0) (2021-10-05)
 
 
