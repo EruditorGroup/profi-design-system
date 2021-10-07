@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {forwardRef} from 'react';
 import {SearchIcon} from '@eruditorgroup/profi-icons';
 import {useFullscreenContext} from './contexts';
 import {Input, Textarea, TextareaProps, InputProps} from '../../../Form';
@@ -7,7 +7,6 @@ import {TIconPosition, TWithoutAddons} from './types';
 type TInputProps = {
   textarea: false | undefined;
 } & TWithoutAddons<InputProps>;
-
 
 type TTextareProps = {
   textarea: true;
@@ -22,14 +21,17 @@ type TActiveFieldProps = {
   ) => JSX.Element;
 } & (TInputProps | TTextareProps);
 
-const ActiveField: React.FC<TActiveFieldProps> = (props) => {
-  const {
-    iconPostion,
-    fontSize = '15px',
-    size = 'm',
-    children,
-  } = props;
+const ActiveField = forwardRef<
+  HTMLInputElement | HTMLTextAreaElement,
+  TActiveFieldProps
+>(({iconPostion, fontSize = '15px', size = 'm', children, ...props}, ref) => {
   const {setInputRef, handleClose} = useFullscreenContext();
+
+  const handleRef = (element: HTMLInputElement | HTMLTextAreaElement) => {
+    setInputRef(element);
+    if (typeof ref === 'function') ref(element);
+    else if (ref) ref.current = element;
+  }
 
   const leading = iconPostion === 'leading' && (
     <SearchIcon style={{fontSize}} />
@@ -37,30 +39,25 @@ const ActiveField: React.FC<TActiveFieldProps> = (props) => {
 
   let field: JSX.Element = null;
   if (props.textarea === true) {
+    /** Можем мутировать пропсы, так как выше деструктурировали их в новый объект */
+    delete props['textarea'];
     field = (
       <Textarea
         {...props}
-        children={null}
         minRows={props.minRows || 1}
         leading={leading}
-        ref={setInputRef}
+        ref={handleRef}
         size={size}
       />
     );
-  }
-  else {
+  } else {
+    delete props['textarea'];
     field = (
-      <Input
-        {...props}
-        children={null}
-        leading={leading}
-        ref={setInputRef}
-        size={size}
-      />
+      <Input {...props} leading={leading} ref={handleRef} size={size} />
     );
   }
   return children ? children(field, {onClose: handleClose}) : field;
-};
+});
 
 ActiveField.displayName = 'ActiveField';
 

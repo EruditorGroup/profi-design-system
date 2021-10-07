@@ -24,7 +24,7 @@ const DefaultInput: React.FC<IDefaultInputProps> = ({
 
   return (
     <Input
-      value={value}
+      defaultValue={value}
       {...iconAddon}
       {...rest}
       onFocus={(e) => {

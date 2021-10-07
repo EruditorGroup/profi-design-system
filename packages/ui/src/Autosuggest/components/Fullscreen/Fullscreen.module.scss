@@ -4,6 +4,12 @@
   padding: 10px 15px;
 }
 
+.modal-body {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
 .fullscreen-input-panel {
   display: flex;
   align-items: center;

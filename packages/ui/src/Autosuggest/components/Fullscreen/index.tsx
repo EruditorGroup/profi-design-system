@@ -30,10 +30,12 @@ interface IFullscreenProps {
   inputRef?: MutableRefObject<HTMLInputElement | HTMLTextAreaElement>;
   renderModalAvailableSpace?: () => JSX.Element;
   renderSuggestionListAddon?: () => JSX.Element;
+  onOpen?: () => void;
   activeField: JSX.Element;
   defaultInput: JSX.Element;
   suggestionContainerClassName?: string;
   modalClassName?: string;
+  modalBodyClassName?: string;
 }
 
 export type FullscreenAutosuggestProps = AutosuggestProps<IFullscreenProps>;
@@ -52,6 +54,9 @@ const Fullscreen = forwardRef(function Fullscreen(
     activeField,
     suggestionContainerClassName,
     modalClassName,
+    modalBodyClassName,
+    renderSuggestion,
+    onOpen,
     // div props
     ...props
   },
@@ -61,16 +66,28 @@ const Fullscreen = forwardRef(function Fullscreen(
   const [localInputRef, setLocalInputRef] = useCombinedRef(inputRef);
 
   useEffect(() => {
-    localInputRef.current && localInputRef.current.focus();
+    const input = localInputRef.current;
+    if (input) {
+      input.focus();
+      /** Возвращает каретку в конец набранной строки после фокуса */
+      const val = input.value;
+      input.value = '';
+      input.value = val;
+    }
   }, [isFullscreenActive, localInputRef]);
 
-  const handleFocus = useCallback(() => {
+  const handleOpen = useCallback(() => {
     setFullscreenActive(true);
-  }, []);
+    onOpen?.();
+  }, [onOpen]);
 
   const handleClose = useCallback(() => {
     setFullscreenActive(false);
   }, []);
+
+  const handleFocus = useCallback(() => {
+    handleOpen();
+  }, [handleOpen]);
 
   return (
     <FullscreenContext.Provider
@@ -84,6 +101,7 @@ const Fullscreen = forwardRef(function Fullscreen(
       {isFullscreenActive ? (
         <Modal
           className={cx(styles['root'], modalClassName)}
+          bodyClassName={cx(styles['modal-body'], modalBodyClassName)}
           visible
           fullscreen
           onClose={noop}
@@ -103,44 +121,41 @@ const Fullscreen = forwardRef(function Fullscreen(
             renderSuggestionsContainer={({
               containerProps: _props,
               children,
-              query,
-            }) =>
-              query > '' && (
-                <div
-                  {..._props}
-                  className={cx(_props.className, suggestionContainerClassName)}
+            }) => (
+              <div
+                {..._props}
+                className={cx(_props.className, suggestionContainerClassName)}
+              >
+                {renderSuggestionListAddon?.()}
+                <List
+                  as="div"
+                  size={suggestionsSize}
+                  className={styles['uilist']}
+                  design="high"
                 >
-                  {renderSuggestionListAddon?.()}
-                  <List
-                    as="div"
-                    size={suggestionsSize}
-                    className={styles['uilist']}
-                    design="high"
-                  >
-                    {isLoading ? (
-                      <Spinner
-                        size={suggestionsSize}
-                        className={styles['spinner']}
-                        color="secondary"
-                      />
-                    ) : (
-                      children
-                    )}
-                  </List>
-                </div>
-              )
-            }
+                  {isLoading ? (
+                    <Spinner
+                      size={suggestionsSize}
+                      className={styles['spinner']}
+                      color="secondary"
+                    />
+                  ) : (
+                    children
+                  )}
+                </List>
+              </div>
+            )}
             renderInputComponent={(props) =>
               React.cloneElement(activeField, {...props})
             }
             getSuggestionValue={({value}) => value}
-            renderSuggestion={(suggestion: ISuggestValue, {isHighlighted}) => {
+            renderSuggestion={renderSuggestion ?? ((suggestion: ISuggestValue, {isHighlighted}) => {
               return (
                 <List.Item as="div" active={isHighlighted}>
                   {suggestion.value}
                 </List.Item>
               );
-            }}
+            })}
             {...props}
             onSuggestionSelected={(e, data) => {
               handleClose();

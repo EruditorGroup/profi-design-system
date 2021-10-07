@@ -41,6 +41,7 @@ export interface ModalProps
   closeOnOverlayClick?: boolean;
   onClickBack?: MouseEventHandler<HTMLElement>;
   onClose: MouseEventHandler<HTMLElement>;
+  bodyClassName?: string;
 }
 
 const DEFAULT_ANIMATION_DURATION = 300;
@@ -59,6 +60,7 @@ const Modal: ForwardRefExoticComponent<
       withPadding = true,
       withCloseButton = true,
       closeOnOverlayClick,
+      bodyClassName,
       onClose,
       onClickBack,
       ...props
@@ -106,7 +108,7 @@ const Modal: ForwardRefExoticComponent<
           unmountOnExit
           mountOnEnter
           in={visible}
-          timeout={!fullscreen && DEFAULT_ANIMATION_DURATION}
+          timeout={!fullscreen ? DEFAULT_ANIMATION_DURATION : 0}
           classNames={theme.transitions.slide}
         >
           <BodyPortal
@@ -157,6 +159,7 @@ const Modal: ForwardRefExoticComponent<
                   styles['body'],
                   withPadding && styles['body-withPadding'],
                   fullscreen && styles['body_h100'],
+                  bodyClassName,
                 )}
                 ref={bodyEl}
               >
