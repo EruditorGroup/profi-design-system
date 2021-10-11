@@ -7,7 +7,7 @@ import React, {
   useCallback,
 } from 'react';
 import noop from 'lodash/noop';
-import {useCombinedRef} from '@eruditorgroup/profi-toolkit';
+import {useCombinedRef, useMoveCaretToEndOnFocus} from '@eruditorgroup/profi-toolkit';
 import Modal from '../../../Modal';
 import List from '../../../List';
 import Spinner from '../../../Spinner';
@@ -64,15 +64,12 @@ const Fullscreen = forwardRef(function Fullscreen(
 ) {
   const [isFullscreenActive, setFullscreenActive] = useState(false);
   const [localInputRef, setLocalInputRef] = useCombinedRef(inputRef);
+  useMoveCaretToEndOnFocus(localInputRef, [isFullscreenActive]);
 
   useEffect(() => {
     const input = localInputRef.current;
     if (input) {
       input.focus();
-      /** Возвращает каретку в конец набранной строки после фокуса */
-      const val = input.value;
-      input.value = '';
-      input.value = val;
     }
   }, [isFullscreenActive, localInputRef]);
 

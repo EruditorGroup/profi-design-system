@@ -1,5 +1,6 @@
 import React, {forwardRef} from 'react';
 import {SearchIcon} from '@eruditorgroup/profi-icons';
+import {useCombinedRef} from '@eruditorgroup/profi-toolkit';
 import {useFullscreenContext} from './contexts';
 import {Input, Textarea, TextareaProps, InputProps} from '../../../Form';
 import {TIconPosition, TWithoutAddons} from './types';
@@ -27,11 +28,7 @@ const ActiveField = forwardRef<
 >(({iconPostion, fontSize = '15px', size = 'm', children, ...props}, ref) => {
   const {setInputRef, handleClose} = useFullscreenContext();
 
-  const handleRef = (element: HTMLInputElement | HTMLTextAreaElement) => {
-    setInputRef(element);
-    if (typeof ref === 'function') ref(element);
-    else if (ref) ref.current = element;
-  }
+  const [_, setLocalRef] = useCombinedRef(ref, setInputRef);
 
   const leading = iconPostion === 'leading' && (
     <SearchIcon style={{fontSize}} />
@@ -46,14 +43,14 @@ const ActiveField = forwardRef<
         {...props}
         minRows={props.minRows || 1}
         leading={leading}
-        ref={handleRef}
+        ref={setLocalRef}
         size={size}
       />
     );
   } else {
     delete props['textarea'];
     field = (
-      <Input {...props} leading={leading} ref={handleRef} size={size} />
+      <Input {...props} leading={leading} ref={setLocalRef} size={size} />
     );
   }
   return children ? children(field, {onClose: handleClose}) : field;
