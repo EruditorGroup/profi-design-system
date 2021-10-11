@@ -43,4 +43,16 @@ describe('useCombinedRef', () => {
     expect(ref.current).toBe(556677);
     expect(localValue).toBe(556677);
   });
+
+  it('should combine a few refs', () => {
+    const firstLocalRef = {current: null};
+    const secondLocalRef = {current: null};
+
+    const {result: {current}} = renderHook(() => useCombinedRef(firstLocalRef, secondLocalRef));
+    current[1](100);
+
+    expect(firstLocalRef.current).toBe(100);
+    expect(secondLocalRef.current).toBe(100);
+    expect(current[0].current).toBe(100);
+  })
 });
