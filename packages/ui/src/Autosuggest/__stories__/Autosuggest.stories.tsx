@@ -166,9 +166,10 @@ const Template: Story<Omit<AutosuggestProps, 'suggestions' | 'value'>> = (
         {...args}
         inputRef={null}
         multiSection={false}
-        inputProps={{
+        sharedFieldProps={{
           value,
           onChange: (_, params) => setValue(params.newValue),
+          'data-testattribute': 'test',
         }}
         suggestions={suggestions.slice(0, 10)}
         onSuggestionsFetchRequested={updateSuggestions}

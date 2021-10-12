@@ -7,35 +7,53 @@ import React, {
   useCallback,
 } from 'react';
 import noop from 'lodash/noop';
-import {useCombinedRef, useMoveCaretToEndOnFocus} from '@eruditorgroup/profi-toolkit';
-import Modal from '../../../Modal';
-import List from '../../../List';
-import Spinner from '../../../Spinner';
+import {InputProps as AutosuggestInputProps} from 'react-autosuggest';
 import cx from 'classnames';
 
 import {
+  useCombinedRef,
+  useMoveCaretToEndOnFocus,
+} from '@eruditorgroup/profi-toolkit';
+import Modal from '../../../Modal';
+import List from '../../../List';
+import Spinner from '../../../Spinner';
+
+
+import AutosuggestVariant from '../AutosuggestVariant';
+import ActiveField from './ActiveField';
+import DefaultInput from './DefaultInput';
+import {FullscreenContext} from './contexts';
+
+import type {InputProps} from '../../../Form';
+import type {
   IAutosuggestComponent,
   ISuggestValue,
   AutosuggestProps,
+  RewrittenProps,
 } from '../../types';
-import AutosuggestVariant from '../AutosuggestVariant';
-import {FullscreenContext} from './contexts';
-import ActiveField from './ActiveField';
-import DefaultInput from './DefaultInput';
 
 import styles from './Fullscreen.module.scss';
 import ListItemStyles from '../../../List/components/ListItem/ListItem.module.scss';
+
+type SharedFieldProps = {
+  value: string;
+  onChange: AutosuggestInputProps<ISuggestValue>['onChange'];
+  onBlur?: AutosuggestInputProps<ISuggestValue>['onBlur'];
+  [key: string]: any;
+} & Pick<InputProps, 'placeholder'>;
 
 interface IFullscreenProps {
   inputRef?: MutableRefObject<HTMLInputElement | HTMLTextAreaElement>;
   renderModalAvailableSpace?: () => JSX.Element;
   renderSuggestionListAddon?: () => JSX.Element;
   onOpen?: () => void;
+  closeOnSuggestionSelected?: boolean;
   activeField: JSX.Element;
   defaultInput: JSX.Element;
   suggestionContainerClassName?: string;
   modalClassName?: string;
   modalBodyClassName?: string;
+  sharedFieldProps: SharedFieldProps;
 }
 
 export type FullscreenAutosuggestProps = AutosuggestProps<IFullscreenProps>;
@@ -57,6 +75,8 @@ const Fullscreen = forwardRef(function Fullscreen(
     modalBodyClassName,
     renderSuggestion,
     onOpen,
+    closeOnSuggestionSelected = true,
+    sharedFieldProps,
     // div props
     ...props
   },
@@ -90,7 +110,7 @@ const Fullscreen = forwardRef(function Fullscreen(
     <FullscreenContext.Provider
       value={{
         handleClose,
-        value: props.inputProps.value,
+        value: sharedFieldProps.value,
         handleFocus,
         setInputRef: setLocalInputRef,
       }}
@@ -146,27 +166,34 @@ const Fullscreen = forwardRef(function Fullscreen(
               React.cloneElement(activeField, {...props})
             }
             getSuggestionValue={({value}) => value}
-            renderSuggestion={renderSuggestion ?? ((suggestion: ISuggestValue, {isHighlighted}) => {
-              return (
-                <List.Item as="div" active={isHighlighted}>
-                  {suggestion.value}
-                </List.Item>
-              );
-            })}
+            renderSuggestion={
+              renderSuggestion ??
+              ((suggestion: ISuggestValue, {isHighlighted}) => {
+                return (
+                  <List.Item as="div" active={isHighlighted}>
+                    {suggestion.value}
+                  </List.Item>
+                );
+              })
+            }
             {...props}
             onSuggestionSelected={(e, data) => {
-              handleClose();
+              closeOnSuggestionSelected && handleClose();
               onSuggestionSelected(e, data);
             }}
+            inputProps={sharedFieldProps}
           />
           {renderModalAvailableSpace?.()}
         </Modal>
       ) : (
-        defaultInput
+        React.cloneElement(defaultInput, sharedFieldProps)
       )}
     </FullscreenContext.Provider>
   );
-}) as IAutosuggestComponent<PropsWithChildren<IFullscreenProps>> & {
+}) as IAutosuggestComponent<
+  PropsWithChildren<IFullscreenProps>,
+  RewrittenProps | 'inputProps'
+> & {
   ActiveField: typeof ActiveField;
   DefaultInput: typeof DefaultInput;
 };

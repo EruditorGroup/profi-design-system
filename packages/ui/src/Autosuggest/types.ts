@@ -13,7 +13,7 @@ export type ISuggestValue = {
 
 export type TSection = {suggestions: ISuggestValue[]; title: string};
 
-type RewritedProps =
+export type RewrittenProps =
   | 'ref'
   | 'theme'
   | 'getSuggestionValue'
@@ -41,10 +41,10 @@ export type TSingleVariantProps = DiffAutosuggestProps<
   AutosuggestPropsSingleSection<ISuggestValue>
 >;
 
-export type AutosuggestProps<T = Record<string, unknown>> = Omit<
-  AutosuggestPropsBase<ISuggestValue>,
-  RewritedProps
-> &
+export type AutosuggestProps<
+  T = Record<string, unknown>,
+  TRewrittenProps extends string = RewrittenProps
+> = Omit<AutosuggestPropsBase<ISuggestValue>, TRewrittenProps> &
   (TMultiVariantProps | TSingleVariantProps) & {
     suggestionsSize?: ListProps['size'];
     isLoading?: boolean;
@@ -52,9 +52,10 @@ export type AutosuggestProps<T = Record<string, unknown>> = Omit<
   } & T;
 
 export type IAutosuggestComponent<
-  T = Record<string, unknown>
+  T = Record<string, unknown>,
+  TRewrittenProps extends string = RewrittenProps
 > = React.ForwardRefExoticComponent<
-  AutosuggestProps<T> &
+  AutosuggestProps<T, TRewrittenProps> &
     // не знаем что там будет
     // eslint-disable-next-line
     React.RefAttributes<ReactAutosuggest<ISuggestValue, any>>

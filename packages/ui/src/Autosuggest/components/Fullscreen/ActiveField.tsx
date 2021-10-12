@@ -5,13 +5,15 @@ import {useFullscreenContext} from './contexts';
 import {Input, Textarea, TextareaProps, InputProps} from '../../../Form';
 import {TIconPosition, TWithoutAddons} from './types';
 
+type OmitEvents<T> = Omit<T, 'onChange' | 'onBlur'>;
+
 type TInputProps = {
   textarea: false | undefined;
-} & TWithoutAddons<InputProps>;
+} & TWithoutAddons<OmitEvents<InputProps>>;
 
 type TTextareProps = {
   textarea: true;
-} & TWithoutAddons<TextareaProps>;
+} & TWithoutAddons<OmitEvents<TextareaProps>>;
 
 type TActiveFieldProps = {
   fontSize?: string;
