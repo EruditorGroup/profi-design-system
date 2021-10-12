@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.34.0](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-icons@0.33.10...@eruditorgroup/profi-icons@0.34.0) (2021-10-12)
+
+
+### Features
+
+* **Icons:** Great, Medal, Warning иконки ([f9aed2b](https://github.com/eruditorgroup/profi-design-system/commit/f9aed2b9fd8e9e0d499e1164979718d045f47805))
+
+
+
+
+
 ## [0.33.10](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-icons@0.33.9...@eruditorgroup/profi-icons@0.33.10) (2021-10-07)
 
 **Note:** Version bump only for package @eruditorgroup/profi-icons
