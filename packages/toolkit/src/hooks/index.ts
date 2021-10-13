@@ -13,3 +13,4 @@ export {default as useDebouncedCallback} from './useDebouncedCallback';
 export {default as useSafeLayoutEffect} from './useSafeLayoutEffect';
 export {default as useStateSafe} from './useStateSafe';
 export {default as useMouseWheel} from './useMouseWheel';
+export {default as useMoveCaretToEndOnFocus} from './useMoveCaretToEndOnFocus';

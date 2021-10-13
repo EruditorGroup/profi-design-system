@@ -16,7 +16,7 @@ const DefaultInput: React.FC<IDefaultInputProps> = ({
   onFocus,
   ...rest
 }) => {
-  const {handleFocus, value} = useFullscreenContext();
+  const {handleFocus} = useFullscreenContext();
   const searchIcon = <SearchIcon style={{fontSize}} />;
 
   const iconAddon =
@@ -24,7 +24,6 @@ const DefaultInput: React.FC<IDefaultInputProps> = ({
 
   return (
     <Input
-      value={value}
       {...iconAddon}
       {...rest}
       onFocus={(e) => {

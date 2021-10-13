@@ -1,7 +1,13 @@
 .root {
   background-color: var(--ui-bg-primary);
   position: relative;
-  padding: 10px 15px;
+  padding: 10px;
+}
+
+.modal-body {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
 .fullscreen-input-panel {
