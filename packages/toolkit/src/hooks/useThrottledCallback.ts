@@ -32,14 +32,8 @@ export default function useThrottledCallback<
       if (options.leading) callback(...args);
 
       const timeoutCallback = () => {
-        // Если нет trailing, то просто завершаем таймер по истечению времени
-        if (!options.trailing) {
-          timeout.current = undefined;
-          return;
-        }
-
         // Если есть trailing, то выполняем последний коллбэк, вызванный во время таймера
-        if (hasNextCallback.current) {
+        if (options.trailing && hasNextCallback.current) {
           hasNextCallback.current = false;
           nextCallback.current();
           timeout.current = setTimeout(timeoutCallback, ms);
