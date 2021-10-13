@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.37.0](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-toolkit@0.36.2...@eruditorgroup/profi-toolkit@0.37.0) (2021-10-13)
+
+
+### Bug Fixes
+
+* **toolkit:** В useCombinedRef теперь можно передовать любое количество ссылок ([b868a66](https://github.com/eruditorgroup/profi-design-system/commit/b868a6622805eb9ffd634341c7161174d117562f))
+
+
+### Features
+
+* **toolkit:** Добавил новый хук useMoveCaretToEndOnFocus ([cb46887](https://github.com/eruditorgroup/profi-design-system/commit/cb46887df0b0d70f7ef864c8d8a135195f4635f2))
+
+
+
+
+
 ## [0.36.2](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-toolkit@0.36.1...@eruditorgroup/profi-toolkit@0.36.2) (2021-10-12)
 
 **Note:** Version bump only for package @eruditorgroup/profi-toolkit
