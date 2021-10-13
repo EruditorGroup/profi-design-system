@@ -83,4 +83,16 @@
   --ui-bg-primary: #fafafa;
   --ui-bg-light: #f2f2f2;
   --ui-bg-lightState: #ebebeb;
+
+  /* Media */
+  --ui-breakpoint-xs-min: 320px;
+  --ui-breakpoint-xs-max: 721px;
+  --ui-breakpoint-s-min: 732px;
+  --ui-breakpoint-s-max: 1023px;
+  --ui-breakpoint-m-min: 1024px;
+  --ui-breakpoint-m-max: 1279px;
+  --ui-breakpoint-l-min: 1280px;
+
+  --ui-media-query-xs-min: 'min-width: 320px';
+  --ui-media-query-xs-max: 'max-width: 721px';
 }
