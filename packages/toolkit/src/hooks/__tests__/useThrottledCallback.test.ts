@@ -44,9 +44,9 @@ describe('useThrottledCallback', () => {
     throttledFn(timesCalled); // skip
     await waitFor(150);
     expect(timesCalled).toBe(1);
-    throttledFn(timesCalled);
+    throttledFn(timesCalled); // pass : > 300
     await waitFor(250);
-    expect(timesCalled).toBe(2); // pass : > 300
+    expect(timesCalled).toBe(2);
     throttledFn(timesCalled); // skip
     await waitFor(50);
     expect(timesCalled).toBe(2);
@@ -84,9 +84,9 @@ describe('useThrottledCallback', () => {
     throttledFn(timesCalled); // skip
     await waitFor(150);
     expect(timesCalled).toBe(0);
-    throttledFn(timesCalled);
+    throttledFn(timesCalled); // pass : > 300
     await waitFor(250);
-    expect(timesCalled).toBe(1); // pass : > 300
+    expect(timesCalled).toBe(1);
     throttledFn(timesCalled); // skip
     await waitFor(50);
     expect(timesCalled).toBe(1);
@@ -94,7 +94,6 @@ describe('useThrottledCallback', () => {
     throttledFn(timesCalled); // skip
     await waitFor(50);
     expect(timesCalled).toBe(1);
-
     throttledFn(timesCalled); // pass : > 300
     await waitFor(350);
     expect(timesCalled).toBe(2);
@@ -104,7 +103,7 @@ describe('useThrottledCallback', () => {
     expect(timesCalled).toBe(2);
   });
 
-  it('should be throttled (leading = false, trailing = true)', async () => {
+  it('should be throttled (leading = true, trailing = false)', async () => {
     let timesCalled = 0;
     let throttledFn;
 
