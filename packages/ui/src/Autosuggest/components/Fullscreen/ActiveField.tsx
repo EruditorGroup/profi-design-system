@@ -5,7 +5,8 @@ import {useFullscreenContext} from './contexts';
 import {Input, Textarea, TextareaProps, InputProps} from '../../../Form';
 import {TIconPosition, TWithoutAddons} from './types';
 
-type OmitEvents<T> = Omit<T, 'onChange' | 'onBlur'>;
+/** Исключаем все события, которые перехватывает Autosuggest компонент */
+type OmitEvents<T> = Omit<T, 'onChange' | 'onBlur' | 'onFocus' | 'onKeyDown'>;
 
 type TInputProps = {
   textarea: false | undefined;

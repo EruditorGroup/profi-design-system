@@ -18,7 +18,6 @@ import Modal from '../../../Modal';
 import List from '../../../List';
 import Spinner from '../../../Spinner';
 
-
 import AutosuggestVariant from '../AutosuggestVariant';
 import ActiveField from './ActiveField';
 import DefaultInput from './DefaultInput';
@@ -29,18 +28,38 @@ import type {
   IAutosuggestComponent,
   ISuggestValue,
   AutosuggestProps,
-  RewrittenProps,
 } from '../../types';
 
 import styles from './Fullscreen.module.scss';
 import ListItemStyles from '../../../List/components/ListItem/ListItem.module.scss';
 
+interface State {
+  isOpen: boolean;
+}
+
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+type TStatefyEvent<T extends (...args: any) => void> = T extends (
+  ...args: infer R
+) => void
+  ? (state: State, ...args: R) => void
+  : never;
+
+type TReplaceEvents<
+  TEventKeys extends keyof AutosuggestInputProps<ISuggestValue>
+> = {
+  [k in TEventKeys]?: TStatefyEvent<AutosuggestInputProps<ISuggestValue>[k]>;
+};
+
 type SharedFieldProps = {
   value: string;
-  onChange: AutosuggestInputProps<ISuggestValue>['onChange'];
-  onBlur?: AutosuggestInputProps<ISuggestValue>['onBlur'];
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   [key: string]: any;
-} & Pick<InputProps, 'placeholder'>;
+} & Pick<InputProps, 'placeholder'> &
+  Pick<
+    AutosuggestInputProps<ISuggestValue>,
+    'onChange' | 'onBlur' | 'onKeyDown'
+  > &
+  TReplaceEvents<'onFocus'>;
 
 interface IFullscreenProps {
   inputRef?: MutableRefObject<HTMLInputElement | HTMLTextAreaElement>;
@@ -84,6 +103,10 @@ const Fullscreen = forwardRef(function Fullscreen(
 ) {
   const [isFullscreenActive, setFullscreenActive] = useState(false);
   const [localInputRef, setLocalInputRef] = useCombinedRef(inputRef);
+  const state: State = {
+    isOpen: isFullscreenActive,
+  };
+
   useMoveCaretToEndOnFocus(localInputRef, [isFullscreenActive]);
 
   useEffect(() => {
@@ -105,6 +128,13 @@ const Fullscreen = forwardRef(function Fullscreen(
   const handleFocus = useCallback(() => {
     handleOpen();
   }, [handleOpen]);
+
+  const enhancedSharedProps = {
+    ...sharedFieldProps,
+    onFocus: (e: React.FocusEvent<HTMLElement>) => {
+      sharedFieldProps.onFocus?.(state, e);
+    },
+  };
 
   return (
     <FullscreenContext.Provider
@@ -181,18 +211,18 @@ const Fullscreen = forwardRef(function Fullscreen(
               closeOnSuggestionSelected && handleClose();
               onSuggestionSelected(e, data);
             }}
-            inputProps={sharedFieldProps}
+            inputProps={enhancedSharedProps}
           />
           {renderModalAvailableSpace?.()}
         </Modal>
       ) : (
-        React.cloneElement(defaultInput, sharedFieldProps)
+        React.cloneElement(defaultInput, enhancedSharedProps)
       )}
     </FullscreenContext.Provider>
   );
 }) as IAutosuggestComponent<
   PropsWithChildren<IFullscreenProps>,
-  RewrittenProps | 'inputProps'
+  'inputProps'
 > & {
   ActiveField: typeof ActiveField;
   DefaultInput: typeof DefaultInput;

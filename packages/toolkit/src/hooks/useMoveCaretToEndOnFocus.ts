@@ -15,9 +15,7 @@ export default function useMoveCaretToEndOnFocus(
 
     const handleFocus = () => {
       /** Возвращает каретку в конец набранной строки после фокуса */
-      const val = element.value;
-      element.value = '';
-      element.value = val;
+      element.selectionStart = element.selectionEnd = element.value.length;
     };
     element.addEventListener('focus', handleFocus);
 
