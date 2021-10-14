@@ -16,7 +16,11 @@ describe('useThrottledCallback', () => {
     let throttledFn;
 
     renderHook(() => {
-      throttledFn = useThrottledCallback((ref) => (ref.times += 1), 300, []);
+      throttledFn = useThrottledCallback(
+        (ref: {times: number}) => (ref.times += 1),
+        300,
+        [],
+      );
     });
 
     throttledFn(calls);
@@ -144,15 +148,15 @@ describe('useThrottledCallback', () => {
 
   it('should be cleaned after unmount ', async () => {
     let timesCalled = 0;
-    let debouncedFn;
+    let throttledFn;
 
     const hook = renderHook(() => {
-      debouncedFn = useThrottledCallback(() => (timesCalled += 1), 300, [
+      throttledFn = useThrottledCallback(() => (timesCalled += 1), 300, [
         timesCalled,
       ]);
     });
 
-    debouncedFn(timesCalled);
+    throttledFn(timesCalled);
     expect(timesCalled).toBe(1); // leading: true
     await waitFor(50);
     hook.unmount();

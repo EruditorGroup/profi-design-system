@@ -8,14 +8,13 @@ type ThrottledCallbackOptions = {
 export default function useThrottledCallback<
   // осознанный any, не знаем какие аргументы прилетят
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  Args extends any[],
-  Fn extends (...args: Args) => void
+  Fn extends (...args: any[]) => void
 >(
   callback: Fn,
   ms: number,
   deps: unknown[],
   options: ThrottledCallbackOptions = {leading: true, trailing: true},
-): (...args: Args) => void {
+): (...args: Parameters<Fn>) => void {
   const timeout = useRef<NodeJS.Timeout>();
   const nextCallback = useRef<() => void>(undefined);
   const hasNextCallback = useRef<boolean>(false);
@@ -26,7 +25,7 @@ export default function useThrottledCallback<
     };
   }, []);
 
-  return useCallback((...args: Args): void => {
+  return useCallback((...args) => {
     if (!timeout.current) {
       // Выполняем на старте таймера
       if (options.leading) callback(...args);
