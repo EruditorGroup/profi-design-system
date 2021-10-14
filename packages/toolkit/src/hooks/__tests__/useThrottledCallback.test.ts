@@ -18,8 +18,8 @@ describe('useThrottledCallback', () => {
     renderHook(() => {
       throttledFn = useThrottledCallback(
         (ref: {times: number}) => (ref.times += 1),
-        300,
         [],
+        300,
       );
     });
 
@@ -36,7 +36,7 @@ describe('useThrottledCallback', () => {
     let throttledFn;
 
     renderHook(() => {
-      throttledFn = useThrottledCallback(() => (timesCalled += 1), 300, [
+      throttledFn = useThrottledCallback(() => (timesCalled += 1), [
         timesCalled,
       ]);
     });
@@ -75,8 +75,8 @@ describe('useThrottledCallback', () => {
     renderHook(() => {
       throttledFn = useThrottledCallback(
         () => (timesCalled += 1),
-        300,
         [timesCalled],
+        300,
         {leading: false, trailing: true},
       );
     });
@@ -114,8 +114,8 @@ describe('useThrottledCallback', () => {
     renderHook(() => {
       throttledFn = useThrottledCallback(
         () => (timesCalled += 1),
-        300,
         [timesCalled],
+        300,
         {leading: true, trailing: false},
       );
     });
@@ -151,9 +151,11 @@ describe('useThrottledCallback', () => {
     let throttledFn;
 
     const hook = renderHook(() => {
-      throttledFn = useThrottledCallback(() => (timesCalled += 1), 300, [
-        timesCalled,
-      ]);
+      throttledFn = useThrottledCallback(
+        () => (timesCalled += 1),
+        [timesCalled],
+        300,
+      );
     });
 
     throttledFn(timesCalled);

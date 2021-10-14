@@ -11,8 +11,8 @@ export default function useThrottledCallback<
   Fn extends (...args: any[]) => void
 >(
   callback: Fn,
-  ms: number,
   deps: unknown[],
+  ms = 200,
   options: ThrottledCallbackOptions = {leading: true, trailing: true},
 ): (...args: Parameters<Fn>) => void {
   const timeout = useRef<NodeJS.Timeout>();
