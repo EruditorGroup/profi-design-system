@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.49.0](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.48.3...@eruditorgroup/profi-ui@0.49.0) (2021-10-14)
+
+
+### Features
+
+* Добавлен хук useThrottledCallback ([#322](https://github.com/eruditorgroup/profi-design-system/issues/322)) ([57a4906](https://github.com/eruditorgroup/profi-design-system/commit/57a49066b2ccc532a8a937c107840e7ed759cfb6))
+
+
+
+
+
 ## [0.48.3](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.48.2...@eruditorgroup/profi-ui@0.48.3) (2021-10-13)
 
 
