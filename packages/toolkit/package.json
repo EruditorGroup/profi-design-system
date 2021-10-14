@@ -1,6 +1,6 @@
 {
   "name": "@eruditorgroup/profi-toolkit",
-  "version": "0.35.3",
+  "version": "1.0.0-alpha.3",
   "description": "Toolkit for React for Eruditor Group",
   "author": "eruditorgroup",
   "license": "ISC",
@@ -28,15 +28,16 @@
     "/src"
   ],
   "devDependencies": {
-    "react": "^16.14.0",
-    "react-dom": "^16.14.0"
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
   },
   "peerDependencies": {
-    "react": "^16.14.0",
-    "react-dom": "^16.14.0"
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
   },
   "eruditorgroup": {
     "libName": "ProfiToolkit",
     "libFilename": "profi-toolkit"
-  }
+  },
+  "gitHead": "154e80bb9676c4d9bc251aa2094bc94092ab0d39"
 }
