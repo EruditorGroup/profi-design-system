@@ -105,8 +105,8 @@ describe('useThrottledCallback', () => {
     expect(timesCalled).toBe(2);
 
     throttledFn(timesCalled); // pass : > 300
-    await waitFor(350);
-    expect(timesCalled).toBe(2);
+    await waitFor(400);
+    expect(timesCalled).toBe(3);
   });
 
   it('should be throttled (leading = true, trailing = false)', async () => {
