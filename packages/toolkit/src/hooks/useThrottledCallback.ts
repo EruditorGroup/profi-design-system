@@ -28,7 +28,12 @@ export default function useThrottledCallback<
   return useCallback((...args) => {
     if (!timeout.current) {
       // Выполняем на старте таймера
-      if (options.leading) callback(...args);
+      if (options.leading) {
+        callback(...args);
+      } else {
+        nextCallback.current = () => callback(...args);
+        hasNextCallback.current = true;
+      }
 
       const timeoutCallback = () => {
         // Если есть trailing, то выполняем последний коллбэк, вызванный во время таймера
