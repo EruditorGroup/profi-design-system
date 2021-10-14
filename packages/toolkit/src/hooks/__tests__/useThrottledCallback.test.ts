@@ -36,9 +36,11 @@ describe('useThrottledCallback', () => {
     let throttledFn;
 
     renderHook(() => {
-      throttledFn = useThrottledCallback(() => (timesCalled += 1), [
-        timesCalled,
-      ]);
+      throttledFn = useThrottledCallback(
+        () => (timesCalled += 1),
+        [timesCalled],
+        300,
+      );
     });
 
     throttledFn(timesCalled);
