@@ -1,14 +1,6 @@
-import React, {useEffect, useRef, forwardRef} from 'react';
-
-import type {
-  HTMLAttributes,
-  ForwardRefExoticComponent,
-  RefAttributes,
-  MouseEventHandler,
-} from 'react';
-
-import {disableBodyScroll, enableBodyScroll} from 'body-scroll-lock';
+import * as React from 'react';
 import {CSSTransition} from 'react-transition-group';
+import {gestures, useDisableBodyScroll} from '@eruditorgroup/profi-toolkit';
 
 import {ArrowLeftIcon, CloseIcon} from '@eruditorgroup/profi-icons';
 
@@ -25,6 +17,13 @@ import {
 
 import classNames from 'classnames';
 
+import type {
+  HTMLAttributes,
+  ForwardRefExoticComponent,
+  RefAttributes,
+  MouseEventHandler,
+} from 'react';
+
 import styles from './Modal.module.scss';
 
 // import slideUpTransition from '../styles/transitions/SlideUp.module.scss';
@@ -39,6 +38,7 @@ export interface ModalProps
   visible: boolean;
   title?: string | undefined;
   closeOnOverlayClick?: boolean;
+  swipeDownToClose?: boolean;
   onClickBack?: MouseEventHandler<HTMLElement>;
   onClose: MouseEventHandler<HTMLElement>;
   bodyClassName?: string;
@@ -48,7 +48,7 @@ const DEFAULT_ANIMATION_DURATION = 300;
 
 const Modal: ForwardRefExoticComponent<
   ModalProps & RefAttributes<HTMLDivElement>
-> = forwardRef(
+> = React.forwardRef(
   (
     {
       width,
@@ -61,22 +61,44 @@ const Modal: ForwardRefExoticComponent<
       withCloseButton = true,
       closeOnOverlayClick,
       bodyClassName,
+      swipeDownToClose = false,
       onClose,
       onClickBack,
       ...props
     },
     ref,
   ) => {
-    const bodyEl = useRef(null);
-
-    // Отключаем промотку body
-    useEffect(() => {
-      const {current: element} = bodyEl;
-      visible ? disableBodyScroll(element) : enableBodyScroll(element);
-      return () => enableBodyScroll(element);
-    }, [visible]);
-
+    const rootRef = React.useRef(null);
+    const bodyRef = React.useRef(null);
     const [modalRef, setModalRef] = useCombinedRef(ref);
+
+    const [pc, setPc] = React.useState(0);
+    const modalOpacity = 1 - pc / 100;
+
+    useDisableBodyScroll(bodyRef, visible);
+
+    gestures.useDrag(
+      ({movement: [, my], active, currentTarget: el}) => {
+        const pc = Math.max(0, (my / window.innerHeight) * 100);
+        if (active) {
+          setPc(pc);
+        } else if (pc > 10) {
+          setPc(100);
+          el.addEventListener('transitionend', function handleTransitionEnd() {
+            el.removeEventListener('transitionend', handleTransitionEnd);
+            onClose(null);
+            setPc(0);
+          });
+        } else {
+          setPc(0);
+        }
+      },
+      {
+        axis: 'y',
+        enabled: swipeDownToClose,
+        target: rootRef,
+      },
+    );
 
     useClickOutside(modalRef, () => {
       closeOnOverlayClick && onClose(null);
@@ -100,7 +122,11 @@ const Modal: ForwardRefExoticComponent<
           classNames={theme.transitions.fade}
         >
           <BodyPortal>
-            <div className={styles['overlay']} onClick={handleCloseClick} />
+            <div
+              className={styles['overlay']}
+              onClick={handleCloseClick}
+              style={pc ? {display: 'none'} : null}
+            />
           </BodyPortal>
         </CSSTransition>
 
@@ -116,6 +142,14 @@ const Modal: ForwardRefExoticComponent<
               styles['root'],
               fullscreen && styles['fullscreen'],
             )}
+            style={{
+              transform: `translate3d(0, ${pc}%, 0) scale(${Math.max(
+                0.9,
+                modalOpacity,
+              )})`,
+              opacity: `${modalOpacity}`,
+            }}
+            ref={rootRef}
           >
             <div
               className={classNames(
@@ -161,7 +195,7 @@ const Modal: ForwardRefExoticComponent<
                   fullscreen && styles['body_h100'],
                   bodyClassName,
                 )}
-                ref={bodyEl}
+                ref={bodyRef}
               >
                 {children}
               </div>

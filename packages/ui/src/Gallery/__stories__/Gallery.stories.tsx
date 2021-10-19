@@ -18,27 +18,26 @@ const info = {
     avatar,
   },
   date: '21 августа 2021 года',
-  description: `Успех нашей компании заключается в том, что GLAVSTROYAPP строительная фирма в которой не просто работают люди, а трудится команда настоящих профессионалов. 
-Другие работы смотрите в альбом «Дизайн интерьера».`,
+  description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+  
+  Suspendisse leo nisi, tincidunt a accumsan eget, faucibus fringilla enim. Nunc sagittis dignissim lorem, a varius est condimentum non.
+  
+  Donec tortor ante, porttitor ac finibus at, venenatis cursus est. Curabitur a sapien pretium, luctus est accumsan, pellentesque magna. Ut eu velit placerat, gravida nisi ut, sollicitudin nunc. Fusce euismod est ut finibus commodo. Cras auctor risus at ligula ornare tempor.
+`,
   tags: ['Ремонт', 'Ремонт квартиры', 'Дизайн интерьера', 'Сантехника'],
 };
 
 const images = [example_1, example_2, example_3].map((src) => ({src, ...info}));
 
 const Template: Story = ({...args}) => {
-  const [count, setCount] = React.useState(0);
-
+  const [open, toggle] = React.useReducer((s) => !s, true);
   return (
     <div className="preview">
-      <Gallery.Image
-        {...images[Math.abs(count) % 3]}
-        onClose={noop}
-        onBack={() => setCount(count - 1)}
-        onNext={() => setCount(count + 1)}
-        showInfo
-      />
+      <button onClick={toggle}>Открыть галерею</button>
+      {open && <Gallery images={images} currentImage={0} onClose={toggle} />}
     </div>
   );
 };
 export const Image = Template.bind({});
 Image.args = {};
+
