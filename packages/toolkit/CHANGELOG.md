@@ -3,6 +3,31 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.39.0](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-toolkit@0.37.0...@eruditorgroup/profi-toolkit@0.39.0) (2021-10-19)
+
+
+### Features
+
+* **Gallery.Image:** Мобильная версия ([6d68176](https://github.com/eruditorgroup/profi-design-system/commit/6d6817603297ec83f42e58cded535fdb887dc87d))
+
+
+
+## 0.23.1 (2021-10-14)
+
+
+### Bug Fixes
+
+* **useThrottledCallback:** Фикс leading ([#323](https://github.com/eruditorgroup/profi-design-system/issues/323)) ([f058cf2](https://github.com/eruditorgroup/profi-design-system/commit/f058cf220a6de73a7140513a73eb3961d578e4fc))
+
+
+### Features
+
+* Добавлен хук useThrottledCallback ([#322](https://github.com/eruditorgroup/profi-design-system/issues/322)) ([57a4906](https://github.com/eruditorgroup/profi-design-system/commit/57a49066b2ccc532a8a937c107840e7ed759cfb6))
+
+
+
+
+
 # [0.38.0](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-toolkit@0.37.0...@eruditorgroup/profi-toolkit@0.38.0) (2021-10-14)
 
 
