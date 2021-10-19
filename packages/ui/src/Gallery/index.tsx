@@ -20,15 +20,8 @@ export interface GalleryProps extends React.HTMLProps<HTMLDivElement> {
   onClose: () => unknown;
 }
 
-interface IGallery extends React.ForwardRefExoticComponent<GalleryProps> {
-  readonly Image: typeof Image;
-}
-
-const Gallery: IGallery = Object.assign(
-  React.forwardRef<HTMLDivElement, GalleryProps>(function Gallery(
-    {className, currentImage, images, onClose},
-    ref,
-  ) {
+const Gallery = React.forwardRef<HTMLDivElement, GalleryProps>(
+  function Gallery({className, currentImage, images, onClose}, ref) {
     const isMobile = useCurrentScreen('mobile');
     const isSingleImage = images.length === 1;
 
@@ -165,8 +158,7 @@ const Gallery: IGallery = Object.assign(
         </Modal>
       )
     );
-  }),
-  {Image},
+  },
 );
 
 export default Gallery;
