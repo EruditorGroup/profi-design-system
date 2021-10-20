@@ -1,20 +1,20 @@
-import React, {forwardRef} from 'react';
+import React, {forwardRef, useEffect} from 'react';
 import {SearchIcon} from '@eruditorgroup/profi-icons';
-import {useCombinedRef} from '@eruditorgroup/profi-toolkit';
+import {useCombinedRef, useMoveCaretToEndOnFocus} from '@eruditorgroup/profi-toolkit';
 import {useFullscreenContext} from './contexts';
 import {Input, Textarea, TextareaProps, InputProps} from '../../../Form';
-import {TIconPosition, TWithoutAddons} from './types';
+import {TIconPosition} from './types';
 
 /** Исключаем все события, которые перехватывает Autosuggest компонент */
 type OmitEvents<T> = Omit<T, 'onChange' | 'onBlur' | 'onFocus' | 'onKeyDown'>;
 
 type TInputProps = {
   textarea: false | undefined;
-} & TWithoutAddons<OmitEvents<InputProps>>;
+} & OmitEvents<InputProps>;
 
 type TTextareProps = {
   textarea: true;
-} & TWithoutAddons<OmitEvents<TextareaProps>>;
+} & OmitEvents<TextareaProps>;
 
 type TActiveFieldProps = {
   fontSize?: string;
@@ -29,14 +29,20 @@ const ActiveField = forwardRef<
   HTMLInputElement | HTMLTextAreaElement,
   TActiveFieldProps
 >(({iconPostion, fontSize = '15px', size = 'm', children, ...props}, ref) => {
-  const {setInputRef, handleClose} = useFullscreenContext();
+  const {handleClose} = useFullscreenContext();
 
-  const [_, setLocalRef] = useCombinedRef(ref, setInputRef);
+  const [fieldRef, setLocalRef] = useCombinedRef(ref);
+
+  useEffect(() => {
+    fieldRef.current?.focus();
+  }, [fieldRef]);
+
+  /** Нужно запланировать эффект после эффекта с фокусом */
+  useMoveCaretToEndOnFocus({ref: fieldRef, deps: [], mode: 'onMount'});
 
   const leading = iconPostion === 'leading' && (
     <SearchIcon style={{fontSize}} />
   );
-
   let field: JSX.Element = null;
   if (props.textarea === true) {
     /** Можем мутировать пропсы, так как выше деструктурировали их в новый объект */

@@ -2,8 +2,7 @@ import {createContext, useContext} from 'react';
 
 interface FullscreenContextType {
   handleClose: () => void;
-  handleFocus: () => void;
-  setInputRef: (arg: HTMLInputElement | HTMLTextAreaElement) => void;
+  handleOpenModal: () => void;
   value: string;
 }
 

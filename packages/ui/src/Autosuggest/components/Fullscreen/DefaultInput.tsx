@@ -1,38 +1,37 @@
 import {SearchIcon} from '@eruditorgroup/profi-icons';
-import React from 'react';
+import React, {forwardRef} from 'react';
 import {Input, InputProps} from '../../../Form';
 import {useFullscreenContext} from './contexts';
-import {TWithoutAddons, TIconPosition} from './types';
+import {TIconPosition} from './types';
 
-interface IDefaultInputProps extends TWithoutAddons<InputProps> {
+interface IDefaultInputProps extends InputProps {
   iconPostion?: TIconPosition;
   fontSize?: string;
 }
 
-const DefaultInput: React.FC<IDefaultInputProps> = ({
-  fontSize = '15px',
-  iconPostion,
-  size = 'm',
-  onFocus,
-  ...rest
-}) => {
-  const {handleFocus} = useFullscreenContext();
-  const searchIcon = <SearchIcon style={{fontSize}} />;
+const DefaultInput = forwardRef<HTMLInputElement, IDefaultInputProps>(
+  ({fontSize = '15px', iconPostion, size = 'm', onClick, ...rest}, ref) => {
+    const {handleOpenModal} = useFullscreenContext();
+    const searchIcon = <SearchIcon style={{fontSize}} />;
 
-  const iconAddon =
-    iconPostion === 'leading' ? {leading: searchIcon} : {trailing: searchIcon};
+    const iconAddon =
+      iconPostion === 'leading'
+        ? {leading: searchIcon}
+        : {trailing: searchIcon};
 
-  return (
-    <Input
-      {...iconAddon}
-      {...rest}
-      onFocus={(e) => {
-        handleFocus();
-        onFocus?.(e);
-      }}
-      size={size}
-    />
-  );
-};
+    return (
+      <Input
+        ref={ref}
+        {...rest}
+        {...iconAddon}
+        onClick={(e) => {
+          handleOpenModal();
+          onClick?.(e);
+        }}
+        size={size}
+      />
+    );
+  },
+);
 
 export default DefaultInput;

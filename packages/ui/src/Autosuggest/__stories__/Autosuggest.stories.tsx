@@ -164,7 +164,6 @@ const Template: Story<Omit<AutosuggestProps, 'suggestions' | 'value'>> = (
       <h2>Fullscreen</h2>
       <Fullscreen
         {...args}
-        inputRef={null}
         multiSection={false}
         sharedFieldProps={{
           value,
@@ -177,7 +176,12 @@ const Template: Story<Omit<AutosuggestProps, 'suggestions' | 'value'>> = (
         renderSuggestion={renderFullscreenSuggestion}
         alwaysRenderSuggestions
         activeField={
-          <Fullscreen.ActiveField iconPostion="none" textarea>
+          <Fullscreen.ActiveField
+            iconPostion="none"
+            textarea
+            size="l"
+            //autoFocus
+          >
             {(field, {onClose}) => (
               <div className={styles['fullscreen-input-panel']}>
                 <Button design="light" rounded onClick={onClose}>
@@ -206,6 +210,8 @@ const Template: Story<Omit<AutosuggestProps, 'suggestions' | 'value'>> = (
             ))}
           </div>
         )}
+        highlightFirstSuggestion={false}
+        focusInputOnSuggestionClick={false}
       />
 
       <h2>Opened suggestions view without interactive</h2>
