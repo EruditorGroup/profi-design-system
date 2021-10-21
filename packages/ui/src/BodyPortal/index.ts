@@ -1,4 +1,4 @@
-import {forwardRef, useEffect, useLayoutEffect, useMemo} from 'react';
+import {forwardRef, useEffect, useMemo} from 'react';
 import type {
   ForwardRefExoticComponent,
   RefAttributes,
@@ -6,7 +6,7 @@ import type {
   ReactPortal,
 } from 'react';
 import {createPortal} from 'react-dom';
-import {stringifyCssProps} from '@eruditorgroup/profi-toolkit';
+import {stringifyCssProps, useSafeLayoutEffect} from '@eruditorgroup/profi-toolkit';
 
 export type BodyPortalProps = {
   children: ReactNode;
@@ -41,11 +41,11 @@ const BodyPortal: ForwardRefExoticComponent<
     };
   }, [container]);
 
-  useLayoutEffect(() => {
+  useSafeLayoutEffect(() => {
     if (container) container.className = className || '';
   }, [className, container]);
 
-  useLayoutEffect(() => {
+  useSafeLayoutEffect(() => {
     if (container) container.setAttribute('style', css);
   }, [css, container]);
 

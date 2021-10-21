@@ -170,7 +170,7 @@ const Template: Story<Omit<AutosuggestProps, 'suggestions' | 'value'>> = (
           onChange: (_, params) => setValue(params.newValue),
           'data-testattribute': 'test',
         }}
-        suggestions={suggestions.slice(0, 10)}
+        suggestions={suggestions.slice(0, 20)}
         onSuggestionsFetchRequested={updateSuggestions}
         onSuggestionSelected={(_, {suggestion}) => setValue(suggestion.value)}
         renderSuggestion={renderFullscreenSuggestion}
@@ -180,7 +180,6 @@ const Template: Story<Omit<AutosuggestProps, 'suggestions' | 'value'>> = (
             iconPostion="none"
             textarea
             size="l"
-            //autoFocus
           >
             {(field, {onClose}) => (
               <div className={styles['fullscreen-input-panel']}>

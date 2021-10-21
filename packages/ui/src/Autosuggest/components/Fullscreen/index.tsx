@@ -4,8 +4,12 @@ import React, {
   PropsWithChildren,
   useState,
   useCallback,
+  useEffect,
+  useRef,
 } from 'react';
 import noop from 'lodash/noop';
+import throttle from 'lodash/throttle';
+import {useCombinedRef} from '@eruditorgroup/profi-toolkit';
 import {InputProps as AutosuggestInputProps} from 'react-autosuggest';
 import cx from 'classnames';
 
@@ -99,6 +103,9 @@ const Fullscreen = forwardRef(function Fullscreen(
   const state: State = {
     isOpen: isFullscreenActive,
   };
+  const [localInputRef, setLocalInputRef] = useCombinedRef<
+    HTMLInputElement | HTMLTextAreaElement
+  >(sharedFieldProps.fieldRef);
 
   const handleOpen = useCallback(() => {
     setFullscreenActive(true);
@@ -114,8 +121,8 @@ const Fullscreen = forwardRef(function Fullscreen(
     onFocus: (e: React.FocusEvent<HTMLElement>) => {
       sharedFieldProps.onFocus?.(state, e);
     },
-    ref: (sharedFieldProps.fieldRef as unknown) as React.Ref<HTMLInputElement>,
-  };
+    ref: (setLocalInputRef as unknown) as React.Ref<HTMLInputElement>,
+  };  
 
   return (
     <FullscreenContext.Provider
@@ -159,6 +166,7 @@ const Fullscreen = forwardRef(function Fullscreen(
                   size={suggestionsSize}
                   className={styles['uilist']}
                   design="high"
+                  onTouchMove={() => localInputRef.current.blur()}
                 >
                   {isLoading ? (
                     <Spinner
@@ -180,7 +188,7 @@ const Fullscreen = forwardRef(function Fullscreen(
               renderSuggestion ??
               ((suggestion: ISuggestValue, {isHighlighted}) => {
                 return (
-                  <List.Item as="div" active={isHighlighted}>
+                  <List.Item as="div" onTouchStart={() => window.alert('haha')} active={isHighlighted}>
                     {suggestion.value}
                   </List.Item>
                 );
