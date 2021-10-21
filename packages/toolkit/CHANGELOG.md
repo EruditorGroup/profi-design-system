@@ -3,6 +3,21 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.39.2](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-toolkit@0.39.0...@eruditorgroup/profi-toolkit@0.39.2) (2021-10-21)
+
+
+
+## 0.24.2 (2021-10-21)
+
+
+### Bug Fixes
+
+* **List.Item:** Переопределение пропсов ([#329](https://github.com/eruditorgroup/profi-design-system/issues/329)) ([d5c89d4](https://github.com/eruditorgroup/profi-design-system/commit/d5c89d4bb3937f67054c00d17bd76b60f7f55a04))
+
+
+
+
+
 ## [0.39.1](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-toolkit@0.39.0...@eruditorgroup/profi-toolkit@0.39.1) (2021-10-19)
 
 **Note:** Version bump only for package @eruditorgroup/profi-toolkit
