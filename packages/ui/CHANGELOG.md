@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.50.1](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.50.0...@eruditorgroup/profi-ui@0.50.1) (2021-10-19)
+
+
+### Bug Fixes
+
+* **Gallery:** Убрана возможность использовать Gallery.Image вне Gallery ([f0306d2](https://github.com/eruditorgroup/profi-design-system/commit/f0306d23706bd6eaa331dc406525189c01d04810))
+
+
+
+
+
 # [0.50.0](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.48.3...@eruditorgroup/profi-ui@0.50.0) (2021-10-19)
 
 
