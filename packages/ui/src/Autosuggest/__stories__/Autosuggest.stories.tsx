@@ -176,11 +176,7 @@ const Template: Story<Omit<AutosuggestProps, 'suggestions' | 'value'>> = (
         renderSuggestion={renderFullscreenSuggestion}
         alwaysRenderSuggestions
         activeField={
-          <Fullscreen.ActiveField
-            iconPostion="none"
-            textarea
-            size="l"
-          >
+          <Fullscreen.ActiveField iconPostion="none" size="l" minRows={1}>
             {(field, {onClose}) => (
               <div className={styles['fullscreen-input-panel']}>
                 <Button design="light" rounded onClick={onClose}>
@@ -195,7 +191,7 @@ const Template: Story<Omit<AutosuggestProps, 'suggestions' | 'value'>> = (
           </Fullscreen.ActiveField>
         }
         defaultInput={
-          <Fullscreen.DefaultInput iconPostion="trailing" size="l" />
+          <Fullscreen.DefaultInput iconPostion="trailing" size="l" minRows={1} />
         }
         renderModalAvailableSpace={() => (
           <div className={styles['fullscreen-modal-space']}>Info</div>

@@ -166,7 +166,7 @@ const Fullscreen = forwardRef(function Fullscreen(
                   size={suggestionsSize}
                   className={styles['uilist']}
                   design="high"
-                  onTouchMove={() => localInputRef.current.blur()}
+                  onTouchStart={() => localInputRef.current.blur()}
                 >
                   {isLoading ? (
                     <Spinner

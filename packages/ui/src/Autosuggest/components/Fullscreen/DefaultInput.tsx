@@ -1,16 +1,30 @@
 import {SearchIcon} from '@eruditorgroup/profi-icons';
 import React, {forwardRef} from 'react';
-import {Input, InputProps} from '../../../Form';
+import {FormControlProps, Textarea} from '../../../Form';
 import {useFullscreenContext} from './contexts';
-import {TIconPosition} from './types';
+import {TIconPosition, ForwardingFocusableComponent} from './types';
+import {AliasProps} from '@eruditorgroup/profi-toolkit';
 
-interface IDefaultInputProps extends InputProps {
+interface IDefaultInputProps extends AliasProps, FormControlProps {
   iconPostion?: TIconPosition;
   fontSize?: string;
 }
 
-const DefaultInput = forwardRef<HTMLInputElement, IDefaultInputProps>(
-  ({fontSize = '15px', iconPostion, size = 'm', onClick, ...rest}, ref) => {
+const DefaultInput: ForwardingFocusableComponent<
+  typeof Textarea,
+  IDefaultInputProps
+> = forwardRef(
+  (
+    {
+      as: Component = Textarea,
+      fontSize = '15px',
+      iconPostion,
+      size = 'm',
+      onClick,
+      ...rest
+    },
+    ref,
+  ) => {
     const {handleOpenModal} = useFullscreenContext();
     const searchIcon = <SearchIcon style={{fontSize}} />;
 
@@ -20,7 +34,7 @@ const DefaultInput = forwardRef<HTMLInputElement, IDefaultInputProps>(
         : {trailing: searchIcon};
 
     return (
-      <Input
+      <Component
         ref={ref}
         {...rest}
         {...iconAddon}
@@ -35,3 +49,4 @@ const DefaultInput = forwardRef<HTMLInputElement, IDefaultInputProps>(
 );
 
 export default DefaultInput;
+
