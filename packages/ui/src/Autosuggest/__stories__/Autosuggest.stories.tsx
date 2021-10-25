@@ -191,7 +191,11 @@ const Template: Story<Omit<AutosuggestProps, 'suggestions' | 'value'>> = (
           </Fullscreen.ActiveField>
         }
         defaultInput={
-          <Fullscreen.DefaultInput iconPostion="trailing" size="l" minRows={1} />
+          <Fullscreen.DefaultInput
+            iconPostion="trailing"
+            size="l"
+            minRows={1}
+          />
         }
         renderModalAvailableSpace={() => (
           <div className={styles['fullscreen-modal-space']}>Info</div>

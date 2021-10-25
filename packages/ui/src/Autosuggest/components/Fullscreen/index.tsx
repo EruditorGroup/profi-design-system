@@ -28,6 +28,7 @@ import type {
 
 import styles from './Fullscreen.module.scss';
 import ListItemStyles from '../../../List/components/ListItem/ListItem.module.scss';
+import {useDelayAlwaysRenderSuggestions} from './hooks/useDelayAlwaysRenderSuggestions';
 
 interface State {
   isOpen: boolean;
@@ -91,6 +92,7 @@ const Fullscreen = forwardRef(function Fullscreen(
     onOpen,
     closeOnSuggestionSelected = true,
     sharedFieldProps,
+    alwaysRenderSuggestions,
     // div props
     ...props
   },
@@ -120,6 +122,11 @@ const Fullscreen = forwardRef(function Fullscreen(
     },
     ref: (setLocalInputRef as unknown) as React.Ref<HTMLInputElement>,
   };
+
+  const delayedAlwaysRenderSuggestions = useDelayAlwaysRenderSuggestions(
+    alwaysRenderSuggestions,
+    isFullscreenActive,
+  );
 
   return (
     <FullscreenContext.Provider
@@ -192,6 +199,7 @@ const Fullscreen = forwardRef(function Fullscreen(
               })
             }
             {...props}
+            alwaysRenderSuggestions={delayedAlwaysRenderSuggestions}
             onSuggestionSelected={(e, data) => {
               closeOnSuggestionSelected && handleClose();
               onSuggestionSelected(e, data);

@@ -15,16 +15,16 @@
   align-items: center;
 
   > * {
-      margin-right: 15px;
-      width: 100%;
+    margin-right: 15px;
+    width: 100%;
   }
 
   *:last-child {
-      margin-right: 0;
+    margin-right: 0;
   }
 
   > button {
-      flex-shrink: 0;
+    flex-shrink: 0;
   }
 }
 
@@ -36,15 +36,11 @@
 .suggestionsContainer {
   overflow: auto;
   box-sizing: border-box;
-  position: absolute;
   width: 100%;
-  left: 0;
-  z-index: 9999;
   background-color: var(--ui-bg-primary);
-}
-  
-.suggestionsContainerOpen {
   margin-top: 10px;
+  position: absolute;
+  left: 0;
 }
 
 .suggestionsList {
