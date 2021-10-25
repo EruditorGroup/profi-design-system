@@ -1,20 +1,14 @@
 import React, {forwardRef} from 'react';
 import {SearchIcon} from '@eruditorgroup/profi-icons';
-import {useCombinedRef} from '@eruditorgroup/profi-toolkit';
+import {
+  AliasProps,
+  useCombinedRef,
+  useMoveCaretToEndOnFocus,
+  useSafeLayoutEffect,
+} from '@eruditorgroup/profi-toolkit';
 import {useFullscreenContext} from './contexts';
-import {Input, Textarea, TextareaProps, InputProps} from '../../../Form';
-import {TIconPosition, TWithoutAddons} from './types';
-
-/** Исключаем все события, которые перехватывает Autosuggest компонент */
-type OmitEvents<T> = Omit<T, 'onChange' | 'onBlur' | 'onFocus' | 'onKeyDown'>;
-
-type TInputProps = {
-  textarea: false | undefined;
-} & TWithoutAddons<OmitEvents<InputProps>>;
-
-type TTextareProps = {
-  textarea: true;
-} & TWithoutAddons<OmitEvents<TextareaProps>>;
+import {Textarea, FormControlProps} from '../../../Form';
+import {TIconPosition, ForwardingFocusableComponent} from './types';
 
 type TActiveFieldProps = {
   fontSize?: string;
@@ -23,41 +17,41 @@ type TActiveFieldProps = {
     input: JSX.Element,
     handler: {onClose: () => void},
   ) => JSX.Element;
-} & (TInputProps | TTextareProps);
+} & AliasProps &
+  FormControlProps;
 
-const ActiveField = forwardRef<
-  HTMLInputElement | HTMLTextAreaElement,
+const ActiveField: ForwardingFocusableComponent<
+  typeof Textarea,
   TActiveFieldProps
->(({iconPostion, fontSize = '15px', size = 'm', children, ...props}, ref) => {
-  const {setInputRef, handleClose} = useFullscreenContext();
+> = forwardRef(
+  (
+    {
+      as: Component = Textarea,
+      iconPostion,
+      fontSize = '15px',
+      children,
+      ...props
+    },
+    ref,
+  ) => {
+    const {handleClose} = useFullscreenContext();
 
-  const [_, setLocalRef] = useCombinedRef(ref, setInputRef);
+    const [fieldRef, setLocalRef] = useCombinedRef(ref);
 
-  const leading = iconPostion === 'leading' && (
-    <SearchIcon style={{fontSize}} />
-  );
+    useSafeLayoutEffect(() => {
+      fieldRef.current?.focus();
+    }, [fieldRef]);
 
-  let field: JSX.Element = null;
-  if (props.textarea === true) {
-    /** Можем мутировать пропсы, так как выше деструктурировали их в новый объект */
-    delete props['textarea'];
-    field = (
-      <Textarea
-        {...props}
-        minRows={props.minRows || 1}
-        leading={leading}
-        ref={setLocalRef}
-        size={size}
-      />
+    /** Нужно запланировать эффект после эффекта с фокусом */
+    useMoveCaretToEndOnFocus({ref: fieldRef, deps: [], mode: 'onMount'});
+
+    const leading = iconPostion === 'leading' && (
+      <SearchIcon style={{fontSize}} />
     );
-  } else {
-    delete props['textarea'];
-    field = (
-      <Input {...props} leading={leading} ref={setLocalRef} size={size} />
-    );
-  }
-  return children ? children(field, {onClose: handleClose}) : field;
-});
+    const field = <Component leading={leading} ref={setLocalRef} {...props} />;
+    return children ? children(field, {onClose: handleClose}) : field;
+  },
+);
 
 ActiveField.displayName = 'ActiveField';
 

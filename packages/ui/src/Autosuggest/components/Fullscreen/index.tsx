@@ -2,18 +2,14 @@ import React, {
   forwardRef,
   MutableRefObject,
   PropsWithChildren,
-  useEffect,
   useState,
   useCallback,
 } from 'react';
 import noop from 'lodash/noop';
+import {useCombinedRef} from '@eruditorgroup/profi-toolkit';
 import {InputProps as AutosuggestInputProps} from 'react-autosuggest';
 import cx from 'classnames';
 
-import {
-  useCombinedRef,
-  useMoveCaretToEndOnFocus,
-} from '@eruditorgroup/profi-toolkit';
 import Modal from '../../../Modal';
 import List from '../../../List';
 import Spinner from '../../../Spinner';
@@ -32,6 +28,7 @@ import type {
 
 import styles from './Fullscreen.module.scss';
 import ListItemStyles from '../../../List/components/ListItem/ListItem.module.scss';
+import {useDelayAlwaysRenderSuggestions} from './hooks/useDelayAlwaysRenderSuggestions';
 
 interface State {
   isOpen: boolean;
@@ -52,6 +49,7 @@ type TReplaceEvents<
 
 type SharedFieldProps = {
   value: string;
+  fieldRef?: MutableRefObject<HTMLInputElement | HTMLTextAreaElement>;
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   [key: string]: any;
 } & Pick<InputProps, 'placeholder'> &
@@ -62,7 +60,6 @@ type SharedFieldProps = {
   TReplaceEvents<'onFocus'>;
 
 interface IFullscreenProps {
-  inputRef?: MutableRefObject<HTMLInputElement | HTMLTextAreaElement>;
   renderModalAvailableSpace?: () => JSX.Element;
   renderSuggestionListAddon?: () => JSX.Element;
   onOpen?: () => void;
@@ -83,7 +80,6 @@ const Fullscreen = forwardRef(function Fullscreen(
     isLoading,
     containerProps,
     shouldRenderSuggestions,
-    inputRef,
     onSuggestionSelected,
     renderModalAvailableSpace,
     renderSuggestionListAddon,
@@ -96,25 +92,19 @@ const Fullscreen = forwardRef(function Fullscreen(
     onOpen,
     closeOnSuggestionSelected = true,
     sharedFieldProps,
+    alwaysRenderSuggestions,
     // div props
     ...props
   },
   ref,
 ) {
   const [isFullscreenActive, setFullscreenActive] = useState(false);
-  const [localInputRef, setLocalInputRef] = useCombinedRef(inputRef);
   const state: State = {
     isOpen: isFullscreenActive,
   };
-
-  useMoveCaretToEndOnFocus(localInputRef, [isFullscreenActive]);
-
-  useEffect(() => {
-    const input = localInputRef.current;
-    if (input) {
-      input.focus();
-    }
-  }, [isFullscreenActive, localInputRef]);
+  const [localInputRef, setLocalInputRef] = useCombinedRef<
+    HTMLInputElement | HTMLTextAreaElement
+  >(sharedFieldProps.fieldRef);
 
   const handleOpen = useCallback(() => {
     setFullscreenActive(true);
@@ -125,24 +115,25 @@ const Fullscreen = forwardRef(function Fullscreen(
     setFullscreenActive(false);
   }, []);
 
-  const handleFocus = useCallback(() => {
-    handleOpen();
-  }, [handleOpen]);
-
   const enhancedSharedProps = {
     ...sharedFieldProps,
     onFocus: (e: React.FocusEvent<HTMLElement>) => {
       sharedFieldProps.onFocus?.(state, e);
     },
+    ref: (setLocalInputRef as unknown) as React.Ref<HTMLInputElement>,
   };
+
+  const delayedAlwaysRenderSuggestions = useDelayAlwaysRenderSuggestions(
+    alwaysRenderSuggestions,
+    isFullscreenActive,
+  );
 
   return (
     <FullscreenContext.Provider
       value={{
         handleClose,
         value: sharedFieldProps.value,
-        handleFocus,
-        setInputRef: setLocalInputRef,
+        handleOpenModal: handleOpen,
       }}
     >
       {isFullscreenActive ? (
@@ -179,6 +170,7 @@ const Fullscreen = forwardRef(function Fullscreen(
                   size={suggestionsSize}
                   className={styles['uilist']}
                   design="high"
+                  onTouchStart={() => localInputRef.current.blur()}
                 >
                   {isLoading ? (
                     <Spinner
@@ -207,6 +199,7 @@ const Fullscreen = forwardRef(function Fullscreen(
               })
             }
             {...props}
+            alwaysRenderSuggestions={delayedAlwaysRenderSuggestions}
             onSuggestionSelected={(e, data) => {
               closeOnSuggestionSelected && handleClose();
               onSuggestionSelected(e, data);
