@@ -40,7 +40,7 @@ const ActiveField: ForwardingFocusableComponent<
 
     useSafeLayoutEffect(() => {
       fieldRef.current?.focus();
-    }, [fieldRef]);
+    }, []);
 
     /** Нужно запланировать эффект после эффекта с фокусом */
     useMoveCaretToEndOnFocus({ref: fieldRef, deps: [], mode: 'onMount'});
