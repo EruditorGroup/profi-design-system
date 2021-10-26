@@ -16,7 +16,7 @@ export const useDelayAlwaysRenderSuggestions = (
       alwaysRenderSuggestions &&
       setTimeout(() => setFlag(true), 0);
 
-      !isFullscreenActive && setFlag(false);
+      (!isFullscreenActive || !alwaysRenderSuggestions) && setFlag(false);
   }, [isFullscreenActive, alwaysRenderSuggestions]);
 
   return flag;
