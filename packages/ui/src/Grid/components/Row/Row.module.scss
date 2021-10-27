@@ -1,12 +1,40 @@
+$gutters: 10, 30, 45;
+
+@mixin generateGutters($size: null) {
+  @each $gutter in $gutters {
+    $infix: if($size != null, '#{$size}-', '');
+
+    .row_#{$infix}gutter-#{$gutter} {
+      margin-left: -#{$gutter}px;
+      margin-right: -#{$gutter}px;
+    }
+  }
+}
+
 .row {
-  margin: 0 -10px;
   display: flex;
   flex-wrap: wrap;
   box-sizing: border-box;
 }
 
-@media (min-width: 732px) {
-  .row {
+.row_gutter-default {
+  margin: 0 -10px;
+
+  @media (min-width: 732px) {
     margin: 0 -30px;
   }
+}
+
+@include generateGutters();
+
+@media (min-width: 732px) {
+  @include generateGutters('s');
+}
+
+@media (min-width: 1024px) {
+  @include generateGutters('m');
+}
+
+@media (min-width: 1280px) {
+  @include generateGutters('l');
 }
