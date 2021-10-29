@@ -1,9 +1,13 @@
-import * as React from 'react';
+import React, {forwardRef} from 'react';
 import cx from 'classnames';
 
 import Text from '../Typography/Text';
 
-import {AliasProps, ISize} from '@eruditorgroup/profi-toolkit';
+import type {
+  AliasProps,
+  ISize,
+  ForwardingComponent,
+} from '@eruditorgroup/profi-toolkit';
 
 import styles from './Tag.module.scss';
 
@@ -20,7 +24,7 @@ export interface TagProps
   disabled?: boolean;
 }
 
-const Tag: React.FC<TagProps> = (props) => {
+const Tag: ForwardingComponent<'div', TagProps> = forwardRef((props, ref) => {
   const {
     size = 'm',
     children,
@@ -50,6 +54,7 @@ const Tag: React.FC<TagProps> = (props) => {
       tabIndex={!disabled && !!onClick ? 0 : undefined}
       onClick={onClick}
       {...rest}
+      ref={ref}
     >
       {leading && <div className={styles['leading']}>{leading}</div>}
       <Text
@@ -63,6 +68,6 @@ const Tag: React.FC<TagProps> = (props) => {
       {leading && <div className={styles['trailing']}>{trailing}</div>}
     </Component>
   );
-};
+});
 
 export default Tag;
