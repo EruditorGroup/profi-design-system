@@ -3,6 +3,28 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.50.4](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.50.0...@eruditorgroup/profi-ui@0.50.4) (2021-10-29)
+
+
+
+## 0.25.1 (2021-10-29)
+
+
+
+## 0.24.2 (2021-10-21)
+
+
+### Bug Fixes
+
+* **Autosuggest:** Фикс фокуса при переходе и маленькие фиксы пропсов. ([24a502e](https://github.com/eruditorgroup/profi-design-system/commit/24a502ef3f27f8d947efe0de6485a511f9522a09))
+* **BodyPortal:** Портал теперь маунтится в DOM сразу, а не на следующем тике. ([0280bf4](https://github.com/eruditorgroup/profi-design-system/commit/0280bf420bdba8a9272df53707a960ecf1767e25))
+* **Gallery:** Убрана возможность использовать Gallery.Image вне Gallery ([f0306d2](https://github.com/eruditorgroup/profi-design-system/commit/f0306d23706bd6eaa331dc406525189c01d04810))
+* **List.Item:** Переопределение пропсов ([#329](https://github.com/eruditorgroup/profi-design-system/issues/329)) ([d5c89d4](https://github.com/eruditorgroup/profi-design-system/commit/d5c89d4bb3937f67054c00d17bd76b60f7f55a04))
+
+
+
+
+
 ## [0.50.3](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.50.0...@eruditorgroup/profi-ui@0.50.3) (2021-10-26)
 
 
