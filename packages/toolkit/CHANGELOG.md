@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.39.4](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-toolkit@0.39.0...@eruditorgroup/profi-toolkit@0.39.4) (2021-10-29)
+
+
+
+## 0.24.2 (2021-10-21)
+
+
+### Bug Fixes
+
+* **Autosuggest:** Фикс фокуса при переходе и маленькие фиксы пропсов. ([24a502e](https://github.com/eruditorgroup/profi-design-system/commit/24a502ef3f27f8d947efe0de6485a511f9522a09))
+* **List.Item:** Переопределение пропсов ([#329](https://github.com/eruditorgroup/profi-design-system/issues/329)) ([d5c89d4](https://github.com/eruditorgroup/profi-design-system/commit/d5c89d4bb3937f67054c00d17bd76b60f7f55a04))
+
+
+
+
+
 ## [0.39.3](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-toolkit@0.39.0...@eruditorgroup/profi-toolkit@0.39.3) (2021-10-26)
 
 
