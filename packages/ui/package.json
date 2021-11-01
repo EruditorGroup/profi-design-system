@@ -1,6 +1,6 @@
 {
   "name": "@eruditorgroup/profi-ui",
-  "version": "1.0.0-alpha.4",
+  "version": "1.0.0-alpha.3",
   "description": "Essential cross-platform UI components for React for Eruditor Group",
   "author": "eruditorgroup",
   "license": "ISC",
@@ -49,5 +49,6 @@
   "eruditorgroup": {
     "libName": "ProfiUI",
     "libFilename": "profi-ui"
-  }
+  },
+  "gitHead": "7c076335bd14bb5f50a7ae23c64967d17e6abb51"
 }
