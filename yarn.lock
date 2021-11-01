@@ -1483,20 +1483,6 @@
   resolved "https://registry.yarnpkg.com/@emotion/weak-memoize/-/weak-memoize-0.2.5.tgz#8eed982e2ee6f7f4e44c253e12962980791efd46"
   integrity sha512-6U71C2Wp7r5XtFtQzYrW5iKFT67OixrSxjI4MptCHzdSVlgabczzqLe0ZSgnub/5Kp4hSbpDB1tMytZY9pwxxA==
 
-"@eruditorgroup/profi-icons@^0.34.7":
-  version "0.34.7"
-  resolved "https://npm.pkg.github.com/download/@eruditorgroup/profi-icons/0.34.7/09008e3edd8b051d2d7958045bee66a6e6d94cf73ba0f844a211fff33557cca2#c6bd58cafcc5e01369cfe304ac405f1ff52d2d6e"
-  integrity sha512-pHy62GJ5s8P/vCE0RSdYS+pIc8yq07uL/c3xRDBSiHuON3qYQe0323uVgSonUR+xLClA6HJxKbkhdzoy1jQQgw==
-  dependencies:
-    "@eruditorgroup/profi-toolkit" "^0.39.4"
-
-"@eruditorgroup/profi-toolkit@^0.39.4":
-  version "0.39.4"
-  resolved "https://npm.pkg.github.com/download/@eruditorgroup/profi-toolkit/0.39.4/71e71e532e116dd10217c7191ae2dddd3000e75bb62fe7f19d6b914ca3801a27#d7f0ee4939c39ba45cc210745787928415a3dd99"
-  integrity sha512-T/bPoQjxqpK+Dp3NGx/X5sOPsfGnr9oVw6lixG5BnvVNxdxA1xqFiGHFOFEMPGmvg7kpmJTYqSueWuKZvb2RRA==
-  dependencies:
-    "@use-gesture/react" "^10.0.1"
-
 "@eslint/eslintrc@^0.4.0":
   version "0.4.0"
   resolved "https://registry.yarnpkg.com/@eslint/eslintrc/-/eslintrc-0.4.0.tgz#99cc0a0584d72f1df38b900fb062ba995f395547"
@@ -13069,6 +13055,15 @@ react-docgen@^5.0.0:
     node-dir "^0.1.10"
     strip-indent "^3.0.0"
 
+react-dom@17.0.2:
+  version "17.0.2"
+  resolved "https://registry.yarnpkg.com/react-dom/-/react-dom-17.0.2.tgz#ecffb6845e3ad8dbfcdc498f0d0a939736502c23"
+  integrity sha512-s4h96KtLDUQlsENhMn1ar8t2bEa+q/YAtj8pPPdIjPDGBDIVNsrD9aXNWqspUe6AzKCIG0C1HZZLqLV7qpOBGA==
+  dependencies:
+    loose-envify "^1.1.0"
+    object-assign "^4.1.1"
+    scheduler "^0.20.2"
+
 react-dom@^16.14.0:
   version "16.14.0"
   resolved "https://registry.yarnpkg.com/react-dom/-/react-dom-16.14.0.tgz#7ad838ec29a777fb3c75c3a190f661cf92ab8b89"
@@ -13251,6 +13246,14 @@ react-transition-group@^4.4.1:
     dom-helpers "^5.0.1"
     loose-envify "^1.4.0"
     prop-types "^15.6.2"
+
+react@17.0.2:
+  version "17.0.2"
+  resolved "https://registry.yarnpkg.com/react/-/react-17.0.2.tgz#d0b5cc516d29eb3eee383f75b62864cfb6800037"
+  integrity sha512-gnhPt75i/dq/z3/6q/0asP78D0u592D5L1pd7M8P+dck6Fu/jJeL6iVVK23fptSUZj8Vjf++7wXA8UNclGQcbA==
+  dependencies:
+    loose-envify "^1.1.0"
+    object-assign "^4.1.1"
 
 react@^16.14.0:
   version "16.14.0"
