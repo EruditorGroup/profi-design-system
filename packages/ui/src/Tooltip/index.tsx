@@ -20,6 +20,7 @@ export interface TooltipProps
 interface TooltipComponent extends ForwardRefExoticComponent<TooltipProps> {
   Content: typeof TooltipContent;
   Toggler: typeof TooltipToggler;
+  useTooltipContext: typeof useTooltipContext;
 }
 
 type TooltipContextType = {
@@ -80,5 +81,6 @@ const Tooltip = forwardRef<HTMLDivElement, TooltipProps>(
 
 Tooltip.Content = TooltipContent;
 Tooltip.Toggler = TooltipToggler;
+Tooltip.useTooltipContext = useTooltipContext;
 
 export default Tooltip;

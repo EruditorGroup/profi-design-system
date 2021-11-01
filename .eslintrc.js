@@ -27,6 +27,13 @@ module.exports = {
   ],
   rules: {
     'no-console': 'error',
+    '@typescript-eslint/no-unused-vars': [
+      'warn', 
+      { 
+        argsIgnorePattern: '^_',
+        varsIgnorePattern: '^_',
+      },
+    ],
   },
   settings: {
     jest: {

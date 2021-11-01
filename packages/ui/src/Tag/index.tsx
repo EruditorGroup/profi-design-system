@@ -1,15 +1,21 @@
-import * as React from 'react';
+import React, {forwardRef} from 'react';
 import cx from 'classnames';
 
 import Text from '../Typography/Text';
 
-import {ISize} from '@eruditorgroup/profi-toolkit';
+import type {
+  AliasProps,
+  ISize,
+  ForwardingComponent,
+} from '@eruditorgroup/profi-toolkit';
 
 import styles from './Tag.module.scss';
 
 type TagSize = Extract<ISize, 'l' | 'm' | 's'>;
 
-export interface TagProps extends React.HTMLAttributes<HTMLDivElement> {
+export interface TagProps
+  extends React.HTMLAttributes<HTMLDivElement>,
+    AliasProps {
   size?: TagSize;
   active?: boolean;
   current?: boolean;
@@ -18,11 +24,23 @@ export interface TagProps extends React.HTMLAttributes<HTMLDivElement> {
   disabled?: boolean;
 }
 
-const Tag: React.FC<TagProps> = (props) => {
-  const {size = 'm', children, current, leading, trailing, active, disabled, onClick, className, ...rest} = props;
+const Tag: ForwardingComponent<'div', TagProps> = forwardRef((props, ref) => {
+  const {
+    size = 'm',
+    children,
+    current,
+    leading,
+    trailing,
+    active,
+    disabled,
+    onClick,
+    className,
+    as: Component = 'div',
+    ...rest
+  } = props;
 
   return (
-    <div
+    <Component
       className={cx(
         styles['tag'],
         styles[`size-${size}`],
@@ -32,18 +50,24 @@ const Tag: React.FC<TagProps> = (props) => {
         className,
       )}
       aria-disabled={disabled}
-      role = "button"
+      role="button"
       tabIndex={!disabled && !!onClick ? 0 : undefined}
       onClick={onClick}
       {...rest}
+      ref={ref}
     >
       {leading && <div className={styles['leading']}>{leading}</div>}
-      <Text className={cx(disabled && styles['disabled'])} size={size} color={current ? 'light' : undefined}>
+      <Text
+        as="span"
+        className={cx(disabled && styles['disabled'])}
+        size={size}
+        color={current ? 'light' : undefined}
+      >
         {children}
       </Text>
       {leading && <div className={styles['trailing']}>{trailing}</div>}
-    </div>
+    </Component>
   );
-};
+});
 
 export default Tag;

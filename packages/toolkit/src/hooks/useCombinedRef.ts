@@ -8,18 +8,19 @@ import type {RefCallback, MutableRefObject} from 'react';
  * @param  {...React.Ref} refs - массив рефов
  */
 export default function useCombinedRef<T>(
-  ref: RefCallback<T> | MutableRefObject<T> | null,
+  ...refs: (RefCallback<T> | MutableRefObject<T> | null)[]
 ): [React.MutableRefObject<T>, (arg: T | null) => void] {
   const newRef = useRef<T>();
 
   const setRefs = useCallback(
     function (arg: T | null) {
-      [ref, newRef].forEach((ref) => {
+      [...refs, newRef].forEach((ref) => {
         if (typeof ref === 'function') ref(arg);
         else if (ref) ref.current = arg;
       });
     },
-    [ref],
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    refs,
   );
 
   return [newRef, setRefs];

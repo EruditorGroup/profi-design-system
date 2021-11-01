@@ -79,8 +79,8 @@ export type {RateStarsProps} from './Rate';
 export {default as Space} from './Space';
 export type {SpaceProps} from './Space';
 
-export {default as Autosuggest} from './Autosuggest';
-export type {AutosuggestProps} from './Autosuggest';
+export {Autosuggest, FullscreenAutosuggest} from './Autosuggest';
+export type {AutosuggestProps, FullscreenAutosuggestProps} from './Autosuggest';
 
 export {default as Select} from './Select';
 export type {SelectProps} from './Select';

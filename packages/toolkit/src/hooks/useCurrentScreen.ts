@@ -11,7 +11,7 @@ const MEDIA_QUERIES = {
 
 export default function useCurrentScreen(
   screen: ScreenSize,
-  defaultState: boolean,
+  defaultState?: boolean,
 ): boolean {
   return useMedia(MEDIA_QUERIES[screen], defaultState);
 }

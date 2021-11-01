@@ -2,14 +2,21 @@ import React, {useCallback, useState} from 'react';
 import {CloseIcon, PlaceIcon} from '@eruditorgroup/profi-icons';
 import {Story, Meta} from '@storybook/react';
 
-import Autosuggest, {AutosuggestProps, ISuggestValue, TSection} from '../index';
+import Autosuggest from '../components/Default/index';
+import {ChevronLeftIcon, SearchIcon} from '@eruditorgroup/profi-icons';
+
+import Button from '../../Button';
+import {Input} from '../../Form';
 import List from '../../List';
 import GeoTag from '../../GeoTag';
+import Tag from '../../Tag';
 import metro from './_metro.json';
 import {DotIcon} from '@eruditorgroup/profi-icons';
 import ReactAutosuggest from 'react-autosuggest';
 import YandexGeoSuggestion from './YandexGeoSuggestion';
 import styles from './AutosuggestStories.module.scss';
+import Fullscreen from '../components/Fullscreen';
+import {AutosuggestProps, ISuggestValue, TSection} from '../types';
 
 export default {
   title: 'Autosuggest',
@@ -69,6 +76,15 @@ const Template: Story<Omit<AutosuggestProps, 'suggestions' | 'value'>> = (
       }
       active={params.isHighlighted}
     >
+      {value}
+    </List.Item>
+  );
+
+  const renderFullscreenSuggestion: ReactAutosuggest.RenderSuggestion<ISuggestValue> = (
+    {value},
+    params,
+  ) => (
+    <List.Item as="div" active={params.isHighlighted}>
       {value}
     </List.Item>
   );
@@ -145,6 +161,58 @@ const Template: Story<Omit<AutosuggestProps, 'suggestions' | 'value'>> = (
       <h2>Yandex geo suggestions</h2>
       <YandexGeoSuggestion />
 
+      <h2>Fullscreen</h2>
+      <Fullscreen
+        {...args}
+        multiSection={false}
+        sharedFieldProps={{
+          value,
+          onChange: (_, params) => setValue(params.newValue),
+          'data-testattribute': 'test',
+        }}
+        suggestions={suggestions.slice(0, 20)}
+        onSuggestionsFetchRequested={updateSuggestions}
+        onSuggestionSelected={(_, {suggestion}) => setValue(suggestion.value)}
+        renderSuggestion={renderFullscreenSuggestion}
+        alwaysRenderSuggestions
+        activeField={
+          <Fullscreen.ActiveField iconPostion="none" size="l" minRows={1}>
+            {(field, {onClose}) => (
+              <div className={styles['fullscreen-input-panel']}>
+                <Button design="light" rounded onClick={onClose}>
+                  <ChevronLeftIcon />
+                </Button>
+                {field}
+                <Button rounded>
+                  <SearchIcon />
+                </Button>
+              </div>
+            )}
+          </Fullscreen.ActiveField>
+        }
+        defaultInput={
+          <Fullscreen.DefaultInput
+            iconPostion="trailing"
+            size="l"
+            minRows={1}
+          />
+        }
+        renderModalAvailableSpace={() => (
+          <div className={styles['fullscreen-modal-space']}>Info</div>
+        )}
+        renderSuggestionListAddon={() => (
+          <div className={styles['fullscreen-list-tag']}>
+            {suggestions.slice(0, 3).map((x) => (
+              <Tag className={styles['fullscreen-tag']} size="m" key={x.value}>
+                {x.value}
+              </Tag>
+            ))}
+          </div>
+        )}
+        highlightFirstSuggestion={false}
+        focusInputOnSuggestionClick={false}
+      />
+
       <h2>Opened suggestions view without interactive</h2>
       <Autosuggest
         {...args}
@@ -216,10 +284,7 @@ export const MultiSection = () => {
     {value},
     params,
   ) => (
-    <List.Item
-      as="div"
-      active={params.isHighlighted}
-    >
+    <List.Item as="div" active={params.isHighlighted}>
       {value}
     </List.Item>
   );

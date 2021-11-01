@@ -3,6 +3,160 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.50.4](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.50.0...@eruditorgroup/profi-ui@0.50.4) (2021-10-29)
+
+
+
+## 0.25.1 (2021-10-29)
+
+
+
+## 0.24.2 (2021-10-21)
+
+
+### Bug Fixes
+
+* **Autosuggest:** Фикс фокуса при переходе и маленькие фиксы пропсов. ([24a502e](https://github.com/eruditorgroup/profi-design-system/commit/24a502ef3f27f8d947efe0de6485a511f9522a09))
+* **BodyPortal:** Портал теперь маунтится в DOM сразу, а не на следующем тике. ([0280bf4](https://github.com/eruditorgroup/profi-design-system/commit/0280bf420bdba8a9272df53707a960ecf1767e25))
+* **Gallery:** Убрана возможность использовать Gallery.Image вне Gallery ([f0306d2](https://github.com/eruditorgroup/profi-design-system/commit/f0306d23706bd6eaa331dc406525189c01d04810))
+* **List.Item:** Переопределение пропсов ([#329](https://github.com/eruditorgroup/profi-design-system/issues/329)) ([d5c89d4](https://github.com/eruditorgroup/profi-design-system/commit/d5c89d4bb3937f67054c00d17bd76b60f7f55a04))
+
+
+
+
+
+## [0.50.3](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.50.0...@eruditorgroup/profi-ui@0.50.3) (2021-10-26)
+
+
+
+## 0.24.2 (2021-10-21)
+
+
+### Bug Fixes
+
+* **Autosuggest:** Фикс фокуса при переходе и маленькие фиксы пропсов. ([24a502e](https://github.com/eruditorgroup/profi-design-system/commit/24a502ef3f27f8d947efe0de6485a511f9522a09))
+* **BodyPortal:** Портал теперь маунтится в DOM сразу, а не на следующем тике. ([0280bf4](https://github.com/eruditorgroup/profi-design-system/commit/0280bf420bdba8a9272df53707a960ecf1767e25))
+* **Gallery:** Убрана возможность использовать Gallery.Image вне Gallery ([f0306d2](https://github.com/eruditorgroup/profi-design-system/commit/f0306d23706bd6eaa331dc406525189c01d04810))
+* **List.Item:** Переопределение пропсов ([#329](https://github.com/eruditorgroup/profi-design-system/issues/329)) ([d5c89d4](https://github.com/eruditorgroup/profi-design-system/commit/d5c89d4bb3937f67054c00d17bd76b60f7f55a04))
+
+
+
+
+
+## [0.50.2](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.50.0...@eruditorgroup/profi-ui@0.50.2) (2021-10-21)
+
+
+
+## 0.24.2 (2021-10-21)
+
+
+### Bug Fixes
+
+* **Gallery:** Убрана возможность использовать Gallery.Image вне Gallery ([f0306d2](https://github.com/eruditorgroup/profi-design-system/commit/f0306d23706bd6eaa331dc406525189c01d04810))
+* **List.Item:** Переопределение пропсов ([#329](https://github.com/eruditorgroup/profi-design-system/issues/329)) ([d5c89d4](https://github.com/eruditorgroup/profi-design-system/commit/d5c89d4bb3937f67054c00d17bd76b60f7f55a04))
+
+
+
+
+
+## [0.50.1](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.50.0...@eruditorgroup/profi-ui@0.50.1) (2021-10-19)
+
+
+### Bug Fixes
+
+* **Gallery:** Убрана возможность использовать Gallery.Image вне Gallery ([f0306d2](https://github.com/eruditorgroup/profi-design-system/commit/f0306d23706bd6eaa331dc406525189c01d04810))
+
+
+
+
+
+# [0.50.0](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.48.3...@eruditorgroup/profi-ui@0.50.0) (2021-10-19)
+
+
+### Features
+
+* **Gallery.Image:** Мобильная версия ([6d68176](https://github.com/eruditorgroup/profi-design-system/commit/6d6817603297ec83f42e58cded535fdb887dc87d))
+* Добавлен хук useThrottledCallback ([#322](https://github.com/eruditorgroup/profi-design-system/issues/322)) ([57a4906](https://github.com/eruditorgroup/profi-design-system/commit/57a49066b2ccc532a8a937c107840e7ed759cfb6))
+
+
+
+
+
+# [0.49.0](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.48.3...@eruditorgroup/profi-ui@0.49.0) (2021-10-14)
+
+
+### Features
+
+* Добавлен хук useThrottledCallback ([#322](https://github.com/eruditorgroup/profi-design-system/issues/322)) ([57a4906](https://github.com/eruditorgroup/profi-design-system/commit/57a49066b2ccc532a8a937c107840e7ed759cfb6))
+
+
+
+
+
+## [0.48.3](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.48.2...@eruditorgroup/profi-ui@0.48.3) (2021-10-13)
+
+
+### Bug Fixes
+
+* **Autosuggest:** Добавил новые пропсы. Пофиксил ворнинги. ([e4b106a](https://github.com/eruditorgroup/profi-design-system/commit/e4b106af6658007c547e75628e800def4b8ba361))
+
+
+
+
+
+## [0.48.2](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.48.1...@eruditorgroup/profi-ui@0.48.2) (2021-10-12)
+
+**Note:** Version bump only for package @eruditorgroup/profi-ui
+
+
+
+
+
+## [0.48.1](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.48.0...@eruditorgroup/profi-ui@0.48.1) (2021-10-07)
+
+
+### Bug Fixes
+
+* **Autosuggest:** Правка стилей, добавление textarea ([e60fb51](https://github.com/eruditorgroup/profi-design-system/commit/e60fb5174035a1b1358e1b41d1b9f872f3750a0e))
+
+
+
+
+
+# [0.48.0](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.47.5...@eruditorgroup/profi-ui@0.48.0) (2021-10-05)
+
+
+### Features
+
+* **Autosuggest:** Добавление полноэкранного варианта. ([c28a7af](https://github.com/eruditorgroup/profi-design-system/commit/c28a7afa0e730f6bf9cea13597e52b63e75137a1))
+* **Toolkit:** Добавлена функцию поиска компонента по сылке в чилдренах ([7e247da](https://github.com/eruditorgroup/profi-design-system/commit/7e247da3fdf5155a714cc9cda4b9c89893016859))
+
+
+
+
+
+## [0.47.5](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.47.4...@eruditorgroup/profi-ui@0.47.5) (2021-09-28)
+
+
+### Bug Fixes
+
+* **Modal:** Увеличил z-index ([fe27818](https://github.com/eruditorgroup/profi-design-system/commit/fe278184727624b83ac09e877765169c3ea04d14))
+
+
+
+
+
+## [0.47.4](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.47.3...@eruditorgroup/profi-ui@0.47.4) (2021-09-27)
+
+
+### Bug Fixes
+
+* **Gallery.Image:** Фикс высоты модалки с фото в Safari 14.0.3 ([075eca1](https://github.com/eruditorgroup/profi-design-system/commit/075eca195ffc2c04bb2db947c2c1d20bc3d5d49c))
+
+
+
+
+
 ## [0.47.3](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.47.2...@eruditorgroup/profi-ui@0.47.3) (2021-09-24)
 
 
