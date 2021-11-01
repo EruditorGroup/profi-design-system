@@ -1,0 +1,9 @@
+66 warn complete Waiting for 2 child processes to exit. CTRL-C to exit immediately.
+67 error Error: Command failed with exit code 128: git tag @eruditorgroup/profi-icons@1.0.0-alpha.4 -m @eruditorgroup/profi-icons@1.0.0-alpha.4
+67 error fatal: tag '@eruditorgroup/profi-icons@1.0.0-alpha.4' already exists
+67 error     at makeError (/Users/amischenko/projects/ui/node_modules/@lerna/child-process/node_modules/execa/lib/error.js:59:11)
+67 error     at handlePromise (/Users/amischenko/projects/ui/node_modules/@lerna/child-process/node_modules/execa/index.js:114:26)
+67 error     at runMicrotasks (<anonymous>)
+67 error     at processTicksAndRejections (internal/process/task_queues.js:97:5)
+67 error     at async Promise.all (index 0)
+67 error     at async Promise.all (index 0)
