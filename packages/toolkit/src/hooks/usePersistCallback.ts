@@ -1,7 +1,7 @@
 import {useEffect, useCallback, useRef} from 'react';
 import type {DependencyList} from 'react';
 
-export default function usePersistCallback<ARG extends Array<never>, RET>(
+export default function usePersistCallback<ARG extends Array<unknown>, RET>(
   callback: (...args: ARG) => RET,
   deps?: DependencyList,
 ): (...args: ARG) => RET {
@@ -13,7 +13,7 @@ export default function usePersistCallback<ARG extends Array<never>, RET>(
   }, deps);
 
   const persistCallback = useCallback(
-    (...args: ARG) => callbackRef.current(...args),
+    (...args: ARG) => callbackRef.current?.(...args),
     [],
   );
 
