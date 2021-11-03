@@ -10,7 +10,7 @@ export interface UseControllableStateProps<T> {
 }
 
 /**
- * Хук делает состояние подконтрольным из вне компонента.
+ * Хук делает состояние управляемым вне компонента.
  * @param props
  */
 export default function useControllableState<T>(
