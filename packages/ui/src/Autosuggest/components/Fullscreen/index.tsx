@@ -8,7 +8,6 @@ import noop from 'lodash/noop';
 import {
   useCombinedRef,
   useControllableState,
-  usePersistCallback,
 } from '@eruditorgroup/profi-toolkit';
 import {InputProps as AutosuggestInputProps} from 'react-autosuggest';
 import cx from 'classnames';
@@ -116,12 +115,9 @@ const Fullscreen = forwardRef(function Fullscreen(
     HTMLInputElement | HTMLTextAreaElement
   >(sharedFieldProps.fieldRef);
 
-  const onChangeOpenProp = usePersistCallback(onChangeOpen);
-
   const handleOpen = useCallback(() => {
     setFullscreenActive(true);
-    onChangeOpenProp?.(true);
-  }, [onChangeOpenProp, setFullscreenActive]);
+  }, [setFullscreenActive]);
 
   const handleClose = useCallback(() => {
     setFullscreenActive(false);
@@ -203,10 +199,13 @@ const Fullscreen = forwardRef(function Fullscreen(
               </div>
             )}
             renderInputComponent={(props) =>
-              React.cloneElement(activeField, {...props, onKeyDown: (e: React.KeyboardEvent<HTMLElement>) => {
-                hadleInputKeyDown(e);
-                props?.onKeyDown(e);
-              }})
+              React.cloneElement(activeField, {
+                ...props,
+                onKeyDown: (e: React.KeyboardEvent<HTMLElement>) => {
+                  hadleInputKeyDown(e);
+                  props?.onKeyDown(e);
+                },
+              })
             }
             getSuggestionValue={({value}) => value}
             renderSuggestion={
