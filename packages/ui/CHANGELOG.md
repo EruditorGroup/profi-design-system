@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.50.5](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.50.4...@eruditorgroup/profi-ui@0.50.5) (2021-11-08)
+
+
+### Bug Fixes
+
+* **Gallery.Image:** fix styles, disable zooming ([8c179b4](https://github.com/eruditorgroup/profi-design-system/commit/8c179b4031fba435a64b6eb1118477ecd3cde63d))
+
+
+
+
+
 ## [0.50.4](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.50.0...@eruditorgroup/profi-ui@0.50.4) (2021-10-29)
 
 
