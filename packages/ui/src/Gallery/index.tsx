@@ -115,7 +115,7 @@ const Gallery = React.forwardRef<HTMLDivElement, GalleryProps>(
           withPadding={false}
           withCloseButton={false}
           fullscreen={isMobile}
-          swipeDownToClose
+          swipeDownToClose={isMobile}
           visible
           closeOnOverlayClick
           ref={ref}

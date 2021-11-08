@@ -1,11 +1,7 @@
 import * as React from 'react';
 import cx from 'classnames';
 import {ChevronLeftIcon, ChevronRightIcon} from '@eruditorgroup/profi-icons';
-import {
-  capitalize,
-  gestures,
-  useDisableBodyScroll,
-} from '@eruditorgroup/profi-toolkit';
+import {capitalize, useDisableBodyScroll} from '@eruditorgroup/profi-toolkit';
 import {Avatar, Button, Image as ProfiImage, Text} from '../../../index';
 
 import type {Image as IImage} from '../../types';
@@ -34,21 +30,15 @@ function Image({
 }: ImageProps): React.ReactElement {
   const rootRef = React.useRef(null);
   const imageRef = React.useRef(null);
-  const [zooming, toggleZooming] = React.useReducer((s) => !s, false);
-  const showButtons = !zooming;
 
   useDisableBodyScroll(rootRef);
-  
-  React.useLayoutEffect(function resetScroll() {
-    rootRef.current.scrollTop = 0;
-  }, [src])
 
-  gestures.useDrag(({event}) => {
-    event.stopPropagation();
-  }, {
-    target: imageRef,
-    enabled: zooming,
-  });
+  React.useLayoutEffect(
+    function resetScroll() {
+      rootRef.current.scrollTop = 0;
+    },
+    [src],
+  );
 
   return (
     <div {...attrs} className={cx(className, styles['root'])} ref={rootRef}>
@@ -56,15 +46,11 @@ function Image({
         ref={imageRef}
         className={cx(
           styles['imageContainer'],
-          zooming && styles['imageContainer_zooming'],
+          description && styles['imageContainer_withDescription'],
         )}
       >
-        <ProfiImage
-          className={styles['image']}
-          src={src}
-          onClick={toggleZooming}
-        />
-        {showButtons && onBack && (
+        <ProfiImage className={styles['image']} src={src} />
+        {onBack && (
           <div
             className={cx(styles['buttonArea'], styles['buttonArea_left'])}
             onClick={onBack}
@@ -79,7 +65,7 @@ function Image({
             </Button>
           </div>
         )}
-        {showButtons && onNext && (
+        {onNext && (
           <div
             className={cx(styles['buttonArea'], styles['buttonArea_right'])}
             onClick={onNext}
