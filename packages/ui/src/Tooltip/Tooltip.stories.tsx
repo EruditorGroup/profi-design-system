@@ -1,7 +1,7 @@
 import React, {useEffect, useRef, useState} from 'react';
 import {Story, Meta} from '@storybook/react';
 
-import Tooltip from './index';
+import Tooltip, {TooltipContextType} from './index';
 import Text from '../Typography/Text';
 import Button from '../Button';
 import Checkbox from '../Form/Checkbox';
@@ -25,10 +25,16 @@ const rowStyle: Record<string, string> = {
 };
 
 const Template: Story = (args) => {
+  const api = useRef<TooltipContextType | null>(null);
+
+  useEffect(() => {
+    api.current?.setOpened(true);
+  }, []);
+
   return (
     <>
       <div style={rowStyle}>
-        <Tooltip>
+        <Tooltip api={api} trigger="custom">
           <Tooltip.Toggler as={Button}>Bottom left</Tooltip.Toggler>
 
           <Tooltip.Content style={{width: '200px'}} position="bottom-left">
