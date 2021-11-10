@@ -38,7 +38,7 @@ jobs:
       - uses: actions/setup-node@v2
         continue-on-error: true
         with:
-          node-version: 16
+          node-version: 14.15.0-alpine
           cache: 'yarn'
       - run: yarn --frozen-lockfile
       - run: NODE_ENV=production yarn build
