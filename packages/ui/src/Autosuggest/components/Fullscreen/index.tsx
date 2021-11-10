@@ -2,11 +2,13 @@ import React, {
   forwardRef,
   MutableRefObject,
   PropsWithChildren,
-  useState,
   useCallback,
 } from 'react';
 import noop from 'lodash/noop';
-import {useCombinedRef} from '@eruditorgroup/profi-toolkit';
+import {
+  useCombinedRef,
+  useControllableState,
+} from '@eruditorgroup/profi-toolkit';
 import {InputProps as AutosuggestInputProps} from 'react-autosuggest';
 import cx from 'classnames';
 
@@ -55,14 +57,15 @@ type SharedFieldProps = {
 } & Pick<InputProps, 'placeholder'> &
   Pick<
     AutosuggestInputProps<ISuggestValue>,
-    'onChange' | 'onBlur' | 'onKeyDown'
+    'onChange' | 'onBlur' | 'onKeyDown' | 'onSubmit'
   > &
   TReplaceEvents<'onFocus'>;
 
 interface IFullscreenProps {
   renderModalAvailableSpace?: () => JSX.Element;
   renderSuggestionListAddon?: () => JSX.Element;
-  onOpen?: () => void;
+  onChangeOpen?: (state: boolean) => void;
+  isFullscreenOpen?: boolean;
   closeOnSuggestionSelected?: boolean;
   activeField: JSX.Element;
   defaultInput: JSX.Element;
@@ -89,16 +92,22 @@ const Fullscreen = forwardRef(function Fullscreen(
     modalClassName,
     modalBodyClassName,
     renderSuggestion,
-    onOpen,
+    onChangeOpen,
     closeOnSuggestionSelected = true,
     sharedFieldProps,
     alwaysRenderSuggestions,
+    isFullscreenOpen,
     // div props
     ...props
   },
   ref,
 ) {
-  const [isFullscreenActive, setFullscreenActive] = useState(false);
+  const [isFullscreenActive, setFullscreenActive] = useControllableState({
+    value: isFullscreenOpen,
+    defaultValue: false,
+    onChange: onChangeOpen,
+  });
+
   const state: State = {
     isOpen: isFullscreenActive,
   };
@@ -108,12 +117,17 @@ const Fullscreen = forwardRef(function Fullscreen(
 
   const handleOpen = useCallback(() => {
     setFullscreenActive(true);
-    onOpen?.();
-  }, [onOpen]);
+  }, [setFullscreenActive]);
 
   const handleClose = useCallback(() => {
     setFullscreenActive(false);
-  }, []);
+  }, [setFullscreenActive]);
+
+  const hadleInputKeyDown = (e: React.KeyboardEvent<HTMLElement>) => {
+    if (e.key === 'Enter') {
+      sharedFieldProps.onSubmit?.(e);
+    }
+  };
 
   const enhancedSharedProps = {
     ...sharedFieldProps,
@@ -185,7 +199,13 @@ const Fullscreen = forwardRef(function Fullscreen(
               </div>
             )}
             renderInputComponent={(props) =>
-              React.cloneElement(activeField, {...props})
+              React.cloneElement(activeField, {
+                ...props,
+                onKeyDown: (e: React.KeyboardEvent<HTMLElement>) => {
+                  hadleInputKeyDown(e);
+                  props?.onKeyDown(e);
+                },
+              })
             }
             getSuggestionValue={({value}) => value}
             renderSuggestion={
