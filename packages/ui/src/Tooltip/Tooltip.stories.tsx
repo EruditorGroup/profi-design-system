@@ -25,16 +25,16 @@ const rowStyle: Record<string, string> = {
 };
 
 const Template: Story = (args) => {
-  const api = useRef<TooltipContextType | null>(null);
-
-  useEffect(() => {
-    api.current?.setOpened(true);
-  }, []);
+  const [opened, setOpened] = useState(true);
 
   return (
     <>
       <div style={rowStyle}>
-        <Tooltip api={api} trigger="custom">
+        <Tooltip
+          opened={opened}
+          onChange={() => setOpened(!opened)}
+          trigger="custom"
+        >
           <Tooltip.Toggler as={Button}>Bottom left</Tooltip.Toggler>
 
           <Tooltip.Content style={{width: '200px'}} position="bottom-left">

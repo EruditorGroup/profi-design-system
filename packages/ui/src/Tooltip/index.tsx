@@ -1,28 +1,27 @@
-import React, {
-  createContext,
-  forwardRef,
-  useContext,
-  useImperativeHandle,
-  useState,
-  useMemo,
-} from 'react';
+import React, {createContext, forwardRef, useContext, useMemo} from 'react';
 import classNames from 'classnames';
 import TooltipContent from './components/TooltipContent';
 import TooltipToggler from './components/TooltipToggler';
-import {useClickOutside, useCombinedRef} from '@eruditorgroup/profi-toolkit';
+import {
+  useClickOutside,
+  useCombinedRef,
+  useControllableState,
+} from '@eruditorgroup/profi-toolkit';
 import type {ForwardRefExoticComponent, HTMLAttributes} from 'react';
 
 import styles from './Tooltip.module.scss';
 import {AliasProps} from '@eruditorgroup/profi-toolkit';
+import {Omit} from 'react-autosuggest';
 
 export type ITrigger = 'hover' | 'click' | 'custom';
 
 export interface TooltipProps
-  extends HTMLAttributes<HTMLDivElement>,
+  extends Omit<HTMLAttributes<HTMLDivElement>, 'onChange'>,
     AliasProps {
   trigger?: ITrigger;
   persist?: boolean;
-  api?: React.Ref<TooltipContextType>;
+  opened?: boolean;
+  onChange?: (state: boolean) => void;
 }
 
 interface TooltipComponent extends ForwardRefExoticComponent<TooltipProps> {
@@ -54,19 +53,23 @@ const Tooltip = forwardRef<HTMLDivElement, TooltipProps>(
       persist = false,
       onMouseEnter,
       onMouseLeave,
-      api,
+      opened: openedProp,
+      onChange,
       ...props
     },
     ref,
   ) => {
-    const [opened, setOpened] = useState(false);
+    const [opened, setOpened] = useControllableState({
+      value: openedProp,
+      defaultValue: false,
+      onChange,
+    });
+
     const [combinedRef, setRef] = useCombinedRef<HTMLDivElement | null>(ref);
     const tooltipContext = useMemo<TooltipContextType>(
       () => ({opened, setOpened, trigger, persist}),
       [opened, setOpened, trigger, persist],
     );
-
-    useImperativeHandle(api, () => tooltipContext, [tooltipContext]);
 
     useClickOutside(combinedRef, () => {
       if (trigger === 'click') {
