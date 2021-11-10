@@ -1,0 +1,14 @@
+version: '3'
+
+services:
+
+  storyshots:
+    image: node:16
+    build:
+      context: .
+      dockerfile: .docker/Dockerfile
+
+    volumes:
+      - ./__image_snapshots__:/app/__image_snapshots__
+    working_dir: /app
+    command: sh -c "yarn build && yarn clean:storybook && yarn test:storybook"
