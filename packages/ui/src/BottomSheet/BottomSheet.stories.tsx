@@ -58,7 +58,7 @@ CloseOnOverlayClick.args = {
   closeOnOverlayClick: true,
 };
 
-export const WithoutOverlay = Template.bind({});
-WithoutOverlay.args = {
-  hideOverlay: true,
+export const Inline = Template.bind({});
+Inline.args = {
+  inline: true,
 };

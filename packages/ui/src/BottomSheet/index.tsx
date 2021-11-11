@@ -102,11 +102,7 @@ const BottomSheet: ForwardRefExoticComponent<
         >
           <BodyPortal className={cx(styles['root'])}>
             <div
-              className={cx(
-                styles['sheet'],
-                theme.common[`bg-${bg}`],
-                className,
-              )}
+              className={cx(styles['sheet'], styles[`bg-${bg}`], className)}
               ref={setSheetRef}
               {...props}
             >
