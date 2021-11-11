@@ -36,6 +36,11 @@
   overflow-x: hidden;
   overflow-y: auto;
 }
+
+.sheet-fixed {
+  position: fixed;
+}
+
 // TODO: move to common
 .bg-default {
   background: var(--ui-bg-default);
