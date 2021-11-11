@@ -100,7 +100,7 @@ const BottomSheet: ForwardRefExoticComponent<
           timeout={DEFAULT_ANIMATION_DURATION}
           classNames={animation}
         >
-          <BodyPortal className={cx(styles['root'])}>
+          <BodyPortal className={cx(!inline && styles['root'])}>
             <div
               className={cx(styles['sheet'], styles[`bg-${bg}`], className)}
               ref={setSheetRef}
