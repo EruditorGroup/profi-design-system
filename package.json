@@ -17,7 +17,7 @@
   ],
   "scripts": {
     "clean": "lerna exec --parallel -- rimraf lib dist es types",
-    "clean:storybook": "rimraf __image_snapshots__ storybook-static",
+    "clean:storybook": "rimraf __image_snapshots__/* storybook-static",
     "start": "start-storybook -p 6006",
     "build": "yarn clean && yarn concurrently 'yarn build:types --outDir es' 'yarn build:cjs' 'yarn build:esm'",
     "build:types": "lerna exec -- tsc src/*.ts --declaration --emitDeclarationOnly --jsx react --esModuleInterop",
@@ -92,7 +92,7 @@
     "postcss-loader": "^4.2.0",
     "postcss-scss": "^3.0.5",
     "prettier": "^2.2.1",
-    "puppeteer": "^10.0.0",
+    "puppeteer": "^10.2.0",
     "react": "^16.14.0",
     "react-dom": "^16.14.0",
     "rimraf": "^3.0.2",
