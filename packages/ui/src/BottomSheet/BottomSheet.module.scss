@@ -29,12 +29,23 @@
   width: 100%;
   max-height: 90vh;
 
-  background: var(--ui-bg-primary);
   border-radius: 20px 20px 0 0;
-  box-shadow: 0px 5px 30px 5px rgba(0, 0, 0, 0.05);
+  box-shadow: var(--ui-box-shadow);
 
   overflow-x: hidden;
   overflow-y: auto;
+}
+// TODO: move to common
+.bg-default {
+  background: var(--ui-bg-default);
+}
+
+.bg-primary {
+  background: var(--ui-bg-primary);
+}
+
+.bg-light {
+  background: var(--ui-bg-light);
 }
 
 .body {

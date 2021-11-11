@@ -26,8 +26,10 @@ import animation from './animation.module.scss';
 export interface BottomSheetProps
   extends Omit<HTMLAttributes<HTMLDivElement>, 'width'> {
   withPadding?: boolean;
+  bg?: 'primary' | 'default' | 'light'; // TODO: move to common
   visible: boolean;
   closeOnOverlayClick?: boolean;
+  hideOverlay?: boolean;
   onClose: MouseEventHandler<HTMLElement>;
 }
 
@@ -39,11 +41,13 @@ const BottomSheet: ForwardRefExoticComponent<
   (
     {
       visible,
+      bg = 'primary',
       children,
       className,
       withPadding = true,
       closeOnOverlayClick,
       onClose,
+      hideOverlay,
       ...props
     },
     ref,
@@ -73,17 +77,19 @@ const BottomSheet: ForwardRefExoticComponent<
 
     return (
       <>
-        <CSSTransition
-          unmountOnExit
-          mountOnEnter
-          in={visible}
-          timeout={DEFAULT_ANIMATION_DURATION}
-          classNames={theme.transitions.fade}
-        >
-          <BodyPortal>
-            <div className={styles['overlay']} onClick={handleCloseClick} />
-          </BodyPortal>
-        </CSSTransition>
+        {!hideOverlay && (
+          <CSSTransition
+            unmountOnExit
+            mountOnEnter
+            in={visible}
+            timeout={DEFAULT_ANIMATION_DURATION}
+            classNames={theme.transitions.fade}
+          >
+            <BodyPortal>
+              <div className={styles['overlay']} onClick={handleCloseClick} />
+            </BodyPortal>
+          </CSSTransition>
+        )}
 
         <CSSTransition
           unmountOnExit
@@ -94,7 +100,11 @@ const BottomSheet: ForwardRefExoticComponent<
         >
           <BodyPortal className={cx(styles['root'])}>
             <div
-              className={cx(styles['sheet'], className)}
+              className={cx(
+                styles['sheet'],
+                theme.common[`bg-${bg}`],
+                className,
+              )}
               ref={setSheetRef}
               {...props}
             >
