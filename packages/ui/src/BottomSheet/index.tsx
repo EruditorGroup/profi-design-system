@@ -29,7 +29,7 @@ export interface BottomSheetProps
   bg?: 'primary' | 'default' | 'light'; // TODO: move to common
   visible: boolean;
   closeOnOverlayClick?: boolean;
-  hideOverlay?: boolean;
+  inline?: boolean;
   onClose: MouseEventHandler<HTMLElement>;
 }
 
@@ -47,7 +47,7 @@ const BottomSheet: ForwardRefExoticComponent<
       withPadding = true,
       closeOnOverlayClick,
       onClose,
-      hideOverlay,
+      inline,
       ...props
     },
     ref,
@@ -56,10 +56,12 @@ const BottomSheet: ForwardRefExoticComponent<
 
     // Отключаем промотку body
     useEffect(() => {
-      const {current: element} = bodyEl;
-      visible ? disableBodyScroll(element) : enableBodyScroll(element);
-      return () => enableBodyScroll(element);
-    }, [visible]);
+      if (!inline) {
+        const {current: element} = bodyEl;
+        visible ? disableBodyScroll(element) : enableBodyScroll(element);
+        return () => enableBodyScroll(element);
+      }
+    }, [visible, inline]);
 
     const [sheetRef, setSheetRef] = useCombinedRef(ref);
 
@@ -77,7 +79,7 @@ const BottomSheet: ForwardRefExoticComponent<
 
     return (
       <>
-        {!hideOverlay && (
+        {!inline && (
           <CSSTransition
             unmountOnExit
             mountOnEnter
