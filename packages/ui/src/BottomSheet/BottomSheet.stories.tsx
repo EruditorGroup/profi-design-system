@@ -62,5 +62,4 @@ export const Inline = Template.bind({});
 Inline.args = {
   inline: true,
   bg: 'default',
-  children: 'LoremipsumLoremipsumLoremipsumLoremipsum',
 };
