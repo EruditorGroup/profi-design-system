@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.40.0](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-toolkit@0.39.5...@eruditorgroup/profi-toolkit@0.40.0) (2021-11-11)
+
+
+### Bug Fixes
+
+* **toolkit:** Поправлен дженерик в хуке usePersistCallback ([c498104](https://github.com/eruditorgroup/profi-design-system/commit/c498104138112914a2b0740c005858fb7f08c198))
+
+
+### Features
+
+* **toolkit:** Добавлен новый хук useControllableState и утилка runIfFn ([a256d43](https://github.com/eruditorgroup/profi-design-system/commit/a256d43ae36165326081839e6a2ddb966ba6a979))
+
+
+
+
+
 ## [0.39.5](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-toolkit@0.39.4...@eruditorgroup/profi-toolkit@0.39.5) (2021-11-08)
 
 **Note:** Version bump only for package @eruditorgroup/profi-toolkit

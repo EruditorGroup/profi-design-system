@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.50.6](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.50.5...@eruditorgroup/profi-ui@0.50.6) (2021-11-11)
+
+
+### Bug Fixes
+
+* **Autosuggest:** Состоянием открытости fullscreen теперь можно управлять снаружи. Поправлен сабмит при нажатии на enter ([592fad6](https://github.com/eruditorgroup/profi-design-system/commit/592fad61bb04a9a7dd6b93b39f5904df0d51a451))
+* **ui:** tooltip controllable state ([8ec98b3](https://github.com/eruditorgroup/profi-design-system/commit/8ec98b3490fb2f4647cf6ae45a0634b91d624925))
+* **ui:** tooltip handle ([2bd4256](https://github.com/eruditorgroup/profi-design-system/commit/2bd42560b0813aee08dd1e37074885b7767e37e1))
+
+
+
+
+
 ## [0.50.5](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.50.4...@eruditorgroup/profi-ui@0.50.5) (2021-11-08)
 
 
