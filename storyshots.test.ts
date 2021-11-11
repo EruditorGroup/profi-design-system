@@ -48,7 +48,7 @@ initStoryshots({
     beforeScreenshot,
     getMatchOptions: () => ({
       allowSizeMismatch: true,
-      failureThreshold: 0.03,
+      failureThreshold: 0.01,
       failureThresholdType: 'percent',
     }),
   }),
