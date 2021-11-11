@@ -42,8 +42,14 @@ const beforeScreenshot: ImageSnapshotConfig['beforeScreenshot'] = async (
 initStoryshots({
   // текст чуть-чуть по-разному рендерится на разных осях,
   // а у спиннера анимация снапшот постоянно меняется
+  storyKindRegex: /^((?!.*?(Text \& Title|Spinner)).)*$/,
   test: imageSnapshot({
     storybookUrl: getStorybookEntryPath(),
     beforeScreenshot,
+    getMatchOptions: () => ({
+      allowSizeMismatch: true,
+      failureThreshold: 0.03,
+      failureThresholdType: 'percent',
+    }),
   }),
 });
