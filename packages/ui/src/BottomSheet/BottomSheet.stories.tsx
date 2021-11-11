@@ -57,3 +57,9 @@ export const CloseOnOverlayClick = Template.bind({});
 CloseOnOverlayClick.args = {
   closeOnOverlayClick: true,
 };
+
+export const Inline = Template.bind({});
+Inline.args = {
+  inline: true,
+  bg: 'default',
+};
