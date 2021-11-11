@@ -3,6 +3,21 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.51.0](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.50.6...@eruditorgroup/profi-ui@0.51.0) (2021-11-11)
+
+
+
+## 0.25.4 (2021-11-11)
+
+
+### Features
+
+* **bottomSheet:** inline prop to manage scroll & overlay ([aa2f47c](https://github.com/eruditorgroup/profi-design-system/commit/aa2f47ce3d001a0ec0c2e6183ef3a97f697ee004))
+
+
+
+
+
 ## [0.50.6](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.50.5...@eruditorgroup/profi-ui@0.50.6) (2021-11-11)
 
 
