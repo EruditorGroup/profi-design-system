@@ -33,7 +33,7 @@ const RateStars: ForwardRefExoticComponent<
       value,
       onChange,
       className,
-      starsClassName,
+      starClassName,
       size = 's',
       tooltipTrigger,
       ...props
@@ -69,7 +69,7 @@ const RateStars: ForwardRefExoticComponent<
                 className={cx(
                   styles['star'],
                   styles[`star_size-${size}`],
-                  starsClassName,
+                  starClassName,
                   {
                     [styles['star_filled']]: parseInt(value) >= parseInt(mark),
                     [styles['star_best']]: index === 4 && isBest,
