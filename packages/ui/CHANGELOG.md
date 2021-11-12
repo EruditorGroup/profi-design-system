@@ -3,6 +3,21 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.51.1](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.51.0...@eruditorgroup/profi-ui@0.51.1) (2021-11-11)
+
+
+
+## 0.25.5 (2021-11-11)
+
+
+### Bug Fixes
+
+* **BottomSheet:** use fixed position in inline mode ([#346](https://github.com/eruditorgroup/profi-design-system/issues/346)) ([5911adf](https://github.com/eruditorgroup/profi-design-system/commit/5911adf35b9df984f62d6e1f06c6a589a60f4897))
+
+
+
+
+
 # [0.51.0](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.50.6...@eruditorgroup/profi-ui@0.51.0) (2021-11-11)
 
 
