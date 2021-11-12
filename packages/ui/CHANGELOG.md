@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.51.2](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.51.1...@eruditorgroup/profi-ui@0.51.2) (2021-11-12)
+
+
+### Bug Fixes
+
+* **rateStars:** add starsClassName prop ([#348](https://github.com/eruditorgroup/profi-design-system/issues/348)) ([eedd7a0](https://github.com/eruditorgroup/profi-design-system/commit/eedd7a0794ceda59433b2839b96ca87ee0f3301d))
+
+
+
+
+
 ## [0.51.1](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.51.0...@eruditorgroup/profi-ui@0.51.1) (2021-11-11)
 
 
