@@ -19,6 +19,7 @@ export interface RateStarsProps
   value?: string; // '1, '2', '3', '4', '5', '5+'
   onChange?: (newValue: string) => void;
   size?: 's' | 'm' | 'l';
+  starsClassName?: string;
   tooltipTrigger?: ITrigger;
 }
 
@@ -27,7 +28,18 @@ export const MARKS_ARRAY = ['1', '2', '3', '4', '5'];
 const RateStars: ForwardRefExoticComponent<
   RateStarsProps & RefAttributes<HTMLDivElement>
 > = forwardRef(
-  ({value, onChange, className, size = 's', tooltipTrigger, ...props}, ref) => {
+  (
+    {
+      value,
+      onChange,
+      className,
+      starsClassName,
+      size = 's',
+      tooltipTrigger,
+      ...props
+    },
+    ref,
+  ) => {
     const isFive = value === '5';
     const isBest = value === '5+';
     const readonly = !onChange;
@@ -54,12 +66,17 @@ const RateStars: ForwardRefExoticComponent<
             return (
               <StarIcon
                 key={index}
-                className={cx(styles['star'], styles[`star_size-${size}`], {
-                  [styles['star_filled']]: parseInt(value) >= parseInt(mark),
-                  [styles['star_best']]: index === 4 && isBest,
-                  [styles['star_pointer']]: !readonly,
-                  [styles['star_scalled']]: !readonly && isFive && !isBest,
-                })}
+                className={cx(
+                  styles['star'],
+                  styles[`star_size-${size}`],
+                  starsClassName,
+                  {
+                    [styles['star_filled']]: parseInt(value) >= parseInt(mark),
+                    [styles['star_best']]: index === 4 && isBest,
+                    [styles['star_pointer']]: !readonly,
+                    [styles['star_scalled']]: !readonly && isFive && !isBest,
+                  },
+                )}
                 {...(!readonly
                   ? {
                       onClick: () => onChange(mark),
