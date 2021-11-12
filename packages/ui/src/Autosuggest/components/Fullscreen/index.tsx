@@ -158,7 +158,6 @@ const Fullscreen = forwardRef(function Fullscreen(
           visible
           fullscreen
           onClose={noop}
-          withCloseButton={false}
           withPadding={false}
         >
           <AutosuggestVariant

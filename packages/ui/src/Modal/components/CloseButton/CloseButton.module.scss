@@ -1,0 +1,17 @@
+.button-icon {
+  position: absolute;
+  z-index: 1;
+  top: 10px;
+  background: var(--ui-bg-default);
+  box-shadow: var(--ui-box-shadow);
+  transition: transform 0.3s;
+}
+
+.button-icon:hover:not([disabled]) {
+  transform: scale(1.1);
+  background: var(--ui-bg-default);
+}
+
+.right {
+  right: 10px;
+}

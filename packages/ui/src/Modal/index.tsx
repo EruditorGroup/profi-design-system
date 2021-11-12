@@ -2,9 +2,10 @@ import * as React from 'react';
 import {CSSTransition} from 'react-transition-group';
 import {gestures, useDisableBodyScroll} from '@eruditorgroup/profi-toolkit';
 
-import {ArrowLeftIcon, CloseIcon} from '@eruditorgroup/profi-icons';
+import {ArrowLeftIcon} from '@eruditorgroup/profi-icons';
 
 import BodyPortal from '../BodyPortal';
+import CloseButton from './components/CloseButton';
 import Button from '../Button';
 import Text from '../Typography/Text';
 
@@ -25,6 +26,7 @@ import type {
 } from 'react';
 
 import styles from './Modal.module.scss';
+import {ModalContext} from './context';
 
 // import slideUpTransition from '../styles/transitions/SlideUp.module.scss';
 // import fadeInTransition from '../styles/transitions/FadeIn.module.scss';
@@ -32,7 +34,6 @@ import styles from './Modal.module.scss';
 export interface ModalProps
   extends Omit<HTMLAttributes<HTMLDivElement>, 'width'> {
   fullscreen?: boolean;
-  withCloseButton?: boolean;
   withPadding?: boolean;
   width?: string | number;
   visible: boolean;
@@ -46,9 +47,14 @@ export interface ModalProps
 
 const DEFAULT_ANIMATION_DURATION = 300;
 
-const Modal: ForwardRefExoticComponent<
-  ModalProps & RefAttributes<HTMLDivElement>
-> = React.forwardRef(
+interface ModalComponent
+  extends ForwardRefExoticComponent<
+    ModalProps & RefAttributes<HTMLDivElement>
+  > {
+  CloseButton: typeof CloseButton;
+}
+
+const Modal = React.forwardRef(
   (
     {
       width,
@@ -58,7 +64,6 @@ const Modal: ForwardRefExoticComponent<
       className,
       fullscreen,
       withPadding = true,
-      withCloseButton = true,
       closeOnOverlayClick,
       bodyClassName,
       swipeDownToClose = false,
@@ -113,7 +118,7 @@ const Modal: ForwardRefExoticComponent<
     };
 
     return (
-      <>
+      <ModalContext.Provider value={{handleClose: handleCloseClick}}>
         <CSSTransition
           unmountOnExit
           mountOnEnter
@@ -171,17 +176,6 @@ const Modal: ForwardRefExoticComponent<
                 </Button>
               )}
 
-              {withCloseButton && (
-                <Button
-                  rounded
-                  design="transparent"
-                  onClick={handleCloseClick}
-                  className={classNames(styles['button-icon'], styles['right'])}
-                >
-                  <CloseIcon />
-                </Button>
-              )}
-
               {title && (
                 <div className={styles['head']}>
                   <Text bold>{title}</Text>
@@ -202,9 +196,11 @@ const Modal: ForwardRefExoticComponent<
             </div>
           </BodyPortal>
         </CSSTransition>
-      </>
+      </ModalContext.Provider>
     );
   },
-);
+) as ModalComponent;
+
+Modal.CloseButton = CloseButton;
 
 export default Modal;

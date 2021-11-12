@@ -113,7 +113,6 @@ const Gallery = React.forwardRef<HTMLDivElement, GalleryProps>(
           className={cx(className, styles['modal'])}
           onClose={onClose}
           withPadding={false}
-          withCloseButton={false}
           fullscreen={isMobile}
           swipeDownToClose={isMobile}
           visible
