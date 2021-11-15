@@ -2,16 +2,16 @@
   position: absolute;
   z-index: 1;
   top: 10px;
+  right: 10px;
   background: var(--ui-bg-default);
   box-shadow: var(--ui-box-shadow);
+}
+
+.with-hover-animation {
   transition: transform 0.3s;
 }
 
-.button-icon:hover:not([disabled]) {
+.with-hover-animation:hover:not([disabled]) {
   transform: scale(1.1);
   background: var(--ui-bg-default);
-}
-
-.right {
-  right: 10px;
 }

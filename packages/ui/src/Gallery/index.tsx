@@ -1,12 +1,11 @@
 import * as React from 'react';
 import cx from 'classnames';
-import {CloseIcon} from '@eruditorgroup/profi-icons';
 import {
   KEY_CODES,
   useCurrentScreen,
   gestures,
 } from '@eruditorgroup/profi-toolkit';
-import {Button, Modal} from '../index';
+import {Modal} from '../index';
 import Image from './components/Image';
 
 import type {Image as IImage} from './types';
@@ -119,15 +118,7 @@ const Gallery = React.forwardRef<HTMLDivElement, GalleryProps>(
           closeOnOverlayClick
           ref={ref}
         >
-          <Button
-            className={cx(styles['buttonClose'])}
-            size="s"
-            design="transparent"
-            rounded
-            onClick={onClose}
-          >
-            <CloseIcon />
-          </Button>
+          <Modal.CloseButton size="s" withHoverAnimation={false} />
           {isMobile && prev && (
             <Image
               {...prev}

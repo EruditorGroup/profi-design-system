@@ -6,7 +6,6 @@ import React, {
 } from 'react';
 import noop from 'lodash/noop';
 import {
-  KEY_VALUES,
   useCombinedRef,
   useControllableState,
 } from '@eruditorgroup/profi-toolkit';
@@ -125,7 +124,7 @@ const Fullscreen = forwardRef(function Fullscreen(
   }, [setFullscreenActive]);
 
   const hadleInputKeyDown = (e: React.KeyboardEvent<HTMLElement>) => {
-    if (e.key === KEY_VALUES.ENTER) {
+    if (e.key === 'Enter') {
       sharedFieldProps.onSubmit?.(e);
     }
   };

@@ -7,11 +7,14 @@ import {useModalContext} from '../../context';
 
 import styles from './CloseButton.module.scss';
 
-type TProps = Omit<ButtonProps, 'rounded'>;
+type TProps = Omit<ButtonProps, 'rounded'> & {
+  withHoverAnimation?: boolean;
+};
 
 const CloseButton: React.FC<TProps> = ({
   design = 'transparent',
   className,
+  withHoverAnimation = true,
   ...rest
 }) => {
   const {handleClose} = useModalContext();
@@ -22,7 +25,11 @@ const CloseButton: React.FC<TProps> = ({
       rounded
       design={design}
       onClick={handleClose}
-      className={cx(styles['button-icon'], styles['right'], className)}
+      className={cx(
+        styles['button-icon'],
+        withHoverAnimation && styles['with-hover-animation'],
+        className,
+      )}
     >
       <CloseIcon />
     </Button>
