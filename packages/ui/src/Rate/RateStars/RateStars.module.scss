@@ -33,6 +33,11 @@
   line-height: 1;
   outline: none;
 
+  &_stroked {
+    stroke: var(--ui-border-color-secondary);
+    stroke-width: 1px;
+  }
+  
   &_size-s {
     font-size: 20px;
   }

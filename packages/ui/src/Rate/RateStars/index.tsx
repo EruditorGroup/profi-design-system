@@ -69,13 +69,13 @@ const RateStars: ForwardRefExoticComponent<
             return (
               <StarIcon
                 key={index}
-                stroke={stroked && !filled && '#D9D9D9'}
                 className={cx(
                   styles['star'],
                   styles[`star_size-${size}`],
                   starClassName,
                   {
                     [styles['star_filled']]: filled,
+                    [styles['star_stroked']]: stroked && !filled,
                     [styles['star_best']]: index === 4 && isBest,
                     [styles['star_pointer']]: !readonly,
                     [styles['star_scalled']]: !readonly && isFive && !isBest,
