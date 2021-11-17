@@ -139,3 +139,8 @@ WithRightSpinnerStory.args = {
     </>
   ),
 };
+
+export const Underlined = templateFactory(templateStoryMeta).bind({});
+Underlined.args = {
+  underlined: true,
+};

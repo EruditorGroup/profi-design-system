@@ -201,7 +201,16 @@
   background: transparent;
   padding: 0;
   min-height: inherit;
-  text-decoration: underline;
+  
+  &.underlined {
+    line-height: 1.33em;
+    border-radius: 0;
+    box-shadow: var(--ui-link-shadow);
+
+    &:hover {
+      box-shadow: var(--ui-link-shadowState);
+    }
+  }
 
   &[disabled] {
     color: var(--ui-color-lightInverseState);
