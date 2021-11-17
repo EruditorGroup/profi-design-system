@@ -3,6 +3,24 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.52.0](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.51.2...@eruditorgroup/profi-ui@0.52.0) (2021-11-17)
+
+
+### Bug Fixes
+
+* **FullscreenSuggest:** Сделать блюр инпута на попытку скрола списка  опциональным ([d34b879](https://github.com/eruditorgroup/profi-design-system/commit/d34b8794da251e3b7fd0dceec624125883966540))
+* **Modal:** Вынес кнопку закрытия модалки наружу для кастомной настройки ([a3f58ab](https://github.com/eruditorgroup/profi-design-system/commit/a3f58abb93b888be52e2f6a92c51f995310f0901))
+* **Modal:** Добавил кастомизацию кнопки закрытия модалки. ([f9c632b](https://github.com/eruditorgroup/profi-design-system/commit/f9c632b5d329cababce75644b1f4a1aac76eb135))
+
+
+### Features
+
+* **toolkit:** Вынес значения клавиш в константы ([224e225](https://github.com/eruditorgroup/profi-design-system/commit/224e22529dcae3d28f24b62fa920e4cb4347aa1f))
+
+
+
+
+
 ## [0.51.2](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.51.1...@eruditorgroup/profi-ui@0.51.2) (2021-11-12)
 
 
