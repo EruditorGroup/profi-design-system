@@ -67,3 +67,10 @@ Hover.args = {
   onChange: undefined,
   hovered: true,
 };
+
+export const Stroked = Template.bind({});
+Stroked.storyName = 'Stroked';
+Stroked.args = {
+  onChange: undefined,
+  stroked: true,
+};

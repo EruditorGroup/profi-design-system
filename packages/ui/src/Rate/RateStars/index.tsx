@@ -21,6 +21,7 @@ export interface RateStarsProps
   size?: 's' | 'm' | 'l';
   starClassName?: string;
   tooltipTrigger?: ITrigger;
+  stroked?: boolean;
 }
 
 export const MARKS_ARRAY = ['1', '2', '3', '4', '5'];
@@ -34,6 +35,7 @@ const RateStars: ForwardRefExoticComponent<
       onChange,
       className,
       starClassName,
+      stroked,
       size = 's',
       tooltipTrigger,
       ...props
@@ -63,15 +65,17 @@ const RateStars: ForwardRefExoticComponent<
           ref={ref}
         >
           {MARKS_ARRAY.map((mark, index) => {
+            const filled = parseInt(value) >= parseInt(mark);
             return (
               <StarIcon
                 key={index}
+                stroke={stroked && !filled && '#D9D9D9'}
                 className={cx(
                   styles['star'],
                   styles[`star_size-${size}`],
                   starClassName,
                   {
-                    [styles['star_filled']]: parseInt(value) >= parseInt(mark),
+                    [styles['star_filled']]: filled,
                     [styles['star_best']]: index === 4 && isBest,
                     [styles['star_pointer']]: !readonly,
                     [styles['star_scalled']]: !readonly && isFive && !isBest,
