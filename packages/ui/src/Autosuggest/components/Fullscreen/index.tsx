@@ -73,6 +73,7 @@ interface IFullscreenProps {
   modalClassName?: string;
   modalBodyClassName?: string;
   sharedFieldProps: SharedFieldProps;
+  blurOnTouchStart?: boolean;
 }
 
 export type FullscreenAutosuggestProps = AutosuggestProps<IFullscreenProps>;
@@ -97,6 +98,7 @@ const Fullscreen = forwardRef(function Fullscreen(
     sharedFieldProps,
     alwaysRenderSuggestions,
     isFullscreenOpen,
+    blurOnTouchStart = true,
     // div props
     ...props
   },
@@ -157,7 +159,6 @@ const Fullscreen = forwardRef(function Fullscreen(
           visible
           fullscreen
           onClose={noop}
-          withCloseButton={false}
           withPadding={false}
         >
           <AutosuggestVariant
@@ -184,7 +185,7 @@ const Fullscreen = forwardRef(function Fullscreen(
                   size={suggestionsSize}
                   className={styles['uilist']}
                   design="high"
-                  onTouchStart={() => localInputRef.current.blur()}
+                  onTouchStart={() => blurOnTouchStart && localInputRef.current.blur()}
                 >
                   {isLoading ? (
                     <Spinner
