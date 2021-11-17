@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.53.1](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.53.0...@eruditorgroup/profi-ui@0.53.1) (2021-11-17)
+
+
+### Bug Fixes
+
+* **RateStars): stroke .5px & fix(Button:** make design link same as <Link /> ([9e6f6c6](https://github.com/eruditorgroup/profi-design-system/commit/9e6f6c66185fd1df458f4e6e2597f9b1c7857394))
+
+
+
+
+
 # [0.53.0](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.52.0...@eruditorgroup/profi-ui@0.53.0) (2021-11-17)
 
 
