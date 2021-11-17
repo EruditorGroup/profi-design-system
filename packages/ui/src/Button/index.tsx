@@ -17,10 +17,7 @@ type ButtonColor = Extract<
   'primary' | 'secondary' | 'light' | 'transparent'
 >;
 
-export interface ButtonProps
-  extends ButtonHTMLAttributes<HTMLButtonElement>,
-    AliasProps {
-  design?: ButtonColor | ButtonSocial | 'link';
+type ButtonUndesignedProps = {
   size?: ButtonSize;
   block?: boolean;
   rounded?: boolean;
@@ -28,7 +25,15 @@ export interface ButtonProps
   leading?: React.ReactNode;
   trailing?: React.ReactNode;
   contentClassName?: string;
-}
+};
+
+export type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> &
+  AliasProps &
+  ButtonUndesignedProps &
+  (
+    | {design?: ButtonColor | ButtonSocial}
+    | {design?: 'link'; underlined?: boolean}
+  );
 
 const Button: ForwardingComponent<'button', ButtonProps> = forwardRef(
   (
@@ -53,6 +58,12 @@ const Button: ForwardingComponent<'button', ButtonProps> = forwardRef(
       trailing,
       leading,
     ]);
+    const underlined = useMemo(() => {
+      const result = design === 'link' && props['underlined'];
+      delete props['underlined'];
+      return result;
+    }, [design, props]);
+
     return (
       <Component
         type={type}
@@ -63,6 +74,7 @@ const Button: ForwardingComponent<'button', ButtonProps> = forwardRef(
           block && styles[`block`],
           rounded && styles[`rounded`],
           regular && styles[`regular`],
+          underlined && styles['underlined'],
           className,
         )}
         {...props}
