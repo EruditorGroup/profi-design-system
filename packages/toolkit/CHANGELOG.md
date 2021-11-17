@@ -3,6 +3,21 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.41.0](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-toolkit@0.40.4...@eruditorgroup/profi-toolkit@0.41.0) (2021-11-17)
+
+
+
+## 0.25.8 (2021-11-17)
+
+
+### Features
+
+* **Tooltip): add withArrow param which adds arrow behind toggler & feat(RateStars:** stroked variant ([#352](https://github.com/eruditorgroup/profi-design-system/issues/352))  ([5acaf7f](https://github.com/eruditorgroup/profi-design-system/commit/5acaf7f864d0f624aa02ffba623ccf1f710bbd6d))
+
+
+
+
+
 ## [0.40.4](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-toolkit@0.40.3...@eruditorgroup/profi-toolkit@0.40.4) (2021-11-17)
 
 **Note:** Version bump only for package @eruditorgroup/profi-toolkit
