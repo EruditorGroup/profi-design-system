@@ -1,4 +1,4 @@
-import React, {forwardRef} from 'react';
+import React, {forwardRef, useMemo} from 'react';
 import {useTooltipContext} from '../../index';
 import classNames from 'classnames';
 
@@ -14,6 +14,7 @@ export interface TooltipProps extends HTMLAttributes<HTMLDivElement> {
   animated?: boolean;
   fit?: boolean;
   overlayClassName?: string;
+  withArrow?: boolean;
   position?:
     | 'bottom-left'
     | 'bottom-right'
@@ -33,11 +34,20 @@ const TooltipContent: ForwardRefExoticComponent<
       fit,
       className,
       overlayClassName,
+      withArrow,
       ...props
     },
     ref,
   ) => {
     const {opened} = useTooltipContext();
+    const isBottom = useMemo(
+      () => ['bottom-left', 'bottom-right', 'bottom-center'].includes(position),
+      [position],
+    );
+    const isTop = useMemo(
+      () => ['top-left', 'top-right', 'top-center'].includes(position),
+      [position],
+    );
 
     return (
       <div
@@ -50,11 +60,12 @@ const TooltipContent: ForwardRefExoticComponent<
         )}
       >
         <div
-          className={classNames(
-            className,
-            styles['content'],
-            fit && styles['fit'],
-          )}
+          className={classNames(className, styles['content'], {
+            [styles['fit']]: fit,
+            [styles['withArrow']]: withArrow,
+            [styles['withArrow-top']]: withArrow && isTop,
+            [styles['withArrow-bottom']]: withArrow && isBottom,
+          })}
           {...props}
           ref={ref}
         />
