@@ -1,55 +1,19 @@
 .rate {
   position: relative;
   display: inline-block;
+  display: flex;
 
   &_best {
     padding-right: 9px;
-  }
-
-  &_size-s {
-    width: 100px;
-    height: 25px;
-  }
-
-  &_size-m {
-    width: 295px;
-    height: 60px;
-    display: flex;
-    align-items: flex-end;
-    overflow: hidden;
-  }
-
-  &_size-l {
-    width: 354px;
-    height: 80px;
-    display: flex;
-    align-items: flex-end;
   }
 }
 
 .star {
   color: var(--ui-color-light);
-  transition: 0.1s color ease-in-out;
+  transition: 0.1s color ease-in-out, 0.1s transform ease-in-out;
   line-height: 1;
   outline: none;
-
-  &_stroked {
-    stroke: var(--ui-border-color-secondary);
-    stroke-width: .5px;
-  }
   
-  &_size-s {
-    font-size: 20px;
-  }
-
-  &_size-m {
-    font-size: 54px;
-  }
-
-  &_size-l {
-    font-size: 66px;
-  }
-
   &_filled {
     color: var(--ui-color-warning);
   }
@@ -66,72 +30,38 @@
     transition-property: color, transform;
     transform: translate3d(0, -1px, 0) rotate(-12deg);
   }
+
+
+  &_stroked, &_light {
+    stroke: var(--ui-border-color-secondary);
+    stroke-width: .5px;
+  }
+  
+  &_light > * {
+    fill: none;
+  }
 }
 
+
 .spark {
-  position: absolute;
   color: var(--ui-color-warning);
+  transform: translate3d(-0.1em, 0.1em, 0);
+  position: relative;
 
-  &_mini {
+  & > * {
+    transform-origin: center;
     animation: scaleSpark 150ms linear;
-  }
-
-  &_mini-s {
-    width: 4.5px;
-    height: 4.5px;
-    top: 0;
-    right: 1px;
-  }
-
-  &_mini-m {
-    top: 6px;
-    right: 13px;
-    width: 11px;
-    height: 11px;
-  }
-
-  &_mini-l {
-    top: 15px;
-    right: 0;
-    width: 14px;
-    height: 14px;
-  }
-
-  &_big {
-    transform: rotate(12deg);
-    animation: scaleSpark 150ms linear 1;
-  }
-
-  &_big-s {
-    width: 8px;
-    height: 8px;
-    top: 6.5px;
-    right: 0;
-  }
-
-  &_big-m {
-    top: 24px;
-    right: 14px;
-    width: 20px;
-    height: 20px;
-  }
-
-  &_big-l {
-    top: 36px;
-    right: 8px;
-    width: 25px;
-    height: 25px;
   }
 }
 
 @keyframes scaleSpark {
   0% {
-    transform: scale(0);
+    transform: scale(0) rotate(-30deg);
     opacity: 0;
   }
 
   to {
-    transform: scale(1);
+    transform: scale(1) rotate(0deg);
     opacity: 1;
   }
 }

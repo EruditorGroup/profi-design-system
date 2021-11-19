@@ -1,4 +1,4 @@
-import React, {useLayoutEffect, useRef} from 'react';
+import React, {useLayoutEffect, useRef, useState} from 'react';
 import {Story, Meta} from '@storybook/react';
 
 import RateStars, {RateStarsProps, MARKS_ARRAY} from './';
@@ -6,7 +6,7 @@ import TableGuides, {
   TableGuidesProps,
 } from '../../../../../.storybook/TableGuides';
 
-const RATE_SIZES: NonNullable<RateStarsProps['size']>[] = ['s', 'm', 'l'];
+const RATE_SIZES: NonNullable<number>[] = [20, 30, 54];
 
 export default {
   title: 'RateStars',
@@ -22,8 +22,8 @@ type RateStoryMeta = Omit<
 const rateStoryMeta: RateStoryMeta = {
   name: 'Text field',
   cols: RATE_SIZES.map((size) => ({
-    key: size.toLocaleUpperCase(),
-    props: {size},
+    key: size.toString().toLocaleUpperCase(),
+    props: {style: {fontSize: `${size}px`}},
   })),
   rows: [...MARKS_ARRAY, '5+'].map((mark) => ({
     key: mark,
@@ -64,7 +64,7 @@ Default.args = {
 export const Hover = Template.bind({});
 Hover.storyName = 'Hover';
 Hover.args = {
-  onChange: undefined,
+  onChange: () => {},
   hovered: true,
 };
 
@@ -72,5 +72,12 @@ export const Stroked = Template.bind({});
 Stroked.storyName = 'Stroked';
 Stroked.args = {
   onChange: undefined,
-  stroked: true,
+  design: 'stroked',
+};
+
+export const Light = Template.bind({});
+Light.storyName = 'Light';
+Light.args = {
+  onChange: undefined,
+  design: 'light',
 };
