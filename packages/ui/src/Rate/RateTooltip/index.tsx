@@ -9,14 +9,12 @@ import styles from './RateTooltip.module.scss';
 
 type Props = {
   show: boolean;
-  size: 's' | 'm' | 'l';
   children: React.ReactNode;
   trigger?: ITrigger;
 };
 
 export default function RateTooltip({
   show,
-  size,
   children,
   trigger = 'hover',
 }: Props): JSX.Element {
@@ -28,7 +26,7 @@ export default function RateTooltip({
           overlayClassName={styles['tooltipOverlay']}
           position="top-center"
         >
-          <Text size={size} bold>
+          <Text size="m" bold>
             Пять&nbsp;с&nbsp;плюсом
           </Text>
         </Tooltip.Content>
