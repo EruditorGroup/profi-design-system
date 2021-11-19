@@ -1,7 +1,7 @@
 import React, {forwardRef} from 'react';
 import cx from 'classnames';
 
-import {StarIcon, SparkIcon} from '@eruditorgroup/profi-icons';
+import {StarIcon} from '@eruditorgroup/profi-icons';
 import RateTooltip from '../RateTooltip';
 
 import type {ITrigger} from '../../Tooltip';
