@@ -3,6 +3,21 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.53.2](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.53.1...@eruditorgroup/profi-ui@0.53.2) (2021-11-22)
+
+
+
+# 0.26.0 (2021-11-22)
+
+
+### Bug Fixes
+
+* **RateStars:** design props & update design to match with design-system ([ca6b25d](https://github.com/eruditorgroup/profi-design-system/commit/ca6b25d73c790d58fe48d74e553b8bd3f546f27c))
+
+
+
+
+
 ## [0.53.1](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.53.0...@eruditorgroup/profi-ui@0.53.1) (2021-11-17)
 
 
