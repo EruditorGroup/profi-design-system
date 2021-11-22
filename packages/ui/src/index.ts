@@ -76,6 +76,9 @@ export type {BottomSheetProps} from './BottomSheet';
 export {RateStars} from './Rate';
 export type {RateStarsProps} from './Rate';
 
+export {Accordion} from './Accordion';
+export type {AccordionProps} from './Accordion';
+
 export {default as Space} from './Space';
 export type {SpaceProps} from './Space';
 
