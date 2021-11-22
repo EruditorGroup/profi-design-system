@@ -1,11 +1,6 @@
 import React, {useEffect, useRef, useState} from 'react';
 import cx from 'classnames';
-import {
-  Title,
-  ListItemProps,
-  TitleProps,
-  Button,
-} from '@eruditorgroup/profi-ui';
+import {Title, ListItemProps, TitleProps} from '@eruditorgroup/profi-ui';
 
 import {useControllableState} from '@eruditorgroup/profi-toolkit';
 import {ChevronDownIcon} from '@eruditorgroup/profi-icons';
@@ -44,6 +39,7 @@ export const Accordion: React.FC<AccordionProps> = ({
         setHeight(contentRef.current.scrollHeight);
       }
     };
+
     updateHeight();
     window.addEventListener('resize', updateHeight);
     return () => window.removeEventListener('resize', updateHeight);
