@@ -42,7 +42,7 @@ export type ReplaceProps<Component extends React.ElementType, P> = Pick<
   P;
 
 export interface AliasProps<
-  Component extends React.ElementType = React.ElementType,
+  Component extends React.ElementType = React.ElementType
 > {
   as?: Component;
 }
@@ -60,7 +60,7 @@ export type ForwardingCertainComponent<
   ): React.ReactElement | null;
   defaultProps?: Partial<P>;
   displayName?: string;
-}
+};
 
 export type ForwardingComponent<
   InitialComponent extends React.ElementType,
