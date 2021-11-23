@@ -14,6 +14,8 @@ const Template: Story<AccordionProps> = (args) => {
   return (
     <div style={{padding: '20px'}}>
       <Accordion
+        size="xl"
+        bold
         opened={opened}
         onChange={setOpened}
         heading="Добавить секретный отзыв для службы поддержки"
@@ -24,7 +26,7 @@ const Template: Story<AccordionProps> = (args) => {
           placeholder="секретный отзыв"
         />
       </Accordion>
-      <Accordion heading="Heading">
+      <Accordion size="xl" bold heading="Heading">
         <div style={{padding: '20px 0', background: 'red'}}>collapsed data</div>
       </Accordion>
     </div>
