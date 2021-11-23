@@ -1,17 +1,16 @@
 import React, {useEffect, useRef, useState} from 'react';
 import cx from 'classnames';
-import {Title, ListItemProps, TitleProps} from '@eruditorgroup/profi-ui';
+import {Text, TextProps} from '@eruditorgroup/profi-ui';
 
 import {useControllableState} from '@eruditorgroup/profi-toolkit';
 import {ChevronDownIcon} from '@eruditorgroup/profi-icons';
 
 import styles from './Accordion.module.scss';
 
-export interface AccordionProps extends Omit<ListItemProps, 'onChange'> {
+export interface AccordionProps extends Omit<TextProps, 'onChange'> {
   children: React.ReactNode;
   heading: React.ReactNode;
   opened?: boolean;
-  size?: TitleProps['size'];
   defaultOpened?: boolean;
   onChange?: (opened: boolean) => void;
 }
@@ -19,10 +18,10 @@ export interface AccordionProps extends Omit<ListItemProps, 'onChange'> {
 export const Accordion: React.FC<AccordionProps> = ({
   heading,
   children,
-  size = 'xl',
   opened: openedProp,
   defaultOpened = false,
   onChange: onChangeProp,
+  ...props
 }) => {
   const contentRef = useRef<HTMLDivElement | undefined>();
   const [height, setHeight] = useState<number | undefined>(undefined);
@@ -47,17 +46,17 @@ export const Accordion: React.FC<AccordionProps> = ({
 
   return (
     <>
-      <Title
+      <Text
         role="button"
-        size={size}
         className={styles['title']}
         onClick={() => setOpened(!opened)}
+        {...props}
       >
         <span className={styles['heading']}>{heading}</span>
         <ChevronDownIcon
           className={cx(styles['arrow'], opened && styles['arrow-opened'])}
         />
-      </Title>
+      </Text>
       <div
         ref={contentRef}
         style={{height: opened ? height : 0}}
