@@ -53,7 +53,7 @@ const RateStars: ForwardRefExoticComponent<
     }
 
     return (
-      <RateTooltip trigger={tooltipTrigger} show={!readonly && isBest}>
+      <RateTooltip trigger={tooltipTrigger} show={readonly && isBest}>
         <div
           className={cx(
             styles['rate'],
