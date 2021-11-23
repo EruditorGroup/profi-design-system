@@ -3,6 +3,21 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.53.4](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.53.3...@eruditorgroup/profi-ui@0.53.4) (2021-11-23)
+
+
+
+## 0.26.2 (2021-11-23)
+
+
+### Bug Fixes
+
+* **Accordion:** change Title to Text with props ([dce109f](https://github.com/eruditorgroup/profi-design-system/commit/dce109fa442fb45ac73d36cdc06c5383814dfa3e))
+
+
+
+
+
 ## [0.53.3](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.53.2...@eruditorgroup/profi-ui@0.53.3) (2021-11-22)
 
 
