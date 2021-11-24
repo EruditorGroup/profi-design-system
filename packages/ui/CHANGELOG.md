@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.53.6](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.53.5...@eruditorgroup/profi-ui@0.53.6) (2021-11-24)
+
+
+### Bug Fixes
+
+* **Accordion:** new design "link" ([e725a28](https://github.com/eruditorgroup/profi-design-system/commit/e725a284e8e1dbf36151a5150e0cd97fa05e9432))
+* **Star:** update icon ([e282e46](https://github.com/eruditorgroup/profi-design-system/commit/e282e461dd8af67626a9e5ddd6fab4744a0b06ec))
+
+
+
+
+
 ## [0.53.5](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.53.4...@eruditorgroup/profi-ui@0.53.5) (2021-11-23)
 
 
