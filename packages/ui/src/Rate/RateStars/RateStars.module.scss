@@ -1,6 +1,7 @@
 .rate {
   position: relative;
   display: inline-flex;
+  font-size: 17px;
 
   &_best {
     padding-right: 9px;
@@ -12,6 +13,7 @@
   transition: 0.1s color ease-in-out, 0.1s transform ease-in-out;
   line-height: 1;
   outline: none;
+  margin-right: .185em;
   
   &_filled {
     color: var(--ui-color-warning);
@@ -27,14 +29,14 @@
 
   &_best {
     transition-property: color, transform;
-    transform: translate3d(0, -1px, 0) rotate(-12deg);
+    transform: translate3d(0, -.09em, 0) rotate(-10deg);
   }
 
 }
 
 .design_stroked, .design_light {
   stroke: var(--ui-border-color-secondary);
-  stroke-width: .5px;
+  stroke-width: 1px;
 }
 
 .design_light > * {
@@ -44,7 +46,7 @@
 
 .spark {
   color: var(--ui-color-warning);
-  transform: translate3d(-0.1em, 0.1em, 0);
+  transform: translate3d(-.28em, -.05em, 0);
   position: relative;
 
   & > * {

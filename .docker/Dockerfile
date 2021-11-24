@@ -4,10 +4,8 @@ RUN apk add --no-cache tzdata && ln -fs /usr/share/zoneinfo/Europe/Moscow /etc/l
 RUN apk --no-cache  update \
   && apk add --no-cache --virtual .build-deps \
   gifsicle pngquant optipng libjpeg-turbo-utils \
-  udev ttf-opensans chromium \
+  udev ttf-opensans \
   && rm -rf /var/cache/apk/* /tmp/*
-ENV PUPPETEER_EXECUTABLE_PATH=/usr/bin/chromium-browser
-ENV PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=true
 ADD package.json yarn.lock babel.config.js .eslintrc.js .eslintignore .prettierrc .npmrc processSass.js storyshots.config.js storyshots.test.ts tsconfig.json .config.js scripts/jest/setupTests.js ./
 ADD .storybook .storybook
 ADD scripts scripts
