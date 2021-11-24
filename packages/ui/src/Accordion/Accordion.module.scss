@@ -1,12 +1,23 @@
 .title {
-  display: flex;
+}
+
+.design-link {
+  display: inline-flex;
+  justify-content: start;
+  &:hover {
+    box-shadow: var(--ui-link-shadow);
+  }
+}
+
+.design-block {
   width: auto;
+  display: flex;
   justify-content: space-between;
-  align-items: center;
-  cursor: pointer;
-  border-radius: var(--ui-border-radius-s);
   padding: 20px 20px;
   margin:  0 -20px;
+  border-radius: var(--ui-border-radius-s);
+  align-items: center;
+  cursor: pointer;
   position: relative;
 
   &:before {
@@ -29,18 +40,17 @@
 
 .heading {
   flex-shrink: 0;
-  max-width: calc(100% - 50px);
+  cursor: pointer;
 }
 
 .arrow {
   transition: transform .3s;
   transform-origin: center center;
-  transform: rotate(-90deg);
-  color: var(--ui-color-text-disabled);
+  padding: 2px 5px;
 }
 
 .arrow-opened {
-  transform: rotate(0);
+  transform: rotate(-180deg);
 }
 
 .content {

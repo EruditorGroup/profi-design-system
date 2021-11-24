@@ -1,23 +1,24 @@
 import React, {useState} from 'react';
 import {Story, Meta} from '@storybook/react';
 
-import Accordion, {AccordionProps} from './index';
-import {Textarea} from '..';
+import {Accordion, AccordionProps, Textarea} from '@eruditorgroup/profi-ui';
 
 export default {
   title: 'Accordion',
   component: Accordion,
+  parameters: {
+    controls: {include: ['size', 'design']},
+  },
+  args: {size: 'xl'},
 } as Meta<AccordionProps>;
 
-const Template: Story<AccordionProps> = (args) => {
-  const [opened, setOpened] = useState(true);
+const Template: Story<Partial<AccordionProps>> = (args) => {
   return (
     <div style={{padding: '20px'}}>
       <Accordion
-        size="xl"
+        {...args}
         bold
-        opened={opened}
-        onChange={setOpened}
+        defaultOpened
         heading="Добавить секретный отзыв для службы поддержки"
       >
         <Textarea
@@ -26,12 +27,19 @@ const Template: Story<AccordionProps> = (args) => {
           placeholder="секретный отзыв"
         />
       </Accordion>
-      <Accordion size="xl" bold heading="Heading">
+      <Accordion {...args} bold heading="Heading">
         <div style={{padding: '20px 0', background: 'red'}}>collapsed data</div>
       </Accordion>
     </div>
   );
 };
 
-export const Default = Template.bind({});
-Default.args = {};
+export const LinkDesign = Template.bind({});
+LinkDesign.args = {
+  design: 'link',
+};
+
+export const BlockDesign = Template.bind({});
+BlockDesign.args = {
+  design: 'block',
+};

@@ -30,15 +30,15 @@
     transform: translate3d(0, -1px, 0) rotate(-12deg);
   }
 
+}
 
-  &_stroked, &_light {
-    stroke: var(--ui-border-color-secondary);
-    stroke-width: .5px;
-  }
-  
-  &_light > * {
-    fill: none;
-  }
+.design_stroked, .design_light {
+  stroke: var(--ui-border-color-secondary);
+  stroke-width: .5px;
+}
+
+.design_light > * {
+  fill: none;
 }
 
 

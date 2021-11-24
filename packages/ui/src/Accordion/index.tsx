@@ -8,10 +8,11 @@ import {ChevronDownIcon} from '@eruditorgroup/profi-icons';
 import styles from './Accordion.module.scss';
 
 export interface AccordionProps extends Omit<TextProps, 'onChange'> {
-  children: React.ReactNode;
+  children?: React.ReactNode;
   heading: React.ReactNode;
   opened?: boolean;
   defaultOpened?: boolean;
+  design?: 'link' | 'block';
   onChange?: (opened: boolean) => void;
 }
 
@@ -20,6 +21,7 @@ export const Accordion: React.FC<AccordionProps> = ({
   children,
   opened: openedProp,
   defaultOpened = false,
+  design = 'link',
   onChange: onChangeProp,
   ...props
 }) => {
@@ -48,7 +50,7 @@ export const Accordion: React.FC<AccordionProps> = ({
     <>
       <Text
         role="button"
-        className={styles['title']}
+        className={styles[`design-${design}`]}
         onClick={() => setOpened(!opened)}
         {...props}
       >

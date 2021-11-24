@@ -20,7 +20,6 @@ export interface RateStarsProps
   onChange?: (newValue: string) => void;
   starClassName?: string;
   tooltipTrigger?: ITrigger;
-  stroked?: boolean; // @deprecated
   design: 'stroked' | 'light' | 'default';
 }
 
@@ -35,7 +34,6 @@ const RateStars: ForwardRefExoticComponent<
       onChange,
       className,
       starClassName,
-      stroked, // @deprecated - выпилить после интеграции в warp
       design,
       tooltipTrigger,
       ...props
@@ -70,9 +68,7 @@ const RateStars: ForwardRefExoticComponent<
                 key={index}
                 className={cx(styles['star'], starClassName, {
                   [styles['star_filled']]: filled,
-                  [styles['star_stroked']]:
-                    (stroked || design == 'stroked') && !filled,
-                  [styles['star_light']]: design === 'light' && !filled,
+                  [styles[`design_${design}`]]: !filled, // дизайн filled звезд всегда одинаковый
                   [styles['star_best']]: index === 4 && isBest,
                   [styles['star_pointer']]: !readonly,
                   [styles['star_scalled']]: !readonly && isFive && !isBest,
