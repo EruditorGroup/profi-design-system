@@ -40,4 +40,3 @@ const Template: Story = ({...args}) => {
 };
 export const Image = Template.bind({});
 Image.args = {};
-

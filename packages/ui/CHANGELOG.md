@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.53.7](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.53.6...@eruditorgroup/profi-ui@0.53.7) (2021-11-25)
+
+
+### Bug Fixes
+
+* **Gallery:** Вызываем onNext/onBack из пропсов ([a112d9e](https://github.com/eruditorgroup/profi-design-system/commit/a112d9e7a759586f2d84a8f36fce9b096741cabe))
+* **RateStars:** stroke size ([91ea820](https://github.com/eruditorgroup/profi-design-system/commit/91ea820a75a77f1e292d436f202e958eb2ca0bd4))
+* **RateStars:** use equal div wrapper for "with tooltip" and "without tooltip" version ([3f2fc31](https://github.com/eruditorgroup/profi-design-system/commit/3f2fc31b212cb10493d9debe75e702593a635243))
+
+
+
+
+
 ## [0.53.6](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.53.5...@eruditorgroup/profi-ui@0.53.6) (2021-11-24)
 
 
