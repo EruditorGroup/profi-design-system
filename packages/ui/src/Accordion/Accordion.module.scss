@@ -1,5 +1,3 @@
-.title {
-}
 
 .design-link {
   display: inline-flex;
@@ -41,6 +39,7 @@
 .heading {
   flex-shrink: 0;
   cursor: pointer;
+  max-width: calc(100% - 25px);
 }
 
 .arrow {

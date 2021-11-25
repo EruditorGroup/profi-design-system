@@ -19,6 +19,7 @@ export interface AccordionProps extends Omit<TextProps, 'onChange'> {
 export const Accordion: React.FC<AccordionProps> = ({
   heading,
   children,
+  className,
   opened: openedProp,
   defaultOpened = false,
   design = 'link',
@@ -50,7 +51,7 @@ export const Accordion: React.FC<AccordionProps> = ({
     <>
       <Text
         role="button"
-        className={styles[`design-${design}`]}
+        className={cx(styles[`design-${design}`], className)}
         onClick={() => setOpened(!opened)}
         {...props}
       >
