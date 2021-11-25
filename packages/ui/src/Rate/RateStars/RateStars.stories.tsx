@@ -3,7 +3,7 @@ import {Story, Meta} from '@storybook/react';
 
 import RateStars, {RateStarsProps, MARKS_ARRAY} from './';
 
-const RATE_SIZES: number[] = [20, 30, 51];
+const RATE_SIZES: number[] = [51, 30, 20];
 
 export default {
   title: 'RateStars',
