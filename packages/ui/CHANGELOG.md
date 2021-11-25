@@ -3,6 +3,21 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.53.9](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.53.8...@eruditorgroup/profi-ui@0.53.9) (2021-11-25)
+
+
+
+## 0.26.8 (2021-11-25)
+
+
+### Bug Fixes
+
+* **Accordion:** add heading max-width ([e5fea2b](https://github.com/eruditorgroup/profi-design-system/commit/e5fea2b94538c4bd32185e109cbcb2fb908f3c8c))
+
+
+
+
+
 ## [0.53.8](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.53.7...@eruditorgroup/profi-ui@0.53.8) (2021-11-25)
 
 
