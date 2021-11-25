@@ -3,6 +3,21 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.53.8](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.53.7...@eruditorgroup/profi-ui@0.53.8) (2021-11-25)
+
+
+
+## 0.26.7 (2021-11-25)
+
+
+### Bug Fixes
+
+* **RateStars:** sparks should be clipped ([#365](https://github.com/eruditorgroup/profi-design-system/issues/365)) ([71056ee](https://github.com/eruditorgroup/profi-design-system/commit/71056ee892f6ed200e5f980aa17d13b4b0a98f56))
+
+
+
+
+
 ## [0.53.7](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.53.6...@eruditorgroup/profi-ui@0.53.7) (2021-11-25)
 
 
