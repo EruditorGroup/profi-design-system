@@ -24,7 +24,10 @@ export interface TooltipProps
   onChange?: (state: boolean) => void;
 }
 
-interface TooltipComponent extends ForwardRefExoticComponent<TooltipProps> {
+interface TooltipComponent
+  extends ForwardRefExoticComponent<
+    TooltipProps & {ref?: React.Ref<HTMLDivElement>}
+  > {
   Content: typeof TooltipContent;
   Toggler: typeof TooltipToggler;
   useTooltipContext: typeof useTooltipContext;
