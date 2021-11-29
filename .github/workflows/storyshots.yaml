@@ -34,5 +34,5 @@ jobs:
           git config --global user.email "mischenkoav@profi.ru"
           git config --global user.name "mischenkoav"
           git commit -m "fix(storyshots): update" -a
-          git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
+          git remote set-url origin https://x-access-token:${{ secrets.DEPLOY_GITHUB_TOKEN }}@github.com/${{ github.repository }}
           git push origin ${{ github.ref_name }}
