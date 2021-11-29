@@ -3,6 +3,30 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.0.0-alpha.9](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.53.10...@eruditorgroup/profi-ui@1.0.0-alpha.9) (2021-11-29)
+
+
+
+# 1.0.0-alpha.8 (2021-11-29)
+
+
+### Bug Fixes
+
+* bump versions ([5e4227d](https://github.com/eruditorgroup/profi-design-system/commit/5e4227d8858fa0a8b1d79500eef102da7917d833))
+* bump versions ([a2e80a7](https://github.com/eruditorgroup/profi-design-system/commit/a2e80a7fd90ad50c39d19980036b11de0a4c59a0))
+* bump versions ([a9dcca5](https://github.com/eruditorgroup/profi-design-system/commit/a9dcca573d09a93610932d2a5338d1854a70a0be))
+* bump versions ([a5d6b59](https://github.com/eruditorgroup/profi-design-system/commit/a5d6b590f775b311c4dfa99a982572bd505ffed1))
+
+
+### Features
+
+* **List:** Добавлен skeleton ([748f1e4](https://github.com/eruditorgroup/profi-design-system/commit/748f1e49a7109c868476b95ae56353c01a8f90b5))
+* Drodown controllable state ([e64ade3](https://github.com/eruditorgroup/profi-design-system/commit/e64ade3090654421116b04e3747d524c1223f49f))
+
+
+
+
+
 ## [0.53.10](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.53.8...@eruditorgroup/profi-ui@0.53.10) (2021-11-29)
 
 
