@@ -14,6 +14,7 @@ import {
   AliasProps,
   ForwardingComponent,
   findComponentInChildren,
+  theme,
 } from '@eruditorgroup/profi-toolkit';
 
 const ListItemContext = createContext<boolean>(null);
@@ -63,7 +64,7 @@ const ListItem: ForwardingComponentType = forwardRef((props, ref) => {
     as: Component = 'li',
     ...rest
   } = props;
-  const {size, bordered, design, borderedMode} = useListContext();
+  const {size, bordered, design, borderedMode, skeleton} = useListContext();
 
   const isCaption = !!findComponentInChildren(children, Caption);
   const isMainText = !!findComponentInChildren(children, MainText);
@@ -94,21 +95,27 @@ const ListItem: ForwardingComponentType = forwardRef((props, ref) => {
       ref={ref}
       {...rest}
     >
-      {!!leading && (
-        <span
-          className={cx(
-            styles['leading'],
-            !isCaption && styles['without-caption'],
+      {skeleton ? (
+        <span className={cx(styles['preloader'], theme.transitions.skeleton)} />
+      ) : (
+        <>
+          {!!leading && (
+            <span
+              className={cx(
+                styles['leading'],
+                !isCaption && styles['without-caption'],
+              )}
+            >
+              {leading}
+            </span>
           )}
-        >
-          {leading}
-        </span>
-      )}
-      <ListItemContext.Provider value={disabled}>
-        <div className={bodyClassName}>{wrappedChildren}</div>
-      </ListItemContext.Provider>
+          <ListItemContext.Provider value={disabled}>
+            <div className={bodyClassName}>{wrappedChildren}</div>
+          </ListItemContext.Provider>
 
-      {!!trailing && <span className={styles['trailing']}>{trailing}</span>}
+          {!!trailing && <span className={styles['trailing']}>{trailing}</span>}
+        </>
+      )}
     </Component>
   );
 }) as ExoticRefComponentType;

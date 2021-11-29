@@ -13,6 +13,7 @@ interface ListContextType {
   design: TListDesign;
   borderedMode: BorderedModeType;
   boldItemMainText: boolean;
+  skeleton?: boolean;
 }
 
 const ListContext = createContext<ListContextType | null>(null);
@@ -31,6 +32,7 @@ export type ListProps = Omit<
   bordered?: boolean;
   borderedMode?: BorderedModeType;
   boldItemMainText?: boolean;
+  skeleton?: boolean;
 };
 
 type HighDesignProps = {
@@ -54,12 +56,13 @@ const List: ComponentType = function List(props) {
     as: Component = 'ul',
     size = 'm',
     design = 'low',
+    skeleton,
     ...rest
   } = props;
 
   return (
     <ListContext.Provider
-      value={{size, bordered, design, borderedMode, boldItemMainText}}
+      value={{size, bordered, design, borderedMode, boldItemMainText, skeleton}}
     >
       <Component className={styles['list']} {...rest}>
         {children}
