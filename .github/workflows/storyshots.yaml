@@ -21,7 +21,6 @@ jobs:
           timezoneWindows: 'Moscow Standard Time'
           timezoneMacos: 'Europe/Moscow'
       - run: |
-          yarn clean:storybook
           yarn build:storybook --quiet
           MODULE_TYPE=cjs jest --config=storyshots.config.js --updateSnapshot
 
@@ -30,7 +29,7 @@ jobs:
           git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
           git commit -m "fix(storyshots): update" -a
-          
+
       - name: Push changes
         uses: ad-m/github-push-action@master
         with:
