@@ -29,13 +29,21 @@ jobs:
         run: yarn jest --config=storyshots.config.js --updateSnapshot
 
       - name: Commit files
+        id: commit
         run: |
           git config --global user.email "mischenkoav@eruditorgroup.com"
           git config --global user.name "mischenkoav"
           git commit -m "fix(storyshots): update" -a
+          echo "::set-output name=sha_short::$(git rev-parse --short HEAD)"
 
       - name: Push changes
-        uses: ad-m/github-push-action@master
+        uses: actions/github-script@v4
         with:
-          github_token: ${{ secrets.DEPLOY_GITHUB_TOKEN }}
-          branch: ${{ github.ref }}
+          github-token: ${{ secrets.DEPLOY_GITHUB_TOKEN }}
+          script: |
+            github.git.updateRef({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              ref: `${{ github.ref }}`,
+              sha: "${{ steps.commit.outputs.sha_short }}",
+            })
