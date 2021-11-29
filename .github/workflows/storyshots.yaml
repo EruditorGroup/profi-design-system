@@ -31,8 +31,8 @@ jobs:
       - name: Commit files
         id: commit
         run: |
-          git config user.name "GitHub"
-          git config user.email "noreply@github.com"
+          git config user.name "mischenkoav"
+          git config user.email "mischenkoav@profi.ru"
           git commit -m "fix(storyshots): update" -a
           git remote set-url origin https://x-access-token:${{ secrets.DEPLOY_GITHUB_TOKEN }}@github.com/${{ github.repository }}
           git push origin ${{ github.ref_name }}
