@@ -31,19 +31,8 @@ jobs:
       - name: Commit files
         id: commit
         run: |
-          git config --global user.email "mischenkoav@eruditorgroup.com"
+          git config --global user.email "mischenkoav@profi.ru"
           git config --global user.name "mischenkoav"
           git commit -m "fix(storyshots): update" -a
-          echo "::set-output name=sha::$(git rev-parse HEAD)"
-
-      - name: Push changes
-        uses: actions/github-script@v4
-        with:
-          github-token: ${{ secrets.DEPLOY_GITHUB_TOKEN }}
-          script: |
-            github.git.updateRef({
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              ref: `heads/${{ github.ref_name }}`,
-              sha: "${{ steps.commit.outputs.sha }}",
-            })
+          git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
+          git push origin ${{ github.ref_name }}
