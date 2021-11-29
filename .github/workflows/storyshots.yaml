@@ -20,7 +20,7 @@ jobs:
           timezoneLinux: 'Europe/Moscow'
           timezoneWindows: 'Moscow Standard Time'
           timezoneMacos: 'Europe/Moscow'
-      - run: yarn test:storybook:update
+      - run: yarn test:storybook:update --updateSnapshot
 
       - name: Commit files
         run: |
