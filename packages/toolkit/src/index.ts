@@ -11,6 +11,7 @@ import variables from './styles/variables.css';
 
 import fadeTransition from './styles/FadeIn.module.css';
 import slideTransition from './styles/SlideUp.module.css';
+import skeletonTransition from './styles/Skeleton.module.css';
 
 export const theme = {
   common,
@@ -18,6 +19,7 @@ export const theme = {
   transitions: {
     slide: slideTransition,
     fade: fadeTransition,
+    skeleton: skeletonTransition['skeleton'],
   },
 };
 
@@ -42,7 +44,7 @@ export type ReplaceProps<Component extends React.ElementType, P> = Pick<
   P;
 
 export interface AliasProps<
-  Component extends React.ElementType = React.ElementType,
+  Component extends React.ElementType = React.ElementType
 > {
   as?: Component;
 }
@@ -60,7 +62,7 @@ export type ForwardingCertainComponent<
   ): React.ReactElement | null;
   defaultProps?: Partial<P>;
   displayName?: string;
-}
+};
 
 export type ForwardingComponent<
   InitialComponent extends React.ElementType,

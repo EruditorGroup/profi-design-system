@@ -3,75 +3,236 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
-# [1.0.0-alpha.7](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@1.0.0-alpha.6...@eruditorgroup/profi-ui@1.0.0-alpha.7) (2021-11-01)
-
-**Note:** Version bump only for package @eruditorgroup/profi-ui
+## [0.53.10](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.53.8...@eruditorgroup/profi-ui@0.53.10) (2021-11-29)
 
 
 
-
-
-# [1.0.0-alpha.6](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@1.0.0-alpha.5...@eruditorgroup/profi-ui@1.0.0-alpha.6) (2021-11-01)
-
-**Note:** Version bump only for package @eruditorgroup/profi-ui
-
-
-
-
-
-# [1.0.0-alpha.5](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@1.0.0-alpha.4...@eruditorgroup/profi-ui@1.0.0-alpha.5) (2021-11-01)
+## 0.26.8 (2021-11-25)
 
 
 ### Bug Fixes
 
-* bump versions ([5e4227d](https://github.com/eruditorgroup/profi-design-system/commit/5e4227d8858fa0a8b1d79500eef102da7917d833))
-* bump versions ([a2e80a7](https://github.com/eruditorgroup/profi-design-system/commit/a2e80a7fd90ad50c39d19980036b11de0a4c59a0))
-* bump versions ([a9dcca5](https://github.com/eruditorgroup/profi-design-system/commit/a9dcca573d09a93610932d2a5338d1854a70a0be))
-* bump versions ([a5d6b59](https://github.com/eruditorgroup/profi-design-system/commit/a5d6b590f775b311c4dfa99a982572bd505ffed1))
+* **Accordion:** add heading max-width ([e5fea2b](https://github.com/eruditorgroup/profi-design-system/commit/e5fea2b94538c4bd32185e109cbcb2fb908f3c8c))
 
 
 
 
 
-# [1.0.0-alpha.4](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@1.0.0-alpha.4...@eruditorgroup/profi-ui@1.0.0-alpha.4) (2021-11-01)
-
-
-### Bug Fixes
-
-* bump versions ([a2e80a7](https://github.com/eruditorgroup/profi-design-system/commit/a2e80a7fd90ad50c39d19980036b11de0a4c59a0))
-* bump versions ([a9dcca5](https://github.com/eruditorgroup/profi-design-system/commit/a9dcca573d09a93610932d2a5338d1854a70a0be))
-* bump versions ([a5d6b59](https://github.com/eruditorgroup/profi-design-system/commit/a5d6b590f775b311c4dfa99a982572bd505ffed1))
+## [0.53.9](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.53.8...@eruditorgroup/profi-ui@0.53.9) (2021-11-25)
 
 
 
-
-
-# [1.0.0-alpha.4](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@1.0.0-alpha.4...@eruditorgroup/profi-ui@1.0.0-alpha.4) (2021-11-01)
+## 0.26.8 (2021-11-25)
 
 
 ### Bug Fixes
 
-* bump versions ([a9dcca5](https://github.com/eruditorgroup/profi-design-system/commit/a9dcca573d09a93610932d2a5338d1854a70a0be))
-* bump versions ([a5d6b59](https://github.com/eruditorgroup/profi-design-system/commit/a5d6b590f775b311c4dfa99a982572bd505ffed1))
+* **Accordion:** add heading max-width ([e5fea2b](https://github.com/eruditorgroup/profi-design-system/commit/e5fea2b94538c4bd32185e109cbcb2fb908f3c8c))
 
 
 
 
 
-# [1.0.0-alpha.4](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@1.0.0-alpha.4...@eruditorgroup/profi-ui@1.0.0-alpha.4) (2021-11-01)
+## [0.53.8](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.53.7...@eruditorgroup/profi-ui@0.53.8) (2021-11-25)
+
+
+
+## 0.26.7 (2021-11-25)
 
 
 ### Bug Fixes
 
-* bump versions ([a5d6b59](https://github.com/eruditorgroup/profi-design-system/commit/a5d6b590f775b311c4dfa99a982572bd505ffed1))
+* **RateStars:** sparks should be clipped ([#365](https://github.com/eruditorgroup/profi-design-system/issues/365)) ([71056ee](https://github.com/eruditorgroup/profi-design-system/commit/71056ee892f6ed200e5f980aa17d13b4b0a98f56))
 
 
 
 
 
-# [1.0.0-alpha.4](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.50.4...@eruditorgroup/profi-ui@1.0.0-alpha.4) (2021-11-01)
+## [0.53.7](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.53.6...@eruditorgroup/profi-ui@0.53.7) (2021-11-25)
 
-**Note:** Version bump only for package @eruditorgroup/profi-ui
+
+### Bug Fixes
+
+* **Gallery:** Вызываем onNext/onBack из пропсов ([a112d9e](https://github.com/eruditorgroup/profi-design-system/commit/a112d9e7a759586f2d84a8f36fce9b096741cabe))
+* **RateStars:** stroke size ([91ea820](https://github.com/eruditorgroup/profi-design-system/commit/91ea820a75a77f1e292d436f202e958eb2ca0bd4))
+* **RateStars:** use equal div wrapper for "with tooltip" and "without tooltip" version ([3f2fc31](https://github.com/eruditorgroup/profi-design-system/commit/3f2fc31b212cb10493d9debe75e702593a635243))
+
+
+
+
+
+## [0.53.6](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.53.5...@eruditorgroup/profi-ui@0.53.6) (2021-11-24)
+
+
+### Bug Fixes
+
+* **Accordion:** new design "link" ([e725a28](https://github.com/eruditorgroup/profi-design-system/commit/e725a284e8e1dbf36151a5150e0cd97fa05e9432))
+* **Star:** update icon ([e282e46](https://github.com/eruditorgroup/profi-design-system/commit/e282e461dd8af67626a9e5ddd6fab4744a0b06ec))
+
+
+
+
+
+## [0.53.5](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.53.4...@eruditorgroup/profi-ui@0.53.5) (2021-11-23)
+
+
+
+## 0.26.3 (2021-11-23)
+
+
+### Bug Fixes
+
+* **RateStars:** show only if readonly ([#360](https://github.com/eruditorgroup/profi-design-system/issues/360)) ([3e465d9](https://github.com/eruditorgroup/profi-design-system/commit/3e465d9fe90b8741e28d7793b59e63d2aea64a4d))
+
+
+
+
+
+## [0.53.4](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.53.3...@eruditorgroup/profi-ui@0.53.4) (2021-11-23)
+
+
+
+## 0.26.2 (2021-11-23)
+
+
+### Bug Fixes
+
+* **Accordion:** change Title to Text with props ([dce109f](https://github.com/eruditorgroup/profi-design-system/commit/dce109fa442fb45ac73d36cdc06c5383814dfa3e))
+
+
+
+
+
+## [0.53.3](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.53.2...@eruditorgroup/profi-ui@0.53.3) (2021-11-22)
+
+
+### Bug Fixes
+
+* **Accordion:** export component ([94d4641](https://github.com/eruditorgroup/profi-design-system/commit/94d464126c55b3ae3d7b659e955a4d622ee95388))
+
+
+
+
+
+## [0.53.2](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.53.1...@eruditorgroup/profi-ui@0.53.2) (2021-11-22)
+
+
+
+# 0.26.0 (2021-11-22)
+
+
+### Bug Fixes
+
+* **RateStars:** design props & update design to match with design-system ([ca6b25d](https://github.com/eruditorgroup/profi-design-system/commit/ca6b25d73c790d58fe48d74e553b8bd3f546f27c))
+
+
+
+
+
+## [0.53.1](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.53.0...@eruditorgroup/profi-ui@0.53.1) (2021-11-17)
+
+
+### Bug Fixes
+
+* **RateStars): stroke .5px & fix(Button:** make design link same as <Link /> ([9e6f6c6](https://github.com/eruditorgroup/profi-design-system/commit/9e6f6c66185fd1df458f4e6e2597f9b1c7857394))
+
+
+
+
+
+# [0.53.0](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.52.0...@eruditorgroup/profi-ui@0.53.0) (2021-11-17)
+
+
+
+## 0.25.8 (2021-11-17)
+
+
+### Features
+
+* **Tooltip): add withArrow param which adds arrow behind toggler & feat(RateStars:** stroked variant ([#352](https://github.com/eruditorgroup/profi-design-system/issues/352))  ([5acaf7f](https://github.com/eruditorgroup/profi-design-system/commit/5acaf7f864d0f624aa02ffba623ccf1f710bbd6d))
+
+
+
+
+
+# [0.52.0](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.51.2...@eruditorgroup/profi-ui@0.52.0) (2021-11-17)
+
+
+### Bug Fixes
+
+* **FullscreenSuggest:** Сделать блюр инпута на попытку скрола списка  опциональным ([d34b879](https://github.com/eruditorgroup/profi-design-system/commit/d34b8794da251e3b7fd0dceec624125883966540))
+* **Modal:** Вынес кнопку закрытия модалки наружу для кастомной настройки ([a3f58ab](https://github.com/eruditorgroup/profi-design-system/commit/a3f58abb93b888be52e2f6a92c51f995310f0901))
+* **Modal:** Добавил кастомизацию кнопки закрытия модалки. ([f9c632b](https://github.com/eruditorgroup/profi-design-system/commit/f9c632b5d329cababce75644b1f4a1aac76eb135))
+
+
+### Features
+
+* **toolkit:** Вынес значения клавиш в константы ([224e225](https://github.com/eruditorgroup/profi-design-system/commit/224e22529dcae3d28f24b62fa920e4cb4347aa1f))
+
+
+
+
+
+## [0.51.2](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.51.1...@eruditorgroup/profi-ui@0.51.2) (2021-11-12)
+
+
+### Bug Fixes
+
+* **rateStars:** add starsClassName prop ([#348](https://github.com/eruditorgroup/profi-design-system/issues/348)) ([eedd7a0](https://github.com/eruditorgroup/profi-design-system/commit/eedd7a0794ceda59433b2839b96ca87ee0f3301d))
+
+
+
+
+
+## [0.51.1](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.51.0...@eruditorgroup/profi-ui@0.51.1) (2021-11-11)
+
+
+
+## 0.25.5 (2021-11-11)
+
+
+### Bug Fixes
+
+* **BottomSheet:** use fixed position in inline mode ([#346](https://github.com/eruditorgroup/profi-design-system/issues/346)) ([5911adf](https://github.com/eruditorgroup/profi-design-system/commit/5911adf35b9df984f62d6e1f06c6a589a60f4897))
+
+
+
+
+
+# [0.51.0](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.50.6...@eruditorgroup/profi-ui@0.51.0) (2021-11-11)
+
+
+
+## 0.25.4 (2021-11-11)
+
+
+### Features
+
+* **bottomSheet:** inline prop to manage scroll & overlay ([aa2f47c](https://github.com/eruditorgroup/profi-design-system/commit/aa2f47ce3d001a0ec0c2e6183ef3a97f697ee004))
+
+
+
+
+
+## [0.50.6](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.50.5...@eruditorgroup/profi-ui@0.50.6) (2021-11-11)
+
+
+### Bug Fixes
+
+* **Autosuggest:** Состоянием открытости fullscreen теперь можно управлять снаружи. Поправлен сабмит при нажатии на enter ([592fad6](https://github.com/eruditorgroup/profi-design-system/commit/592fad61bb04a9a7dd6b93b39f5904df0d51a451))
+* **ui:** tooltip controllable state ([8ec98b3](https://github.com/eruditorgroup/profi-design-system/commit/8ec98b3490fb2f4647cf6ae45a0634b91d624925))
+* **ui:** tooltip handle ([2bd4256](https://github.com/eruditorgroup/profi-design-system/commit/2bd42560b0813aee08dd1e37074885b7767e37e1))
+
+
+
+
+
+## [0.50.5](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.50.4...@eruditorgroup/profi-ui@0.50.5) (2021-11-08)
+
+
+### Bug Fixes
+
+* **Gallery.Image:** fix styles, disable zooming ([8c179b4](https://github.com/eruditorgroup/profi-design-system/commit/8c179b4031fba435a64b6eb1118477ecd3cde63d))
 
 
 

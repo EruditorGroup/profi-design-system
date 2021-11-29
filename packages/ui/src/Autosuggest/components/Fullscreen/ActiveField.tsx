@@ -1,4 +1,4 @@
-import React, {forwardRef} from 'react';
+import React, {FormEventHandler, forwardRef} from 'react';
 import {SearchIcon} from '@eruditorgroup/profi-icons';
 import {
   AliasProps,
@@ -13,6 +13,7 @@ import {TIconPosition, ForwardingFocusableComponent} from './types';
 type TActiveFieldProps = {
   fontSize?: string;
   iconPostion?: Exclude<TIconPosition, 'trailing'>;
+  onSubmit?: FormEventHandler<HTMLFormElement>;
   children?: (
     input: JSX.Element,
     handler: {onClose: () => void},
@@ -49,7 +50,12 @@ const ActiveField: ForwardingFocusableComponent<
       <SearchIcon style={{fontSize}} />
     );
     const field = <Component leading={leading} ref={setLocalRef} {...props} />;
-    return children ? children(field, {onClose: handleClose}) : field;
+
+    return (
+      <form onSubmit={props.onSubmit} action=".">
+        {children ? children(field, {onClose: handleClose}) : field}
+      </form>
+    );
   },
 );
 

@@ -13,7 +13,7 @@
   overflow-y: auto;
   touch-action: pan-y;
   will-change: transform, opacity;
-  transition: transform .1s, opacity .1s linear;
+  transition: transform 0.1s, opacity 0.1s linear;
 }
 
 .overlay {
@@ -49,24 +49,6 @@
   position: relative;
   border-bottom: 1px solid var(--grey-line);
   flex-shrink: 0;
-}
-
-.button-icon {
-  position: absolute;
-  z-index: 1;
-  top: 10px;
-  background: #fff;
-  box-shadow: var(--ui-box-shadow);
-  transition: transform 0.3s;
-}
-
-.button-icon:hover:not([disabled]) {
-  transform: scale(1.1);
-  background: #fff;
-}
-
-.right {
-  right: 10px;
 }
 
 .left {

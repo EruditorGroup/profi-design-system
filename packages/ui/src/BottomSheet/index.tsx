@@ -26,8 +26,10 @@ import animation from './animation.module.scss';
 export interface BottomSheetProps
   extends Omit<HTMLAttributes<HTMLDivElement>, 'width'> {
   withPadding?: boolean;
+  bg?: 'primary' | 'default' | 'light'; // TODO: move to common
   visible: boolean;
   closeOnOverlayClick?: boolean;
+  inline?: boolean;
   onClose: MouseEventHandler<HTMLElement>;
 }
 
@@ -39,11 +41,13 @@ const BottomSheet: ForwardRefExoticComponent<
   (
     {
       visible,
+      bg = 'primary',
       children,
       className,
       withPadding = true,
       closeOnOverlayClick,
       onClose,
+      inline,
       ...props
     },
     ref,
@@ -52,10 +56,12 @@ const BottomSheet: ForwardRefExoticComponent<
 
     // Отключаем промотку body
     useEffect(() => {
-      const {current: element} = bodyEl;
-      visible ? disableBodyScroll(element) : enableBodyScroll(element);
-      return () => enableBodyScroll(element);
-    }, [visible]);
+      if (!inline) {
+        const {current: element} = bodyEl;
+        visible ? disableBodyScroll(element) : enableBodyScroll(element);
+        return () => enableBodyScroll(element);
+      }
+    }, [visible, inline]);
 
     const [sheetRef, setSheetRef] = useCombinedRef(ref);
 
@@ -73,17 +79,19 @@ const BottomSheet: ForwardRefExoticComponent<
 
     return (
       <>
-        <CSSTransition
-          unmountOnExit
-          mountOnEnter
-          in={visible}
-          timeout={DEFAULT_ANIMATION_DURATION}
-          classNames={theme.transitions.fade}
-        >
-          <BodyPortal>
-            <div className={styles['overlay']} onClick={handleCloseClick} />
-          </BodyPortal>
-        </CSSTransition>
+        {!inline && (
+          <CSSTransition
+            unmountOnExit
+            mountOnEnter
+            in={visible}
+            timeout={DEFAULT_ANIMATION_DURATION}
+            classNames={theme.transitions.fade}
+          >
+            <BodyPortal>
+              <div className={styles['overlay']} onClick={handleCloseClick} />
+            </BodyPortal>
+          </CSSTransition>
+        )}
 
         <CSSTransition
           unmountOnExit
@@ -92,9 +100,14 @@ const BottomSheet: ForwardRefExoticComponent<
           timeout={DEFAULT_ANIMATION_DURATION}
           classNames={animation}
         >
-          <BodyPortal className={cx(styles['root'])}>
+          <BodyPortal className={cx(!inline && styles['root'])}>
             <div
-              className={cx(styles['sheet'], className)}
+              className={cx(
+                styles['sheet'],
+                inline && styles['sheet-fixed'],
+                styles[`bg-${bg}`],
+                className,
+              )}
               ref={setSheetRef}
               {...props}
             >

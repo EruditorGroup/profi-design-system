@@ -1,7 +1,7 @@
 import React, {useEffect, useRef, useState} from 'react';
 import {Story, Meta} from '@storybook/react';
 
-import Tooltip from './index';
+import Tooltip, {TooltipContextType} from './index';
 import Text from '../Typography/Text';
 import Button from '../Button';
 import Checkbox from '../Form/Checkbox';
@@ -25,13 +25,23 @@ const rowStyle: Record<string, string> = {
 };
 
 const Template: Story = (args) => {
+  const [opened, setOpened] = useState(true);
+
   return (
     <>
       <div style={rowStyle}>
-        <Tooltip>
+        <Tooltip
+          opened={opened}
+          onChange={() => setOpened(!opened)}
+          trigger="custom"
+        >
           <Tooltip.Toggler as={Button}>Bottom left</Tooltip.Toggler>
 
-          <Tooltip.Content style={{width: '200px'}} position="bottom-left">
+          <Tooltip.Content
+            withArrow
+            style={{width: '200px'}}
+            position="bottom-left"
+          >
             <Text size="l" bold>
               Lorem Ipsum Lorem Ipsum
             </Text>
@@ -42,7 +52,11 @@ const Template: Story = (args) => {
         <Tooltip>
           <Tooltip.Toggler as={Button}>Bottom center</Tooltip.Toggler>
 
-          <Tooltip.Content style={{width: '200px'}} position="bottom-center">
+          <Tooltip.Content
+            withArrow
+            style={{width: '200px'}}
+            position="bottom-center"
+          >
             <Text size="l" bold>
               Lorem Ipsum Lorem Ipsum
             </Text>
@@ -52,7 +66,11 @@ const Template: Story = (args) => {
 
         <Tooltip>
           <Tooltip.Toggler as={Button}>Bottom right</Tooltip.Toggler>
-          <Tooltip.Content style={{width: '200px'}} position="bottom-right">
+          <Tooltip.Content
+            withArrow
+            style={{width: '200px'}}
+            position="bottom-right"
+          >
             <Text size="l" bold>
               Lorem Ipsum Lorem Ipsum
             </Text>
@@ -63,7 +81,11 @@ const Template: Story = (args) => {
       <div style={rowStyle}>
         <Tooltip>
           <Tooltip.Toggler as={Button}>Top left</Tooltip.Toggler>
-          <Tooltip.Content style={{width: '200px'}} position="top-left">
+          <Tooltip.Content
+            withArrow
+            style={{width: '200px'}}
+            position="top-left"
+          >
             <Text size="l" bold>
               Lorem Ipsum Lorem Ipsum
             </Text>
@@ -73,7 +95,11 @@ const Template: Story = (args) => {
 
         <Tooltip>
           <Tooltip.Toggler as={Button}>Top center</Tooltip.Toggler>
-          <Tooltip.Content style={{width: '200px'}} position="top-center">
+          <Tooltip.Content
+            withArrow
+            style={{width: '200px'}}
+            position="top-center"
+          >
             <Text size="l" bold>
               Lorem Ipsum Lorem Ipsum
             </Text>
@@ -83,7 +109,11 @@ const Template: Story = (args) => {
 
         <Tooltip>
           <Tooltip.Toggler as={Button}>Top right</Tooltip.Toggler>
-          <Tooltip.Content style={{width: '200px'}} position="top-right">
+          <Tooltip.Content
+            withArrow
+            style={{width: '200px'}}
+            position="top-right"
+          >
             <Text size="l" bold>
               Lorem Ipsum Lorem Ipsum
             </Text>
@@ -94,7 +124,11 @@ const Template: Story = (args) => {
       <div style={rowStyle}>
         <Tooltip persist>
           <Tooltip.Toggler as={Button}>Persist</Tooltip.Toggler>
-          <Tooltip.Content style={{width: '200px'}} position="top-left">
+          <Tooltip.Content
+            withArrow
+            style={{width: '200px'}}
+            position="top-left"
+          >
             <Text size="l" bold>
               Lorem Ipsum Lorem Ipsum
             </Text>
@@ -103,7 +137,11 @@ const Template: Story = (args) => {
         </Tooltip>
         <Tooltip persist trigger="click">
           <Tooltip.Toggler as={Button}>Click trigger</Tooltip.Toggler>
-          <Tooltip.Content style={{width: '200px'}} position="top-right">
+          <Tooltip.Content
+            withArrow
+            style={{width: '200px'}}
+            position="top-right"
+          >
             <Text size="l" bold>
               Lorem Ipsum Lorem Ipsum
             </Text>
@@ -111,11 +149,15 @@ const Template: Story = (args) => {
           </Tooltip.Content>
         </Tooltip>
 
-        <Tooltip>
+        <Tooltip persist>
           <Tooltip.Toggler>
             <Checkbox>Custom toggler</Checkbox>
           </Tooltip.Toggler>
-          <Tooltip.Content style={{width: '200px'}} position="top-left">
+          <Tooltip.Content
+            withArrow
+            style={{width: '200px'}}
+            position="top-left"
+          >
             <Text align="center" size="l" bold>
               Lorem Ipsum Lorem Ipsum
             </Text>
