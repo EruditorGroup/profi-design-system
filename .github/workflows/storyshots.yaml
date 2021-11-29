@@ -28,14 +28,6 @@ jobs:
           MODULE_TYPE: cjs
         run: yarn jest --config=storyshots.config.js --updateSnapshot
 
-      - name: Commit files
-        id: commit
-        run: |
-          git config --global user.email "mischenkoav@eruditorgroup.com"
-          git config --global user.name "mischenkoav"
-          git commit -m "fix(storyshots): update" -a
-          echo "::set-output name=sha_short::$(git rev-parse --short HEAD)"
-
       - name: Push changes
         uses: actions/github-script@v4
         with:
@@ -45,5 +37,5 @@ jobs:
               owner: context.repo.owner,
               repo: context.repo.repo,
               ref: `heads/${{ github.ref_name }}`,
-              sha: "${{ steps.commit.outputs.sha_short }}",
+              sha: "${{ github.sha }}",
             })
