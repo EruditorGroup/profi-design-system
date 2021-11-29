@@ -25,7 +25,7 @@ export default {
 
 const metros = metro.map((station, i) => ({
   value: station,
-  color: '#B24C63',
+  color: '#f0f0f0',
 }));
 
 const Template: Story<Omit<AutosuggestProps, 'suggestions' | 'value'>> = (
