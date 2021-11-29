@@ -1,6 +1,8 @@
 import React, {
   createContext,
+  useState,
   useMemo,
+  useEffect,
   useRef,
   useCallback,
   MutableRefObject,
@@ -8,7 +10,6 @@ import React, {
 } from 'react';
 import cx from 'classnames';
 
-import {useControllableState} from '@eruditorgroup/profi-toolkit';
 import DropdownToggler from './components/DropdownToggler';
 import DropdownPortal from './components/DropdownPortal';
 import DropdownItem from './components/DropdownItem';
@@ -31,7 +32,6 @@ export const DropdownContext = createContext<IDropdownContext | null>(null);
 export type DropdownProps = {
   className?: string;
   closeRefHandler?: MutableRefObject<(() => void) | undefined>;
-  opened?: boolean;
   onChange?: (opened: boolean) => void;
   trigger?: 'click' | 'hover';
   defaultOpened?: boolean;
@@ -46,7 +46,6 @@ interface DropdownComponent extends React.FC<DropdownProps> {
 
 const Dropdown: DropdownComponent = ({
   children,
-  opened: openedProp,
   onChange,
   className,
   closeRefHandler,
@@ -54,32 +53,35 @@ const Dropdown: DropdownComponent = ({
   trigger = 'click',
   ...props
 }) => {
+  const [isOpened, setOpened] = useState(!!defaultOpened);
   const dropdownRef = useRef<HTMLDivElement | null>(null);
-  const [isOpened, setOpened] = useControllableState({
-    value: openedProp,
-    defaultValue: !!defaultOpened,
-    onChange,
-  });
 
   const context = useMemo<IDropdownContext>(
     () => ({isOpened, setOpened, trigger}),
-    [isOpened, setOpened, trigger],
+    [isOpened, trigger],
   );
 
   useMemo(
     () => closeRefHandler && (closeRefHandler.current = () => setOpened(false)),
-    [closeRefHandler, setOpened],
+    [closeRefHandler],
   );
+
+  const onChangeRef = useRef<DropdownProps['onChange']>();
+  onChangeRef.current = onChange;
 
   const onMouseEnter = useCallback(() => {
     if (trigger !== 'hover') return;
     setOpened(true);
-  }, [trigger, setOpened]);
+  }, [trigger]);
 
   const onMouseLeave = useCallback(() => {
     if (trigger !== 'hover') return;
     setOpened(false);
-  }, [trigger, setOpened]);
+  }, [trigger]);
+
+  useEffect(() => {
+    if (onChangeRef.current) onChangeRef.current(isOpened);
+  }, [isOpened]);
 
   return (
     <DropdownContext.Provider value={context}>
