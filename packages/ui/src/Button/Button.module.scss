@@ -10,6 +10,7 @@
   align-items: center;
   outline: none;
   text-decoration: none;
+  font: inherit;
 
   &[disabled] {
     cursor: default;
@@ -201,7 +202,7 @@
   background: transparent;
   padding: 0;
   min-height: inherit;
-  
+
   &.underlined {
     line-height: 1.33em;
     border-radius: 0;
