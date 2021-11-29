@@ -3,6 +3,55 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.57.0](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.53.10...@eruditorgroup/profi-ui@0.57.0) (2021-11-29)
+
+
+
+## 0.27.3 (2021-11-29)
+
+
+### Bug Fixes
+
+* **accordion:** update design & add storyshots workflow ([55fe9f6](https://github.com/eruditorgroup/profi-design-system/commit/55fe9f6cebc4d886c1d38fc886416e3214139e53))
+* **Autosuggest:** story should not generate random colors ([38122f6](https://github.com/eruditorgroup/profi-design-system/commit/38122f668f78a25c4f8e6b5674ca5ff7adc14878))
+
+
+### Features
+
+* **List:** Добавлен skeleton ([748f1e4](https://github.com/eruditorgroup/profi-design-system/commit/748f1e49a7109c868476b95ae56353c01a8f90b5))
+* **storyshots:** add manual workflow ([64abac2](https://github.com/eruditorgroup/profi-design-system/commit/64abac269f863d4437815511658570fa718acc5c))
+* Drodown controllable state ([e64ade3](https://github.com/eruditorgroup/profi-design-system/commit/e64ade3090654421116b04e3747d524c1223f49f))
+
+
+### Reverts
+
+* Revert "feat: Drodown controllable state" (#381) ([94d6451](https://github.com/eruditorgroup/profi-design-system/commit/94d64518d91dc8b72f2dd4627758adbd56411789)), closes [#381](https://github.com/eruditorgroup/profi-design-system/issues/381)
+
+
+
+
+
+# [0.56.0](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.53.10...@eruditorgroup/profi-ui@0.56.0) (2021-11-29)
+
+
+
+## 0.27.3 (2021-11-29)
+
+
+### Features
+
+* **List:** Добавлен skeleton ([748f1e4](https://github.com/eruditorgroup/profi-design-system/commit/748f1e49a7109c868476b95ae56353c01a8f90b5))
+* Drodown controllable state ([e64ade3](https://github.com/eruditorgroup/profi-design-system/commit/e64ade3090654421116b04e3747d524c1223f49f))
+
+
+### Reverts
+
+* Revert "feat: Drodown controllable state" (#381) ([94d6451](https://github.com/eruditorgroup/profi-design-system/commit/94d64518d91dc8b72f2dd4627758adbd56411789)), closes [#381](https://github.com/eruditorgroup/profi-design-system/issues/381)
+
+
+
+
+
 # [0.54.0](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.53.10...@eruditorgroup/profi-ui@0.54.0) (2021-11-29)
 
 

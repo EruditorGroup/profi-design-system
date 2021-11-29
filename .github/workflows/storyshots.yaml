@@ -20,18 +20,19 @@ jobs:
           timezoneLinux: 'Europe/Moscow'
           timezoneWindows: 'Moscow Standard Time'
           timezoneMacos: 'Europe/Moscow'
-      - run: |
-          yarn clean:storybook
-          yarn build:storybook --quiet
-          MODULE_TYPE=cjs jest --config=storyshots.config.js --updateSnapshot
+
+      - run: yarn build:storybook --quiet
+
+      - name: Update snapshots
+        env:
+          MODULE_TYPE: cjs
+        run: yarn jest --config=storyshots.config.js --updateSnapshot
 
       - name: Commit files
+        id: commit
         run: |
-          git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git config --local user.name "github-actions[bot]"
+          git config user.name "mischenkoav"
+          git config user.email "mischenkoav@profi.ru"
           git commit -m "fix(storyshots): update" -a
-      - name: Push changes
-        uses: ad-m/github-push-action@master
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          branch: ${{ github.ref }}
+          git remote set-url origin https://x-access-token:${{ secrets.DEPLOY_GITHUB_TOKEN }}@github.com/${{ github.repository }}
+          git push origin ${{ github.ref_name }}

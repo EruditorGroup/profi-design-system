@@ -9,7 +9,7 @@
 }
 
 .star {
-  color: var(--ui-color-light);
+  color: var(--ui-border-color-secondary);
   transition: 0.1s color ease-in-out, 0.1s transform ease-in-out;
   line-height: 1;
   outline: none;
@@ -37,6 +37,7 @@
 .design_stroked, .design_light {
   stroke: var(--ui-border-color-secondary);
   stroke-width: 2px;
+  color: var(--ui-color-light);
 }
 
 .design_light > * {
@@ -52,6 +53,10 @@
   & > * {
     transform-origin: center;
     animation: scaleSpark 150ms linear;
+  }
+
+  .spark_mini {
+    transform: translate3d(3px, -3px, 0px);
   }
 }
 

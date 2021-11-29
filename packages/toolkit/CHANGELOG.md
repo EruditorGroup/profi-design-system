@@ -3,6 +3,28 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.45.0](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-toolkit@0.41.10...@eruditorgroup/profi-toolkit@0.45.0) (2021-11-29)
+
+
+### Features
+
+* **List:** Добавлен skeleton ([748f1e4](https://github.com/eruditorgroup/profi-design-system/commit/748f1e49a7109c868476b95ae56353c01a8f90b5))
+
+
+
+
+
+# [0.44.0](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-toolkit@0.41.10...@eruditorgroup/profi-toolkit@0.44.0) (2021-11-29)
+
+
+### Features
+
+* **List:** Добавлен skeleton ([748f1e4](https://github.com/eruditorgroup/profi-design-system/commit/748f1e49a7109c868476b95ae56353c01a8f90b5))
+
+
+
+
+
 # [0.43.0](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-toolkit@0.41.10...@eruditorgroup/profi-toolkit@0.43.0) (2021-11-29)
 
 **Note:** Version bump only for package @eruditorgroup/profi-toolkit

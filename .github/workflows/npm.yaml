@@ -70,6 +70,6 @@ jobs:
               owner: context.repo.owner,
               repo: context.repo.repo,
               head: "release/${{ env.GIT_TAG }}",
-              base: "${{ github.ref }}",
+              base: "${{ github.base_ref }}",
               title: "chore: changelog ${{ env.GIT_TAG }}"
             })
