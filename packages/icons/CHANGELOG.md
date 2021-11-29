@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.35.0](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-icons@0.34.22...@eruditorgroup/profi-icons@0.35.0) (2021-11-29)
+
+
+### Features
+
+* **Icons:** Добавил иконку молнии и песочных часов ([3e2aff4](https://github.com/eruditorgroup/profi-design-system/commit/3e2aff47dede23cda2562ec543ecf2d98434190a))
+
+
+
+
+
 ## [0.34.23](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-icons@0.34.22...@eruditorgroup/profi-icons@0.34.23) (2021-11-25)
 
 **Note:** Version bump only for package @eruditorgroup/profi-icons
