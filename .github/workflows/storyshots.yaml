@@ -44,6 +44,6 @@ jobs:
             github.git.updateRef({
               owner: context.repo.owner,
               repo: context.repo.repo,
-              ref: `head/${{ github.ref_name }}`,
+              ref: `heads/${{ github.ref_name }}`,
               sha: "${{ steps.commit.outputs.sha_short }}",
             })
