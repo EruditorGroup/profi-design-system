@@ -64,7 +64,7 @@ const ListItem: ForwardingComponentType = forwardRef((props, ref) => {
     as: Component = 'li',
     ...rest
   } = props;
-  const {size, bordered, design, borderedMode, skeleton} = useListContext();
+  const {size, bordered, design, borderedMode, isLoading} = useListContext();
 
   const isCaption = !!findComponentInChildren(children, Caption);
   const isMainText = !!findComponentInChildren(children, MainText);
@@ -95,7 +95,7 @@ const ListItem: ForwardingComponentType = forwardRef((props, ref) => {
       ref={ref}
       {...rest}
     >
-      {skeleton ? (
+      {isLoading ? (
         <span className={cx(styles['preloader'], theme.transitions.skeleton)} />
       ) : (
         <>
