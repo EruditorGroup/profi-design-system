@@ -1,4 +1,4 @@
-import React, {useEffect, useRef, useState} from 'react';
+import React, {useRef, useState} from 'react';
 import {Story, Meta} from '@storybook/react';
 import type {IDropdownContext} from './index';
 
@@ -21,6 +21,7 @@ const Template: Story = (args) => {
   const ref = useRef<IDropdownContext>();
 
   const [isOpened, setOpened] = useState(!!ref.current?.isOpened);
+  const [isControllableOpened, setControllableOpened] = useState(false);
 
   return (
     <>
@@ -90,9 +91,13 @@ const Template: Story = (args) => {
           </Dropdown.Portal>
         </Dropdown>
 
-        <Dropdown {...args}>
+        <Dropdown
+          opened={isControllableOpened}
+          onChange={(value) => setControllableOpened(value)}
+          {...args}
+        >
           <Dropdown.Toggler as={Button} design="light" style={{float: 'right'}}>
-            Открыть дропдаун
+            Открыть дропдаун (controllable)
           </Dropdown.Toggler>
           <Dropdown.Portal animated={args.animated} position="bottom-right">
             <Menu.Item rounded={false}>

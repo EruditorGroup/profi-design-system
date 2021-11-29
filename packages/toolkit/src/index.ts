@@ -11,6 +11,7 @@ import variables from './styles/variables.css';
 
 import fadeTransition from './styles/FadeIn.module.css';
 import slideTransition from './styles/SlideUp.module.css';
+import skeletonTransition from './styles/Skeleton.module.css';
 
 export const theme = {
   common,
@@ -18,6 +19,7 @@ export const theme = {
   transitions: {
     slide: slideTransition,
     fade: fadeTransition,
+    skeleton: skeletonTransition['skeleton'],
   },
 };
 
