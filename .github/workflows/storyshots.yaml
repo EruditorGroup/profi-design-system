@@ -30,10 +30,15 @@ jobs:
 
       - name: Commit files
         run: |
+          git config --global user.email "mischenkoav@eruditorgroup.com"
+          git config --global user.name "mischenkoav"
           git commit -m "fix(storyshots): update" -a
 
       - name: Push changes
         uses: ad-m/github-push-action@master
+        run: |
+          git config --global user.email "mischenkoav@eruditorgroup.com"
+          git config --global user.name "mischenkoav"
         with:
           github-token: ${{ secrets.DEPLOY_GITHUB_TOKEN }}
           branch: ${{ github.ref }}
