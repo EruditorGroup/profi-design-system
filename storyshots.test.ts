@@ -46,10 +46,5 @@ initStoryshots({
   test: imageSnapshot({
     storybookUrl: getStorybookEntryPath(),
     beforeScreenshot,
-    getMatchOptions: () => ({
-      allowSizeMismatch: true,
-      failureThreshold: 0.03,
-      failureThresholdType: 'percent',
-    }),
   }),
 });

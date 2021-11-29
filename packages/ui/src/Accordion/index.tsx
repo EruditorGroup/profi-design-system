@@ -51,7 +51,7 @@ export const Accordion: React.FC<AccordionProps> = ({
     <>
       <Text
         role="button"
-        className={cx(styles[`design-${design}`], className)}
+        className={cx(styles['title'], styles[`design-${design}`], className)}
         onClick={() => setOpened(!opened)}
         {...props}
       >

@@ -1,23 +1,25 @@
-
-.design-link {
-  display: inline-flex;
-  justify-content: start;
-  &:hover {
-    box-shadow: var(--ui-link-shadow);
-  }
-}
-
-.design-block {
-  width: auto;
+.title {
   display: flex;
-  justify-content: space-between;
+  width: auto;
   padding: 20px 20px;
   margin:  0 -20px;
   border-radius: var(--ui-border-radius-s);
-  align-items: center;
   cursor: pointer;
-  position: relative;
 
+  &:hover {
+    background: var(--ui-color-light);
+  }
+}
+
+
+.design-link {
+  justify-content: start;
+}
+
+.design-block {
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
   &:before {
     content: '';
     display: block;
@@ -29,7 +31,6 @@
   }
 
   &:hover {
-    background: var(--ui-color-light);
     &:before, & + .content:not(.content-opened) + .title:before {
       border-color: transparent;
     }
@@ -37,15 +38,14 @@
 }
 
 .heading {
-  flex-shrink: 0;
   cursor: pointer;
-  max-width: calc(100% - 25px);
 }
 
 .arrow {
   transition: transform .3s;
   transform-origin: center center;
   padding: 2px 5px;
+  flex-shrink: 0;
 }
 
 .arrow-opened {
