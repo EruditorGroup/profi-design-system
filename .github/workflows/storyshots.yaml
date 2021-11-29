@@ -20,7 +20,10 @@ jobs:
           timezoneLinux: 'Europe/Moscow'
           timezoneWindows: 'Moscow Standard Time'
           timezoneMacos: 'Europe/Moscow'
-      - run: yarn test:storybook:update --updateSnapshot
+      - run: |
+          yarn clean:storybook
+          yarn build:storybook --quiet
+          MODULE_TYPE=cjs jest --config=storyshots.config.js --updateSnapshot
 
       - name: Commit files
         run: |
