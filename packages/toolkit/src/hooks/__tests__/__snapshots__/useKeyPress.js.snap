@@ -1,0 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`useKeyPress event fire 1`] = `[Function]`;
+
+exports[`useKeyPress event fire when key = keyName 1`] = `[Function]`;
