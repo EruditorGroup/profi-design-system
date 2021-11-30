@@ -3,6 +3,34 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.0.0-alpha.11](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@1.0.0-alpha.10...@eruditorgroup/profi-ui@1.0.0-alpha.11) (2021-11-30)
+
+
+
+# 1.0.0-alpha.11 (2021-11-30)
+
+
+
+## 0.27.7 (2021-11-30)
+
+
+### Features
+
+* **Dropdown:** Controllable state ([#389](https://github.com/eruditorgroup/profi-design-system/issues/389)) ([c075b43](https://github.com/eruditorgroup/profi-design-system/commit/c075b43f38da7cb111ad636d6facb48c38284674))
+
+
+
+## 0.27.6 (2021-11-30)
+
+
+### Bug Fixes
+
+* **Button:** Font inherit ([#387](https://github.com/eruditorgroup/profi-design-system/issues/387)) ([d361228](https://github.com/eruditorgroup/profi-design-system/commit/d361228c4b7dc5fe9c554a1dcb7443e30da9d672))
+
+
+
+
+
 # [1.0.0-alpha.10](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.57.0...@eruditorgroup/profi-ui@1.0.0-alpha.10) (2021-11-30)
 
 # 1.0.0-alpha.10 (2021-11-30)
