@@ -1,4 +1,5 @@
 .button {
+  font: inherit;
   position: relative;
   border: none;
   font-weight: 600;
@@ -10,7 +11,6 @@
   align-items: center;
   outline: none;
   text-decoration: none;
-  font: inherit;
 
   &[disabled] {
     cursor: default;
