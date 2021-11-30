@@ -1,11 +1,15 @@
-import React, {useContext, forwardRef, useRef} from 'react';
+import React, {useContext, forwardRef, useRef, useCallback} from 'react';
 import classNames from 'classnames';
 
 import type {HTMLAttributes} from 'react';
 import {DropdownContext} from '../../';
 
 import styles from './DropdownPortal.module.scss';
-import {useClickOutside} from '@eruditorgroup/profi-toolkit';
+import {
+  useClickOutside,
+  useKeyPress,
+  KEY_CODES,
+} from '@eruditorgroup/profi-toolkit';
 
 export interface DropdownPortalProps extends HTMLAttributes<HTMLDivElement> {
   animated?: boolean;
@@ -34,15 +38,15 @@ const DropdownPortal = forwardRef<HTMLDivElement, DropdownPortalProps>(
   ) => {
     const _ref = useRef<HTMLDivElement | null>(null);
     const context = useContext(DropdownContext);
-
-    useClickOutside(_ref, () => {
+    const closePortal = useCallback(() => {
       if (!context) return;
 
       const {trigger, isOpened, setOpened} = context;
-      if (trigger === 'click') {
-        isOpened && setOpened(false);
-      }
-    });
+      if (trigger === 'click') isOpened && setOpened(false);
+    }, [context]);
+
+    useClickOutside(_ref, closePortal);
+    useKeyPress(KEY_CODES.ESC, closePortal);
 
     return (
       <div
