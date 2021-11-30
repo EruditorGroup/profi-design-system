@@ -1,6 +1,10 @@
 {
   "name": "@eruditorgroup/profi-icons",
+<<<<<<< HEAD
   "version": "1.0.0-alpha.10",
+=======
+  "version": "0.35.7",
+>>>>>>> 0e3015e5a4df309d86a3f121e9981694da7e9e71
   "description": "Common icon set for Eruditor Group",
   "author": "eruditorgroup",
   "license": "ISC",
@@ -28,7 +32,11 @@
     "/src"
   ],
   "dependencies": {
+<<<<<<< HEAD
     "@eruditorgroup/profi-toolkit": "^1.0.0-alpha.10"
+=======
+    "@eruditorgroup/profi-toolkit": "^0.48.0"
+>>>>>>> 0e3015e5a4df309d86a3f121e9981694da7e9e71
   },
   "peerDependencies": {
     "react": "^16.14.0",

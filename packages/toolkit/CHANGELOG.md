@@ -3,7 +3,41 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<<<<<<< HEAD
 # [1.0.0-alpha.10](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-toolkit@0.45.0...@eruditorgroup/profi-toolkit@1.0.0-alpha.10) (2021-11-30)
+=======
+# [0.48.0](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-toolkit@0.45.0...@eruditorgroup/profi-toolkit@0.48.0) (2021-11-30)
+
+
+
+## 0.27.5 (2021-11-30)
+
+
+### Features
+
+* **Dropdown:** Закрытие на ESC ([#384](https://github.com/eruditorgroup/profi-design-system/issues/384)) ([c036790](https://github.com/eruditorgroup/profi-design-system/commit/c03679021f97876867aa761de5250fd24804df55))
+
+
+
+
+
+# [0.47.0](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-toolkit@0.45.0...@eruditorgroup/profi-toolkit@0.47.0) (2021-11-30)
+
+
+
+## 0.27.5 (2021-11-30)
+
+
+### Features
+
+* **Dropdown:** Закрытие на ESC ([#384](https://github.com/eruditorgroup/profi-design-system/issues/384)) ([c036790](https://github.com/eruditorgroup/profi-design-system/commit/c03679021f97876867aa761de5250fd24804df55))
+
+
+
+
+
+# [0.46.0](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-toolkit@0.45.0...@eruditorgroup/profi-toolkit@0.46.0) (2021-11-30)
+>>>>>>> 0e3015e5a4df309d86a3f121e9981694da7e9e71
 
 
 

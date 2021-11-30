@@ -3,11 +3,72 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<<<<<<< HEAD
 # [1.0.0-alpha.10](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.57.0...@eruditorgroup/profi-ui@1.0.0-alpha.10) (2021-11-30)
 
 
 
 # 1.0.0-alpha.10 (2021-11-30)
+=======
+# [0.60.0](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.57.0...@eruditorgroup/profi-ui@0.60.0) (2021-11-30)
+
+
+
+## 0.27.7 (2021-11-30)
+
+
+### Features
+
+* **Dropdown:** Controllable state ([#389](https://github.com/eruditorgroup/profi-design-system/issues/389)) ([c075b43](https://github.com/eruditorgroup/profi-design-system/commit/c075b43f38da7cb111ad636d6facb48c38284674))
+
+
+
+## 0.27.6 (2021-11-30)
+
+
+### Bug Fixes
+
+* **Button:** Font inherit ([#387](https://github.com/eruditorgroup/profi-design-system/issues/387)) ([d361228](https://github.com/eruditorgroup/profi-design-system/commit/d361228c4b7dc5fe9c554a1dcb7443e30da9d672))
+
+
+
+## 0.27.5 (2021-11-30)
+
+
+### Features
+
+* **Dropdown:** Закрытие на ESC ([#384](https://github.com/eruditorgroup/profi-design-system/issues/384)) ([c036790](https://github.com/eruditorgroup/profi-design-system/commit/c03679021f97876867aa761de5250fd24804df55))
+
+
+
+
+
+# [0.59.0](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.57.0...@eruditorgroup/profi-ui@0.59.0) (2021-11-30)
+
+
+
+## 0.27.6 (2021-11-30)
+
+
+### Bug Fixes
+
+* **Button:** Font inherit ([#387](https://github.com/eruditorgroup/profi-design-system/issues/387)) ([d361228](https://github.com/eruditorgroup/profi-design-system/commit/d361228c4b7dc5fe9c554a1dcb7443e30da9d672))
+
+
+
+## 0.27.5 (2021-11-30)
+
+
+### Features
+
+* **Dropdown:** Закрытие на ESC ([#384](https://github.com/eruditorgroup/profi-design-system/issues/384)) ([c036790](https://github.com/eruditorgroup/profi-design-system/commit/c03679021f97876867aa761de5250fd24804df55))
+
+
+
+
+
+# [0.58.0](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.57.0...@eruditorgroup/profi-ui@0.58.0) (2021-11-30)
+>>>>>>> 0e3015e5a4df309d86a3f121e9981694da7e9e71
 
 
 
