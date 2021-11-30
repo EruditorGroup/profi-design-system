@@ -23,18 +23,9 @@ export default {
   component: Autosuggest,
 } as Meta;
 
-function getRandomColor(): string | undefined {
-  var letters = '0123456789ABCDEF';
-  var color = '#';
-  for (var i = 0; i < 6; i++) {
-    color += letters[Math.floor(Math.random() * 16)];
-  }
-  return Math.random() >= 0.5 ? undefined : color;
-}
-
-const metros = metro.map((station) => ({
+const metros = metro.map((station, i) => ({
   value: station,
-  color: getRandomColor(),
+  color: '#f0f0f0',
 }));
 
 const Template: Story<Omit<AutosuggestProps, 'suggestions' | 'value'>> = (

@@ -1,7 +1,8 @@
-import React, {useState} from 'react';
+import React from 'react';
 import {Story, Meta} from '@storybook/react';
 
-import {Accordion, AccordionProps, Textarea} from '@eruditorgroup/profi-ui';
+import {Accordion, AccordionProps} from './index';
+import {Textarea} from '@eruditorgroup/profi-ui';
 
 export default {
   title: 'Accordion',

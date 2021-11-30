@@ -10,5 +10,3 @@ export const DOWN_ARROW = 40;
 export const DELETE = 46;
 export const NUMBER_ZERO = 48;
 export const NUMBER_NINE = 57;
-
-export const CONTROL_CHARATERS_RANGE_END = 31;
