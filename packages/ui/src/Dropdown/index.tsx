@@ -67,7 +67,7 @@ const Dropdown: DropdownComponent = ({
 
   useMemo(
     () => closeRefHandler && (closeRefHandler.current = () => setOpened(false)),
-    [closeRefHandler],
+    [closeRefHandler, setOpened],
   );
 
   const onMouseEnter = useCallback(() => {

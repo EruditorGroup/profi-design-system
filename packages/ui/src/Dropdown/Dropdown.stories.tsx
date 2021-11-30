@@ -97,7 +97,7 @@ const Template: Story = (args) => {
           onChange={setControllableOpened}
         >
           <Dropdown.Toggler as={Button} design="light" style={{float: 'right'}}>
-            Открыть дропдаун (controllable)
+            Открыть дропдаун
           </Dropdown.Toggler>
           <Dropdown.Portal animated={args.animated} position="bottom-right">
             <Menu.Item rounded={false}>
