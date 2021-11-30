@@ -21,6 +21,7 @@ const Template: Story = (args) => {
   const ref = useRef<IDropdownContext>();
 
   const [isOpened, setOpened] = useState(!!ref.current?.isOpened);
+  const [isControllableOpened, setControllableOpened] = useState(false);
 
   return (
     <>
@@ -90,7 +91,11 @@ const Template: Story = (args) => {
           </Dropdown.Portal>
         </Dropdown>
 
-        <Dropdown {...args}>
+        <Dropdown
+          {...args}
+          opened={isControllableOpened}
+          onChange={setControllableOpened}
+        >
           <Dropdown.Toggler as={Button} design="light" style={{float: 'right'}}>
             Открыть дропдаун
           </Dropdown.Toggler>
