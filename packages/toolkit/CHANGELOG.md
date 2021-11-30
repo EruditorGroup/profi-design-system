@@ -3,93 +3,39 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
-<<<<<<< HEAD
 # [1.0.0-alpha.10](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-toolkit@0.45.0...@eruditorgroup/profi-toolkit@1.0.0-alpha.10) (2021-11-30)
-=======
-# [0.48.0](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-toolkit@0.45.0...@eruditorgroup/profi-toolkit@0.48.0) (2021-11-30)
-
-
-
-## 0.27.5 (2021-11-30)
-
-
-### Features
-
-* **Dropdown:** Закрытие на ESC ([#384](https://github.com/eruditorgroup/profi-design-system/issues/384)) ([c036790](https://github.com/eruditorgroup/profi-design-system/commit/c03679021f97876867aa761de5250fd24804df55))
-
-
-
-
-
-# [0.47.0](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-toolkit@0.45.0...@eruditorgroup/profi-toolkit@0.47.0) (2021-11-30)
-
-
-
-## 0.27.5 (2021-11-30)
-
-
-### Features
-
-* **Dropdown:** Закрытие на ESC ([#384](https://github.com/eruditorgroup/profi-design-system/issues/384)) ([c036790](https://github.com/eruditorgroup/profi-design-system/commit/c03679021f97876867aa761de5250fd24804df55))
-
-
-
-
-
-# [0.46.0](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-toolkit@0.45.0...@eruditorgroup/profi-toolkit@0.46.0) (2021-11-30)
->>>>>>> 0e3015e5a4df309d86a3f121e9981694da7e9e71
-
-
 
 # 1.0.0-alpha.10 (2021-11-30)
 
-
-
 ## 0.27.5 (2021-11-30)
-
 
 ### Features
 
-* **Dropdown:** Закрытие на ESC ([#384](https://github.com/eruditorgroup/profi-design-system/issues/384)) ([c036790](https://github.com/eruditorgroup/profi-design-system/commit/c03679021f97876867aa761de5250fd24804df55))
-
-
+- **Dropdown:** Закрытие на ESC ([#384](https://github.com/eruditorgroup/profi-design-system/issues/384)) ([c036790](https://github.com/eruditorgroup/profi-design-system/commit/c03679021f97876867aa761de5250fd24804df55))
 
 # 1.0.0-alpha.8 (2021-11-29)
 
-
 ### Bug Fixes
 
-* bump versions ([5e4227d](https://github.com/eruditorgroup/profi-design-system/commit/5e4227d8858fa0a8b1d79500eef102da7917d833))
-* bump versions ([a2e80a7](https://github.com/eruditorgroup/profi-design-system/commit/a2e80a7fd90ad50c39d19980036b11de0a4c59a0))
-* bump versions ([a9dcca5](https://github.com/eruditorgroup/profi-design-system/commit/a9dcca573d09a93610932d2a5338d1854a70a0be))
-* bump versions ([a5d6b59](https://github.com/eruditorgroup/profi-design-system/commit/a5d6b590f775b311c4dfa99a982572bd505ffed1))
-
-
-
-
+- bump versions ([5e4227d](https://github.com/eruditorgroup/profi-design-system/commit/5e4227d8858fa0a8b1d79500eef102da7917d833))
+- bump versions ([a2e80a7](https://github.com/eruditorgroup/profi-design-system/commit/a2e80a7fd90ad50c39d19980036b11de0a4c59a0))
+- bump versions ([a9dcca5](https://github.com/eruditorgroup/profi-design-system/commit/a9dcca573d09a93610932d2a5338d1854a70a0be))
+- bump versions ([a5d6b59](https://github.com/eruditorgroup/profi-design-system/commit/a5d6b590f775b311c4dfa99a982572bd505ffed1))
 
 # [1.0.0-alpha.9](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-toolkit@0.41.10...@eruditorgroup/profi-toolkit@1.0.0-alpha.9) (2021-11-29)
 
-
-
 # 1.0.0-alpha.8 (2021-11-29)
-
 
 ### Bug Fixes
 
-* bump versions ([5e4227d](https://github.com/eruditorgroup/profi-design-system/commit/5e4227d8858fa0a8b1d79500eef102da7917d833))
-* bump versions ([a2e80a7](https://github.com/eruditorgroup/profi-design-system/commit/a2e80a7fd90ad50c39d19980036b11de0a4c59a0))
-* bump versions ([a9dcca5](https://github.com/eruditorgroup/profi-design-system/commit/a9dcca573d09a93610932d2a5338d1854a70a0be))
-* bump versions ([a5d6b59](https://github.com/eruditorgroup/profi-design-system/commit/a5d6b590f775b311c4dfa99a982572bd505ffed1))
-
+- bump versions ([5e4227d](https://github.com/eruditorgroup/profi-design-system/commit/5e4227d8858fa0a8b1d79500eef102da7917d833))
+- bump versions ([a2e80a7](https://github.com/eruditorgroup/profi-design-system/commit/a2e80a7fd90ad50c39d19980036b11de0a4c59a0))
+- bump versions ([a9dcca5](https://github.com/eruditorgroup/profi-design-system/commit/a9dcca573d09a93610932d2a5338d1854a70a0be))
+- bump versions ([a5d6b59](https://github.com/eruditorgroup/profi-design-system/commit/a5d6b590f775b311c4dfa99a982572bd505ffed1))
 
 ### Features
 
-* **List:** Добавлен skeleton ([748f1e4](https://github.com/eruditorgroup/profi-design-system/commit/748f1e49a7109c868476b95ae56353c01a8f90b5))
-
-
-
-
+- **List:** Добавлен skeleton ([748f1e4](https://github.com/eruditorgroup/profi-design-system/commit/748f1e49a7109c868476b95ae56353c01a8f90b5))
 
 ## [0.41.10](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-toolkit@0.41.8...@eruditorgroup/profi-toolkit@0.41.10) (2021-11-29)
 

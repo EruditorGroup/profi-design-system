@@ -1,10 +1,6 @@
 {
   "name": "@eruditorgroup/profi-toolkit",
-<<<<<<< HEAD
   "version": "1.0.0-alpha.10",
-=======
-  "version": "0.48.0",
->>>>>>> 0e3015e5a4df309d86a3f121e9981694da7e9e71
   "description": "Toolkit for React for Eruditor Group",
   "author": "eruditorgroup",
   "license": "ISC",

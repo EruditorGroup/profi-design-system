@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { runIfFn } from '../utils/runIfFn';
+import {runIfFn} from '../utils/runIfFn';
 import usePersistCallback from './usePersistCallback';
 
 export interface UseControllableStateProps<T> {
@@ -49,5 +49,3 @@ export default function useControllableState<T>(
 
   return [value, updateValue];
 }
-
-
