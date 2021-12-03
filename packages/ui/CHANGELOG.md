@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.0.0-alpha.12](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@1.0.0-alpha.11...@eruditorgroup/profi-ui@1.0.0-alpha.12) (2021-12-03)
+
+
+### Bug Fixes
+
+* **List:** Prop isLoading changed skeleton ([94276be](https://github.com/eruditorgroup/profi-design-system/commit/94276bea2ad83014386758b7f7efdb341a9b4899))
+
+
+### Features
+
+* **Button:** Added skeleton ([8ff58ab](https://github.com/eruditorgroup/profi-design-system/commit/8ff58abd0f2bc13face88fe2e3366f7fe8288030))
+
+
+
+
+
 # [1.0.0-alpha.11](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@1.0.0-alpha.10...@eruditorgroup/profi-ui@1.0.0-alpha.11) (2021-11-30)
 
 
