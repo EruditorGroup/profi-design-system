@@ -30,6 +30,32 @@ module.exports = {
   optimization: {
     minimizer: [new TerserPlugin(), new OptimizeCSSAssetsPlugin()],
   },
+  externals: {
+    react: {
+      commonjs: 'react',
+      commonjs2: 'react',
+      amd: 'react',
+      root: 'React',
+    },
+    'react-dom': {
+      commonjs: 'react-dom',
+      commonjs2: 'react-dom',
+      amd: 'react-dom',
+      root: 'ReactDOM',
+    },
+    ...GET_PACKEGES_INFO().reduce(
+      (packages, package) =>
+        Object.assign(packages, {
+          [package.name]: {
+            commonjs: package.name,
+            commonjs2: package.name,
+            amd: package.libFilename,
+            root: package.libName,
+          },
+        }),
+      {},
+    ),
+  },
   module: {
     rules: [
       {
