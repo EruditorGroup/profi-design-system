@@ -219,7 +219,7 @@ export const ListSkeletonStory = TemplateFactory(
 ).bind({});
 ListSkeletonStory.storyName = 'Skeleton';
 ListSkeletonStory.args = {
-  isLoading: true,
+  skeleton: true,
   children: (
     <>
       <List.Item>Тестовый тест</List.Item>

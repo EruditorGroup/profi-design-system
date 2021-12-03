@@ -1,8 +1,10 @@
 import React, {forwardRef, ButtonHTMLAttributes, useMemo} from 'react';
-import classnames from 'classnames';
+import cx from 'classnames';
+
+import {theme} from '@eruditorgroup/profi-toolkit';
 
 import styles from './Button.module.scss';
-import {
+import type {
   ForwardingComponent,
   AliasProps,
   IColor,
@@ -25,6 +27,7 @@ type ButtonUndesignedProps = {
   leading?: React.ReactNode;
   trailing?: React.ReactNode;
   contentClassName?: string;
+  skeleton?: boolean;
 };
 
 export type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> &
@@ -50,6 +53,7 @@ const Button: ForwardingComponent<'button', ButtonProps> = forwardRef(
       leading,
       trailing,
       regular,
+      skeleton,
       ...props
     },
     ref,
@@ -58,16 +62,22 @@ const Button: ForwardingComponent<'button', ButtonProps> = forwardRef(
       trailing,
       leading,
     ]);
+
     const underlined = useMemo(() => {
       const result = design === 'link' && props['underlined'];
       delete props['underlined'];
       return result;
     }, [design, props]);
 
+    const skeletonClassnames = cx(
+      styles['skeleton'],
+      theme.transitions.skeleton,
+    );
+
     return (
       <Component
         type={type}
-        className={classnames(
+        className={cx(
           styles['button'],
           styles[`design-${design}`],
           styles[`size-${size}`],
@@ -75,6 +85,7 @@ const Button: ForwardingComponent<'button', ButtonProps> = forwardRef(
           rounded && styles[`rounded`],
           regular && styles[`regular`],
           underlined && styles['underlined'],
+          skeleton && !isSkeletonInline(design) && skeletonClassnames,
           className,
         )}
         {...props}
@@ -84,7 +95,13 @@ const Button: ForwardingComponent<'button', ButtonProps> = forwardRef(
         {shouldRenderSuffix && (
           <span className={styles['leading']}>{leading}</span>
         )}
-        <span className={classnames(styles['content'], contentClassName)}>
+        <span
+          className={cx(
+            styles['content'],
+            skeleton && isSkeletonInline(design) && skeletonClassnames,
+            contentClassName,
+          )}
+        >
           {children}
         </span>
         {shouldRenderSuffix && (
@@ -94,5 +111,9 @@ const Button: ForwardingComponent<'button', ButtonProps> = forwardRef(
     );
   },
 );
+
+function isSkeletonInline(design: ButtonProps['design']) {
+  return ['link', 'transparent'].includes(design);
+}
 
 export default Button;
