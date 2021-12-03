@@ -13,7 +13,7 @@ interface ListContextType {
   design: TListDesign;
   borderedMode: BorderedModeType;
   boldItemMainText: boolean;
-  isLoading?: boolean;
+  skeleton?: boolean;
 }
 
 const ListContext = createContext<ListContextType | null>(null);
@@ -32,7 +32,7 @@ export type ListProps = Omit<
   bordered?: boolean;
   borderedMode?: BorderedModeType;
   boldItemMainText?: boolean;
-  isLoading?: boolean;
+  skeleton?: boolean;
 };
 
 type HighDesignProps = {
@@ -56,7 +56,7 @@ const List: ComponentType = function List(props) {
     as: Component = 'ul',
     size = 'm',
     design = 'low',
-    isLoading,
+    skeleton,
     ...rest
   } = props;
 
@@ -68,7 +68,7 @@ const List: ComponentType = function List(props) {
         design,
         borderedMode,
         boldItemMainText,
-        isLoading,
+        skeleton,
       }}
     >
       <Component className={styles['list']} {...rest}>
