@@ -3,6 +3,50 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.61.0](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.57.0...@eruditorgroup/profi-ui@0.61.0) (2021-12-05)
+
+
+### Bug Fixes
+
+* **List:** Prop isLoading changed skeleton ([94276be](https://github.com/eruditorgroup/profi-design-system/commit/94276bea2ad83014386758b7f7efdb341a9b4899))
+
+
+### Features
+
+* **Button:** Added skeleton ([8ff58ab](https://github.com/eruditorgroup/profi-design-system/commit/8ff58abd0f2bc13face88fe2e3366f7fe8288030))
+* **Gallery:** Add albums support ([3ec2c54](https://github.com/eruditorgroup/profi-design-system/commit/3ec2c5423ed8018125b55072402427a1fb6bb92a))
+
+
+
+## 0.27.7 (2021-11-30)
+
+
+### Features
+
+* **Dropdown:** Controllable state ([#389](https://github.com/eruditorgroup/profi-design-system/issues/389)) ([c075b43](https://github.com/eruditorgroup/profi-design-system/commit/c075b43f38da7cb111ad636d6facb48c38284674))
+
+
+
+## 0.27.6 (2021-11-30)
+
+
+### Bug Fixes
+
+* **Button:** Font inherit ([#387](https://github.com/eruditorgroup/profi-design-system/issues/387)) ([d361228](https://github.com/eruditorgroup/profi-design-system/commit/d361228c4b7dc5fe9c554a1dcb7443e30da9d672))
+
+
+
+## 0.27.5 (2021-11-30)
+
+
+### Features
+
+* **Dropdown:** Закрытие на ESC ([#384](https://github.com/eruditorgroup/profi-design-system/issues/384)) ([c036790](https://github.com/eruditorgroup/profi-design-system/commit/c03679021f97876867aa761de5250fd24804df55))
+
+
+
+
+
 # [0.60.0](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.57.0...@eruditorgroup/profi-ui@0.60.0) (2021-11-30)
 
 
