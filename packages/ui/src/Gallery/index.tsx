@@ -4,55 +4,80 @@ import {
   KEY_CODES,
   useCurrentScreen,
   gestures,
+  numberLoop,
 } from '@eruditorgroup/profi-toolkit';
-import {Modal} from '../index';
+import {ChevronLeftIcon} from '@eruditorgroup/profi-icons';
+import {Button, Modal} from '../index';
 import Image from './components/Image';
+import Album from './components/Album';
 
-import type {Image as IImage} from './types';
+import type {Image as IImage, Album as IAlbum} from './types';
 
 import styles from './Gallery.module.scss';
 
 export interface GalleryProps extends React.HTMLProps<HTMLDivElement> {
   className?: string;
+  albums?: IAlbum[];
   images: IImage[];
-  currentImage?: number;
+  openImage?: number;
+  openAlbum?: number;
+  onAlbumImagesFetch?: (albumId: IAlbum) => Promise<IImage[]>;
   onClose: () => unknown;
   onNext?: () => unknown;
   onBack?: () => unknown;
 }
 
 const Gallery = React.forwardRef<HTMLDivElement, GalleryProps>(function Gallery(
-  {className, currentImage, images, onClose, onNext, onBack},
+  {
+    className,
+    openAlbum,
+    openImage,
+    albums,
+    images,
+    onAlbumImagesFetch,
+    onClose,
+    onNext,
+    onBack,
+  },
   ref,
 ) {
+  const loop = numberLoop.bind(null, images.length);
   const isMobile = useCurrentScreen('mobile');
-  const isSingleImage = images.length === 1;
-
-  const loop = React.useCallback(
-    (dir: number) => {
-      const len = images.length;
-      return Math.abs(len + dir) % len;
-    },
-    [images],
-  );
-
-  const [currentIndex, move] = React.useReducer(
-    (i: number, dir: 'next' | 'back') => loop(dir === 'next' ? i + 1 : i - 1),
-    currentImage,
-  );
-
   const [movePc, setMovePc] = React.useState(0);
   const [state, setState] = React.useState(null);
   const [enableSwipeDown, setEnableSwipeDown] = React.useState(true);
+  const [albumsImages, setAlbumsImages] = React.useState<
+    Record<number, IImage[]>
+  >({});
+  const imagesCollection = openAlbum ? albumsImages[openAlbum] : images;
+  const isSingleImage = images.length === 1;
+  const currentAlbum = albums?.[openAlbum];
 
-  const [prev, current, next] = React.useMemo(
-    () => [
-      images[loop(currentIndex - 1)],
-      images[loop(currentIndex)],
-      images[loop(currentIndex + 1)],
-    ],
-    [loop, currentIndex, images],
+  const [currentIndex, move] = React.useReducer(
+    (i = 0, to: 'next' | 'back' | number | null) => {
+      switch (to) {
+        case 'next':
+          return loop(i + 1);
+        case 'back':
+          return loop(i - 1);
+        default:
+          return typeof to === 'number' ? loop(to) : null;
+      }
+    },
+    openImage,
   );
+
+  const isAlbumImageOpened = openAlbum != null && currentIndex != null;
+
+  const [prev, current, next] = React.useMemo(() => {
+    return currentIndex != null && imagesCollection && imagesCollection.length
+      ? [
+          imagesCollection[loop(currentIndex - 1)],
+          imagesCollection[loop(currentIndex)],
+          imagesCollection[loop(currentIndex + 1)],
+        ]
+      : [];
+  }, [currentIndex, imagesCollection, loop]);
 
   const bind = gestures.useGesture(
     {
@@ -97,6 +122,17 @@ const Gallery = React.forwardRef<HTMLDivElement, GalleryProps>(function Gallery(
     [onClose],
   );
 
+  React.useEffect(
+    function fetchAlbumImages() {
+      if (currentAlbum && onAlbumImagesFetch && !albumsImages[openAlbum]) {
+        onAlbumImagesFetch(currentAlbum).then((res) =>
+          setAlbumsImages((x) => ({...x, [openAlbum]: res})),
+        );
+      }
+    },
+    [currentAlbum, openAlbum, albumsImages, onAlbumImagesFetch],
+  );
+
   const handleNext = React.useCallback(
     function handleNext() {
       if (images.length > 1) {
@@ -129,7 +165,7 @@ const Gallery = React.forwardRef<HTMLDivElement, GalleryProps>(function Gallery(
   };
 
   return (
-    currentImage != null && (
+    (openImage != null || openAlbum != null) && (
       <Modal
         className={cx(className, styles['modal'])}
         onClose={onClose}
@@ -141,6 +177,26 @@ const Gallery = React.forwardRef<HTMLDivElement, GalleryProps>(function Gallery(
         ref={ref}
       >
         <Modal.CloseButton size="s" withHoverAnimation={false} />
+        <Button
+          className={cx(
+            styles['buttonBack'],
+            !isAlbumImageOpened && styles['hidden'],
+          )}
+          size="s"
+          design="transparent"
+          rounded
+          onClick={() => move(null)}
+        >
+          <ChevronLeftIcon />
+        </Button>
+        {openAlbum != null && (
+          <Album
+            {...currentAlbum}
+            className={cx(isAlbumImageOpened && styles['hidden'])}
+            images={albumsImages[openAlbum]}
+            onImageClick={move}
+          />
+        )}
         {isMobile && prev && (
           <Image
             {...prev}
@@ -148,18 +204,20 @@ const Gallery = React.forwardRef<HTMLDivElement, GalleryProps>(function Gallery(
             style={{transform: `translate3d(${-100 + movePc}%, 0, 0)`}}
           />
         )}
-        <Image
-          {...current}
-          {...bind()}
-          {...imageProps}
-          onTransitionEnd={() => {
-            setState(null);
-            state === 'swipe' && move(movePc < 0 ? 'next' : 'back');
-            setMovePc(0);
-          }}
-          style={{transform: `translate3d(${movePc}%, 0, 0)`}}
-          showInfo
-        />
+        {current && (
+          <Image
+            {...current}
+            {...bind()}
+            {...imageProps}
+            onTransitionEnd={() => {
+              setState(null);
+              state === 'swipe' && move(movePc < 0 ? 'next' : 'back');
+              setMovePc(0);
+            }}
+            style={{transform: `translate3d(${movePc}%, 0, 0)`}}
+            showInfo
+          />
+        )}
         {isMobile && next && (
           <Image
             {...next}
