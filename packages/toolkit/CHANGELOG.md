@@ -3,6 +3,26 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.49.0](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-toolkit@0.45.0...@eruditorgroup/profi-toolkit@0.49.0) (2021-12-06)
+
+
+### Features
+
+* **toolkit:** Add numberLoop util func ([317bffb](https://github.com/eruditorgroup/profi-design-system/commit/317bffb10d0457b100ec721da7e37fab6cbb3564))
+
+
+
+## 0.27.5 (2021-11-30)
+
+
+### Features
+
+* **Dropdown:** Закрытие на ESC ([#384](https://github.com/eruditorgroup/profi-design-system/issues/384)) ([c036790](https://github.com/eruditorgroup/profi-design-system/commit/c03679021f97876867aa761de5250fd24804df55))
+
+
+
+
+
 # [0.48.0](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-toolkit@0.45.0...@eruditorgroup/profi-toolkit@0.48.0) (2021-11-30)
 
 
