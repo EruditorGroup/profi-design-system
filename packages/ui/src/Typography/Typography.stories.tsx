@@ -14,53 +14,56 @@ const td = {
   border: '1px solid #ececec',
 };
 
-export const Default: Story<TextProps> = (args) => {
-  return (
-    <Text as="div" color="secondary">
-      <table cellPadding="10">
-        <thead>
-          <tr>
-            <th></th>
-            <th>Regular</th>
-            <th>Bold</th>
+const Template: Story<TextProps> = (args) => (
+  <Text as="div" color="secondary">
+    <table cellPadding="10">
+      <thead>
+        <tr>
+          <th></th>
+          <th>Regular</th>
+          <th>Bold</th>
+        </tr>
+      </thead>
+      <tbody>
+        {(['xs', 's', 'm', 'l'] as TextProps['size'][]).map((size) => (
+          <tr key={size}>
+            <td style={td}>Text: {size?.toUpperCase()}</td>
+            <td style={td}>
+              <Text {...args} size={size}>
+                Съешь ещё этих мягких французских булок
+              </Text>
+            </td>
+            <td style={td}>
+              <Text {...args} size={size} bold>
+                Съешь ещё этих мягких французских булок
+              </Text>
+            </td>
           </tr>
-        </thead>
-        <tbody>
-          {(['xs', 's', 'm', 'l'] as TextProps['size'][]).map((size) => (
+        ))}
+        {(['xl', 'xxl', '3xl', '4xl', '5xl'] as TitleProps['size'][]).map(
+          (size) => (
             <tr key={size}>
-              <td style={td}>Text: {size?.toUpperCase()}</td>
+              <td style={td}>Title: {size?.toUpperCase()}</td>
               <td style={td}>
-                <Text size={size}>Съешь ещё этих мягких французских булок</Text>
+                <Title {...args} size={size} bold={false}>
+                  Съешь ещё этих мягких французских булок
+                </Title>
               </td>
               <td style={td}>
-                <Text size={size} bold>
+                <Title {...args} size={size}>
                   Съешь ещё этих мягких французских булок
-                </Text>
+                </Title>
               </td>
             </tr>
-          ))}
-          {(['xl', 'xxl', '3xl', '4xl', '5xl'] as TitleProps['size'][]).map(
-            (size) => (
-              <tr key={size}>
-                <td style={td}>Title: {size?.toUpperCase()}</td>
-                <td style={td}>
-                  <Title size={size} bold={false}>
-                    Съешь ещё этих мягких французских булок
-                  </Title>
-                </td>
-                <td style={td}>
-                  <Title size={size}>
-                    Съешь ещё этих мягких французских булок
-                  </Title>
-                </td>
-              </tr>
-            ),
-          )}
-        </tbody>
-      </table>
-    </Text>
-  );
-};
+          ),
+        )}
+      </tbody>
+    </table>
+  </Text>
+);
+export const Default = Template.bind({});
+export const Skeleton = Template.bind({});
+Skeleton.args = {skeleton: true};
 
 export const TextInsideText: Story<TextProps> = (args) => (
   <Title size="xl">

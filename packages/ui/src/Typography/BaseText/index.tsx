@@ -1,5 +1,5 @@
 import React, {forwardRef, HTMLAttributes} from 'react';
-import classNames from 'classnames';
+import cx from 'classnames';
 
 import styles from './BaseText.module.scss';
 import {theme} from '@eruditorgroup/profi-toolkit';
@@ -10,6 +10,7 @@ export interface BaseTextProps extends HTMLAttributes<HTMLParagraphElement> {
   color?: IColor | 'muted' | 'disabled';
   bold?: boolean;
   align?: 'center' | 'right' | 'left';
+  skeleton?: boolean;
 }
 
 const BaseText = forwardRef<unknown, BaseTextProps & AliasProps>(
@@ -20,6 +21,7 @@ const BaseText = forwardRef<unknown, BaseTextProps & AliasProps>(
       as: Component = 'p',
       className,
       color = 'default',
+      skeleton,
       ...props
     },
     ref,
@@ -28,12 +30,13 @@ const BaseText = forwardRef<unknown, BaseTextProps & AliasProps>(
       <Component
         {...props}
         ref={ref}
-        className={classNames(
+        className={cx(
           styles['text'],
           align && styles[`align-${align}`],
           theme.common[`color-${color}`] || styles[`color-${color}`],
           bold && theme.common[`bold`],
           !bold && theme.common[`regular`],
+          skeleton && cx(theme.transitions.skeleton, styles['skeleton']),
           className,
         )}
       />
