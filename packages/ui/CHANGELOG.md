@@ -3,6 +3,41 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.0.0-alpha.13](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.61.0...@eruditorgroup/profi-ui@1.0.0-alpha.13) (2021-12-09)
+
+
+
+# 1.0.0-alpha.13 (2021-12-09)
+
+
+### Features
+
+* Добавлен skeleton на Text и Link ([ba90709](https://github.com/eruditorgroup/profi-design-system/commit/ba907092089ca8e1039b013d9036afa2ae9cd6d4))
+
+
+
+# 1.0.0-alpha.11 (2021-11-30)
+
+
+
+# 1.0.0-alpha.10 (2021-11-30)
+
+
+
+# 1.0.0-alpha.8 (2021-11-29)
+
+
+### Bug Fixes
+
+* bump versions ([5e4227d](https://github.com/eruditorgroup/profi-design-system/commit/5e4227d8858fa0a8b1d79500eef102da7917d833))
+* bump versions ([a2e80a7](https://github.com/eruditorgroup/profi-design-system/commit/a2e80a7fd90ad50c39d19980036b11de0a4c59a0))
+* bump versions ([a9dcca5](https://github.com/eruditorgroup/profi-design-system/commit/a9dcca573d09a93610932d2a5338d1854a70a0be))
+* bump versions ([a5d6b59](https://github.com/eruditorgroup/profi-design-system/commit/a5d6b590f775b311c4dfa99a982572bd505ffed1))
+
+
+
+
+
 # [1.0.0-alpha.12](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@1.0.0-alpha.11...@eruditorgroup/profi-ui@1.0.0-alpha.12) (2021-12-03)
 
 
