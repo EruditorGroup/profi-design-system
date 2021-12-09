@@ -9,3 +9,12 @@ export interface Image {
   description?: string;
   tags?: string[];
 }
+
+export interface Album {
+  id: number | string;
+  name: string;
+  description: string;
+  previewSrc: string;
+  filesCount: number;
+  tags?: string[];
+}

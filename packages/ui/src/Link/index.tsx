@@ -1,5 +1,5 @@
 import React, {forwardRef} from 'react';
-import classnames from 'classnames';
+import cx from 'classnames';
 import type {
   AnchorHTMLAttributes,
   ForwardRefExoticComponent,
@@ -20,6 +20,7 @@ export interface LinkProps
   underlined?: boolean;
   disabled?: boolean;
   clear?: boolean;
+  skeleton?: boolean;
 }
 
 const Link: ForwardRefExoticComponent<
@@ -37,6 +38,7 @@ const Link: ForwardRefExoticComponent<
       className,
       onClick: onClickOrigin,
       clear,
+      skeleton,
       ...props
     },
     ref,
@@ -55,7 +57,7 @@ const Link: ForwardRefExoticComponent<
       <a
         ref={ref}
         href={href}
-        className={classnames(
+        className={cx(
           !clear && styles['link'],
           block && styles['block'],
           disabled && styles['disabled'],
@@ -63,6 +65,7 @@ const Link: ForwardRefExoticComponent<
           bold && theme.common['bold'],
           size && theme.common[`size-${size}`],
           color && theme.common[`color-${color}`],
+          skeleton && cx(theme.transitions.skeleton, styles['skeleton']),
           className,
         )}
         onClick={onClick}

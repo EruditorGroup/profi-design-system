@@ -2,6 +2,7 @@ import React from 'react';
 import noop from 'lodash/noop';
 import {Story, Meta} from '@storybook/react';
 import Gallery from '../index';
+import {Image as IImage, Album as IAlbum} from '../types';
 
 import example_1 from './example_1.png';
 import example_2 from './example_2.png';
@@ -27,16 +28,52 @@ const info = {
   tags: ['Ремонт', 'Ремонт квартиры', 'Дизайн интерьера', 'Сантехника'],
 };
 
-const images = [example_1, example_2, example_3].map((src) => ({src, ...info}));
+const images: IImage[] = [example_1, example_2, example_3].map((src) => ({
+  src,
+  ...info,
+}));
 
-const Template: Story = ({...args}) => {
+const albums: IAlbum[] = [
+  {
+    id: 0,
+    name: 'ремонт квартиры',
+    description:
+      'Успех нашей компании заключается в том, что GLAVSTROYAPP строительная фирма в которой не просто работают люди, а трудится команда настоящих профессионалов. Мы, как руководители нашей компании, начинали работать сами, своими руками , шли с самых низов и в отличии от остальных, знаем весь процесс ремонта от А до Я.',
+    tags: ['ремонт', 'ремонт квартиры', 'дизайн интерьера', 'сантехника'],
+    previewSrc: example_1,
+    filesCount: images.length,
+  },
+];
+
+const getAlbumsPhoto: () => Promise<IImage[]> = () =>
+  new Promise((res) => {
+    setTimeout(() => res(images.concat(images, images)), 1000);
+  });
+
+export const Image: Story = () => {
   const [open, toggle] = React.useReducer((s) => !s, true);
   return (
     <div className="preview">
       <button onClick={toggle}>Открыть галерею</button>
-      {open && <Gallery images={images} currentImage={0} onClose={toggle} />}
+      {open && <Gallery images={images} openImage={0} onClose={toggle} />}
     </div>
   );
 };
-export const Image = Template.bind({});
-Image.args = {};
+
+export const Album: Story = () => {
+  const [open, toggle] = React.useReducer((s) => !s, true);
+  return (
+    <div className="preview">
+      <button onClick={toggle}>Открыть альбом</button>
+      {open && (
+        <Gallery
+          albums={albums}
+          images={images}
+          openAlbum={0}
+          onClose={toggle}
+          onAlbumImagesFetch={getAlbumsPhoto}
+        />
+      )}
+    </div>
+  );
+};

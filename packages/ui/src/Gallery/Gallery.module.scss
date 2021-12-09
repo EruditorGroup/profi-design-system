@@ -1,3 +1,11 @@
+.buttonBack {
+  background-color: #fff;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  z-index: 1;
+}
+
 .image {
   position: absolute;
   top: 0;
@@ -21,18 +29,16 @@
   transform: translateX(-100vw);
 }
 
+.hidden {
+  display: none;
+}
+
 @media screen and (min-width: 732px) {
   .modal {
     width: calc(100vw - 160px);
     max-width: 1400px;
     margin: 20px auto;
     border-radius: 16px;
-  }
-
-  .buttonClose {
-    top: 0;
-    left: 100%;
-    margin-left: 10px;
   }
 
   .image {
