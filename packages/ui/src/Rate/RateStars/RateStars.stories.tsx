@@ -28,8 +28,6 @@ const Template: Story<RateStarsProps & {hovered?: boolean}> = ({
     ref.current.dispatchEvent(event);
   }, [hovered]);
 
-  const [val, setVal] = useState('1');
-
   return (
     <div style={{display: 'flex', flexDirection: 'row'}}>
       {RATE_SIZES.map((size) => (
