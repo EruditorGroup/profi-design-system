@@ -1,12 +1,16 @@
-import React, {useLayoutEffect, useRef} from 'react';
+import React, {useLayoutEffect, useRef, useState} from 'react';
 import {Story, Meta} from '@storybook/react';
 
 import RateStars, {RateStarsProps, MARKS_ARRAY} from './';
+import {Button} from '../..';
 
 const RATE_SIZES: number[] = [51, 30, 20];
 
 export default {
   title: 'RateStars',
+  parameters: {
+    controls: {include: ['design', 'value']},
+  },
 } as Meta<RateStarsProps>;
 
 const Template: Story<RateStarsProps & {hovered?: boolean}> = ({
