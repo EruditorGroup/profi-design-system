@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.62.0](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.61.0...@eruditorgroup/profi-ui@0.62.0) (2021-12-14)
+
+
+### Bug Fixes
+
+* **Gallery.Album:** Фикс работы модала альбомов ([b4f7dc5](https://github.com/eruditorgroup/profi-design-system/commit/b4f7dc5d9b3077fde87b77287bea8f6829a5667b))
+* **ui:** RateStars animation ([#401](https://github.com/eruditorgroup/profi-design-system/issues/401)) ([02f4d9f](https://github.com/eruditorgroup/profi-design-system/commit/02f4d9f166472c44827886a14e166d5d1622101c))
+
+
+### Features
+
+* Добавлен skeleton на Text и Link ([ba90709](https://github.com/eruditorgroup/profi-design-system/commit/ba907092089ca8e1039b013d9036afa2ae9cd6d4))
+
+
+
+
+
 # [0.61.0](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.57.0...@eruditorgroup/profi-ui@0.61.0) (2021-12-06)
 
 
