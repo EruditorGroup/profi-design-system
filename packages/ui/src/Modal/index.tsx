@@ -40,9 +40,10 @@ export interface ModalProps
   title?: string | undefined;
   closeOnOverlayClick?: boolean;
   swipeDownToClose?: boolean;
+  bodyClassName?: string;
+  withOverlay?: boolean;
   onClickBack?: MouseEventHandler<HTMLElement>;
   onClose: MouseEventHandler<HTMLElement>;
-  bodyClassName?: string;
 }
 
 const DEFAULT_ANIMATION_DURATION = 300;
@@ -57,16 +58,17 @@ interface ModalComponent
 const Modal = React.forwardRef(
   (
     {
-      width,
       visible,
       title,
-      children,
       className,
-      fullscreen,
-      withPadding = true,
-      closeOnOverlayClick,
       bodyClassName,
+      width,
+      children,
+      fullscreen,
+      closeOnOverlayClick,
+      withPadding = true,
       swipeDownToClose = false,
+      withOverlay = true,
       onClose,
       onClickBack,
       ...props
@@ -119,21 +121,23 @@ const Modal = React.forwardRef(
 
     return (
       <ModalContext.Provider value={{handleClose: handleCloseClick}}>
-        <CSSTransition
-          unmountOnExit
-          mountOnEnter
-          in={visible}
-          timeout={DEFAULT_ANIMATION_DURATION}
-          classNames={theme.transitions.fade}
-        >
-          <BodyPortal>
-            <div
-              className={styles['overlay']}
-              onClick={handleCloseClick}
-              style={pc ? {display: 'none'} : null}
-            />
-          </BodyPortal>
-        </CSSTransition>
+        {withOverlay && (
+          <CSSTransition
+            unmountOnExit
+            mountOnEnter
+            in={visible}
+            timeout={DEFAULT_ANIMATION_DURATION}
+            classNames={theme.transitions.fade}
+          >
+            <BodyPortal>
+              <div
+                className={styles['overlay']}
+                onClick={handleCloseClick}
+                style={pc ? {display: 'none'} : null}
+              />
+            </BodyPortal>
+          </CSSTransition>
+        )}
 
         <CSSTransition
           unmountOnExit

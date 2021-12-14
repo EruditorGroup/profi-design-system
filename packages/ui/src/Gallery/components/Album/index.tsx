@@ -36,7 +36,7 @@ function Album({
           </Text>
         )}
         <div className={styles['images']}>
-          {images ? (
+          {images.length ? (
             images.map((item, index) => (
               <div
                 className={styles['image']}
