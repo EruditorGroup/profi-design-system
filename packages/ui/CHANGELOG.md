@@ -3,6 +3,21 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.0.0-alpha.14](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@1.0.0-alpha.13...@eruditorgroup/profi-ui@1.0.0-alpha.14) (2021-12-10)
+
+
+
+# 1.0.0-alpha.14 (2021-12-10)
+
+
+### Bug Fixes
+
+* **ui:** RateStars animation ([#401](https://github.com/eruditorgroup/profi-design-system/issues/401)) ([0911ba9](https://github.com/eruditorgroup/profi-design-system/commit/0911ba9567b13e21e7c8476c9add3e8b0d31bdbb))
+
+
+
+
+
 # [1.0.0-alpha.13](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.61.0...@eruditorgroup/profi-ui@1.0.0-alpha.13) (2021-12-09)
 
 
