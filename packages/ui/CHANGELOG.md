@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.62.1](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.62.0...@eruditorgroup/profi-ui@0.62.1) (2021-12-20)
+
+
+### Bug Fixes
+
+* **Modal:** Корректное отображение оверлеев если открыто несколько модалок ([83eb79e](https://github.com/eruditorgroup/profi-design-system/commit/83eb79e9d03f5417ae731c0588729a8bf594a224))
+
+
+
+
+
 # [0.62.0](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.61.0...@eruditorgroup/profi-ui@0.62.0) (2021-12-14)
 
 
