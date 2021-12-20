@@ -81,6 +81,7 @@ const Modal = React.forwardRef(
 
     const [pc, setPc] = React.useState(0);
     const modalOpacity = 1 - pc / 100;
+    const showOverlay = !!pc || !withOverlay;
 
     useDisableBodyScroll(bodyRef, visible);
 
@@ -121,23 +122,21 @@ const Modal = React.forwardRef(
 
     return (
       <ModalContext.Provider value={{handleClose: handleCloseClick}}>
-        {withOverlay && (
-          <CSSTransition
-            unmountOnExit
-            mountOnEnter
-            in={visible}
-            timeout={DEFAULT_ANIMATION_DURATION}
-            classNames={theme.transitions.fade}
-          >
-            <BodyPortal>
-              <div
-                className={styles['overlay']}
-                onClick={handleCloseClick}
-                style={pc ? {display: 'none'} : null}
-              />
-            </BodyPortal>
-          </CSSTransition>
-        )}
+        <CSSTransition
+          unmountOnExit
+          mountOnEnter
+          in={visible}
+          timeout={DEFAULT_ANIMATION_DURATION}
+          classNames={theme.transitions.fade}
+        >
+          <BodyPortal>
+            <div
+              className={styles['overlay']}
+              onClick={handleCloseClick}
+              {...(showOverlay && {style: {display: 'none'}})}
+            />
+          </BodyPortal>
+        </CSSTransition>
 
         <CSSTransition
           unmountOnExit
