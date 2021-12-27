@@ -21,7 +21,18 @@ export type DatepickerProps = Omit<
   shmid?: string;
   inputClassName?: string;
   calendarClassName?: string;
+  /**
+   * Применяется справо налево и применяется первый, который подходит.
+   */
+  inputLabelTransformerList?: ((date: Date) => string)[];
 };
+
+const defaultTransformer = (date: Date) =>
+  getReadableDate(date, {
+    withWeekday: true,
+    withYear: true,
+    omitYearIfThisYear: true,
+  });
 
 const Datepicker: React.FC<DatepickerProps> = ({
   value,
@@ -31,6 +42,7 @@ const Datepicker: React.FC<DatepickerProps> = ({
   inputClassName,
   calendarClassName,
   onChange: _onChange,
+  inputLabelTransformerList = [],
   ...calendarProps
 }) => {
   const isMobile = useCurrentScreen('mobile', false);
@@ -40,17 +52,21 @@ const Datepicker: React.FC<DatepickerProps> = ({
   const [selectedDate, setSelectedDate] = useState<Date | null>(
     value ? new Date(value) : null,
   );
-  const label = useMemo(
-    () =>
-      selectedDate
-        ? getReadableDate(selectedDate, {
-            withWeekday: true,
-            withYear: true,
-            omitYearIfThisYear: true,
-          })
-        : '',
-    [selectedDate],
-  );
+  const label = useMemo(() => {
+    if (!selectedDate) {
+      return '';
+    }
+
+    const transformers = [defaultTransformer, ...inputLabelTransformerList];
+
+    while (transformers.length) {
+      const transformer = transformers.pop();
+      const label = transformer(selectedDate);
+      if (label) return label;
+    }
+
+    return '';
+  }, [selectedDate, inputLabelTransformerList]);
 
   const onChange: CalendarProps['onChange'] = useCallback(
     ([newDate]: Date[]): void => {
