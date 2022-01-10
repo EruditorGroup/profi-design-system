@@ -13,7 +13,7 @@ const defaultTransformer = (date: Date) =>
  * 
  * @param selectedDate Выбранная дата.
  * @param inputLabelTransformerList Список возможных трансформаций переданный от пользователя.
- * @returns 
+ * @returns Взвращает сформированный лейбл.
  */
 export const useLabel = (
   selectedDate: Date,
