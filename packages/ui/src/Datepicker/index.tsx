@@ -1,7 +1,7 @@
 import React, {useCallback, useMemo, useRef, useState} from 'react';
 import classnames from 'classnames';
 import {CalendarIcon} from '@eruditorgroup/profi-icons';
-import {getReadableDate, useCurrentScreen} from '@eruditorgroup/profi-toolkit';
+import {useCurrentScreen} from '@eruditorgroup/profi-toolkit';
 
 import BodyPortal from '../BodyPortal';
 import {Calendar} from '../Calendar';
@@ -10,6 +10,7 @@ import {Input} from '../Form';
 import type {CalendarProps} from '../Calendar';
 
 import styles from './Datepicker.module.scss';
+import {useLabel} from './hooks/useLabel';
 
 export type DatepickerProps = Omit<
   CalendarProps,
@@ -21,6 +22,10 @@ export type DatepickerProps = Omit<
   shmid?: string;
   inputClassName?: string;
   calendarClassName?: string;
+  /**
+   * Применяется справо налево и применяется первый, который подходит.
+   */
+  inputLabelTransformerList?: ((date: Date) => string)[];
 };
 
 const Datepicker: React.FC<DatepickerProps> = ({
@@ -31,6 +36,7 @@ const Datepicker: React.FC<DatepickerProps> = ({
   inputClassName,
   calendarClassName,
   onChange: _onChange,
+  inputLabelTransformerList = [],
   ...calendarProps
 }) => {
   const isMobile = useCurrentScreen('mobile', false);
@@ -40,17 +46,7 @@ const Datepicker: React.FC<DatepickerProps> = ({
   const [selectedDate, setSelectedDate] = useState<Date | null>(
     value ? new Date(value) : null,
   );
-  const label = useMemo(
-    () =>
-      selectedDate
-        ? getReadableDate(selectedDate, {
-            withWeekday: true,
-            withYear: true,
-            omitYearIfThisYear: true,
-          })
-        : '',
-    [selectedDate],
-  );
+  const label = useLabel(selectedDate, inputLabelTransformerList);
 
   const onChange: CalendarProps['onChange'] = useCallback(
     ([newDate]: Date[]): void => {
