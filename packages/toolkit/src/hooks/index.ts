@@ -12,7 +12,6 @@ export {default as useFocusScroll} from './useFocusScroll';
 export {default as useKeyPress} from './useKeyPress';
 export {default as useDebouncedCallback} from './useDebouncedCallback';
 export {default as useSafeLayoutEffect} from './useSafeLayoutEffect';
-export {default as useStateSafe} from './useStateSafe';
 export {default as useMouseWheel} from './useMouseWheel';
 export {default as useMoveCaretToEndOnFocus} from './useMoveCaretToEndOnFocus';
 export {default as useThrottledCallback} from './useThrottledCallback';
