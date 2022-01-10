@@ -1,7 +1,7 @@
 import React, {useCallback, useMemo, useRef, useState} from 'react';
 import classnames from 'classnames';
 import {CalendarIcon} from '@eruditorgroup/profi-icons';
-import {getReadableDate, useCurrentScreen} from '@eruditorgroup/profi-toolkit';
+import {useCurrentScreen} from '@eruditorgroup/profi-toolkit';
 
 import BodyPortal from '../BodyPortal';
 import {Calendar} from '../Calendar';
@@ -10,6 +10,7 @@ import {Input} from '../Form';
 import type {CalendarProps} from '../Calendar';
 
 import styles from './Datepicker.module.scss';
+import {useLabel} from './hooks/useLabel';
 
 export type DatepickerProps = Omit<
   CalendarProps,
@@ -26,13 +27,6 @@ export type DatepickerProps = Omit<
    */
   inputLabelTransformerList?: ((date: Date) => string)[];
 };
-
-const defaultTransformer = (date: Date) =>
-  getReadableDate(date, {
-    withWeekday: true,
-    withYear: true,
-    omitYearIfThisYear: true,
-  });
 
 const Datepicker: React.FC<DatepickerProps> = ({
   value,
@@ -52,21 +46,7 @@ const Datepicker: React.FC<DatepickerProps> = ({
   const [selectedDate, setSelectedDate] = useState<Date | null>(
     value ? new Date(value) : null,
   );
-  const label = useMemo(() => {
-    if (!selectedDate) {
-      return '';
-    }
-
-    const transformers = [defaultTransformer, ...inputLabelTransformerList];
-
-    while (transformers.length) {
-      const transformer = transformers.pop();
-      const label = transformer(selectedDate);
-      if (label) return label;
-    }
-
-    return '';
-  }, [selectedDate, inputLabelTransformerList]);
+  const label = useLabel(selectedDate, inputLabelTransformerList);
 
   const onChange: CalendarProps['onChange'] = useCallback(
     ([newDate]: Date[]): void => {
