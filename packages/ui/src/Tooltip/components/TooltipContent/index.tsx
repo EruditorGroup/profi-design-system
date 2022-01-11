@@ -9,7 +9,6 @@ import type {
 } from 'react';
 
 import styles from './TooltipContent.module.scss';
-import {AliasProps} from '@eruditorgroup/profi-toolkit';
 
 export interface TooltipProps extends HTMLAttributes<HTMLDivElement> {
   animated?: boolean;

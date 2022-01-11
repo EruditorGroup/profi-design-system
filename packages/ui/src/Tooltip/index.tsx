@@ -69,6 +69,7 @@ const Tooltip = forwardRef<HTMLDivElement, TooltipProps>(
     });
 
     const [combinedRef, setRef] = useCombinedRef<HTMLDivElement | null>(ref);
+
     const tooltipContext = useMemo<TooltipContextType>(
       () => ({opened, setOpened, trigger, persist}),
       [opened, setOpened, trigger, persist],
