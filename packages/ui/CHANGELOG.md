@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.62.2](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.62.1...@eruditorgroup/profi-ui@0.62.2) (2022-01-11)
+
+
+### Bug Fixes
+
+* **Datepicker:** Добавил пропс, который добавляет кастомную логику для вывода значения в инпут ([79892f2](https://github.com/eruditorgroup/profi-design-system/commit/79892f2f7cc37c67129af556825c93e9dbcd87b7))
+
+
+
+
+
 ## [0.62.1](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.62.0...@eruditorgroup/profi-ui@0.62.1) (2021-12-20)
 
 
