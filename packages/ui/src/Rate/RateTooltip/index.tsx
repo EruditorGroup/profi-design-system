@@ -15,15 +15,15 @@ type Props = {
 
 export const RateTooltip = forwardRef<HTMLDivElement, Props>(
   ({show, children, className, trigger = 'hover', ...props}, ref) => {
-    if (show) {
-      return (
-        <Tooltip
-          persist
-          trigger={trigger}
-          className={cx(styles['tooltip'], className)}
-          {...props}
-          ref={ref}
-        >
+    return (
+      <Tooltip
+        persist
+        trigger={trigger}
+        className={cx(styles['tooltip'], className)}
+        {...props}
+        ref={ref}
+      >
+        {show && (
           <Tooltip.Content
             className={styles['tooltipContent']}
             overlayClassName={styles['tooltipOverlay']}
@@ -33,15 +33,11 @@ export const RateTooltip = forwardRef<HTMLDivElement, Props>(
               Пять&nbsp;с&nbsp;плюсом
             </Text>
           </Tooltip.Content>
-          <Tooltip.Toggler>{children}</Tooltip.Toggler>
-        </Tooltip>
-      );
-    }
-
-    return (
-      <div className={className} {...props} ref={ref}>
-        {children}
-      </div>
+        )}
+        <Tooltip.Toggler className={styles['toggler']}>
+          {children}
+        </Tooltip.Toggler>
+      </Tooltip>
     );
   },
 );
