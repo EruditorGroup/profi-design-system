@@ -7,10 +7,10 @@ on: [pull_request]
 
 jobs:
   test:
-    uses: EruditorGroup/profi-design-system/.github/actions/test.yaml@main
+    uses: ./.github/actions/test.yaml@${{github.head_ref}}
 
   lint:
-    uses: EruditorGroup/profi-design-system/.github/actions/lint.yaml@main
+    uses: ./.github/actions/lint.yaml@${{github.head_ref}}
 
   screenshot-testing:
     runs-on: ubuntu-latest
