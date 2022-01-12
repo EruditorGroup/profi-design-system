@@ -3,6 +3,21 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.0.0-alpha.16](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-toolkit@1.0.0-alpha.15...@eruditorgroup/profi-toolkit@1.0.0-alpha.16) (2022-01-12)
+
+
+
+# 1.0.0-alpha.16 (2022-01-12)
+
+
+### Features
+
+* **toolkit:** Удалил не нужный бойлерплейт ([94258bd](https://github.com/eruditorgroup/profi-design-system/commit/94258bd6ab9eef53ea7748219fc83f4484d7480b))
+
+
+
+
+
 # [1.0.0-alpha.15](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-toolkit@1.0.0-alpha.14...@eruditorgroup/profi-toolkit@1.0.0-alpha.15) (2022-01-11)
 
 **Note:** Version bump only for package @eruditorgroup/profi-toolkit
