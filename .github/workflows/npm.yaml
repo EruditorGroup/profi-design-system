@@ -7,12 +7,12 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-      - uses: EruditorGroup/profi-design-system/.github/actions/test.yaml
+      - uses: EruditorGroup/profi-design-system/.github/actions/test.yaml@main
 
   lint:
     runs-on: ubuntu-latest
     steps:
-      - uses: EruditorGroup/profi-design-system/.github/actions/lint.yaml
+      - uses: EruditorGroup/profi-design-system/.github/actions/lint.yaml@main
 
   npm_package_publish:
     needs:
