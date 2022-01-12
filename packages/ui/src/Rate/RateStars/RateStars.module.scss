@@ -3,9 +3,6 @@
   display: inline-flex;
   font-size: 17px;
 
-  &_best {
-    padding-right: 9px;
-  }
 }
 
 .star {
@@ -44,21 +41,23 @@
   fill: none;
 }
 
-
 .spark {
   color: var(--ui-color-warning);
-  transform: translate3d(-0.12em, -0.05em, 0);
-  position: relative;
-  width: 0;
-  transition: width .2s ease;
+  transform: translate3d(0, 0, 0);
+  position: absolute;
+  right: -0.45em;
+  opacity: 0;
+  transition: opacity .2s ease;
 
   &-showed {
-    width: 0.6em;
+    opacity: 1;
+    & > * {
+      animation: scaleSpark 150ms ease;
+    }
   }
 
   & > * {
     transform-origin: center;
-    animation: scaleSpark 150ms ease .05s;
   }
 
   .spark_mini {

@@ -28,8 +28,13 @@
     "/src"
   ],
   "dependencies": {
+<<<<<<< HEAD
     "@eruditorgroup/profi-icons": "^1.0.0-alpha.14",
     "@eruditorgroup/profi-toolkit": "^1.0.0-alpha.14",
+=======
+    "@eruditorgroup/profi-icons": "^0.35.11",
+    "@eruditorgroup/profi-toolkit": "^0.50.0",
+>>>>>>> master
     "body-scroll-lock": "^3.1.5",
     "classnames": "^2.2.6",
     "react-autosuggest": "^10.1.0",

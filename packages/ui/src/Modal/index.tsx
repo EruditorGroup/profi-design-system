@@ -40,9 +40,10 @@ export interface ModalProps
   title?: string | undefined;
   closeOnOverlayClick?: boolean;
   swipeDownToClose?: boolean;
+  bodyClassName?: string;
+  withOverlay?: boolean;
   onClickBack?: MouseEventHandler<HTMLElement>;
   onClose: MouseEventHandler<HTMLElement>;
-  bodyClassName?: string;
 }
 
 const DEFAULT_ANIMATION_DURATION = 300;
@@ -57,16 +58,17 @@ interface ModalComponent
 const Modal = React.forwardRef(
   (
     {
-      width,
       visible,
       title,
-      children,
       className,
-      fullscreen,
-      withPadding = true,
-      closeOnOverlayClick,
       bodyClassName,
+      width,
+      children,
+      fullscreen,
+      closeOnOverlayClick,
+      withPadding = true,
       swipeDownToClose = false,
+      withOverlay = true,
       onClose,
       onClickBack,
       ...props
@@ -79,6 +81,7 @@ const Modal = React.forwardRef(
 
     const [pc, setPc] = React.useState(0);
     const modalOpacity = 1 - pc / 100;
+    const showOverlay = !!pc || !withOverlay;
 
     useDisableBodyScroll(bodyRef, visible);
 
@@ -130,7 +133,7 @@ const Modal = React.forwardRef(
             <div
               className={styles['overlay']}
               onClick={handleCloseClick}
-              style={pc ? {display: 'none'} : null}
+              {...(showOverlay && {style: {display: 'none'}})}
             />
           </BodyPortal>
         </CSSTransition>

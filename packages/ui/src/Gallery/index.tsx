@@ -6,8 +6,7 @@ import {
   gestures,
   numberLoop,
 } from '@eruditorgroup/profi-toolkit';
-import {ChevronLeftIcon} from '@eruditorgroup/profi-icons';
-import {Button, Modal} from '../index';
+import {Modal} from '../index';
 import Image from './components/Image';
 import Album from './components/Album';
 
@@ -15,33 +14,26 @@ import type {Image as IImage, Album as IAlbum} from './types';
 
 import styles from './Gallery.module.scss';
 
-export interface GalleryProps extends React.HTMLProps<HTMLDivElement> {
+export interface GalleryProps {
   className?: string;
   albums?: IAlbum[];
   images: IImage[];
-  openImage?: number;
-  openAlbum?: number;
+  currentImage?: number;
+  currentAlbum?: number;
   onAlbumImagesFetch?: (albumId: IAlbum) => Promise<IImage[]>;
   onClose: () => unknown;
   onNext?: () => unknown;
   onBack?: () => unknown;
 }
 
-const Gallery = React.forwardRef<HTMLDivElement, GalleryProps>(function Gallery(
-  {
-    className,
-    openAlbum,
-    openImage,
-    albums,
-    images,
-    onAlbumImagesFetch,
-    onClose,
-    onNext,
-    onBack,
-  },
-  ref,
-) {
-  const loop = numberLoop.bind(null, images.length);
+function Gallery({
+  className,
+  onAlbumImagesFetch,
+  onClose,
+  onNext,
+  onBack,
+  ...props
+}: GalleryProps): React.ReactElement {
   const isMobile = useCurrentScreen('mobile');
   const [movePc, setMovePc] = React.useState(0);
   const [state, setState] = React.useState(null);
@@ -49,11 +41,21 @@ const Gallery = React.forwardRef<HTMLDivElement, GalleryProps>(function Gallery(
   const [albumsImages, setAlbumsImages] = React.useState<
     Record<number, IImage[]>
   >({});
-  const imagesCollection = openAlbum ? albumsImages[openAlbum] : images;
+  const images = React.useMemo(
+    () =>
+      props.currentAlbum != null
+        ? albumsImages[props.currentAlbum] || []
+        : props.images,
+    [albumsImages, props.currentAlbum, props.images],
+  );
   const isSingleImage = images.length === 1;
-  const currentAlbum = albums?.[openAlbum];
+  const currentAlbum = props.albums?.[props.currentAlbum];
 
-  const [currentIndex, move] = React.useReducer(
+  const loop = React.useMemo(() => numberLoop.bind(null, images.length), [
+    images,
+  ]);
+
+  const [currentImage, move] = React.useReducer(
     (i = 0, to: 'next' | 'back' | number | null) => {
       switch (to) {
         case 'next':
@@ -64,20 +66,18 @@ const Gallery = React.forwardRef<HTMLDivElement, GalleryProps>(function Gallery(
           return typeof to === 'number' ? loop(to) : null;
       }
     },
-    openImage,
+    props.currentImage,
   );
 
-  const isAlbumImageOpened = openAlbum != null && currentIndex != null;
-
   const [prev, current, next] = React.useMemo(() => {
-    return currentIndex != null && imagesCollection && imagesCollection.length
+    return currentImage != null && images.length
       ? [
-          imagesCollection[loop(currentIndex - 1)],
-          imagesCollection[loop(currentIndex)],
-          imagesCollection[loop(currentIndex + 1)],
+          images[loop(currentImage - 1)],
+          images[loop(currentImage)],
+          images[loop(currentImage + 1)],
         ]
       : [];
-  }, [currentIndex, imagesCollection, loop]);
+  }, [currentImage, images, loop]);
 
   const bind = gestures.useGesture(
     {
@@ -124,13 +124,17 @@ const Gallery = React.forwardRef<HTMLDivElement, GalleryProps>(function Gallery(
 
   React.useEffect(
     function fetchAlbumImages() {
-      if (currentAlbum && onAlbumImagesFetch && !albumsImages[openAlbum]) {
+      if (
+        currentAlbum &&
+        onAlbumImagesFetch &&
+        !albumsImages[props.currentAlbum]
+      ) {
         onAlbumImagesFetch(currentAlbum).then((res) =>
-          setAlbumsImages((x) => ({...x, [openAlbum]: res})),
+          setAlbumsImages((x) => ({...x, [props.currentAlbum]: res})),
         );
       }
     },
-    [currentAlbum, openAlbum, albumsImages, onAlbumImagesFetch],
+    [currentAlbum, props.currentAlbum, albumsImages, onAlbumImagesFetch],
   );
 
   const handleNext = React.useCallback(
@@ -153,6 +157,17 @@ const Gallery = React.forwardRef<HTMLDivElement, GalleryProps>(function Gallery(
     [images.length, onBack],
   );
 
+  const handleClose = React.useCallback(
+    function handleClose() {
+      if (currentAlbum != null && currentImage != null) {
+        move(null);
+      } else {
+        onClose();
+      }
+    },
+    [currentAlbum, currentImage, onClose],
+  );
+
   const imageProps = {
     className: cx(
       styles['image'],
@@ -165,69 +180,64 @@ const Gallery = React.forwardRef<HTMLDivElement, GalleryProps>(function Gallery(
   };
 
   return (
-    (openImage != null || openAlbum != null) && (
-      <Modal
-        className={cx(className, styles['modal'])}
-        onClose={onClose}
-        withPadding={false}
-        fullscreen={isMobile}
-        swipeDownToClose={isMobile}
-        visible
-        closeOnOverlayClick
-        ref={ref}
-      >
-        <Modal.CloseButton size="s" withHoverAnimation={false} />
-        <Button
-          className={cx(
-            styles['buttonBack'],
-            !isAlbumImageOpened && styles['hidden'],
-          )}
-          size="s"
-          design="transparent"
-          rounded
-          onClick={() => move(null)}
+    <>
+      {currentAlbum && (
+        <Modal
+          className={cx(className, styles['modal'])}
+          onClose={handleClose}
+          withPadding={false}
+          fullscreen={isMobile}
+          withOverlay={!current}
+          closeOnOverlayClick={!current}
+          visible
         >
-          <ChevronLeftIcon />
-        </Button>
-        {openAlbum != null && (
-          <Album
-            {...currentAlbum}
-            className={cx(isAlbumImageOpened && styles['hidden'])}
-            images={albumsImages[openAlbum]}
-            onImageClick={move}
-          />
-        )}
-        {isMobile && prev && (
-          <Image
-            {...prev}
-            {...imageProps}
-            style={{transform: `translate3d(${-100 + movePc}%, 0, 0)`}}
-          />
-        )}
-        {current && (
-          <Image
-            {...current}
-            {...bind()}
-            {...imageProps}
-            onTransitionEnd={() => {
-              setState(null);
-              state === 'swipe' && move(movePc < 0 ? 'next' : 'back');
-              setMovePc(0);
-            }}
-            style={{transform: `translate3d(${movePc}%, 0, 0)`}}
-            showInfo
-          />
-        )}
-        {isMobile && next && (
-          <Image
-            {...next}
-            {...imageProps}
-            style={{transform: `translate3d(${100 + movePc}%, 0, 0)`}}
-          />
-        )}
-      </Modal>
-    )
+          <Modal.CloseButton size="s" withHoverAnimation={false} />
+          <Album {...currentAlbum} images={images} onImageClick={move} />
+        </Modal>
+      )}
+      {current != null && (
+        <Modal
+          className={cx(className, styles['modal'])}
+          onClose={handleClose}
+          withPadding={false}
+          fullscreen={isMobile}
+          swipeDownToClose={isMobile}
+          visible
+          closeOnOverlayClick
+        >
+          <Modal.CloseButton size="s" withHoverAnimation={false} />
+          {isMobile && prev && (
+            <Image
+              {...prev}
+              {...imageProps}
+              style={{transform: `translate3d(${-100 + movePc}%, 0, 0)`}}
+            />
+          )}
+          {current && (
+            <Image
+              {...current}
+              {...bind()}
+              {...imageProps}
+              onTransitionEnd={() => {
+                setState(null);
+                state === 'swipe' && move(movePc < 0 ? 'next' : 'back');
+                setMovePc(0);
+              }}
+              style={{transform: `translate3d(${movePc}%, 0, 0)`}}
+              showInfo
+            />
+          )}
+          {isMobile && next && (
+            <Image
+              {...next}
+              {...imageProps}
+              style={{transform: `translate3d(${100 + movePc}%, 0, 0)`}}
+            />
+          )}
+        </Modal>
+      )}
+    </>
   );
-});
+}
 
 export default Gallery;
