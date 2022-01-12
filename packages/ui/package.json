@@ -1,6 +1,6 @@
 {
   "name": "@eruditorgroup/profi-ui",
-  "version": "1.0.0-alpha.14",
+  "version": "1.0.0-alpha.15",
   "description": "Essential cross-platform UI components for React for Eruditor Group",
   "author": "eruditorgroup",
   "license": "ISC",
@@ -28,13 +28,8 @@
     "/src"
   ],
   "dependencies": {
-<<<<<<< HEAD
-    "@eruditorgroup/profi-icons": "^1.0.0-alpha.14",
-    "@eruditorgroup/profi-toolkit": "^1.0.0-alpha.14",
-=======
-    "@eruditorgroup/profi-icons": "^0.35.11",
-    "@eruditorgroup/profi-toolkit": "^0.50.0",
->>>>>>> master
+    "@eruditorgroup/profi-icons": "^1.0.0-alpha.15",
+    "@eruditorgroup/profi-toolkit": "^1.0.0-alpha.15",
     "body-scroll-lock": "^3.1.5",
     "classnames": "^2.2.6",
     "react-autosuggest": "^10.1.0",
