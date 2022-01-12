@@ -5,27 +5,10 @@ on:
 
 jobs:
   test:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v2
-        with:
-          node-version: 14
-          cache: 'yarn'
-      - run: yarn --frozen-lockfile
-      - run: yarn build:cjs
-      - run: yarn test
+    uses: ./.github/actions/test@v1
 
   lint:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v2
-        with:
-          node-version: 14
-          cache: 'yarn'
-      - run: yarn --frozen-lockfile
-      - run: yarn lint
+    uses: ./.github/actions/lint@v1
 
   npm_package_publish:
     needs:
