@@ -7,10 +7,10 @@ on: [pull_request]
 
 jobs:
   test:
-    uses: ./.github/actions/test.yaml@${{github.head_ref}}
+    uses: ./.github/workflows/test.yaml@${{github.head_ref}}
 
   lint:
-    uses: ./.github/actions/lint.yaml@${{github.head_ref}}
+    uses: ./.github/workflows/lint.yaml@${{github.head_ref}}
 
   screenshot-testing:
     runs-on: ubuntu-latest
