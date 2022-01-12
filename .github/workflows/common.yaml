@@ -7,10 +7,14 @@ on: [pull_request]
 
 jobs:
   test:
-    uses: EruditorGroup/profi-design-system/.github/actions/test@v1
+    runs-on: ubuntu-latest
+    steps:
+      - uses: EruditorGroup/profi-design-system/.github/actions/test@v1
 
   lint:
-    uses: EruditorGroup/profi-design-system/.github/actions/lint@v1
+    runs-on: ubuntu-latest
+    steps:
+      - uses: EruditorGroup/profi-design-system/.github/actions/lint@v1
 
   screenshot-testing:
     runs-on: ubuntu-latest
