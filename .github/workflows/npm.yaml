@@ -5,10 +5,10 @@ on:
 
 jobs:
   test:
-    uses: EruditorGroup/profi-design-system/.github/workflows/test.yaml@454d3485d1fd2dfd85824b81fc6e73db9f8b1b08
+    uses: EruditorGroup/profi-design-system/.github/workflows/test.yaml@master
 
   lint:
-    uses: EruditorGroup/profi-design-system/.github/workflows/lint.yaml@454d3485d1fd2dfd85824b81fc6e73db9f8b1b08
+    uses: EruditorGroup/profi-design-system/.github/workflows/lint.yaml@master
 
   npm_package_publish:
     needs:

@@ -8,11 +8,11 @@ on: [pull_request]
 jobs:
   test:
     name: test
-    uses: EruditorGroup/profi-design-system/.github/workflows/test.yaml@454d3485d1fd2dfd85824b81fc6e73db9f8b1b08
+    uses: EruditorGroup/profi-design-system/.github/workflows/test.yaml@master
 
   lint:
     name: lint
-    uses: EruditorGroup/profi-design-system/.github/workflows/lint.yaml@454d3485d1fd2dfd85824b81fc6e73db9f8b1b08
+    uses: EruditorGroup/profi-design-system/.github/workflows/lint.yaml@master
 
   screenshot-testing:
     runs-on: ubuntu-latest
