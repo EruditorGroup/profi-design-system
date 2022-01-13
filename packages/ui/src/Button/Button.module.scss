@@ -1,4 +1,5 @@
 .button {
+  font: inherit;
   position: relative;
   border: none;
   font-weight: 600;
@@ -63,12 +64,12 @@
 }
 
 .design-secondary {
-  background: var(--ui-color-secondary);
+  background-color: var(--ui-color-secondary);
   color: var(--ui-color-secondaryInverse);
 
   &:hover:not([disabled]) {
     color: var(--ui-color-secondaryInverse);
-    background: var(--ui-color-secondaryState);
+    background-color: var(--ui-color-secondaryState);
   }
 
   &[disabled] {
@@ -77,12 +78,12 @@
 }
 
 .design-light {
-  background: var(--ui-color-light);
+  background-color: var(--ui-color-light);
   color: var(--ui-color-lightInverse);
 
   &:hover:not([disabled]) {
     color: var(--ui-color-lightInverse);
-    background: var(--ui-color-lightState);
+    background-color: var(--ui-color-lightState);
   }
 
   &[disabled] {
@@ -91,12 +92,12 @@
 }
 
 .design-transparent {
-  background: transparent;
+  background-color: transparent;
   color: var(--ui-color-lightInverse);
 
   &:hover:not([disabled]) {
     color: var(--ui-color-lightInverse);
-    background: var(--ui-color-light);
+    background-color: var(--ui-color-light);
   }
 
   &[disabled] {
@@ -105,7 +106,7 @@
 }
 
 .design-fb {
-  background: var(--ui-color-facebook);
+  background-color: var(--ui-color-facebook);
   color: #fff;
   &:hover:not([disabled]) {
     color: #fff;
@@ -117,7 +118,7 @@
 }
 
 .design-ya {
-  background: var(--ui-color-ya);
+  background-color: var(--ui-color-ya);
   color: #000;
   &:hover:not([disabled]) {
     color: #000;
@@ -201,7 +202,16 @@
   background: transparent;
   padding: 0;
   min-height: inherit;
-  text-decoration: underline;
+
+  &.underlined {
+    line-height: 1.33em;
+    border-radius: 0;
+    box-shadow: var(--ui-link-shadow);
+
+    &:hover {
+      box-shadow: var(--ui-link-shadowState);
+    }
+  }
 
   &[disabled] {
     color: var(--ui-color-lightInverseState);
@@ -214,4 +224,18 @@
 
 .regular {
   font-weight: 400;
+}
+
+.skeleton {
+  background-color: transparent;
+  color: transparent;
+
+  &.content {
+    border-radius: 4px;
+  }
+
+  &:hover:not([disabled]) {
+    color: transparent;
+    background-color: transparent;
+  }
 }

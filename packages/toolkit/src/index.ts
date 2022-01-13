@@ -11,6 +11,7 @@ import variables from './styles/variables.css';
 
 import fadeTransition from './styles/FadeIn.module.css';
 import slideTransition from './styles/SlideUp.module.css';
+import skeletonTransition from './styles/Skeleton.module.css';
 
 export const theme = {
   common,
@@ -18,6 +19,7 @@ export const theme = {
   transitions: {
     slide: slideTransition,
     fade: fadeTransition,
+    skeleton: skeletonTransition['skeleton'],
   },
 };
 
@@ -35,7 +37,7 @@ export type IColor =
 
 export type ISocials = 'vk' | 'ya' | 'fb' | 'apple';
 
-type ReplaceProps<Component extends React.ElementType, P> = Pick<
+export type ReplaceProps<Component extends React.ElementType, P> = Pick<
   React.ComponentPropsWithRef<Component>,
   Exclude<keyof React.ComponentPropsWithRef<Component>, keyof P>
 > &
@@ -47,11 +49,12 @@ export interface AliasProps<
   as?: Component;
 }
 
-export interface ForwardingComponent<
-  InitialComponent extends React.ElementType,
+export type ForwardingCertainComponent<
+  CertainComponent extends React.ElementType,
+  InitialComponent extends CertainComponent,
   P = unknown
-> {
-  <Component extends React.ElementType = InitialComponent, Context = unknown>(
+> = {
+  <Component extends CertainComponent = InitialComponent, Context = unknown>(
     props: React.PropsWithChildren<
       ReplaceProps<Component, P> & AliasProps<Component>
     >,
@@ -59,4 +62,9 @@ export interface ForwardingComponent<
   ): React.ReactElement | null;
   defaultProps?: Partial<P>;
   displayName?: string;
-}
+};
+
+export type ForwardingComponent<
+  InitialComponent extends React.ElementType,
+  P = unknown
+> = ForwardingCertainComponent<React.ElementType, InitialComponent, P>;

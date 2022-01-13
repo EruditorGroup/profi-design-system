@@ -23,18 +23,9 @@ export default {
   component: Autosuggest,
 } as Meta;
 
-function getRandomColor(): string | undefined {
-  var letters = '0123456789ABCDEF';
-  var color = '#';
-  for (var i = 0; i < 6; i++) {
-    color += letters[Math.floor(Math.random() * 16)];
-  }
-  return Math.random() >= 0.5 ? undefined : color;
-}
-
-const metros = metro.map((station) => ({
+const metros = metro.map((station, i) => ({
   value: station,
-  color: getRandomColor(),
+  color: '#f0f0f0',
 }));
 
 const Template: Story<Omit<AutosuggestProps, 'suggestions' | 'value'>> = (
@@ -164,20 +155,19 @@ const Template: Story<Omit<AutosuggestProps, 'suggestions' | 'value'>> = (
       <h2>Fullscreen</h2>
       <Fullscreen
         {...args}
-        inputRef={null}
         multiSection={false}
         sharedFieldProps={{
           value,
           onChange: (_, params) => setValue(params.newValue),
           'data-testattribute': 'test',
         }}
-        suggestions={suggestions.slice(0, 10)}
+        suggestions={suggestions.slice(0, 20)}
         onSuggestionsFetchRequested={updateSuggestions}
         onSuggestionSelected={(_, {suggestion}) => setValue(suggestion.value)}
         renderSuggestion={renderFullscreenSuggestion}
         alwaysRenderSuggestions
         activeField={
-          <Fullscreen.ActiveField iconPostion="none" textarea>
+          <Fullscreen.ActiveField iconPostion="none" size="l" minRows={1}>
             {(field, {onClose}) => (
               <div className={styles['fullscreen-input-panel']}>
                 <Button design="light" rounded onClick={onClose}>
@@ -192,7 +182,11 @@ const Template: Story<Omit<AutosuggestProps, 'suggestions' | 'value'>> = (
           </Fullscreen.ActiveField>
         }
         defaultInput={
-          <Fullscreen.DefaultInput iconPostion="trailing" size="l" />
+          <Fullscreen.DefaultInput
+            iconPostion="trailing"
+            size="l"
+            minRows={1}
+          />
         }
         renderModalAvailableSpace={() => (
           <div className={styles['fullscreen-modal-space']}>Info</div>
@@ -206,6 +200,8 @@ const Template: Story<Omit<AutosuggestProps, 'suggestions' | 'value'>> = (
             ))}
           </div>
         )}
+        highlightFirstSuggestion={false}
+        focusInputOnSuggestionClick={false}
       />
 
       <h2>Opened suggestions view without interactive</h2>

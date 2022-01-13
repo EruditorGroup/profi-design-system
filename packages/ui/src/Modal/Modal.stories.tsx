@@ -29,6 +29,7 @@ const Template: Story = ({placeholder = 'Label', ...args}) => {
         {...args}
       >
         <Button onClick={() => setOpened(false)}>Close</Button>
+        <Modal.CloseButton />
         {args.children}
         <div style={{...cube, left: '20px'}} />
         <div style={{...cube, right: '20px'}} />

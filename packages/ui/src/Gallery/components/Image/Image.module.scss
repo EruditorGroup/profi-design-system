@@ -7,9 +7,10 @@
 
 .imageContainer {
   position: relative;
-  max-height: calc(100vh - 90px);
+  height: calc(100% - 130px);
   background: #333 center/contain no-repeat;
-  transform: translate3d(0, 50%, -1px) scale(2);
+  transform: translate3d(50%, 100%, -1px) scale(2);
+  transform-origin: right bottom;
 
   &_zooming {
     display: flex;
@@ -18,11 +19,16 @@
     left: 0;
     right: 0;
     bottom: 0;
+    height: auto;
     max-height: none;
     align-items: center;
     justify-content: center;
     z-index: 1;
     touch-action: none;
+  }
+
+  &_withDescription {
+    height: calc(100% - 142px);
   }
 }
 
@@ -30,10 +36,15 @@
   display: block;
   max-width: 100%;
   max-height: 100%;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 
 .info {
+  position: relative;
   padding: 25px;
+  min-height: 300px;
   transform: translateZ(0);
   background: var(--ui-bg-light);
   box-sizing: border-box;
@@ -71,8 +82,6 @@
   align-items: center;
   box-sizing: border-box;
   cursor: pointer;
-  opacity: 0;
-  transition: opacity 0.1s 1s ease;
 
   &_left {
     left: 0;
@@ -83,11 +92,6 @@
     right: 0;
     justify-content: flex-end;
   }
-}
-
-.imageContainer:hover > .buttonArea {
-  opacity: 1;
-  transition-delay: 0s;
 }
 
 .button {
@@ -110,6 +114,7 @@
   }
 
   .imageContainer {
+    height: auto;
     max-height: none;
     flex: 1 1 0;
     transform: none;
@@ -120,9 +125,13 @@
     overflow-y: auto;
   }
 
-  .image {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
+  .buttonArea {
+    opacity: 0;
+    transition: opacity 0.1s 1s ease;
+
+    .imageContainer:hover > & {
+      opacity: 1;
+      transition-delay: 0s;
+    }
   }
 }

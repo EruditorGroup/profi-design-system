@@ -2,18 +2,16 @@ import React, {
   forwardRef,
   MutableRefObject,
   PropsWithChildren,
-  useEffect,
-  useState,
   useCallback,
 } from 'react';
 import noop from 'lodash/noop';
+import {
+  useCombinedRef,
+  useControllableState,
+} from '@eruditorgroup/profi-toolkit';
 import {InputProps as AutosuggestInputProps} from 'react-autosuggest';
 import cx from 'classnames';
 
-import {
-  useCombinedRef,
-  useMoveCaretToEndOnFocus,
-} from '@eruditorgroup/profi-toolkit';
 import Modal from '../../../Modal';
 import List from '../../../List';
 import Spinner from '../../../Spinner';
@@ -32,6 +30,7 @@ import type {
 
 import styles from './Fullscreen.module.scss';
 import ListItemStyles from '../../../List/components/ListItem/ListItem.module.scss';
+import {useDelayAlwaysRenderSuggestions} from './hooks/useDelayAlwaysRenderSuggestions';
 
 interface State {
   isOpen: boolean;
@@ -52,20 +51,21 @@ type TReplaceEvents<
 
 type SharedFieldProps = {
   value: string;
+  fieldRef?: MutableRefObject<HTMLInputElement | HTMLTextAreaElement>;
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   [key: string]: any;
 } & Pick<InputProps, 'placeholder'> &
   Pick<
     AutosuggestInputProps<ISuggestValue>,
-    'onChange' | 'onBlur' | 'onKeyDown'
+    'onChange' | 'onBlur' | 'onKeyDown' | 'onSubmit'
   > &
   TReplaceEvents<'onFocus'>;
 
 interface IFullscreenProps {
-  inputRef?: MutableRefObject<HTMLInputElement | HTMLTextAreaElement>;
   renderModalAvailableSpace?: () => JSX.Element;
   renderSuggestionListAddon?: () => JSX.Element;
-  onOpen?: () => void;
+  onChangeOpen?: (state: boolean) => void;
+  isFullscreenOpen?: boolean;
   closeOnSuggestionSelected?: boolean;
   activeField: JSX.Element;
   defaultInput: JSX.Element;
@@ -73,6 +73,7 @@ interface IFullscreenProps {
   modalClassName?: string;
   modalBodyClassName?: string;
   sharedFieldProps: SharedFieldProps;
+  blurOnTouchStart?: boolean;
 }
 
 export type FullscreenAutosuggestProps = AutosuggestProps<IFullscreenProps>;
@@ -83,7 +84,6 @@ const Fullscreen = forwardRef(function Fullscreen(
     isLoading,
     containerProps,
     shouldRenderSuggestions,
-    inputRef,
     onSuggestionSelected,
     renderModalAvailableSpace,
     renderSuggestionListAddon,
@@ -93,56 +93,63 @@ const Fullscreen = forwardRef(function Fullscreen(
     modalClassName,
     modalBodyClassName,
     renderSuggestion,
-    onOpen,
+    onChangeOpen,
     closeOnSuggestionSelected = true,
     sharedFieldProps,
+    alwaysRenderSuggestions,
+    isFullscreenOpen,
+    blurOnTouchStart = true,
     // div props
     ...props
   },
   ref,
 ) {
-  const [isFullscreenActive, setFullscreenActive] = useState(false);
-  const [localInputRef, setLocalInputRef] = useCombinedRef(inputRef);
+  const [isFullscreenActive, setFullscreenActive] = useControllableState({
+    value: isFullscreenOpen,
+    defaultValue: false,
+    onChange: onChangeOpen,
+  });
+
   const state: State = {
     isOpen: isFullscreenActive,
   };
-
-  useMoveCaretToEndOnFocus(localInputRef, [isFullscreenActive]);
-
-  useEffect(() => {
-    const input = localInputRef.current;
-    if (input) {
-      input.focus();
-    }
-  }, [isFullscreenActive, localInputRef]);
+  const [localInputRef, setLocalInputRef] = useCombinedRef<
+    HTMLInputElement | HTMLTextAreaElement
+  >(sharedFieldProps.fieldRef);
 
   const handleOpen = useCallback(() => {
     setFullscreenActive(true);
-    onOpen?.();
-  }, [onOpen]);
+  }, [setFullscreenActive]);
 
   const handleClose = useCallback(() => {
     setFullscreenActive(false);
-  }, []);
+  }, [setFullscreenActive]);
 
-  const handleFocus = useCallback(() => {
-    handleOpen();
-  }, [handleOpen]);
+  const hadleInputKeyDown = (e: React.KeyboardEvent<HTMLElement>) => {
+    if (e.key === 'Enter') {
+      sharedFieldProps.onSubmit?.(e);
+    }
+  };
 
   const enhancedSharedProps = {
     ...sharedFieldProps,
     onFocus: (e: React.FocusEvent<HTMLElement>) => {
       sharedFieldProps.onFocus?.(state, e);
     },
+    ref: (setLocalInputRef as unknown) as React.Ref<HTMLInputElement>,
   };
+
+  const delayedAlwaysRenderSuggestions = useDelayAlwaysRenderSuggestions(
+    alwaysRenderSuggestions,
+    isFullscreenActive,
+  );
 
   return (
     <FullscreenContext.Provider
       value={{
         handleClose,
         value: sharedFieldProps.value,
-        handleFocus,
-        setInputRef: setLocalInputRef,
+        handleOpenModal: handleOpen,
       }}
     >
       {isFullscreenActive ? (
@@ -152,7 +159,6 @@ const Fullscreen = forwardRef(function Fullscreen(
           visible
           fullscreen
           onClose={noop}
-          withCloseButton={false}
           withPadding={false}
         >
           <AutosuggestVariant
@@ -179,6 +185,7 @@ const Fullscreen = forwardRef(function Fullscreen(
                   size={suggestionsSize}
                   className={styles['uilist']}
                   design="high"
+                  onTouchStart={() => blurOnTouchStart && localInputRef.current.blur()}
                 >
                   {isLoading ? (
                     <Spinner
@@ -193,7 +200,13 @@ const Fullscreen = forwardRef(function Fullscreen(
               </div>
             )}
             renderInputComponent={(props) =>
-              React.cloneElement(activeField, {...props})
+              React.cloneElement(activeField, {
+                ...props,
+                onKeyDown: (e: React.KeyboardEvent<HTMLElement>) => {
+                  hadleInputKeyDown(e);
+                  props?.onKeyDown(e);
+                },
+              })
             }
             getSuggestionValue={({value}) => value}
             renderSuggestion={
@@ -207,6 +220,7 @@ const Fullscreen = forwardRef(function Fullscreen(
               })
             }
             {...props}
+            alwaysRenderSuggestions={delayedAlwaysRenderSuggestions}
             onSuggestionSelected={(e, data) => {
               closeOnSuggestionSelected && handleClose();
               onSuggestionSelected(e, data);

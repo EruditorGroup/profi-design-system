@@ -1,0 +1,44 @@
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  box-shadow: 0px 1px 0px 0px rgba(0, 0, 0, 0.1);
+}
+
+.body {
+  padding: 25px;
+
+  > * + * {
+    margin-top: 10px;
+  }
+}
+
+.images {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 29px -1px -1px;
+}
+
+.image {
+  width: 33.3333333333333%;
+  padding-top: 33.3333333333333%;
+  border: 1px solid transparent;
+  background-size: cover;
+  background-position: center;
+  background-clip: padding-box;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+.spinner {
+  margin: 0 auto;
+  font-size: 40px;
+}
+
+@media screen and (min-width: 732px) {
+  .image {
+    width: 20%;
+    padding-top: 20%;
+  }
+}

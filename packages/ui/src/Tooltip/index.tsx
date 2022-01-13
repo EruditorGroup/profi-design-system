@@ -1,29 +1,39 @@
-import React, {createContext, forwardRef, useContext, useState} from 'react';
+import React, {createContext, forwardRef, useContext, useMemo} from 'react';
 import classNames from 'classnames';
 import TooltipContent from './components/TooltipContent';
 import TooltipToggler from './components/TooltipToggler';
-import {useClickOutside, useCombinedRef} from '@eruditorgroup/profi-toolkit';
+import {
+  useClickOutside,
+  useCombinedRef,
+  useControllableState,
+} from '@eruditorgroup/profi-toolkit';
 import type {ForwardRefExoticComponent, HTMLAttributes} from 'react';
 
 import styles from './Tooltip.module.scss';
 import {AliasProps} from '@eruditorgroup/profi-toolkit';
+import {Omit} from 'react-autosuggest';
 
-export type ITrigger = 'hover' | 'click';
+export type ITrigger = 'hover' | 'click' | 'custom';
 
 export interface TooltipProps
-  extends HTMLAttributes<HTMLDivElement>,
+  extends Omit<HTMLAttributes<HTMLDivElement>, 'onChange'>,
     AliasProps {
   trigger?: ITrigger;
   persist?: boolean;
+  opened?: boolean;
+  onChange?: (state: boolean) => void;
 }
 
-interface TooltipComponent extends ForwardRefExoticComponent<TooltipProps> {
+interface TooltipComponent
+  extends ForwardRefExoticComponent<
+    TooltipProps & {ref?: React.Ref<HTMLDivElement>}
+  > {
   Content: typeof TooltipContent;
   Toggler: typeof TooltipToggler;
   useTooltipContext: typeof useTooltipContext;
 }
 
-type TooltipContextType = {
+export type TooltipContextType = {
   trigger: ITrigger;
   persist: boolean; // should we not close tooltip when mouse is over tooltip content ?
   opened: boolean;
@@ -46,12 +56,24 @@ const Tooltip = forwardRef<HTMLDivElement, TooltipProps>(
       persist = false,
       onMouseEnter,
       onMouseLeave,
+      opened: openedProp,
+      onChange,
       ...props
     },
     ref,
   ) => {
-    const [opened, setOpened] = useState(false);
+    const [opened, setOpened] = useControllableState({
+      value: openedProp,
+      defaultValue: false,
+      onChange,
+    });
+
     const [combinedRef, setRef] = useCombinedRef<HTMLDivElement | null>(ref);
+
+    const tooltipContext = useMemo<TooltipContextType>(
+      () => ({opened, setOpened, trigger, persist}),
+      [opened, setOpened, trigger, persist],
+    );
 
     useClickOutside(combinedRef, () => {
       if (trigger === 'click') {
@@ -60,7 +82,7 @@ const Tooltip = forwardRef<HTMLDivElement, TooltipProps>(
     });
 
     return (
-      <TooltipContext.Provider value={{opened, setOpened, trigger, persist}}>
+      <TooltipContext.Provider value={tooltipContext}>
         <div
           className={classNames(styles['tooltip'], className)}
           onMouseEnter={(ev: React.MouseEvent<HTMLDivElement, MouseEvent>) => {

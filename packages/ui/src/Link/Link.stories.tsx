@@ -13,6 +13,37 @@ const td = {
   border: '1px solid #ececec',
 };
 
+const Template: Story<LinkProps> = (args) => (
+  <table cellPadding="10">
+    <thead>
+      <tr>
+        <th></th>
+        <th>Regular</th>
+        <th>Bold</th>
+      </tr>
+    </thead>
+    <tbody>
+      {(['xs', 's', 'm', 'l'] as LinkProps['size'][]).map((size) => (
+        <tr>
+          <td style={td} key={size}>
+            Link: {size?.toUpperCase()}
+          </td>
+          <td style={td}>
+            <Link {...args} size={size} to="#">
+              Съешь ещё этих мягких французских булок
+            </Link>
+          </td>
+          <td style={td}>
+            <Link {...args} size={size} to="#" bold>
+              Съешь ещё этих мягких французских булок
+            </Link>
+          </td>
+        </tr>
+      ))}
+    </tbody>
+  </table>
+);
+
 export const Default: Story<LinkProps> = (args) => (
   <>
     <p>
@@ -63,35 +94,6 @@ export const Default: Story<LinkProps> = (args) => (
   </>
 );
 
-export const Sizes: Story<LinkProps> = (args) => {
-  return (
-    <table cellPadding="10">
-      <thead>
-        <tr>
-          <th></th>
-          <th>Regular</th>
-          <th>Bold</th>
-        </tr>
-      </thead>
-      <tbody>
-        {(['xs', 's', 'm', 'l'] as LinkProps['size'][]).map((size) => (
-          <tr>
-            <td style={td} key={size}>
-              Link: {size?.toUpperCase()}
-            </td>
-            <td style={td}>
-              <Link size={size} to="#">
-                Съешь ещё этих мягких французских булок
-              </Link>
-            </td>
-            <td style={td}>
-              <Link size={size} to="#" bold>
-                Съешь ещё этих мягких французских булок
-              </Link>
-            </td>
-          </tr>
-        ))}
-      </tbody>
-    </table>
-  );
-};
+export const Sizes = Template.bind({});
+export const Skeleton = Template.bind({});
+Skeleton.args = {skeleton: true};

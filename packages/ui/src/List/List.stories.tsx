@@ -213,3 +213,17 @@ ActiveDisabledItems.args = {
     </>
   ),
 };
+
+export const ListSkeletonStory = TemplateFactory(
+  createMeta(LIST_SIZES, LIST_DESIGNS),
+).bind({});
+ListSkeletonStory.storyName = 'Skeleton';
+ListSkeletonStory.args = {
+  skeleton: true,
+  children: (
+    <>
+      <List.Item>Тестовый тест</List.Item>
+      <List.Item>Тестовый тест</List.Item>
+    </>
+  ),
+};

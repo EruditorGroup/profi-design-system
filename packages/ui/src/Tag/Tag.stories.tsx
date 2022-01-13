@@ -6,6 +6,7 @@ import TableGuides, {
 import Tag, {TagProps} from './index';
 import Avatar from '../Avatar';
 import src from '../Avatar/avatar.png';
+import Link from '../Link';
 
 export default {
   title: 'Tag',
@@ -15,7 +16,7 @@ export default {
 type TagStoryMeta = Omit<
   TableGuidesProps<TagProps & {state: TagState}>,
   'Component'
->;
+  >;
 
 const sizes: TagProps['size'][] = ['l', 'm', 's'];
 
@@ -76,4 +77,10 @@ export const TagWithLeadingStory = template().bind({});
 TagWithLeadingStory.args = {
   children: 'Тестовый тэг',
   leading: <Avatar src={src} isOnline />,
+};
+
+export const TagAsLinkStory = tableTemplate().bind({});
+TagAsLinkStory.args = {
+  children: 'Ссылка текст',
+  as: Link,
 };

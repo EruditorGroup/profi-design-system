@@ -20,4 +20,13 @@ export const parameters = {
       date: /Date$/,
     },
   },
+  backgrounds: {
+    default: 'twitter',
+    values: [
+      {
+        name: 'default',
+        value: '#fafafa',
+      },
+    ],
+  },
 };

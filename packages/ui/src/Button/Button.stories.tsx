@@ -139,3 +139,13 @@ WithRightSpinnerStory.args = {
     </>
   ),
 };
+
+export const Underlined = templateFactory(templateStoryMeta).bind({});
+Underlined.args = {
+  underlined: true,
+};
+
+export const Skeleton = templateFactory(templateStoryMeta).bind({});
+Skeleton.args = {
+  skeleton: true,
+};

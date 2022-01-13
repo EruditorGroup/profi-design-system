@@ -6,41 +6,30 @@ name: 'Push/PR checks'
 on: [pull_request]
 
 jobs:
-  jest:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v2
-        with:
-          node-version: 14
-          cache: 'yarn'
-
-      - run: yarn --frozen-lockfile
-      - run: yarn build:cjs
-      - run: yarn test
+  test:
+    name: test
+    uses: EruditorGroup/profi-design-system/.github/workflows/test.yaml@master
 
   lint:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v2
-        with:
-          node-version: 14
-          cache: 'yarn'
-
-      - run: yarn --frozen-lockfile
-      - run: yarn lint
+    name: lint
+    uses: EruditorGroup/profi-design-system/.github/workflows/lint.yaml@master
 
   screenshot-testing:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v2
-        continue-on-error: true
         with:
-          node-version: 14
-          cache: 'yarn'
-      - run: yarn --frozen-lockfile
+          node-version-file: '.nvmrc'
+      - name: Cache node_modules
+        id: cache
+        uses: actions/cache@v2.1.7
+        with:
+          path: node_modules
+          key: ${{hashFiles('yarn.lock')}}
+      - name: Install dependencies
+        if: steps.cache.outputs.cache-hit != 'true'
+        run: yarn --frozen-lockfile
       - run: NODE_ENV=production yarn build
 
       - uses: szenius/set-timezone@v1.0
