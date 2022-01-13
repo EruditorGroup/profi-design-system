@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.62.3](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.62.2...@eruditorgroup/profi-ui@0.62.3) (2022-01-13)
+
+
+### Bug Fixes
+
+* **stars:** spark should be absolute ([a956ca9](https://github.com/eruditorgroup/profi-design-system/commit/a956ca9dd23aa97002da0b847c98f357b73545e7))
+
+
+
+
+
 ## [0.62.2](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.62.1...@eruditorgroup/profi-ui@0.62.2) (2022-01-11)
 
 
