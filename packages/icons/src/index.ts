@@ -42,6 +42,7 @@ export {default as PinIcon} from './Pin';
 export {default as PhoneStrokeIcon} from './PhoneStroke';
 export {default as PlaceIcon} from './Place';
 export {default as PlusIcon} from './Plus';
+export {default as ProfiIcon} from './Profi';
 export {default as ProfileIcon} from './Profile';
 export {default as ProfileStrokeIcon} from './ProfileStroke';
 export {default as RepeatIcon} from './Repeat';
