@@ -1,0 +1,22 @@
+.wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.bar {
+  width: 100%;
+  border-radius: 100px;
+  overflow: hidden;
+  background-color: var(--ui-bg-lightState);
+}
+
+.background {
+  background-color: currentColor;
+  border-radius: 100px;
+  transition: width 0.4s ease;
+}
+
+.text {
+  width: 3em;
+  margin-left: 8px;
+}
