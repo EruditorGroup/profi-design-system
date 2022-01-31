@@ -12,6 +12,8 @@ import {IAutosuggestComponent, AutosuggestProps as AutosuggestPropsBase} from '.
 
 interface IProps extends InputProps {
   suggestionsContainerProps?: SpaceProps;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  inputProps: {[key: string]: any};
 }
 
 export type AutosuggestProps = AutosuggestPropsBase<IProps>;

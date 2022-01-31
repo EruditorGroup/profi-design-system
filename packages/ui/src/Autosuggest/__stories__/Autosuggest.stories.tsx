@@ -92,6 +92,7 @@ const Template: Story<Omit<AutosuggestProps, 'suggestions' | 'value'>> = (
         inputProps={{
           value,
           onChange: (_, params) => setValue(params.newValue),
+          'data-shmid': 'test',
         }}
         onSuggestionsFetchRequested={updateSuggestions}
         onSuggestionSelected={(_, {suggestion}) => setValue(suggestion.value)}

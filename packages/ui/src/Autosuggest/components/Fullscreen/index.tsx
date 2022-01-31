@@ -76,7 +76,7 @@ interface IFullscreenProps {
   blurOnTouchStart?: boolean;
 }
 
-export type FullscreenAutosuggestProps = AutosuggestProps<IFullscreenProps>;
+export type FullscreenAutosuggestProps = AutosuggestProps<IFullscreenProps, 'inputProps'>;
 
 const Fullscreen = forwardRef(function Fullscreen(
   {
