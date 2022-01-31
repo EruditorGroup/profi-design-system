@@ -62,8 +62,8 @@ type SharedFieldProps = {
   TReplaceEvents<'onFocus'>;
 
 interface IFullscreenProps {
-  renderModalAvailableSpace?: () => JSX.Element;
-  renderSuggestionListAddon?: () => JSX.Element;
+  renderModalAvailableSpace?: () => React.ReactNode;
+  renderSuggestionListAddon?: () => React.ReactNode;
   onChangeOpen?: (state: boolean) => void;
   isFullscreenOpen?: boolean;
   closeOnSuggestionSelected?: boolean;
