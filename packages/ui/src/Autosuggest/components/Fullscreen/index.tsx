@@ -26,6 +26,7 @@ import type {
   IAutosuggestComponent,
   ISuggestValue,
   AutosuggestProps,
+  DataAttrs,
 } from '../../types';
 
 import styles from './Fullscreen.module.scss';
@@ -52,14 +53,12 @@ type TReplaceEvents<
 type SharedFieldProps = {
   value: string;
   fieldRef?: MutableRefObject<HTMLInputElement | HTMLTextAreaElement>;
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  [key: string]: any;
 } & Pick<InputProps, 'placeholder'> &
   Pick<
     AutosuggestInputProps<ISuggestValue>,
     'onChange' | 'onBlur' | 'onKeyDown' | 'onSubmit'
   > &
-  TReplaceEvents<'onFocus'>;
+  TReplaceEvents<'onFocus'> & DataAttrs;
 
 interface IFullscreenProps {
   renderModalAvailableSpace?: () => React.ReactNode;

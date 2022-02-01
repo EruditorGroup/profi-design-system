@@ -8,12 +8,11 @@ import AutosuggestVariant from '../AutosuggestVariant';
 
 import styles from './Autosuggest.module.scss';
 
-import {IAutosuggestComponent, AutosuggestProps as AutosuggestPropsBase} from '../../types';
+import {IAutosuggestComponent, AutosuggestProps as AutosuggestPropsBase, DataAttrs} from '../../types';
 
 interface IProps extends InputProps {
   suggestionsContainerProps?: SpaceProps;
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  inputProps: {[key: string]: any};
+  inputProps: DataAttrs;
 }
 
 export type AutosuggestProps = AutosuggestPropsBase<IProps>;
