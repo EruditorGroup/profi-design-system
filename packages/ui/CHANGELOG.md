@@ -3,6 +3,35 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.0.0-alpha.17](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@1.0.0-alpha.15...@eruditorgroup/profi-ui@1.0.0-alpha.17) (2022-02-01)
+
+
+
+# 1.0.0-alpha.17 (2022-02-01)
+
+
+### Bug Fixes
+
+* **Autosuggest:** fix types for data attrs ([9e836da](https://github.com/eruditorgroup/profi-design-system/commit/9e836daa24f6ba8686efadca677138572be806e3))
+* **Fullscreen:** fix props type ([0716d75](https://github.com/eruditorgroup/profi-design-system/commit/0716d7503a015bf1402591ec291bcd10decad6d0))
+
+
+
+# 1.0.0-alpha.16 (2022-01-12)
+
+
+### Bug Fixes
+
+* **Datepicker:** Добавил пропс, который добавляет кастомную логику для вывода значения в инпут ([79892f2](https://github.com/eruditorgroup/profi-design-system/commit/79892f2f7cc37c67129af556825c93e9dbcd87b7))
+* **Gallery.Album:** Фикс работы модала альбомов ([b4f7dc5](https://github.com/eruditorgroup/profi-design-system/commit/b4f7dc5d9b3077fde87b77287bea8f6829a5667b))
+* **Modal:** Корректное отображение оверлеев если открыто несколько модалок ([83eb79e](https://github.com/eruditorgroup/profi-design-system/commit/83eb79e9d03f5417ae731c0588729a8bf594a224))
+* **stars:** spark should be absolute ([a956ca9](https://github.com/eruditorgroup/profi-design-system/commit/a956ca9dd23aa97002da0b847c98f357b73545e7))
+* **ui:** RateStars animation ([#401](https://github.com/eruditorgroup/profi-design-system/issues/401)) ([02f4d9f](https://github.com/eruditorgroup/profi-design-system/commit/02f4d9f166472c44827886a14e166d5d1622101c))
+
+
+
+
+
 # [1.0.0-alpha.16](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@1.0.0-alpha.15...@eruditorgroup/profi-ui@1.0.0-alpha.16) (2022-01-12)
 
 
