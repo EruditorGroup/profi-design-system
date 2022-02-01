@@ -8,10 +8,11 @@ import AutosuggestVariant from '../AutosuggestVariant';
 
 import styles from './Autosuggest.module.scss';
 
-import {IAutosuggestComponent, AutosuggestProps as AutosuggestPropsBase} from '../../types';
+import {IAutosuggestComponent, AutosuggestProps as AutosuggestPropsBase, DataAttrs} from '../../types';
 
 interface IProps extends InputProps {
   suggestionsContainerProps?: SpaceProps;
+  inputProps: DataAttrs;
 }
 
 export type AutosuggestProps = AutosuggestPropsBase<IProps>;
