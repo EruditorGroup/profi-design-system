@@ -60,3 +60,7 @@ export type IAutosuggestComponent<
     // eslint-disable-next-line
     React.RefAttributes<ReactAutosuggest<ISuggestValue, any>>
 >;
+
+export type DataAttrs<Type extends string = string> = {
+  [Property in Type as `data-${Property}`]: string;
+};
