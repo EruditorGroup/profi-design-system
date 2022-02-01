@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.63.1](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.63.0...@eruditorgroup/profi-ui@0.63.1) (2022-02-01)
+
+
+### Bug Fixes
+
+* **Autosuggest:** bump ts ([bdeff5e](https://github.com/eruditorgroup/profi-design-system/commit/bdeff5e8cd4a212f7fee6f549b6afc3260551675))
+* **Autosuggest:** fix types for data attrs ([3d2a96a](https://github.com/eruditorgroup/profi-design-system/commit/3d2a96a5f433d0d2ba16320bb80765a8be73c3ac))
+* **Fullscreen:** fix props type ([261df22](https://github.com/eruditorgroup/profi-design-system/commit/261df22cb3f235e11613e603a34b3b20a70f3fd2))
+
+
+
+
+
 # [0.63.0](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.62.4...@eruditorgroup/profi-ui@0.63.0) (2022-01-27)
 
 
