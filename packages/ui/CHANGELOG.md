@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.63.2](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.63.1...@eruditorgroup/profi-ui@0.63.2) (2022-02-03)
+
+
+### Bug Fixes
+
+* Забыл импорт Progress ([186ce6b](https://github.com/eruditorgroup/profi-design-system/commit/186ce6b156e53c74b836f08ef27f93c91d8f71ab))
+
+
+
+
+
 ## [0.63.1](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.63.0...@eruditorgroup/profi-ui@0.63.1) (2022-02-01)
 
 
