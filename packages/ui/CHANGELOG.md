@@ -3,6 +3,29 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.0.0-alpha.19](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@1.0.0-alpha.18...@eruditorgroup/profi-ui@1.0.0-alpha.19) (2022-02-08)
+
+
+
+# 1.0.0-alpha.19 (2022-02-08)
+
+
+### Bug Fixes
+
+* Забыл импорт Progress ([186ce6b](https://github.com/eruditorgroup/profi-design-system/commit/186ce6b156e53c74b836f08ef27f93c91d8f71ab))
+* **Autosuggest:** bump ts ([bdeff5e](https://github.com/eruditorgroup/profi-design-system/commit/bdeff5e8cd4a212f7fee6f549b6afc3260551675))
+* **Autosuggest:** fix types for data attrs ([3d2a96a](https://github.com/eruditorgroup/profi-design-system/commit/3d2a96a5f433d0d2ba16320bb80765a8be73c3ac))
+* **Fullscreen:** fix props type ([261df22](https://github.com/eruditorgroup/profi-design-system/commit/261df22cb3f235e11613e603a34b3b20a70f3fd2))
+
+
+### Features
+
+* Компонент Progress ([3f1c706](https://github.com/eruditorgroup/profi-design-system/commit/3f1c706fa3304d7accf257460cc09f7bdcf7bfab))
+
+
+
+
+
 # [1.0.0-alpha.18](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@1.0.0-alpha.17...@eruditorgroup/profi-ui@1.0.0-alpha.18) (2022-02-07)
 
 **Note:** Version bump only for package @eruditorgroup/profi-ui
