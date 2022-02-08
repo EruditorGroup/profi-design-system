@@ -39,6 +39,7 @@ const BareInput: React.FC<BareInputProps> = ({
           {...inputProps}
           getInputRef={setRef}
           format={mask}
+          mask="_"
           type={inputProps.type as 'text' | 'tel' | 'password'}
         />
       ) : (
