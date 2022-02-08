@@ -60,4 +60,5 @@ export {default as VerifiedIcon} from './Verified';
 export {default as VkIcon} from './Vk';
 export {default as WarningIcon} from './Warning';
 export {default as WarrantyIcon} from './Warranty';
+export {default as YandexIcon} from './Yandex';
 export {default as YoutubeIcon} from './Youtube';
