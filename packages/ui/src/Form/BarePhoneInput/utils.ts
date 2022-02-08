@@ -1,4 +1,9 @@
-import {BASE_COUNTRIES, ICountryCode, ICountryData} from './constants';
+import {
+  BASE_COUNTRIES,
+  ICountryCode,
+  ICountryData,
+  ELITE_PATTERNS,
+} from './constants';
 
 export type ContryInfoType = {
   textСode: ICountryCode;

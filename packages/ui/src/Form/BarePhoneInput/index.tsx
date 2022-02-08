@@ -1,10 +1,14 @@
-import React, {useState, useRef, useCallback} from 'react';
+import React, {useRef, useCallback} from 'react';
 import cx from 'classnames';
 import {Input, InputProps} from '../index';
 
-import {getCountryByPhone, correctPhone} from './utils';
+import {getCountryByPhone} from './utils';
 import {ICountryCode} from './constants';
-import {useAutoFocus} from '@eruditorgroup/profi-toolkit';
+import {
+  useAutoFocus,
+  useCombinedRef,
+  useControllableState,
+} from '@eruditorgroup/profi-toolkit';
 
 import styles from './BarePhoneInput.module.scss';
 
@@ -26,53 +30,20 @@ export default function PhoneInput({
   inputRef,
   ...props
 }: PhoneInputProps): React.ReactElement | null {
-  const [stateValue, setStateValue] = useState(defaultValue);
-  const value = propValue ?? stateValue;
+  const [value, setValue] = useControllableState({
+    value: propValue,
+    defaultValue,
+    onChange,
+  });
 
   const {phoneCode, countryCode, placeholder, mask} = getCountryByPhone(
     value.toString(),
     defaultCountryCode,
   );
-  const oldMask = useRef(mask);
 
-  const handleChangeMask = useCallback<
-    NonNullable<InputProps['beforeMaskedValueChange']>
-  >(
-    (state) => {
-      // обновляем каретку на смену маски, т.к дефолтное поведение багованое
-      if (state.selection && oldMask.current !== mask) {
-        oldMask.current = mask;
-        const caretPos = state.value.replace(/[^\d\s]+/g, '').trim().length;
-        state.selection.start = caretPos;
-        state.selection.end = caretPos;
-      }
-      return state;
-    },
-    [mask],
-  );
+  const handleChange = useCallback((val: string) => setValue(val), [setValue]);
 
-  const _onChange = useRef(onChange);
-  _onChange.current = onChange;
-
-  const handleChange = useCallback(
-    (val: string) => {
-      if (propValue === undefined) setStateValue(val);
-      _onChange.current?.(val);
-    },
-    [propValue, _onChange],
-  );
-
-  const handlePaste = useCallback(
-    (ev: React.ClipboardEvent<HTMLInputElement>) => {
-      try {
-        handleChange(correctPhone(ev.clipboardData.getData('Text'), phoneCode));
-        ev.preventDefault();
-      } catch (err) {}
-    },
-    [handleChange, phoneCode],
-  );
-
-  const ref = useRef<HTMLInputElement | null>(null);
+  const [ref, setRef] = useCombinedRef<HTMLInputElement | null>(inputRef);
 
   function handleFocus(ev: React.FocusEvent<HTMLInputElement>) {
     if (onFocus) onFocus(ev);
@@ -89,20 +60,14 @@ export default function PhoneInput({
           <div className={styles['plus']}>+</div>
         </div>
       }
-      beforeMaskedValueChange={handleChangeMask}
+      mask={mask}
       value={value}
       onChange={(ev) => handleChange(ev.currentTarget.value)}
       onFocus={handleFocus}
       type="tel"
       autoComplete="tel"
       {...props}
-      onPaste={handlePaste}
-      mask={mask}
-      inputRef={(element) => {
-        ref.current = element;
-        if (typeof inputRef === 'function') inputRef(element);
-        else if (inputRef) inputRef.current = element;
-      }}
+      inputRef={setRef}
       placeholder={placeholder}
     />
   );

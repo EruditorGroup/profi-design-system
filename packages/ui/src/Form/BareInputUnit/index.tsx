@@ -6,6 +6,7 @@ import BareInput from '../BareInput';
 import type {BareInputProps} from '../BareInput';
 
 import styles from './BareInputUnit.module.scss';
+import {useControllableState} from '@eruditorgroup/profi-toolkit';
 
 const UNIT_TO_INPUT_MARGIN = 4;
 
@@ -14,13 +15,15 @@ export type BareInputUnitProps = BareInputProps & {
   unit: ReactNode;
   unitClassName?: string;
   unitStyle?: CSSProperties;
+  onChange: (value: string | number) => void;
 };
 
 const BareInputUnit: React.FC<BareInputUnitProps> = ({
   unit,
   unitClassName,
   unitStyle,
-  value,
+  value: propValue,
+  defaultValue,
   placeholder,
   className,
   onChange,
@@ -28,6 +31,11 @@ const BareInputUnit: React.FC<BareInputUnitProps> = ({
   ...props
 }) => {
   const unitRef = useRef<HTMLSpanElement>(null);
+  const [value, setValue] = useControllableState({
+    value: propValue,
+    defaultValue,
+    onChange,
+  });
 
   const {width} = unitRef.current?.getBoundingClientRect() || {};
 
@@ -50,7 +58,7 @@ const BareInputUnit: React.FC<BareInputUnitProps> = ({
         value={value}
         placeholder={placeholder}
         className={classnames(styles['input-unit__input'], className)}
-        onChange={onChange}
+        onChange={(ev) => setValue(ev.target.value)}
       />
       <div className={classnames(styles['input-unit__stretcher'])}>
         <span className={styles['input-unit__value']}>{mask}</span>
