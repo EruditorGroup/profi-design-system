@@ -6,14 +6,18 @@ import classnames from 'classnames';
 import styles from './BareInput.module.scss';
 
 import type {BaseControlProps} from '../types';
+import type {FormControlSize} from '../FormControl';
 
 export interface BareInputProps
-  extends Omit<NumberFormatProps, 'defaultValue' | 'value' | 'mask' | 'format'>,
+  extends Omit<
+      NumberFormatProps,
+      'defaultValue' | 'value' | 'mask' | 'format' | 'size' | 'type'
+    >,
     BaseControlProps<HTMLInputElement> {
   withFocusScroll?: boolean;
-  value?: string | number;
-  defaultValue?: string | number;
+  type?: string;
   mask?: string;
+  size?: FormControlSize;
 }
 
 const BareInput: React.FC<BareInputProps> = ({
@@ -29,9 +33,14 @@ const BareInput: React.FC<BareInputProps> = ({
   useFocusScroll(ref, withFocusScroll);
 
   const InputComponent = useCallback(
-    (inputProps: Omit<BareInputProps, 'size'>) =>
+    (inputProps: Omit<BareInputProps, 'size' | 'value' | 'defaultValue'>) =>
       mask ? (
-        <NumberFormat {...inputProps} getInputRef={setRef} format={mask} />
+        <NumberFormat
+          {...inputProps}
+          getInputRef={setRef}
+          format={mask}
+          type={inputProps.type as 'text' | 'tel' | 'password'}
+        />
       ) : (
         <input {...inputProps} ref={setRef} />
       ),
