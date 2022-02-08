@@ -1258,5 +1258,3 @@ export const BASE_COUNTRIES: ICountryData[] = [
     subCodes: [],
   },
 ];
-
-export const ELITE_PATTERNS = ['812', '800'];

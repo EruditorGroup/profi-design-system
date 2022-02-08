@@ -1,4 +1,4 @@
-FROM node:14.17-alpine
+FROM node:14.18-alpine
 WORKDIR /app
 RUN apk add --no-cache tzdata && ln -fs /usr/share/zoneinfo/Europe/Moscow /etc/localtime && apk del tzdata
 RUN apk --no-cache update \

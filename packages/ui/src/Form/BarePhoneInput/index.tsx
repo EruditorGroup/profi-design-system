@@ -1,4 +1,4 @@
-import React, {useRef, useCallback} from 'react';
+import React, {useCallback} from 'react';
 import cx from 'classnames';
 import {Input, InputProps} from '../index';
 
