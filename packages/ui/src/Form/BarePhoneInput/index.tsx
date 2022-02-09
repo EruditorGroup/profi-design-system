@@ -1,4 +1,4 @@
-import React, {useCallback} from 'react';
+import React from 'react';
 import cx from 'classnames';
 import {Input, InputProps} from '../index';
 
@@ -13,7 +13,10 @@ import {
 import styles from './BarePhoneInput.module.scss';
 
 export interface PhoneInputProps
-  extends Omit<InputProps, 'onChange' | 'onPaste' | 'placeholder' | 'mask'> {
+  extends Omit<
+    InputProps,
+    'onChange' | 'onPaste' | 'placeholder' | 'mask' | 'withFloatLabel'
+  > {
   defaultValue?: string;
   defaultCountryCode?: ICountryCode;
   autoFocus?: boolean;
