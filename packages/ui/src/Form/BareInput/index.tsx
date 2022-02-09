@@ -1,25 +1,29 @@
 import React, {useCallback} from 'react';
-import InputMask, {Props as InputMaskProps, InputState} from 'react-input-mask';
+import NumberFormat, {NumberFormatProps} from 'react-number-format';
 import {useFocusScroll, useCombinedRef} from '@eruditorgroup/profi-toolkit';
 import classnames from 'classnames';
 
 import styles from './BareInput.module.scss';
 
 import type {BaseControlProps} from '../types';
+import type {FormControlSize} from '../FormControl';
 
 export interface BareInputProps
-  extends Omit<InputMaskProps, 'size' | 'mask' | 'inputRef' | 'children'>,
+  extends Omit<
+      NumberFormatProps,
+      'defaultValue' | 'value' | 'mask' | 'format' | 'size' | 'type'
+    >,
     BaseControlProps<HTMLInputElement> {
-  mask?: InputMaskProps['mask'];
   withFocusScroll?: boolean;
-  beforeMaskedValueChange?(state: InputState): InputState;
+  type?: string;
+  mask?: string;
+  size?: FormControlSize;
 }
 
 const BareInput: React.FC<BareInputProps> = ({
   className,
   type = 'text',
   mask,
-  alwaysShowMask,
   withFocusScroll,
   inputRef,
   ...props
@@ -29,18 +33,19 @@ const BareInput: React.FC<BareInputProps> = ({
   useFocusScroll(ref, withFocusScroll);
 
   const InputComponent = useCallback(
-    (inputProps: Omit<BareInputProps, 'size'>) =>
+    (inputProps: Omit<BareInputProps, 'size' | 'value' | 'defaultValue'>) =>
       mask ? (
-        <InputMask
+        <NumberFormat
           {...inputProps}
-          inputRef={setRef}
-          mask={mask}
-          alwaysShowMask={alwaysShowMask}
+          getInputRef={setRef}
+          format={mask}
+          mask="_"
+          type={inputProps.type as 'text' | 'tel' | 'password'}
         />
       ) : (
         <input {...inputProps} ref={setRef} />
       ),
-    [mask, alwaysShowMask, setRef],
+    [mask, setRef],
   );
 
   return InputComponent({
