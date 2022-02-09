@@ -3,6 +3,21 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.0.0-alpha.20](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@1.0.0-alpha.19...@eruditorgroup/profi-ui@1.0.0-alpha.20) (2022-02-09)
+
+
+
+# 1.0.0-alpha.20 (2022-02-09)
+
+
+### Features
+
+* **ui:** replace react-input-mask to react-number-format ([#426](https://github.com/eruditorgroup/profi-design-system/issues/426)) ([cbad361](https://github.com/eruditorgroup/profi-design-system/commit/cbad3615b642ec6e9f9e40968117ede9c237f529))
+
+
+
+
+
 # [1.0.0-alpha.19](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@1.0.0-alpha.18...@eruditorgroup/profi-ui@1.0.0-alpha.19) (2022-02-08)
 
 
