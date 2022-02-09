@@ -2,7 +2,7 @@ import React, {useCallback} from 'react';
 import cx from 'classnames';
 import {Input, InputProps} from '../index';
 
-import {getCountryByPhone} from './utils';
+import {correctPhone, getCountryByPhone} from './utils';
 import {ICountryCode} from './constants';
 import {
   useAutoFocus,
@@ -37,17 +37,24 @@ export default function PhoneInput({
   });
 
   const {phoneCode, countryCode, placeholder, mask} = getCountryByPhone(
-    value.toString(),
+    value?.toString(),
     defaultCountryCode,
   );
 
-  const handleChange = useCallback((val: string) => setValue(val), [setValue]);
+  const handleChange = (val: string) => setValue(val);
 
   const [ref, setRef] = useCombinedRef<HTMLInputElement | null>(inputRef);
 
   function handleFocus(ev: React.FocusEvent<HTMLInputElement>) {
     if (onFocus) onFocus(ev);
     if (!value) handleChange(phoneCode);
+  }
+
+  function handlePaste(ev: React.ClipboardEvent<HTMLInputElement>) {
+    try {
+      setValue(correctPhone(ev.clipboardData.getData('Text'), phoneCode));
+      ev.preventDefault();
+    } catch (err) {}
   }
 
   useAutoFocus(ref, autoFocus);
@@ -64,6 +71,7 @@ export default function PhoneInput({
       value={value}
       onChange={(ev) => handleChange(ev.currentTarget.value)}
       onFocus={handleFocus}
+      onPaste={handlePaste}
       type="tel"
       autoComplete="tel"
       {...props}

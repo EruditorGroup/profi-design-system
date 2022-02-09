@@ -43,14 +43,16 @@ export function getCountryByPhone(
 
 /** Returns phone with code prefix if nesessary */
 export function correctPhone(value: string, phoneCode: string): string {
+  console.log('return', value);
   const clearValue: string = value.replace(/[^\d]/g, '');
   if (clearValue.startsWith(phoneCode)) {
     return clearValue;
   } else if (clearValue.startsWith('8') && clearValue.length === 11) {
     // paste 89031111111 -> 79031111111
     return clearValue.replace('8', '7');
-  } else {
+  } else if (clearValue.startsWith('9') && clearValue.length === 10) {
     // paste 9031111111 -> 79031111111
     return `${phoneCode}${clearValue}`;
   }
+  return clearValue;
 }
