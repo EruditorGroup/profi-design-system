@@ -44,13 +44,16 @@ export default function PhoneInput({
     defaultCountryCode,
   );
 
-  const handleChange = (val: string) => setValue(val);
+  const handleChange: React.ChangeEventHandler<HTMLInputElement> = (ev) => {
+    console.log(ev);
+    setValue(ev.currentTarget.value);
+  };
 
   const [ref, setRef] = useCombinedRef<HTMLInputElement | null>(inputRef);
 
   function handleFocus(ev: React.FocusEvent<HTMLInputElement>) {
     if (onFocus) onFocus(ev);
-    if (!value) handleChange(phoneCode);
+    if (!value) setValue(phoneCode);
   }
 
   function handlePaste(ev: React.ClipboardEvent<HTMLInputElement>) {
@@ -72,9 +75,9 @@ export default function PhoneInput({
       }
       mask={mask}
       value={value}
-      onChange={(ev) => handleChange(ev.currentTarget.value)}
-      onFocus={handleFocus}
+      onInput={(e) => setValue(e.currentTarget.value)}
       onPaste={handlePaste}
+      onFocus={handleFocus}
       type="tel"
       autoComplete="tel"
       {...props}
