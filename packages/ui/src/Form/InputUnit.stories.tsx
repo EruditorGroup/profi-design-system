@@ -35,7 +35,7 @@ const Template: Story<InputUnitProps> = ({unit = '₽', ...args}) => (
     <div style={containerStyles}>
       <InputUnit
         {...args}
-        value={0}
+        defaultValue={0}
         unit={unit}
         unitClassName="customUnitColor"
         leading={<Prefix text="От" />}
@@ -43,7 +43,7 @@ const Template: Story<InputUnitProps> = ({unit = '₽', ...args}) => (
       />
       <InputUnit
         {...args}
-        value=""
+        defaultValue=""
         placeholder="0"
         unit={unit}
         unitClassName="customUnitColor"

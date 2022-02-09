@@ -16,7 +16,7 @@ describe('getCountryByCode', () => {
   it('should return valid country with mask if code is recognized', () => {
     const {countryCode, mask} = getCountryByCode('ua');
     expect(countryCode).toBe('ua');
-    expect(mask).toBe('999 99 999-99-99');
+    expect(mask).toBe('### ## ###-##-##');
   });
 });
 
