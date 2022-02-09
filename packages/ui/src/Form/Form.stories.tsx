@@ -63,6 +63,8 @@ const Template: Story = ({placeholder = 'Label', ...args}) => {
       />
       <Input
         {...args}
+        name="email"
+        onChange={(v) => console.log(v.currentTarget.value)}
         className="preview-item"
         placeholder="Эл. почта"
         invalid
