@@ -44,11 +44,6 @@ export default function PhoneInput({
     defaultCountryCode,
   );
 
-  const handleChange: React.ChangeEventHandler<HTMLInputElement> = (ev) => {
-    console.log(ev);
-    setValue(ev.currentTarget.value);
-  };
-
   const [ref, setRef] = useCombinedRef<HTMLInputElement | null>(inputRef);
 
   function handleFocus(ev: React.FocusEvent<HTMLInputElement>) {
