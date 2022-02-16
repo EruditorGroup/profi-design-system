@@ -21,6 +21,6 @@ const ChatFilledIcon: ForwardRefExoticComponent<IconPropsType> = forwardRef(
   )
 );
 
-ChatFilledIcon.displayName = "ChatFilledIcon";
+ChatFilledIcon.displayName = "ChatFilledIcon!";
 
 export default ChatFilledIcon;
