@@ -122,42 +122,42 @@ const Modal = React.forwardRef(
 
     return (
       <ModalContext.Provider value={{handleClose: handleCloseClick}}>
-        <CSSTransition
-          unmountOnExit
-          mountOnEnter
-          in={visible}
-          timeout={DEFAULT_ANIMATION_DURATION}
-          classNames={theme.transitions.fade}
-        >
-          <BodyPortal>
+        <BodyPortal>
+          <CSSTransition
+            unmountOnExit
+            mountOnEnter
+            in={visible}
+            timeout={DEFAULT_ANIMATION_DURATION}
+            classNames={theme.transitions.fade}
+          >
             <div
               className={styles['overlay']}
               onClick={handleCloseClick}
               {...(showOverlay && {style: {display: 'none'}})}
             />
-          </BodyPortal>
-        </CSSTransition>
+          </CSSTransition>
+        </BodyPortal>
 
-        <CSSTransition
-          unmountOnExit
-          mountOnEnter
-          in={visible}
-          timeout={!fullscreen ? DEFAULT_ANIMATION_DURATION : 0}
-          classNames={theme.transitions.slide}
+        <BodyPortal
+          className={classNames(
+            styles['root'],
+            fullscreen && styles['fullscreen'],
+          )}
+          style={{
+            transform: `translate3d(0, ${pc}%, 0) scale(${Math.max(
+              0.9,
+              modalOpacity,
+            )})`,
+            opacity: `${modalOpacity}`,
+          }}
+          ref={rootRef}
         >
-          <BodyPortal
-            className={classNames(
-              styles['root'],
-              fullscreen && styles['fullscreen'],
-            )}
-            style={{
-              transform: `translate3d(0, ${pc}%, 0) scale(${Math.max(
-                0.9,
-                modalOpacity,
-              )})`,
-              opacity: `${modalOpacity}`,
-            }}
-            ref={rootRef}
+          <CSSTransition
+            unmountOnExit
+            mountOnEnter
+            in={visible}
+            timeout={!fullscreen ? DEFAULT_ANIMATION_DURATION : 0}
+            classNames={theme.transitions.slide}
           >
             <div
               className={classNames(
@@ -197,8 +197,8 @@ const Modal = React.forwardRef(
                 {children}
               </div>
             </div>
-          </BodyPortal>
-        </CSSTransition>
+          </CSSTransition>
+        </BodyPortal>
       </ModalContext.Provider>
     );
   },
