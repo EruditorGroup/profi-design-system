@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.64.0](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.63.2...@eruditorgroup/profi-ui@0.64.0) (2022-02-16)
+
+
+### Bug Fixes
+
+* **ui:** input paste event ([67fc523](https://github.com/eruditorgroup/profi-design-system/commit/67fc523d6c20fe85e9a7b7c9f2e8a276f8346c8a))
+* **ui:** lint ([3000eb0](https://github.com/eruditorgroup/profi-design-system/commit/3000eb0b71d3793e3d6b2c204b3e88f5f2ec60d3))
+
+
+### Features
+
+* **ui:** replace react-input-mask to react-number-format ([#426](https://github.com/eruditorgroup/profi-design-system/issues/426)) ([cbad361](https://github.com/eruditorgroup/profi-design-system/commit/cbad3615b642ec6e9f9e40968117ede9c237f529))
+
+
+
+
+
 ## [0.63.2](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.63.1...@eruditorgroup/profi-ui@0.63.2) (2022-02-03)
 
 
