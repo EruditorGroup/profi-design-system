@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.51.0](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-toolkit@0.50.6...@eruditorgroup/profi-toolkit@0.51.0) (2022-02-21)
+
+
+### Features
+
+* **Toolkit:** Добавил хук для отсдеживания видимости элемента ([90f12aa](https://github.com/eruditorgroup/profi-design-system/commit/90f12aaf50706d04097537489299275d08adec2e))
+* **Toolkit:** Перенес хук для получения обсервера ([adb2433](https://github.com/eruditorgroup/profi-design-system/commit/adb24331f60e7206e14a4d2a9745a0595923ca95))
+
+
+
+
+
 ## [0.50.6](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-toolkit@0.50.5...@eruditorgroup/profi-toolkit@0.50.6) (2022-02-16)
 
 **Note:** Version bump only for package @eruditorgroup/profi-toolkit

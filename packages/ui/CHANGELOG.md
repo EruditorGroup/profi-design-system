@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.65.0](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.64.0...@eruditorgroup/profi-ui@0.65.0) (2022-02-21)
+
+
+### Bug Fixes
+
+* **Price:** Добавил возможность указания диапазона в цене ([f5e4ace](https://github.com/eruditorgroup/profi-design-system/commit/f5e4ace792dd81111642706c3890b48e9372ca1a))
+
+
+### Features
+
+* **ExpandableBlock:** Добавил расширяющийся блок ([19a7e7f](https://github.com/eruditorgroup/profi-design-system/commit/19a7e7ff3823feeb67bd7e79e405997bd852ec5e))
+
+
+
+
+
 # [0.64.0](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.63.2...@eruditorgroup/profi-ui@0.64.0) (2022-02-16)
 
 
