@@ -8,29 +8,16 @@ import {prettyNumber} from '@eruditorgroup/profi-toolkit';
 import type {TextProps} from '../';
 
 type RangeSignature = (
-  from: number,
-  to: number,
+  from: number | null,
+  to: number | null,
   format: (value: number) => string | number,
 ) => React.ReactNode;
 
-const fullRange: RangeSignature = (from, to, format) => (
-  <>
-    {format(from)}
-    {from !== to && (
-      <span>
-        &ndash;
-        {format(to)}
-      </span>
-    )}
-  </>
-);
+const fullRange: RangeSignature = (from, to, format) =>
+  `${format(from)}${from !== to ? `\u2013${format(to)}` : ''}`;
 
-const partialRange: RangeSignature = (from, to, format) => (
-  <>
-    {(from && 'от ') || (to && 'до ')}
-    {format(from || to)}
-  </>
-);
+const partialRange: RangeSignature = (from, to, format) =>
+  `${(from && 'от') || (to && 'до')} ${format(from || to)}`;
 
 export interface PriceProps extends TextProps {
   value?: number | [number | null, number | null];
