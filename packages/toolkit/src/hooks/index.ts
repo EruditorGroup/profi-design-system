@@ -17,3 +17,5 @@ export {default as useMoveCaretToEndOnFocus} from './useMoveCaretToEndOnFocus';
 export {default as useThrottledCallback} from './useThrottledCallback';
 export {default as useDisableBodyScroll} from './useDisableBodyScroll';
 export {default as useControllableState} from './useControllableState';
+export {default as useVisibilitySensor} from './useVisibilitySensor';
+export {default as useIntersectionObserver} from './useIntersectionObserver';
