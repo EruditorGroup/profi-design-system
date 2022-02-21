@@ -40,7 +40,7 @@
     "libFilename": "profi-toolkit"
   },
   "dependencies": {
-    "@use-gesture/react": "^10.0.1"
-  },
-  "gitHead": "7c076335bd14bb5f50a7ae23c64967d17e6abb51"
+    "@use-gesture/react": "^10.0.1",
+    "intersection-observer": "^0.12.0"
+  }
 }

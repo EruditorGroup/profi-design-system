@@ -112,3 +112,6 @@ export type {ProgressProps} from './Progress';
 
 export {default as Gallery} from './Gallery';
 export type {GalleryProps} from './Gallery';
+
+export {default as ExpandableBlock} from './ExpandableBlock';
+export type {IProps as ExpandableBlockProps} from './ExpandableBlock';

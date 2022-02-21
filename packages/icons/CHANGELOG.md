@@ -7,24 +7,13 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 **Note:** Version bump only for package @eruditorgroup/profi-icons
 
-
-
-
-
 # [1.0.0-alpha.19](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-icons@1.0.0-alpha.18...@eruditorgroup/profi-icons@1.0.0-alpha.19) (2022-02-08)
-
-
 
 # 1.0.0-alpha.19 (2022-02-08)
 
-
 ### Features
 
-* **icons:** Добавил новую иконку профи ([a4fa332](https://github.com/eruditorgroup/profi-design-system/commit/a4fa332a67a6dad4d78aec6d4a221b632906bfcf))
-
-
-
-
+- **icons:** Добавил новую иконку профи ([a4fa332](https://github.com/eruditorgroup/profi-design-system/commit/a4fa332a67a6dad4d78aec6d4a221b632906bfcf))
 
 # [1.0.0-alpha.18](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-icons@1.0.0-alpha.17...@eruditorgroup/profi-icons@1.0.0-alpha.18) (2022-02-07)
 

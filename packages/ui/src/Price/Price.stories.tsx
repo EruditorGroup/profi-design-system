@@ -41,6 +41,18 @@ const Template: Story<PriceProps> = (args) => {
         </Text>
         <Price value={1099.9} currencyCode="RUB" size="xl" pretty {...args} />
       </div>
+      <div style={blockStyles}>
+        <Text color="muted" size="m" style={labelStyles}>
+          Ценовой интервал
+        </Text>
+        <Price value={[100, 500]} currencyCode="RUB" size="xl" pretty {...args} />
+      </div>
+      <div style={blockStyles}>
+        <Text color="muted" size="m" style={labelStyles}>
+          Частичный ценовой интервал (Только до)
+        </Text>
+        <Price value={[null, 500]} currencyCode="RUB" size="xl" pretty {...args} />
+      </div>
     </>
   );
 };
