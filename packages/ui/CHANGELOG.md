@@ -3,6 +3,77 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.0.0-alpha.21](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.65.0...@eruditorgroup/profi-ui@1.0.0-alpha.21) (2022-02-21)
+
+
+
+# 1.0.0-alpha.21 (2022-02-21)
+
+
+### Bug Fixes
+
+* **ui:** input paste event ([6332e5a](https://github.com/eruditorgroup/profi-design-system/commit/6332e5a2ee168195864af1106f90a807f0386964))
+* **ui:** lint ([84329d8](https://github.com/eruditorgroup/profi-design-system/commit/84329d80bbac9b9af4e85a0e14f87ff5e72c33b3))
+
+
+
+# 1.0.0-alpha.20 (2022-02-09)
+
+
+
+# 1.0.0-alpha.19 (2022-02-08)
+
+
+
+# 1.0.0-alpha.17 (2022-02-01)
+
+
+### Bug Fixes
+
+* **Autosuggest:** fix types for data attrs ([9e836da](https://github.com/eruditorgroup/profi-design-system/commit/9e836daa24f6ba8686efadca677138572be806e3))
+* **Fullscreen:** fix props type ([0716d75](https://github.com/eruditorgroup/profi-design-system/commit/0716d7503a015bf1402591ec291bcd10decad6d0))
+
+
+
+# 1.0.0-alpha.16 (2022-01-12)
+
+
+
+# 1.0.0-alpha.14 (2021-12-10)
+
+
+### Bug Fixes
+
+* **ui:** RateStars animation ([#401](https://github.com/eruditorgroup/profi-design-system/issues/401)) ([0911ba9](https://github.com/eruditorgroup/profi-design-system/commit/0911ba9567b13e21e7c8476c9add3e8b0d31bdbb))
+
+
+
+# 1.0.0-alpha.13 (2021-12-09)
+
+
+
+# 1.0.0-alpha.11 (2021-11-30)
+
+
+
+# 1.0.0-alpha.10 (2021-11-30)
+
+
+
+# 1.0.0-alpha.8 (2021-11-29)
+
+
+### Bug Fixes
+
+* bump versions ([5e4227d](https://github.com/eruditorgroup/profi-design-system/commit/5e4227d8858fa0a8b1d79500eef102da7917d833))
+* bump versions ([a2e80a7](https://github.com/eruditorgroup/profi-design-system/commit/a2e80a7fd90ad50c39d19980036b11de0a4c59a0))
+* bump versions ([a9dcca5](https://github.com/eruditorgroup/profi-design-system/commit/a9dcca573d09a93610932d2a5338d1854a70a0be))
+* bump versions ([a5d6b59](https://github.com/eruditorgroup/profi-design-system/commit/a5d6b590f775b311c4dfa99a982572bd505ffed1))
+
+
+
+
+
 # [1.0.0-alpha.20](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@1.0.0-alpha.19...@eruditorgroup/profi-ui@1.0.0-alpha.20) (2022-02-09)
 
 
