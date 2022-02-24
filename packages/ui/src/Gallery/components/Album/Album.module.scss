@@ -15,24 +15,11 @@
 }
 
 .images {
-  display: flex;
-  flex-wrap: wrap;
-  margin: 29px -1px -1px;
-}
-
-.image {
-  width: 33.3333333333333%;
-  padding-top: 33.3333333333333%;
-  border: 1px solid transparent;
-  background-size: cover;
-  background-position: center;
-  background-clip: padding-box;
-  box-sizing: border-box;
-  cursor: pointer;
+  margin-top: 30px;
 }
 
 .spinner {
-  margin: 0 auto;
+  margin: 40px auto 48px;
   font-size: 40px;
 }
 

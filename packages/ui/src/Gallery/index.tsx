@@ -1,117 +1,119 @@
-import * as React from 'react';
-import cx from 'classnames';
+import React, {useCallback, useState, useMemo, useEffect} from 'react';
+
+import Modal from '../Modal';
+import {Text} from '../Typography';
+import Album from './components/Album';
+import GalleryCarousel from './components/Carousel';
+import ImagesList from './components/Previews/ImagesList';
+import AlbumsList from './components/Previews/AlbumsList';
+
 import {
   KEY_CODES,
   useCurrentScreen,
-  gestures,
-  numberLoop,
+  useControllableState,
 } from '@eruditorgroup/profi-toolkit';
-import {Modal} from '../index';
-import Image from './components/Image';
-import Album from './components/Album';
 
-import type {Image as IImage, Album as IAlbum} from './types';
+import type {Album as IAlbum, Image as IImage} from './types';
 
 import styles from './Gallery.module.scss';
 
 export interface GalleryProps {
-  className?: string;
   albums?: IAlbum[];
   images: IImage[];
   currentImage?: number;
   currentAlbum?: number;
   onAlbumImagesFetch?: (albumId: IAlbum) => Promise<IImage[]>;
   onClose: () => unknown;
-  onNext?: () => unknown;
-  onBack?: () => unknown;
+  opened?: boolean;
 }
 
-function Gallery({
-  className,
-  onAlbumImagesFetch,
+export default function Gallery({
   onClose,
-  onNext,
-  onBack,
+  albums,
+  opened,
+  onAlbumImagesFetch,
   ...props
-}: GalleryProps): React.ReactElement {
+}: GalleryProps) {
   const isMobile = useCurrentScreen('mobile');
-  const [movePc, setMovePc] = React.useState(0);
-  const [state, setState] = React.useState(null);
-  const [enableSwipeDown, setEnableSwipeDown] = React.useState(true);
-  const [albumsImages, setAlbumsImages] = React.useState<
-    Record<number, IImage[]>
-  >({});
-  const images = React.useMemo(
-    () =>
-      props.currentAlbum != null
-        ? albumsImages[props.currentAlbum] || []
-        : props.images,
-    [albumsImages, props.currentAlbum, props.images],
+  const [showBackButton, setShowBackButton] = useState(false);
+
+  // Albums state
+  const [albumIndex, setAlbumIndex] = useControllableState({
+    value: props.currentAlbum,
+    defaultValue: null,
+  });
+
+  const [albumsImages, setAlbumsImages] = useState<Record<number, IImage[]>>(
+    {},
   );
-  const isSingleImage = images.length === 1;
-  const currentAlbum = props.albums?.[props.currentAlbum];
 
-  const loop = React.useMemo(() => numberLoop.bind(null, images.length), [
-    images,
-  ]);
+  const currentAlbum = albums?.[albumIndex];
 
-  const [currentImage, move] = React.useReducer(
-    (i = 0, to: 'next' | 'back' | number | null) => {
-      switch (to) {
-        case 'next':
-          return loop(i + 1);
-        case 'back':
-          return loop(i - 1);
-        default:
-          return typeof to === 'number' ? loop(to) : null;
+  // Images state
+  const [imageIndex, setImageIndex] = useControllableState({
+    value: props.currentImage,
+    defaultValue: null,
+  });
+
+  const images = useMemo(
+    () => (albumIndex != null ? albumsImages[albumIndex] || [] : props.images),
+    [albumsImages, albumIndex, props.images],
+  );
+
+  // Callbacks
+  const onAlbumClick = useCallback(
+    (index) => {
+      setAlbumIndex(index);
+      setShowBackButton(true);
+    },
+    [setAlbumIndex],
+  );
+
+  const onThumbnailClick = useCallback(
+    (index) => {
+      setImageIndex(index);
+    },
+    [setImageIndex],
+  );
+
+  const onGalleryBack = useCallback(() => {
+    setAlbumIndex(null);
+    setShowBackButton(false);
+  }, [setAlbumIndex]);
+
+  const onGalleryClose = useCallback(() => {
+    setAlbumIndex(null);
+    setShowBackButton(false);
+    onClose();
+  }, [setAlbumIndex, onClose]);
+
+  const onFullscreenClose = useCallback(() => {
+    if (props.currentImage != null) {
+      onClose();
+    } else {
+      setImageIndex(null);
+    }
+  }, [onClose, props.currentImage, setImageIndex]);
+
+  useEffect(
+    function fetchAlbumImages() {
+      if (currentAlbum && onAlbumImagesFetch && !albumsImages[albumIndex]) {
+        onAlbumImagesFetch(currentAlbum).then((res) =>
+          setAlbumsImages((x) => ({...x, [albumIndex]: res})),
+        );
       }
     },
-    props.currentImage,
+    [currentAlbum, albumIndex, albumsImages, onAlbumImagesFetch],
   );
 
-  const [prev, current, next] = React.useMemo(() => {
-    return currentImage != null && images.length
-      ? [
-          images[loop(currentImage - 1)],
-          images[loop(currentImage)],
-          images[loop(currentImage + 1)],
-        ]
-      : [];
-  }, [currentImage, images, loop]);
-
-  const bind = gestures.useGesture(
-    {
-      onDrag: ({movement: [mx], currentTarget, active}) => {
-        if (active) {
-          setMovePc((mx / (currentTarget as HTMLDivElement).offsetWidth) * 100);
-        } else if (Math.abs(movePc) > 10) {
-          setMovePc(100 * Math.sign(movePc));
-          setState('swipe');
-          setEnableSwipeDown(true);
-        } else {
-          setMovePc(0);
-        }
-      },
-      onScroll: ({xy: [, y]}) => setEnableSwipeDown(!y),
-    },
-    {
-      enabled: isMobile,
-      drag: {enabled: !isSingleImage, axis: 'x', threshold: 10},
-      scroll: {axis: 'y'},
-    },
-  );
-
-  React.useEffect(
+  useEffect(
     function addListeners() {
       function handleKeyDown(e: KeyboardEvent) {
         switch (e.keyCode) {
-          case KEY_CODES.SPACE:
-          case KEY_CODES.RIGHT_ARROW:
-            return move('next');
-          case KEY_CODES.LEFT_ARROW:
-            return move('back');
           case KEY_CODES.ESC:
-            return onClose();
+            if (imageIndex == null) {
+              return showBackButton ? onGalleryBack() : onClose();
+            }
         }
       }
       window.addEventListener('keydown', handleKeyDown);
@@ -119,125 +121,85 @@ function Gallery({
         window.removeEventListener('keydown', handleKeyDown);
       };
     },
-    [onClose],
+    [onGalleryBack, onClose, showBackButton, imageIndex],
   );
-
-  React.useEffect(
-    function fetchAlbumImages() {
-      if (
-        currentAlbum &&
-        onAlbumImagesFetch &&
-        !albumsImages[props.currentAlbum]
-      ) {
-        onAlbumImagesFetch(currentAlbum).then((res) =>
-          setAlbumsImages((x) => ({...x, [props.currentAlbum]: res})),
-        );
-      }
-    },
-    [currentAlbum, props.currentAlbum, albumsImages, onAlbumImagesFetch],
-  );
-
-  const handleNext = React.useCallback(
-    function handleNext() {
-      if (images.length > 1) {
-        move('next');
-        if (onNext) onNext();
-      }
-    },
-    [images.length, onNext],
-  );
-
-  const handleBack = React.useCallback(
-    function handleBack() {
-      if (images.length > 1) {
-        move('back');
-        if (onBack) onBack();
-      }
-    },
-    [images.length, onBack],
-  );
-
-  const handleClose = React.useCallback(
-    function handleClose() {
-      if (currentAlbum != null && currentImage != null) {
-        move(null);
-      } else {
-        onClose();
-      }
-    },
-    [currentAlbum, currentImage, onClose],
-  );
-
-  const imageProps = {
-    className: cx(
-      styles['image'],
-      !enableSwipeDown && styles['image_scrolled'],
-      state === 'swipe' && styles['image_transition'],
-    ),
-    onNext: handleNext,
-    onBack: handleBack,
-    showInfo: true,
-  };
 
   return (
     <>
-      {currentAlbum && (
+      {(opened || currentAlbum) && (
         <Modal
-          className={cx(className, styles['modal'])}
-          onClose={handleClose}
-          withPadding={false}
-          fullscreen={isMobile}
-          withOverlay={!current}
-          closeOnOverlayClick={!current}
-          visible
-        >
-          <Modal.CloseButton size="s" withHoverAnimation={false} />
-          <Album {...currentAlbum} images={images} onImageClick={move} />
-        </Modal>
-      )}
-      {current != null && (
-        <Modal
-          className={cx(className, styles['modal'])}
-          onClose={handleClose}
+          className={styles['modal']}
           withPadding={false}
           fullscreen={isMobile}
           swipeDownToClose={isMobile}
+          onClose={onGalleryClose}
+          onClickBack={onGalleryBack}
+          withOverlay={imageIndex == null}
           visible
-          closeOnOverlayClick
         >
+          {showBackButton && (
+            <Modal.BackButton size="s" withHoverAnimation={false} />
+          )}
+
           <Modal.CloseButton size="s" withHoverAnimation={false} />
-          {isMobile && prev && (
-            <Image
-              {...prev}
-              {...imageProps}
-              style={{transform: `translate3d(${-100 + movePc}%, 0, 0)`}}
+
+          {currentAlbum ? (
+            <Album
+              {...currentAlbum}
+              images={images}
+              onImageClick={(index) => setImageIndex(index)}
             />
-          )}
-          {current && (
-            <Image
-              {...current}
-              {...bind()}
-              {...imageProps}
-              onTransitionEnd={() => {
-                setState(null);
-                state === 'swipe' && move(movePc < 0 ? 'next' : 'back');
-                setMovePc(0);
-              }}
-              style={{transform: `translate3d(${movePc}%, 0, 0)`}}
-              showInfo
-            />
-          )}
-          {isMobile && next && (
-            <Image
-              {...next}
-              {...imageProps}
-              style={{transform: `translate3d(${100 + movePc}%, 0, 0)`}}
-            />
+          ) : (
+            <>
+              <Text className={styles['header']} size="l" bold>
+                Фотографии
+              </Text>
+              <div className={styles['body']}>
+                {albums?.length && (
+                  <>
+                    <Text size="l" className={styles['sectionTitle']} bold>
+                      Альбомы{' '}
+                      <Text color="disabled" size={null} as="span">
+                        {albums.length}
+                      </Text>
+                    </Text>
+                    <AlbumsList
+                      albums={albums}
+                      onAlbumClick={onAlbumClick}
+                      className={styles['albums']}
+                      listClassName={styles['albumsList']}
+                    />
+                  </>
+                )}
+
+                {images.length && (
+                  <>
+                    <Text size="l" className={styles['sectionTitle']} bold>
+                      Все фотографии{' '}
+                      <Text color="disabled" size={null} as="span">
+                        {images.length}
+                      </Text>
+                    </Text>
+
+                    <ImagesList
+                      images={images}
+                      onImageClick={onThumbnailClick}
+                    />
+                  </>
+                )}
+              </div>
+            </>
           )}
         </Modal>
+      )}
+
+      {imageIndex != null && (
+        <GalleryCarousel
+          images={images}
+          currentImage={imageIndex}
+          onClose={onFullscreenClose}
+        />
       )}
     </>
   );
 }
-
-export default Gallery;

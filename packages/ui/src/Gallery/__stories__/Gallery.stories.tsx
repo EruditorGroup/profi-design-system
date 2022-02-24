@@ -1,8 +1,10 @@
 import React from 'react';
-import noop from 'lodash/noop';
 import {Story, Meta} from '@storybook/react';
-import Gallery from '../index';
-import {Image as IImage, Album as IAlbum} from '../types';
+
+import Gallery from '../';
+import Button from '../../Button';
+
+import type {Image as IImage, Album as IAlbum} from '../types';
 
 import example_1 from './example_1.png';
 import example_2 from './example_2.png';
@@ -16,9 +18,10 @@ export default {
   title: 'Gallery',
 } as Meta;
 
-const makeGalleryImages = (srcs) =>
+const makeGalleryImages = (srcs: string[]): IImage[] =>
   srcs.map((src) => ({
     src,
+    thumbnail: src,
     author: {
       name: 'Денис Григорьев',
       avatar,
@@ -42,6 +45,17 @@ const getAlbumsPhoto: () => Promise<IImage[]> = () =>
   });
 
 const images: IImage[] = makeGalleryImages([example_1, example_2, example_3]);
+const manyImages: IImage[] = makeGalleryImages([
+  example_1,
+  example_2,
+  example_3,
+  example_4,
+  example_5,
+  example_6,
+  example_1,
+  example_2,
+  example_3,
+]);
 
 const albums: IAlbum[] = [
   {
@@ -52,6 +66,46 @@ const albums: IAlbum[] = [
     tags: ['ремонт', 'ремонт квартиры', 'дизайн интерьера', 'сантехника'],
     previewSrc: example_4,
     filesCount: images.length,
+  },
+  {
+    id: 1,
+    name: '3D Дизайн',
+    description: '',
+    tags: ['дизайн интерьера'],
+    previewSrc: example_1,
+    filesCount: 1,
+  },
+  {
+    id: 2,
+    name: 'Сделанные ремонты',
+    description: '',
+    tags: ['ремонт', 'ремонт квартиры'],
+    previewSrc: example_2,
+    filesCount: 2,
+  },
+  {
+    id: 3,
+    name: 'Еще альбом',
+    description: '',
+    tags: [],
+    previewSrc: example_5,
+    filesCount: 5,
+  },
+  {
+    id: 4,
+    name: 'Альбом 5',
+    description: '',
+    tags: [],
+    previewSrc: example_6,
+    filesCount: 4,
+  },
+  {
+    id: 5,
+    name: 'Альбом 6',
+    description: '',
+    tags: [],
+    previewSrc: example_3,
+    filesCount: 3,
   },
 ];
 
@@ -79,6 +133,26 @@ export const Album: Story = () => {
           onAlbumImagesFetch={getAlbumsPhoto}
         />
       )}
+    </div>
+  );
+};
+
+export const AllPhoto: Story = () => {
+  const [opened, setOpened] = React.useState(true);
+
+  return (
+    <div style={{width: '375px'}}>
+      <Gallery
+        albums={albums}
+        images={manyImages}
+        opened={opened}
+        onAlbumImagesFetch={getAlbumsPhoto}
+        onClose={() => setOpened(false)}
+      />
+
+      <Button design="light" onClick={() => setOpened(true)} block>
+        Все альбомы и фотографии
+      </Button>
     </div>
   );
 };

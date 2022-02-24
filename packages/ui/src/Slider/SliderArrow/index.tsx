@@ -4,6 +4,7 @@ import cx from 'classnames';
 import {ChevronLeftIcon, ChevronRightIcon} from '@eruditorgroup/profi-icons';
 import Button from '../../Button';
 
+import type {ButtonProps} from '../../Button';
 import type {MouseEventHandler} from 'react';
 
 import styles from './SliderArrow.module.scss';
@@ -13,7 +14,9 @@ type Props = {
   visible?: boolean;
   withFill?: boolean;
   background?: string;
+  arrowButton?: ButtonProps;
   onClick: MouseEventHandler<HTMLButtonElement>;
+  className?: string;
 };
 
 function compileGradient(
@@ -32,7 +35,9 @@ export default function SliderArrow({
   visible,
   onClick,
   background = '#fff',
+  arrowButton = {},
   withFill,
+  className,
 }: Props): JSX.Element {
   const Icon = direction === 'left' ? ChevronLeftIcon : ChevronRightIcon;
 
@@ -66,9 +71,15 @@ export default function SliderArrow({
         size="l"
         design="light"
         onClick={onClick}
-        className={cx(styles['arrow'], styles[`arrow_${direction}`], {
-          [styles['arrow_show']]: visible,
-        })}
+        {...arrowButton}
+        className={cx(
+          styles['arrow'],
+          styles[`arrow_${direction}`],
+          {
+            [styles['arrow_show']]: visible,
+          },
+          className,
+        )}
       >
         <Icon />
       </Button>

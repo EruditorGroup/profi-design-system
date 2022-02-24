@@ -1,11 +1,11 @@
 import React, {
-  useLayoutEffect,
   useState,
   useCallback,
   forwardRef,
   useRef,
   createContext,
   useMemo,
+  useEffect,
 } from 'react';
 import cx from 'classnames';
 
@@ -20,6 +20,7 @@ import {
 
 import type {ForwardRefExoticComponent, HTMLAttributes} from 'react';
 import type {ChildrenSize} from './utils';
+import type {ButtonProps} from '../Button';
 
 import styles from './Slider.module.scss';
 
@@ -34,10 +35,14 @@ export interface SliderProps extends HTMLAttributes<HTMLDivElement> {
   areaClassName?: string;
   centeredSlides?: boolean;
   scrollable?: boolean;
-  arrowBackground?: string;
   flex?: boolean;
   offset?: number;
   children?: Array<React.ReactElement>;
+  arrowBackground?: string;
+  arrowAdditionalFill?: boolean; // Дизайнерский костыль (в начале/конце добавляется более широкая заливка с градиентом)
+  arrowButton?: Partial<ButtonProps>;
+  arrowLeftClassName?: string;
+  arrowRightClassName?: string;
 }
 
 interface SliderComponent extends ForwardRefExoticComponent<SliderProps> {
@@ -51,6 +56,10 @@ const Slider = forwardRef<HTMLDivElement, SliderProps>(
       scrollable = false,
       centeredSlides = true,
       arrowBackground,
+      arrowAdditionalFill,
+      arrowButton,
+      arrowLeftClassName,
+      arrowRightClassName,
       flex,
       areaClassName,
       className,
@@ -128,7 +137,7 @@ const Slider = forwardRef<HTMLDivElement, SliderProps>(
       slide(shift);
     };
 
-    useLayoutEffect(() => {
+    useEffect(() => {
       if (!containerRef) return;
       const {current: container} = containerRef;
 
@@ -142,9 +151,11 @@ const Slider = forwardRef<HTMLDivElement, SliderProps>(
           <SliderArrow
             direction="left"
             visible={showLeftArrow}
-            withFill={!showRightArrow}
+            withFill={arrowAdditionalFill && !showRightArrow}
             onClick={onClickLeft}
             background={arrowBackground}
+            arrowButton={arrowButton}
+            className={arrowLeftClassName}
           />
 
           <div
@@ -165,9 +176,11 @@ const Slider = forwardRef<HTMLDivElement, SliderProps>(
           <SliderArrow
             direction="right"
             visible={showRightArrow}
-            withFill={!showLeftArrow}
+            withFill={arrowAdditionalFill && !showLeftArrow}
             onClick={onClickRight}
             background={arrowBackground}
+            arrowButton={arrowButton}
+            className={arrowRightClassName}
           />
         </div>
       </SliderContext.Provider>

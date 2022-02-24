@@ -1,6 +1,9 @@
 import * as React from 'react';
 import {Text, Title, Spinner} from '@eruditorgroup/profi-ui';
+import ImagesList from '../Previews/ImagesList';
+
 import {capitalize} from '@eruditorgroup/profi-toolkit';
+
 import type {Image as IImage, Album as IAlbum} from '../../types';
 
 import styles from './Album.module.scss';
@@ -35,20 +38,15 @@ function Album({
             {tags.map(capitalize).join('\xA0∙\xA0')}
           </Text>
         )}
-        <div className={styles['images']}>
-          {images.length ? (
-            images.map((item, index) => (
-              <div
-                className={styles['image']}
-                style={{backgroundImage: `url(${item.src})`}}
-                onClick={() => onImageClick(index)}
-                key={`${item.src}_${index}`}
-              />
-            ))
-          ) : (
-            <Spinner className={styles['spinner']} size="xxl" />
-          )}
-        </div>
+        {images.length ? (
+          <ImagesList
+            className={styles['images']}
+            images={images}
+            onImageClick={onImageClick}
+          />
+        ) : (
+          <Spinner className={styles['spinner']} size="xxl" />
+        )}
       </div>
     </div>
   );

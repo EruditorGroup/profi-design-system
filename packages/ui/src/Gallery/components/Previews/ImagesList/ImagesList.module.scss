@@ -1,0 +1,15 @@
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: -2px;
+}
+
+.item {
+  width: 33.333333%;
+  padding: 2px;
+  box-sizing: border-box;
+
+  @media screen and (min-width: 732px) {
+    width: 20%;
+  }
+}
