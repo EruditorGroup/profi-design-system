@@ -2,8 +2,6 @@ import * as React from 'react';
 import {CSSTransition} from 'react-transition-group';
 import {gestures, useDisableBodyScroll} from '@eruditorgroup/profi-toolkit';
 
-import {ArrowLeftIcon} from '@eruditorgroup/profi-icons';
-
 import BodyPortal from '../BodyPortal';
 import CloseButton from './components/CloseButton';
 import BackButton from './components/BackButton';
