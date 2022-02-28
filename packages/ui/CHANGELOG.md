@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.66.0](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.65.0...@eruditorgroup/profi-ui@0.66.0) (2022-02-28)
+
+
+### Features
+
+* Добавлен Modal.BackButton ([24c2379](https://github.com/eruditorgroup/profi-design-system/commit/24c2379f1bff8c57dbfdfd5f94b28b89ca8820f1))
+* Дополнительные параметры Slider.SliderArrow ([6eab20c](https://github.com/eruditorgroup/profi-design-system/commit/6eab20c3e50b69f6af74462f6e4cb1b9263a637e))
+
+
+
+
+
 # [0.65.0](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.64.0...@eruditorgroup/profi-ui@0.65.0) (2022-02-21)
 
 
