@@ -2,6 +2,7 @@ import {createContext, MouseEventHandler, useContext} from 'react';
 
 interface ModalContextType {
   handleClose: MouseEventHandler<HTMLElement>;
+  handleBack?: MouseEventHandler<HTMLElement>;
 }
 
 export const ModalContext = createContext<ModalContextType | null>(null);

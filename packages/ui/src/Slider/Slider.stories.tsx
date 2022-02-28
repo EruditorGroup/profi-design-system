@@ -36,7 +36,12 @@ const TemplateFactory = ({
   return (
     <div style={containerStyles}>
       <Title style={titleStyles}>{title}</Title>
-      <Slider offset={20} style={{width: '810px'}} {...args}>
+      <Slider
+        offset={20}
+        arrowAdditionalFill
+        style={{width: '810px'}}
+        {...args}
+      >
         {[...Array(cardLength)].map((_v, index) => (
           <SliderItem
             as={Space}

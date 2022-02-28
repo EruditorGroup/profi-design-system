@@ -2,11 +2,9 @@ import * as React from 'react';
 import {CSSTransition} from 'react-transition-group';
 import {gestures, useDisableBodyScroll} from '@eruditorgroup/profi-toolkit';
 
-import {ArrowLeftIcon} from '@eruditorgroup/profi-icons';
-
 import BodyPortal from '../BodyPortal';
 import CloseButton from './components/CloseButton';
-import Button from '../Button';
+import BackButton from './components/BackButton';
 import Text from '../Typography/Text';
 
 import {
@@ -53,6 +51,7 @@ interface ModalComponent
     ModalProps & RefAttributes<HTMLDivElement>
   > {
   CloseButton: typeof CloseButton;
+  BackButton: typeof BackButton;
 }
 
 const Modal = React.forwardRef(
@@ -120,6 +119,12 @@ const Modal = React.forwardRef(
       onClose(event);
     };
 
+    const handleBackClick: MouseEventHandler<HTMLElement> = (event) => {
+      if (!onClickBack || !event) return;
+      event.stopPropagation();
+      onClickBack(event);
+    };
+
     return (
       <ModalContext.Provider value={{handleClose: handleCloseClick}}>
         <BodyPortal>
@@ -169,16 +174,6 @@ const Modal = React.forwardRef(
               ref={setModalRef}
               {...props}
             >
-              {onClickBack && (
-                <Button
-                  rounded
-                  onClick={onClickBack}
-                  className={classNames(styles['button-icon'], styles['left'])}
-                >
-                  <ArrowLeftIcon />
-                </Button>
-              )}
-
               {title && (
                 <div className={styles['head']}>
                   <Text bold>{title}</Text>
@@ -205,5 +200,6 @@ const Modal = React.forwardRef(
 ) as ModalComponent;
 
 Modal.CloseButton = CloseButton;
+Modal.BackButton = BackButton;
 
 export default Modal;

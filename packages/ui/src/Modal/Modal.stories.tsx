@@ -1,4 +1,4 @@
-import React, {useLayoutEffect, useState} from 'react';
+import React, {useState} from 'react';
 import {Story, Meta} from '@storybook/react';
 
 import Modal from './index';
@@ -59,4 +59,4 @@ Full_screen.args = {
 export const CloseOnOverlayClick = Template.bind({});
 CloseOnOverlayClick.args = {
   closeOnOverlayClick: true,
-}
+};
