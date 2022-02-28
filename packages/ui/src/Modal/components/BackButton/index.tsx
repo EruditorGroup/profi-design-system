@@ -1,31 +1,31 @@
 import * as React from 'react';
 import cx from 'classnames';
 import Button from '../../../Button';
-import {CloseIcon} from '@eruditorgroup/profi-icons';
+import {ChevronLeftIcon} from '@eruditorgroup/profi-icons';
 import type {ButtonProps} from '../../../Button';
 import {useModalContext} from '../../context';
 
-import styles from './CloseButton.module.scss';
+import styles from './BackButton.module.scss';
 import modalButton from '../../ModalButton.module.scss';
 
 type TProps = Omit<ButtonProps, 'rounded'> & {
   withHoverAnimation?: boolean;
 };
 
-const CloseButton: React.FC<TProps> = ({
+const BackButton: React.FC<TProps> = ({
   design = 'transparent',
   className,
   withHoverAnimation = true,
   ...rest
 }) => {
-  const {handleClose} = useModalContext();
+  const {handleBack} = useModalContext();
 
   return (
     <Button
       {...rest}
       rounded
       design={design}
-      onClick={handleClose}
+      onClick={handleBack}
       className={cx(
         modalButton['button'],
         styles['buttonPosition'],
@@ -33,9 +33,9 @@ const CloseButton: React.FC<TProps> = ({
         className,
       )}
     >
-      <CloseIcon />
+      <ChevronLeftIcon />
     </Button>
   );
 };
 
-export default CloseButton;
+export default BackButton;
