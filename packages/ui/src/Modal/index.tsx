@@ -126,7 +126,9 @@ const Modal = React.forwardRef(
     };
 
     return (
-      <ModalContext.Provider value={{handleClose: handleCloseClick}}>
+      <ModalContext.Provider
+        value={{handleClose: handleCloseClick, handleBack: handleBackClick}}
+      >
         <BodyPortal>
           <CSSTransition
             unmountOnExit
