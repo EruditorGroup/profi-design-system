@@ -3,6 +3,21 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.38.0](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-icons@0.37.3...@eruditorgroup/profi-icons@0.38.0) (2022-03-02)
+
+
+
+## 0.33.1 (2022-03-02)
+
+
+### Features
+
+* **Icons:** Добавлена PlayIcon ([#444](https://github.com/eruditorgroup/profi-design-system/issues/444)) ([8bd9e74](https://github.com/eruditorgroup/profi-design-system/commit/8bd9e747e339f765f71891434ab04ef8a59cfe4f))
+
+
+
+
+
 ## [0.37.3](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-icons@0.37.2...@eruditorgroup/profi-icons@0.37.3) (2022-02-28)
 
 **Note:** Version bump only for package @eruditorgroup/profi-icons
