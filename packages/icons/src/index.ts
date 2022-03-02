@@ -43,6 +43,7 @@ export {default as PhoneIcon} from './Phone';
 export {default as PinIcon} from './Pin';
 export {default as PhoneStrokeIcon} from './PhoneStroke';
 export {default as PlaceIcon} from './Place';
+export {default as PlayIcon} from './Play';
 export {default as PlusIcon} from './Plus';
 export {default as ProfiIcon} from './Profi';
 export {default as ProfileIcon} from './Profile';
