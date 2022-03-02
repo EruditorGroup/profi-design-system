@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {ForwardedRef, forwardRef} from 'react';
 import cx from 'classnames';
 import {Input, InputProps} from '../index';
 
@@ -23,7 +23,7 @@ export interface PhoneInputProps
   onChange?: (value: string) => void;
 }
 
-export default function PhoneInput({
+export const PhoneInput = forwardRef(function PhoneInput({
   value: propValue,
   defaultValue = '',
   onChange,
@@ -32,7 +32,7 @@ export default function PhoneInput({
   autoFocus,
   inputRef,
   ...props
-}: PhoneInputProps): React.ReactElement | null {
+}: PhoneInputProps, outRef: ForwardedRef<HTMLInputElement>): React.ReactElement | null {
   const [value, setValue] = useControllableState({
     value: propValue,
     defaultValue,
@@ -76,8 +76,11 @@ export default function PhoneInput({
       type="tel"
       autoComplete="tel"
       {...props}
+      ref={outRef}
       inputRef={setRef}
       placeholder={placeholder}
     />
   );
-}
+});
+
+export default PhoneInput;
