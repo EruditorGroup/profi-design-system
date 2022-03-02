@@ -3,6 +3,7 @@ export {default as ArrowLeftIcon} from './ArrowLeft';
 export {default as ArrowRightIcon} from './ArrowRight';
 export {default as CalendarIcon} from './Calendar';
 export {default as CameraIcon} from './Camera';
+export {default as CameraOutlineIcon} from './CameraOutline';
 export {default as ChatFilledIcon} from './ChatFilled';
 export {default as CheckIcon} from './Check';
 export {default as ChevronDownIcon} from './ChevronDown';
