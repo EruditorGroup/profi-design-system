@@ -16,12 +16,12 @@ export {default as CloseIcon} from './Close';
 export {default as DeleteIcon} from './Delete';
 export {default as DetailsIcon} from './Details';
 export {default as DiagramIcon} from './Diagram';
-export {default as GiftIcon} from './Gift'
 export {default as DotIcon} from './Dot';
 export {default as EditIcon} from './Edit';
 export {default as EditBlockIcon} from './EditBlock';
 export {default as ErrorIcon} from './Error';
 export {default as FbIcon} from './Fb';
+export {default as GiftIcon} from './Gift';
 export {default as GalleryIcon} from './Gallery';
 export {default as GoogleIcon} from './Google';
 export {default as GreatIcon} from './Great';
