@@ -16,6 +16,7 @@ export {default as CloseIcon} from './Close';
 export {default as DeleteIcon} from './Delete';
 export {default as DetailsIcon} from './Details';
 export {default as DiagramIcon} from './Diagram';
+export {default as GiftIcon} from './Gift'
 export {default as DotIcon} from './Dot';
 export {default as EditIcon} from './Edit';
 export {default as EditBlockIcon} from './EditBlock';
@@ -48,6 +49,7 @@ export {default as PlusIcon} from './Plus';
 export {default as ProfiIcon} from './Profi';
 export {default as ProfileIcon} from './Profile';
 export {default as ProfileStrokeIcon} from './ProfileStroke';
+export {default as RubleSignIcon} from './RubleSign';
 export {default as RepeatIcon} from './Repeat';
 export {default as ReviewIcon} from './Review';
 export {default as SandClockIcon} from './SandClock';
