@@ -22,8 +22,8 @@ const RubleSignIcon: ForwardRefExoticComponent<IconPropsType> = forwardRef(
         />
         <path
           fill="currentColor"
-          d="M5.41 9.643h3.095M5.41 7.598h.936"
           stroke="currentColor"
+          d="M5.41 9.643h3.095M5.41 7.598h.936"
         />
       </svg>
     );
