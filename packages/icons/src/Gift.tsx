@@ -6,13 +6,20 @@ import {combineCommonProps} from './_helpers';
 const GiftIcon: ForwardRefExoticComponent<IconPropsType> = forwardRef(
   (props, ref) => {
     return (
-      <svg width="1em" height="1em" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg" {...combineCommonProps(props)}
-           ref={ref}>
-        <path d="M7.9998 5.05554H12.1109C12.6632 5.05554 13.1109 5.50326 13.1109 6.05554V9.27778M7.9998 5.05554H3.88867C3.33639 5.05554 2.88867 5.50326 2.88867 6.05554V9.27778M7.9998 5.05554V13.5M7.9998 13.5H3.88867C3.33639 13.5 2.88867 13.0523 2.88867 12.5V9.27778M7.9998 13.5H12.1109C12.6632 13.5 13.1109 13.0523 13.1109 12.5V9.27778M2.88867 9.27778H13.1109" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-        <path d="M10.6667 5.05557C11.6485 5.05557 12.4445 4.25963 12.4445 3.27778C12.4445 2.29594 11.6485 1.5 10.6667 1.5C9.68483 1.5 8 2.29594 8 3.27778V5.05557" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-        <path d="M5.33333 5.05557C4.35148 5.05557 3.55554 4.25963 3.55554 3.27778C3.55554 2.29594 4.35148 1.5 5.33333 1.5C6.31517 1.5 8 2.29594 8 3.27778V5.05557" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+      <svg
+        width="1em"
+        height="1em"
+        viewBox="0 0 16 15"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+        {...combineCommonProps(props)}
+        ref={ref}
+      >
+        <path
+          d="M8 5.056h4.11a1 1 0 0 1 1 1v3.222M8 5.056H3.889a1 1 0 0 0-1 1v3.222m5.11-4.222V13.5m0 0H3.89a1 1 0 0 1-1-1V9.278m5.11 4.222h4.112a1 1 0 0 0 1-1V9.278m-10.222 0H13.11M10.667 5.056a1.778 1.778 0 0 0 0-3.556C9.685 1.5 8 2.296 8 3.278v1.778M5.333 5.056a1.778 1.778 0 1 1 0-3.556C6.315 1.5 8 2.296 8 3.278v1.778"
+          stroke="currentColor"
+        />
       </svg>
-
     );
   },
 );
