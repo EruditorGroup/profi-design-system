@@ -17,7 +17,5 @@ export default function usePersistCallback<ARG extends Array<unknown>, RET>(
     [],
   );
 
-  if (!callback) return null;
-
   return persistCallback;
 }
