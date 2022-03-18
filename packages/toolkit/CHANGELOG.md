@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.51.6](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-toolkit@0.51.5...@eruditorgroup/profi-toolkit@0.51.6) (2022-03-18)
+
+
+### Bug Fixes
+
+* Честный useClickOutside ([23d67f6](https://github.com/eruditorgroup/profi-design-system/commit/23d67f6d6d8152cb2150a84e6a7705972f1aed3e))
+
+
+
+
+
 ## [0.51.5](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-toolkit@0.51.4...@eruditorgroup/profi-toolkit@0.51.5) (2022-03-18)
 
 
