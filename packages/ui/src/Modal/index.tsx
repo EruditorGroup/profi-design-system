@@ -108,7 +108,9 @@ const Modal = React.forwardRef(
     );
 
     useClickOutside(modalRef, () => {
-      closeOnOverlayClick && onClose(null);
+      if (visible && closeOnOverlayClick) {
+        onClose(null);
+      }
     });
 
     if (!canUseDom()) return null;
@@ -116,12 +118,14 @@ const Modal = React.forwardRef(
     const handleCloseClick: MouseEventHandler<HTMLElement> = (event) => {
       if (!event) return;
       event.stopPropagation();
+      event.nativeEvent.stopImmediatePropagation(); // react 16 fix
       onClose(event);
     };
 
     const handleBackClick: MouseEventHandler<HTMLElement> = (event) => {
       if (!onClickBack || !event) return;
       event.stopPropagation();
+      event.nativeEvent.stopImmediatePropagation();
       onClickBack(event);
     };
 

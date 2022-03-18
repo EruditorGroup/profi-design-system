@@ -28,7 +28,11 @@
     "/src"
   ],
   "dependencies": {
+<<<<<<< HEAD
     "@eruditorgroup/profi-toolkit": "^1.0.0-alpha.23"
+=======
+    "@eruditorgroup/profi-toolkit": "^0.51.5"
+>>>>>>> 899cccdb053d3e9f30074b471c3fc75d168448f9
   },
   "peerDependencies": {
     "react": "^16.14.0",
