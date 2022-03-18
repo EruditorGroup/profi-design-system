@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React, {useCallback} from 'react';
 import {CSSTransition} from 'react-transition-group';
 import {gestures, useDisableBodyScroll} from '@eruditorgroup/profi-toolkit';
 
@@ -107,11 +107,13 @@ const Modal = React.forwardRef(
       },
     );
 
-    useClickOutside(modalRef, () => {
+    const handleClickOutside = useCallback(() => {
       if (visible && closeOnOverlayClick) {
         onClose(null);
       }
-    });
+    }, [visible, closeOnOverlayClick, onClose]);
+
+    useClickOutside(modalRef, handleClickOutside);
 
     if (!canUseDom()) return null;
 
