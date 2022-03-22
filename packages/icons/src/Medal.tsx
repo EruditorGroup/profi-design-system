@@ -3,6 +3,10 @@ import type {ForwardRefExoticComponent} from 'react';
 import type {IconPropsType} from './_types';
 import {combineCommonProps} from './_helpers';
 
+/**
+ * Для маленького формата нужно использовать данную иконку медали,
+ * для большего другую(packages/icons/src/BigMedal.tsx)
+ */
 const MedalIcon: ForwardRefExoticComponent<IconPropsType> = forwardRef(
   (props, ref) => {
     return (
