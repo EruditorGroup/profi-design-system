@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.51.7](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-toolkit@0.51.6...@eruditorgroup/profi-toolkit@0.51.7) (2022-03-22)
+
+
+### Bug Fixes
+
+* **toolkit:** Поправил тип рефа в хуке useVisibilitySensor ([e3aed38](https://github.com/eruditorgroup/profi-design-system/commit/e3aed38e5f83585c38fc62f6ece4ae1634d76774))
+
+
+
+
+
 ## [0.51.6](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-toolkit@0.51.5...@eruditorgroup/profi-toolkit@0.51.6) (2022-03-18)
 
 
