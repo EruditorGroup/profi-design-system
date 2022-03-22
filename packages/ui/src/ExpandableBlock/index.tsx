@@ -13,7 +13,7 @@ export interface IProps {
   expanded?: boolean;
   previewIsClickable?: boolean;
   moreButtonSize?: LinkProps['size'];
-  moreButtonText?: string;
+  moreButtonText?: React.ReactNode;
   withAnimation?: boolean;
   onChange?: () => void;
 }

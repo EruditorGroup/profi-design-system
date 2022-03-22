@@ -1,6 +1,7 @@
 export {default as AppleIcon} from './Apple';
 export {default as ArrowLeftIcon} from './ArrowLeft';
 export {default as ArrowRightIcon} from './ArrowRight';
+export {default as BigMedalIcon} from './BigMedal';
 export {default as CalendarIcon} from './Calendar';
 export {default as CameraIcon} from './Camera';
 export {default as CameraOutlineIcon} from './CameraOutline';
