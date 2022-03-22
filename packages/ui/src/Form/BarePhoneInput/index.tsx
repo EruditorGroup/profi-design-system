@@ -73,6 +73,8 @@ export const PhoneInput = forwardRef(function PhoneInput(
       mask={mask}
       value={value}
       onChange={(e) => setValue(e.currentTarget.value)}
+      /** onInput надо оставить, потому что при autocomplete на iphone не отрабатывает ни paste, ни onChange */
+      onInput={(e) => setValue(e.currentTarget.value)}
       onPaste={handlePaste}
       onFocus={handleFocus}
       type="tel"
