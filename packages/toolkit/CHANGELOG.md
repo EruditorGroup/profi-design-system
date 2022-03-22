@@ -3,6 +3,60 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.51.6](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-toolkit@0.51.5...@eruditorgroup/profi-toolkit@0.51.6) (2022-03-18)
+
+
+### Bug Fixes
+
+* Честный useClickOutside ([23d67f6](https://github.com/eruditorgroup/profi-design-system/commit/23d67f6d6d8152cb2150a84e6a7705972f1aed3e))
+
+
+
+
+
+## [0.51.5](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-toolkit@0.51.4...@eruditorgroup/profi-toolkit@0.51.5) (2022-03-18)
+
+
+### Bug Fixes
+
+* useClickOutside dependencies & Modal stop propagation ([49d6193](https://github.com/eruditorgroup/profi-design-system/commit/49d6193e3b3a1b6e3bbdefb8c94991f44ad2dc86))
+
+
+
+
+
+## [0.51.4](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-toolkit@0.51.3...@eruditorgroup/profi-toolkit@0.51.4) (2022-03-03)
+
+**Note:** Version bump only for package @eruditorgroup/profi-toolkit
+
+
+
+
+
+## [0.51.3](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-toolkit@0.51.2...@eruditorgroup/profi-toolkit@0.51.3) (2022-03-02)
+
+**Note:** Version bump only for package @eruditorgroup/profi-toolkit
+
+
+
+
+
+## [0.51.2](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-toolkit@0.51.1...@eruditorgroup/profi-toolkit@0.51.2) (2022-02-28)
+
+**Note:** Version bump only for package @eruditorgroup/profi-toolkit
+
+
+
+
+
+## [0.51.1](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-toolkit@0.51.0...@eruditorgroup/profi-toolkit@0.51.1) (2022-02-28)
+
+**Note:** Version bump only for package @eruditorgroup/profi-toolkit
+
+
+
+
+
 # [0.51.0](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-toolkit@0.50.6...@eruditorgroup/profi-toolkit@0.51.0) (2022-02-21)
 
 
