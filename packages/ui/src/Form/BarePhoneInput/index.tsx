@@ -23,16 +23,19 @@ export interface PhoneInputProps
   onChange?: (value: string) => void;
 }
 
-export const PhoneInput = forwardRef(function PhoneInput({
-  value: propValue,
-  defaultValue = '',
-  onChange,
-  onFocus,
-  defaultCountryCode = 'ru',
-  autoFocus,
-  inputRef,
-  ...props
-}: PhoneInputProps, outRef: ForwardedRef<HTMLInputElement>): React.ReactElement | null {
+export const PhoneInput = forwardRef(function PhoneInput(
+  {
+    value: propValue,
+    defaultValue = '',
+    onChange,
+    onFocus,
+    defaultCountryCode = 'ru',
+    autoFocus,
+    inputRef,
+    ...props
+  }: PhoneInputProps,
+  outRef: ForwardedRef<HTMLInputElement>,
+): React.ReactElement | null {
   const [value, setValue] = useControllableState({
     value: propValue,
     defaultValue,
@@ -59,7 +62,6 @@ export const PhoneInput = forwardRef(function PhoneInput({
   }
 
   useAutoFocus(ref, autoFocus);
-
   return (
     <Input
       leading={
@@ -70,7 +72,7 @@ export const PhoneInput = forwardRef(function PhoneInput({
       }
       mask={mask}
       value={value}
-      onInput={(e) => setValue(e.currentTarget.value)}
+      onChange={(e) => setValue(e.currentTarget.value)}
       onPaste={handlePaste}
       onFocus={handleFocus}
       type="tel"
