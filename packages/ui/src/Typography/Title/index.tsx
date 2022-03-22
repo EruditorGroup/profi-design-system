@@ -11,7 +11,7 @@ import styles from './Title.module.scss';
 
 export interface TitleProps extends Omit<BaseTextProps, 'as'> {
   level?: 1 | 2 | 3 | 4 | 5 | 6;
-  size?: 'xl' | 'xxl' | '3xl' | '4xl' | '5xl'; // xl, xxl, ..., 5xl is available in <Title /> component
+  size?: 'l' | 'xl' | 'xxl' | '3xl' | '4xl' | '5xl'; // l, xl, xxl, ..., 5xl is available in <Title /> component
 }
 
 const Title: ForwardingComponent<'h3', TitleProps> = forwardRef(function Title(
