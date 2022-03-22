@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.0.0-alpha.26](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@1.0.0-alpha.25...@eruditorgroup/profi-ui@1.0.0-alpha.26) (2022-03-22)
+
+
+
+# 1.0.0-alpha.26 (2022-03-22)
+
+
+### Bug Fixes
+
+* **ui:** phoneInput change event ([#457](https://github.com/eruditorgroup/profi-design-system/issues/457)) ([b3c790f](https://github.com/eruditorgroup/profi-design-system/commit/b3c790f1a060509efd3fc2ee74aecc000076c295))
+* **ui:** Поправил тип в ExpandableBlock и добавил флаг в ListItem ([a1d4343](https://github.com/eruditorgroup/profi-design-system/commit/a1d4343180ac297fb11f08541d0d5ef5908aa297))
+
+
+
+
+
 # [1.0.0-alpha.25](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.66.5...@eruditorgroup/profi-ui@1.0.0-alpha.25) (2022-03-18)
 
 
