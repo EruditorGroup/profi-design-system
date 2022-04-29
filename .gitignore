@@ -16,6 +16,9 @@ lib
 es
 types
 
+# development
+.vscode
+
 # production storybook
 storybook-static
 
