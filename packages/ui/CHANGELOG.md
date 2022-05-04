@@ -3,6 +3,98 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.67.0](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.66.5...@eruditorgroup/profi-ui@0.67.0) (2022-04-11)
+
+
+
+## 0.33.6 (2022-04-11)
+
+
+### Bug Fixes
+
+* **ui:** phoneInput change event ([#457](https://github.com/eruditorgroup/profi-design-system/issues/457)) ([b3c790f](https://github.com/eruditorgroup/profi-design-system/commit/b3c790f1a060509efd3fc2ee74aecc000076c295))
+* **ui:** Поправил тип в ExpandableBlock и добавил флаг в ListItem ([a1d4343](https://github.com/eruditorgroup/profi-design-system/commit/a1d4343180ac297fb11f08541d0d5ef5908aa297))
+
+
+### Features
+
+* export type ColSpan ([#463](https://github.com/eruditorgroup/profi-design-system/issues/463)) ([47d6150](https://github.com/eruditorgroup/profi-design-system/commit/47d615056b6dc0775a79d98498011e91d9259a71))
+* Title может быть размером l ([2e2eefb](https://github.com/eruditorgroup/profi-design-system/commit/2e2eefb4b9dc067808b81f40dfbb947dd286593c))
+
+
+
+
+
+## [0.66.6](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.66.5...@eruditorgroup/profi-ui@0.66.6) (2022-03-22)
+
+
+### Bug Fixes
+
+* **ui:** phoneInput change event ([#457](https://github.com/eruditorgroup/profi-design-system/issues/457)) ([b3c790f](https://github.com/eruditorgroup/profi-design-system/commit/b3c790f1a060509efd3fc2ee74aecc000076c295))
+* **ui:** Поправил тип в ExpandableBlock и добавил флаг в ListItem ([a1d4343](https://github.com/eruditorgroup/profi-design-system/commit/a1d4343180ac297fb11f08541d0d5ef5908aa297))
+
+
+
+
+
+## [0.66.5](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.66.4...@eruditorgroup/profi-ui@0.66.5) (2022-03-18)
+
+
+### Bug Fixes
+
+* Честный useClickOutside ([23d67f6](https://github.com/eruditorgroup/profi-design-system/commit/23d67f6d6d8152cb2150a84e6a7705972f1aed3e))
+
+
+
+
+
+## [0.66.4](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.66.3...@eruditorgroup/profi-ui@0.66.4) (2022-03-18)
+
+
+### Bug Fixes
+
+* useClickOutside dependencies & Modal stop propagation ([49d6193](https://github.com/eruditorgroup/profi-design-system/commit/49d6193e3b3a1b6e3bbdefb8c94991f44ad2dc86))
+
+
+
+
+
+## [0.66.3](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.66.2...@eruditorgroup/profi-ui@0.66.3) (2022-03-03)
+
+**Note:** Version bump only for package @eruditorgroup/profi-ui
+
+
+
+
+
+## [0.66.2](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.66.1...@eruditorgroup/profi-ui@0.66.2) (2022-03-02)
+
+**Note:** Version bump only for package @eruditorgroup/profi-ui
+
+
+
+
+
+## [0.66.1](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.66.0...@eruditorgroup/profi-ui@0.66.1) (2022-02-28)
+
+**Note:** Version bump only for package @eruditorgroup/profi-ui
+
+
+
+
+
+# [0.66.0](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.65.0...@eruditorgroup/profi-ui@0.66.0) (2022-02-28)
+
+
+### Features
+
+* Добавлен Modal.BackButton ([24c2379](https://github.com/eruditorgroup/profi-design-system/commit/24c2379f1bff8c57dbfdfd5f94b28b89ca8820f1))
+* Дополнительные параметры Slider.SliderArrow ([6eab20c](https://github.com/eruditorgroup/profi-design-system/commit/6eab20c3e50b69f6af74462f6e4cb1b9263a637e))
+
+
+
+
+
 # [0.65.0](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.64.0...@eruditorgroup/profi-ui@0.65.0) (2022-02-21)
 
 

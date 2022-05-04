@@ -38,6 +38,7 @@ export function getCountryByPhone(
       })
     );
   });
+
   return result || getCountryByCode(defaultCountryCode);
 }
 

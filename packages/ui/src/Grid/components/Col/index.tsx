@@ -5,11 +5,11 @@ import styles from './Col.module.scss';
 import type {HTMLAttributes} from 'react';
 
 //prettier-ignore
-type ColOffset = 
+type ColOffset =
   | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11
   | '1' | '2' | '3' | '4' | '5' | '6' | '7' | '8' | '9' | '10' | '11';
 
-type ColSpan = ColOffset | 12 | '12';
+export type ColSpan = ColOffset | 12 | '12';
 
 type ColBreakpoints = 's' | 'm' | 'l';
 

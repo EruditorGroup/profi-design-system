@@ -3,27 +3,28 @@ import {useControllableState} from './';
 import useIntersectionObserver from './useIntersectionObserver';
 import usePersistCallback from './usePersistCallback';
 
-type IParams = {
+type IParams<TRef extends HTMLElement> = {
   options?: IntersectionObserverInit;
-  ref?: MutableRefObject<HTMLElement>;
+  ref?: MutableRefObject<TRef>;
   visible?: boolean;
   onVisibilityChanged?: (visible: boolean) => void;
 };
 
-const useVisibilitySensor = ({
+const useVisibilitySensor = <TRef extends HTMLElement>({
   options = {threshold: 1},
   ref: originalRef,
   onVisibilityChanged,
   visible: originalVisible,
-}: IParams) => {
-  const innerRef = useRef<HTMLElement>();
+}: IParams<TRef>) => {
+  const innerRef = useRef<TRef>();
   const ref = originalRef || innerRef;
+  const IntersectionObserver = useIntersectionObserver();
+
   const [visible, setVisible] = useControllableState({
     value: originalVisible,
-    onChange: onVisibilityChanged,
+    onChange: (visible: boolean) => onVisibilityChanged(visible),
     defaultValue: false,
   });
-  const IntersectionObserver = useIntersectionObserver();
 
   const handle: IntersectionObserverCallback = usePersistCallback(
     ([entry]) => {

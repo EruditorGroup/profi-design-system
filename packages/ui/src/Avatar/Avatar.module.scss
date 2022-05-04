@@ -28,11 +28,11 @@
   right: 0;
   bottom: 0;
   border: 2px solid #fff;
-  width: 5px;
-  height: 5px;
+  width: 0.25em;
+  height: 0.25em;
   border-radius: 50%;
   background: var(--ui-color-success);
-  transform: translate(5px, 5px);
+  transform: translate(0.25em, 0.25em);
 }
 
 .design-circle {

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {ForwardedRef, forwardRef} from 'react';
 import cx from 'classnames';
 import {Input, InputProps} from '../index';
 
@@ -23,16 +23,19 @@ export interface PhoneInputProps
   onChange?: (value: string) => void;
 }
 
-export default function PhoneInput({
-  value: propValue,
-  defaultValue = '',
-  onChange,
-  onFocus,
-  defaultCountryCode = 'ru',
-  autoFocus,
-  inputRef,
-  ...props
-}: PhoneInputProps): React.ReactElement | null {
+export const PhoneInput = forwardRef(function PhoneInput(
+  {
+    value: propValue,
+    defaultValue = '',
+    onChange,
+    onFocus,
+    defaultCountryCode = 'ru',
+    autoFocus,
+    inputRef,
+    ...props
+  }: PhoneInputProps,
+  outRef: ForwardedRef<HTMLInputElement>,
+): React.ReactElement | null {
   const [value, setValue] = useControllableState({
     value: propValue,
     defaultValue,
@@ -59,7 +62,6 @@ export default function PhoneInput({
   }
 
   useAutoFocus(ref, autoFocus);
-
   return (
     <Input
       leading={
@@ -70,14 +72,19 @@ export default function PhoneInput({
       }
       mask={mask}
       value={value}
+      onChange={(e) => setValue(e.currentTarget.value)}
+      /** onInput надо оставить, потому что при autocomplete на iphone не отрабатывает ни paste, ни onChange */
       onInput={(e) => setValue(e.currentTarget.value)}
       onPaste={handlePaste}
       onFocus={handleFocus}
       type="tel"
       autoComplete="tel"
       {...props}
+      ref={outRef}
       inputRef={setRef}
       placeholder={placeholder}
     />
   );
-}
+});
+
+export default PhoneInput;

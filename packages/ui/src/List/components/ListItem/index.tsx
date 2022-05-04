@@ -42,6 +42,7 @@ export interface ListItemProps
   disabled?: boolean;
   active?: boolean;
   leading?: ReactNode;
+  centerLeading?: boolean;
   trailing?: ReactNode;
   disableHover?: boolean;
   bodyClassName?: string;
@@ -56,6 +57,7 @@ const ListItem: ForwardingComponentType = forwardRef((props, ref) => {
     leading,
     trailing,
     disabled = false,
+    centerLeading = true,
     active,
     onClick,
     className,
@@ -103,7 +105,7 @@ const ListItem: ForwardingComponentType = forwardRef((props, ref) => {
             <span
               className={cx(
                 styles['leading'],
-                !isCaption && styles['without-caption'],
+                !isCaption && centerLeading && styles['without-caption'],
               )}
             >
               {leading}
