@@ -1,6 +1,6 @@
 {
   "name": "@eruditorgroup/profi-toolkit",
-  "version": "0.51.7",
+  "version": "0.51.8",
   "description": "Toolkit for React for Eruditor Group",
   "author": "eruditorgroup",
   "license": "ISC",
@@ -16,6 +16,7 @@
     "url": "git://github.com/eruditorgroup/profi-design-system.git",
     "directory": "packages/toolkit"
   },
+  "sideEffects": false,
   "browser": "es/index.js",
   "main": "lib/index.js",
   "types": "es/index.d.ts",

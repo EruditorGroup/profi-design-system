@@ -1,6 +1,6 @@
 {
   "name": "@eruditorgroup/profi-ui",
-  "version": "0.66.6",
+  "version": "0.67.0",
   "description": "Essential cross-platform UI components for React for Eruditor Group",
   "author": "eruditorgroup",
   "license": "ISC",
@@ -16,6 +16,7 @@
     "url": "git://github.com/eruditorgroup/profi-design-system.git",
     "directory": "packages/ui"
   },
+  "sideEffects": false,
   "browser": "es/index.js",
   "main": "lib/index.js",
   "types": "es/index.d.ts",
@@ -28,8 +29,8 @@
     "/src"
   ],
   "dependencies": {
-    "@eruditorgroup/profi-icons": "^0.39.0",
-    "@eruditorgroup/profi-toolkit": "^0.51.7",
+    "@eruditorgroup/profi-icons": "^0.40.0",
+    "@eruditorgroup/profi-toolkit": "^0.51.8",
     "body-scroll-lock": "^3.1.5",
     "classnames": "^2.2.6",
     "react-autosuggest": "^10.1.0",
