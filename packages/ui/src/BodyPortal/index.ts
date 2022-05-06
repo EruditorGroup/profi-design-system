@@ -1,4 +1,4 @@
-import {forwardRef, useLayoutEffect, useMemo} from 'react';
+import {forwardRef, useMemo} from 'react';
 import type {
   ForwardRefExoticComponent,
   RefAttributes,
@@ -48,7 +48,7 @@ const BodyPortal: ForwardRefExoticComponent<
     }
   }, [css, className]);
 
-  useLayoutEffect(() => {
+  useSafeLayoutEffect(() => {
     if (container) {
       window.document.body.appendChild(container);
       return () => {

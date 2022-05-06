@@ -74,7 +74,6 @@ const Modal = React.forwardRef(
     },
     ref,
   ) => {
-    const rootRef = React.useRef(null);
     const bodyRef = React.useRef(null);
     const [modalRef, setModalRef] = useCombinedRef(ref);
 
@@ -103,7 +102,7 @@ const Modal = React.forwardRef(
       {
         axis: 'y',
         enabled: swipeDownToClose,
-        target: rootRef,
+        target: modalRef,
       },
     );
 
@@ -170,7 +169,6 @@ const Modal = React.forwardRef(
               )})`,
               opacity: `${modalOpacity}`,
             }}
-            ref={rootRef}
           >
             <div
               className={classNames(
