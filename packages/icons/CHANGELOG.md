@@ -3,7 +3,40 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
-# [1.0.0-alpha.25](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-icons@0.38.3...@eruditorgroup/profi-icons@1.0.0-alpha.25) (2022-03-18)
+# [0.41.0](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-icons@0.40.0...@eruditorgroup/profi-icons@0.41.0) (2022-05-04)
+
+
+### Features
+
+* +sideEffects: false ([5e5a2a2](https://github.com/eruditorgroup/profi-design-system/commit/5e5a2a2edbde6341a152ba4b3a2996f25e330db8))
+
+
+
+
+
+# [0.40.0](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-icons@0.38.3...@eruditorgroup/profi-icons@0.40.0) (2022-04-11)
+
+
+### Features
+
+* **Icons:** Добавил иконку медали для больших размеров ([356efb7](https://github.com/eruditorgroup/profi-design-system/commit/356efb73ff5f67a0bc9b1a3f5ee31dbc7692071a))
+
+
+
+
+
+# [0.39.0](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-icons@0.38.3...@eruditorgroup/profi-icons@0.39.0) (2022-03-22)
+
+
+### Features
+
+* **Icons:** Добавил иконку медали для больших размеров ([356efb7](https://github.com/eruditorgroup/profi-design-system/commit/356efb73ff5f67a0bc9b1a3f5ee31dbc7692071a))
+
+
+
+
+
+## [0.38.3](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-icons@0.38.2...@eruditorgroup/profi-icons@0.38.3) (2022-03-18)
 
 
 

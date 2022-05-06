@@ -9,6 +9,7 @@ export type {AvatarProps} from './Avatar';
 
 export {default as Grid, Container, Row, Col} from './Grid';
 export type {ColProps} from './Grid';
+export type {ColSpan} from './Grid/components/Col';
 
 export {default as Datepicker} from './Datepicker';
 export type {DatepickerProps} from './Datepicker';
@@ -109,9 +110,6 @@ export type {PriceProps} from './Price';
 
 export {default as Progress} from './Progress';
 export type {ProgressProps} from './Progress';
-
-export {default as Gallery} from './Gallery';
-export type {GalleryProps} from './Gallery';
 
 export {default as ExpandableBlock} from './ExpandableBlock';
 export type {IProps as ExpandableBlockProps} from './ExpandableBlock';

@@ -1,17 +1,22 @@
 .enter {
   opacity: 0;
+  visibility: hidden;
 }
 
 .enterActive {
   opacity: 1;
+  visibility: visible;
   transition: opacity 0.3s;
+  transition: visibility 0.3s, opacity 0.3s;
 }
 
 .exit {
   opacity: 1;
+  visibility: visible;
 }
 
 .exitActive {
   opacity: 0;
-  transition: opacity 0.3s;
+  visibility: hidden;
+  transition: visibility 0.3s, opacity 0.3s;
 }
