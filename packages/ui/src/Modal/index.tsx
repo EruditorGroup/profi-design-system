@@ -74,7 +74,6 @@ const Modal = React.forwardRef(
     },
     ref,
   ) => {
-    const rootRef = React.useRef(null);
     const bodyRef = React.useRef(null);
     const [modalRef, setModalRef] = useCombinedRef(ref);
 
@@ -103,7 +102,7 @@ const Modal = React.forwardRef(
       {
         axis: 'y',
         enabled: swipeDownToClose,
-        target: rootRef,
+        target: modalRef,
       },
     );
 
@@ -138,7 +137,6 @@ const Modal = React.forwardRef(
         <CSSTransition
           key="overlay"
           unmountOnExit
-          mountOnEnter
           in={visible}
           timeout={DEFAULT_ANIMATION_DURATION}
           classNames={theme.transitions.fade}
@@ -155,7 +153,6 @@ const Modal = React.forwardRef(
         <CSSTransition
           key="content"
           unmountOnExit
-          mountOnEnter
           in={visible}
           timeout={!fullscreen ? DEFAULT_ANIMATION_DURATION : 0}
           classNames={theme.transitions.slide}
@@ -172,7 +169,6 @@ const Modal = React.forwardRef(
               )})`,
               opacity: `${modalOpacity}`,
             }}
-            ref={rootRef}
           >
             <div
               className={classNames(
