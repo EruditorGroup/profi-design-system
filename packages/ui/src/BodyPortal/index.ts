@@ -1,4 +1,4 @@
-import {forwardRef, useMemo} from 'react';
+import {forwardRef, useLayoutEffect, useMemo} from 'react';
 import type {
   ForwardRefExoticComponent,
   RefAttributes,
@@ -37,7 +37,6 @@ const BodyPortal: ForwardRefExoticComponent<
     const div = document.createElement('div');
     div.className = className || '';
     div.setAttribute('style', css);
-    window.document.body.appendChild(div);
     return div;
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
@@ -49,18 +48,22 @@ const BodyPortal: ForwardRefExoticComponent<
     }
   }, [css, className]);
 
-  useSafeLayoutEffect(() => {
-    if (ref) {
-      if (typeof ref === 'function') ref(container);
-      else if (ref) ref.current = container;
+  useLayoutEffect(() => {
+    if (container) {
+      window.document.body.appendChild(container);
+      return () => {
+        window.document.body.removeChild(container);
+      };
     }
+  }, [container]);
 
-    return () => {
-      if (container) window.document.body.removeChild(container);
-    };
-  }, [container, ref]);
+  if (ref) {
+    if (typeof ref === 'function') ref(container);
+    else if (ref) ref.current = container;
+  }
 
   return container ? createPortal(children, container) : null;
 });
 
+BodyPortal.displayName = 'BodyPortal';
 export default BodyPortal;

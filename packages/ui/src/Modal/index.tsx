@@ -138,7 +138,6 @@ const Modal = React.forwardRef(
         <CSSTransition
           key="overlay"
           unmountOnExit
-          mountOnEnter
           in={visible}
           timeout={DEFAULT_ANIMATION_DURATION}
           classNames={theme.transitions.fade}
@@ -155,7 +154,6 @@ const Modal = React.forwardRef(
         <CSSTransition
           key="content"
           unmountOnExit
-          mountOnEnter
           in={visible}
           timeout={!fullscreen ? DEFAULT_ANIMATION_DURATION : 0}
           classNames={theme.transitions.slide}
