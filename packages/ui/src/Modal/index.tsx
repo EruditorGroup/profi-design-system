@@ -160,13 +160,7 @@ const Modal = React.forwardRef(
           timeout={!fullscreen ? DEFAULT_ANIMATION_DURATION : 0}
           classNames={theme.transitions.slide}
         >
-          <CSSTransition
-            unmountOnExit
-            mountOnEnter
-            in={visible}
-            timeout={!fullscreen ? DEFAULT_ANIMATION_DURATION : 0}
-            classNames={theme.transitions.slide}
-          >
+          <BodyPortal>
             <div
               className={classNames(
                 styles['modal'],
@@ -195,8 +189,8 @@ const Modal = React.forwardRef(
                 {children}
               </div>
             </div>
-          </CSSTransition>
-        </BodyPortal>
+          </BodyPortal>
+        </CSSTransition>
       </ModalContext.Provider>
     );
   },
