@@ -79,7 +79,6 @@ const Modal = React.forwardRef(
     const [modalRef, setModalRef] = useCombinedRef(ref);
 
     const [pc, setPc] = React.useState(0);
-    const modalOpacity = 1 - pc / 100;
     const showOverlay = !!pc || !withOverlay;
 
     useDisableBodyScroll(bodyRef, visible);
