@@ -136,6 +136,7 @@ const Modal = React.forwardRef(
         value={{handleClose: handleCloseClick, handleBack: handleBackClick}}
       >
         <CSSTransition
+          key="overlay"
           unmountOnExit
           mountOnEnter
           in={visible}
@@ -152,6 +153,7 @@ const Modal = React.forwardRef(
         </CSSTransition>
 
         <CSSTransition
+          key="content"
           unmountOnExit
           mountOnEnter
           in={visible}
