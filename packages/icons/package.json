@@ -16,7 +16,6 @@
     "url": "git://github.com/eruditorgroup/profi-design-system.git",
     "directory": "packages/icons"
   },
-  "sideEffects": false,
   "browser": "es/index.js",
   "main": "lib/index.js",
   "types": "es/index.d.ts",
