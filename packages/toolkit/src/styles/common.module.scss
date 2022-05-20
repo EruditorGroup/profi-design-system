@@ -13,7 +13,7 @@
   }
 }
 
-@each $radius in (xs, s, m, l, xl, xxl) {
+@each $radius in (xs, s, m, l, xl, ml, xxl) {
   .radius-#{$radius} {
     border-radius: var(--ui-border-radius-#{$radius});
   }
