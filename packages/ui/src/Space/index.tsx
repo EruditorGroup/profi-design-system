@@ -31,7 +31,7 @@ export interface SpaceProps extends HTMLAttributes<HTMLDivElement> {
   px?: IPadding;
   py?: IPadding;
   withShadow?: boolean;
-  radius?: ISize;
+  radius?: ISize | 'ml';
   direction?: 'row' | 'col' | 'row-reverse' | 'col-reverse';
   bg?: IColor | 'white';
   justify?: 'start' | 'center' | 'end';
