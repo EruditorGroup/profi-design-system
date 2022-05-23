@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.0.0-alpha.32](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@1.0.0-alpha.27...@eruditorgroup/profi-ui@1.0.0-alpha.32) (2022-05-23)
+
+
+
+# 1.0.0-alpha.32 (2022-05-23)
+
+
+### Features
+
+* **ui:** new radius: ml ([#474](https://github.com/eruditorgroup/profi-design-system/issues/474)) ([f6a4d19](https://github.com/eruditorgroup/profi-design-system/commit/f6a4d194d5518454a9b81d90742cc018718ce7fc))
+* +sideEffects: false ([4a1505e](https://github.com/eruditorgroup/profi-design-system/commit/4a1505e8b95f3f5251940535444b0095298fa63d))
+* Gallery переехала в @profi/components ([#462](https://github.com/eruditorgroup/profi-design-system/issues/462)) ([2da9b06](https://github.com/eruditorgroup/profi-design-system/commit/2da9b066cf8b39a301b60ba32dde215879b3b522))
+
+
+
+
+
 # [1.0.0-alpha.31](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@1.0.0-alpha.25...@eruditorgroup/profi-ui@1.0.0-alpha.31) (2022-04-11)
 
 
