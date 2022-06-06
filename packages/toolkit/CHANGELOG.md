@@ -5,13 +5,79 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # [1.0.0-alpha.33](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-toolkit@1.0.0-alpha.32...@eruditorgroup/profi-toolkit@1.0.0-alpha.33) (2022-05-23)
 
-
-
 # 1.0.0-alpha.33 (2022-05-23)
 
 **Note:** Version bump only for package @eruditorgroup/profi-toolkit
 
 
+# [0.54.0](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-toolkit@0.52.0...@eruditorgroup/profi-toolkit@0.54.0) (2022-05-06)
+
+
+
+## 0.33.8 (2022-05-06)
+
+
+### Bug Fixes
+
+* **toolkit:** fade transition should hide visiblity ([#468](https://github.com/eruditorgroup/profi-design-system/issues/468)) ([64a75f7](https://github.com/eruditorgroup/profi-design-system/commit/64a75f7541f4bbecdcdaf5aa3b89ff2357e83582))
+
+
+### Features
+
+* Gallery переехала в @profi/components ([#462](https://github.com/eruditorgroup/profi-design-system/issues/462)) ([76e5389](https://github.com/eruditorgroup/profi-design-system/commit/76e538910b65535d63cda9ebffca4b2c290b493a))
+
+
+
+
+
+# [0.53.0](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-toolkit@0.52.0...@eruditorgroup/profi-toolkit@0.53.0) (2022-05-06)
+
+
+
+## 0.33.8 (2022-05-06)
+
+
+### Bug Fixes
+
+* **toolkit:** fade transition should hide visiblity ([#468](https://github.com/eruditorgroup/profi-design-system/issues/468)) ([64a75f7](https://github.com/eruditorgroup/profi-design-system/commit/64a75f7541f4bbecdcdaf5aa3b89ff2357e83582))
+
+
+### Features
+
+* Gallery переехала в @profi/components ([#462](https://github.com/eruditorgroup/profi-design-system/issues/462)) ([76e5389](https://github.com/eruditorgroup/profi-design-system/commit/76e538910b65535d63cda9ebffca4b2c290b493a))
+
+
+
+
+
+# [0.52.0](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-toolkit@0.51.8...@eruditorgroup/profi-toolkit@0.52.0) (2022-05-04)
+
+
+### Features
+
+* +sideEffects: false ([5e5a2a2](https://github.com/eruditorgroup/profi-design-system/commit/5e5a2a2edbde6341a152ba4b3a2996f25e330db8))
+
+
+
+
+
+## [0.51.8](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-toolkit@0.51.6...@eruditorgroup/profi-toolkit@0.51.8) (2022-04-11)
+
+
+### Bug Fixes
+
+* **toolkit:** Поправил тип рефа в хуке useVisibilitySensor ([e3aed38](https://github.com/eruditorgroup/profi-design-system/commit/e3aed38e5f83585c38fc62f6ece4ae1634d76774))
+
+
+
+
+
+## [0.51.7](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-toolkit@0.51.6...@eruditorgroup/profi-toolkit@0.51.7) (2022-03-22)
+
+
+### Bug Fixes
+
+* **toolkit:** Поправил тип рефа в хуке useVisibilitySensor ([e3aed38](https://github.com/eruditorgroup/profi-design-system/commit/e3aed38e5f83585c38fc62f6ece4ae1634d76774))
 
 
 
