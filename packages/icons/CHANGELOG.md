@@ -6,12 +6,9 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 # [1.0.0-alpha.33](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-icons@1.0.0-alpha.32...@eruditorgroup/profi-icons@1.0.0-alpha.33) (2022-05-23)
 
 
-
 # 1.0.0-alpha.33 (2022-05-23)
 
 **Note:** Version bump only for package @eruditorgroup/profi-icons
-
-
 
 
 
