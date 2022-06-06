@@ -3,6 +3,46 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.0.0-alpha.34](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@1.0.0-alpha.33...@eruditorgroup/profi-ui@1.0.0-alpha.34) (2022-06-06)
+
+
+### Bug Fixes
+
+* удалили лишнюю инфу из changelog ([8178c93](https://github.com/eruditorgroup/profi-design-system/commit/8178c93df0bb5de03cc41d80f69b53b2877b97a8))
+
+
+### Features
+
+* **ui:** new radius: ml ([#474](https://github.com/eruditorgroup/profi-design-system/issues/474)) ([518dd4f](https://github.com/eruditorgroup/profi-design-system/commit/518dd4f6e65eee9e5ab789608ea1dfa804038f90))
+
+
+
+## 0.33.9 (2022-05-06)
+
+
+### Bug Fixes
+
+* **ui:** bodyportal add in effect ([#471](https://github.com/eruditorgroup/profi-design-system/issues/471)) ([9fcc902](https://github.com/eruditorgroup/profi-design-system/commit/9fcc902f84a2433ae807f472b6481d6112fa019b))
+
+
+
+## 0.33.8 (2022-05-06)
+
+
+### Bug Fixes
+
+* **toolkit:** fade transition should hide visiblity ([#468](https://github.com/eruditorgroup/profi-design-system/issues/468)) ([64a75f7](https://github.com/eruditorgroup/profi-design-system/commit/64a75f7541f4bbecdcdaf5aa3b89ff2357e83582))
+
+
+### Features
+
+* +sideEffects: false ([5e5a2a2](https://github.com/eruditorgroup/profi-design-system/commit/5e5a2a2edbde6341a152ba4b3a2996f25e330db8))
+* Gallery переехала в @profi/components ([#462](https://github.com/eruditorgroup/profi-design-system/issues/462)) ([76e5389](https://github.com/eruditorgroup/profi-design-system/commit/76e538910b65535d63cda9ebffca4b2c290b493a))
+
+
+
+
+
 # [1.0.0-alpha.33](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@1.0.0-alpha.32...@eruditorgroup/profi-ui@1.0.0-alpha.33) (2022-05-23)
 
 
