@@ -17,6 +17,7 @@ types
 
 # development
 .vscode
+.idea
 
 # production storybook
 storybook-static
