@@ -38,6 +38,9 @@
   --ui-text-lineHeight-4xl-desktop: 60px;
   --ui-text-lineHeight-5xl-desktop: 80px;
 
+  /* Letter spasings */
+  --ui-text-letterSpacing-5xl-desktop: -2px;
+
   --ui-color-primary: #e01935;
   --ui-color-primaryState: #c90c27;
   --ui-color-primaryInverse: #fff;
