@@ -22,6 +22,7 @@ types
 storybook-static
 
 # misc
+.idea
 .DS_Store
 .env.local
 .env.development.local
