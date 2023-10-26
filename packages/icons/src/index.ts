@@ -29,6 +29,7 @@ export {default as GreatIcon} from './Great';
 export {default as HistoryIcon} from './History';
 export {default as InstagramIcon} from './Instagram';
 export {default as LocationIcon} from './Location';
+export {default as LoaderIcon} from './Loader';
 export {default as LockIcon} from './Lock';
 export {default as LockStrokeIcon} from './LockStroke';
 export {default as LightningIcon} from './Lightning';

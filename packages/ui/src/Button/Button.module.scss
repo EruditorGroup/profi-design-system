@@ -239,3 +239,32 @@
     background-color: transparent;
   }
 }
+
+.loading {
+  cursor: default;
+  pointer-events: none;
+
+  .leading,
+  .trailing,
+  .content {
+    opacity: 0;
+  }
+}
+
+.loadingIcon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  animation: rotate 0.8s infinite linear;
+  transform: translate(-50%, -50%);
+}
+
+@keyframes rotate {
+  0% {
+    transform: translate(-50%, -50%) rotate(0);
+  }
+
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
