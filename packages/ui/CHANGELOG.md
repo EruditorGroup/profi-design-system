@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.0.0-alpha.36](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@1.0.0-alpha.35...@eruditorgroup/profi-ui@1.0.0-alpha.36) (2023-10-26)
+
+
+### Features
+
+* **ui:** Added loading state into Button ([1fd7903](https://github.com/eruditorgroup/profi-design-system/commit/1fd79031866c31ba41c06c19ae86dd437ea65502))
+
+
+
+
+
 # [1.0.0-alpha.35](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@1.0.0-alpha.34...@eruditorgroup/profi-ui@1.0.0-alpha.35) (2023-06-07)
 
 

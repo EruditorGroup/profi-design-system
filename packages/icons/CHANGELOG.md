@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.0.0-alpha.36](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-icons@1.0.0-alpha.35...@eruditorgroup/profi-icons@1.0.0-alpha.36) (2023-10-26)
+
+
+### Features
+
+* **icons:** Added LoaderIcon ([da97a5a](https://github.com/eruditorgroup/profi-design-system/commit/da97a5a7e95dafb844eb2a806f9782070de99e80))
+
+
+
+
+
 # [1.0.0-alpha.35](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-icons@1.0.0-alpha.34...@eruditorgroup/profi-icons@1.0.0-alpha.35) (2023-06-07)
 
 **Note:** Version bump only for package @eruditorgroup/profi-icons
