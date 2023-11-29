@@ -19,7 +19,7 @@ export default {
   component: InputUnit,
 } as Meta;
 
-const Prefix: React.FC<{text: React.ReactNode}> = ({text}) => (
+const Prefix: React.FC<React.PropsWithChildren<{text: React.ReactNode}>> = ({text}) => (
   <Text color="muted" size="l">
     {text}
   </Text>

@@ -11,7 +11,7 @@ const DEFAULT_TEXTAREA_ROWS = 3;
 export type BareTextareaProps = Omit<TextareaAutosizeProps, 'size' | 'wrap'> &
   BaseControlProps<HTMLTextAreaElement>;
 
-const BareTextarea: React.FC<BareTextareaProps> = ({
+const BareTextarea: React.FC<React.PropsWithChildren<BareTextareaProps>> = ({
   className,
   rows,
   minRows,

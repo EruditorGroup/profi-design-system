@@ -7,7 +7,7 @@ import styles from './Content.module.scss';
 
 import type {TextProps} from '../../../Typography';
 
-export const Caption: React.FC<TextProps> = ({
+export const Caption: React.FC<React.PropsWithChildren<TextProps>> = ({
   children,
   className,
   ...props
