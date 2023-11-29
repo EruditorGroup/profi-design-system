@@ -16,7 +16,7 @@ export type BareInputUnitProps = BareInputProps & {
   unitStyle?: CSSProperties;
 };
 
-const BareInputUnit: React.FC<BareInputUnitProps> = ({
+const BareInputUnit: React.FC<React.PropsWithChildren<BareInputUnitProps>> = ({
   unit,
   unitClassName,
   unitStyle,

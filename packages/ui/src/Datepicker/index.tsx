@@ -28,7 +28,7 @@ export type DatepickerProps = Omit<
   inputLabelTransformerList?: ((date: Date) => string)[];
 };
 
-const Datepicker: React.FC<DatepickerProps> = ({
+const Datepicker: React.FC<React.PropsWithChildren<DatepickerProps>> = ({
   value,
   placeholder = 'Дата',
   shmid,

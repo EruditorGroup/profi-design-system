@@ -12,7 +12,7 @@ type TProps = Omit<ButtonProps, 'rounded'> & {
   withHoverAnimation?: boolean;
 };
 
-const CloseButton: React.FC<TProps> = ({
+const CloseButton: React.FC<React.PropsWithChildren<TProps>> = ({
   design = 'transparent',
   className,
   withHoverAnimation = true,

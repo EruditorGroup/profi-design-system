@@ -20,7 +20,7 @@ export interface BareInputProps
   size?: FormControlSize;
 }
 
-const BareInput: React.FC<BareInputProps> = ({
+const BareInput: React.FC<React.PropsWithChildren<BareInputProps>> = ({
   className,
   type = 'text',
   mask,
