@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.56.0](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-toolkit@0.55.1...@eruditorgroup/profi-toolkit@0.56.0) (2023-11-30)
+
+
+### Features
+
+* **icons, toolkit, ui:** Added PropsWithChildren for React 18 capability ([8d87fe1](https://github.com/eruditorgroup/profi-design-system/commit/8d87fe1d97d581f5bdd530ba670324644872d061))
+
+
+
+
+
 ## [0.55.1](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-toolkit@0.55.0...@eruditorgroup/profi-toolkit@0.55.1) (2023-10-26)
 
 **Note:** Version bump only for package @eruditorgroup/profi-toolkit
