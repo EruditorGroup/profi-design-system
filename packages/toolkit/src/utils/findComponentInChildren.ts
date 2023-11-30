@@ -18,7 +18,7 @@ export const getChild = (
 
 export const findComponentInChildren = <T>(
   children: React.ReactNode,
-  component: React.FC<T>,
+  component: React.FC<React.PropsWithChildren<T>>,
 ): React.ReactNode => {
   if (!component) {
     return null;

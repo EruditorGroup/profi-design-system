@@ -18,7 +18,7 @@ export interface IProps {
   onChange?: () => void;
 }
 
-const ExpandableBlock: React.FC<IProps> = ({
+const ExpandableBlock: React.FC<React.PropsWithChildren<IProps>> = ({
   expanded,
   onChange,
   preview,
