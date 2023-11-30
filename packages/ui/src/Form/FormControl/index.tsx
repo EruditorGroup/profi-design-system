@@ -37,7 +37,7 @@ export type FormControlHTMLProps = Omit<
   FormControlInternalProps &
   FormControlProps;
 
-const FormControl: React.FC<FormControlHTMLProps> = ({
+const FormControl: React.FC<React.PropsWithChildren<FormControlHTMLProps>> = ({
   className,
 
   label,

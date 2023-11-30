@@ -10,7 +10,7 @@ export type DualCalendarProps = CalendarProps & {
   containerStyle?: CSSProperties;
 };
 
-const DualCalendar: React.FC<DualCalendarProps> = ({
+const DualCalendar: React.FC<React.PropsWithChildren<DualCalendarProps>> = ({
   selectedDays = [],
   forceMonth,
   onMonthChange: _onMonthChange,

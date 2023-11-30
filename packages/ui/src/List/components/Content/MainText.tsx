@@ -9,7 +9,7 @@ import styles from './Content.module.scss';
 
 import type {TextProps} from '../../../Typography';
 
-export const MainText: React.FC<TextProps> = ({
+export const MainText: React.FC<React.PropsWithChildren<TextProps>> = ({
   className,
   children,
   bold,

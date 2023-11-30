@@ -7,7 +7,7 @@ export type NotificationProps = HTMLAttributes<HTMLDivElement> & {
   disabled?: boolean;
 };
 
-const Notification: React.FC<NotificationProps> = ({
+const Notification: React.FC<React.PropsWithChildren<NotificationProps>> = ({
   className,
   disabled,
   children,

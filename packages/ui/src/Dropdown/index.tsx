@@ -37,7 +37,7 @@ export type DropdownProps = {
   styles?: React.CSSProperties;
 };
 
-interface DropdownComponent extends React.FC<DropdownProps> {
+interface DropdownComponent extends React.FC<React.PropsWithChildren<DropdownProps>> {
   Toggler: typeof DropdownToggler;
   Portal: typeof DropdownPortal;
   Item: typeof DropdownItem;
