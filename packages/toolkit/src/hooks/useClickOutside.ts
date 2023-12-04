@@ -16,8 +16,13 @@ const useClickOutside = <E extends HTMLElement>(
   );
 
   useEffect(() => {
-    document.addEventListener('click', handleClick);
-    return () => document.removeEventListener('click', handleClick);
+    const timeoutId = setTimeout(() => {
+      document.addEventListener('click', handleClick);
+    }, 0);
+    return () => {
+      clearTimeout(timeoutId);
+      document.removeEventListener('click', handleClick);
+    };
   }, [handleClick]);
 };
 
