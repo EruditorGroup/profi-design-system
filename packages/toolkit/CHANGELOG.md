@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.0.0-alpha.38](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-toolkit@1.0.0-alpha.37...@eruditorgroup/profi-toolkit@1.0.0-alpha.38) (2023-12-04)
+
+
+### Features
+
+* **toolkit:** Added timers to useClickOutside for correct behavior in React 18 ([e48b36c](https://github.com/eruditorgroup/profi-design-system/commit/e48b36c27fc3b15d03b95f70678046792e6f274d))
+
+
+
+
+
 # [1.0.0-alpha.37](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-toolkit@1.0.0-alpha.36...@eruditorgroup/profi-toolkit@1.0.0-alpha.37) (2023-11-30)
 
 
