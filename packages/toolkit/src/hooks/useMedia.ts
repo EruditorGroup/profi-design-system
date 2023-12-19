@@ -1,12 +1,9 @@
-import {useEffect, useState} from 'react';
-import canUseDom from '../utils/canUseDom';
+import {useLayoutEffect, useState} from 'react';
 
 const useMedia = (query: string, defaultState = false): boolean => {
-  const [state, setState] = useState(
-    canUseDom() ? () => window.matchMedia(query).matches : defaultState,
-  );
+  const [state, setState] = useState(defaultState);
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     let mounted = true;
     const mql = window.matchMedia(query);
     const onChange = () => {
