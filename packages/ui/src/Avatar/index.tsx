@@ -51,9 +51,9 @@ const Avatar = forwardRef<HTMLDivElement, AvatarProps>(
         >
           {src && (
             <img
+              loading={lazy ? 'lazy' : 'eager'}
               src={src}
               alt={alt}
-              loading={lazy ? 'lazy' : 'eager'}
               className={styles['image']}
               {...props}
             />
