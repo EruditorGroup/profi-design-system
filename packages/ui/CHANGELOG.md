@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.73.2](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.73.1...@eruditorgroup/profi-ui@0.73.2) (2023-12-26)
+
+
+### Bug Fixes
+
+* **ui:** Fixed lazy images in Avatar ([2850c52](https://github.com/eruditorgroup/profi-design-system/commit/2850c528e35a3ebc50e3f7899bbcee38c606b428))
+
+
+
+
+
 ## [0.73.1](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.73.0...@eruditorgroup/profi-ui@0.73.1) (2023-12-04)
 
 **Note:** Version bump only for package @eruditorgroup/profi-ui
