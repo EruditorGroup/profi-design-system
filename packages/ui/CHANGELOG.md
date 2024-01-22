@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.74.0](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.73.2...@eruditorgroup/profi-ui@0.74.0) (2024-01-22)
+
+
+### Features
+
+* **ui:** Changed image link, preload it for storyboook ([9314721](https://github.com/eruditorgroup/profi-design-system/commit/9314721412fe06b1d7e20baa1895c51756da8a23))
+* **ui:** Moved image preload to component ([9144705](https://github.com/eruditorgroup/profi-design-system/commit/91447051239f24b5b9badb4ef63c30efaf7733af))
+* **ui:** Removed large base64 from css ([f29367a](https://github.com/eruditorgroup/profi-design-system/commit/f29367ac6ac9ac93c0f06d4747c94482f22992cc))
+
+
+
+
+
 ## [0.73.2](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.73.1...@eruditorgroup/profi-ui@0.73.2) (2023-12-26)
 
 
