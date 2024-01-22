@@ -16,6 +16,7 @@ export default {
 
 const Template: Story<PhoneInputProps> = ({...args}) => (
   <div>
+    <link rel="prefetch" href="https://cdn.profi.ru/profi-front-web/profi-design-system/bare-phone-input-flags.png" />
     <div style={containerStyles}>
       <PhoneInput {...args} style={itemStyles} />
       <PhoneInput {...args} defaultCountryCode="by" style={itemStyles} />
