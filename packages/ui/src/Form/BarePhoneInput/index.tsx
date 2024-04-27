@@ -1,4 +1,4 @@
-import React, {ForwardedRef, forwardRef} from 'react';
+import React, {ForwardedRef, forwardRef, useCallback, useRef} from 'react';
 import cx from 'classnames';
 import {Input, InputProps} from '../index';
 
@@ -15,12 +15,14 @@ import styles from './BarePhoneInput.module.scss';
 export interface PhoneInputProps
   extends Omit<
     InputProps,
-    'onChange' | 'onPaste' | 'placeholder' | 'mask' | 'withFloatLabel'
+    'onChange' | 'onPaste' | 'placeholder' | 'mask' | 'withFloatLabel' | 'value'
   > {
+  value?: string;
   defaultValue?: string;
   defaultCountryCode?: ICountryCode;
   autoFocus?: boolean;
   onChange?: (value: string) => void;
+  trailing?: React.ReactNode;
 }
 
 export const PhoneInput = forwardRef(function PhoneInput(
@@ -32,6 +34,7 @@ export const PhoneInput = forwardRef(function PhoneInput(
     defaultCountryCode = 'ru',
     autoFocus,
     inputRef,
+    trailing,
     ...props
   }: PhoneInputProps,
   outRef: ForwardedRef<HTMLInputElement>,
@@ -41,6 +44,22 @@ export const PhoneInput = forwardRef(function PhoneInput(
     defaultValue,
     onChange,
   });
+  const onInputValue = useRef(value);
+
+  const handleInput = useCallback((event) => {
+    onInputValue.current = event.target.value; // Update tempValue on every input
+  }, []);
+  const handleChange = useCallback(
+    (event) => {
+      // контроль работы onInput чтобы избежать двойного срабатывания onChange, но учесть проблему с автокомплитом
+      if (onInputValue.current.replace('_', '').length > value.length) {
+        setValue(onInputValue.current);
+      } else {
+        setValue(event.target.value);
+      }
+    },
+    [setValue, value.length],
+  );
 
   const {phoneCode, countryCode, placeholder, mask} = getCountryByPhone(
     value?.toString(),
@@ -70,11 +89,12 @@ export const PhoneInput = forwardRef(function PhoneInput(
           <div className={styles['plus']}>+</div>
         </div>
       }
+      trailing={<div className={styles['leading']}>{trailing}</div>}
       mask={mask}
       value={value}
-      onChange={(e) => setValue(e.currentTarget.value)}
+      onChange={handleChange}
       /** onInput надо оставить, потому что при autocomplete на iphone не отрабатывает ни paste, ни onChange */
-      onInput={(e) => setValue(e.currentTarget.value)}
+      onInput={handleInput}
       onPaste={handlePaste}
       onFocus={handleFocus}
       type="tel"
