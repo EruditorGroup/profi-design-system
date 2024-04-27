@@ -2,6 +2,7 @@ import React, {CSSProperties} from 'react';
 import {Story, Meta} from '@storybook/react';
 
 import {PhoneInput, PhoneInputProps} from './index';
+import {PhoneIcon} from '@eruditorgroup/profi-icons';
 
 const containerStyles: CSSProperties = {
   marginBottom: '30px',
@@ -16,9 +17,17 @@ export default {
 
 const Template: Story<PhoneInputProps> = ({...args}) => (
   <div>
-    <link rel="prefetch" href="https://cdn.profi.ru/profi-front-web/profi-design-system/bare-phone-input-flags.png" />
+    <link
+      rel="prefetch"
+      href="https://cdn.profi.ru/profi-front-web/profi-design-system/bare-phone-input-flags.png"
+    />
     <div style={containerStyles}>
-      <PhoneInput {...args} style={itemStyles} />
+      <PhoneInput
+        {...args}
+        style={itemStyles}
+        name="phoneNumber"
+        trailing={<PhoneIcon />}
+      />
       <PhoneInput {...args} defaultCountryCode="by" style={itemStyles} />
       <PhoneInput
         {...args}
