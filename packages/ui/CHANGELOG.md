@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.74.1](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.74.0...@eruditorgroup/profi-ui@0.74.1) (2024-04-27)
+
+
+### Bug Fixes
+
+* **ui:** PhoneInput double onChange call and added trailing ([ab35a28](https://github.com/eruditorgroup/profi-design-system/commit/ab35a2878818765336b8671886bbf36ab7a8b1d6))
+
+
+
+
+
 # [0.74.0](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.73.2...@eruditorgroup/profi-ui@0.74.0) (2024-01-22)
 
 
