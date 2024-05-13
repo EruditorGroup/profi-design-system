@@ -15,9 +15,8 @@ import styles from './BarePhoneInput.module.scss';
 export interface PhoneInputProps
   extends Omit<
     InputProps,
-    'onChange' | 'onPaste' | 'placeholder' | 'mask' | 'withFloatLabel' | 'value'
+    'onChange' | 'onPaste' | 'placeholder' | 'mask' | 'withFloatLabel'
   > {
-  value?: string;
   defaultValue?: string;
   defaultCountryCode?: ICountryCode;
   autoFocus?: boolean;
@@ -52,13 +51,17 @@ export const PhoneInput = forwardRef(function PhoneInput(
   const handleChange = useCallback(
     (event) => {
       // контроль работы onInput чтобы избежать двойного срабатывания onChange, но учесть проблему с автокомплитом
-      if (onInputValue.current.replace('_', '').length > value.length) {
+      if (
+        typeof onInputValue.current === 'string' &&
+        typeof value === 'string' &&
+        onInputValue.current.replace('_', '').length > value.length
+      ) {
         setValue(onInputValue.current);
       } else {
         setValue(event.target.value);
       }
     },
-    [setValue, value.length],
+    [setValue, value],
   );
 
   const {phoneCode, countryCode, placeholder, mask} = getCountryByPhone(
