@@ -57,6 +57,7 @@ const Link: ForwardRefExoticComponent<
       <a
         ref={ref}
         href={href}
+        role={href ? 'link' : 'button'}
         className={cx(
           !clear && styles['link'],
           block && styles['block'],

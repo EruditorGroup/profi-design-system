@@ -47,6 +47,7 @@ const MenuItem: ForwardRefExoticComponent<
           className,
         )}
         href={to}
+        role={to ? 'link' : 'button'}
         ref={ref}
         {...props}
       />
