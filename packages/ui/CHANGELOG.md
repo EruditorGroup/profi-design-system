@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.75.0](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.74.1...@eruditorgroup/profi-ui@0.75.0) (2024-05-14)
+
+
+### Features
+
+* **ui:** Fix link seo without href ([5e24b1e](https://github.com/eruditorgroup/profi-design-system/commit/5e24b1ee7ce0d164c87dde6d49d7dbb5cbddad50))
+
+
+
+
+
 ## [0.74.1](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.74.0...@eruditorgroup/profi-ui@0.74.1) (2024-04-27)
 
 
