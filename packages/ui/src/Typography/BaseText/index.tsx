@@ -33,6 +33,7 @@ const BaseText = forwardRef<unknown, BaseTextProps & AliasProps>(
         className={cx(
           styles['text'],
           align && styles[`align-${align}`],
+          color === 'link' && styles[`link`],
           theme.common[`color-${color}`] || styles[`color-${color}`],
           bold && theme.common[`bold`],
           !bold && theme.common[`regular`],

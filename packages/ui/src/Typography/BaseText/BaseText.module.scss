@@ -14,6 +14,14 @@
   color: var(--ui-color-text-disabled);
 }
 
+.color-link {
+  color: var(--ui-color-link);
+
+  &:hover {
+    color: var(--ui-color-primary);
+  }
+}
+
 .align-center {
   text-align: center;
 }
@@ -22,8 +30,25 @@
   text-align: center;
 }
 
+.link {
+  display: inline;
+  cursor: pointer;
+  text-decoration: none;
+  box-shadow: var(--ui-link-shadow);
+
+  &:hover {
+    box-shadow: var(--ui-link-shadowState);
+  }
+}
+
 .skeleton {
   border-radius: 4px;
   min-height: 1rem;
   color: transparent;
+
+  &.link {
+    &:hover {
+      color: transparent;
+    }
+  }
 }

@@ -64,6 +64,8 @@ const Template: Story<TextProps> = (args) => (
 export const Default = Template.bind({});
 export const Skeleton = Template.bind({});
 Skeleton.args = {skeleton: true};
+export const Link = Template.bind({});
+Link.args = {color: 'link', as: 'span'};
 
 export const TextInsideText: Story<TextProps> = (args) => (
   <Title size="xl">

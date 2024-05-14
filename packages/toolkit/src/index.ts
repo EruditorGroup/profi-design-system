@@ -33,7 +33,8 @@ export type IColor =
   | 'transparent'
   | 'danger'
   | 'success'
-  | 'warning';
+  | 'warning'
+  | 'link';
 
 export type ISocials = 'vk' | 'ya' | 'fb' | 'apple';
 
