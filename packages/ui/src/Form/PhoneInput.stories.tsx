@@ -21,7 +21,6 @@ const PhoneInputStateful: React.FC<PhoneInputProps> = (props) => {
 };
 
 const Template: Story<PhoneInputProps> = ({...args}) => {
-  const [value, setValue] = useState('');
   return (
     <div>
       <link
@@ -37,15 +36,11 @@ const Template: Story<PhoneInputProps> = ({...args}) => {
         />
         <PhoneInputStateful
           {...args}
-          value={value}
-          onChange={setValue}
           defaultCountryCode="by"
           style={itemStyles}
         />
         <PhoneInputStateful
           {...args}
-          value={value}
-          onChange={setValue}
           defaultCountryCode="ua"
           style={itemStyles}
           withFocusScroll

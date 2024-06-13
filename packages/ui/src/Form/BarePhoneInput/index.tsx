@@ -1,4 +1,4 @@
-import React, {ForwardedRef, forwardRef, useCallback} from 'react';
+import React, {ForwardedRef, forwardRef} from 'react';
 import cx from 'classnames';
 import {Input, InputProps} from '../index';
 
@@ -56,19 +56,13 @@ export const PhoneInput = forwardRef(function PhoneInput(
     if (!value) setValue(phoneCode);
   };
 
-  const onMaskedValueChange = useCallback(
-    (values: NumberFormatValues) => {
-      setValue(values.formattedValue);
-    },
-    [setValue],
-  );
+  const onMaskedValueChange = (values: NumberFormatValues) => {
+    setValue(values.formattedValue);
+  };
 
-  const customMaskFormatter = useCallback(
-    (formattedValue: string) => {
-      return correctPhone(formattedValue, phoneCode);
-    },
-    [phoneCode],
-  );
+  const customMaskFormatter = (formattedValue: string) => {
+    return correctPhone(formattedValue, phoneCode);
+  };
 
   useAutoFocus(ref, autoFocus);
   return (
