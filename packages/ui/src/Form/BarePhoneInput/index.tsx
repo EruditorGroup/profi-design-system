@@ -1,4 +1,4 @@
-import React, {ForwardedRef, forwardRef} from 'react';
+import React, {ForwardedRef, forwardRef, useCallback} from 'react';
 import cx from 'classnames';
 import {Input, InputProps} from '../index';
 
@@ -11,6 +11,8 @@ import {
 } from '@eruditorgroup/profi-toolkit';
 
 import styles from './BarePhoneInput.module.scss';
+
+import type {NumberFormatValues} from 'react-number-format';
 
 export interface PhoneInputProps
   extends Omit<
@@ -49,17 +51,24 @@ export const PhoneInput = forwardRef(function PhoneInput(
 
   const [ref, setRef] = useCombinedRef<HTMLInputElement | null>(inputRef);
 
-  function handleFocus(ev: React.FocusEvent<HTMLInputElement>) {
+  const handleFocus = (ev: React.FocusEvent<HTMLInputElement>) => {
     if (onFocus) onFocus(ev);
     if (!value) setValue(phoneCode);
-  }
+  };
 
-  function handlePaste(ev: React.ClipboardEvent<HTMLInputElement>) {
-    try {
-      setValue(correctPhone(ev.clipboardData.getData('Text'), phoneCode));
-      ev.preventDefault();
-    } catch (err) {}
-  }
+  const onMaskedValueChange = useCallback(
+    (values: NumberFormatValues) => {
+      setValue(values.formattedValue);
+    },
+    [setValue],
+  );
+
+  const customMaskFormatter = useCallback(
+    (formattedValue: string) => {
+      return correctPhone(formattedValue, phoneCode);
+    },
+    [phoneCode],
+  );
 
   useAutoFocus(ref, autoFocus);
   return (
@@ -72,14 +81,12 @@ export const PhoneInput = forwardRef(function PhoneInput(
       }
       mask={mask}
       value={value}
-      onChange={(e) => setValue(e.currentTarget.value)}
-      /** onInput надо оставить, потому что при autocomplete на iphone не отрабатывает ни paste, ни onChange */
-      onInput={(e) => setValue(e.currentTarget.value)}
-      onPaste={handlePaste}
       onFocus={handleFocus}
       type="tel"
       autoComplete="tel"
       {...props}
+      onMaskedValueChange={onMaskedValueChange}
+      customMaskFormatter={customMaskFormatter}
       ref={outRef}
       inputRef={setRef}
       placeholder={placeholder}
