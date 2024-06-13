@@ -1,25 +1,7 @@
 import React from 'react';
-import NumberFormat, {
-  NumberFormatProps,
-  NumberFormatValues,
-} from 'react-number-format';
+import NumberFormat from 'react-number-format';
 
-import type {BaseControlProps} from '../types';
-import type {FormControlSize} from '../FormControl';
-
-export interface BareInputProps
-  extends Omit<
-      NumberFormatProps,
-      'defaultValue' | 'value' | 'mask' | 'format' | 'size' | 'type'
-    >,
-    BaseControlProps<HTMLInputElement> {
-  withFocusScroll?: boolean;
-  type?: string;
-  mask?: string;
-  customMaskFormatter?: (formattedValue: string) => string;
-  onMaskedValueChange?: (values: NumberFormatValues) => void;
-  size?: FormControlSize;
-}
+import type {BareInputProps} from './types';
 
 type MaskedInputProps = {setRef: (el: HTMLInputElement) => void} & Omit<
   BareInputProps,
