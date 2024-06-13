@@ -49,4 +49,5 @@ const BareInput: React.FC<React.PropsWithChildren<BareInputProps>> = ({
   });
 };
 
+export type {BareInputProps};
 export default BareInput;
