@@ -8,7 +8,7 @@ import styles from './BareInput.module.scss';
 
 import type {BareInputProps} from './types';
 
-const BareInput: React.FC<BareInputProps> = ({
+const BareInput: React.FC<React.PropsWithChildren<BareInputProps>> = ({
   className,
   type = 'text',
   mask,

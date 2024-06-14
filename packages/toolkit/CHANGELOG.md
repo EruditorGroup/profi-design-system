@@ -3,6 +3,79 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.0.0-alpha.42](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-toolkit@1.0.0-alpha.41...@eruditorgroup/profi-toolkit@1.0.0-alpha.42) (2024-05-14)
+
+**Note:** Version bump only for package @eruditorgroup/profi-toolkit
+
+
+
+
+
+# [1.0.0-alpha.41](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-toolkit@1.0.0-alpha.40...@eruditorgroup/profi-toolkit@1.0.0-alpha.41) (2024-04-27)
+
+**Note:** Version bump only for package @eruditorgroup/profi-toolkit
+
+
+
+
+
+# [1.0.0-alpha.40](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-toolkit@1.0.0-alpha.39...@eruditorgroup/profi-toolkit@1.0.0-alpha.40) (2024-01-22)
+
+**Note:** Version bump only for package @eruditorgroup/profi-toolkit
+
+
+
+
+
+# [1.0.0-alpha.39](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-toolkit@1.0.0-alpha.38...@eruditorgroup/profi-toolkit@1.0.0-alpha.39) (2023-12-26)
+
+**Note:** Version bump only for package @eruditorgroup/profi-toolkit
+
+
+
+
+
+# [1.0.0-alpha.38](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-toolkit@1.0.0-alpha.37...@eruditorgroup/profi-toolkit@1.0.0-alpha.38) (2023-12-04)
+
+
+### Features
+
+* **toolkit:** Added timers to useClickOutside for correct behavior in React 18 ([e48b36c](https://github.com/eruditorgroup/profi-design-system/commit/e48b36c27fc3b15d03b95f70678046792e6f274d))
+
+
+
+
+
+# [1.0.0-alpha.37](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-toolkit@1.0.0-alpha.36...@eruditorgroup/profi-toolkit@1.0.0-alpha.37) (2023-11-30)
+
+
+### Features
+
+* **icons, toolkit, ui:** Added PropsWithChildren for React 18 capability ([794920a](https://github.com/eruditorgroup/profi-design-system/commit/794920a6e6a9ce40414a4619f5f2a79fbf3bccd8))
+
+
+
+
+
+# [1.0.0-alpha.36](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-toolkit@1.0.0-alpha.35...@eruditorgroup/profi-toolkit@1.0.0-alpha.36) (2023-10-26)
+
+**Note:** Version bump only for package @eruditorgroup/profi-toolkit
+
+
+
+
+
+# [1.0.0-alpha.35](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-toolkit@1.0.0-alpha.34...@eruditorgroup/profi-toolkit@1.0.0-alpha.35) (2023-06-07)
+
+
+### Bug Fixes
+
+* PRFR-2781 letterspacing for 5xl size ([3a0f211](https://github.com/eruditorgroup/profi-design-system/commit/3a0f21188f4b034983f32dbaa788378b7e6b535b))
+
+
+
+
+
 # [1.0.0-alpha.34](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-toolkit@1.0.0-alpha.33...@eruditorgroup/profi-toolkit@1.0.0-alpha.34) (2022-06-06)
 
 

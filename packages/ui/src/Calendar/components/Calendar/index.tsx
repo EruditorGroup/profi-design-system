@@ -42,7 +42,7 @@ export type CalendarProps = Omit<HTMLAttributes<HTMLDivElement>, 'onChange'> & {
   children?: never;
 };
 
-const Calendar: React.FC<CalendarProps> = ({
+const Calendar: React.FC<React.PropsWithChildren<CalendarProps>> = ({
   selectedDays = [],
   forceMonth,
   minDate,

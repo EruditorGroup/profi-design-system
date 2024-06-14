@@ -16,7 +16,7 @@ export interface AccordionProps extends Omit<TextProps, 'onChange'> {
   onChange?: (opened: boolean) => void;
 }
 
-export const Accordion: React.FC<AccordionProps> = ({
+export const Accordion: React.FC<React.PropsWithChildren<AccordionProps>> = ({
   heading,
   children,
   className,

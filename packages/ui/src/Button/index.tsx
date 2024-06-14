@@ -1,5 +1,6 @@
 import React, {forwardRef, ButtonHTMLAttributes, useMemo} from 'react';
 import cx from 'classnames';
+import {LoaderIcon} from '@eruditorgroup/profi-icons';
 
 import {theme} from '@eruditorgroup/profi-toolkit';
 
@@ -26,6 +27,7 @@ type ButtonUndesignedProps = {
   regular?: boolean;
   leading?: React.ReactNode;
   trailing?: React.ReactNode;
+  loading?: boolean;
   contentClassName?: string;
   skeleton?: boolean;
 };
@@ -52,6 +54,7 @@ const Button: ForwardingComponent<'button', ButtonProps> = forwardRef(
       contentClassName,
       leading,
       trailing,
+      loading,
       regular,
       skeleton,
       ...props
@@ -84,14 +87,16 @@ const Button: ForwardingComponent<'button', ButtonProps> = forwardRef(
           block && styles[`block`],
           rounded && styles[`rounded`],
           regular && styles[`regular`],
+          loading && styles[`loading`],
           underlined && styles['underlined'],
           skeleton && !isSkeletonInline(design) && skeletonClassnames,
           className,
         )}
         {...props}
         ref={ref}
-        onClick={props.disabled ? null : props.onClick}
+        onClick={props.disabled || loading ? null : props.onClick}
       >
+        {loading && <LoaderIcon className={styles.loadingIcon} />}
         {shouldRenderSuffix && (
           <span className={styles['leading']}>{leading}</span>
         )}

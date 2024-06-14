@@ -3,6 +3,93 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.0.0-alpha.42](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@1.0.0-alpha.41...@eruditorgroup/profi-ui@1.0.0-alpha.42) (2024-05-14)
+
+
+### Features
+
+* **ui:** Fix link seo without href ([c4f6864](https://github.com/eruditorgroup/profi-design-system/commit/c4f68647328e61bfd285b0daac4d6f0865aab9c4))
+
+
+
+
+
+# [1.0.0-alpha.41](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@1.0.0-alpha.40...@eruditorgroup/profi-ui@1.0.0-alpha.41) (2024-04-27)
+
+
+### Bug Fixes
+
+* **ui:** PhoneInput double onChange call and added trailing ([af20724](https://github.com/eruditorgroup/profi-design-system/commit/af2072461e24d39f71603bc427ad588e2c46fdda))
+
+
+
+
+
+# [1.0.0-alpha.40](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@1.0.0-alpha.39...@eruditorgroup/profi-ui@1.0.0-alpha.40) (2024-01-22)
+
+
+### Features
+
+* **ui:** Changed image link, preload it for storyboook ([82c5c01](https://github.com/eruditorgroup/profi-design-system/commit/82c5c015cb911eb5b34e0d56d4861f68dcf3370f))
+* **ui:** Moved image preload to component ([cb769fc](https://github.com/eruditorgroup/profi-design-system/commit/cb769fc06c8aadafbd29e850d2828c98701aac90))
+* **ui:** Removed large base64 from css ([7680a87](https://github.com/eruditorgroup/profi-design-system/commit/7680a87b71e6b748441a5a860b00aa6a744125a4))
+
+
+
+
+
+# [1.0.0-alpha.39](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@1.0.0-alpha.38...@eruditorgroup/profi-ui@1.0.0-alpha.39) (2023-12-26)
+
+
+### Bug Fixes
+
+* **ui:** Fixed lazy images in Avatar ([95dc387](https://github.com/eruditorgroup/profi-design-system/commit/95dc387eb97cd3e13ea5cbc47867f26df2825c60))
+
+
+
+
+
+# [1.0.0-alpha.38](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@1.0.0-alpha.37...@eruditorgroup/profi-ui@1.0.0-alpha.38) (2023-12-04)
+
+**Note:** Version bump only for package @eruditorgroup/profi-ui
+
+
+
+
+
+# [1.0.0-alpha.37](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@1.0.0-alpha.36...@eruditorgroup/profi-ui@1.0.0-alpha.37) (2023-11-30)
+
+
+### Features
+
+* **icons, toolkit, ui:** Added PropsWithChildren for React 18 capability ([794920a](https://github.com/eruditorgroup/profi-design-system/commit/794920a6e6a9ce40414a4619f5f2a79fbf3bccd8))
+
+
+
+
+
+# [1.0.0-alpha.36](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@1.0.0-alpha.35...@eruditorgroup/profi-ui@1.0.0-alpha.36) (2023-10-26)
+
+
+### Features
+
+* **ui:** Added loading state into Button ([1fd7903](https://github.com/eruditorgroup/profi-design-system/commit/1fd79031866c31ba41c06c19ae86dd437ea65502))
+
+
+
+
+
+# [1.0.0-alpha.35](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@1.0.0-alpha.34...@eruditorgroup/profi-ui@1.0.0-alpha.35) (2023-06-07)
+
+
+### Bug Fixes
+
+* PRFR-2781 letterspacing for 5xl size ([3a0f211](https://github.com/eruditorgroup/profi-design-system/commit/3a0f21188f4b034983f32dbaa788378b7e6b535b))
+
+
+
+
+
 # [1.0.0-alpha.34](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@1.0.0-alpha.33...@eruditorgroup/profi-ui@1.0.0-alpha.34) (2022-06-06)
 
 

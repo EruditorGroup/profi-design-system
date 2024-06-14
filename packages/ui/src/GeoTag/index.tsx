@@ -38,7 +38,7 @@ function getIcon(iconObj: NonNullable<GeoTagProps['icon']>): React.ReactNode {
   );
 }
 
-const GeoTag: React.FC<GeoTagProps> = function Tag({
+const GeoTag: React.FC<React.PropsWithChildren<GeoTagProps>> = function Tag({
   size = 's',
   children,
   trailing,
