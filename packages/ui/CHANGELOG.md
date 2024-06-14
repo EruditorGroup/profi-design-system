@@ -3,6 +3,21 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.0.0-alpha.44](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@1.0.0-alpha.43...@eruditorgroup/profi-ui@1.0.0-alpha.44) (2024-06-14)
+
+
+
+# 1.0.0-alpha.44 (2024-06-14)
+
+
+### Bug Fixes
+
+* Input type prop ([e7fb199](https://github.com/eruditorgroup/profi-design-system/commit/e7fb19982dc7f9f20d15fbb9e1a2312da2ed4b0f))
+
+
+
+
+
 # [1.0.0-alpha.43](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@1.0.0-alpha.42...@eruditorgroup/profi-ui@1.0.0-alpha.43) (2024-06-14)
 
 
