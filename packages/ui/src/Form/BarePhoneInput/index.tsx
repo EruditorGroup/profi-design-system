@@ -1,4 +1,4 @@
-import React, {ForwardedRef, forwardRef, useCallback, useRef} from 'react';
+import React, {ForwardedRef, forwardRef} from 'react';
 import cx from 'classnames';
 import {Input, InputProps} from '../index';
 
@@ -46,22 +46,6 @@ export const PhoneInput = forwardRef(function PhoneInput(
     defaultValue,
     onChange,
   });
-  const onInputValue = useRef(value);
-
-  const handleInput = useCallback((event) => {
-    onInputValue.current = event.target.value; // Update tempValue on every input
-  }, []);
-  const handleChange = useCallback(
-    (event) => {
-      // контроль работы onInput чтобы избежать двойного срабатывания onChange, но учесть проблему с автокомплитом
-      if (onInputValue.current.replace('_', '').length > value.length) {
-        setValue(onInputValue.current);
-      } else {
-        setValue(event.target.value);
-      }
-    },
-    [setValue, value.length],
-  );
 
   const {phoneCode, countryCode, placeholder, mask} = getCountryByPhone(
     value?.toString(),
