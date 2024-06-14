@@ -1,24 +1,12 @@
 import React, {useCallback} from 'react';
-import NumberFormat, {NumberFormatProps} from 'react-number-format';
-import {useFocusScroll, useCombinedRef} from '@eruditorgroup/profi-toolkit';
 import classnames from 'classnames';
+
+import {useFocusScroll, useCombinedRef} from '@eruditorgroup/profi-toolkit';
+import {MaskedInput} from './MaskedInput';
 
 import styles from './BareInput.module.scss';
 
-import type {BaseControlProps} from '../types';
-import type {FormControlSize} from '../FormControl';
-
-export interface BareInputProps
-  extends Omit<
-      NumberFormatProps,
-      'defaultValue' | 'value' | 'mask' | 'format' | 'size' | 'type'
-    >,
-    BaseControlProps<HTMLInputElement> {
-  withFocusScroll?: boolean;
-  type?: string;
-  mask?: string;
-  size?: FormControlSize;
-}
+import type {BareInputProps} from './types';
 
 const BareInput: React.FC<BareInputProps> = ({
   className,
@@ -33,14 +21,20 @@ const BareInput: React.FC<BareInputProps> = ({
   useFocusScroll(ref, withFocusScroll);
 
   const InputComponent = useCallback(
-    (inputProps: Omit<BareInputProps, 'size' | 'value' | 'defaultValue'>) =>
+    ({
+      customMaskFormatter,
+      onMaskedValueChange,
+      type,
+      ...inputProps
+    }: Omit<BareInputProps, 'size' | 'value' | 'defaultValue'>) =>
       mask ? (
-        <NumberFormat
+        <MaskedInput
           {...inputProps}
-          getInputRef={setRef}
-          format={mask}
-          mask="_"
-          type={inputProps.type as 'text' | 'tel' | 'password'}
+          setRef={setRef}
+          customMaskFormatter={customMaskFormatter}
+          onMaskedValueChange={onMaskedValueChange}
+          mask={mask}
+          type={type}
         />
       ) : (
         <input {...inputProps} ref={setRef} />
@@ -55,4 +49,5 @@ const BareInput: React.FC<BareInputProps> = ({
   });
 };
 
+export type {BareInputProps};
 export default BareInput;
