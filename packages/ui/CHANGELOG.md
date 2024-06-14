@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.75.1](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.75.0...@eruditorgroup/profi-ui@0.75.1) (2024-06-14)
+
+
+### Bug Fixes
+
+* PhoneInput убран onChange и onInput и переведен на maskedValue ([d79df9e](https://github.com/eruditorgroup/profi-design-system/commit/d79df9ec3357f5a3c07a30d76dd82ccc6bd02600))
+
+
+
+
+
 # [0.75.0](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.74.1...@eruditorgroup/profi-ui@0.75.0) (2024-05-14)
 
 
