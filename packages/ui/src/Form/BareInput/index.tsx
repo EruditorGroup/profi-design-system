@@ -24,7 +24,6 @@ const BareInput: React.FC<BareInputProps> = ({
     ({
       customMaskFormatter,
       onMaskedValueChange,
-      type,
       ...inputProps
     }: Omit<BareInputProps, 'size' | 'value' | 'defaultValue'>) =>
       mask ? (
@@ -34,7 +33,6 @@ const BareInput: React.FC<BareInputProps> = ({
           customMaskFormatter={customMaskFormatter}
           onMaskedValueChange={onMaskedValueChange}
           mask={mask}
-          type={type}
         />
       ) : (
         <input {...inputProps} ref={setRef} />
