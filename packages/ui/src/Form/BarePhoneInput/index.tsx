@@ -1,4 +1,4 @@
-import React, {ForwardedRef, forwardRef, useCallback, useRef} from 'react';
+import React, {ForwardedRef, forwardRef} from 'react';
 import cx from 'classnames';
 import {Input, InputProps} from '../index';
 
@@ -11,6 +11,8 @@ import {
 } from '@eruditorgroup/profi-toolkit';
 
 import styles from './BarePhoneInput.module.scss';
+
+import type {NumberFormatValues} from 'react-number-format';
 
 export interface PhoneInputProps
   extends Omit<
@@ -44,22 +46,6 @@ export const PhoneInput = forwardRef(function PhoneInput(
     defaultValue,
     onChange,
   });
-  const onInputValue = useRef(value);
-
-  const handleInput = useCallback((event) => {
-    onInputValue.current = event.target.value; // Update tempValue on every input
-  }, []);
-  const handleChange = useCallback(
-    (event) => {
-      // контроль работы onInput чтобы избежать двойного срабатывания onChange, но учесть проблему с автокомплитом
-      if (onInputValue.current.replace('_', '').length > value.length) {
-        setValue(onInputValue.current);
-      } else {
-        setValue(event.target.value);
-      }
-    },
-    [setValue, value.length],
-  );
 
   const {phoneCode, countryCode, placeholder, mask} = getCountryByPhone(
     value?.toString(),
@@ -68,17 +54,18 @@ export const PhoneInput = forwardRef(function PhoneInput(
 
   const [ref, setRef] = useCombinedRef<HTMLInputElement | null>(inputRef);
 
-  function handleFocus(ev: React.FocusEvent<HTMLInputElement>) {
+  const handleFocus = (ev: React.FocusEvent<HTMLInputElement>) => {
     if (onFocus) onFocus(ev);
     if (!value) setValue(phoneCode);
-  }
+  };
 
-  function handlePaste(ev: React.ClipboardEvent<HTMLInputElement>) {
-    try {
-      setValue(correctPhone(ev.clipboardData.getData('Text'), phoneCode));
-      ev.preventDefault();
-    } catch (err) {}
-  }
+  const onMaskedValueChange = (values: NumberFormatValues) => {
+    setValue(values.formattedValue);
+  };
+
+  const customMaskFormatter = (formattedValue: string) => {
+    return correctPhone(formattedValue, phoneCode);
+  };
 
   useAutoFocus(ref, autoFocus);
   return (
@@ -92,14 +79,12 @@ export const PhoneInput = forwardRef(function PhoneInput(
       trailing={<div className={styles['leading']}>{trailing}</div>}
       mask={mask}
       value={value}
-      onChange={handleChange}
-      /** onInput надо оставить, потому что при autocomplete на iphone не отрабатывает ни paste, ни onChange */
-      onInput={handleInput}
-      onPaste={handlePaste}
       onFocus={handleFocus}
       type="tel"
       autoComplete="tel"
       {...props}
+      onMaskedValueChange={onMaskedValueChange}
+      customMaskFormatter={customMaskFormatter}
       ref={outRef}
       inputRef={setRef}
       placeholder={placeholder}
