@@ -16,6 +16,6 @@ export interface BareInputProps
   mask?: string;
   customMaskFormatter?: (formattedValue: string) => string;
   onMaskedValueChange?: (values: NumberFormatValues) => void;
-  getMaskedCaretBoundary: NumberFormatBaseProps['getCaretBoundary'];
+  getMaskedCaretBoundary?: NumberFormatBaseProps['getCaretBoundary'];
   size?: FormControlSize;
 }
