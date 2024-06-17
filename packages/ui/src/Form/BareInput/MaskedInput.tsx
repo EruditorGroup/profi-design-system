@@ -1,5 +1,5 @@
 import React from 'react';
-import NumberFormat from 'react-number-format';
+import {NumberFormatBase, usePatternFormat} from 'react-number-format';
 
 import type {BareInputProps} from './types';
 
@@ -10,31 +10,31 @@ type MaskedInputProps = {setRef: (el: HTMLInputElement) => void} & Omit<
 
 export const MaskedInput: React.FC<MaskedInputProps> = ({
   setRef,
-  customMaskFormatter,
-  onMaskedValueChange,
   mask,
   type,
+  onMaskedValueChange,
+  customMaskFormatter,
+  getMaskedCaretBoundary,
   ...props
 }) => {
-  const onValueChange = (values) => {
-    const formattedValue = customMaskFormatter
-      ? customMaskFormatter(values.formattedValue)
-      : values.formattedValue;
+  const {format} = usePatternFormat({mask: '_', format: mask});
 
-    onMaskedValueChange?.({
-      ...values,
-      formattedValue,
-    });
+  const _format = (inputValue: string) => {
+    if (customMaskFormatter) {
+      return format(customMaskFormatter(inputValue));
+    }
+
+    return format(inputValue);
   };
 
   return (
-    <NumberFormat
+    <NumberFormatBase
       {...props}
       getInputRef={setRef}
-      onValueChange={onValueChange}
-      format={mask}
-      mask="_"
+      onValueChange={onMaskedValueChange}
+      format={_format}
       type={type as 'text' | 'tel' | 'password'}
+      getCaretBoundary={getMaskedCaretBoundary}
     />
   );
 };
