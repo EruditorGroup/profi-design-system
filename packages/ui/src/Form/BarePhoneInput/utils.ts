@@ -67,7 +67,7 @@ export function correctPhone(
       phoneCode.length,
       phoneCode.length + phoneCode.length,
     );
-    if (doublePhoneCode) return value.slice(phoneCode.length);
+    if (doublePhoneCode === phoneCode) return value.slice(phoneCode.length);
   }
 
   return value;
