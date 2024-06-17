@@ -1,3 +1,4 @@
+import {BASE_COUNTRIES} from '../constants';
 import {
   DEFAULT_COUNTRY,
   getCountryByCode,
@@ -33,19 +34,40 @@ describe('getCountryByPhone', () => {
 
 describe('correctPhone', () => {
   it('should add 7 in the start if it not preset', () => {
-    expect(correctPhone('962 933-44-71', '7')).toBe('79629334471');
+    expect(correctPhone('9629334471', '7', BASE_COUNTRIES[0].mask)).toBe(
+      '79629334471',
+    );
   });
 
   it('should replace 8 to 7 if number length is 11', () => {
-    expect(correctPhone('8 (962) 933-44-71', '7')).toBe('79629334471');
+    expect(correctPhone('89629334471', '7', BASE_COUNTRIES[0].mask)).toBe(
+      '79629334471',
+    );
   });
 
-  // TODO:
-  // it('should do nothing if number length is not 11', () => {
-  //   expect(correctPhone('8 (962) 933-4', '7')).toBe('89629334');
-  // });
-
   it('should do nothing number starts with phone code', () => {
-    expect(correctPhone('375 33 555-11-22', '375')).toBe('375335551122');
+    expect(correctPhone('375335551122', '375', BASE_COUNTRIES[2].mask)).toBe(
+      '375335551122',
+    );
+  });
+
+  describe('autocomplete with double phoneCode', () => {
+    it('ru phone number', () => {
+      expect(correctPhone('779169001122', '7', BASE_COUNTRIES[0].mask)).toBe(
+        '79169001122',
+      );
+    });
+
+    it('kz phone number', () => {
+      expect(correctPhone('777085641122', '7', BASE_COUNTRIES[1].mask)).toBe(
+        '77085641122',
+      );
+    });
+
+    it('by phone number', () => {
+      expect(
+        correctPhone('375375335551122', '375', BASE_COUNTRIES[2].mask),
+      ).toBe('375335551122');
+    });
   });
 });
