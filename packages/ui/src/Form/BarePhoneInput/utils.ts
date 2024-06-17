@@ -59,7 +59,7 @@ export function correctPhone(
   }
 
   // События вставки и autocomplete
-  const phoneLength = mask.replace(/ /g, '').replace(/-/g, '').length;
+  const phoneLength = mask.replace(/ |-/g, '').length;
   const inputValuePhoneCode = value.slice(0, phoneCode.length);
 
   if (value.length > phoneLength && inputValuePhoneCode === phoneCode) {
