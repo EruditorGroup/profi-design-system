@@ -61,8 +61,13 @@ export function correctPhone(
   // События вставки и autocomplete
   const phoneLength = mask.replace(/ /g, '').replace(/-/g, '').length;
   const inputValuePhoneCode = value.slice(0, phoneCode.length);
-  if (inputValuePhoneCode === phoneCode && value.length > phoneLength) {
-    return value.slice(phoneCode.length);
+
+  if (value.length > phoneLength && inputValuePhoneCode === phoneCode) {
+    const doublePhoneCode = value.slice(
+      phoneCode.length,
+      phoneCode.length + phoneCode.length,
+    );
+    if (doublePhoneCode) return value.slice(phoneCode.length);
   }
 
   return value;
