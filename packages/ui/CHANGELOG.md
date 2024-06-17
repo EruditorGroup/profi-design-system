@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.0.0-alpha.46](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@1.0.0-alpha.45...@eruditorgroup/profi-ui@1.0.0-alpha.46) (2024-06-17)
+
+
+### Bug Fixes
+
+* correctPhone double replace mask ([3a6b675](https://github.com/eruditorgroup/profi-design-system/commit/3a6b675bb7477f8eb8c409bbe7921bb4dadaa6bc))
+
+
+
+
+
 # [1.0.0-alpha.45](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@1.0.0-alpha.44...@eruditorgroup/profi-ui@1.0.0-alpha.45) (2024-06-17)
 
 
