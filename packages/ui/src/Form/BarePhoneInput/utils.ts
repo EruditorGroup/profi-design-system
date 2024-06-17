@@ -43,16 +43,32 @@ export function getCountryByPhone(
 }
 
 /** Returns phone with code prefix if nesessary */
-export function correctPhone(value: string, phoneCode: string): string {
-  const clearValue: string = value.replace(/[^\d]/g, '');
-  if (clearValue.startsWith(phoneCode)) {
-    return clearValue;
-  } else if (clearValue.startsWith('8') && clearValue.length === 11) {
+export function correctPhone(
+  value: string,
+  phoneCode: string,
+  mask: string,
+): string {
+  if (value.startsWith('8') && value.length === 11) {
     // paste 89031111111 -> 79031111111
-    return clearValue.replace('8', '7');
-  } else if (clearValue.startsWith('9') && clearValue.length === 10) {
-    // paste 9031111111 -> 79031111111
-    return `${phoneCode}${clearValue}`;
+    return value.replace('8', '7');
   }
-  return clearValue;
+
+  if (value.startsWith('9') && value.length === 10) {
+    // paste 9031111111 -> 79031111111
+    return `${phoneCode}${value}`;
+  }
+
+  // События вставки и autocomplete
+  const phoneLength = mask.replace(/ /g, '').replace(/-/g, '').length;
+  const inputValuePhoneCode = value.slice(0, phoneCode.length);
+
+  if (value.length > phoneLength && inputValuePhoneCode === phoneCode) {
+    const doublePhoneCode = value.slice(
+      phoneCode.length,
+      phoneCode.length + phoneCode.length,
+    );
+    if (doublePhoneCode) return value.slice(phoneCode.length);
+  }
+
+  return value;
 }
