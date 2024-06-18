@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.75.3](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.75.2...@eruditorgroup/profi-ui@0.75.3) (2024-06-18)
+
+
+### Bug Fixes
+
+* correctPhone double replace mask ([3e3adf3](https://github.com/eruditorgroup/profi-design-system/commit/3e3adf3476b589954a65424f884f07df3e833edc))
+* Обновлен react-number-format и поправлен correctPhone для PhoneInput ([f4df25f](https://github.com/eruditorgroup/profi-design-system/commit/f4df25f195b7d94421398c48e0dcdb207f6d633f))
+
+
+
+
+
 ## [0.75.2](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.75.1...@eruditorgroup/profi-ui@0.75.2) (2024-06-14)
 
 
