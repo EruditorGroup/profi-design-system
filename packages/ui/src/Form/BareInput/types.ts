@@ -1,10 +1,13 @@
 import type {BaseControlProps} from '../types';
 import type {FormControlSize} from '../FormControl';
-import type {NumberFormatProps, NumberFormatValues} from 'react-number-format';
+import type {
+  NumberFormatBaseProps,
+  NumberFormatValues,
+} from 'react-number-format';
 
 export interface BareInputProps
   extends Omit<
-      NumberFormatProps,
+      NumberFormatBaseProps,
       'defaultValue' | 'value' | 'mask' | 'format' | 'size' | 'type'
     >,
     BaseControlProps<HTMLInputElement> {
@@ -13,5 +16,6 @@ export interface BareInputProps
   mask?: string;
   customMaskFormatter?: (formattedValue: string) => string;
   onMaskedValueChange?: (values: NumberFormatValues) => void;
+  getMaskedCaretBoundary?: NumberFormatBaseProps['getCaretBoundary'];
   size?: FormControlSize;
 }

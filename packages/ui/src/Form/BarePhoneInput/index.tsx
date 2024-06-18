@@ -1,7 +1,8 @@
 import React, {ForwardedRef, forwardRef} from 'react';
 import cx from 'classnames';
-import {Input, InputProps} from '../index';
+import {getPatternCaretBoundary} from 'react-number-format';
 
+import {Input, InputProps} from '../index';
 import {correctPhone, getCountryByPhone} from './utils';
 import {ICountryCode} from './constants';
 import {
@@ -64,7 +65,25 @@ export const PhoneInput = forwardRef(function PhoneInput(
   };
 
   const customMaskFormatter = (formattedValue: string) => {
-    return correctPhone(formattedValue, phoneCode);
+    return correctPhone(formattedValue, phoneCode, mask);
+  };
+
+  const getMaskedCaretBoundary = (formattedValue: string) => {
+    const boundary = getPatternCaretBoundary(formattedValue, {
+      format: mask,
+      mask: '_',
+    });
+
+    // Ставим каретку дальше если при фокусе выставляем phoneCode
+    if (value === phoneCode) {
+      const phoneCodeSymbols = Array.from({length: phoneCode.length});
+      phoneCodeSymbols.forEach((_, index) => {
+        if (boundary[index]) {
+          boundary[index] = false;
+        }
+      });
+    }
+    return boundary;
   };
 
   useAutoFocus(ref, autoFocus);
@@ -83,6 +102,7 @@ export const PhoneInput = forwardRef(function PhoneInput(
       type="tel"
       autoComplete="tel"
       {...props}
+      getMaskedCaretBoundary={getMaskedCaretBoundary}
       onMaskedValueChange={onMaskedValueChange}
       customMaskFormatter={customMaskFormatter}
       ref={outRef}
