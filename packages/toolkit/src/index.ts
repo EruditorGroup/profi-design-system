@@ -59,7 +59,7 @@ export type ForwardingCertainComponent<
       ReplaceProps<Component, P> & AliasProps<Component>
     >,
     context?: Context,
-  ): React.ReactElement | null;
+  ): React.ReactNode | null;
   defaultProps?: Partial<P>;
   displayName?: string;
 };
