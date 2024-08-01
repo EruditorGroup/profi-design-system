@@ -25,7 +25,7 @@ const Template: Story<TextProps> = (args) => (
         </tr>
       </thead>
       <tbody>
-        {(['xs', 's', 'm', 'l', "lt"] as TextProps['size'][]).map((size) => (
+        {(['xs', 's', 'm', 'l', 'lt'] as TextProps['size'][]).map((size) => (
           <tr key={size}>
             <td style={td}>Text: {size?.toUpperCase()}</td>
             <td style={td}>

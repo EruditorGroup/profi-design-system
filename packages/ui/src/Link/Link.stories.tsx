@@ -23,7 +23,7 @@ const Template: Story<LinkProps> = (args) => (
       </tr>
     </thead>
     <tbody>
-      {(['xs', 's', 'm', 'l', "lt"] as LinkProps['size'][]).map((size) => (
+      {(['xs', 's', 'm', 'l', 'lt'] as LinkProps['size'][]).map((size) => (
         <tr>
           <td style={td} key={size}>
             Link: {size?.toUpperCase()}
