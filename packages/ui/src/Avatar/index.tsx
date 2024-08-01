@@ -39,7 +39,7 @@ const Avatar = forwardRef<HTMLDivElement, AvatarProps>(
         className={classnames(
           styles['avatar'],
           styles[`design-${design}`],
-          size && theme.common[`size-${size}`],
+          getSizeClassName(size),
           className,
         )}
       >
@@ -65,5 +65,13 @@ const Avatar = forwardRef<HTMLDivElement, AvatarProps>(
     );
   },
 );
+
+const getSizeClassName = (size: ISize) => {
+  if (!size) return null;
+
+  return size === 'xxxl'
+    ? styles[`size-${size}`]
+    : theme.common[`size-${size}`];
+};
 
 export default Avatar;

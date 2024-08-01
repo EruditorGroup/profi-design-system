@@ -23,7 +23,7 @@ export const theme = {
   },
 };
 
-export type ISize = 'xs' | 's' | 'm' | 'l' | "lt" | 'xl' | 'xxl';
+export type ISize = 'xs' | 's' | 'm' | 'l' | "lt" | 'xl' | 'xxl' | 'xxxl';
 
 export type IColor =
   | 'brand'
