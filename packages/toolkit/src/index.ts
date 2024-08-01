@@ -30,6 +30,7 @@ export type IColor =
   | 'primary'
   | 'secondary'
   | 'light'
+  | 'white'
   | 'transparent'
   | 'danger'
   | 'success'
