@@ -69,3 +69,6 @@ export {default as WarningIcon} from './Warning';
 export {default as WarrantyIcon} from './Warranty';
 export {default as YandexIcon} from './Yandex';
 export {default as YoutubeIcon} from './Youtube';
+export {default as EyeClosedIcon} from './EyeClosed';
+export {default as EyeOpenIcon} from './EyeOpen';
+export {default as ActiveDotIcon} from './ActiveDot';
