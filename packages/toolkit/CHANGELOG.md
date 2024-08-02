@@ -3,6 +3,21 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.58.0](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-toolkit@0.57.7...@eruditorgroup/profi-toolkit@0.58.0) (2024-08-02)
+
+
+
+## 0.33.21 (2024-08-02)
+
+
+### Features
+
+* [FM-4660] Add white design button, lt text size, xxxl avatar size ([#538](https://github.com/eruditorgroup/profi-design-system/issues/538)) ([e207697](https://github.com/eruditorgroup/profi-design-system/commit/e2076973b301c65a93eb39b91866f59e7e115b64))
+
+
+
+
+
 ## [0.57.7](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-toolkit@0.57.6...@eruditorgroup/profi-toolkit@0.57.7) (2024-06-18)
 
 **Note:** Version bump only for package @eruditorgroup/profi-toolkit
