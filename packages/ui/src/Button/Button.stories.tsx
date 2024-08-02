@@ -18,6 +18,7 @@ const BUTTON_DESIGNS: NonNullable<ButtonProps['design']>[] = [
   'primary',
   'secondary',
   'light',
+  'white',
   'transparent',
   'link',
 ];
