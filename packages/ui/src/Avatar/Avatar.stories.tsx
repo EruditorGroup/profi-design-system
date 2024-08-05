@@ -15,6 +15,7 @@ export default {
 
 const AVATAR_DESIGNS: NonNullable<AvatarProps['design']>[] = ['rect', 'circle'];
 const AVATAR_SIZES: NonNullable<AvatarProps['size']>[] = [
+  'xxxl',
   'xxl',
   'xl',
   'l',
