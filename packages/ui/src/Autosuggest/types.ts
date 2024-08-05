@@ -44,7 +44,10 @@ export type TSingleVariantProps = DiffAutosuggestProps<
 export type AutosuggestProps<
   T = Record<string, unknown>,
   ExtraRewrittenProps extends string = RewrittenProps
-> = Omit<AutosuggestPropsBase<ISuggestValue>, RewrittenProps | ExtraRewrittenProps> &
+> = Omit<
+  AutosuggestPropsBase<ISuggestValue>,
+  RewrittenProps | ExtraRewrittenProps
+> &
   (TMultiVariantProps | TSingleVariantProps) & {
     suggestionsSize?: ListProps['size'];
     isLoading?: boolean;
@@ -56,8 +59,7 @@ export type IAutosuggestComponent<
   ExtraRewrittenProps extends string = never
 > = React.ForwardRefExoticComponent<
   AutosuggestProps<T, ExtraRewrittenProps> &
-    // не знаем что там будет
-    // eslint-disable-next-line
+    // eslint-disable-next-line -- не знаем что там будет
     React.RefAttributes<ReactAutosuggest<ISuggestValue, any>>
 >;
 
