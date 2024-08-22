@@ -72,3 +72,4 @@ export {default as YoutubeIcon} from './Youtube';
 export {default as EyeClosedIcon} from './EyeClosed';
 export {default as EyeOpenIcon} from './EyeOpen';
 export {default as ActiveDotIcon} from './ActiveDot';
+export {default as DoubleCheckIcon} from './DoubleCheck';
