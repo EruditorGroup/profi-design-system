@@ -1,0 +1,12 @@
+.wrapper {
+  padding: 15px;
+  border-radius: 10px;
+}
+
+.danger {
+  background-color: var(--ui-color-warning);
+}
+
+.default {
+  background-color: var(--ui-color-secondary);
+}
