@@ -4,6 +4,7 @@ import {ToastType} from './types';
 import {destroyToast, hideToast} from './api';
 import cn from 'classnames';
 import {Text} from '../Typography';
+import {CloseIcon} from '@eruditorgroup/profi-icons';
 
 export type ToastProps = {
   children: ReactNode;
@@ -16,6 +17,7 @@ export const Toast = ({
   visible,
   permanent,
   children,
+  withCloseIcon = false,
   duration = 3000,
 }: ToastProps) => {
   useEffect(() => {
@@ -34,13 +36,18 @@ export const Toast = ({
     return;
   }, [visible]);
 
+  const contentColor = design === 'danger' ? 'secondary' : 'white';
+
   return (
     <div className={cn(styles['wrapper'], cn(styles[design]))}>
-      {
-        <Text size="xs" color={design === 'danger' ? 'brand' : 'light'}>
-          {children}
-        </Text>
-      }
+      <Text size="m" color={contentColor}>
+        {children}
+      </Text>
+      {withCloseIcon && (
+        <div className={styles['close-icon']} onClick={hideToast}>
+          <CloseIcon color={contentColor} style={{fontSize: '8xp'}} />
+        </div>
+      )}
     </div>
   );
 };

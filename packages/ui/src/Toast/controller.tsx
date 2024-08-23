@@ -14,7 +14,7 @@ export const ToastController: React.FC = () => {
           ...props,
           child,
           visible: true,
-          design: props.design || 'default',
+          design: props.design || 'danger',
         });
       },
 

@@ -10,7 +10,7 @@ export default {
 
 const Template: Story<ToastProps> = (args) => {
   useEffect(() => {
-    showToast('Код не подходит.', {permanent: true});
+    showToast('Код не подходит.', {permanent: true, withCloseIcon: true});
   }, []);
 
   return <ToastController />;

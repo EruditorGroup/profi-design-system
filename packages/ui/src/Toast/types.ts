@@ -7,6 +7,9 @@ export interface ToastOptions {
 
   /** Длительность показа */
   duration?: number;
+
+  /** Иконка закрытия тоста */
+  withCloseIcon?: boolean;
 }
 
 export interface ToastType extends ToastOptions {
