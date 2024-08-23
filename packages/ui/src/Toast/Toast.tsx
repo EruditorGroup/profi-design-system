@@ -39,7 +39,11 @@ export const Toast = ({
   const contentColor = design === 'danger' ? 'secondary' : 'white';
 
   return (
-    <div className={cn(styles['wrapper'], cn(styles[design]))}>
+    <div
+      className={cn(styles['wrapper'], cn(styles[design]), {
+        [styles['not-visible']]: !visible,
+      })}
+    >
       <Text size="m" color={contentColor}>
         {children}
       </Text>

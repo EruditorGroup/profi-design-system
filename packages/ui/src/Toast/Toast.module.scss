@@ -10,6 +10,10 @@
   animation: fadeIn 400ms;
 }
 
+.not-visible {
+  animation: fadeOut 400ms;
+}
+
 .danger {
   background-color: var(--ui-color-warning);
 }
@@ -36,5 +40,14 @@
   100% {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
   }
 }
