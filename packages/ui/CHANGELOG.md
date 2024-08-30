@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.77.0](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@1.0.0-alpha.49...@eruditorgroup/profi-ui@0.77.0) (2024-08-30)
+
+
+### Features
+
+* **profi-x-service:** [FM-4727] add Toast to index, add disabled color for spinner ([22ff8fc](https://github.com/eruditorgroup/profi-design-system/commit/22ff8fc4ed66aa5da4cd07dc89e2f84278ddb3af))
+
+
+
+
+
 ## [0.76.2](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.76.1...@eruditorgroup/profi-ui@0.76.2) (2024-08-22)
 
 **Note:** Version bump only for package @eruditorgroup/profi-ui

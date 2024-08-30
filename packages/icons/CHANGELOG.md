@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.46.0](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-icons@0.45.0...@eruditorgroup/profi-icons@0.46.0) (2024-08-30)
+
+
+### Features
+
+* **profi-x-service:** [FM-4727] add Toast to index, add disabled color for spinner, fix icon styles ([fba2053](https://github.com/eruditorgroup/profi-design-system/commit/fba205391d0316f4a1d6c0d30788878a5572f3aa))
+
+
+
+
+
 # [0.45.0](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-icons@0.44.1...@eruditorgroup/profi-icons@0.45.0) (2024-08-22)
 
 
