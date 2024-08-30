@@ -55,3 +55,7 @@
     transform: rotate(360deg);
   }
 }
+
+.color-disabled {
+  color: var(--ui-color-text-disabled);
+}

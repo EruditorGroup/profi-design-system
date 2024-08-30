@@ -12,7 +12,7 @@ import {IColor, ISize, theme} from '@eruditorgroup/profi-toolkit';
 export interface SpinnerProps
   extends HTMLAttributes<HTMLDivElement>,
     RefAttributes<HTMLDivElement> {
-  color?: IColor;
+  color?: IColor | 'disabled';
   delay?: number;
   speed?: number;
   size?: ISize;
@@ -45,13 +45,17 @@ const Spinner: ForwardRefExoticComponent<SpinnerProps> = forwardRef(
 
     return (
       <div
-        className={classnames(styles['inner'], showed && className, {
-          [styles['showed']]: showed,
-          [styles['withRightPadding']]: withRightPadding,
-          [styles['withLeftPadding']]: withLeftPadding,
-          [theme.common[`size-${size}`]]: size,
-          [theme.common[`color-${color}`]]: color,
-        })}
+        className={classnames(
+          styles['inner'],
+          showed && className,
+          {
+            [styles['showed']]: showed,
+            [styles['withRightPadding']]: withRightPadding,
+            [styles['withLeftPadding']]: withLeftPadding,
+            [theme.common[`size-${size}`]]: size,
+          },
+          theme.common[`color-${color}`] || styles[`color-${color}`],
+        )}
         {...props}
       >
         <span

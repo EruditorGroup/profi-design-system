@@ -113,3 +113,6 @@ export type {ProgressProps} from './Progress';
 
 export {default as ExpandableBlock} from './ExpandableBlock';
 export type {IProps as ExpandableBlockProps} from './ExpandableBlock';
+
+export {Toast, ToastController} from './Toast';
+export type {ToastProps} from './Toast';
