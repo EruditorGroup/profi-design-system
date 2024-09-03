@@ -15,8 +15,13 @@ const DoubleCheckIcon: ForwardRefExoticComponent<IconPropsType> = forwardRef(
         {...combineCommonProps(props)}
         ref={ref}
       >
-        <path d="M2 10.5L6.725 15L9.0875 12.3M7.4 10.5L12.125 15L20 6M14.6 6L11.45 9.6" stroke="currentColor"
-              stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+        <path
+          d="M2 10.5L6.725 15L9.0875 12.3M7.4 10.5L12.125 15L20 6M14.6 6L11.45 9.6"
+          stroke="currentColor"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
       </svg>
     );
   },
