@@ -116,3 +116,4 @@ export type {IProps as ExpandableBlockProps} from './ExpandableBlock';
 
 export {Toast, ToastController} from './Toast';
 export type {ToastProps} from './Toast';
+export {showToast, hideToast, destroyToast} from './Toast';
