@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react';
-import {Toast} from './Toast';
+import {Toast} from './index';
 
 import type {ToastType} from './types';
 import {setApi} from './api';
