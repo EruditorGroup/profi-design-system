@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.78.0](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@1.0.0-alpha.50...@eruditorgroup/profi-ui@0.78.0) (2024-09-03)
+
+
+### Features
+
+* **profi-x-service:** [FM-4727] add export to toast ([56188c8](https://github.com/eruditorgroup/profi-design-system/commit/56188c82f3fe42172667c4d04bd4c780994f4a03))
+
+
+
+
+
 # [0.77.0](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@1.0.0-alpha.49...@eruditorgroup/profi-ui@0.77.0) (2024-09-03)
 
 
