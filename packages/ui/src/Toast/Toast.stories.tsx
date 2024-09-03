@@ -1,7 +1,8 @@
 import React, {useEffect} from 'react';
 import {Story, Meta} from '@storybook/react';
 
-import {ToastProps, ToastController} from '.';
+import {ToastProps} from './index';
+import {ToastController} from './controller';
 import {showToast} from './api';
 
 export default {
