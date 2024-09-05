@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.78.1](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.78.0...@eruditorgroup/profi-ui@0.78.1) (2024-09-03)
+
+
+### Bug Fixes
+
+* **profi-x-service:** [FM-4727] fix Toast index ([05a8db7](https://github.com/eruditorgroup/profi-design-system/commit/05a8db77b125f80a04a228baeb2faeb03a31085a))
+* **profi-x-service:** [FM-4727] fix Toast index ([e389778](https://github.com/eruditorgroup/profi-design-system/commit/e3897781de01a84075253871ac2f1aeac0cf7b01))
+
+
+
+
+
 # [0.78.0](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@1.0.0-alpha.50...@eruditorgroup/profi-ui@0.78.0) (2024-09-03)
 
 
