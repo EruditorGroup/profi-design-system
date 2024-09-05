@@ -3,6 +3,103 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.46.2](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-icons@0.46.1...@eruditorgroup/profi-icons@0.46.2) (2024-09-03)
+
+**Note:** Version bump only for package @eruditorgroup/profi-icons
+
+
+
+
+
+## [0.46.1](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-icons@0.46.0...@eruditorgroup/profi-icons@0.46.1) (2024-09-03)
+
+**Note:** Version bump only for package @eruditorgroup/profi-icons
+
+
+
+
+
+# [0.46.0](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-icons@0.45.1...@eruditorgroup/profi-icons@0.46.0) (2024-09-03)
+
+
+### Features
+
+* **profi-x-service:** [FM-4727] add Toast to index, add disabled color for spinner, fix icon styles ([fba2053](https://github.com/eruditorgroup/profi-design-system/commit/fba205391d0316f4a1d6c0d30788878a5572f3aa))
+
+
+
+
+
+## [0.45.1](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-icons@0.45.0...@eruditorgroup/profi-icons@0.45.1) (2024-08-28)
+
+**Note:** Version bump only for package @eruditorgroup/profi-icons
+
+
+
+
+
+# [0.45.0](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-icons@0.44.1...@eruditorgroup/profi-icons@0.45.0) (2024-08-22)
+
+
+### Features
+
+* [SEMANTICS-4498] add new icon ([e97a9d0](https://github.com/eruditorgroup/profi-design-system/commit/e97a9d0454ef7c2a26b7e74f5c92810812f07888))
+
+
+
+
+
+## [0.44.1](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-icons@0.44.0...@eruditorgroup/profi-icons@0.44.1) (2024-08-05)
+
+**Note:** Version bump only for package @eruditorgroup/profi-icons
+
+
+
+
+
+# [0.44.0](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-icons@0.42.9...@eruditorgroup/profi-icons@0.44.0) (2024-08-02)
+
+
+### Features
+
+* **wizard:** [SEMANTICS-4489] add icons ([00b04ce](https://github.com/eruditorgroup/profi-design-system/commit/00b04ce4975f5acfce67a058c78a3d18ed9c9f65))
+
+
+
+
+
+## [0.42.9](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-icons@0.42.8...@eruditorgroup/profi-icons@0.42.9) (2024-06-18)
+
+**Note:** Version bump only for package @eruditorgroup/profi-icons
+
+
+
+
+
+## [0.42.8](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-icons@0.42.7...@eruditorgroup/profi-icons@0.42.8) (2024-06-14)
+
+**Note:** Version bump only for package @eruditorgroup/profi-icons
+
+
+
+
+
+## [0.42.7](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-icons@0.42.6...@eruditorgroup/profi-icons@0.42.7) (2024-06-14)
+
+**Note:** Version bump only for package @eruditorgroup/profi-icons
+
+
+
+
+
+## [0.42.6](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-icons@0.42.5...@eruditorgroup/profi-icons@0.42.6) (2024-05-14)
+
+**Note:** Version bump only for package @eruditorgroup/profi-icons
+
+
+
+
+
 ## [0.42.5](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-icons@0.42.4...@eruditorgroup/profi-icons@0.42.5) (2024-04-27)
 
 **Note:** Version bump only for package @eruditorgroup/profi-icons

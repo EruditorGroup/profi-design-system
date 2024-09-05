@@ -4,13 +4,15 @@ import classnames from 'classnames';
 import styles from './Avatar.module.scss';
 import {ISize, theme} from '@eruditorgroup/profi-toolkit';
 
+type IAvatarSize = ISize | 'xxxl';
+
 export interface AvatarProps
   extends Omit<
     React.ImgHTMLAttributes<HTMLImageElement>,
     'children' | 'loading'
   > {
   design?: 'circle' | 'rect';
-  size?: ISize;
+  size?: IAvatarSize;
   isOnline?: boolean;
   username?: string;
   lazy?: boolean;
@@ -39,7 +41,7 @@ const Avatar = forwardRef<HTMLDivElement, AvatarProps>(
         className={classnames(
           styles['avatar'],
           styles[`design-${design}`],
-          size && theme.common[`size-${size}`],
+          getSizeClassName(size),
           className,
         )}
       >
@@ -65,5 +67,13 @@ const Avatar = forwardRef<HTMLDivElement, AvatarProps>(
     );
   },
 );
+
+const getSizeClassName = (size: IAvatarSize) => {
+  if (!size) return null;
+
+  return size === 'xxxl'
+    ? `${theme.common['size-xxl']} ${styles['size-xxxl']}`
+    : theme.common[`size-${size}`];
+};
 
 export default Avatar;

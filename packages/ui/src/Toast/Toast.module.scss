@@ -1,0 +1,53 @@
+.wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  border-radius: 10px;
+  animation: fadeIn 400ms;
+}
+
+.not-visible {
+  animation: fadeOut 400ms;
+}
+
+.danger {
+  background-color: var(--ui-color-warning);
+}
+
+.default {
+  background-color: var(--ui-color-secondary);
+}
+
+.close-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  margin-left: auto;
+  cursor: pointer;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}

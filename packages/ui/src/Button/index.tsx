@@ -17,7 +17,7 @@ type ButtonSocial = Extract<ISocials, 'fb' | 'ya' | 'vk'>;
 type ButtonSize = Extract<ISize, 's' | 'm' | 'l'> | 'custom';
 type ButtonColor = Extract<
   IColor,
-  'primary' | 'secondary' | 'light' | 'transparent'
+  'primary' | 'secondary' | 'light' | 'white' | 'transparent'
 >;
 
 type ButtonUndesignedProps = {
