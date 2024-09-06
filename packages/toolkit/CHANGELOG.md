@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.59.0](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-toolkit@0.58.6...@eruditorgroup/profi-toolkit@0.59.0) (2024-09-06)
+
+
+### Features
+
+* **toolkit:** Added persist callback for useClickOutside for prevent rerenders on each callback change ([5fca249](https://github.com/eruditorgroup/profi-design-system/commit/5fca2490b0a8daa0a9b88efee8bb64ee7a8d24e3))
+
+
+
+
+
 ## [0.58.6](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-toolkit@0.58.5...@eruditorgroup/profi-toolkit@0.58.6) (2024-09-03)
 
 **Note:** Version bump only for package @eruditorgroup/profi-toolkit
