@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.0.0-alpha.48](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-icons@1.0.0-alpha.47...@eruditorgroup/profi-icons@1.0.0-alpha.48) (2024-09-09)
+
+
+### Features
+
+* [SEMANTICS-4498] add new icon ([b21d7f6](https://github.com/eruditorgroup/profi-design-system/commit/b21d7f61908a990e03442dbb97e822aee063f5ab))
+* **wizard:** [SEMANTICS-4489] add icons ([74402dd](https://github.com/eruditorgroup/profi-design-system/commit/74402ddcd34b34768c050cf5a88f07a0280ab962))
+
+
+
+
+
 # [1.0.0-alpha.47](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-icons@1.0.0-alpha.46...@eruditorgroup/profi-icons@1.0.0-alpha.47) (2024-08-05)
 
 **Note:** Version bump only for package @eruditorgroup/profi-icons
