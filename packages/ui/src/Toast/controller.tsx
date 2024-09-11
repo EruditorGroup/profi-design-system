@@ -1,10 +1,12 @@
 import React, {useState, useEffect} from 'react';
-import {Toast} from './index';
+import {Toast, ToastProps} from './index';
 
 import type {ToastType} from './types';
 import {setApi} from './api';
 
-export const ToastController: React.FC = () => {
+type Props = Pick<ToastProps, 'className'>;
+
+export const ToastController: React.FC<Props> = ({className}) => {
   const [toast, setToast] = useState<ToastType | null>(null);
 
   useEffect(() => {
@@ -28,5 +30,11 @@ export const ToastController: React.FC = () => {
     });
   }, []);
 
-  return toast && <Toast {...toast}>{toast.child}</Toast>;
+  return (
+    toast && (
+      <Toast className={className} {...toast}>
+        {toast.child}
+      </Toast>
+    )
+  );
 };

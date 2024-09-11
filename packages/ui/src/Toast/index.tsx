@@ -10,6 +10,7 @@ export {ToastController} from './controller';
 
 export type ToastProps = {
   children: ReactNode;
+  className?: string;
 } & Omit<ToastType, 'children'>;
 
 const ANIMATION_DURATION = 400;
@@ -19,6 +20,7 @@ export const Toast = ({
   visible,
   permanent,
   children,
+  className,
   withCloseIcon = false,
   duration = 3000,
 }: ToastProps) => {
@@ -42,9 +44,14 @@ export const Toast = ({
 
   return (
     <div
-      className={cn(styles['wrapper'], cn(styles[design]), {
-        [styles['not-visible']]: !visible,
-      })}
+      className={cn(
+        styles['wrapper'],
+        styles[design],
+        {
+          [styles['not-visible']]: !visible,
+        },
+        className,
+      )}
     >
       <Text size="m" color={contentColor}>
         {children}
