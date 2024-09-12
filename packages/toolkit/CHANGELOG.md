@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.0.0-alpha.49](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-toolkit@1.0.0-alpha.48...@eruditorgroup/profi-toolkit@1.0.0-alpha.49) (2024-09-12)
+
+
+### Features
+
+* **toolkit:** Fixed condition bug ([8e85eff](https://github.com/eruditorgroup/profi-design-system/commit/8e85effae923d5201501daf2d6d669756f650b88))
+
+
+
+
+
 # [1.0.0-alpha.48](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-toolkit@1.0.0-alpha.47...@eruditorgroup/profi-toolkit@1.0.0-alpha.48) (2024-09-09)
 
 
