@@ -3,6 +3,21 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.78.4](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.78.2...@eruditorgroup/profi-ui@0.78.4) (2024-09-12)
+
+
+
+## 0.33.28 (2024-09-11)
+
+
+### Bug Fixes
+
+* **profi-x-service:** [FM-4727] add className to Toast ([#560](https://github.com/eruditorgroup/profi-design-system/issues/560)) ([607bfe6](https://github.com/eruditorgroup/profi-design-system/commit/607bfe69c89da98bec39610c8b2ea55f2152c14f))
+
+
+
+
+
 ## [0.78.3](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.78.2...@eruditorgroup/profi-ui@0.78.3) (2024-09-11)
 
 
