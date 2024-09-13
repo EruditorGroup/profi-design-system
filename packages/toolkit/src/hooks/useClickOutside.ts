@@ -1,21 +1,21 @@
-import {useEffect} from 'react';
-import usePersistCallback from './usePersistCallback';
-import type {RefObject, DependencyList} from 'react';
+import {useEffect, useCallback} from 'react';
+
+import type {RefObject} from 'react';
 
 const useClickOutside = <E extends HTMLElement>(
   ref: RefObject<E | undefined>,
   callback: (e: MouseEvent) => void,
-  deps?: DependencyList,
 ): void => {
-  const persistCallback = usePersistCallback(callback, deps);
+  const handleClick = useCallback(
+    (e: MouseEvent) => {
+      if (ref.current && !ref.current?.contains(e.target as Node)) {
+        callback(e);
+      }
+    },
+    [callback, ref],
+  );
 
   useEffect(() => {
-    const handleClick = (e: MouseEvent) => {
-      if (ref.current && !ref.current.contains(e.target as Node)) {
-        persistCallback(e);
-      }
-    };
-
     const timeoutId = setTimeout(() => {
       document.addEventListener('click', handleClick);
     }, 0);
@@ -23,7 +23,7 @@ const useClickOutside = <E extends HTMLElement>(
       clearTimeout(timeoutId);
       document.removeEventListener('click', handleClick);
     };
-  }, [ref, persistCallback]);
+  }, [handleClick]);
 };
 
 export default useClickOutside;
