@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.0.0-alpha.50](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-toolkit@1.0.0-alpha.49...@eruditorgroup/profi-toolkit@1.0.0-alpha.50) (2024-09-13)
+
+
+### Features
+
+* **toolkit:** Revert useClickOutside changes ([581d1c9](https://github.com/eruditorgroup/profi-design-system/commit/581d1c9f14733661d1eac1af59e0bd04a2822d7d))
+
+
+
+
+
 # [1.0.0-alpha.49](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-toolkit@1.0.0-alpha.48...@eruditorgroup/profi-toolkit@1.0.0-alpha.49) (2024-09-12)
 
 
