@@ -16,7 +16,7 @@
   width: 48px;
   height: 28px;
   border-radius: 100px;
-  background-color: var(--ui-color-light);
+  background-color: #7e8089;
   transition: background-color 0.1s ease;
   cursor: pointer;
 
@@ -44,9 +44,6 @@
 
   .input:disabled + & {
     cursor: default;
-
-    &::after {
-      background-color: var(--ui-color-lightState);
-    }
+    opacity: 0.5;
   }
 }
