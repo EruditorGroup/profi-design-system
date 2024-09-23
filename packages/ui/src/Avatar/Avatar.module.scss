@@ -33,6 +33,7 @@
   border-radius: 50%;
   background: var(--ui-color-success);
   transform: translate(0.25em, 0.25em);
+  box-sizing: border-box;
 }
 
 .design-circle {
