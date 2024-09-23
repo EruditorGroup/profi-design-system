@@ -3,6 +3,21 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.78.6](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.78.5...@eruditorgroup/profi-ui@0.78.6) (2024-09-23)
+
+
+
+## 0.33.31 (2024-09-23)
+
+
+### Bug Fixes
+
+* **profi-x-service:** [FM-4776] fix unchecked and disabled styles for Toggle ([#570](https://github.com/eruditorgroup/profi-design-system/issues/570)) ([6c20e83](https://github.com/eruditorgroup/profi-design-system/commit/6c20e83212cd3e5f9aac35ae0fc149931dfd859e))
+
+
+
+
+
 ## [0.78.5](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.78.4...@eruditorgroup/profi-ui@0.78.5) (2024-09-13)
 
 **Note:** Version bump only for package @eruditorgroup/profi-ui
