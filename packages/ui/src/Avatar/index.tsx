@@ -16,7 +16,6 @@ export interface AvatarProps
   isOnline?: boolean;
   username?: string;
   lazy?: boolean;
-  onlineDotClassName?: string;
 }
 
 const Avatar = forwardRef<HTMLDivElement, AvatarProps>(
@@ -31,7 +30,6 @@ const Avatar = forwardRef<HTMLDivElement, AvatarProps>(
       alt = `Аватар ${username ?? 'пользователя'}`,
       lazy,
       className,
-      onlineDotClassName,
       ...props
     },
     ref,
@@ -64,9 +62,7 @@ const Avatar = forwardRef<HTMLDivElement, AvatarProps>(
           )}
           {!src && username?.slice(0, 1)}
         </div>
-        {isOnline && (
-          <i className={classnames(styles['onlineDot'], onlineDotClassName)} />
-        )}
+        {isOnline && <i className={styles['onlineDot']} />}
       </div>
     );
   },
