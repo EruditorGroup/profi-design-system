@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.46.9](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-icons@0.46.6...@eruditorgroup/profi-icons@0.46.9) (2024-10-04)
+
+
+### Bug Fixes
+
+* **autosuggest:** [SEMANTICS-4625] fix focus ([c525fd4](https://github.com/eruditorgroup/profi-design-system/commit/c525fd4ed5240fc837ef4239d64223be91df1304))
+
+
+
+
+
 ## [0.46.8](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-icons@0.46.6...@eruditorgroup/profi-icons@0.46.8) (2024-09-24)
 
 **Note:** Version bump only for package @eruditorgroup/profi-icons
