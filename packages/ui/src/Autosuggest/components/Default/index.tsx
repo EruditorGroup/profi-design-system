@@ -33,6 +33,7 @@ const Autosuggest = forwardRef(function Autosuggest(
     suggestionsContainerProps,
     inputRef,
     shouldRenderSuggestions,
+    showSuggestionsOnEmptyQuery,
 
     leading,
     trailing,
@@ -57,7 +58,7 @@ const Autosuggest = forwardRef(function Autosuggest(
         className: cx(containerProps?.className, styles['root']),
       }}
       renderSuggestionsContainer={({containerProps: _props, children, query}) =>
-        query > '' && (
+        showSuggestionsOnEmptyQuery || query > '' && (
           <Space
             withShadow
             radius={suggestionsSize}
