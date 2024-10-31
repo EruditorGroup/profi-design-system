@@ -52,6 +52,7 @@ export type AutosuggestProps<
     suggestionsSize?: ListProps['size'];
     isLoading?: boolean;
     isMultiple?: boolean;
+    showSuggestionsOnEmptyQuery?: boolean
   } & T;
 
 export type IAutosuggestComponent<

@@ -33,6 +33,7 @@ const Autosuggest = forwardRef(function Autosuggest(
     suggestionsContainerProps,
     inputRef,
     shouldRenderSuggestions,
+    showSuggestionsOnEmptyQuery,
 
     leading,
     trailing,
@@ -48,6 +49,7 @@ const Autosuggest = forwardRef(function Autosuggest(
   },
   ref,
 ) {
+  const canRenderSuggestionsContainer = (query: string) => showSuggestionsOnEmptyQuery || query.length
   return (
     <AutosuggestVariant
       ref={ref}
@@ -57,7 +59,7 @@ const Autosuggest = forwardRef(function Autosuggest(
         className: cx(containerProps?.className, styles['root']),
       }}
       renderSuggestionsContainer={({containerProps: _props, children, query}) =>
-        query > '' && (
+        canRenderSuggestionsContainer(query) && (
           <Space
             withShadow
             radius={suggestionsSize}
