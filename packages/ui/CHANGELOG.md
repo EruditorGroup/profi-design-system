@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.79.0](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.78.9...@eruditorgroup/profi-ui@0.79.0) (2024-10-31)
+
+
+### Features
+
+* [SEMANTICS-4590] add showSuggestionsOnEmptyQuery props to autosuggest ([c2b53b8](https://github.com/eruditorgroup/profi-design-system/commit/c2b53b8ed1bbe4c11aee75449af56df7381522d8))
+* [SEMANTICS-4590] add showSuggestionsOnEmptyQuery props to autosuggest ([83ce301](https://github.com/eruditorgroup/profi-design-system/commit/83ce30118a373d343ddcb19c3297c9525a1ee79f))
+
+
+
+
+
 ## [0.78.9](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.78.8...@eruditorgroup/profi-ui@0.78.9) (2024-10-18)
 
 **Note:** Version bump only for package @eruditorgroup/profi-ui
