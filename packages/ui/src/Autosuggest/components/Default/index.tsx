@@ -49,7 +49,7 @@ const Autosuggest = forwardRef(function Autosuggest(
   },
   ref,
 ) {
-  const canRenderSuggestionsContainer = (query: string) => showSuggestionsOnEmptyQuery || query.length
+  const canRenderSuggestionsContainer = (query: string) => showSuggestionsOnEmptyQuery || !!query.length
   return (
     <AutosuggestVariant
       ref={ref}
