@@ -5,7 +5,6 @@ import {combineCommonProps} from './_helpers';
 
 const GeoIcon: ForwardRefExoticComponent<IconPropsType> = forwardRef(
   (props, ref) => {
-
     return (
       <svg
         width="1em"
