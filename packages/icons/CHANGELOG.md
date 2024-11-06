@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.48.0](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-icons@0.47.2...@eruditorgroup/profi-icons@0.48.0) (2024-11-06)
+
+
+### Features
+
+* [SEMANTICS-4572] add SortingIcon and GeoIcon ([ff2ff98](https://github.com/eruditorgroup/profi-design-system/commit/ff2ff98f28271675b7b9f0bdfe9ada5d223a14bb))
+* [SEMANTICS-4572] add SortingIcon and GeoIcon ([5914209](https://github.com/eruditorgroup/profi-design-system/commit/591420985717a6564ce56dec5912b9f4b9318210))
+* [SEMANTICS-4572] add SortingIcon and GeoIcon ([53f8d95](https://github.com/eruditorgroup/profi-design-system/commit/53f8d959a0a812542a0e1a0735eaaafece9946a7))
+
+
+
+
+
 ## [0.47.2](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-icons@0.47.1...@eruditorgroup/profi-icons@0.47.2) (2024-11-05)
 
 **Note:** Version bump only for package @eruditorgroup/profi-icons
