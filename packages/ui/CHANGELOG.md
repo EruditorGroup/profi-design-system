@@ -3,6 +3,21 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.80.2](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.80.1...@eruditorgroup/profi-ui@0.80.2) (2024-11-26)
+
+
+
+## 0.33.38 (2024-11-26)
+
+
+### Bug Fixes
+
+* [SEMANTICS-4685] fix fullscreen autosuggest focus ([#584](https://github.com/eruditorgroup/profi-design-system/issues/584)) ([db7a12d](https://github.com/eruditorgroup/profi-design-system/commit/db7a12d00ca081484c6c0ab3969794b79ae7fae0))
+
+
+
+
+
 ## [0.80.1](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.80.0...@eruditorgroup/profi-ui@0.80.1) (2024-11-06)
 
 **Note:** Version bump only for package @eruditorgroup/profi-ui
