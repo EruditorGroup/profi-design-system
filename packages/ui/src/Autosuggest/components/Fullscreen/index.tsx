@@ -227,7 +227,7 @@ const Fullscreen = forwardRef(function Fullscreen(
         />
         {renderModalAvailableSpace?.()}
       </Modal>
-      {React.cloneElement(defaultInput, enhancedSharedProps)}
+      {!isFullscreenActive && React.cloneElement(defaultInput, enhancedSharedProps)}
     </FullscreenContext.Provider>
   );
 }) as IAutosuggestComponent<
