@@ -3,6 +3,26 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.80.3](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.80.1...@eruditorgroup/profi-ui@0.80.3) (2024-11-27)
+
+
+### Bug Fixes
+
+* **PhoneInput:** поправил маску финских номеров ([ab6dd93](https://github.com/eruditorgroup/profi-design-system/commit/ab6dd933e6e1aaafe6e8e8be9d077de8407229ef))
+
+
+
+## 0.33.38 (2024-11-26)
+
+
+### Bug Fixes
+
+* [SEMANTICS-4685] fix fullscreen autosuggest focus ([#584](https://github.com/eruditorgroup/profi-design-system/issues/584)) ([db7a12d](https://github.com/eruditorgroup/profi-design-system/commit/db7a12d00ca081484c6c0ab3969794b79ae7fae0))
+
+
+
+
+
 ## [0.80.2](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.80.1...@eruditorgroup/profi-ui@0.80.2) (2024-11-26)
 
 
