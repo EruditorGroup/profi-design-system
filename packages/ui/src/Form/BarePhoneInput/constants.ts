@@ -359,7 +359,7 @@ export const BASE_COUNTRIES: ICountryData[] = [
     countryCode: 'fi',
     placeholder: '358 999 999 99999',
     phoneCode: '358',
-    mask: '### ### #####',
+    mask: '### ### ######',
     subCodes: [],
   },
   {
