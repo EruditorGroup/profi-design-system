@@ -154,7 +154,7 @@ const Fullscreen = forwardRef(function Fullscreen(
       }}
     >
       {
-        isAutoFocusIOS ? (
+        !!isAutoFocusIOS ? (
           <>
             <Modal
               className={cx(styles['root'], modalClassName)}
