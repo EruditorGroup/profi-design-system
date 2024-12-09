@@ -3,7 +3,7 @@ import type {ForwardRefExoticComponent} from 'react';
 import type {IconPropsType} from './_types';
 import {combineCommonProps} from './_helpers';
 
-const PhoneCall: ForwardRefExoticComponent<IconPropsType> = forwardRef(
+const PhoneCallIcon: ForwardRefExoticComponent<IconPropsType> = forwardRef(
   (props, ref) => {
     return (
       <svg
@@ -32,6 +32,6 @@ const PhoneCall: ForwardRefExoticComponent<IconPropsType> = forwardRef(
   },
 );
 
-PhoneCall.displayName = 'PhoneCall';
+PhoneCallIcon.displayName = 'PhoneCallIcon';
 
-export default PhoneCall;
+export default PhoneCallIcon;
