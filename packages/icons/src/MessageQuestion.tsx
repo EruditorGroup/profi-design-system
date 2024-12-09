@@ -3,7 +3,7 @@ import type {ForwardRefExoticComponent} from 'react';
 import type {IconPropsType} from './_types';
 import {combineCommonProps} from './_helpers';
 
-const MessageQuestion: ForwardRefExoticComponent<IconPropsType> = forwardRef(
+const MessageQuestionIcon: ForwardRefExoticComponent<IconPropsType> = forwardRef(
   (props, ref) => {
     return (
       <svg
@@ -32,6 +32,6 @@ const MessageQuestion: ForwardRefExoticComponent<IconPropsType> = forwardRef(
   },
 );
 
-MessageQuestion.displayName = 'MessageQuestion';
+MessageQuestionIcon.displayName = 'MessageQuestionIcon';
 
-export default MessageQuestion;
+export default MessageQuestionIcon;
