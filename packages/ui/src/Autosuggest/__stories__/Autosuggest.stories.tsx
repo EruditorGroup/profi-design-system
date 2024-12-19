@@ -82,7 +82,7 @@ const Template: Story<Omit<AutosuggestProps, 'suggestions' | 'value'>> = (
 
   return (
     <>
-      <h2>Static suggestions</h2>
+      <h2 className="preview-title">Static suggestions</h2>
       <Autosuggest
         {...args}
         multiSection={false}
@@ -99,7 +99,7 @@ const Template: Story<Omit<AutosuggestProps, 'suggestions' | 'value'>> = (
         renderSuggestion={renderSuggestion}
       />
 
-      <h2>Multiple</h2>
+      <h2 className="preview-title">Multiple</h2>
       <Autosuggest
         {...args}
         multiSection={false}
@@ -133,7 +133,7 @@ const Template: Story<Omit<AutosuggestProps, 'suggestions' | 'value'>> = (
         }
         renderSuggestion={renderSuggestion}
       />
-      <h2>Async suggestions</h2>
+      <h2 className="preview-title">Async suggestions</h2>
       <Autosuggest
         {...args}
         multiSection={false}
@@ -150,10 +150,10 @@ const Template: Story<Omit<AutosuggestProps, 'suggestions' | 'value'>> = (
         onSuggestionSelected={(_, {suggestion}) => setValue(suggestion.value)}
         renderSuggestion={renderSuggestion}
       />
-      <h2>Yandex geo suggestions</h2>
+      <h2 className="preview-title">Yandex geo suggestions</h2>
       <YandexGeoSuggestion />
 
-      <h2>Fullscreen</h2>
+      <h2 className="preview-title">Fullscreen</h2>
       <Fullscreen
         {...args}
         multiSection={false}
@@ -205,7 +205,7 @@ const Template: Story<Omit<AutosuggestProps, 'suggestions' | 'value'>> = (
         focusInputOnSuggestionClick={false}
       />
 
-      <h2>Opened suggestions view without interactive</h2>
+      <h2 className="preview-title">Opened suggestions view without interactive</h2>
       <Autosuggest
         {...args}
         multiSection={false}
