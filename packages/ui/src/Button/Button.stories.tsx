@@ -18,6 +18,7 @@ const BUTTON_DESIGNS: NonNullable<ButtonProps['design']>[] = [
   'primary',
   'secondary',
   'light',
+  'white',
   'transparent',
   'link',
 ];
@@ -41,8 +42,9 @@ const fullStoryMeta: ButtonStoryMeta = {
   rows: BUTTON_DESIGNS.reduce<TableCell<ButtonProps>[]>(
     (rows, design) => [
       ...rows,
-      {key: `Normal`, span: 2, spanLabel: design, props: {design}},
+      {key: `Normal`, span: 3, spanLabel: design, props: {design}},
       {key: `Disabled`, props: {design, disabled: true}},
+      {key: `Loading`, props: {design, loading: true}},
     ],
     [],
   ),

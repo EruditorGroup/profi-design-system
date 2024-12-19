@@ -73,6 +73,7 @@ interface IFullscreenProps {
   modalBodyClassName?: string;
   sharedFieldProps: SharedFieldProps;
   blurOnTouchStart?: boolean;
+  isAutoFocusIOS?: boolean;
 }
 
 export type FullscreenAutosuggestProps = AutosuggestProps<IFullscreenProps, 'inputProps'>;
@@ -98,6 +99,7 @@ const Fullscreen = forwardRef(function Fullscreen(
     alwaysRenderSuggestions,
     isFullscreenOpen,
     blurOnTouchStart = true,
+    isAutoFocusIOS,
     // div props
     ...props
   },
@@ -151,86 +153,170 @@ const Fullscreen = forwardRef(function Fullscreen(
         handleOpenModal: handleOpen,
       }}
     >
-      {isFullscreenActive ? (
-        <Modal
-          className={cx(styles['root'], modalClassName)}
-          bodyClassName={cx(styles['modal-body'], modalBodyClassName)}
-          visible
-          fullscreen
-          onClose={noop}
-          withPadding={false}
-        >
-          <AutosuggestVariant
-            ref={ref}
-            containerProps={containerProps}
-            theme={{
-              ...styles,
-              suggestion: cx(ListItemStyles['bordered'], styles['suggestion']),
-            }}
-            shouldRenderSuggestions={
-              shouldRenderSuggestions ?? ((value) => value > '')
-            }
-            renderSuggestionsContainer={({
-              containerProps: _props,
-              children,
-            }) => (
-              <div
-                {..._props}
-                className={cx(_props.className, suggestionContainerClassName)}
-              >
-                {renderSuggestionListAddon?.()}
-                <List
-                  as="div"
-                  size={suggestionsSize}
-                  className={styles['uilist']}
-                  design="high"
-                  onTouchStart={() => blurOnTouchStart && localInputRef.current.blur()}
-                >
-                  {isLoading ? (
-                    <Spinner
+      {
+        !!isAutoFocusIOS ? (
+          <>
+            <Modal
+              className={cx(styles['root'], modalClassName)}
+              bodyClassName={cx(styles['modal-body'], modalBodyClassName)}
+              visible={isFullscreenActive}
+              fullscreen
+              onClose={noop}
+              withPadding={false}
+            >
+              <AutosuggestVariant
+                ref={ref}
+                containerProps={containerProps}
+                theme={{
+                  ...styles,
+                  suggestion: cx(ListItemStyles['bordered'], styles['suggestion']),
+                }}
+                shouldRenderSuggestions={
+                  shouldRenderSuggestions ?? ((value) => value > '')
+                }
+                renderSuggestionsContainer={({
+                                               containerProps: _props,
+                                               children,
+                                             }) => (
+                  <div
+                    {..._props}
+                    className={cx(_props.className, suggestionContainerClassName)}
+                  >
+                    {renderSuggestionListAddon?.()}
+                    <List
+                      as="div"
                       size={suggestionsSize}
-                      className={styles['spinner']}
-                      color="secondary"
-                    />
-                  ) : (
-                    children
-                  )}
-                </List>
-              </div>
-            )}
-            renderInputComponent={(props) =>
-              React.cloneElement(activeField, {
-                ...props,
-                onKeyDown: (e: React.KeyboardEvent<HTMLElement>) => {
-                  hadleInputKeyDown(e);
-                  props?.onKeyDown(e);
-                },
-              })
-            }
-            getSuggestionValue={({value}) => value}
-            renderSuggestion={
-              renderSuggestion ??
-              ((suggestion: ISuggestValue, {isHighlighted}) => {
-                return (
-                  <List.Item as="div" active={isHighlighted}>
-                    {suggestion.value}
-                  </List.Item>
-                );
-              })
-            }
-            {...props}
-            alwaysRenderSuggestions={delayedAlwaysRenderSuggestions}
-            onSuggestionSelected={(e, data) => {
-              closeOnSuggestionSelected && handleClose();
-              onSuggestionSelected(e, data);
-            }}
-            inputProps={enhancedSharedProps}
-          />
-          {renderModalAvailableSpace?.()}
-        </Modal>
-      ) : (
-        React.cloneElement(defaultInput, enhancedSharedProps)
-      )}
+                      className={styles['uilist']}
+                      design="high"
+                      onTouchStart={() => blurOnTouchStart && localInputRef.current.blur()}
+                    >
+                      {isLoading ? (
+                        <Spinner
+                          size={suggestionsSize}
+                          className={styles['spinner']}
+                          color="secondary"
+                        />
+                      ) : (
+                        children
+                      )}
+                    </List>
+                  </div>
+                )}
+                renderInputComponent={(props) =>
+                  React.cloneElement(activeField, {
+                    ...props,
+                    onKeyDown: (e: React.KeyboardEvent<HTMLElement>) => {
+                      hadleInputKeyDown(e);
+                      props?.onKeyDown(e);
+                    },
+                  })
+                }
+                getSuggestionValue={({value}) => value}
+                renderSuggestion={
+                  renderSuggestion ??
+                  ((suggestion: ISuggestValue, {isHighlighted}) => {
+                    return (
+                      <List.Item as="div" active={isHighlighted}>
+                        {suggestion.value}
+                      </List.Item>
+                    );
+                  })
+                }
+                {...props}
+                alwaysRenderSuggestions={delayedAlwaysRenderSuggestions}
+                onSuggestionSelected={(e, data) => {
+                  closeOnSuggestionSelected && handleClose();
+                  onSuggestionSelected(e, data);
+                }}
+                inputProps={enhancedSharedProps}
+              />
+              {renderModalAvailableSpace?.()}
+            </Modal>
+            {!isFullscreenActive && React.cloneElement(defaultInput, enhancedSharedProps)}
+          </>
+        ) : (
+          isFullscreenActive ? (
+            <Modal
+              className={cx(styles['root'], modalClassName)}
+              bodyClassName={cx(styles['modal-body'], modalBodyClassName)}
+              visible
+              fullscreen
+              onClose={noop}
+              withPadding={false}
+            >
+              <AutosuggestVariant
+                ref={ref}
+                containerProps={containerProps}
+                theme={{
+                  ...styles,
+                  suggestion: cx(ListItemStyles['bordered'], styles['suggestion']),
+                }}
+                shouldRenderSuggestions={
+                  shouldRenderSuggestions ?? ((value) => value > '')
+                }
+                renderSuggestionsContainer={({
+                                               containerProps: _props,
+                                               children,
+                                             }) => (
+                  <div
+                    {..._props}
+                    className={cx(_props.className, suggestionContainerClassName)}
+                  >
+                    {renderSuggestionListAddon?.()}
+                    <List
+                      as="div"
+                      size={suggestionsSize}
+                      className={styles['uilist']}
+                      design="high"
+                      onTouchStart={() => blurOnTouchStart && localInputRef.current.blur()}
+                    >
+                      {isLoading ? (
+                        <Spinner
+                          size={suggestionsSize}
+                          className={styles['spinner']}
+                          color="secondary"
+                        />
+                      ) : (
+                        children
+                      )}
+                    </List>
+                  </div>
+                )}
+                renderInputComponent={(props) =>
+                  React.cloneElement(activeField, {
+                    ...props,
+                    onKeyDown: (e: React.KeyboardEvent<HTMLElement>) => {
+                      hadleInputKeyDown(e);
+                      props?.onKeyDown(e);
+                    },
+                  })
+                }
+                getSuggestionValue={({value}) => value}
+                renderSuggestion={
+                  renderSuggestion ??
+                  ((suggestion: ISuggestValue, {isHighlighted}) => {
+                    return (
+                      <List.Item as="div" active={isHighlighted}>
+                        {suggestion.value}
+                      </List.Item>
+                    );
+                  })
+                }
+                {...props}
+                alwaysRenderSuggestions={delayedAlwaysRenderSuggestions}
+                onSuggestionSelected={(e, data) => {
+                  closeOnSuggestionSelected && handleClose();
+                  onSuggestionSelected(e, data);
+                }}
+                inputProps={enhancedSharedProps}
+              />
+              {renderModalAvailableSpace?.()}
+            </Modal>
+          ) : (
+            React.cloneElement(defaultInput, enhancedSharedProps)
+          )
+        )
+      }
     </FullscreenContext.Provider>
   );
 }) as IAutosuggestComponent<

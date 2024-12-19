@@ -1,7 +1,8 @@
 import React, {ForwardedRef, forwardRef} from 'react';
 import cx from 'classnames';
-import {Input, InputProps} from '../index';
+import {getPatternCaretBoundary} from 'react-number-format';
 
+import {Input, InputProps} from '../index';
 import {correctPhone, getCountryByPhone} from './utils';
 import {ICountryCode} from './constants';
 import {
@@ -12,15 +13,19 @@ import {
 
 import styles from './BarePhoneInput.module.scss';
 
+import type {NumberFormatValues} from 'react-number-format';
+
 export interface PhoneInputProps
   extends Omit<
     InputProps,
-    'onChange' | 'onPaste' | 'placeholder' | 'mask' | 'withFloatLabel'
+    'onChange' | 'onPaste' | 'placeholder' | 'mask' | 'withFloatLabel' | 'value'
   > {
+  value?: string;
   defaultValue?: string;
   defaultCountryCode?: ICountryCode;
   autoFocus?: boolean;
   onChange?: (value: string) => void;
+  trailing?: React.ReactNode;
 }
 
 export const PhoneInput = forwardRef(function PhoneInput(
@@ -32,6 +37,7 @@ export const PhoneInput = forwardRef(function PhoneInput(
     defaultCountryCode = 'ru',
     autoFocus,
     inputRef,
+    trailing,
     ...props
   }: PhoneInputProps,
   outRef: ForwardedRef<HTMLInputElement>,
@@ -49,17 +55,36 @@ export const PhoneInput = forwardRef(function PhoneInput(
 
   const [ref, setRef] = useCombinedRef<HTMLInputElement | null>(inputRef);
 
-  function handleFocus(ev: React.FocusEvent<HTMLInputElement>) {
+  const handleFocus = (ev: React.FocusEvent<HTMLInputElement>) => {
     if (onFocus) onFocus(ev);
     if (!value) setValue(phoneCode);
-  }
+  };
 
-  function handlePaste(ev: React.ClipboardEvent<HTMLInputElement>) {
-    try {
-      setValue(correctPhone(ev.clipboardData.getData('Text'), phoneCode));
-      ev.preventDefault();
-    } catch (err) {}
-  }
+  const onMaskedValueChange = (values: NumberFormatValues) => {
+    setValue(values.formattedValue);
+  };
+
+  const customMaskFormatter = (formattedValue: string) => {
+    return correctPhone(formattedValue, phoneCode, mask);
+  };
+
+  const getMaskedCaretBoundary = (formattedValue: string) => {
+    const boundary = getPatternCaretBoundary(formattedValue, {
+      format: mask,
+      mask: '_',
+    });
+
+    // Ставим каретку дальше если при фокусе выставляем phoneCode
+    if (value === phoneCode) {
+      const phoneCodeSymbols = Array.from({length: phoneCode.length});
+      phoneCodeSymbols.forEach((_, index) => {
+        if (boundary[index]) {
+          boundary[index] = false;
+        }
+      });
+    }
+    return boundary;
+  };
 
   useAutoFocus(ref, autoFocus);
   return (
@@ -70,16 +95,16 @@ export const PhoneInput = forwardRef(function PhoneInput(
           <div className={styles['plus']}>+</div>
         </div>
       }
+      trailing={<div className={styles['leading']}>{trailing}</div>}
       mask={mask}
       value={value}
-      onChange={(e) => setValue(e.currentTarget.value)}
-      /** onInput надо оставить, потому что при autocomplete на iphone не отрабатывает ни paste, ни onChange */
-      onInput={(e) => setValue(e.currentTarget.value)}
-      onPaste={handlePaste}
       onFocus={handleFocus}
       type="tel"
       autoComplete="tel"
       {...props}
+      getMaskedCaretBoundary={getMaskedCaretBoundary}
+      onMaskedValueChange={onMaskedValueChange}
+      customMaskFormatter={customMaskFormatter}
       ref={outRef}
       inputRef={setRef}
       placeholder={placeholder}

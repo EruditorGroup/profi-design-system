@@ -22,7 +22,7 @@ const wrapControlWithRef = /*#__PURE__*/ <
   HTMLElementType extends HTMLElementWithValue,
   PropsType extends BaseControlProps<HTMLElementType> & FormControlProps
 >(
-  Component: ComponentType<PropsType>,
+  Component: ComponentType<React.PropsWithChildren<PropsType>>,
 ) => (props: PropsType, ref: Ref<HTMLElementType>): ReactElement => {
   const {
     withFloatLabel,

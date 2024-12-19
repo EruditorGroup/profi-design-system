@@ -23,13 +23,14 @@ export const theme = {
   },
 };
 
-export type ISize = 'xs' | 's' | 'm' | 'l' | 'xl' | 'xxl';
+export type ISize = 'xs' | 's' | 'm' | 'l' | 'lt' | 'xl' | 'xxl';
 
 export type IColor =
   | 'brand'
   | 'primary'
   | 'secondary'
   | 'light'
+  | 'white'
   | 'transparent'
   | 'danger'
   | 'success'

@@ -139,5 +139,8 @@
   },
   "dependencies": {
     "@babel/runtime": "^7.15.3"
+  },
+  "resolutions": {
+    "webpack": "4.46.0"
   }
 }
