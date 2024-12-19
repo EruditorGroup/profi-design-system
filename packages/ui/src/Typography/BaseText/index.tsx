@@ -31,7 +31,6 @@ const BaseText = forwardRef<unknown, BaseTextProps & AliasProps>(
         {...props}
         ref={ref}
         className={cx(
-          styles['text'],
           align && styles[`align-${align}`],
           theme.common[`color-${color}`] || styles[`color-${color}`],
           bold && theme.common[`bold`],

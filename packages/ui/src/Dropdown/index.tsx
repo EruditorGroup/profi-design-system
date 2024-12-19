@@ -1,10 +1,8 @@
 import React, {
-  createContext,
   useMemo,
   useRef,
   useCallback,
   MutableRefObject,
-  useContext,
 } from 'react';
 import cx from 'classnames';
 
@@ -12,20 +10,11 @@ import DropdownToggler from './components/DropdownToggler';
 import DropdownPortal from './components/DropdownPortal';
 import DropdownItem from './components/DropdownItem';
 import {useControllableState} from '@eruditorgroup/profi-toolkit';
-import type {Dispatch, SetStateAction} from 'react';
+import {DropdownContext, IDropdownContext} from './context';
 
 import styles from './Dropdown.module.css';
 
-export interface IDropdownContext {
-  isOpened: boolean;
-  setOpened: Dispatch<SetStateAction<boolean>>;
-  trigger: 'click' | 'hover';
-}
-
-const Context = createContext(false);
-export const useDisabledContext = (): boolean => useContext(Context);
-
-export const DropdownContext = createContext<IDropdownContext | null>(null);
+export {DropdownContext} from './context';
 
 export type DropdownProps = {
   className?: string;

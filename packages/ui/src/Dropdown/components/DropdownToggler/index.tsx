@@ -5,7 +5,7 @@ import React, {
   HTMLAttributes,
 } from 'react';
 import classNames from 'classnames';
-import {DropdownContext} from '../..';
+import {DropdownContext} from '../../context';
 
 import styles from './DropdownToggler.module.scss';
 import {ForwardingComponent, AliasProps} from '@eruditorgroup/profi-toolkit';
