@@ -2,7 +2,7 @@ import React, {useContext, forwardRef, useRef, useCallback} from 'react';
 import classNames from 'classnames';
 
 import type {HTMLAttributes} from 'react';
-import {DropdownContext} from '../../';
+import {DropdownContext} from '../../context';
 
 import styles from './DropdownPortal.module.scss';
 import {
