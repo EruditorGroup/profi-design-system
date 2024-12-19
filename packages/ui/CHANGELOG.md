@@ -3,6 +3,38 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.80.9](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.80.3...@eruditorgroup/profi-ui@0.80.9) (2024-12-19)
+
+
+### Bug Fixes
+
+* **@profi/ui:** Убраны циклические импорты ([1c2b627](https://github.com/eruditorgroup/profi-design-system/commit/1c2b627110c281153c2f8bf454e5141ab9e85498))
+
+
+
+## 0.33.45 (2024-12-10)
+
+
+
+# 1.0.0-alpha.55 (2024-12-06)
+
+
+
+# 1.0.0-alpha.54 (2024-12-06)
+
+
+
+## 0.33.40 (2024-11-28)
+
+
+### Bug Fixes
+
+* [SEMANTICS-4685] autofocus ios ([#588](https://github.com/eruditorgroup/profi-design-system/issues/588)) ([ee6b4f6](https://github.com/eruditorgroup/profi-design-system/commit/ee6b4f6cb8ee7ccf42e05716fd25a8c20ea07ff4))
+
+
+
+
+
 ## [0.80.8](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.80.3...@eruditorgroup/profi-ui@0.80.8) (2024-12-10)
 
 
