@@ -3,6 +3,42 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.48.8](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-icons@0.48.2...@eruditorgroup/profi-icons@0.48.8) (2024-12-19)
+
+
+
+## 0.33.45 (2024-12-10)
+
+
+
+## 0.33.44 (2024-12-09)
+
+
+### Bug Fixes
+
+* [FM-4903] rename icons ([#599](https://github.com/eruditorgroup/profi-design-system/issues/599)) ([778628c](https://github.com/eruditorgroup/profi-design-system/commit/778628ced636e34c5f9873b03574794cecfc171a))
+
+
+
+# 1.0.0-alpha.55 (2024-12-06)
+
+
+
+# 1.0.0-alpha.54 (2024-12-06)
+
+
+
+# 1.0.0-alpha.53 (2024-12-06)
+
+
+### Bug Fixes
+
+* [FM-4903] add new icons ([#593](https://github.com/eruditorgroup/profi-design-system/issues/593)) ([a18b620](https://github.com/eruditorgroup/profi-design-system/commit/a18b620f244e03bf495641bcaa4c26b48809287e))
+
+
+
+
+
 ## [0.48.7](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-icons@0.48.2...@eruditorgroup/profi-icons@0.48.7) (2024-12-10)
 
 
