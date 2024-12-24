@@ -17,7 +17,7 @@ const Template: Story<GeoTagProps> = (args) => {
   return (
     <>
       <Space bg="light" px={20} py={20}>
-        <h2>Plain design</h2>
+        <h2 className="preview-title">Plain design</h2>
         <GeoTag {...args} trailing={<CloseIcon />}>
           Some tg
         </GeoTag>
@@ -36,7 +36,7 @@ const Template: Story<GeoTagProps> = (args) => {
         </GeoTag>
       </Space>
       <Space px={20} py={20}>
-        <h2>Light design</h2>
+        <h2 className="preview-title">Light design</h2>
         <GeoTag {...args} design="light" trailing={<CloseIcon />}>
           Some tg
         </GeoTag>
