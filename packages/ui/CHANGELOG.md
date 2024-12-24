@@ -3,6 +3,21 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.0.0-alpha.54](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@1.0.0-alpha.51...@eruditorgroup/profi-ui@1.0.0-alpha.54) (2024-12-24)
+
+
+### Features
+
+* **ui:** Remove margins and cyclic imports ([f2073e0](https://github.com/eruditorgroup/profi-design-system/commit/f2073e0572845e79dcb052d219ffdb6241d6f273))
+
+
+
+# 1.0.0-alpha.58 (2024-12-10)
+
+
+
+
+
 # [1.0.0-alpha.53](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@1.0.0-alpha.51...@eruditorgroup/profi-ui@1.0.0-alpha.53) (2024-12-10)
 
 
