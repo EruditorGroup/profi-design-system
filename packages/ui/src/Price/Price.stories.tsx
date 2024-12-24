@@ -1,7 +1,7 @@
 import React from 'react';
 import {Story, Meta} from '@storybook/react';
 
-import {Title, Text} from '../';
+import {Title, Text} from '../Typography';
 import Price, {PriceProps} from './';
 
 export default {

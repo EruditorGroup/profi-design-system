@@ -1,5 +1,5 @@
 import React, {useCallback, useContext, forwardRef} from 'react';
-import {DropdownContext} from '../..';
+import {DropdownContext} from '../../context';
 
 import type {
   ForwardingComponent,

@@ -7,7 +7,7 @@ import React, {
 } from 'react';
 import styles from './ListItem.module.scss';
 import cx from 'classnames';
-import {useListContext} from '../../index';
+import {useListContext} from '../../context';
 import {Caption} from '../Content/Caption';
 import {MainText} from '../Content/MainText';
 import {

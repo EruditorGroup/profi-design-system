@@ -46,45 +46,45 @@ const Template: Story<LinkProps> = (args) => (
 
 export const Default: Story<LinkProps> = (args) => (
   <>
-    <p>
+    <p className="preview-title">
       <Link {...args} to="#">
         Обычный линк
       </Link>
     </p>
-    <p>
+    <p className="preview-title">
       <Link {...args} to="#" clear>
         Ссылка без стилей (для использования в качестве `as`)
       </Link>
     </p>
-    <p>
+    <p className="preview-title">
       Lorem ipsum{' '}
       <Link {...args} to="#">
         линк в тексте
       </Link>{' '}
       lorem ipsum
     </p>
-    <p>
+    <p className="preview-title">
       Lorem ipsum{' '}
       <Link {...args} to="#" color="brand">
         с brand-цветом
       </Link>{' '}
       lorem ipsum
     </p>
-    <p>
+    <p className="preview-title">
       Lorem ipsum{' '}
       <Link {...args} to="#" disabled>
         неактивный линк
       </Link>{' '}
       lorem ipsum
     </p>
-    <p>
+    <p className="preview-title">
       Lorem ipsum{' '}
       <Link {...args} to="#" underlined>
         underlined link
       </Link>{' '}
       lorem ipsum
     </p>
-    <p>
+    <p className="preview-title">
       Lorem ipsum{' '}
       <Link {...args} to="#" bold>
         bold link
