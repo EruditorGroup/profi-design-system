@@ -1,11 +1,11 @@
 import React, {forwardRef} from 'react';
 
-import {Text} from '../';
+import Text from '../Typography/Text';
 import CurrencySymbol from '../CurrencySymbol';
 
 import {prettyNumber} from '@eruditorgroup/profi-toolkit';
 
-import type {TextProps} from '../';
+import type {TextProps} from '../Typography/Text';
 
 type RangeSignature = (
   from: number | null,

@@ -1,7 +1,7 @@
 import React, {forwardRef} from 'react';
 import cx from 'classnames';
 import {DotIcon, CheckIcon} from '@eruditorgroup/profi-icons';
-import {Text} from '../..';
+import Text from '../../Typography/Text';
 
 import type {InputHTMLAttributes} from 'react';
 

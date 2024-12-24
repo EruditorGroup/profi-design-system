@@ -2,7 +2,7 @@ import cx from 'classnames';
 import React from 'react';
 
 import {Text} from '../../../Typography';
-import {useListContext} from '../..';
+import {useListContext} from '../../context';
 import {useListItemContext} from '../ListItem';
 
 import styles from './Content.module.scss';
