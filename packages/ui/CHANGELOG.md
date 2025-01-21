@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.80.10](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.80.9...@eruditorgroup/profi-ui@0.80.10) (2024-12-26)
+
+
+### Bug Fixes
+
+* [SEMANTICS-4816] fix ios autofocus autosuggest ([3d359f3](https://github.com/eruditorgroup/profi-design-system/commit/3d359f359a66048cd5ffd75d74bb3e05cb368b49))
+
+
+
+
+
 ## [0.80.9](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.80.3...@eruditorgroup/profi-ui@0.80.9) (2024-12-19)
 
 
