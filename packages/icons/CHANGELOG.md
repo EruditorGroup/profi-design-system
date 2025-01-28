@@ -3,6 +3,21 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.50.0](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-icons@0.48.8...@eruditorgroup/profi-icons@0.50.0) (2025-01-28)
+
+
+
+## 0.33.48 (2025-01-21)
+
+
+### Features
+
+* [FM-5094] add new icons, change active menu item, add small toggle ([#610](https://github.com/eruditorgroup/profi-design-system/issues/610)) ([11fb23d](https://github.com/eruditorgroup/profi-design-system/commit/11fb23dd9b9fd95276724e28e68b09dc6801c23f))
+
+
+
+
+
 # [0.49.0](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-icons@0.48.8...@eruditorgroup/profi-icons@0.49.0) (2025-01-21)
 
 
