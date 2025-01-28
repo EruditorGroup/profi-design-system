@@ -59,7 +59,7 @@
 .dropdown-area {
   box-shadow: var(--ui-box-shadow);
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   flex-direction: column;
   background: #fff;
   border-radius: var(--ui-border-radius-l);
