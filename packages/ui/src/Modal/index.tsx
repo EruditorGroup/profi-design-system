@@ -1,4 +1,4 @@
-import React, {useCallback, useEffect, useRef} from 'react';
+import React, {useCallback, useRef} from 'react';
 import {CSSTransition} from 'react-transition-group';
 import {gestures, useDisableBodyScroll} from '@eruditorgroup/profi-toolkit';
 
