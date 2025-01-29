@@ -26,6 +26,8 @@ const Template: Story = ({placeholder = 'Label', ...args}) => {
         visible={opened}
         width={500}
         onClose={() => setOpened(false)}
+        swipeDownToClose
+        closeOnOverlayClick
         {...args}
       >
         <Button onClick={() => setOpened(false)}>Close</Button>
