@@ -5,10 +5,15 @@ import type {InputHTMLAttributes} from 'react';
 
 import styles from './Toggle.module.scss';
 
-export type ToggleProps = Omit<InputHTMLAttributes<HTMLInputElement>, 'type'>;
+export type ToggleProps = Omit<
+  InputHTMLAttributes<HTMLInputElement>,
+  'type'
+> & {
+  small?: boolean;
+};
 
 const Toggle = forwardRef<HTMLInputElement, ToggleProps>(function Toggle(
-  {className, ...inputAttrs},
+  {className, small, ...inputAttrs},
   ref,
 ) {
   return (
@@ -19,7 +24,9 @@ const Toggle = forwardRef<HTMLInputElement, ToggleProps>(function Toggle(
         type="checkbox"
         ref={ref}
       />
-      <span className={styles['toggle']} />
+      <span
+        className={cx(styles['toggle'], {[styles['toggle-small']]: small})}
+      />
     </label>
   );
 });

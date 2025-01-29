@@ -15,4 +15,5 @@ export const ToggleStory = Template.bind({});
 ToggleStory.storyName = 'Toggle';
 ToggleStory.args = {
   disabled: false,
+  small: false,
 };

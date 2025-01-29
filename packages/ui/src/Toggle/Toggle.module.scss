@@ -47,3 +47,18 @@
     opacity: 0.5;
   }
 }
+
+.toggle-small {
+  height: 24px;
+
+  &::after {
+    height: 20px;
+    width: 20px;
+  }
+
+  .input:checked + & {
+    &::after {
+      left: 26px;
+    }
+  }
+}
