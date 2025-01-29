@@ -1,4 +1,4 @@
-import React, {useCallback} from 'react';
+import React, {useCallback, useEffect, useRef} from 'react';
 import {CSSTransition} from 'react-transition-group';
 import {gestures, useDisableBodyScroll} from '@eruditorgroup/profi-toolkit';
 
@@ -76,9 +76,10 @@ const Modal = React.forwardRef(
   ) => {
     const bodyRef = React.useRef(null);
     const [modalRef, setModalRef] = useCombinedRef(ref);
+    const modalContentRef = useRef<HTMLDivElement>(null);
 
     const [pc, setPc] = React.useState(0);
-    const modalOpacity = 1 - pc / 100;
+    const modalOpacity = visible ? 1 - pc / 100 : 0;
     const showOverlay = !!pc || !withOverlay;
 
     useDisableBodyScroll(bodyRef, visible);
@@ -112,7 +113,7 @@ const Modal = React.forwardRef(
       }
     }, [visible, closeOnOverlayClick, onClose]);
 
-    useClickOutside(modalRef, handleClickOutside);
+    useClickOutside(modalContentRef, handleClickOutside);
 
     if (!canUseDom()) return null;
 
@@ -169,6 +170,7 @@ const Modal = React.forwardRef(
               )})`,
               opacity: `${modalOpacity}`,
             }}
+            ref={setModalRef}
           >
             <div
               className={classNames(
@@ -177,7 +179,7 @@ const Modal = React.forwardRef(
                 className,
               )}
               style={{width: !fullscreen && width}}
-              ref={setModalRef}
+              ref={modalContentRef}
               {...props}
             >
               {title && (
