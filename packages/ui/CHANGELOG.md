@@ -3,6 +3,30 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.0.0-alpha.60](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@1.0.0-alpha.51...@eruditorgroup/profi-ui@1.0.0-alpha.60) (2025-01-29)
+
+
+
+# 1.0.0-alpha.60 (2025-01-29)
+
+
+### Bug Fixes
+
+* [FM-5013] fix modal closing when swipeDownToClose is enabled ([#614](https://github.com/eruditorgroup/profi-design-system/issues/614)) ([#616](https://github.com/eruditorgroup/profi-design-system/issues/616)) ([e62ffb5](https://github.com/eruditorgroup/profi-design-system/commit/e62ffb5d0bff345ed2173b9146511751bf97b19f))
+
+
+### Features
+
+* **ui:** Remove margins and cyclic imports ([f2073e0](https://github.com/eruditorgroup/profi-design-system/commit/f2073e0572845e79dcb052d219ffdb6241d6f273))
+
+
+
+# 1.0.0-alpha.58 (2024-12-10)
+
+
+
+
+
 # [1.0.0-alpha.59](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@1.0.0-alpha.51...@eruditorgroup/profi-ui@1.0.0-alpha.54) (2024-12-24)
 
 
