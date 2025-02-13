@@ -64,6 +64,7 @@ export {default as ProfileIcon} from './Profile';
 export {default as ProfileStrokeIcon} from './ProfileStroke';
 export {default as RubleSignIcon} from './RubleSign';
 export {default as RepeatIcon} from './Repeat';
+export {default as ResizeIcon} from './Resize';
 export {default as ReviewIcon} from './Review';
 export {default as SandClockIcon} from './SandClock';
 export {default as SearchIcon} from './Search';
