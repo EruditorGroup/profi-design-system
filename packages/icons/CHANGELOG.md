@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.51.0](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-icons@0.50.0...@eruditorgroup/profi-icons@0.51.0) (2025-02-14)
+
+
+### Features
+
+* [FM-5106] Add resize icon ([77f374d](https://github.com/eruditorgroup/profi-design-system/commit/77f374dc780f4f3e57881dc7d0eaf9d6d7e5a2ea))
+
+
+
+
+
 ## [0.50.1](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-icons@0.50.0...@eruditorgroup/profi-icons@0.50.1) (2025-01-29)
 
 **Note:** Version bump only for package @eruditorgroup/profi-icons
