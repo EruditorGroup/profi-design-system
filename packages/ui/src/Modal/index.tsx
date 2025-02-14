@@ -29,6 +29,18 @@ import {ModalContext} from './context';
 // import slideUpTransition from '../styles/transitions/SlideUp.module.scss';
 // import fadeInTransition from '../styles/transitions/FadeIn.module.scss';
 
+interface CSSTransitionClassNames {
+  appear?: string;
+  appearActive?: string;
+  appearDone?: string;
+  enter?: string;
+  enterActive?: string;
+  enterDone?: string;
+  exit?: string;
+  exitActive?: string;
+  exitDone?: string;
+}
+
 export interface ModalProps
   extends Omit<HTMLAttributes<HTMLDivElement>, 'width'> {
   fullscreen?: boolean;
@@ -39,6 +51,7 @@ export interface ModalProps
   closeOnOverlayClick?: boolean;
   swipeDownToClose?: boolean;
   bodyClassName?: string;
+  animationClassName?: string | CSSTransitionClassNames;
   withOverlay?: boolean;
   onClickBack?: MouseEventHandler<HTMLElement>;
   onClose: MouseEventHandler<HTMLElement>;
@@ -61,6 +74,7 @@ const Modal = React.forwardRef(
       title,
       className,
       bodyClassName,
+      animationClassName,
       width,
       children,
       fullscreen,
@@ -156,7 +170,7 @@ const Modal = React.forwardRef(
           unmountOnExit
           in={visible}
           timeout={!fullscreen ? DEFAULT_ANIMATION_DURATION : 0}
-          classNames={theme.transitions.slide}
+          classNames={classNames(theme.transitions.slide, animationClassName)}
         >
           <BodyPortal
             className={classNames(
