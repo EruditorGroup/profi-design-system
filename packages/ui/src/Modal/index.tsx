@@ -170,7 +170,7 @@ const Modal = React.forwardRef(
           unmountOnExit
           in={visible}
           timeout={!fullscreen ? DEFAULT_ANIMATION_DURATION : 0}
-          classNames={classNames(theme.transitions.slide, animationClassName)}
+          classNames={animationClassName || theme.transitions.slide}
         >
           <BodyPortal
             className={classNames(
