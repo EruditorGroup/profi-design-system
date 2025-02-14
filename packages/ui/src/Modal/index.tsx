@@ -51,7 +51,7 @@ export interface ModalProps
   closeOnOverlayClick?: boolean;
   swipeDownToClose?: boolean;
   bodyClassName?: string;
-  animationClassName?: string | CSSTransitionClassNames;
+  animationClassNames?: string | CSSTransitionClassNames;
   withOverlay?: boolean;
   onClickBack?: MouseEventHandler<HTMLElement>;
   onClose: MouseEventHandler<HTMLElement>;
@@ -74,7 +74,7 @@ const Modal = React.forwardRef(
       title,
       className,
       bodyClassName,
-      animationClassName,
+      animationClassNames,
       width,
       children,
       fullscreen,
@@ -170,7 +170,7 @@ const Modal = React.forwardRef(
           unmountOnExit
           in={visible}
           timeout={!fullscreen ? DEFAULT_ANIMATION_DURATION : 0}
-          classNames={animationClassName || theme.transitions.slide}
+          classNames={animationClassNames || theme.transitions.slide}
         >
           <BodyPortal
             className={classNames(
