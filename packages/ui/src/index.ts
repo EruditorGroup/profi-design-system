@@ -80,6 +80,9 @@ export type {RateStarsProps} from './Rate';
 export {Accordion} from './Accordion';
 export type {AccordionProps} from './Accordion';
 
+export {Badge} from './Badge';
+export type {BadgeProps} from './Badge';
+
 export {default as Space} from './Space';
 export type {SpaceProps} from './Space';
 
