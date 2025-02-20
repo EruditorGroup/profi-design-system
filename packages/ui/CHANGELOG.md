@@ -3,6 +3,39 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.85.0](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.82.2...@eruditorgroup/profi-ui@0.85.0) (2025-02-20)
+
+
+
+## 0.33.54 (2025-02-20)
+
+
+### Bug Fixes
+
+* [FM-5098] fix types for Badge component and invalid props in icons ([#624](https://github.com/eruditorgroup/profi-design-system/issues/624)) ([7d4683f](https://github.com/eruditorgroup/profi-design-system/commit/7d4683f10b4c33b3d3281a96b8c5717ddb77dcb2))
+
+
+
+## 0.33.53 (2025-02-18)
+
+
+### Features
+
+* [FM-5098] add Badge component and new icons ([#622](https://github.com/eruditorgroup/profi-design-system/issues/622)) ([85b944b](https://github.com/eruditorgroup/profi-design-system/commit/85b944b4a03394ae4627d39bd641df492f72797e))
+
+
+
+## 0.33.52 (2025-02-14)
+
+
+### Features
+
+* [FM-5099] add animationClassNames to Modal ([#620](https://github.com/eruditorgroup/profi-design-system/issues/620)) ([8354fbc](https://github.com/eruditorgroup/profi-design-system/commit/8354fbc393ed6ae5cfb4901d0339d0391fd6de05))
+
+
+
+
+
 # [0.84.0](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.82.2...@eruditorgroup/profi-ui@0.84.0) (2025-02-18)
 
 
