@@ -7,6 +7,7 @@ import {Text} from '../Typography';
 export interface BadgeProps {
   iconLeft?: ReactNode;
   className?: string;
+  children?: ReactNode;
 }
 
 export const Badge = forwardRef<HTMLDivElement, BadgeProps>(
