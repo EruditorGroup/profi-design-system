@@ -1,7 +1,9 @@
 import React, {forwardRef} from 'react';
 import cx from 'classnames';
 import styles from './Col.module.scss';
+import {useRowGutter} from '../Row';
 
+import type {GutterSettings} from '../Row';
 import type {HTMLAttributes} from 'react';
 
 //prettier-ignore
@@ -39,10 +41,23 @@ const getColBreakpointClassNames = (
         : styles[`col_${breakpoint}-span-${settings}`]),
   );
 
+const getColGutterClassNames = (gutterSettings: GutterSettings | void) => {
+  if (!gutterSettings) return styles['col_gutter-default'];
+
+  if (typeof gutterSettings === 'object') {
+    return Object.entries(gutterSettings).map(
+      (breakpoint, gutter) => styles[`col_${breakpoint}-gutter-${gutter}`],
+    );
+  } else {
+    return styles[`col_gutter-${gutterSettings}`];
+  }
+};
+
 const Col = forwardRef<HTMLDivElement, ColProps>(function Col(
   {children, className, span, offset, s, m, l, ...props},
   ref,
 ) {
+  const gutter = useRowGutter();
   return (
     <div
       {...props}
@@ -55,6 +70,7 @@ const Col = forwardRef<HTMLDivElement, ColProps>(function Col(
         getColBreakpointClassNames('s', s),
         getColBreakpointClassNames('m', m),
         getColBreakpointClassNames('l', l),
+        getColGutterClassNames(gutter),
       )}
     >
       {children}
