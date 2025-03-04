@@ -26,6 +26,7 @@ export type DatepickerProps = Omit<
    * Применяется справо налево и применяется первый, который подходит.
    */
   inputLabelTransformerList?: ((date: Date) => string)[];
+  invalid?: boolean;
 };
 
 const Datepicker: React.FC<React.PropsWithChildren<DatepickerProps>> = ({
@@ -37,6 +38,7 @@ const Datepicker: React.FC<React.PropsWithChildren<DatepickerProps>> = ({
   calendarClassName,
   onChange: _onChange,
   inputLabelTransformerList = [],
+  invalid = false,
   ...calendarProps
 }) => {
   const isMobile = useCurrentScreen('mobile', false);
@@ -73,7 +75,7 @@ const Datepicker: React.FC<React.PropsWithChildren<DatepickerProps>> = ({
   return (
     <Dropdown
       data-shmid={shmid}
-      className={className}
+      className={classnames(className, invalid && styles['invalid'])}
       closeRefHandler={closeDropdownRef}
       onChange={setDatepickerOpen}
     >
