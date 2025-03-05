@@ -1,9 +1,4 @@
-import React, {
-  useMemo,
-  useRef,
-  useCallback,
-  MutableRefObject,
-} from 'react';
+import React, {useMemo, useRef, useCallback, MutableRefObject} from 'react';
 import cx from 'classnames';
 
 import DropdownToggler from './components/DropdownToggler';
@@ -24,9 +19,11 @@ export type DropdownProps = {
   trigger?: 'click' | 'hover';
   defaultOpened?: boolean;
   styles?: React.CSSProperties;
+  invalid?: boolean;
 };
 
-interface DropdownComponent extends React.FC<React.PropsWithChildren<DropdownProps>> {
+interface DropdownComponent
+  extends React.FC<React.PropsWithChildren<DropdownProps>> {
   Toggler: typeof DropdownToggler;
   Portal: typeof DropdownPortal;
   Item: typeof DropdownItem;
@@ -40,6 +37,7 @@ const Dropdown: DropdownComponent = ({
   closeRefHandler,
   defaultOpened,
   trigger = 'click',
+  invalid = false,
   ...props
 }) => {
   const dropdownRef = useRef<HTMLDivElement | null>(null);
@@ -72,7 +70,11 @@ const Dropdown: DropdownComponent = ({
   return (
     <DropdownContext.Provider value={context}>
       <div
-        className={cx(className, styles['relative'])}
+        className={cx(
+          className,
+          styles['relative'],
+          invalid && styles['invalid'],
+        )}
         onMouseEnter={onMouseEnter}
         onMouseLeave={onMouseLeave}
         ref={dropdownRef}

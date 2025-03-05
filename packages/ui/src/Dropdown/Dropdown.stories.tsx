@@ -237,6 +237,9 @@ const Template: Story = (args) => {
 };
 
 export const Default = Template.bind({});
+Default.args = {
+  invalid: false,
+};
 
 export const Without_animation = Template.bind({});
 Without_animation.args = {

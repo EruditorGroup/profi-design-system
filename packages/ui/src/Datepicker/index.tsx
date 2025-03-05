@@ -38,7 +38,7 @@ const Datepicker: React.FC<React.PropsWithChildren<DatepickerProps>> = ({
   calendarClassName,
   onChange: _onChange,
   inputLabelTransformerList = [],
-  invalid = false,
+  invalid,
   ...calendarProps
 }) => {
   const isMobile = useCurrentScreen('mobile', false);
@@ -75,9 +75,10 @@ const Datepicker: React.FC<React.PropsWithChildren<DatepickerProps>> = ({
   return (
     <Dropdown
       data-shmid={shmid}
-      className={classnames(className, invalid && styles['invalid'])}
+      className={className}
       closeRefHandler={closeDropdownRef}
       onChange={setDatepickerOpen}
+      invalid={invalid}
     >
       <Dropdown.Toggler
         as={Input}
