@@ -19,7 +19,6 @@ BaseStory.storyName = 'Datepicker';
 BaseStory.args = {
   value: shiftDate(new Date('Tue Jul 06 2021 01:01:01 GMT+0300'), 1),
   minDate: new Date('Tue Jul 04 2021 01:01:01 GMT+0300'),
-  invalid: false,
 };
 
 export const WithCustomLabelStory = Template.bind({});

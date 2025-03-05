@@ -27,11 +27,6 @@
   padding-bottom: 30px;
 }
 
-.invalid {
-  box-shadow: 0 0 0 1px var(--ui-color-warning);
-  border-radius: 10px;
-}
-
 @keyframes slide-up {
   0% {
     transform: translate3d(0, 10px, 0);
