@@ -14,6 +14,7 @@ export {default as ChevronDownIcon} from './ChevronDown';
 export {default as ChevronLeftIcon} from './ChevronLeft';
 export {default as ChevronRightIcon} from './ChevronRight';
 export {default as ChevronUpIcon} from './ChevronUp';
+export {default as CircleCheckIcon} from './CircleCheck';
 export {default as ClearIcon} from './Clear';
 export {default as ClockIcon} from './Clock';
 export {default as CloseIcon} from './Close';
