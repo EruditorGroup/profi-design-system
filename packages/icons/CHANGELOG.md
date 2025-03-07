@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.55.0](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-icons@0.54.1...@eruditorgroup/profi-icons@0.55.0) (2025-03-07)
+
+
+### Features
+
+* [FM-5254] CircleCheckIcon ([a517bfe](https://github.com/eruditorgroup/profi-design-system/commit/a517bfe10f82a36ed8b7925e4f9df0bd9f1b11c4))
+
+
+
+
+
 ## [0.54.1](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-icons@0.54.0...@eruditorgroup/profi-icons@0.54.1) (2025-03-05)
 
 **Note:** Version bump only for package @eruditorgroup/profi-icons
