@@ -19,7 +19,6 @@ export type DropdownProps = {
   trigger?: 'click' | 'hover';
   defaultOpened?: boolean;
   styles?: React.CSSProperties;
-  invalid?: boolean;
 };
 
 interface DropdownComponent
@@ -37,7 +36,6 @@ const Dropdown: DropdownComponent = ({
   closeRefHandler,
   defaultOpened,
   trigger = 'click',
-  invalid = false,
   ...props
 }) => {
   const dropdownRef = useRef<HTMLDivElement | null>(null);
@@ -70,11 +68,7 @@ const Dropdown: DropdownComponent = ({
   return (
     <DropdownContext.Provider value={context}>
       <div
-        className={cx(
-          className,
-          styles['relative'],
-          invalid && styles['invalid'],
-        )}
+        className={cx(className, styles['relative'])}
         onMouseEnter={onMouseEnter}
         onMouseLeave={onMouseLeave}
         ref={dropdownRef}
