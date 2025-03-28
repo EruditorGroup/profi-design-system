@@ -3,6 +3,21 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.61.28](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-toolkit@0.61.27...@eruditorgroup/profi-toolkit@0.61.28) (2025-03-28)
+
+
+
+## 0.33.61 (2025-03-28)
+
+
+### Bug Fixes
+
+* [FM-5223] fix error when el is empty ([#635](https://github.com/eruditorgroup/profi-design-system/issues/635)) ([0ea6877](https://github.com/eruditorgroup/profi-design-system/commit/0ea687756ee073741e2dbad344e1638933beedbe))
+
+
+
+
+
 ## [0.61.27](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-toolkit@0.61.26...@eruditorgroup/profi-toolkit@0.61.27) (2025-03-12)
 
 **Note:** Version bump only for package @eruditorgroup/profi-toolkit
