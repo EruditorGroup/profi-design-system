@@ -52,7 +52,6 @@
   --ui-color-secondaryState: #1a1a1a;
   --ui-color-secondaryInverse: #fff;
   --ui-color-secondaryInverseState: #666666;
-
   --ui-color-light: #ebebeb;
   --ui-color-lightState: #dedede;
   --ui-color-lightInverse: #333333;
@@ -75,7 +74,6 @@
 
   --ui-border-color: #ebebeb;
   --ui-border-color-secondary: #d9d9d9;
-
   --ui-border-radius-xs: 5px;
   --ui-border-radius-s: 8px;
   --ui-border-radius-m: 9px;
