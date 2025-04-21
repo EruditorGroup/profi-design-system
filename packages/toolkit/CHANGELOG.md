@@ -3,6 +3,21 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.0.0-alpha.61](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-toolkit@1.0.0-alpha.51...@eruditorgroup/profi-toolkit@1.0.0-alpha.61) (2025-04-21)
+
+
+### Features
+
+* **ui:** Fixed hydration error of Price component ([18a7b0a](https://github.com/eruditorgroup/profi-design-system/commit/18a7b0a31dbae0f9799bbe2637f94b67f7df8678))
+
+
+
+# 1.0.0-alpha.58 (2024-12-10)
+
+
+
+
+
 # [1.0.0-alpha.60](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-toolkit@1.0.0-alpha.51...@eruditorgroup/profi-toolkit@1.0.0-alpha.60) (2025-01-29)
 
 
