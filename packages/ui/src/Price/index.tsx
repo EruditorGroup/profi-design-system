@@ -13,11 +13,20 @@ type RangeSignature = (
   format: (value: number) => string | number,
 ) => React.ReactNode;
 
-const fullRange: RangeSignature = (from, to, format) =>
-  `${format(from)}${from !== to ? `\u2013${format(to)}` : ''}`;
+const fullRange: RangeSignature = (from, to, format) => (
+  <>
+    {format(from || 0)}
+    {from !== to ? `\u2013${format(to)}` : ''}
+  </>
+);
 
-const partialRange: RangeSignature = (from, to, format) =>
-  `${(from && 'от') || (to && 'до')} ${format(from || to)}`;
+const partialRange: RangeSignature = (from, to, format) => (
+  <>
+    {(from && 'от') || (to && 'до')}
+    {' '}
+    {format(from || to)}
+  </>
+);
 
 export interface PriceProps extends TextProps {
   value?: number | [number | null, number | null];
