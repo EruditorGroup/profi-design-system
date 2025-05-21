@@ -31,6 +31,7 @@ export interface BottomSheetProps
   closeOnOverlayClick?: boolean;
   inline?: boolean;
   onClose: MouseEventHandler<HTMLElement>;
+  rootClassName?: string;
 }
 
 const DEFAULT_ANIMATION_DURATION = 150;
@@ -48,6 +49,7 @@ const BottomSheet: ForwardRefExoticComponent<
       closeOnOverlayClick,
       onClose,
       inline,
+      rootClassName,
       ...props
     },
     ref,
@@ -100,7 +102,7 @@ const BottomSheet: ForwardRefExoticComponent<
           timeout={DEFAULT_ANIMATION_DURATION}
           classNames={animation}
         >
-          <BodyPortal className={cx(!inline && styles['root'])}>
+          <BodyPortal className={cx(!inline && styles['root'], rootClassName)}>
             <div
               className={cx(
                 styles['sheet'],
