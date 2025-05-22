@@ -50,6 +50,8 @@ export interface ModalProps
   title?: string | undefined;
   closeOnOverlayClick?: boolean;
   swipeDownToClose?: boolean;
+  overlayClassName?: string;
+  rootClassName?: string;
   bodyClassName?: string;
   animationClassNames?: string | CSSTransitionClassNames;
   withOverlay?: boolean;
@@ -73,6 +75,8 @@ const Modal = React.forwardRef(
       visible,
       title,
       className,
+      overlayClassName,
+      rootClassName,
       bodyClassName,
       animationClassNames,
       width,
@@ -158,7 +162,7 @@ const Modal = React.forwardRef(
         >
           <BodyPortal>
             <div
-              className={styles['overlay']}
+              className={classNames(styles['overlay'], overlayClassName)}
               onClick={handleCloseClick}
               {...(showOverlay && {style: {display: 'none'}})}
             />
@@ -176,6 +180,7 @@ const Modal = React.forwardRef(
             className={classNames(
               styles['root'],
               fullscreen && styles['fullscreen'],
+              rootClassName,
             )}
             style={{
               transform: `translate3d(0, ${pc}%, 0) scale(${Math.max(
