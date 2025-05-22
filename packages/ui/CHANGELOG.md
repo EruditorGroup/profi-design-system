@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.88.0](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.87.0...@eruditorgroup/profi-ui@0.88.0) (2025-05-21)
+
+
+### Features
+
+* [FM-5300] Поддержка rootClassName для BottomSheet ([9543245](https://github.com/eruditorgroup/profi-design-system/commit/9543245647ae9c789765a5ea1389c54162d571cf))
+
+
+
+
+
 # [0.87.0](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.86.3...@eruditorgroup/profi-ui@0.87.0) (2025-04-21)
 
 
