@@ -3,6 +3,21 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.88.1](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.88.0...@eruditorgroup/profi-ui@0.88.1) (2025-05-22)
+
+
+
+## 0.33.64 (2025-05-22)
+
+
+### Bug Fixes
+
+* [FM-5396] add overlayClassName, rootClassName to Modal ([440bb47](https://github.com/eruditorgroup/profi-design-system/commit/440bb47e729e201336538d38d8616b29e347d5c0))
+
+
+
+
+
 # [0.88.0](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.87.0...@eruditorgroup/profi-ui@0.88.0) (2025-05-21)
 
 
