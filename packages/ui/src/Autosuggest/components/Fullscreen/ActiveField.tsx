@@ -1,10 +1,9 @@
-import React, {FormEventHandler, forwardRef} from 'react';
+import React, {FormEventHandler, forwardRef, useEffect} from 'react';
 import {SearchIcon} from '@eruditorgroup/profi-icons';
 import {
   AliasProps,
   useCombinedRef,
   useMoveCaretToEndOnFocus,
-  useSafeLayoutEffect,
 } from '@eruditorgroup/profi-toolkit';
 import {useFullscreenContext} from './contexts';
 import {Textarea, FormControlProps} from '../../../Form';
@@ -39,9 +38,9 @@ const ActiveField: ForwardingFocusableComponent<
 
     const [fieldRef, setLocalRef] = useCombinedRef(ref);
 
-    useSafeLayoutEffect(() => {
+    useEffect(() => {
       fieldRef.current?.focus();
-    }, []);
+    }, [fieldRef]);
 
     /** Нужно запланировать эффект после эффекта с фокусом */
     useMoveCaretToEndOnFocus({ref: fieldRef, deps: [], mode: 'onMount'});

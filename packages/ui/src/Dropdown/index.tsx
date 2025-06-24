@@ -1,9 +1,4 @@
-import React, {
-  useMemo,
-  useRef,
-  useCallback,
-  MutableRefObject,
-} from 'react';
+import React, {useMemo, useRef, useCallback, MutableRefObject} from 'react';
 import cx from 'classnames';
 
 import DropdownToggler from './components/DropdownToggler';
@@ -26,7 +21,8 @@ export type DropdownProps = {
   styles?: React.CSSProperties;
 };
 
-interface DropdownComponent extends React.FC<React.PropsWithChildren<DropdownProps>> {
+interface DropdownComponent
+  extends React.FC<React.PropsWithChildren<DropdownProps>> {
   Toggler: typeof DropdownToggler;
   Portal: typeof DropdownPortal;
   Item: typeof DropdownItem;
