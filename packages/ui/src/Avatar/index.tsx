@@ -4,7 +4,7 @@ import classnames from 'classnames';
 import styles from './Avatar.module.scss';
 import {ISize, theme} from '@eruditorgroup/profi-toolkit';
 
-type IAvatarSize = ISize | 'xxxl';
+type IAvatarSize = ISize | 'xxxl' | '4xl';
 
 export interface AvatarProps
   extends Omit<
@@ -71,8 +71,8 @@ const Avatar = forwardRef<HTMLDivElement, AvatarProps>(
 const getSizeClassName = (size: IAvatarSize) => {
   if (!size) return null;
 
-  return size === 'xxxl'
-    ? `${theme.common['size-xxl']} ${styles['size-xxxl']}`
+  return ['xxxl', '4xl'].includes(size)
+    ? `${theme.common['size-xxl']} ${styles[`size-${size}`]}`
     : theme.common[`size-${size}`];
 };
 
