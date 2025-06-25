@@ -3,6 +3,43 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.89.0](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.88.0...@eruditorgroup/profi-ui@0.89.0) (2025-06-25)
+
+
+
+## 0.33.66 (2025-06-25)
+
+
+### Features
+
+* [PRFR-4540] avatar 4xl size ([#650](https://github.com/eruditorgroup/profi-design-system/issues/650)) ([e2a26c7](https://github.com/eruditorgroup/profi-design-system/commit/e2a26c755774f26e502b65c8aee0b40d1fe44216))
+
+
+
+# 1.0.0-alpha.62 (2025-06-10)
+
+
+
+## 0.33.65 (2025-06-10)
+
+
+### Bug Fixes
+
+* [FM-5475] add overlayClassName to BottomSheet ([#646](https://github.com/eruditorgroup/profi-design-system/issues/646)) ([2dc3303](https://github.com/eruditorgroup/profi-design-system/commit/2dc330304a92908e97dad293e798ff056c53ead1))
+
+
+
+## 0.33.64 (2025-05-22)
+
+
+### Bug Fixes
+
+* [FM-5396] add overlayClassName, rootClassName to Modal ([440bb47](https://github.com/eruditorgroup/profi-design-system/commit/440bb47e729e201336538d38d8616b29e347d5c0))
+
+
+
+
+
 ## [0.88.3](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.88.0...@eruditorgroup/profi-ui@0.88.3) (2025-06-23)
 
 
