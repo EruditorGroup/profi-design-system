@@ -7,7 +7,7 @@ import {theme} from '@eruditorgroup/profi-toolkit';
 import type {IColor, AliasProps} from '@eruditorgroup/profi-toolkit';
 
 export interface BaseTextProps extends HTMLAttributes<HTMLParagraphElement> {
-  color?: IColor | 'muted' | 'disabled';
+  color?: IColor | 'muted' | 'disabled' | 'white';
   bold?: boolean;
   align?: 'center' | 'right' | 'left';
   skeleton?: boolean;

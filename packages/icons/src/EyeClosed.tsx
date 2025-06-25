@@ -27,13 +27,13 @@ const EyeClosedIcon: ForwardRefExoticComponent<IconPropsType> = forwardRef(
           <path
             d="M4 4L24 24"
             stroke="#A4A6B2"
-            stroke-width="1.225"
-            stroke-linecap="round"
-            stroke-linejoin="round"
+            strokeWidth="1.225"
+            strokeLinecap="round"
+            strokeLinejoin="round"
           />
           <path
-            fill-rule="evenodd"
-            clip-rule="evenodd"
+            fillRule="evenodd"
+            clipRule="evenodd"
             d="M14 21.1428C15.9537 21.1115 17.846 20.4669 19.4 19.3035L17.1198 17.0641C16.3278 17.861 15.2306 18.3544 14.0183 18.3544C11.6033 18.3544 9.64553 16.3966 9.64553 13.9816C9.64553 12.7976 10.1161 11.7235 10.8804 10.9361L8.6 8.69642C6.69921 10.122 5.13081 11.9303 4 14C4 14 7.63636 21.1428 14 21.1428ZM14 6.85714C13.3573 6.85566 12.7167 6.92757 12.0909 7.07142L22.0364 16.8482C22.7901 15.9685 23.4482 15.0139 24 14C24 14 20.3636 6.85714 14 6.85714Z"
             fill="black"
           />

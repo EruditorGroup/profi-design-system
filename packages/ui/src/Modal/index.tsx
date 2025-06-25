@@ -29,6 +29,18 @@ import {ModalContext} from './context';
 // import slideUpTransition from '../styles/transitions/SlideUp.module.scss';
 // import fadeInTransition from '../styles/transitions/FadeIn.module.scss';
 
+interface CSSTransitionClassNames {
+  appear?: string;
+  appearActive?: string;
+  appearDone?: string;
+  enter?: string;
+  enterActive?: string;
+  enterDone?: string;
+  exit?: string;
+  exitActive?: string;
+  exitDone?: string;
+}
+
 export interface ModalProps
   extends Omit<HTMLAttributes<HTMLDivElement>, 'width'> {
   fullscreen?: boolean;
@@ -38,7 +50,10 @@ export interface ModalProps
   title?: string | undefined;
   closeOnOverlayClick?: boolean;
   swipeDownToClose?: boolean;
+  overlayClassName?: string;
+  rootClassName?: string;
   bodyClassName?: string;
+  animationClassNames?: string | CSSTransitionClassNames;
   withOverlay?: boolean;
   onClickBack?: MouseEventHandler<HTMLElement>;
   onClose: MouseEventHandler<HTMLElement>;
@@ -60,7 +75,10 @@ const Modal = React.forwardRef(
       visible,
       title,
       className,
+      overlayClassName,
+      rootClassName,
       bodyClassName,
+      animationClassNames,
       width,
       children,
       fullscreen,
@@ -144,7 +162,7 @@ const Modal = React.forwardRef(
         >
           <BodyPortal>
             <div
-              className={styles['overlay']}
+              className={classNames(styles['overlay'], overlayClassName)}
               onClick={handleCloseClick}
               {...(showOverlay && {style: {display: 'none'}})}
             />
@@ -156,12 +174,13 @@ const Modal = React.forwardRef(
           unmountOnExit
           in={visible}
           timeout={!fullscreen ? DEFAULT_ANIMATION_DURATION : 0}
-          classNames={theme.transitions.slide}
+          classNames={animationClassNames || theme.transitions.slide}
         >
           <BodyPortal
             className={classNames(
               styles['root'],
               fullscreen && styles['fullscreen'],
+              rootClassName,
             )}
             style={{
               transform: `translate3d(0, ${pc}%, 0) scale(${Math.max(

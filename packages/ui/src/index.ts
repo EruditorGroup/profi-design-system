@@ -80,6 +80,9 @@ export type {RateStarsProps} from './Rate';
 export {Accordion} from './Accordion';
 export type {AccordionProps} from './Accordion';
 
+export {Badge} from './Badge';
+export type {BadgeProps} from './Badge';
+
 export {default as Space} from './Space';
 export type {SpaceProps} from './Space';
 
@@ -113,3 +116,7 @@ export type {ProgressProps} from './Progress';
 
 export {default as ExpandableBlock} from './ExpandableBlock';
 export type {IProps as ExpandableBlockProps} from './ExpandableBlock';
+
+export {Toast, ToastController} from './Toast';
+export type {ToastProps} from './Toast';
+export {showToast, hideToast, destroyToast} from './Toast';
