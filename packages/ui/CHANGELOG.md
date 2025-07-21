@@ -3,6 +3,21 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.0.0-alpha.64](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@1.0.0-alpha.63...@eruditorgroup/profi-ui@1.0.0-alpha.64) (2025-07-21)
+
+
+
+# 1.0.0-alpha.64 (2025-07-21)
+
+
+### Features
+
+* [NO-TASK] add linkShmid to ExpandableBlock ([6e3f4f0](https://github.com/eruditorgroup/profi-design-system/commit/6e3f4f0b44c3379974a9d5bbe0105092c7337872))
+
+
+
+
+
 # [1.0.0-alpha.63](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@1.0.0-alpha.61...@eruditorgroup/profi-ui@1.0.0-alpha.63) (2025-06-26)
 
 
