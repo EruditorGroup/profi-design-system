@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.0.0-alpha.63](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-toolkit@1.0.0-alpha.61...@eruditorgroup/profi-toolkit@1.0.0-alpha.63) (2025-06-26)
+
+
+### Features
+
+* [FM-5520] changes from master ([#649](https://github.com/eruditorgroup/profi-design-system/issues/649)) ([3189340](https://github.com/eruditorgroup/profi-design-system/commit/3189340e535c8a883174813f22854981ded5ea8a))
+
+
+
+
+
 # [1.0.0-alpha.62](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-toolkit@1.0.0-alpha.61...@eruditorgroup/profi-toolkit@1.0.0-alpha.62) (2025-06-25)
 
 
