@@ -16,6 +16,7 @@ export interface IProps {
   moreButtonText?: React.ReactNode;
   withAnimation?: boolean;
   onChange?: () => void;
+  linkShmid?: string;
 }
 
 const ExpandableBlock: React.FC<React.PropsWithChildren<IProps>> = ({
@@ -26,6 +27,7 @@ const ExpandableBlock: React.FC<React.PropsWithChildren<IProps>> = ({
   moreButtonSize = 'm',
   moreButtonText = 'Еще',
   previewIsClickable,
+  linkShmid
 }) => {
   const [controlableExpanded, setExpanded] = useControllableState({
     value: expanded,
@@ -48,7 +50,13 @@ const ExpandableBlock: React.FC<React.PropsWithChildren<IProps>> = ({
       {controlableExpanded && content}
 
       {!controlableExpanded && (
-        <Link underlined bold size={moreButtonSize} onClick={goToExpanded}>
+        <Link
+          underlined
+          bold
+          size={moreButtonSize}
+          onClick={goToExpanded}
+          data-shmid={linkShmid}
+        >
           {moreButtonText}
         </Link>
       )}
