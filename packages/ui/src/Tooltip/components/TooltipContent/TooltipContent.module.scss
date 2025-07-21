@@ -9,7 +9,7 @@
 }
 
 .content {
-  background: #fff;
+  background: var(--ui-bg-default);
   box-shadow: var(--ui-box-shadow);
   border-radius: var(--ui-border-radius-l);
   padding: 10px 15px;
@@ -23,9 +23,9 @@
 
 .withArrow {
   &:after {
-    content: "";
+    content: '';
     position: absolute;
-    width: 0px; 
+    width: 0px;
     height: 0px;
     border-left: 10px solid transparent;
     border-right: 10px solid transparent;
@@ -38,7 +38,7 @@
     border-bottom: 10px solid var(--ui-bg-default);
   }
 }
- 
+
 .position-bottom-right {
   top: 100%;
   right: 0;

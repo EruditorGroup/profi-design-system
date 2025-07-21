@@ -45,12 +45,12 @@
 
   &:hover {
     color: var(--ui-color-secondaryInverseState);
-    background: white;
+    background: var(--ui-bg-default);
   }
 
   &:active {
     color: var(--ui-color-secondaryInverseState);
-    background: white;
+    background: var(--ui-bg-default);
   }
 }
 
