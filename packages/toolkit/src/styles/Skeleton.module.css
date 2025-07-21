@@ -1,10 +1,11 @@
 .skeleton {
   background: linear-gradient(
     90deg,
-    rgba(190, 190, 190, 0.2) 25%,
-    rgba(129, 129, 129, 0.24) 37%,
-    rgba(190, 190, 190, 0.2) 63%
+    var(--ui-border-color) 25%,
+    var(--ui-border-color-secondary) 37%,
+    var(--ui-border-color) 63%
   );
+  opacity: 0.65;
   background-size: 400% 100%;
   animation: skeleton-loading 1.4s ease infinite;
 }
