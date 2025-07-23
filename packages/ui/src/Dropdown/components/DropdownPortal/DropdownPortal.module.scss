@@ -61,7 +61,7 @@
   display: flex;
   justify-content: flex-start;
   flex-direction: column;
-  background: #fff;
+  background: var(--ui-bg-default);
   border-radius: var(--ui-border-radius-l);
   padding: 5px;
   max-width: 450px;

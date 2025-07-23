@@ -26,7 +26,7 @@ function compileGradient(
   return {
     background: `linear-gradient(${
       direction === 'left' ? '270deg' : '90deg'
-    }, rgba(250, 250, 250, 0) 0%, ${color} 100%)`,
+    }, transparent 0%, ${color} 100%)`,
   };
 }
 
