@@ -1,4 +1,5 @@
 export {default as ActiveDotIcon} from './ActiveDot';
+export {default as AlertTriangleColorfulIcon} from './AlertTriangleColorful';
 export {default as AppleIcon} from './Apple';
 export {default as ArrowLeftIcon} from './ArrowLeft';
 export {default as ArrowRightIcon} from './ArrowRight';
