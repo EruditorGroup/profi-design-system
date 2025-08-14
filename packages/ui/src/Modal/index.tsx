@@ -93,6 +93,11 @@ const Modal = React.forwardRef(
     ref,
   ) => {
     const bodyRef = React.useRef(null);
+
+    // фикс для совместимости с 19 реактом. Если указан nodeRef, react-transition-group использует его, а не findDOMNode
+    const transitionRef = React.useRef(null);
+    const transitionRef1 = React.useRef(null);
+
     const [modalRef, setModalRef] = useCombinedRef(ref);
     const modalContentRef = useRef<HTMLDivElement>(null);
 
@@ -154,6 +159,7 @@ const Modal = React.forwardRef(
         value={{handleClose: handleCloseClick, handleBack: handleBackClick}}
       >
         <CSSTransition
+          nodeRef={transitionRef}
           key="overlay"
           unmountOnExit
           in={visible}
@@ -170,6 +176,7 @@ const Modal = React.forwardRef(
         </CSSTransition>
 
         <CSSTransition
+          nodeRef={transitionRef1}
           key="content"
           unmountOnExit
           in={visible}

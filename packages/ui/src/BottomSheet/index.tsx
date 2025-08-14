@@ -58,6 +58,10 @@ const BottomSheet: ForwardRefExoticComponent<
   ) => {
     const bodyEl = useRef(null);
 
+    // фикс для совместимости с 19 реактом. Если указан nodeRef, react-transition-group использует его, а не findDOMNode
+    const transitionRef = useRef(null);
+    const transitionRef1 = useRef(null);
+
     // Отключаем промотку body
     useEffect(() => {
       if (!inline) {
@@ -85,6 +89,7 @@ const BottomSheet: ForwardRefExoticComponent<
       <>
         {!inline && (
           <CSSTransition
+            nodeRef={transitionRef}
             unmountOnExit
             mountOnEnter
             in={visible}
@@ -101,6 +106,7 @@ const BottomSheet: ForwardRefExoticComponent<
         )}
 
         <CSSTransition
+          nodeRef={transitionRef1}
           unmountOnExit
           mountOnEnter
           in={visible}
