@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.62.7](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-toolkit@0.62.6...@eruditorgroup/profi-toolkit@0.62.7) (2025-08-15)
+
+
+### Bug Fixes
+
+* [UIKIT-477] Replace hardcoded colors ([30265f9](https://github.com/eruditorgroup/profi-design-system/commit/30265f95ecb8c894b523761ac5a2d4f757683289))
+
+
+
+
+
 ## [0.62.6](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-toolkit@0.62.5...@eruditorgroup/profi-toolkit@0.62.6) (2025-07-21)
 
 **Note:** Version bump only for package @eruditorgroup/profi-toolkit

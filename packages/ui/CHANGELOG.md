@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.90.1](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.90.0...@eruditorgroup/profi-ui@0.90.1) (2025-08-15)
+
+
+### Bug Fixes
+
+* [FP-1978] add compatibility for react 19 ([7db02d9](https://github.com/eruditorgroup/profi-design-system/commit/7db02d96738fee18569740dae8d6d84c2b5269c1))
+* [UIKIT-477] Replace hardcoded colors ([30265f9](https://github.com/eruditorgroup/profi-design-system/commit/30265f95ecb8c894b523761ac5a2d4f757683289))
+
+
+
+
+
 # [0.90.0](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.89.0...@eruditorgroup/profi-ui@0.90.0) (2025-07-21)
 
 
