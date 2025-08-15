@@ -3,6 +3,21 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.0.0-alpha.67](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@1.0.0-alpha.66...@eruditorgroup/profi-ui@1.0.0-alpha.67) (2025-08-15)
+
+
+
+# 1.0.0-alpha.67 (2025-08-15)
+
+
+### Bug Fixes
+
+* [FP-1978] add compatibility for react 19 ([0920105](https://github.com/eruditorgroup/profi-design-system/commit/092010590ac736550c9b430fc17dc62c442e73ae))
+
+
+
+
+
 # [1.0.0-alpha.66](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@1.0.0-alpha.65...@eruditorgroup/profi-ui@1.0.0-alpha.66) (2025-07-23)
 
 
