@@ -16,6 +16,7 @@ export type BodyPortalProps = {
   children: ReactNode;
   className?: string;
   style?: {[key: string]: string};
+  scrollLockIgnore?: boolean;
 };
 // test
 /**
@@ -29,7 +30,7 @@ export type BodyPortalProps = {
  */
 const BodyPortal: ForwardRefExoticComponent<
   BodyPortalProps & RefAttributes<HTMLDivElement>
-> = forwardRef(({className, style, children}, ref): ReactPortal | null => {
+> = forwardRef(({className, style, children, scrollLockIgnore}, ref): ReactPortal | null => {
   const css = useMemo(() => stringifyCssProps(style), [style]);
 
   const container = useMemo<HTMLDivElement | null>(() => {
@@ -37,6 +38,9 @@ const BodyPortal: ForwardRefExoticComponent<
     const div = document.createElement('div');
     div.className = className || '';
     div.setAttribute('style', css);
+    if (scrollLockIgnore) {
+      div.setAttribute('data-scroll-lock-ignore', 'true');
+    }
     return div;
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);

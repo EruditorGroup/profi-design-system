@@ -197,6 +197,7 @@ const Modal = React.forwardRef(
               opacity: `${modalOpacity}`,
             }}
             ref={setModalRef}
+            scrollLockIgnore
           >
             <div
               className={classNames(
