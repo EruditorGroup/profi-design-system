@@ -27,6 +27,7 @@
 3. После публикации релиза запускаются джобы для публикации `npm пакетов` и сборки `storybook`. (https://github.com/EruditorGroup/profi-design-system/actions)
 4. Сборка упадет с `Bad credentials` (это известный факт, фиксить не будем до переезда в mono-front)
 5. Создаем PR из ветки новой версии в master, собираем галку на PR и мерджим
+6. Обновляем пакеты на стороне потребителей библиотеки.
 
 ## Conventional commits
 
