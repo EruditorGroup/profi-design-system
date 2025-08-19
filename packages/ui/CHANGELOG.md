@@ -3,6 +3,21 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.90.2](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.90.1...@eruditorgroup/profi-ui@0.90.2) (2025-08-19)
+
+
+
+## 0.33.69 (2025-08-19)
+
+
+### Bug Fixes
+
+* [PRFR-4434] fix modal scroll on iOS Safari ([#667](https://github.com/eruditorgroup/profi-design-system/issues/667)) ([7551749](https://github.com/eruditorgroup/profi-design-system/commit/7551749d63f77c4e33bb73d2b5237f468b5a9e29))
+
+
+
+
+
 ## [0.90.1](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.90.0...@eruditorgroup/profi-ui@0.90.1) (2025-08-15)
 
 
