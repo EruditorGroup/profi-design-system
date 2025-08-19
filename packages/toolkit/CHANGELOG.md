@@ -3,6 +3,21 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.0.0-alpha.68](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-toolkit@1.0.0-alpha.67...@eruditorgroup/profi-toolkit@1.0.0-alpha.68) (2025-08-19)
+
+
+
+# 1.0.0-alpha.68 (2025-08-19)
+
+
+### Bug Fixes
+
+* [PRFR-4434] fix modal scroll on iOS Safari ([#667](https://github.com/eruditorgroup/profi-design-system/issues/667)) ([783e9b4](https://github.com/eruditorgroup/profi-design-system/commit/783e9b4ac5b61d96f5ca910498b28ae88616ca3e))
+
+
+
+
+
 # [1.0.0-alpha.67](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-toolkit@1.0.0-alpha.66...@eruditorgroup/profi-toolkit@1.0.0-alpha.67) (2025-08-15)
 
 **Note:** Version bump only for package @eruditorgroup/profi-toolkit
