@@ -25,7 +25,8 @@
 1. Мержим в `master` необходимые для релиза изменения.
 2. Публикуем новый `release` либо `pre-release` с новой версией тега. (https://github.com/EruditorGroup/profi-design-system/releases)
 3. После публикации релиза запускаются джобы для публикации `npm пакетов` и сборки `storybook`. (https://github.com/EruditorGroup/profi-design-system/actions)
-4. После успешной публикации обновляем пакеты на стороне потребителей библиотеки.
+4. Сборка упадет с `Bad credentials` (это известный факт, фиксить не будем до переезда в mono-front)
+5. Создаем PR из ветки новой версии в master, собираем галку на PR и мерджим
 
 ## Conventional commits
 
