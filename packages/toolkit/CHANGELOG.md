@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.63.0](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-toolkit@0.62.9...@eruditorgroup/profi-toolkit@0.63.0) (2025-08-28)
+
+
+### Features
+
+* [UIKIT-397] Update colors to match new design system ([084698c](https://github.com/eruditorgroup/profi-design-system/commit/084698c5f9b5ea9c4275c91bf350bd60f4cc2ec3))
+
+
+
+
+
 ## [0.62.9](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-toolkit@0.62.7...@eruditorgroup/profi-toolkit@0.62.9) (2025-08-27)
 
 
