@@ -1,4 +1,5 @@
 $columnsInRow: 12;
+$gutters: 10, 30, 45;
 
 @mixin generateGrid($size: null) {
   @for $i from 1 through $columnsInRow {
@@ -16,26 +17,44 @@ $columnsInRow: 12;
   }
 }
 
+@mixin generateGutters($size: null) {
+  @each $gutter in $gutters {
+    $infix: if($size != null, '#{$size}-', '');
+
+    .col_#{$infix}gutter-#{$gutter} {
+      padding-left: #{$gutter}px;
+      padding-right: #{$gutter}px;
+    }
+  }
+}
+
 .col {
-  padding: 0 10px;
   flex: 1 0 0%;
   box-sizing: border-box;
 }
 
-@include generateGrid();
+.col_gutter-default {
+  padding: 0 10px;
 
-@media (min-width: 732px) {
-  .col {
+  @media (min-width: 732px) {
     padding: 0 30px;
   }
+}
 
+@include generateGrid();
+@include generateGutters();
+
+@media (min-width: 732px) {
   @include generateGrid('s');
+  @include generateGutters('s');
 }
 
 @media (min-width: 1024px) {
   @include generateGrid('m');
+  @include generateGutters('m');
 }
 
 @media (min-width: 1280px) {
   @include generateGrid('l');
+  @include generateGutters('l');
 }
