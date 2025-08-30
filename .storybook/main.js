@@ -11,8 +11,7 @@ const styleLoaders = [
           [
             require('postcss-custom-properties')({
               preserve: false,
-              importFrom:
-                'node_modules/@eruditorgroup/profi-toolkit/src/styles/variables.css',
+              importFrom: path.join(__dirname, '../packages/toolkit/src/styles/variables.css'),
             }),
           ],
         ],
@@ -29,7 +28,13 @@ const styleLoaders = [
   },
 ];
 
+/**
+ * @type {import('@storybook/react/types').StorybookConfig}
+ */
 module.exports = {
+  core: {
+    builder: 'webpack5',
+  },
   stories: [
     '../packages/**/*.stories.mdx',
     '../packages/**/*.stories.@(js|jsx|ts|tsx)',
@@ -49,14 +54,18 @@ module.exports = {
           oneOf: [
             {
               test: /\.(png|jpe?g|gif)$/i,
-              use: [{loader: 'file-loader'}],
+              use: [
+                {
+                  loader: 'file-loader'
+                }
+              ],
             },
             {
               test: /\.(woff|woff2|eot|ttf)$/i,
               use: [
                 {
                   loader: 'file-loader',
-                  query: {
+                  options: {
                     name: '[name].[ext]',
                   },
                 },
