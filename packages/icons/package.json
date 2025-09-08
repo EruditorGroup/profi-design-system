@@ -1,6 +1,6 @@
 {
   "name": "@eruditorgroup/profi-icons",
-  "version": "0.56.0",
+  "version": "1.0.0",
   "description": "Common icon set for Eruditor Group",
   "author": "eruditorgroup",
   "license": "ISC",
@@ -16,11 +16,10 @@
     "url": "git://github.com/eruditorgroup/profi-design-system.git",
     "directory": "packages/icons"
   },
-  "sideEffects": false,
   "browser": "es/index.js",
   "main": "lib/index.js",
   "types": "es/index.d.ts",
-  "module": "es/index.js",
+  "module": "src/index.js",
   "unpkg": "dist/profi-icons.min.js",
   "files": [
     "/dist",
@@ -29,7 +28,7 @@
     "/src"
   ],
   "dependencies": {
-    "@eruditorgroup/profi-toolkit": "^0.63.0"
+    "@eruditorgroup/profi-toolkit": "^1.0.0"
   },
   "peerDependencies": {
     "react": "^16.14.0",
@@ -42,5 +41,6 @@
   "eruditorgroup": {
     "libName": "ProfiIcons",
     "libFilename": "profi-icons"
-  }
+  },
+  "gitHead": "7c076335bd14bb5f50a7ae23c64967d17e6abb51"
 }

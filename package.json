@@ -19,11 +19,11 @@
     "clean": "lerna exec --parallel -- rimraf lib dist es types",
     "clean:storybook": "rimraf __image_snapshots__/* storybook-static",
     "start": "start-storybook -p 6006",
-    "build": "yarn clean && yarn concurrently 'yarn build:types --outDir es' 'yarn build:cjs' 'yarn build:esm'",
+    "build:styles": "lerna exec --parallel -- webpack --config ../../webpack.config.js",
+    "build": "yarn clean && yarn concurrently 'yarn build:types --outDir es' 'yarn build:cjs' 'yarn build:esm' 'yarn build:styles'",
     "build:types": "lerna exec -- tsc src/*.ts --declaration --emitDeclarationOnly --jsx react --esModuleInterop",
     "build:cjs": "lerna exec --parallel -- MODULE_TYPE=cjs CSS_MODULES=1 yarn babel --root-mode upward src -x '.ts','.tsx' --ignore '**/*.test.tsx','**/*.stories.tsx','**/*.d.ts','**/__mocks__' -d lib",
     "build:esm": "lerna exec --parallel -- MODULE_TYPE=esm CSS_MODULES=1 yarn babel --root-mode upward src -x '.ts','.tsx' --ignore '**/*.test.tsx','**/*.stories.tsx','**/*.d.ts','**/__mocks__' -d es",
-    "copy-theme": "if [[ -e ./src/styles/variables.css ]]; then cp ./src/styles/variables.css ./dist/variables.css; fi;",
     "build:storybook": "build-storybook",
     "test": "MODULE_TYPE=cjs jest",
     "test:storybook": "yarn build:storybook --quiet && MODULE_TYPE=cjs jest --config=storyshots.config.js",
@@ -90,6 +90,7 @@
     "postcss": "^8.2.8",
     "postcss-custom-properties": "^11.0.0",
     "postcss-loader": "^4.2.0",
+    "postcss-preset-env": "^7.0.1",
     "postcss-scss": "^3.0.5",
     "prettier": "^2.2.1",
     "puppeteer": "^10.2.0",
@@ -99,7 +100,9 @@
     "sass-loader": "^10.0.1",
     "style-loader": "^2.0.0",
     "terser-webpack-plugin": "^4.2.3",
-    "typescript": "4.5.4"
+    "typescript": "4.5.4",
+    "webpack": "^5.64.4",
+    "webpack-cli": "^4.9.1"
   },
   "browserslist": {
     "production": [
