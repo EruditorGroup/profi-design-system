@@ -1,5 +1,6 @@
 declare module 'react-transition-group';
 declare module 'body-scroll-lock';
+
 declare module '*.png';
 declare module '*.jpg';
 declare module '*.css' {
