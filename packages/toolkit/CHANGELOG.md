@@ -3,177 +3,313 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
-# 1.0.0-alpha.71
+## 0.63.0
 
-- [UIKIT-397] Update colors and typography to match new design system
+**Note:** Manual version bump
 
-# [1.0.0-alpha.69](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-toolkit@1.0.0-alpha.67...@eruditorgroup/profi-toolkit@1.0.0-alpha.69) (2025-08-26)
+## [0.62.9](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-toolkit@0.62.7...@eruditorgroup/profi-toolkit@0.62.9) (2025-08-27)
 
-# 1.0.0-alpha.68 (2025-08-19)
-
-### Bug Fixes
-
-- [PRFR-4434] fix modal scroll on iOS Safari ([#667](https://github.com/eruditorgroup/profi-design-system/issues/667)) ([783e9b4](https://github.com/eruditorgroup/profi-design-system/commit/783e9b4ac5b61d96f5ca910498b28ae88616ca3e))
-
-# [1.0.0-alpha.68](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-toolkit@1.0.0-alpha.67...@eruditorgroup/profi-toolkit@1.0.0-alpha.68) (2025-08-19)
-
-# 1.0.0-alpha.68 (2025-08-19)
+## 0.33.69 (2025-08-19)
 
 ### Bug Fixes
 
-- [PRFR-4434] fix modal scroll on iOS Safari ([#667](https://github.com/eruditorgroup/profi-design-system/issues/667)) ([783e9b4](https://github.com/eruditorgroup/profi-design-system/commit/783e9b4ac5b61d96f5ca910498b28ae88616ca3e))
+- [PRFR-4434] fix modal scroll on iOS Safari ([#667](https://github.com/eruditorgroup/profi-design-system/issues/667)) ([7551749](https://github.com/eruditorgroup/profi-design-system/commit/7551749d63f77c4e33bb73d2b5237f468b5a9e29))
 
-# [1.0.0-alpha.67](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-toolkit@1.0.0-alpha.66...@eruditorgroup/profi-toolkit@1.0.0-alpha.67) (2025-08-15)
+## [0.62.8](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-toolkit@0.62.7...@eruditorgroup/profi-toolkit@0.62.8) (2025-08-19)
 
-**Note:** Version bump only for package @eruditorgroup/profi-toolkit
-
-# [1.0.0-alpha.66](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-toolkit@1.0.0-alpha.65...@eruditorgroup/profi-toolkit@1.0.0-alpha.66) (2025-07-23)
+## 0.33.69 (2025-08-19)
 
 ### Bug Fixes
 
-- [UIKIT-477] Replace hardcoded colors ([5ad0e78](https://github.com/eruditorgroup/profi-design-system/commit/5ad0e78f3c4179e8c8ef80e3e76c0e8af5cad548))
+- [PRFR-4434] fix modal scroll on iOS Safari ([#667](https://github.com/eruditorgroup/profi-design-system/issues/667)) ([7551749](https://github.com/eruditorgroup/profi-design-system/commit/7551749d63f77c4e33bb73d2b5237f468b5a9e29))
 
-# [1.0.0-alpha.65](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-toolkit@1.0.0-alpha.64...@eruditorgroup/profi-toolkit@1.0.0-alpha.65) (2025-07-23)
-
-**Note:** Version bump only for package @eruditorgroup/profi-toolkit
-
-# [1.0.0-alpha.64](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-toolkit@1.0.0-alpha.63...@eruditorgroup/profi-toolkit@1.0.0-alpha.64) (2025-07-21)
-
-**Note:** Version bump only for package @eruditorgroup/profi-toolkit
-
-# [1.0.0-alpha.63](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-toolkit@1.0.0-alpha.61...@eruditorgroup/profi-toolkit@1.0.0-alpha.63) (2025-06-26)
-
-### Features
-
-- [FM-5520] changes from master ([#649](https://github.com/eruditorgroup/profi-design-system/issues/649)) ([3189340](https://github.com/eruditorgroup/profi-design-system/commit/3189340e535c8a883174813f22854981ded5ea8a))
-
-# [1.0.0-alpha.62](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-toolkit@1.0.0-alpha.61...@eruditorgroup/profi-toolkit@1.0.0-alpha.62) (2025-06-25)
-
-# 1.0.0-alpha.63 (2025-06-25)
-
-### Features
-
-- [FM-5520] changes from master ([#649](https://github.com/eruditorgroup/profi-design-system/issues/649)) ([3189340](https://github.com/eruditorgroup/profi-design-system/commit/3189340e535c8a883174813f22854981ded5ea8a))
-
-# [1.0.0-alpha.61](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-toolkit@1.0.0-alpha.51...@eruditorgroup/profi-toolkit@1.0.0-alpha.61) (2025-04-21)
-
-### Features
-
-- **ui:** Fixed hydration error of Price component ([18a7b0a](https://github.com/eruditorgroup/profi-design-system/commit/18a7b0a31dbae0f9799bbe2637f94b67f7df8678))
-
-# 1.0.0-alpha.58 (2024-12-10)
-
-# [1.0.0-alpha.60](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-toolkit@1.0.0-alpha.51...@eruditorgroup/profi-toolkit@1.0.0-alpha.60) (2025-01-29)
-
-# 1.0.0-alpha.58 (2024-12-10)
-
-**Note:** Version bump only for package @eruditorgroup/profi-toolkit
-
-# [1.0.0-alpha.59](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-toolkit@1.0.0-alpha.51...@eruditorgroup/profi-toolkit@1.0.0-alpha.54) (2024-12-24)
-
-# 1.0.0-alpha.58 (2024-12-10)
-
-**Note:** Version bump only for package @eruditorgroup/profi-toolkit
-
-# [1.0.0-alpha.53](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-toolkit@1.0.0-alpha.51...@eruditorgroup/profi-toolkit@1.0.0-alpha.53) (2024-12-10)
-
-# 1.0.0-alpha.58 (2024-12-10)
-
-**Note:** Version bump only for package @eruditorgroup/profi-toolkit
-
-# [1.0.0-alpha.52](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-toolkit@1.0.0-alpha.51...@eruditorgroup/profi-toolkit@1.0.0-alpha.52) (2024-12-09)
-
-**Note:** Version bump only for package @eruditorgroup/profi-toolkit
-
-# [1.0.0-alpha.51](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-toolkit@1.0.0-alpha.50...@eruditorgroup/profi-toolkit@1.0.0-alpha.51) (2024-11-28)
-
-**Note:** Version bump only for package @eruditorgroup/profi-toolkit
-
-# [1.0.0-alpha.50](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-toolkit@1.0.0-alpha.49...@eruditorgroup/profi-toolkit@1.0.0-alpha.50) (2024-09-13)
-
-### Features
-
-- **toolkit:** Revert useClickOutside changes ([581d1c9](https://github.com/eruditorgroup/profi-design-system/commit/581d1c9f14733661d1eac1af59e0bd04a2822d7d))
-
-# [1.0.0-alpha.49](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-toolkit@1.0.0-alpha.48...@eruditorgroup/profi-toolkit@1.0.0-alpha.49) (2024-09-12)
-
-### Features
-
-- **toolkit:** Fixed condition bug ([8e85eff](https://github.com/eruditorgroup/profi-design-system/commit/8e85effae923d5201501daf2d6d669756f650b88))
-
-# [1.0.0-alpha.48](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-toolkit@1.0.0-alpha.47...@eruditorgroup/profi-toolkit@1.0.0-alpha.48) (2024-09-09)
-
-### Features
-
-- **toolkit:** Added persist callback for useClickOutside for prevent rerenders on each callback change ([ac08991](https://github.com/eruditorgroup/profi-design-system/commit/ac089913d2b727ef4ebe5415f44c9ea5b78262e7))
-
-# [1.0.0-alpha.47](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-toolkit@1.0.0-alpha.46...@eruditorgroup/profi-toolkit@1.0.0-alpha.47) (2024-08-05)
-
-# 1.0.0-alpha.47 (2024-08-05)
-
-### Features
-
-- [FM-4660] Add 'white' design button, 'lt' text size, 'xxxl' avatar size ([#540](https://github.com/eruditorgroup/profi-design-system/issues/540)) ([9fd48eb](https://github.com/eruditorgroup/profi-design-system/commit/9fd48eb74042a27a656e74ee1beec3d11423f8c1))
-
-# [1.0.0-alpha.46](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-toolkit@1.0.0-alpha.45...@eruditorgroup/profi-toolkit@1.0.0-alpha.46) (2024-06-17)
-
-**Note:** Version bump only for package @eruditorgroup/profi-toolkit
-
-# [1.0.0-alpha.45](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-toolkit@1.0.0-alpha.44...@eruditorgroup/profi-toolkit@1.0.0-alpha.45) (2024-06-17)
-
-**Note:** Version bump only for package @eruditorgroup/profi-toolkit
-
-# [1.0.0-alpha.44](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-toolkit@1.0.0-alpha.43...@eruditorgroup/profi-toolkit@1.0.0-alpha.44) (2024-06-14)
-
-**Note:** Version bump only for package @eruditorgroup/profi-toolkit
-
-# [1.0.0-alpha.43](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-toolkit@1.0.0-alpha.42...@eruditorgroup/profi-toolkit@1.0.0-alpha.43) (2024-06-14)
-
-**Note:** Version bump only for package @eruditorgroup/profi-toolkit
-
-# [1.0.0-alpha.42](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-toolkit@1.0.0-alpha.41...@eruditorgroup/profi-toolkit@1.0.0-alpha.42) (2024-05-14)
-
-**Note:** Version bump only for package @eruditorgroup/profi-toolkit
-
-# [1.0.0-alpha.41](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-toolkit@1.0.0-alpha.40...@eruditorgroup/profi-toolkit@1.0.0-alpha.41) (2024-04-27)
-
-**Note:** Version bump only for package @eruditorgroup/profi-toolkit
-
-# [1.0.0-alpha.40](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-toolkit@1.0.0-alpha.39...@eruditorgroup/profi-toolkit@1.0.0-alpha.40) (2024-01-22)
-
-**Note:** Version bump only for package @eruditorgroup/profi-toolkit
-
-# [1.0.0-alpha.39](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-toolkit@1.0.0-alpha.38...@eruditorgroup/profi-toolkit@1.0.0-alpha.39) (2023-12-26)
-
-**Note:** Version bump only for package @eruditorgroup/profi-toolkit
-
-# [1.0.0-alpha.38](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-toolkit@1.0.0-alpha.37...@eruditorgroup/profi-toolkit@1.0.0-alpha.38) (2023-12-04)
-
-### Features
-
-- **toolkit:** Added timers to useClickOutside for correct behavior in React 18 ([e48b36c](https://github.com/eruditorgroup/profi-design-system/commit/e48b36c27fc3b15d03b95f70678046792e6f274d))
-
-# [1.0.0-alpha.37](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-toolkit@1.0.0-alpha.36...@eruditorgroup/profi-toolkit@1.0.0-alpha.37) (2023-11-30)
-
-### Features
-
-- **icons, toolkit, ui:** Added PropsWithChildren for React 18 capability ([794920a](https://github.com/eruditorgroup/profi-design-system/commit/794920a6e6a9ce40414a4619f5f2a79fbf3bccd8))
-
-# [1.0.0-alpha.36](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-toolkit@1.0.0-alpha.35...@eruditorgroup/profi-toolkit@1.0.0-alpha.36) (2023-10-26)
-
-**Note:** Version bump only for package @eruditorgroup/profi-toolkit
-
-# [1.0.0-alpha.35](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-toolkit@1.0.0-alpha.34...@eruditorgroup/profi-toolkit@1.0.0-alpha.35) (2023-06-07)
+## [0.62.7](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-toolkit@0.62.6...@eruditorgroup/profi-toolkit@0.62.7) (2025-08-15)
 
 ### Bug Fixes
 
-- PRFR-2781 letterspacing for 5xl size ([3a0f211](https://github.com/eruditorgroup/profi-design-system/commit/3a0f21188f4b034983f32dbaa788378b7e6b535b))
+- [UIKIT-477] Replace hardcoded colors ([30265f9](https://github.com/eruditorgroup/profi-design-system/commit/30265f95ecb8c894b523761ac5a2d4f757683289))
 
-# [1.0.0-alpha.34](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-toolkit@1.0.0-alpha.33...@eruditorgroup/profi-toolkit@1.0.0-alpha.34) (2022-06-06)
+## [0.62.6](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-toolkit@0.62.5...@eruditorgroup/profi-toolkit@0.62.6) (2025-07-21)
+
+**Note:** Version bump only for package @eruditorgroup/profi-toolkit
+
+## [0.62.5](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-toolkit@0.62.1...@eruditorgroup/profi-toolkit@0.62.5) (2025-06-25)
+
+# 1.0.0-alpha.62 (2025-06-10)
+
+**Note:** Version bump only for package @eruditorgroup/profi-toolkit
+
+## [0.62.4](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-toolkit@0.62.1...@eruditorgroup/profi-toolkit@0.62.4) (2025-06-23)
+
+# 1.0.0-alpha.62 (2025-06-10)
+
+**Note:** Version bump only for package @eruditorgroup/profi-toolkit
+
+## [0.62.3](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-toolkit@0.62.1...@eruditorgroup/profi-toolkit@0.62.3) (2025-06-10)
+
+**Note:** Version bump only for package @eruditorgroup/profi-toolkit
+
+## [0.62.2](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-toolkit@0.62.1...@eruditorgroup/profi-toolkit@0.62.2) (2025-05-22)
+
+**Note:** Version bump only for package @eruditorgroup/profi-toolkit
+
+## [0.62.1](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-toolkit@0.62.0...@eruditorgroup/profi-toolkit@0.62.1) (2025-05-21)
+
+**Note:** Version bump only for package @eruditorgroup/profi-toolkit
+
+# [0.62.0](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-toolkit@0.61.27...@eruditorgroup/profi-toolkit@0.62.0) (2025-04-21)
+
+### Features
+
+- **ui:** Fixed hydration error of Price component ([19c40f4](https://github.com/eruditorgroup/profi-design-system/commit/19c40f4c5bd1c9b0e1c96c7adf32227ad6c71f40))
+
+## 0.33.61 (2025-03-28)
 
 ### Bug Fixes
 
-- удалили лишнюю инфу из changelog ([8178c93](https://github.com/eruditorgroup/profi-design-system/commit/8178c93df0bb5de03cc41d80f69b53b2877b97a8))
+- [FM-5223] fix error when el is empty ([#635](https://github.com/eruditorgroup/profi-design-system/issues/635)) ([0ea6877](https://github.com/eruditorgroup/profi-design-system/commit/0ea687756ee073741e2dbad344e1638933beedbe))
+
+## [0.61.28](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-toolkit@0.61.27...@eruditorgroup/profi-toolkit@0.61.28) (2025-03-28)
+
+## 0.33.61 (2025-03-28)
+
+### Bug Fixes
+
+- [FM-5223] fix error when el is empty ([#635](https://github.com/eruditorgroup/profi-design-system/issues/635)) ([0ea6877](https://github.com/eruditorgroup/profi-design-system/commit/0ea687756ee073741e2dbad344e1638933beedbe))
+
+## [0.61.27](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-toolkit@0.61.26...@eruditorgroup/profi-toolkit@0.61.27) (2025-03-12)
+
+**Note:** Version bump only for package @eruditorgroup/profi-toolkit
+
+## [0.61.26](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-toolkit@0.61.25...@eruditorgroup/profi-toolkit@0.61.26) (2025-03-07)
+
+**Note:** Version bump only for package @eruditorgroup/profi-toolkit
+
+## [0.61.25](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-toolkit@0.61.24...@eruditorgroup/profi-toolkit@0.61.25) (2025-03-05)
+
+**Note:** Version bump only for package @eruditorgroup/profi-toolkit
+
+## [0.61.24](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-toolkit@0.61.20...@eruditorgroup/profi-toolkit@0.61.24) (2025-03-04)
+
+**Note:** Version bump only for package @eruditorgroup/profi-toolkit
+
+## [0.61.23](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-toolkit@0.61.20...@eruditorgroup/profi-toolkit@0.61.23) (2025-02-20)
+
+**Note:** Version bump only for package @eruditorgroup/profi-toolkit
+
+## [0.61.22](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-toolkit@0.61.20...@eruditorgroup/profi-toolkit@0.61.22) (2025-02-18)
+
+**Note:** Version bump only for package @eruditorgroup/profi-toolkit
+
+## [0.61.21](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-toolkit@0.61.20...@eruditorgroup/profi-toolkit@0.61.21) (2025-02-14)
+
+**Note:** Version bump only for package @eruditorgroup/profi-toolkit
+
+## [0.61.20](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-toolkit@0.61.18...@eruditorgroup/profi-toolkit@0.61.20) (2025-02-14)
+
+**Note:** Version bump only for package @eruditorgroup/profi-toolkit
+
+## [0.61.19](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-toolkit@0.61.18...@eruditorgroup/profi-toolkit@0.61.19) (2025-01-29)
+
+**Note:** Version bump only for package @eruditorgroup/profi-toolkit
+
+## [0.61.18](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-toolkit@0.61.15...@eruditorgroup/profi-toolkit@0.61.18) (2025-01-28)
+
+## 0.33.48 (2025-01-21)
+
+**Note:** Version bump only for package @eruditorgroup/profi-toolkit
+
+## [0.61.17](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-toolkit@0.61.15...@eruditorgroup/profi-toolkit@0.61.17) (2025-01-21)
+
+## 0.33.48 (2025-01-21)
+
+**Note:** Version bump only for package @eruditorgroup/profi-toolkit
+
+## [0.61.16](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-toolkit@0.61.15...@eruditorgroup/profi-toolkit@0.61.16) (2024-12-26)
+
+**Note:** Version bump only for package @eruditorgroup/profi-toolkit
+
+## [0.61.15](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-toolkit@0.61.9...@eruditorgroup/profi-toolkit@0.61.15) (2024-12-19)
+
+## 0.33.45 (2024-12-10)
+
+# 1.0.0-alpha.55 (2024-12-06)
+
+# 1.0.0-alpha.54 (2024-12-06)
+
+**Note:** Version bump only for package @eruditorgroup/profi-toolkit
+
+## [0.61.14](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-toolkit@0.61.9...@eruditorgroup/profi-toolkit@0.61.14) (2024-12-10)
+
+## 0.33.45 (2024-12-10)
+
+# 1.0.0-alpha.55 (2024-12-06)
+
+# 1.0.0-alpha.54 (2024-12-06)
+
+**Note:** Version bump only for package @eruditorgroup/profi-toolkit
+
+## [0.61.13](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-toolkit@0.61.9...@eruditorgroup/profi-toolkit@0.61.13) (2024-12-06)
+
+# 1.0.0-alpha.55 (2024-12-06)
+
+# 1.0.0-alpha.54 (2024-12-06)
+
+**Note:** Version bump only for package @eruditorgroup/profi-toolkit
+
+## [0.61.12](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-toolkit@0.61.9...@eruditorgroup/profi-toolkit@0.61.12) (2024-12-06)
+
+# 1.0.0-alpha.54 (2024-12-06)
+
+**Note:** Version bump only for package @eruditorgroup/profi-toolkit
+
+## [0.61.11](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-toolkit@0.61.9...@eruditorgroup/profi-toolkit@0.61.11) (2024-12-06)
+
+**Note:** Version bump only for package @eruditorgroup/profi-toolkit
+
+## [0.61.10](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-toolkit@0.61.9...@eruditorgroup/profi-toolkit@0.61.10) (2024-11-28)
+
+**Note:** Version bump only for package @eruditorgroup/profi-toolkit
+
+## [0.61.9](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-toolkit@0.61.7...@eruditorgroup/profi-toolkit@0.61.9) (2024-11-27)
+
+**Note:** Version bump only for package @eruditorgroup/profi-toolkit
+
+## [0.61.8](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-toolkit@0.61.7...@eruditorgroup/profi-toolkit@0.61.8) (2024-11-26)
+
+**Note:** Version bump only for package @eruditorgroup/profi-toolkit
+
+## [0.61.7](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-toolkit@0.61.6...@eruditorgroup/profi-toolkit@0.61.7) (2024-11-06)
+
+**Note:** Version bump only for package @eruditorgroup/profi-toolkit
+
+## [0.61.6](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-toolkit@0.61.5...@eruditorgroup/profi-toolkit@0.61.6) (2024-11-05)
+
+**Note:** Version bump only for package @eruditorgroup/profi-toolkit
+
+## [0.61.5](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-toolkit@0.61.4...@eruditorgroup/profi-toolkit@0.61.5) (2024-10-31)
+
+**Note:** Version bump only for package @eruditorgroup/profi-toolkit
+
+## [0.61.4](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-toolkit@0.61.3...@eruditorgroup/profi-toolkit@0.61.4) (2024-10-18)
+
+**Note:** Version bump only for package @eruditorgroup/profi-toolkit
+
+## [0.61.3](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-toolkit@0.61.0...@eruditorgroup/profi-toolkit@0.61.3) (2024-10-04)
+
+**Note:** Version bump only for package @eruditorgroup/profi-toolkit
+
+## [0.61.2](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-toolkit@0.61.0...@eruditorgroup/profi-toolkit@0.61.2) (2024-09-24)
+
+**Note:** Version bump only for package @eruditorgroup/profi-toolkit
+
+## [0.61.1](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-toolkit@0.61.0...@eruditorgroup/profi-toolkit@0.61.1) (2024-09-23)
+
+**Note:** Version bump only for package @eruditorgroup/profi-toolkit
+
+# [0.61.0](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-toolkit@0.60.0...@eruditorgroup/profi-toolkit@0.61.0) (2024-09-13)
+
+### Features
+
+- **toolkit:** Revert useClickOutside changes ([5e0a149](https://github.com/eruditorgroup/profi-design-system/commit/5e0a149bf8f40c0b1ccdac7bbe486beb22c0cf1b))
+
+# [0.60.0](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-toolkit@0.59.0...@eruditorgroup/profi-toolkit@0.60.0) (2024-09-12)
+
+### Features
+
+- **toolkit:** Fixed condition bug ([b1ec948](https://github.com/eruditorgroup/profi-design-system/commit/b1ec948ad800c1e9f9426662d91aba3370c1d02e))
+
+## [0.59.1](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-toolkit@0.59.0...@eruditorgroup/profi-toolkit@0.59.1) (2024-09-11)
+
+**Note:** Version bump only for package @eruditorgroup/profi-toolkit
+
+# [0.59.0](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-toolkit@0.58.6...@eruditorgroup/profi-toolkit@0.59.0) (2024-09-06)
+
+### Features
+
+- **toolkit:** Added persist callback for useClickOutside for prevent rerenders on each callback change ([5fca249](https://github.com/eruditorgroup/profi-design-system/commit/5fca2490b0a8daa0a9b88efee8bb64ee7a8d24e3))
+
+## [0.58.6](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-toolkit@0.58.5...@eruditorgroup/profi-toolkit@0.58.6) (2024-09-03)
+
+**Note:** Version bump only for package @eruditorgroup/profi-toolkit
+
+## [0.58.5](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-toolkit@0.58.4...@eruditorgroup/profi-toolkit@0.58.5) (2024-09-03)
+
+**Note:** Version bump only for package @eruditorgroup/profi-toolkit
+
+## [0.58.4](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-toolkit@0.58.2...@eruditorgroup/profi-toolkit@0.58.4) (2024-09-03)
+
+**Note:** Version bump only for package @eruditorgroup/profi-toolkit
+
+## [0.58.3](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-toolkit@0.58.2...@eruditorgroup/profi-toolkit@0.58.3) (2024-08-28)
+
+**Note:** Version bump only for package @eruditorgroup/profi-toolkit
+
+## [0.58.2](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-toolkit@0.58.1...@eruditorgroup/profi-toolkit@0.58.2) (2024-08-22)
+
+**Note:** Version bump only for package @eruditorgroup/profi-toolkit
+
+## [0.58.1](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-toolkit@0.58.0...@eruditorgroup/profi-toolkit@0.58.1) (2024-08-05)
+
+**Note:** Version bump only for package @eruditorgroup/profi-toolkit
+
+# [0.58.0](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-toolkit@0.57.7...@eruditorgroup/profi-toolkit@0.58.0) (2024-08-02)
+
+## 0.33.21 (2024-08-02)
+
+### Features
+
+- [FM-4660] Add white design button, lt text size, xxxl avatar size ([#538](https://github.com/eruditorgroup/profi-design-system/issues/538)) ([e207697](https://github.com/eruditorgroup/profi-design-system/commit/e2076973b301c65a93eb39b91866f59e7e115b64))
+
+## [0.57.7](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-toolkit@0.57.6...@eruditorgroup/profi-toolkit@0.57.7) (2024-06-18)
+
+**Note:** Version bump only for package @eruditorgroup/profi-toolkit
+
+## [0.57.6](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-toolkit@0.57.5...@eruditorgroup/profi-toolkit@0.57.6) (2024-06-14)
+
+**Note:** Version bump only for package @eruditorgroup/profi-toolkit
+
+## [0.57.5](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-toolkit@0.57.4...@eruditorgroup/profi-toolkit@0.57.5) (2024-06-14)
+
+**Note:** Version bump only for package @eruditorgroup/profi-toolkit
+
+## [0.57.4](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-toolkit@0.57.3...@eruditorgroup/profi-toolkit@0.57.4) (2024-05-14)
+
+**Note:** Version bump only for package @eruditorgroup/profi-toolkit
+
+## [0.57.3](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-toolkit@0.57.2...@eruditorgroup/profi-toolkit@0.57.3) (2024-04-27)
+
+**Note:** Version bump only for package @eruditorgroup/profi-toolkit
+
+## [0.57.2](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-toolkit@0.57.1...@eruditorgroup/profi-toolkit@0.57.2) (2024-01-22)
+
+**Note:** Version bump only for package @eruditorgroup/profi-toolkit
+
+## [0.57.1](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-toolkit@0.57.0...@eruditorgroup/profi-toolkit@0.57.1) (2023-12-26)
+
+**Note:** Version bump only for package @eruditorgroup/profi-toolkit
+
+# [0.57.0](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-toolkit@0.56.0...@eruditorgroup/profi-toolkit@0.57.0) (2023-12-04)
+
+### Features
+
+- **toolkit:** Added timers to useClickOutside for correct behavior in React 18 ([3c90ebd](https://github.com/eruditorgroup/profi-design-system/commit/3c90ebdf7ce2159986a3f1c94f82426efeecce9c))
+
+# [0.56.0](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-toolkit@0.55.1...@eruditorgroup/profi-toolkit@0.56.0) (2023-11-30)
+
+### Features
+
+- **icons, toolkit, ui:** Added PropsWithChildren for React 18 capability ([8d87fe1](https://github.com/eruditorgroup/profi-design-system/commit/8d87fe1d97d581f5bdd530ba670324644872d061))
+
+## [0.55.1](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-toolkit@0.55.0...@eruditorgroup/profi-toolkit@0.55.1) (2023-10-26)
+
+**Note:** Version bump only for package @eruditorgroup/profi-toolkit
+
+# [0.55.0](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-toolkit@0.52.0...@eruditorgroup/profi-toolkit@0.55.0) (2023-06-08)
+
+### Bug Fixes
+
+- PRFR-2781 letterspacing for 5xl size ([5b39ee1](https://github.com/eruditorgroup/profi-design-system/commit/5b39ee136bf31e61a128621bd73d39747a997f2c))
 
 ### Features
 
@@ -187,207 +323,128 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Features
 
-- +sideEffects: false ([5e5a2a2](https://github.com/eruditorgroup/profi-design-system/commit/5e5a2a2edbde6341a152ba4b3a2996f25e330db8))
 - Gallery переехала в @profi/components ([#462](https://github.com/eruditorgroup/profi-design-system/issues/462)) ([76e5389](https://github.com/eruditorgroup/profi-design-system/commit/76e538910b65535d63cda9ebffca4b2c290b493a))
 
-# [1.0.0-alpha.33](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-toolkit@1.0.0-alpha.32...@eruditorgroup/profi-toolkit@1.0.0-alpha.33) (2022-05-23)
+# [0.54.0](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-toolkit@0.52.0...@eruditorgroup/profi-toolkit@0.54.0) (2022-05-06)
 
-# 1.0.0-alpha.33 (2022-05-23)
+## 0.33.8 (2022-05-06)
 
-**Note:** Version bump only for package @eruditorgroup/profi-toolkit
+### Bug Fixes
 
-# [1.0.0-alpha.32](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-toolkit@1.0.0-alpha.27...@eruditorgroup/profi-toolkit@1.0.0-alpha.32) (2022-05-23)
-
-# 1.0.0-alpha.32 (2022-05-23)
+- **toolkit:** fade transition should hide visiblity ([#468](https://github.com/eruditorgroup/profi-design-system/issues/468)) ([64a75f7](https://github.com/eruditorgroup/profi-design-system/commit/64a75f7541f4bbecdcdaf5aa3b89ff2357e83582))
 
 ### Features
 
-- **ui:** new radius: ml ([#474](https://github.com/eruditorgroup/profi-design-system/issues/474)) ([f6a4d19](https://github.com/eruditorgroup/profi-design-system/commit/f6a4d194d5518454a9b81d90742cc018718ce7fc))
-- +sideEffects: false ([4a1505e](https://github.com/eruditorgroup/profi-design-system/commit/4a1505e8b95f3f5251940535444b0095298fa63d))
-- Gallery переехала в @profi/components ([#462](https://github.com/eruditorgroup/profi-design-system/issues/462)) ([2da9b06](https://github.com/eruditorgroup/profi-design-system/commit/2da9b066cf8b39a301b60ba32dde215879b3b522))
+- Gallery переехала в @profi/components ([#462](https://github.com/eruditorgroup/profi-design-system/issues/462)) ([76e5389](https://github.com/eruditorgroup/profi-design-system/commit/76e538910b65535d63cda9ebffca4b2c290b493a))
 
-# [1.0.0-alpha.31](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-toolkit@1.0.0-alpha.25...@eruditorgroup/profi-toolkit@1.0.0-alpha.31) (2022-04-11)
+# [0.53.0](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-toolkit@0.52.0...@eruditorgroup/profi-toolkit@0.53.0) (2022-05-06)
 
-# 1.0.0-alpha.26 (2022-03-22)
+## 0.33.8 (2022-05-06)
+
+### Bug Fixes
+
+- **toolkit:** fade transition should hide visiblity ([#468](https://github.com/eruditorgroup/profi-design-system/issues/468)) ([64a75f7](https://github.com/eruditorgroup/profi-design-system/commit/64a75f7541f4bbecdcdaf5aa3b89ff2357e83582))
+
+### Features
+
+- Gallery переехала в @profi/components ([#462](https://github.com/eruditorgroup/profi-design-system/issues/462)) ([76e5389](https://github.com/eruditorgroup/profi-design-system/commit/76e538910b65535d63cda9ebffca4b2c290b493a))
+
+# [0.52.0](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-toolkit@0.51.8...@eruditorgroup/profi-toolkit@0.52.0) (2022-05-04)
+
+### Features
+
+- +sideEffects: false ([5e5a2a2](https://github.com/eruditorgroup/profi-design-system/commit/5e5a2a2edbde6341a152ba4b3a2996f25e330db8))
+
+## [0.51.8](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-toolkit@0.51.6...@eruditorgroup/profi-toolkit@0.51.8) (2022-04-11)
 
 ### Bug Fixes
 
 - **toolkit:** Поправил тип рефа в хуке useVisibilitySensor ([e3aed38](https://github.com/eruditorgroup/profi-design-system/commit/e3aed38e5f83585c38fc62f6ece4ae1634d76774))
 
-# [1.0.0-alpha.26](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-toolkit@1.0.0-alpha.25...@eruditorgroup/profi-toolkit@1.0.0-alpha.26) (2022-03-22)
-
-# 1.0.0-alpha.26 (2022-03-22)
+## [0.51.7](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-toolkit@0.51.6...@eruditorgroup/profi-toolkit@0.51.7) (2022-03-22)
 
 ### Bug Fixes
 
 - **toolkit:** Поправил тип рефа в хуке useVisibilitySensor ([e3aed38](https://github.com/eruditorgroup/profi-design-system/commit/e3aed38e5f83585c38fc62f6ece4ae1634d76774))
 
-# [1.0.0-alpha.25](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-toolkit@0.51.6...@eruditorgroup/profi-toolkit@1.0.0-alpha.25) (2022-03-18)
-
-# 1.0.0-alpha.25 (2022-03-18)
-
-# 1.0.0-alpha.21 (2022-02-21)
-
-# 1.0.0-alpha.19 (2022-02-08)
-
-# 1.0.0-alpha.16 (2022-01-12)
-
-# 1.0.0-alpha.13 (2021-12-09)
-
-# 1.0.0-alpha.11 (2021-11-30)
-
-# 1.0.0-alpha.10 (2021-11-30)
-
-# 1.0.0-alpha.8 (2021-11-29)
+## [0.51.6](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-toolkit@0.51.5...@eruditorgroup/profi-toolkit@0.51.6) (2022-03-18)
 
 ### Bug Fixes
 
-- bump versions ([5e4227d](https://github.com/eruditorgroup/profi-design-system/commit/5e4227d8858fa0a8b1d79500eef102da7917d833))
-- bump versions ([a2e80a7](https://github.com/eruditorgroup/profi-design-system/commit/a2e80a7fd90ad50c39d19980036b11de0a4c59a0))
-- bump versions ([a9dcca5](https://github.com/eruditorgroup/profi-design-system/commit/a9dcca573d09a93610932d2a5338d1854a70a0be))
-- bump versions ([a5d6b59](https://github.com/eruditorgroup/profi-design-system/commit/a5d6b590f775b311c4dfa99a982572bd505ffed1))
+- Честный useClickOutside ([23d67f6](https://github.com/eruditorgroup/profi-design-system/commit/23d67f6d6d8152cb2150a84e6a7705972f1aed3e))
 
-# [1.0.0-alpha.24](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-toolkit@0.51.5...@eruditorgroup/profi-toolkit@1.0.0-alpha.24) (2022-03-18)
-
-# 1.0.0-alpha.21 (2022-02-21)
-
-# 1.0.0-alpha.19 (2022-02-08)
-
-# 1.0.0-alpha.16 (2022-01-12)
-
-# 1.0.0-alpha.13 (2021-12-09)
-
-# 1.0.0-alpha.11 (2021-11-30)
-
-# 1.0.0-alpha.10 (2021-11-30)
-
-# 1.0.0-alpha.8 (2021-11-29)
+## [0.51.5](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-toolkit@0.51.4...@eruditorgroup/profi-toolkit@0.51.5) (2022-03-18)
 
 ### Bug Fixes
 
-- bump versions ([5e4227d](https://github.com/eruditorgroup/profi-design-system/commit/5e4227d8858fa0a8b1d79500eef102da7917d833))
-- bump versions ([a2e80a7](https://github.com/eruditorgroup/profi-design-system/commit/a2e80a7fd90ad50c39d19980036b11de0a4c59a0))
-- bump versions ([a9dcca5](https://github.com/eruditorgroup/profi-design-system/commit/a9dcca573d09a93610932d2a5338d1854a70a0be))
-- bump versions ([a5d6b59](https://github.com/eruditorgroup/profi-design-system/commit/a5d6b590f775b311c4dfa99a982572bd505ffed1))
+- useClickOutside dependencies & Modal stop propagation ([49d6193](https://github.com/eruditorgroup/profi-design-system/commit/49d6193e3b3a1b6e3bbdefb8c94991f44ad2dc86))
 
-# [1.0.0-alpha.23](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-toolkit@1.0.0-alpha.22...@eruditorgroup/profi-toolkit@1.0.0-alpha.23) (2022-03-02)
+## [0.51.4](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-toolkit@0.51.3...@eruditorgroup/profi-toolkit@0.51.4) (2022-03-03)
 
 **Note:** Version bump only for package @eruditorgroup/profi-toolkit
 
-# [1.0.0-alpha.22](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-toolkit@0.51.2...@eruditorgroup/profi-toolkit@1.0.0-alpha.22) (2022-03-01)
-
-# 1.0.0-alpha.21 (2022-02-21)
-
-# 1.0.0-alpha.19 (2022-02-08)
-
-# 1.0.0-alpha.16 (2022-01-12)
-
-# 1.0.0-alpha.13 (2021-12-09)
-
-# 1.0.0-alpha.11 (2021-11-30)
-
-# 1.0.0-alpha.10 (2021-11-30)
-
-# 1.0.0-alpha.8 (2021-11-29)
-
-### Bug Fixes
-
-- bump versions ([5e4227d](https://github.com/eruditorgroup/profi-design-system/commit/5e4227d8858fa0a8b1d79500eef102da7917d833))
-- bump versions ([a2e80a7](https://github.com/eruditorgroup/profi-design-system/commit/a2e80a7fd90ad50c39d19980036b11de0a4c59a0))
-- bump versions ([a9dcca5](https://github.com/eruditorgroup/profi-design-system/commit/a9dcca573d09a93610932d2a5338d1854a70a0be))
-- bump versions ([a5d6b59](https://github.com/eruditorgroup/profi-design-system/commit/a5d6b590f775b311c4dfa99a982572bd505ffed1))
-
-# [1.0.0-alpha.21](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-toolkit@0.51.0...@eruditorgroup/profi-toolkit@1.0.0-alpha.21) (2022-02-21)
-
-# 1.0.0-alpha.21 (2022-02-21)
-
-# 1.0.0-alpha.19 (2022-02-08)
-
-# 1.0.0-alpha.16 (2022-01-12)
-
-# 1.0.0-alpha.13 (2021-12-09)
-
-# 1.0.0-alpha.11 (2021-11-30)
-
-# 1.0.0-alpha.10 (2021-11-30)
-
-# 1.0.0-alpha.8 (2021-11-29)
-
-### Bug Fixes
-
-- bump versions ([5e4227d](https://github.com/eruditorgroup/profi-design-system/commit/5e4227d8858fa0a8b1d79500eef102da7917d833))
-- bump versions ([a2e80a7](https://github.com/eruditorgroup/profi-design-system/commit/a2e80a7fd90ad50c39d19980036b11de0a4c59a0))
-- bump versions ([a9dcca5](https://github.com/eruditorgroup/profi-design-system/commit/a9dcca573d09a93610932d2a5338d1854a70a0be))
-- bump versions ([a5d6b59](https://github.com/eruditorgroup/profi-design-system/commit/a5d6b590f775b311c4dfa99a982572bd505ffed1))
-
-# [1.0.0-alpha.20](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-toolkit@1.0.0-alpha.19...@eruditorgroup/profi-toolkit@1.0.0-alpha.20) (2022-02-09)
+## [0.51.3](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-toolkit@0.51.2...@eruditorgroup/profi-toolkit@0.51.3) (2022-03-02)
 
 **Note:** Version bump only for package @eruditorgroup/profi-toolkit
 
-# [1.0.0-alpha.19](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-toolkit@1.0.0-alpha.18...@eruditorgroup/profi-toolkit@1.0.0-alpha.19) (2022-02-08)
-
-# 1.0.0-alpha.19 (2022-02-08)
+## [0.51.2](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-toolkit@0.51.1...@eruditorgroup/profi-toolkit@0.51.2) (2022-02-28)
 
 **Note:** Version bump only for package @eruditorgroup/profi-toolkit
 
-# [1.0.0-alpha.18](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-toolkit@1.0.0-alpha.17...@eruditorgroup/profi-toolkit@1.0.0-alpha.18) (2022-02-07)
+## [0.51.1](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-toolkit@0.51.0...@eruditorgroup/profi-toolkit@0.51.1) (2022-02-28)
 
 **Note:** Version bump only for package @eruditorgroup/profi-toolkit
 
-# [1.0.0-alpha.17](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-toolkit@1.0.0-alpha.15...@eruditorgroup/profi-toolkit@1.0.0-alpha.17) (2022-02-01)
+# [0.51.0](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-toolkit@0.50.6...@eruditorgroup/profi-toolkit@0.51.0) (2022-02-21)
 
-# 1.0.0-alpha.16 (2022-01-12)
+### Features
+
+- **Toolkit:** Добавил хук для отсдеживания видимости элемента ([90f12aa](https://github.com/eruditorgroup/profi-design-system/commit/90f12aaf50706d04097537489299275d08adec2e))
+- **Toolkit:** Перенес хук для получения обсервера ([adb2433](https://github.com/eruditorgroup/profi-design-system/commit/adb24331f60e7206e14a4d2a9745a0595923ca95))
+
+## [0.50.6](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-toolkit@0.50.5...@eruditorgroup/profi-toolkit@0.50.6) (2022-02-16)
+
+**Note:** Version bump only for package @eruditorgroup/profi-toolkit
+
+## [0.50.5](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-toolkit@0.50.4...@eruditorgroup/profi-toolkit@0.50.5) (2022-02-03)
+
+**Note:** Version bump only for package @eruditorgroup/profi-toolkit
+
+## [0.50.4](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-toolkit@0.50.3...@eruditorgroup/profi-toolkit@0.50.4) (2022-02-01)
+
+**Note:** Version bump only for package @eruditorgroup/profi-toolkit
+
+## [0.50.3](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-toolkit@0.50.2...@eruditorgroup/profi-toolkit@0.50.3) (2022-01-27)
+
+**Note:** Version bump only for package @eruditorgroup/profi-toolkit
+
+## [0.50.2](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-toolkit@0.50.1...@eruditorgroup/profi-toolkit@0.50.2) (2022-01-26)
+
+**Note:** Version bump only for package @eruditorgroup/profi-toolkit
+
+## [0.50.1](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-toolkit@0.50.0...@eruditorgroup/profi-toolkit@0.50.1) (2022-01-13)
+
+**Note:** Version bump only for package @eruditorgroup/profi-toolkit
+
+# [0.50.0](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-toolkit@0.49.2...@eruditorgroup/profi-toolkit@0.50.0) (2022-01-11)
 
 ### Features
 
 - **toolkit:** Удалил не нужный бойлерплейт ([94258bd](https://github.com/eruditorgroup/profi-design-system/commit/94258bd6ab9eef53ea7748219fc83f4484d7480b))
 
-# [1.0.0-alpha.16](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-toolkit@1.0.0-alpha.15...@eruditorgroup/profi-toolkit@1.0.0-alpha.16) (2022-01-12)
+## [0.49.2](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-toolkit@0.49.1...@eruditorgroup/profi-toolkit@0.49.2) (2021-12-20)
 
-# 1.0.0-alpha.16 (2022-01-12)
+**Note:** Version bump only for package @eruditorgroup/profi-toolkit
+
+## [0.49.1](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-toolkit@0.49.0...@eruditorgroup/profi-toolkit@0.49.1) (2021-12-14)
+
+**Note:** Version bump only for package @eruditorgroup/profi-toolkit
+
+# [0.49.0](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-toolkit@0.45.0...@eruditorgroup/profi-toolkit@0.49.0) (2021-12-06)
 
 ### Features
 
-- **toolkit:** Удалил не нужный бойлерплейт ([94258bd](https://github.com/eruditorgroup/profi-design-system/commit/94258bd6ab9eef53ea7748219fc83f4484d7480b))
-
-# [1.0.0-alpha.15](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-toolkit@1.0.0-alpha.14...@eruditorgroup/profi-toolkit@1.0.0-alpha.15) (2022-01-11)
-
-**Note:** Version bump only for package @eruditorgroup/profi-toolkit
-
-# [1.0.0-alpha.14](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-toolkit@1.0.0-alpha.13...@eruditorgroup/profi-toolkit@1.0.0-alpha.14) (2021-12-10)
-
-**Note:** Version bump only for package @eruditorgroup/profi-toolkit
-
-# [1.0.0-alpha.13](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-toolkit@0.49.0...@eruditorgroup/profi-toolkit@1.0.0-alpha.13) (2021-12-09)
-
-# 1.0.0-alpha.13 (2021-12-09)
-
-# 1.0.0-alpha.11 (2021-11-30)
-
-# 1.0.0-alpha.10 (2021-11-30)
-
-# 1.0.0-alpha.8 (2021-11-29)
-
-### Bug Fixes
-
-- bump versions ([5e4227d](https://github.com/eruditorgroup/profi-design-system/commit/5e4227d8858fa0a8b1d79500eef102da7917d833))
-- bump versions ([a2e80a7](https://github.com/eruditorgroup/profi-design-system/commit/a2e80a7fd90ad50c39d19980036b11de0a4c59a0))
-- bump versions ([a9dcca5](https://github.com/eruditorgroup/profi-design-system/commit/a9dcca573d09a93610932d2a5338d1854a70a0be))
-- bump versions ([a5d6b59](https://github.com/eruditorgroup/profi-design-system/commit/a5d6b590f775b311c4dfa99a982572bd505ffed1))
-
-# [1.0.0-alpha.12](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-toolkit@1.0.0-alpha.11...@eruditorgroup/profi-toolkit@1.0.0-alpha.12) (2021-12-03)
-
-**Note:** Version bump only for package @eruditorgroup/profi-toolkit
-
-# [1.0.0-alpha.11](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-toolkit@1.0.0-alpha.10...@eruditorgroup/profi-toolkit@1.0.0-alpha.11) (2021-11-30)
-
-# 1.0.0-alpha.11 (2021-11-30)
-
-**Note:** Version bump only for package @eruditorgroup/profi-toolkit
-
-# [1.0.0-alpha.10](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-toolkit@0.45.0...@eruditorgroup/profi-toolkit@1.0.0-alpha.10) (2021-11-30)
-
-# 1.0.0-alpha.10 (2021-11-30)
+- **toolkit:** Add numberLoop util func ([317bffb](https://github.com/eruditorgroup/profi-design-system/commit/317bffb10d0457b100ec721da7e37fab6cbb3564))
 
 ## 0.27.5 (2021-11-30)
 
@@ -395,25 +452,47 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 - **Dropdown:** Закрытие на ESC ([#384](https://github.com/eruditorgroup/profi-design-system/issues/384)) ([c036790](https://github.com/eruditorgroup/profi-design-system/commit/c03679021f97876867aa761de5250fd24804df55))
 
-# 1.0.0-alpha.8 (2021-11-29)
+# [0.48.0](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-toolkit@0.45.0...@eruditorgroup/profi-toolkit@0.48.0) (2021-11-30)
 
-### Bug Fixes
+## 0.27.5 (2021-11-30)
 
-- bump versions ([5e4227d](https://github.com/eruditorgroup/profi-design-system/commit/5e4227d8858fa0a8b1d79500eef102da7917d833))
-- bump versions ([a2e80a7](https://github.com/eruditorgroup/profi-design-system/commit/a2e80a7fd90ad50c39d19980036b11de0a4c59a0))
-- bump versions ([a9dcca5](https://github.com/eruditorgroup/profi-design-system/commit/a9dcca573d09a93610932d2a5338d1854a70a0be))
-- bump versions ([a5d6b59](https://github.com/eruditorgroup/profi-design-system/commit/a5d6b590f775b311c4dfa99a982572bd505ffed1))
+### Features
 
-# [1.0.0-alpha.9](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-toolkit@0.41.10...@eruditorgroup/profi-toolkit@1.0.0-alpha.9) (2021-11-29)
+- **Dropdown:** Закрытие на ESC ([#384](https://github.com/eruditorgroup/profi-design-system/issues/384)) ([c036790](https://github.com/eruditorgroup/profi-design-system/commit/c03679021f97876867aa761de5250fd24804df55))
 
-# 1.0.0-alpha.8 (2021-11-29)
+# [0.47.0](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-toolkit@0.45.0...@eruditorgroup/profi-toolkit@0.47.0) (2021-11-30)
 
-### Bug Fixes
+## 0.27.5 (2021-11-30)
 
-- bump versions ([5e4227d](https://github.com/eruditorgroup/profi-design-system/commit/5e4227d8858fa0a8b1d79500eef102da7917d833))
-- bump versions ([a2e80a7](https://github.com/eruditorgroup/profi-design-system/commit/a2e80a7fd90ad50c39d19980036b11de0a4c59a0))
-- bump versions ([a9dcca5](https://github.com/eruditorgroup/profi-design-system/commit/a9dcca573d09a93610932d2a5338d1854a70a0be))
-- bump versions ([a5d6b59](https://github.com/eruditorgroup/profi-design-system/commit/a5d6b590f775b311c4dfa99a982572bd505ffed1))
+### Features
+
+- **Dropdown:** Закрытие на ESC ([#384](https://github.com/eruditorgroup/profi-design-system/issues/384)) ([c036790](https://github.com/eruditorgroup/profi-design-system/commit/c03679021f97876867aa761de5250fd24804df55))
+
+# [0.46.0](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-toolkit@0.45.0...@eruditorgroup/profi-toolkit@0.46.0) (2021-11-30)
+
+## 0.27.5 (2021-11-30)
+
+### Features
+
+- **Dropdown:** Закрытие на ESC ([#384](https://github.com/eruditorgroup/profi-design-system/issues/384)) ([c036790](https://github.com/eruditorgroup/profi-design-system/commit/c03679021f97876867aa761de5250fd24804df55))
+
+# [0.45.0](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-toolkit@0.41.10...@eruditorgroup/profi-toolkit@0.45.0) (2021-11-29)
+
+### Features
+
+- **List:** Добавлен skeleton ([748f1e4](https://github.com/eruditorgroup/profi-design-system/commit/748f1e49a7109c868476b95ae56353c01a8f90b5))
+
+# [0.44.0](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-toolkit@0.41.10...@eruditorgroup/profi-toolkit@0.44.0) (2021-11-29)
+
+### Features
+
+- **List:** Добавлен skeleton ([748f1e4](https://github.com/eruditorgroup/profi-design-system/commit/748f1e49a7109c868476b95ae56353c01a8f90b5))
+
+# [0.43.0](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-toolkit@0.41.10...@eruditorgroup/profi-toolkit@0.43.0) (2021-11-29)
+
+**Note:** Version bump only for package @eruditorgroup/profi-toolkit
+
+# [0.42.0](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-toolkit@0.41.10...@eruditorgroup/profi-toolkit@0.42.0) (2021-11-29)
 
 ### Features
 

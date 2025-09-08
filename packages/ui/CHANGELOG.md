@@ -3,228 +3,521 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
-# 1.0.0-alpha.71
+## 0.92.0
 
-- [UIKIT-397] Update colors and typography to match new design system
+**Note:** Manual version bump
 
-# [1.0.0-alpha.69](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@1.0.0-alpha.67...@eruditorgroup/profi-ui@1.0.0-alpha.69) (2025-08-26)
+# [0.91.0](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.90.1...@eruditorgroup/profi-ui@0.91.0) (2025-08-27)
 
 ### Features
 
-- [UIKIT-490] Update Modal background color ([66729ad](https://github.com/eruditorgroup/profi-design-system/commit/66729ad51df803f3ce478a8913805577f6f94e87))
+- [UIKIT-490] Update Modal background color ([fb822a0](https://github.com/eruditorgroup/profi-design-system/commit/fb822a0cf0c030350f124e95bacf98c20c9fac6a))
 
-# 1.0.0-alpha.68 (2025-08-19)
-
-### Bug Fixes
-
-- [PRFR-4434] fix modal scroll on iOS Safari ([#667](https://github.com/eruditorgroup/profi-design-system/issues/667)) ([783e9b4](https://github.com/eruditorgroup/profi-design-system/commit/783e9b4ac5b61d96f5ca910498b28ae88616ca3e))
-
-# [1.0.0-alpha.68](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@1.0.0-alpha.67...@eruditorgroup/profi-ui@1.0.0-alpha.68) (2025-08-19)
-
-# 1.0.0-alpha.68 (2025-08-19)
+## 0.33.69 (2025-08-19)
 
 ### Bug Fixes
 
-- [PRFR-4434] fix modal scroll on iOS Safari ([#667](https://github.com/eruditorgroup/profi-design-system/issues/667)) ([783e9b4](https://github.com/eruditorgroup/profi-design-system/commit/783e9b4ac5b61d96f5ca910498b28ae88616ca3e))
+- [PRFR-4434] fix modal scroll on iOS Safari ([#667](https://github.com/eruditorgroup/profi-design-system/issues/667)) ([7551749](https://github.com/eruditorgroup/profi-design-system/commit/7551749d63f77c4e33bb73d2b5237f468b5a9e29))
 
-# [1.0.0-alpha.67](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@1.0.0-alpha.66...@eruditorgroup/profi-ui@1.0.0-alpha.67) (2025-08-15)
+## [0.90.2](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.90.1...@eruditorgroup/profi-ui@0.90.2) (2025-08-19)
 
-# 1.0.0-alpha.67 (2025-08-15)
-
-### Bug Fixes
-
-- [FP-1978] add compatibility for react 19 ([0920105](https://github.com/eruditorgroup/profi-design-system/commit/092010590ac736550c9b430fc17dc62c442e73ae))
-
-# [1.0.0-alpha.66](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@1.0.0-alpha.65...@eruditorgroup/profi-ui@1.0.0-alpha.66) (2025-07-23)
+## 0.33.69 (2025-08-19)
 
 ### Bug Fixes
 
-- [UIKIT-477] Replace hardcoded colors ([5ad0e78](https://github.com/eruditorgroup/profi-design-system/commit/5ad0e78f3c4179e8c8ef80e3e76c0e8af5cad548))
+- [PRFR-4434] fix modal scroll on iOS Safari ([#667](https://github.com/eruditorgroup/profi-design-system/issues/667)) ([7551749](https://github.com/eruditorgroup/profi-design-system/commit/7551749d63f77c4e33bb73d2b5237f468b5a9e29))
 
-# [1.0.0-alpha.65](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@1.0.0-alpha.64...@eruditorgroup/profi-ui@1.0.0-alpha.65) (2025-07-23)
+## [0.90.1](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.90.0...@eruditorgroup/profi-ui@0.90.1) (2025-08-15)
+
+### Bug Fixes
+
+- [FP-1978] add compatibility for react 19 ([7db02d9](https://github.com/eruditorgroup/profi-design-system/commit/7db02d96738fee18569740dae8d6d84c2b5269c1))
+- [UIKIT-477] Replace hardcoded colors ([30265f9](https://github.com/eruditorgroup/profi-design-system/commit/30265f95ecb8c894b523761ac5a2d4f757683289))
+
+# [0.90.0](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.89.0...@eruditorgroup/profi-ui@0.90.0) (2025-07-21)
+
+### Features
+
+- [NO-TASK] add linkShmid to ExpandableBlock ([dc943aa](https://github.com/eruditorgroup/profi-design-system/commit/dc943aa22dc9ce8610034b9061b7223a067b7b1d))
+
+# [0.89.0](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.88.0...@eruditorgroup/profi-ui@0.89.0) (2025-06-25)
+
+## 0.33.66 (2025-06-25)
+
+### Features
+
+- [PRFR-4540] avatar 4xl size ([#650](https://github.com/eruditorgroup/profi-design-system/issues/650)) ([e2a26c7](https://github.com/eruditorgroup/profi-design-system/commit/e2a26c755774f26e502b65c8aee0b40d1fe44216))
+
+# 1.0.0-alpha.62 (2025-06-10)
+
+## 0.33.65 (2025-06-10)
+
+### Bug Fixes
+
+- [FM-5475] add overlayClassName to BottomSheet ([#646](https://github.com/eruditorgroup/profi-design-system/issues/646)) ([2dc3303](https://github.com/eruditorgroup/profi-design-system/commit/2dc330304a92908e97dad293e798ff056c53ead1))
+
+## 0.33.64 (2025-05-22)
+
+### Bug Fixes
+
+- [FM-5396] add overlayClassName, rootClassName to Modal ([440bb47](https://github.com/eruditorgroup/profi-design-system/commit/440bb47e729e201336538d38d8616b29e347d5c0))
+
+## [0.88.3](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.88.0...@eruditorgroup/profi-ui@0.88.3) (2025-06-23)
+
+# 1.0.0-alpha.62 (2025-06-10)
+
+## 0.33.65 (2025-06-10)
+
+### Bug Fixes
+
+- [FM-5475] add overlayClassName to BottomSheet ([#646](https://github.com/eruditorgroup/profi-design-system/issues/646)) ([2dc3303](https://github.com/eruditorgroup/profi-design-system/commit/2dc330304a92908e97dad293e798ff056c53ead1))
+
+## 0.33.64 (2025-05-22)
+
+### Bug Fixes
+
+- [FM-5396] add overlayClassName, rootClassName to Modal ([440bb47](https://github.com/eruditorgroup/profi-design-system/commit/440bb47e729e201336538d38d8616b29e347d5c0))
+
+## [0.88.2](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.88.0...@eruditorgroup/profi-ui@0.88.2) (2025-06-10)
+
+## 0.33.65 (2025-06-10)
+
+### Bug Fixes
+
+- [FM-5475] add overlayClassName to BottomSheet ([#646](https://github.com/eruditorgroup/profi-design-system/issues/646)) ([2dc3303](https://github.com/eruditorgroup/profi-design-system/commit/2dc330304a92908e97dad293e798ff056c53ead1))
+
+## 0.33.64 (2025-05-22)
+
+### Bug Fixes
+
+- [FM-5396] add overlayClassName, rootClassName to Modal ([440bb47](https://github.com/eruditorgroup/profi-design-system/commit/440bb47e729e201336538d38d8616b29e347d5c0))
+
+## [0.88.1](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.88.0...@eruditorgroup/profi-ui@0.88.1) (2025-05-22)
+
+## 0.33.64 (2025-05-22)
+
+### Bug Fixes
+
+- [FM-5396] add overlayClassName, rootClassName to Modal ([440bb47](https://github.com/eruditorgroup/profi-design-system/commit/440bb47e729e201336538d38d8616b29e347d5c0))
+
+# [0.88.0](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.87.0...@eruditorgroup/profi-ui@0.88.0) (2025-05-21)
+
+### Features
+
+- [FM-5300] Поддержка rootClassName для BottomSheet ([9543245](https://github.com/eruditorgroup/profi-design-system/commit/9543245647ae9c789765a5ea1389c54162d571cf))
+
+# [0.87.0](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.86.3...@eruditorgroup/profi-ui@0.87.0) (2025-04-21)
+
+### Features
+
+- **ui:** Fixed hydration error of Price component ([19c40f4](https://github.com/eruditorgroup/profi-design-system/commit/19c40f4c5bd1c9b0e1c96c7adf32227ad6c71f40))
+
+## [0.86.4](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.86.3...@eruditorgroup/profi-ui@0.86.4) (2025-03-28)
 
 **Note:** Version bump only for package @eruditorgroup/profi-ui
 
-# [1.0.0-alpha.64](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@1.0.0-alpha.63...@eruditorgroup/profi-ui@1.0.0-alpha.64) (2025-07-21)
-
-# 1.0.0-alpha.64 (2025-07-21)
-
-### Features
-
-- [NO-TASK] add linkShmid to ExpandableBlock ([6e3f4f0](https://github.com/eruditorgroup/profi-design-system/commit/6e3f4f0b44c3379974a9d5bbe0105092c7337872))
-
-# [1.0.0-alpha.63](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@1.0.0-alpha.61...@eruditorgroup/profi-ui@1.0.0-alpha.63) (2025-06-26)
-
-# 1.0.0-alpha.63 (2025-06-25)
-
-### Features
-
-- [FM-5520] changes from master ([#649](https://github.com/eruditorgroup/profi-design-system/issues/649)) ([3189340](https://github.com/eruditorgroup/profi-design-system/commit/3189340e535c8a883174813f22854981ded5ea8a))
-- [PRFR-4540] avatar 4xl size ([#650](https://github.com/eruditorgroup/profi-design-system/issues/650)) ([7253bbc](https://github.com/eruditorgroup/profi-design-system/commit/7253bbccef4f6a18dbfbf92628724e18d152ce53))
-
-# [1.0.0-alpha.62](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@1.0.0-alpha.61...@eruditorgroup/profi-ui@1.0.0-alpha.62) (2025-06-25)
-
-# 1.0.0-alpha.63 (2025-06-25)
-
-### Features
-
-- [FM-5520] changes from master ([#649](https://github.com/eruditorgroup/profi-design-system/issues/649)) ([3189340](https://github.com/eruditorgroup/profi-design-system/commit/3189340e535c8a883174813f22854981ded5ea8a))
-
-# [1.0.0-alpha.61](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@1.0.0-alpha.51...@eruditorgroup/profi-ui@1.0.0-alpha.61) (2025-04-21)
-
-### Features
-
-- **ui:** Fixed hydration error of Price component ([18a7b0a](https://github.com/eruditorgroup/profi-design-system/commit/18a7b0a31dbae0f9799bbe2637f94b67f7df8678))
-
-# 1.0.0-alpha.60 (2025-01-29)
-
-### Bug Fixes
-
-- [FM-5013] fix modal closing when swipeDownToClose is enabled ([#614](https://github.com/eruditorgroup/profi-design-system/issues/614)) ([#616](https://github.com/eruditorgroup/profi-design-system/issues/616)) ([e62ffb5](https://github.com/eruditorgroup/profi-design-system/commit/e62ffb5d0bff345ed2173b9146511751bf97b19f))
-
-### Features
-
-- **ui:** Remove margins and cyclic imports ([f2073e0](https://github.com/eruditorgroup/profi-design-system/commit/f2073e0572845e79dcb052d219ffdb6241d6f273))
-
-# 1.0.0-alpha.58 (2024-12-10)
-
-# [1.0.0-alpha.60](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@1.0.0-alpha.51...@eruditorgroup/profi-ui@1.0.0-alpha.60) (2025-01-29)
-
-# 1.0.0-alpha.60 (2025-01-29)
-
-### Bug Fixes
-
-- [FM-5013] fix modal closing when swipeDownToClose is enabled ([#614](https://github.com/eruditorgroup/profi-design-system/issues/614)) ([#616](https://github.com/eruditorgroup/profi-design-system/issues/616)) ([e62ffb5](https://github.com/eruditorgroup/profi-design-system/commit/e62ffb5d0bff345ed2173b9146511751bf97b19f))
-
-### Features
-
-- **ui:** Remove margins and cyclic imports ([f2073e0](https://github.com/eruditorgroup/profi-design-system/commit/f2073e0572845e79dcb052d219ffdb6241d6f273))
-
-# 1.0.0-alpha.58 (2024-12-10)
-
-# [1.0.0-alpha.59](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@1.0.0-alpha.51...@eruditorgroup/profi-ui@1.0.0-alpha.54) (2024-12-24)
-
-### Features
-
-- **ui:** Remove margins and cyclic imports ([f2073e0](https://github.com/eruditorgroup/profi-design-system/commit/f2073e0572845e79dcb052d219ffdb6241d6f273))
-
-# 1.0.0-alpha.58 (2024-12-10)
-
-# [1.0.0-alpha.53](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@1.0.0-alpha.51...@eruditorgroup/profi-ui@1.0.0-alpha.53) (2024-12-10)
-
-# 1.0.0-alpha.58 (2024-12-10)
+## [0.86.3](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.86.2...@eruditorgroup/profi-ui@0.86.3) (2025-03-12)
 
 **Note:** Version bump only for package @eruditorgroup/profi-ui
 
-# [1.0.0-alpha.52](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@1.0.0-alpha.51...@eruditorgroup/profi-ui@1.0.0-alpha.52) (2024-12-09)
+## [0.86.2](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.86.1...@eruditorgroup/profi-ui@0.86.2) (2025-03-07)
 
 **Note:** Version bump only for package @eruditorgroup/profi-ui
 
-# [1.0.0-alpha.51](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@1.0.0-alpha.50...@eruditorgroup/profi-ui@1.0.0-alpha.51) (2024-11-28)
-
-### Bug Fixes
-
-- **PhoneInput:** поправил маску финских номеров ([12d9712](https://github.com/eruditorgroup/profi-design-system/commit/12d9712dfe6481e5eea82583292026a4de482ee6))
-
-# [1.0.0-alpha.50](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@1.0.0-alpha.49...@eruditorgroup/profi-ui@1.0.0-alpha.50) (2024-09-13)
+## [0.86.1](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.86.0...@eruditorgroup/profi-ui@0.86.1) (2025-03-05)
 
 **Note:** Version bump only for package @eruditorgroup/profi-ui
 
-# [1.0.0-alpha.49](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@1.0.0-alpha.48...@eruditorgroup/profi-ui@1.0.0-alpha.49) (2024-09-12)
+# [0.86.0](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.82.2...@eruditorgroup/profi-ui@0.86.0) (2025-03-04)
+
+## 0.33.54 (2025-02-20)
+
+### Bug Fixes
+
+- [FM-5098] fix types for Badge component and invalid props in icons ([#624](https://github.com/eruditorgroup/profi-design-system/issues/624)) ([7d4683f](https://github.com/eruditorgroup/profi-design-system/commit/7d4683f10b4c33b3d3281a96b8c5717ddb77dcb2))
+
+## 0.33.53 (2025-02-18)
+
+### Features
+
+- [FM-5098] add Badge component and new icons ([#622](https://github.com/eruditorgroup/profi-design-system/issues/622)) ([85b944b](https://github.com/eruditorgroup/profi-design-system/commit/85b944b4a03394ae4627d39bd641df492f72797e))
+
+## 0.33.52 (2025-02-14)
+
+### Features
+
+- [FM-5099] add animationClassNames to Modal ([#620](https://github.com/eruditorgroup/profi-design-system/issues/620)) ([8354fbc](https://github.com/eruditorgroup/profi-design-system/commit/8354fbc393ed6ae5cfb4901d0339d0391fd6de05))
+
+# [0.85.0](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.82.2...@eruditorgroup/profi-ui@0.85.0) (2025-02-20)
+
+## 0.33.54 (2025-02-20)
+
+### Bug Fixes
+
+- [FM-5098] fix types for Badge component and invalid props in icons ([#624](https://github.com/eruditorgroup/profi-design-system/issues/624)) ([7d4683f](https://github.com/eruditorgroup/profi-design-system/commit/7d4683f10b4c33b3d3281a96b8c5717ddb77dcb2))
+
+## 0.33.53 (2025-02-18)
+
+### Features
+
+- [FM-5098] add Badge component and new icons ([#622](https://github.com/eruditorgroup/profi-design-system/issues/622)) ([85b944b](https://github.com/eruditorgroup/profi-design-system/commit/85b944b4a03394ae4627d39bd641df492f72797e))
+
+## 0.33.52 (2025-02-14)
+
+### Features
+
+- [FM-5099] add animationClassNames to Modal ([#620](https://github.com/eruditorgroup/profi-design-system/issues/620)) ([8354fbc](https://github.com/eruditorgroup/profi-design-system/commit/8354fbc393ed6ae5cfb4901d0339d0391fd6de05))
+
+# [0.84.0](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.82.2...@eruditorgroup/profi-ui@0.84.0) (2025-02-18)
+
+## 0.33.53 (2025-02-18)
+
+### Features
+
+- [FM-5098] add Badge component and new icons ([#622](https://github.com/eruditorgroup/profi-design-system/issues/622)) ([85b944b](https://github.com/eruditorgroup/profi-design-system/commit/85b944b4a03394ae4627d39bd641df492f72797e))
+
+## 0.33.52 (2025-02-14)
+
+### Features
+
+- [FM-5099] add animationClassNames to Modal ([#620](https://github.com/eruditorgroup/profi-design-system/issues/620)) ([8354fbc](https://github.com/eruditorgroup/profi-design-system/commit/8354fbc393ed6ae5cfb4901d0339d0391fd6de05))
+
+# [0.83.0](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.82.2...@eruditorgroup/profi-ui@0.83.0) (2025-02-14)
+
+## 0.33.52 (2025-02-14)
+
+### Features
+
+- [FM-5099] add animationClassNames to Modal ([#620](https://github.com/eruditorgroup/profi-design-system/issues/620)) ([8354fbc](https://github.com/eruditorgroup/profi-design-system/commit/8354fbc393ed6ae5cfb4901d0339d0391fd6de05))
+
+## [0.82.2](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.82.0...@eruditorgroup/profi-ui@0.82.2) (2025-02-14)
+
+## 0.33.50 (2025-01-29)
+
+### Bug Fixes
+
+- [FM-5013] fix modal closing when swipeDownToClose is enabled ([#614](https://github.com/eruditorgroup/profi-design-system/issues/614)) ([7dc0285](https://github.com/eruditorgroup/profi-design-system/commit/7dc02854258c5d0cc4abdc1699a481fe433b9da2))
+
+## [0.82.1](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.82.0...@eruditorgroup/profi-ui@0.82.1) (2025-01-29)
+
+## 0.33.50 (2025-01-29)
+
+### Bug Fixes
+
+- [FM-5013] fix modal closing when swipeDownToClose is enabled ([#614](https://github.com/eruditorgroup/profi-design-system/issues/614)) ([7dc0285](https://github.com/eruditorgroup/profi-design-system/commit/7dc02854258c5d0cc4abdc1699a481fe433b9da2))
+
+# [0.82.0](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.80.9...@eruditorgroup/profi-ui@0.82.0) (2025-01-28)
+
+## 0.33.48 (2025-01-21)
+
+### Bug Fixes
+
+- [SEMANTICS-4816] fix ios autofocus autosuggest ([3d359f3](https://github.com/eruditorgroup/profi-design-system/commit/3d359f359a66048cd5ffd75d74bb3e05cb368b49))
+
+### Features
+
+- [FM-5094] add new icons, change active menu item, add small toggle ([#610](https://github.com/eruditorgroup/profi-design-system/issues/610)) ([11fb23d](https://github.com/eruditorgroup/profi-design-system/commit/11fb23dd9b9fd95276724e28e68b09dc6801c23f))
+
+# [0.81.0](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.80.9...@eruditorgroup/profi-ui@0.81.0) (2025-01-21)
+
+## 0.33.48 (2025-01-21)
+
+### Bug Fixes
+
+- [SEMANTICS-4816] fix ios autofocus autosuggest ([3d359f3](https://github.com/eruditorgroup/profi-design-system/commit/3d359f359a66048cd5ffd75d74bb3e05cb368b49))
+
+### Features
+
+- [FM-5094] add new icons, change active menu item, add small toggle ([#610](https://github.com/eruditorgroup/profi-design-system/issues/610)) ([11fb23d](https://github.com/eruditorgroup/profi-design-system/commit/11fb23dd9b9fd95276724e28e68b09dc6801c23f))
+
+## [0.80.10](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.80.9...@eruditorgroup/profi-ui@0.80.10) (2024-12-26)
+
+### Bug Fixes
+
+- [SEMANTICS-4816] fix ios autofocus autosuggest ([3d359f3](https://github.com/eruditorgroup/profi-design-system/commit/3d359f359a66048cd5ffd75d74bb3e05cb368b49))
+
+## [0.80.9](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.80.3...@eruditorgroup/profi-ui@0.80.9) (2024-12-19)
+
+### Bug Fixes
+
+- **@profi/ui:** Убраны циклические импорты ([1c2b627](https://github.com/eruditorgroup/profi-design-system/commit/1c2b627110c281153c2f8bf454e5141ab9e85498))
+
+## 0.33.45 (2024-12-10)
+
+# 1.0.0-alpha.55 (2024-12-06)
+
+# 1.0.0-alpha.54 (2024-12-06)
+
+## 0.33.40 (2024-11-28)
+
+### Bug Fixes
+
+- [SEMANTICS-4685] autofocus ios ([#588](https://github.com/eruditorgroup/profi-design-system/issues/588)) ([ee6b4f6](https://github.com/eruditorgroup/profi-design-system/commit/ee6b4f6cb8ee7ccf42e05716fd25a8c20ea07ff4))
+
+## [0.80.8](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.80.3...@eruditorgroup/profi-ui@0.80.8) (2024-12-10)
+
+## 0.33.45 (2024-12-10)
+
+# 1.0.0-alpha.55 (2024-12-06)
+
+# 1.0.0-alpha.54 (2024-12-06)
+
+## 0.33.40 (2024-11-28)
+
+### Bug Fixes
+
+- [SEMANTICS-4685] autofocus ios ([#588](https://github.com/eruditorgroup/profi-design-system/issues/588)) ([ee6b4f6](https://github.com/eruditorgroup/profi-design-system/commit/ee6b4f6cb8ee7ccf42e05716fd25a8c20ea07ff4))
+
+## [0.80.7](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.80.3...@eruditorgroup/profi-ui@0.80.7) (2024-12-06)
+
+# 1.0.0-alpha.55 (2024-12-06)
+
+# 1.0.0-alpha.54 (2024-12-06)
+
+## 0.33.40 (2024-11-28)
+
+### Bug Fixes
+
+- [SEMANTICS-4685] autofocus ios ([#588](https://github.com/eruditorgroup/profi-design-system/issues/588)) ([ee6b4f6](https://github.com/eruditorgroup/profi-design-system/commit/ee6b4f6cb8ee7ccf42e05716fd25a8c20ea07ff4))
+
+## [0.80.6](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.80.3...@eruditorgroup/profi-ui@0.80.6) (2024-12-06)
+
+# 1.0.0-alpha.54 (2024-12-06)
+
+## 0.33.40 (2024-11-28)
+
+### Bug Fixes
+
+- [SEMANTICS-4685] autofocus ios ([#588](https://github.com/eruditorgroup/profi-design-system/issues/588)) ([ee6b4f6](https://github.com/eruditorgroup/profi-design-system/commit/ee6b4f6cb8ee7ccf42e05716fd25a8c20ea07ff4))
+
+## [0.80.5](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.80.3...@eruditorgroup/profi-ui@0.80.5) (2024-12-06)
+
+## 0.33.40 (2024-11-28)
+
+### Bug Fixes
+
+- [SEMANTICS-4685] autofocus ios ([#588](https://github.com/eruditorgroup/profi-design-system/issues/588)) ([ee6b4f6](https://github.com/eruditorgroup/profi-design-system/commit/ee6b4f6cb8ee7ccf42e05716fd25a8c20ea07ff4))
+
+## [0.80.4](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.80.3...@eruditorgroup/profi-ui@0.80.4) (2024-11-28)
+
+## 0.33.40 (2024-11-28)
+
+### Bug Fixes
+
+- [SEMANTICS-4685] autofocus ios ([#588](https://github.com/eruditorgroup/profi-design-system/issues/588)) ([ee6b4f6](https://github.com/eruditorgroup/profi-design-system/commit/ee6b4f6cb8ee7ccf42e05716fd25a8c20ea07ff4))
+
+## [0.80.3](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.80.1...@eruditorgroup/profi-ui@0.80.3) (2024-11-27)
+
+### Bug Fixes
+
+- **PhoneInput:** поправил маску финских номеров ([ab6dd93](https://github.com/eruditorgroup/profi-design-system/commit/ab6dd933e6e1aaafe6e8e8be9d077de8407229ef))
+
+## 0.33.38 (2024-11-26)
+
+### Bug Fixes
+
+- [SEMANTICS-4685] fix fullscreen autosuggest focus ([#584](https://github.com/eruditorgroup/profi-design-system/issues/584)) ([db7a12d](https://github.com/eruditorgroup/profi-design-system/commit/db7a12d00ca081484c6c0ab3969794b79ae7fae0))
+
+## [0.80.2](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.80.1...@eruditorgroup/profi-ui@0.80.2) (2024-11-26)
+
+## 0.33.38 (2024-11-26)
+
+### Bug Fixes
+
+- [SEMANTICS-4685] fix fullscreen autosuggest focus ([#584](https://github.com/eruditorgroup/profi-design-system/issues/584)) ([db7a12d](https://github.com/eruditorgroup/profi-design-system/commit/db7a12d00ca081484c6c0ab3969794b79ae7fae0))
+
+## [0.80.1](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.80.0...@eruditorgroup/profi-ui@0.80.1) (2024-11-06)
 
 **Note:** Version bump only for package @eruditorgroup/profi-ui
 
-# [1.0.0-alpha.48](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@1.0.0-alpha.47...@eruditorgroup/profi-ui@1.0.0-alpha.48) (2024-09-09)
+# [0.80.0](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.79.0...@eruditorgroup/profi-ui@0.80.0) (2024-11-05)
+
+### Features
+
+- [SEMANTICS-4590] add showSuggestionsOnEmptyQuery props to autosuggest ([608054e](https://github.com/eruditorgroup/profi-design-system/commit/608054efd1b9772480cb304c729b2a69348b5855))
+
+# [0.79.0](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.78.9...@eruditorgroup/profi-ui@0.79.0) (2024-10-31)
+
+### Features
+
+- [SEMANTICS-4590] add showSuggestionsOnEmptyQuery props to autosuggest ([c2b53b8](https://github.com/eruditorgroup/profi-design-system/commit/c2b53b8ed1bbe4c11aee75449af56df7381522d8))
+- [SEMANTICS-4590] add showSuggestionsOnEmptyQuery props to autosuggest ([83ce301](https://github.com/eruditorgroup/profi-design-system/commit/83ce30118a373d343ddcb19c3297c9525a1ee79f))
+
+## [0.78.9](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.78.8...@eruditorgroup/profi-ui@0.78.9) (2024-10-18)
 
 **Note:** Version bump only for package @eruditorgroup/profi-ui
 
-# [1.0.0-alpha.47](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@1.0.0-alpha.46...@eruditorgroup/profi-ui@1.0.0-alpha.47) (2024-08-05)
-
-# 1.0.0-alpha.47 (2024-08-05)
-
-### Features
-
-- [FM-4660] Add 'white' design button, 'lt' text size, 'xxxl' avatar size ([#540](https://github.com/eruditorgroup/profi-design-system/issues/540)) ([9fd48eb](https://github.com/eruditorgroup/profi-design-system/commit/9fd48eb74042a27a656e74ee1beec3d11423f8c1))
-
-# [1.0.0-alpha.46](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@1.0.0-alpha.45...@eruditorgroup/profi-ui@1.0.0-alpha.46) (2024-06-17)
+## [0.78.8](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.78.5...@eruditorgroup/profi-ui@0.78.8) (2024-10-04)
 
 ### Bug Fixes
 
-- correctPhone double replace mask ([3a6b675](https://github.com/eruditorgroup/profi-design-system/commit/3a6b675bb7477f8eb8c409bbe7921bb4dadaa6bc))
+- **autosuggest:** [SEMANTICS-4625] fix focus ([c525fd4](https://github.com/eruditorgroup/profi-design-system/commit/c525fd4ed5240fc837ef4239d64223be91df1304))
 
-# [1.0.0-alpha.45](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@1.0.0-alpha.44...@eruditorgroup/profi-ui@1.0.0-alpha.45) (2024-06-17)
-
-### Bug Fixes
-
-- Обновлен react-number-format и поправлен correctPhone для PhoneInput ([27c57b1](https://github.com/eruditorgroup/profi-design-system/commit/27c57b1bec0a5ba76c4da515c3fe26114c19e9db))
-
-# [1.0.0-alpha.44](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@1.0.0-alpha.43...@eruditorgroup/profi-ui@1.0.0-alpha.44) (2024-06-14)
-
-# 1.0.0-alpha.44 (2024-06-14)
+## 0.33.32 (2024-09-24)
 
 ### Bug Fixes
 
-- Input type prop ([e7fb199](https://github.com/eruditorgroup/profi-design-system/commit/e7fb19982dc7f9f20d15fbb9e1a2312da2ed4b0f))
+- **profi-x-service:** [FM-4776] fix unchecked styles for Toggle ([#572](https://github.com/eruditorgroup/profi-design-system/issues/572)) ([43fecaa](https://github.com/eruditorgroup/profi-design-system/commit/43fecaadd42463c19b9aa9b2fecf93c79dc31970))
 
-# [1.0.0-alpha.43](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@1.0.0-alpha.42...@eruditorgroup/profi-ui@1.0.0-alpha.43) (2024-06-14)
-
-### Bug Fixes
-
-- [PRFR-3756] PhoneInput убран onChange и onInput и переведен на maskedValue ([62e441b](https://github.com/eruditorgroup/profi-design-system/commit/62e441ba76f54af33fa2bb37c589fefcab3a4b97))
-
-# [1.0.0-alpha.42](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@1.0.0-alpha.41...@eruditorgroup/profi-ui@1.0.0-alpha.42) (2024-05-14)
-
-### Features
-
-- **ui:** Fix link seo without href ([c4f6864](https://github.com/eruditorgroup/profi-design-system/commit/c4f68647328e61bfd285b0daac4d6f0865aab9c4))
-
-# [1.0.0-alpha.41](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@1.0.0-alpha.40...@eruditorgroup/profi-ui@1.0.0-alpha.41) (2024-04-27)
+## 0.33.31 (2024-09-23)
 
 ### Bug Fixes
 
-- **ui:** PhoneInput double onChange call and added trailing ([af20724](https://github.com/eruditorgroup/profi-design-system/commit/af2072461e24d39f71603bc427ad588e2c46fdda))
+- **profi-x-service:** [FM-4776] fix unchecked and disabled styles for Toggle ([#570](https://github.com/eruditorgroup/profi-design-system/issues/570)) ([6c20e83](https://github.com/eruditorgroup/profi-design-system/commit/6c20e83212cd3e5f9aac35ae0fc149931dfd859e))
 
-# [1.0.0-alpha.40](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@1.0.0-alpha.39...@eruditorgroup/profi-ui@1.0.0-alpha.40) (2024-01-22)
+## [0.78.7](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.78.5...@eruditorgroup/profi-ui@0.78.7) (2024-09-24)
 
-### Features
-
-- **ui:** Changed image link, preload it for storyboook ([82c5c01](https://github.com/eruditorgroup/profi-design-system/commit/82c5c015cb911eb5b34e0d56d4861f68dcf3370f))
-- **ui:** Moved image preload to component ([cb769fc](https://github.com/eruditorgroup/profi-design-system/commit/cb769fc06c8aadafbd29e850d2828c98701aac90))
-- **ui:** Removed large base64 from css ([7680a87](https://github.com/eruditorgroup/profi-design-system/commit/7680a87b71e6b748441a5a860b00aa6a744125a4))
-
-# [1.0.0-alpha.39](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@1.0.0-alpha.38...@eruditorgroup/profi-ui@1.0.0-alpha.39) (2023-12-26)
+## 0.33.32 (2024-09-24)
 
 ### Bug Fixes
 
-- **ui:** Fixed lazy images in Avatar ([95dc387](https://github.com/eruditorgroup/profi-design-system/commit/95dc387eb97cd3e13ea5cbc47867f26df2825c60))
+- **profi-x-service:** [FM-4776] fix unchecked styles for Toggle ([#572](https://github.com/eruditorgroup/profi-design-system/issues/572)) ([43fecaa](https://github.com/eruditorgroup/profi-design-system/commit/43fecaadd42463c19b9aa9b2fecf93c79dc31970))
 
-# [1.0.0-alpha.38](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@1.0.0-alpha.37...@eruditorgroup/profi-ui@1.0.0-alpha.38) (2023-12-04)
+## 0.33.31 (2024-09-23)
+
+### Bug Fixes
+
+- **profi-x-service:** [FM-4776] fix unchecked and disabled styles for Toggle ([#570](https://github.com/eruditorgroup/profi-design-system/issues/570)) ([6c20e83](https://github.com/eruditorgroup/profi-design-system/commit/6c20e83212cd3e5f9aac35ae0fc149931dfd859e))
+
+## [0.78.6](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.78.5...@eruditorgroup/profi-ui@0.78.6) (2024-09-23)
+
+## 0.33.31 (2024-09-23)
+
+### Bug Fixes
+
+- **profi-x-service:** [FM-4776] fix unchecked and disabled styles for Toggle ([#570](https://github.com/eruditorgroup/profi-design-system/issues/570)) ([6c20e83](https://github.com/eruditorgroup/profi-design-system/commit/6c20e83212cd3e5f9aac35ae0fc149931dfd859e))
+
+## [0.78.5](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.78.4...@eruditorgroup/profi-ui@0.78.5) (2024-09-13)
 
 **Note:** Version bump only for package @eruditorgroup/profi-ui
 
-# [1.0.0-alpha.37](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@1.0.0-alpha.36...@eruditorgroup/profi-ui@1.0.0-alpha.37) (2023-11-30)
+## [0.78.4](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.78.2...@eruditorgroup/profi-ui@0.78.4) (2024-09-12)
 
-### Features
-
-- **icons, toolkit, ui:** Added PropsWithChildren for React 18 capability ([794920a](https://github.com/eruditorgroup/profi-design-system/commit/794920a6e6a9ce40414a4619f5f2a79fbf3bccd8))
-
-# [1.0.0-alpha.36](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@1.0.0-alpha.35...@eruditorgroup/profi-ui@1.0.0-alpha.36) (2023-10-26)
-
-### Features
-
-- **ui:** Added loading state into Button ([1fd7903](https://github.com/eruditorgroup/profi-design-system/commit/1fd79031866c31ba41c06c19ae86dd437ea65502))
-
-# [1.0.0-alpha.35](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@1.0.0-alpha.34...@eruditorgroup/profi-ui@1.0.0-alpha.35) (2023-06-07)
+## 0.33.28 (2024-09-11)
 
 ### Bug Fixes
 
-- PRFR-2781 letterspacing for 5xl size ([3a0f211](https://github.com/eruditorgroup/profi-design-system/commit/3a0f21188f4b034983f32dbaa788378b7e6b535b))
+- **profi-x-service:** [FM-4727] add className to Toast ([#560](https://github.com/eruditorgroup/profi-design-system/issues/560)) ([607bfe6](https://github.com/eruditorgroup/profi-design-system/commit/607bfe69c89da98bec39610c8b2ea55f2152c14f))
 
-# [1.0.0-alpha.34](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@1.0.0-alpha.33...@eruditorgroup/profi-ui@1.0.0-alpha.34) (2022-06-06)
+## [0.78.3](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.78.2...@eruditorgroup/profi-ui@0.78.3) (2024-09-11)
+
+## 0.33.28 (2024-09-11)
 
 ### Bug Fixes
 
-- удалили лишнюю инфу из changelog ([8178c93](https://github.com/eruditorgroup/profi-design-system/commit/8178c93df0bb5de03cc41d80f69b53b2877b97a8))
+- **profi-x-service:** [FM-4727] add className to Toast ([#560](https://github.com/eruditorgroup/profi-design-system/issues/560)) ([607bfe6](https://github.com/eruditorgroup/profi-design-system/commit/607bfe69c89da98bec39610c8b2ea55f2152c14f))
+
+## [0.78.2](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.78.1...@eruditorgroup/profi-ui@0.78.2) (2024-09-06)
+
+**Note:** Version bump only for package @eruditorgroup/profi-ui
+
+## [0.78.1](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.78.0...@eruditorgroup/profi-ui@0.78.1) (2024-09-03)
+
+### Bug Fixes
+
+- **profi-x-service:** [FM-4727] fix Toast index ([05a8db7](https://github.com/eruditorgroup/profi-design-system/commit/05a8db77b125f80a04a228baeb2faeb03a31085a))
+- **profi-x-service:** [FM-4727] fix Toast index ([e389778](https://github.com/eruditorgroup/profi-design-system/commit/e3897781de01a84075253871ac2f1aeac0cf7b01))
+
+# [0.78.0](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@1.0.0-alpha.50...@eruditorgroup/profi-ui@0.78.0) (2024-09-03)
+
+### Features
+
+- **profi-x-service:** [FM-4727] add export to toast ([56188c8](https://github.com/eruditorgroup/profi-design-system/commit/56188c82f3fe42172667c4d04bd4c780994f4a03))
+
+# [0.77.0](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@1.0.0-alpha.49...@eruditorgroup/profi-ui@0.77.0) (2024-09-03)
+
+### Features
+
+- **profi-x-service:** [FM-4727] add Toast to index, add disabled color for spinner ([22ff8fc](https://github.com/eruditorgroup/profi-design-system/commit/22ff8fc4ed66aa5da4cd07dc89e2f84278ddb3af))
+
+## [0.76.3](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@1.0.0-alpha.49...@eruditorgroup/profi-ui@0.76.3) (2024-08-28)
+
+**Note:** Version bump only for package @eruditorgroup/profi-ui
+
+## [0.76.2](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.76.1...@eruditorgroup/profi-ui@0.76.2) (2024-08-22)
+
+**Note:** Version bump only for package @eruditorgroup/profi-ui
+
+## [0.76.1](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.76.0...@eruditorgroup/profi-ui@0.76.1) (2024-08-05)
+
+### Bug Fixes
+
+- Test publish ([1c1162d](https://github.com/eruditorgroup/profi-design-system/commit/1c1162d76c25af2049ad5ba4429c076f37ec4fdb))
+
+# [0.76.0](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.75.3...@eruditorgroup/profi-ui@0.76.0) (2024-08-02)
+
+## 0.33.21 (2024-08-02)
+
+### Features
+
+- [FM-4660] Add white design button, lt text size, xxxl avatar size ([#538](https://github.com/eruditorgroup/profi-design-system/issues/538)) ([e207697](https://github.com/eruditorgroup/profi-design-system/commit/e2076973b301c65a93eb39b91866f59e7e115b64))
+
+## [0.75.3](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.75.2...@eruditorgroup/profi-ui@0.75.3) (2024-06-18)
+
+### Bug Fixes
+
+- correctPhone double replace mask ([3e3adf3](https://github.com/eruditorgroup/profi-design-system/commit/3e3adf3476b589954a65424f884f07df3e833edc))
+- Обновлен react-number-format и поправлен correctPhone для PhoneInput ([f4df25f](https://github.com/eruditorgroup/profi-design-system/commit/f4df25f195b7d94421398c48e0dcdb207f6d633f))
+
+## [0.75.2](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.75.1...@eruditorgroup/profi-ui@0.75.2) (2024-06-14)
+
+### Bug Fixes
+
+- Input type prop ([303a6d4](https://github.com/eruditorgroup/profi-design-system/commit/303a6d4fab018f31308647b2383a241eb9bc59dd))
+
+## [0.75.1](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.75.0...@eruditorgroup/profi-ui@0.75.1) (2024-06-14)
+
+### Bug Fixes
+
+- PhoneInput убран onChange и onInput и переведен на maskedValue ([d79df9e](https://github.com/eruditorgroup/profi-design-system/commit/d79df9ec3357f5a3c07a30d76dd82ccc6bd02600))
+
+# [0.75.0](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.74.1...@eruditorgroup/profi-ui@0.75.0) (2024-05-14)
+
+### Features
+
+- **ui:** Fix link seo without href ([5e24b1e](https://github.com/eruditorgroup/profi-design-system/commit/5e24b1ee7ce0d164c87dde6d49d7dbb5cbddad50))
+
+## [0.74.1](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.74.0...@eruditorgroup/profi-ui@0.74.1) (2024-04-27)
+
+### Bug Fixes
+
+- **ui:** PhoneInput double onChange call and added trailing ([ab35a28](https://github.com/eruditorgroup/profi-design-system/commit/ab35a2878818765336b8671886bbf36ab7a8b1d6))
+
+# [0.74.0](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.73.2...@eruditorgroup/profi-ui@0.74.0) (2024-01-22)
+
+### Features
+
+- **ui:** Changed image link, preload it for storyboook ([9314721](https://github.com/eruditorgroup/profi-design-system/commit/9314721412fe06b1d7e20baa1895c51756da8a23))
+- **ui:** Moved image preload to component ([9144705](https://github.com/eruditorgroup/profi-design-system/commit/91447051239f24b5b9badb4ef63c30efaf7733af))
+- **ui:** Removed large base64 from css ([f29367a](https://github.com/eruditorgroup/profi-design-system/commit/f29367ac6ac9ac93c0f06d4747c94482f22992cc))
+
+## [0.73.2](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.73.1...@eruditorgroup/profi-ui@0.73.2) (2023-12-26)
+
+### Bug Fixes
+
+- **ui:** Fixed lazy images in Avatar ([2850c52](https://github.com/eruditorgroup/profi-design-system/commit/2850c528e35a3ebc50e3f7899bbcee38c606b428))
+
+## [0.73.1](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.73.0...@eruditorgroup/profi-ui@0.73.1) (2023-12-04)
+
+**Note:** Version bump only for package @eruditorgroup/profi-ui
+
+# [0.73.0](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.72.0...@eruditorgroup/profi-ui@0.73.0) (2023-11-30)
+
+### Features
+
+- **icons, toolkit, ui:** Added PropsWithChildren for React 18 capability ([8d87fe1](https://github.com/eruditorgroup/profi-design-system/commit/8d87fe1d97d581f5bdd530ba670324644872d061))
+
+# [0.72.0](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.71.0...@eruditorgroup/profi-ui@0.72.0) (2023-10-26)
+
+### Features
+
+- **ui:** Added loading state into Button ([6478fe0](https://github.com/eruditorgroup/profi-design-system/commit/6478fe07c471e2ee782df8fc71969fdd90f01efe))
+
+# [0.71.0](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.68.0...@eruditorgroup/profi-ui@0.71.0) (2023-06-08)
+
+### Bug Fixes
+
+- PRFR-2781 letterspacing for 5xl size ([5b39ee1](https://github.com/eruditorgroup/profi-design-system/commit/5b39ee136bf31e61a128621bd73d39747a997f2c))
 
 ### Features
 
@@ -244,338 +537,171 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Features
 
-- +sideEffects: false ([5e5a2a2](https://github.com/eruditorgroup/profi-design-system/commit/5e5a2a2edbde6341a152ba4b3a2996f25e330db8))
 - Gallery переехала в @profi/components ([#462](https://github.com/eruditorgroup/profi-design-system/issues/462)) ([76e5389](https://github.com/eruditorgroup/profi-design-system/commit/76e538910b65535d63cda9ebffca4b2c290b493a))
 
-# [1.0.0-alpha.33](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@1.0.0-alpha.32...@eruditorgroup/profi-ui@1.0.0-alpha.33) (2022-05-23)
+# [0.70.0](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.68.0...@eruditorgroup/profi-ui@0.70.0) (2022-05-06)
 
-# 1.0.0-alpha.33 (2022-05-23)
+## 0.33.9 (2022-05-06)
 
-**Note:** Version bump only for package @eruditorgroup/profi-ui
+### Bug Fixes
 
-# [1.0.0-alpha.32](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@1.0.0-alpha.27...@eruditorgroup/profi-ui@1.0.0-alpha.32) (2022-05-23)
+- **ui:** bodyportal add in effect ([#471](https://github.com/eruditorgroup/profi-design-system/issues/471)) ([9fcc902](https://github.com/eruditorgroup/profi-design-system/commit/9fcc902f84a2433ae807f472b6481d6112fa019b))
 
-# 1.0.0-alpha.32 (2022-05-23)
+## 0.33.8 (2022-05-06)
+
+### Bug Fixes
+
+- **toolkit:** fade transition should hide visiblity ([#468](https://github.com/eruditorgroup/profi-design-system/issues/468)) ([64a75f7](https://github.com/eruditorgroup/profi-design-system/commit/64a75f7541f4bbecdcdaf5aa3b89ff2357e83582))
 
 ### Features
 
-- **ui:** new radius: ml ([#474](https://github.com/eruditorgroup/profi-design-system/issues/474)) ([f6a4d19](https://github.com/eruditorgroup/profi-design-system/commit/f6a4d194d5518454a9b81d90742cc018718ce7fc))
-- +sideEffects: false ([4a1505e](https://github.com/eruditorgroup/profi-design-system/commit/4a1505e8b95f3f5251940535444b0095298fa63d))
-- Gallery переехала в @profi/components ([#462](https://github.com/eruditorgroup/profi-design-system/issues/462)) ([2da9b06](https://github.com/eruditorgroup/profi-design-system/commit/2da9b066cf8b39a301b60ba32dde215879b3b522))
+- Gallery переехала в @profi/components ([#462](https://github.com/eruditorgroup/profi-design-system/issues/462)) ([76e5389](https://github.com/eruditorgroup/profi-design-system/commit/76e538910b65535d63cda9ebffca4b2c290b493a))
 
-# [1.0.0-alpha.31](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@1.0.0-alpha.25...@eruditorgroup/profi-ui@1.0.0-alpha.31) (2022-04-11)
+# [0.69.0](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.68.0...@eruditorgroup/profi-ui@0.69.0) (2022-05-06)
 
-# 1.0.0-alpha.31 (2022-04-11)
+## 0.33.8 (2022-05-06)
+
+### Bug Fixes
+
+- **toolkit:** fade transition should hide visiblity ([#468](https://github.com/eruditorgroup/profi-design-system/issues/468)) ([64a75f7](https://github.com/eruditorgroup/profi-design-system/commit/64a75f7541f4bbecdcdaf5aa3b89ff2357e83582))
+
+### Features
+
+- Gallery переехала в @profi/components ([#462](https://github.com/eruditorgroup/profi-design-system/issues/462)) ([76e5389](https://github.com/eruditorgroup/profi-design-system/commit/76e538910b65535d63cda9ebffca4b2c290b493a))
+
+# [0.68.0](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.67.0...@eruditorgroup/profi-ui@0.68.0) (2022-05-04)
+
+### Features
+
+- +sideEffects: false ([5e5a2a2](https://github.com/eruditorgroup/profi-design-system/commit/5e5a2a2edbde6341a152ba4b3a2996f25e330db8))
+
+# [0.67.0](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.66.5...@eruditorgroup/profi-ui@0.67.0) (2022-04-11)
 
 ## 0.33.6 (2022-04-11)
+
+### Bug Fixes
+
+- **ui:** phoneInput change event ([#457](https://github.com/eruditorgroup/profi-design-system/issues/457)) ([b3c790f](https://github.com/eruditorgroup/profi-design-system/commit/b3c790f1a060509efd3fc2ee74aecc000076c295))
+- **ui:** Поправил тип в ExpandableBlock и добавил флаг в ListItem ([a1d4343](https://github.com/eruditorgroup/profi-design-system/commit/a1d4343180ac297fb11f08541d0d5ef5908aa297))
 
 ### Features
 
 - export type ColSpan ([#463](https://github.com/eruditorgroup/profi-design-system/issues/463)) ([47d6150](https://github.com/eruditorgroup/profi-design-system/commit/47d615056b6dc0775a79d98498011e91d9259a71))
 - Title может быть размером l ([2e2eefb](https://github.com/eruditorgroup/profi-design-system/commit/2e2eefb4b9dc067808b81f40dfbb947dd286593c))
 
-# 1.0.0-alpha.26 (2022-03-22)
+## [0.66.6](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.66.5...@eruditorgroup/profi-ui@0.66.6) (2022-03-22)
 
 ### Bug Fixes
 
 - **ui:** phoneInput change event ([#457](https://github.com/eruditorgroup/profi-design-system/issues/457)) ([b3c790f](https://github.com/eruditorgroup/profi-design-system/commit/b3c790f1a060509efd3fc2ee74aecc000076c295))
 - **ui:** Поправил тип в ExpandableBlock и добавил флаг в ListItem ([a1d4343](https://github.com/eruditorgroup/profi-design-system/commit/a1d4343180ac297fb11f08541d0d5ef5908aa297))
 
-# [1.0.0-alpha.26](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@1.0.0-alpha.25...@eruditorgroup/profi-ui@1.0.0-alpha.26) (2022-03-22)
-
-# 1.0.0-alpha.26 (2022-03-22)
+## [0.66.5](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.66.4...@eruditorgroup/profi-ui@0.66.5) (2022-03-18)
 
 ### Bug Fixes
 
-- **ui:** phoneInput change event ([#457](https://github.com/eruditorgroup/profi-design-system/issues/457)) ([b3c790f](https://github.com/eruditorgroup/profi-design-system/commit/b3c790f1a060509efd3fc2ee74aecc000076c295))
-- **ui:** Поправил тип в ExpandableBlock и добавил флаг в ListItem ([a1d4343](https://github.com/eruditorgroup/profi-design-system/commit/a1d4343180ac297fb11f08541d0d5ef5908aa297))
+- Честный useClickOutside ([23d67f6](https://github.com/eruditorgroup/profi-design-system/commit/23d67f6d6d8152cb2150a84e6a7705972f1aed3e))
 
-# [1.0.0-alpha.25](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.66.5...@eruditorgroup/profi-ui@1.0.0-alpha.25) (2022-03-18)
-
-# 1.0.0-alpha.25 (2022-03-18)
-
-# 1.0.0-alpha.24 (2022-03-18)
-
-# 1.0.0-alpha.23 (2022-03-02)
-
-# 1.0.0-alpha.22 (2022-03-01)
-
-# 1.0.0-alpha.21 (2022-02-21)
+## [0.66.4](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.66.3...@eruditorgroup/profi-ui@0.66.4) (2022-03-18)
 
 ### Bug Fixes
 
-- **ui:** input paste event ([6332e5a](https://github.com/eruditorgroup/profi-design-system/commit/6332e5a2ee168195864af1106f90a807f0386964))
-- **ui:** lint ([84329d8](https://github.com/eruditorgroup/profi-design-system/commit/84329d80bbac9b9af4e85a0e14f87ff5e72c33b3))
+- useClickOutside dependencies & Modal stop propagation ([49d6193](https://github.com/eruditorgroup/profi-design-system/commit/49d6193e3b3a1b6e3bbdefb8c94991f44ad2dc86))
 
-# 1.0.0-alpha.20 (2022-02-09)
-
-# 1.0.0-alpha.19 (2022-02-08)
-
-# 1.0.0-alpha.17 (2022-02-01)
-
-### Bug Fixes
-
-- **Autosuggest:** fix types for data attrs ([9e836da](https://github.com/eruditorgroup/profi-design-system/commit/9e836daa24f6ba8686efadca677138572be806e3))
-- **Fullscreen:** fix props type ([0716d75](https://github.com/eruditorgroup/profi-design-system/commit/0716d7503a015bf1402591ec291bcd10decad6d0))
-
-# 1.0.0-alpha.16 (2022-01-12)
-
-# 1.0.0-alpha.14 (2021-12-10)
-
-### Bug Fixes
-
-- **ui:** RateStars animation ([#401](https://github.com/eruditorgroup/profi-design-system/issues/401)) ([0911ba9](https://github.com/eruditorgroup/profi-design-system/commit/0911ba9567b13e21e7c8476c9add3e8b0d31bdbb))
-
-# 1.0.0-alpha.13 (2021-12-09)
-
-# 1.0.0-alpha.11 (2021-11-30)
-
-# 1.0.0-alpha.10 (2021-11-30)
-
-# 1.0.0-alpha.8 (2021-11-29)
-
-### Bug Fixes
-
-- bump versions ([5e4227d](https://github.com/eruditorgroup/profi-design-system/commit/5e4227d8858fa0a8b1d79500eef102da7917d833))
-- bump versions ([a2e80a7](https://github.com/eruditorgroup/profi-design-system/commit/a2e80a7fd90ad50c39d19980036b11de0a4c59a0))
-- bump versions ([a9dcca5](https://github.com/eruditorgroup/profi-design-system/commit/a9dcca573d09a93610932d2a5338d1854a70a0be))
-- bump versions ([a5d6b59](https://github.com/eruditorgroup/profi-design-system/commit/a5d6b590f775b311c4dfa99a982572bd505ffed1))
-
-# [1.0.0-alpha.24](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.66.4...@eruditorgroup/profi-ui@1.0.0-alpha.24) (2022-03-18)
-
-# 1.0.0-alpha.24 (2022-03-18)
-
-# 1.0.0-alpha.23 (2022-03-02)
-
-# 1.0.0-alpha.22 (2022-03-01)
-
-# 1.0.0-alpha.21 (2022-02-21)
-
-### Bug Fixes
-
-- **ui:** input paste event ([6332e5a](https://github.com/eruditorgroup/profi-design-system/commit/6332e5a2ee168195864af1106f90a807f0386964))
-- **ui:** lint ([84329d8](https://github.com/eruditorgroup/profi-design-system/commit/84329d80bbac9b9af4e85a0e14f87ff5e72c33b3))
-
-# 1.0.0-alpha.20 (2022-02-09)
-
-# 1.0.0-alpha.19 (2022-02-08)
-
-# 1.0.0-alpha.17 (2022-02-01)
-
-### Bug Fixes
-
-- **Autosuggest:** fix types for data attrs ([9e836da](https://github.com/eruditorgroup/profi-design-system/commit/9e836daa24f6ba8686efadca677138572be806e3))
-- **Fullscreen:** fix props type ([0716d75](https://github.com/eruditorgroup/profi-design-system/commit/0716d7503a015bf1402591ec291bcd10decad6d0))
-
-# 1.0.0-alpha.16 (2022-01-12)
-
-# 1.0.0-alpha.14 (2021-12-10)
-
-### Bug Fixes
-
-- **ui:** RateStars animation ([#401](https://github.com/eruditorgroup/profi-design-system/issues/401)) ([0911ba9](https://github.com/eruditorgroup/profi-design-system/commit/0911ba9567b13e21e7c8476c9add3e8b0d31bdbb))
-
-# 1.0.0-alpha.13 (2021-12-09)
-
-# 1.0.0-alpha.11 (2021-11-30)
-
-# 1.0.0-alpha.10 (2021-11-30)
-
-# 1.0.0-alpha.8 (2021-11-29)
-
-### Bug Fixes
-
-- bump versions ([5e4227d](https://github.com/eruditorgroup/profi-design-system/commit/5e4227d8858fa0a8b1d79500eef102da7917d833))
-- bump versions ([a2e80a7](https://github.com/eruditorgroup/profi-design-system/commit/a2e80a7fd90ad50c39d19980036b11de0a4c59a0))
-- bump versions ([a9dcca5](https://github.com/eruditorgroup/profi-design-system/commit/a9dcca573d09a93610932d2a5338d1854a70a0be))
-- bump versions ([a5d6b59](https://github.com/eruditorgroup/profi-design-system/commit/a5d6b590f775b311c4dfa99a982572bd505ffed1))
-
-# [1.0.0-alpha.23](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@1.0.0-alpha.22...@eruditorgroup/profi-ui@1.0.0-alpha.23) (2022-03-02)
-
-# 1.0.0-alpha.23 (2022-03-02)
+## [0.66.3](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.66.2...@eruditorgroup/profi-ui@0.66.3) (2022-03-03)
 
 **Note:** Version bump only for package @eruditorgroup/profi-ui
 
-# [1.0.0-alpha.22](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.66.1...@eruditorgroup/profi-ui@1.0.0-alpha.22) (2022-03-01)
+## [0.66.2](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.66.1...@eruditorgroup/profi-ui@0.66.2) (2022-03-02)
 
-# 1.0.0-alpha.22 (2022-03-01)
+**Note:** Version bump only for package @eruditorgroup/profi-ui
 
-# 1.0.0-alpha.21 (2022-02-21)
+## [0.66.1](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.66.0...@eruditorgroup/profi-ui@0.66.1) (2022-02-28)
 
-### Bug Fixes
+**Note:** Version bump only for package @eruditorgroup/profi-ui
 
-- **ui:** input paste event ([6332e5a](https://github.com/eruditorgroup/profi-design-system/commit/6332e5a2ee168195864af1106f90a807f0386964))
-- **ui:** lint ([84329d8](https://github.com/eruditorgroup/profi-design-system/commit/84329d80bbac9b9af4e85a0e14f87ff5e72c33b3))
+# [0.66.0](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.65.0...@eruditorgroup/profi-ui@0.66.0) (2022-02-28)
 
-# 1.0.0-alpha.20 (2022-02-09)
+### Features
 
-# 1.0.0-alpha.19 (2022-02-08)
+- Добавлен Modal.BackButton ([24c2379](https://github.com/eruditorgroup/profi-design-system/commit/24c2379f1bff8c57dbfdfd5f94b28b89ca8820f1))
+- Дополнительные параметры Slider.SliderArrow ([6eab20c](https://github.com/eruditorgroup/profi-design-system/commit/6eab20c3e50b69f6af74462f6e4cb1b9263a637e))
 
-# 1.0.0-alpha.17 (2022-02-01)
-
-### Bug Fixes
-
-- **Autosuggest:** fix types for data attrs ([9e836da](https://github.com/eruditorgroup/profi-design-system/commit/9e836daa24f6ba8686efadca677138572be806e3))
-- **Fullscreen:** fix props type ([0716d75](https://github.com/eruditorgroup/profi-design-system/commit/0716d7503a015bf1402591ec291bcd10decad6d0))
-
-# 1.0.0-alpha.16 (2022-01-12)
-
-# 1.0.0-alpha.14 (2021-12-10)
+# [0.65.0](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.64.0...@eruditorgroup/profi-ui@0.65.0) (2022-02-21)
 
 ### Bug Fixes
 
-- **ui:** RateStars animation ([#401](https://github.com/eruditorgroup/profi-design-system/issues/401)) ([0911ba9](https://github.com/eruditorgroup/profi-design-system/commit/0911ba9567b13e21e7c8476c9add3e8b0d31bdbb))
+- **Price:** Добавил возможность указания диапазона в цене ([f5e4ace](https://github.com/eruditorgroup/profi-design-system/commit/f5e4ace792dd81111642706c3890b48e9372ca1a))
 
-# 1.0.0-alpha.13 (2021-12-09)
+### Features
 
-# 1.0.0-alpha.11 (2021-11-30)
+- **ExpandableBlock:** Добавил расширяющийся блок ([19a7e7f](https://github.com/eruditorgroup/profi-design-system/commit/19a7e7ff3823feeb67bd7e79e405997bd852ec5e))
 
-# 1.0.0-alpha.10 (2021-11-30)
-
-# 1.0.0-alpha.8 (2021-11-29)
+# [0.64.0](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.63.2...@eruditorgroup/profi-ui@0.64.0) (2022-02-16)
 
 ### Bug Fixes
 
-- bump versions ([5e4227d](https://github.com/eruditorgroup/profi-design-system/commit/5e4227d8858fa0a8b1d79500eef102da7917d833))
-- bump versions ([a2e80a7](https://github.com/eruditorgroup/profi-design-system/commit/a2e80a7fd90ad50c39d19980036b11de0a4c59a0))
-- bump versions ([a9dcca5](https://github.com/eruditorgroup/profi-design-system/commit/a9dcca573d09a93610932d2a5338d1854a70a0be))
-- bump versions ([a5d6b59](https://github.com/eruditorgroup/profi-design-system/commit/a5d6b590f775b311c4dfa99a982572bd505ffed1))
-
-# [1.0.0-alpha.21](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.65.0...@eruditorgroup/profi-ui@1.0.0-alpha.21) (2022-02-21)
-
-# 1.0.0-alpha.21 (2022-02-21)
-
-### Bug Fixes
-
-- **ui:** input paste event ([6332e5a](https://github.com/eruditorgroup/profi-design-system/commit/6332e5a2ee168195864af1106f90a807f0386964))
-- **ui:** lint ([84329d8](https://github.com/eruditorgroup/profi-design-system/commit/84329d80bbac9b9af4e85a0e14f87ff5e72c33b3))
-
-# 1.0.0-alpha.20 (2022-02-09)
-
-# 1.0.0-alpha.19 (2022-02-08)
-
-# 1.0.0-alpha.17 (2022-02-01)
-
-### Bug Fixes
-
-- **Autosuggest:** fix types for data attrs ([9e836da](https://github.com/eruditorgroup/profi-design-system/commit/9e836daa24f6ba8686efadca677138572be806e3))
-- **Fullscreen:** fix props type ([0716d75](https://github.com/eruditorgroup/profi-design-system/commit/0716d7503a015bf1402591ec291bcd10decad6d0))
-
-# 1.0.0-alpha.16 (2022-01-12)
-
-# 1.0.0-alpha.14 (2021-12-10)
-
-### Bug Fixes
-
-- **ui:** RateStars animation ([#401](https://github.com/eruditorgroup/profi-design-system/issues/401)) ([0911ba9](https://github.com/eruditorgroup/profi-design-system/commit/0911ba9567b13e21e7c8476c9add3e8b0d31bdbb))
-
-# 1.0.0-alpha.13 (2021-12-09)
-
-# 1.0.0-alpha.11 (2021-11-30)
-
-# 1.0.0-alpha.10 (2021-11-30)
-
-# 1.0.0-alpha.8 (2021-11-29)
-
-### Bug Fixes
-
-- bump versions ([5e4227d](https://github.com/eruditorgroup/profi-design-system/commit/5e4227d8858fa0a8b1d79500eef102da7917d833))
-- bump versions ([a2e80a7](https://github.com/eruditorgroup/profi-design-system/commit/a2e80a7fd90ad50c39d19980036b11de0a4c59a0))
-- bump versions ([a9dcca5](https://github.com/eruditorgroup/profi-design-system/commit/a9dcca573d09a93610932d2a5338d1854a70a0be))
-- bump versions ([a5d6b59](https://github.com/eruditorgroup/profi-design-system/commit/a5d6b590f775b311c4dfa99a982572bd505ffed1))
-
-# [1.0.0-alpha.20](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@1.0.0-alpha.19...@eruditorgroup/profi-ui@1.0.0-alpha.20) (2022-02-09)
-
-# 1.0.0-alpha.20 (2022-02-09)
+- **ui:** input paste event ([67fc523](https://github.com/eruditorgroup/profi-design-system/commit/67fc523d6c20fe85e9a7b7c9f2e8a276f8346c8a))
+- **ui:** lint ([3000eb0](https://github.com/eruditorgroup/profi-design-system/commit/3000eb0b71d3793e3d6b2c204b3e88f5f2ec60d3))
 
 ### Features
 
 - **ui:** replace react-input-mask to react-number-format ([#426](https://github.com/eruditorgroup/profi-design-system/issues/426)) ([cbad361](https://github.com/eruditorgroup/profi-design-system/commit/cbad3615b642ec6e9f9e40968117ede9c237f529))
 
-# [1.0.0-alpha.19](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@1.0.0-alpha.18...@eruditorgroup/profi-ui@1.0.0-alpha.19) (2022-02-08)
-
-# 1.0.0-alpha.19 (2022-02-08)
+## [0.63.2](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.63.1...@eruditorgroup/profi-ui@0.63.2) (2022-02-03)
 
 ### Bug Fixes
 
 - Забыл импорт Progress ([186ce6b](https://github.com/eruditorgroup/profi-design-system/commit/186ce6b156e53c74b836f08ef27f93c91d8f71ab))
+
+## [0.63.1](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.63.0...@eruditorgroup/profi-ui@0.63.1) (2022-02-01)
+
+### Bug Fixes
+
 - **Autosuggest:** bump ts ([bdeff5e](https://github.com/eruditorgroup/profi-design-system/commit/bdeff5e8cd4a212f7fee6f549b6afc3260551675))
 - **Autosuggest:** fix types for data attrs ([3d2a96a](https://github.com/eruditorgroup/profi-design-system/commit/3d2a96a5f433d0d2ba16320bb80765a8be73c3ac))
 - **Fullscreen:** fix props type ([261df22](https://github.com/eruditorgroup/profi-design-system/commit/261df22cb3f235e11613e603a34b3b20a70f3fd2))
+
+# [0.63.0](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.62.4...@eruditorgroup/profi-ui@0.63.0) (2022-01-27)
 
 ### Features
 
 - Компонент Progress ([3f1c706](https://github.com/eruditorgroup/profi-design-system/commit/3f1c706fa3304d7accf257460cc09f7bdcf7bfab))
 
-# [1.0.0-alpha.18](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@1.0.0-alpha.17...@eruditorgroup/profi-ui@1.0.0-alpha.18) (2022-02-07)
+## [0.62.4](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.62.3...@eruditorgroup/profi-ui@0.62.4) (2022-01-26)
 
 **Note:** Version bump only for package @eruditorgroup/profi-ui
 
-# [1.0.0-alpha.17](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@1.0.0-alpha.15...@eruditorgroup/profi-ui@1.0.0-alpha.17) (2022-02-01)
-
-# 1.0.0-alpha.17 (2022-02-01)
+## [0.62.3](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.62.2...@eruditorgroup/profi-ui@0.62.3) (2022-01-13)
 
 ### Bug Fixes
 
-- **Autosuggest:** fix types for data attrs ([9e836da](https://github.com/eruditorgroup/profi-design-system/commit/9e836daa24f6ba8686efadca677138572be806e3))
-- **Fullscreen:** fix props type ([0716d75](https://github.com/eruditorgroup/profi-design-system/commit/0716d7503a015bf1402591ec291bcd10decad6d0))
+- **stars:** spark should be absolute ([a956ca9](https://github.com/eruditorgroup/profi-design-system/commit/a956ca9dd23aa97002da0b847c98f357b73545e7))
 
-# 1.0.0-alpha.16 (2022-01-12)
+## [0.62.2](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.62.1...@eruditorgroup/profi-ui@0.62.2) (2022-01-11)
 
 ### Bug Fixes
 
 - **Datepicker:** Добавил пропс, который добавляет кастомную логику для вывода значения в инпут ([79892f2](https://github.com/eruditorgroup/profi-design-system/commit/79892f2f7cc37c67129af556825c93e9dbcd87b7))
-- **Gallery.Album:** Фикс работы модала альбомов ([b4f7dc5](https://github.com/eruditorgroup/profi-design-system/commit/b4f7dc5d9b3077fde87b77287bea8f6829a5667b))
-- **Modal:** Корректное отображение оверлеев если открыто несколько модалок ([83eb79e](https://github.com/eruditorgroup/profi-design-system/commit/83eb79e9d03f5417ae731c0588729a8bf594a224))
-- **stars:** spark should be absolute ([a956ca9](https://github.com/eruditorgroup/profi-design-system/commit/a956ca9dd23aa97002da0b847c98f357b73545e7))
-- **ui:** RateStars animation ([#401](https://github.com/eruditorgroup/profi-design-system/issues/401)) ([02f4d9f](https://github.com/eruditorgroup/profi-design-system/commit/02f4d9f166472c44827886a14e166d5d1622101c))
 
-# [1.0.0-alpha.16](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@1.0.0-alpha.15...@eruditorgroup/profi-ui@1.0.0-alpha.16) (2022-01-12)
-
-# 1.0.0-alpha.16 (2022-01-12)
+## [0.62.1](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.62.0...@eruditorgroup/profi-ui@0.62.1) (2021-12-20)
 
 ### Bug Fixes
 
-- **Datepicker:** Добавил пропс, который добавляет кастомную логику для вывода значения в инпут ([79892f2](https://github.com/eruditorgroup/profi-design-system/commit/79892f2f7cc37c67129af556825c93e9dbcd87b7))
-- **Gallery.Album:** Фикс работы модала альбомов ([b4f7dc5](https://github.com/eruditorgroup/profi-design-system/commit/b4f7dc5d9b3077fde87b77287bea8f6829a5667b))
 - **Modal:** Корректное отображение оверлеев если открыто несколько модалок ([83eb79e](https://github.com/eruditorgroup/profi-design-system/commit/83eb79e9d03f5417ae731c0588729a8bf594a224))
-- **stars:** spark should be absolute ([a956ca9](https://github.com/eruditorgroup/profi-design-system/commit/a956ca9dd23aa97002da0b847c98f357b73545e7))
-- **ui:** RateStars animation ([#401](https://github.com/eruditorgroup/profi-design-system/issues/401)) ([02f4d9f](https://github.com/eruditorgroup/profi-design-system/commit/02f4d9f166472c44827886a14e166d5d1622101c))
 
-# [1.0.0-alpha.15](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@1.0.0-alpha.14...@eruditorgroup/profi-ui@1.0.0-alpha.15) (2022-01-11)
-
-**Note:** Version bump only for package @eruditorgroup/profi-ui
-
-# [1.0.0-alpha.14](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@1.0.0-alpha.13...@eruditorgroup/profi-ui@1.0.0-alpha.14) (2021-12-10)
-
-# 1.0.0-alpha.14 (2021-12-10)
+# [0.62.0](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.61.0...@eruditorgroup/profi-ui@0.62.0) (2021-12-14)
 
 ### Bug Fixes
 
-- **ui:** RateStars animation ([#401](https://github.com/eruditorgroup/profi-design-system/issues/401)) ([0911ba9](https://github.com/eruditorgroup/profi-design-system/commit/0911ba9567b13e21e7c8476c9add3e8b0d31bdbb))
-
-# [1.0.0-alpha.13](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.61.0...@eruditorgroup/profi-ui@1.0.0-alpha.13) (2021-12-09)
-
-# 1.0.0-alpha.13 (2021-12-09)
+- **Gallery.Album:** Фикс работы модала альбомов ([b4f7dc5](https://github.com/eruditorgroup/profi-design-system/commit/b4f7dc5d9b3077fde87b77287bea8f6829a5667b))
+- **ui:** RateStars animation ([#401](https://github.com/eruditorgroup/profi-design-system/issues/401)) ([02f4d9f](https://github.com/eruditorgroup/profi-design-system/commit/02f4d9f166472c44827886a14e166d5d1622101c))
 
 ### Features
 
 - Добавлен skeleton на Text и Link ([ba90709](https://github.com/eruditorgroup/profi-design-system/commit/ba907092089ca8e1039b013d9036afa2ae9cd6d4))
 
-# 1.0.0-alpha.11 (2021-11-30)
-
-# 1.0.0-alpha.10 (2021-11-30)
-
-# 1.0.0-alpha.8 (2021-11-29)
-
-### Bug Fixes
-
-- bump versions ([5e4227d](https://github.com/eruditorgroup/profi-design-system/commit/5e4227d8858fa0a8b1d79500eef102da7917d833))
-- bump versions ([a2e80a7](https://github.com/eruditorgroup/profi-design-system/commit/a2e80a7fd90ad50c39d19980036b11de0a4c59a0))
-- bump versions ([a9dcca5](https://github.com/eruditorgroup/profi-design-system/commit/a9dcca573d09a93610932d2a5338d1854a70a0be))
-- bump versions ([a5d6b59](https://github.com/eruditorgroup/profi-design-system/commit/a5d6b590f775b311c4dfa99a982572bd505ffed1))
-
-# [1.0.0-alpha.12](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@1.0.0-alpha.11...@eruditorgroup/profi-ui@1.0.0-alpha.12) (2021-12-03)
+# [0.61.0](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.57.0...@eruditorgroup/profi-ui@0.61.0) (2021-12-06)
 
 ### Bug Fixes
 
@@ -584,10 +710,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 ### Features
 
 - **Button:** Added skeleton ([8ff58ab](https://github.com/eruditorgroup/profi-design-system/commit/8ff58abd0f2bc13face88fe2e3366f7fe8288030))
-
-# [1.0.0-alpha.11](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@1.0.0-alpha.10...@eruditorgroup/profi-ui@1.0.0-alpha.11) (2021-11-30)
-
-# 1.0.0-alpha.11 (2021-11-30)
+- **Gallery:** Add albums support ([3ec2c54](https://github.com/eruditorgroup/profi-design-system/commit/3ec2c5423ed8018125b55072402427a1fb6bb92a))
 
 ## 0.27.7 (2021-11-30)
 
@@ -601,9 +724,25 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 - **Button:** Font inherit ([#387](https://github.com/eruditorgroup/profi-design-system/issues/387)) ([d361228](https://github.com/eruditorgroup/profi-design-system/commit/d361228c4b7dc5fe9c554a1dcb7443e30da9d672))
 
-# [1.0.0-alpha.10](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.57.0...@eruditorgroup/profi-ui@1.0.0-alpha.10) (2021-11-30)
+## 0.27.5 (2021-11-30)
 
-# 1.0.0-alpha.10 (2021-11-30)
+### Features
+
+- **Dropdown:** Закрытие на ESC ([#384](https://github.com/eruditorgroup/profi-design-system/issues/384)) ([c036790](https://github.com/eruditorgroup/profi-design-system/commit/c03679021f97876867aa761de5250fd24804df55))
+
+# [0.60.0](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.57.0...@eruditorgroup/profi-ui@0.60.0) (2021-11-30)
+
+## 0.27.7 (2021-11-30)
+
+### Features
+
+- **Dropdown:** Controllable state ([#389](https://github.com/eruditorgroup/profi-design-system/issues/389)) ([c075b43](https://github.com/eruditorgroup/profi-design-system/commit/c075b43f38da7cb111ad636d6facb48c38284674))
+
+## 0.27.6 (2021-11-30)
+
+### Bug Fixes
+
+- **Button:** Font inherit ([#387](https://github.com/eruditorgroup/profi-design-system/issues/387)) ([d361228](https://github.com/eruditorgroup/profi-design-system/commit/d361228c4b7dc5fe9c554a1dcb7443e30da9d672))
 
 ## 0.27.5 (2021-11-30)
 
@@ -611,25 +750,61 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 - **Dropdown:** Закрытие на ESC ([#384](https://github.com/eruditorgroup/profi-design-system/issues/384)) ([c036790](https://github.com/eruditorgroup/profi-design-system/commit/c03679021f97876867aa761de5250fd24804df55))
 
-# 1.0.0-alpha.8 (2021-11-29)
+# [0.59.0](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.57.0...@eruditorgroup/profi-ui@0.59.0) (2021-11-30)
+
+## 0.27.6 (2021-11-30)
 
 ### Bug Fixes
 
-- bump versions ([5e4227d](https://github.com/eruditorgroup/profi-design-system/commit/5e4227d8858fa0a8b1d79500eef102da7917d833))
-- bump versions ([a2e80a7](https://github.com/eruditorgroup/profi-design-system/commit/a2e80a7fd90ad50c39d19980036b11de0a4c59a0))
-- bump versions ([a9dcca5](https://github.com/eruditorgroup/profi-design-system/commit/a9dcca573d09a93610932d2a5338d1854a70a0be))
-- bump versions ([a5d6b59](https://github.com/eruditorgroup/profi-design-system/commit/a5d6b590f775b311c4dfa99a982572bd505ffed1))
+- **Button:** Font inherit ([#387](https://github.com/eruditorgroup/profi-design-system/issues/387)) ([d361228](https://github.com/eruditorgroup/profi-design-system/commit/d361228c4b7dc5fe9c554a1dcb7443e30da9d672))
 
-# [1.0.0-alpha.9](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.53.10...@eruditorgroup/profi-ui@1.0.0-alpha.9) (2021-11-29)
+## 0.27.5 (2021-11-30)
 
-# 1.0.0-alpha.8 (2021-11-29)
+### Features
+
+- **Dropdown:** Закрытие на ESC ([#384](https://github.com/eruditorgroup/profi-design-system/issues/384)) ([c036790](https://github.com/eruditorgroup/profi-design-system/commit/c03679021f97876867aa761de5250fd24804df55))
+
+# [0.58.0](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.57.0...@eruditorgroup/profi-ui@0.58.0) (2021-11-30)
+
+## 0.27.5 (2021-11-30)
+
+### Features
+
+- **Dropdown:** Закрытие на ESC ([#384](https://github.com/eruditorgroup/profi-design-system/issues/384)) ([c036790](https://github.com/eruditorgroup/profi-design-system/commit/c03679021f97876867aa761de5250fd24804df55))
+
+# [0.57.0](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.53.10...@eruditorgroup/profi-ui@0.57.0) (2021-11-29)
+
+## 0.27.3 (2021-11-29)
 
 ### Bug Fixes
 
-- bump versions ([5e4227d](https://github.com/eruditorgroup/profi-design-system/commit/5e4227d8858fa0a8b1d79500eef102da7917d833))
-- bump versions ([a2e80a7](https://github.com/eruditorgroup/profi-design-system/commit/a2e80a7fd90ad50c39d19980036b11de0a4c59a0))
-- bump versions ([a9dcca5](https://github.com/eruditorgroup/profi-design-system/commit/a9dcca573d09a93610932d2a5338d1854a70a0be))
-- bump versions ([a5d6b59](https://github.com/eruditorgroup/profi-design-system/commit/a5d6b590f775b311c4dfa99a982572bd505ffed1))
+- **accordion:** update design & add storyshots workflow ([55fe9f6](https://github.com/eruditorgroup/profi-design-system/commit/55fe9f6cebc4d886c1d38fc886416e3214139e53))
+- **Autosuggest:** story should not generate random colors ([38122f6](https://github.com/eruditorgroup/profi-design-system/commit/38122f668f78a25c4f8e6b5674ca5ff7adc14878))
+
+### Features
+
+- **List:** Добавлен skeleton ([748f1e4](https://github.com/eruditorgroup/profi-design-system/commit/748f1e49a7109c868476b95ae56353c01a8f90b5))
+- **storyshots:** add manual workflow ([64abac2](https://github.com/eruditorgroup/profi-design-system/commit/64abac269f863d4437815511658570fa718acc5c))
+- Drodown controllable state ([e64ade3](https://github.com/eruditorgroup/profi-design-system/commit/e64ade3090654421116b04e3747d524c1223f49f))
+
+### Reverts
+
+- Revert "feat: Drodown controllable state" (#381) ([94d6451](https://github.com/eruditorgroup/profi-design-system/commit/94d64518d91dc8b72f2dd4627758adbd56411789)), closes [#381](https://github.com/eruditorgroup/profi-design-system/issues/381)
+
+# [0.56.0](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.53.10...@eruditorgroup/profi-ui@0.56.0) (2021-11-29)
+
+## 0.27.3 (2021-11-29)
+
+### Features
+
+- **List:** Добавлен skeleton ([748f1e4](https://github.com/eruditorgroup/profi-design-system/commit/748f1e49a7109c868476b95ae56353c01a8f90b5))
+- Drodown controllable state ([e64ade3](https://github.com/eruditorgroup/profi-design-system/commit/e64ade3090654421116b04e3747d524c1223f49f))
+
+### Reverts
+
+- Revert "feat: Drodown controllable state" (#381) ([94d6451](https://github.com/eruditorgroup/profi-design-system/commit/94d64518d91dc8b72f2dd4627758adbd56411789)), closes [#381](https://github.com/eruditorgroup/profi-design-system/issues/381)
+
+# [0.54.0](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.53.10...@eruditorgroup/profi-ui@0.54.0) (2021-11-29)
 
 ### Features
 

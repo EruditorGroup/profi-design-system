@@ -3,286 +3,395 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
-# 1.0.0-alpha.71
+## 0.56.0
+
+**Note:** Manual version bump
+
+## [0.55.12](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-icons@0.55.10...@eruditorgroup/profi-icons@0.55.12) (2025-08-27)
 
 **Note:** Version bump only for package @eruditorgroup/profi-icons
 
-# [1.0.0-alpha.69](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-icons@1.0.0-alpha.67...@eruditorgroup/profi-icons@1.0.0-alpha.69) (2025-08-26)
+## [0.55.11](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-icons@0.55.10...@eruditorgroup/profi-icons@0.55.11) (2025-08-19)
 
 **Note:** Version bump only for package @eruditorgroup/profi-icons
 
-# [1.0.0-alpha.68](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-icons@1.0.0-alpha.67...@eruditorgroup/profi-icons@1.0.0-alpha.68) (2025-08-19)
+## [0.55.10](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-icons@0.55.9...@eruditorgroup/profi-icons@0.55.10) (2025-08-15)
 
 **Note:** Version bump only for package @eruditorgroup/profi-icons
 
-# [1.0.0-alpha.67](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-icons@1.0.0-alpha.66...@eruditorgroup/profi-icons@1.0.0-alpha.67) (2025-08-15)
+## [0.55.9](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-icons@0.55.8...@eruditorgroup/profi-icons@0.55.9) (2025-07-21)
 
 **Note:** Version bump only for package @eruditorgroup/profi-icons
 
-# [1.0.0-alpha.66](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-icons@1.0.0-alpha.65...@eruditorgroup/profi-icons@1.0.0-alpha.66) (2025-07-23)
+## [0.55.8](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-icons@0.55.4...@eruditorgroup/profi-icons@0.55.8) (2025-06-25)
+
+# 1.0.0-alpha.62 (2025-06-10)
 
 **Note:** Version bump only for package @eruditorgroup/profi-icons
 
-# [1.0.0-alpha.65](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-icons@1.0.0-alpha.64...@eruditorgroup/profi-icons@1.0.0-alpha.65) (2025-07-23)
+## [0.55.7](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-icons@0.55.4...@eruditorgroup/profi-icons@0.55.7) (2025-06-23)
+
+# 1.0.0-alpha.62 (2025-06-10)
 
 **Note:** Version bump only for package @eruditorgroup/profi-icons
 
-# [1.0.0-alpha.64](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-icons@1.0.0-alpha.63...@eruditorgroup/profi-icons@1.0.0-alpha.64) (2025-07-21)
+## [0.55.6](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-icons@0.55.4...@eruditorgroup/profi-icons@0.55.6) (2025-06-10)
 
 **Note:** Version bump only for package @eruditorgroup/profi-icons
 
-# [1.0.0-alpha.63](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-icons@1.0.0-alpha.61...@eruditorgroup/profi-icons@1.0.0-alpha.63) (2025-06-26)
+## [0.55.5](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-icons@0.55.4...@eruditorgroup/profi-icons@0.55.5) (2025-05-22)
+
+**Note:** Version bump only for package @eruditorgroup/profi-icons
+
+## [0.55.4](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-icons@0.55.3...@eruditorgroup/profi-icons@0.55.4) (2025-05-21)
+
+**Note:** Version bump only for package @eruditorgroup/profi-icons
+
+## [0.55.3](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-icons@0.55.1...@eruditorgroup/profi-icons@0.55.3) (2025-04-21)
+
+**Note:** Version bump only for package @eruditorgroup/profi-icons
+
+## [0.55.2](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-icons@0.55.1...@eruditorgroup/profi-icons@0.55.2) (2025-03-28)
+
+**Note:** Version bump only for package @eruditorgroup/profi-icons
+
+## [0.55.1](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-icons@0.55.0...@eruditorgroup/profi-icons@0.55.1) (2025-03-12)
+
+**Note:** Version bump only for package @eruditorgroup/profi-icons
+
+# [0.55.0](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-icons@0.54.1...@eruditorgroup/profi-icons@0.55.0) (2025-03-07)
 
 ### Features
 
-- [FM-5520] changes from master ([#649](https://github.com/eruditorgroup/profi-design-system/issues/649)) ([3189340](https://github.com/eruditorgroup/profi-design-system/commit/3189340e535c8a883174813f22854981ded5ea8a))
+- [FM-5254] CircleCheckIcon ([a517bfe](https://github.com/eruditorgroup/profi-design-system/commit/a517bfe10f82a36ed8b7925e4f9df0bd9f1b11c4))
 
-# [1.0.0-alpha.62](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-icons@1.0.0-alpha.61...@eruditorgroup/profi-icons@1.0.0-alpha.62) (2025-06-25)
+## [0.54.1](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-icons@0.54.0...@eruditorgroup/profi-icons@0.54.1) (2025-03-05)
 
-# 1.0.0-alpha.63 (2025-06-25)
+**Note:** Version bump only for package @eruditorgroup/profi-icons
+
+# [0.54.0](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-icons@0.51.0...@eruditorgroup/profi-icons@0.54.0) (2025-03-04)
+
+## 0.33.54 (2025-02-20)
+
+### Bug Fixes
+
+- [FM-5098] fix types for Badge component and invalid props in icons ([#624](https://github.com/eruditorgroup/profi-design-system/issues/624)) ([7d4683f](https://github.com/eruditorgroup/profi-design-system/commit/7d4683f10b4c33b3d3281a96b8c5717ddb77dcb2))
+
+## 0.33.53 (2025-02-18)
 
 ### Features
 
-- [FM-5520] changes from master ([#649](https://github.com/eruditorgroup/profi-design-system/issues/649)) ([3189340](https://github.com/eruditorgroup/profi-design-system/commit/3189340e535c8a883174813f22854981ded5ea8a))
+- [FM-5098] add Badge component and new icons ([#622](https://github.com/eruditorgroup/profi-design-system/issues/622)) ([85b944b](https://github.com/eruditorgroup/profi-design-system/commit/85b944b4a03394ae4627d39bd641df492f72797e))
 
-# [1.0.0-alpha.61](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-icons@1.0.0-alpha.51...@eruditorgroup/profi-icons@1.0.0-alpha.61) (2025-04-21)
+# [0.53.0](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-icons@0.51.0...@eruditorgroup/profi-icons@0.53.0) (2025-02-20)
 
-# 1.0.0-alpha.58 (2024-12-10)
-
-# 1.0.0-alpha.57 (2024-12-09)
+## 0.33.54 (2025-02-20)
 
 ### Bug Fixes
 
-- [FM-4903] rename icons ([#600](https://github.com/eruditorgroup/profi-design-system/issues/600)) ([f8b4dfe](https://github.com/eruditorgroup/profi-design-system/commit/f8b4dfe45bcf5a4531e1ea70d618f43fa1e77650))
+- [FM-5098] fix types for Badge component and invalid props in icons ([#624](https://github.com/eruditorgroup/profi-design-system/issues/624)) ([7d4683f](https://github.com/eruditorgroup/profi-design-system/commit/7d4683f10b4c33b3d3281a96b8c5717ddb77dcb2))
 
-# 1.0.0-alpha.56 (2024-12-09)
-
-### Bug Fixes
-
-- [FM-4903] add new icons ([#593](https://github.com/eruditorgroup/profi-design-system/issues/593)) ([#597](https://github.com/eruditorgroup/profi-design-system/issues/597)) ([16dc3fc](https://github.com/eruditorgroup/profi-design-system/commit/16dc3fc5820c4e3f878da8442622e5589b001d52))
-
-# [1.0.0-alpha.60](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-icons@1.0.0-alpha.51...@eruditorgroup/profi-icons@1.0.0-alpha.60) (2025-01-29)
-
-# 1.0.0-alpha.58 (2024-12-10)
-
-# 1.0.0-alpha.57 (2024-12-09)
-
-### Bug Fixes
-
-- [FM-4903] rename icons ([#600](https://github.com/eruditorgroup/profi-design-system/issues/600)) ([f8b4dfe](https://github.com/eruditorgroup/profi-design-system/commit/f8b4dfe45bcf5a4531e1ea70d618f43fa1e77650))
-
-# 1.0.0-alpha.56 (2024-12-09)
-
-### Bug Fixes
-
-- [FM-4903] add new icons ([#593](https://github.com/eruditorgroup/profi-design-system/issues/593)) ([#597](https://github.com/eruditorgroup/profi-design-system/issues/597)) ([16dc3fc](https://github.com/eruditorgroup/profi-design-system/commit/16dc3fc5820c4e3f878da8442622e5589b001d52))
-
-# [1.0.0-alpha.59](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-icons@1.0.0-alpha.51...@eruditorgroup/profi-icons@1.0.0-alpha.54) (2024-12-24)
-
-# 1.0.0-alpha.58 (2024-12-10)
-
-# 1.0.0-alpha.57 (2024-12-09)
-
-### Bug Fixes
-
-- [FM-4903] rename icons ([#600](https://github.com/eruditorgroup/profi-design-system/issues/600)) ([f8b4dfe](https://github.com/eruditorgroup/profi-design-system/commit/f8b4dfe45bcf5a4531e1ea70d618f43fa1e77650))
-
-# 1.0.0-alpha.56 (2024-12-09)
-
-### Bug Fixes
-
-- [FM-4903] add new icons ([#593](https://github.com/eruditorgroup/profi-design-system/issues/593)) ([#597](https://github.com/eruditorgroup/profi-design-system/issues/597)) ([16dc3fc](https://github.com/eruditorgroup/profi-design-system/commit/16dc3fc5820c4e3f878da8442622e5589b001d52))
-
-# [1.0.0-alpha.53](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-icons@1.0.0-alpha.51...@eruditorgroup/profi-icons@1.0.0-alpha.53) (2024-12-10)
-
-# 1.0.0-alpha.58 (2024-12-10)
-
-# 1.0.0-alpha.57 (2024-12-09)
-
-### Bug Fixes
-
-- [FM-4903] rename icons ([#600](https://github.com/eruditorgroup/profi-design-system/issues/600)) ([f8b4dfe](https://github.com/eruditorgroup/profi-design-system/commit/f8b4dfe45bcf5a4531e1ea70d618f43fa1e77650))
-
-# 1.0.0-alpha.56 (2024-12-09)
-
-### Bug Fixes
-
-- [FM-4903] add new icons ([#593](https://github.com/eruditorgroup/profi-design-system/issues/593)) ([#597](https://github.com/eruditorgroup/profi-design-system/issues/597)) ([16dc3fc](https://github.com/eruditorgroup/profi-design-system/commit/16dc3fc5820c4e3f878da8442622e5589b001d52))
-
-# [1.0.0-alpha.52](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-icons@1.0.0-alpha.51...@eruditorgroup/profi-icons@1.0.0-alpha.52) (2024-12-09)
-
-# 1.0.0-alpha.56 (2024-12-09)
-
-### Bug Fixes
-
-- [FM-4903] add new icons ([#593](https://github.com/eruditorgroup/profi-design-system/issues/593)) ([#597](https://github.com/eruditorgroup/profi-design-system/issues/597)) ([16dc3fc](https://github.com/eruditorgroup/profi-design-system/commit/16dc3fc5820c4e3f878da8442622e5589b001d52))
-
-# [1.0.0-alpha.51](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-icons@1.0.0-alpha.50...@eruditorgroup/profi-icons@1.0.0-alpha.51) (2024-11-28)
-
-**Note:** Version bump only for package @eruditorgroup/profi-icons
-
-# [1.0.0-alpha.50](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-icons@1.0.0-alpha.49...@eruditorgroup/profi-icons@1.0.0-alpha.50) (2024-09-13)
-
-**Note:** Version bump only for package @eruditorgroup/profi-icons
-
-# [1.0.0-alpha.49](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-icons@1.0.0-alpha.48...@eruditorgroup/profi-icons@1.0.0-alpha.49) (2024-09-12)
-
-**Note:** Version bump only for package @eruditorgroup/profi-icons
-
-# [1.0.0-alpha.48](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-icons@1.0.0-alpha.47...@eruditorgroup/profi-icons@1.0.0-alpha.48) (2024-09-09)
+## 0.33.53 (2025-02-18)
 
 ### Features
 
-- [SEMANTICS-4498] add new icon ([b21d7f6](https://github.com/eruditorgroup/profi-design-system/commit/b21d7f61908a990e03442dbb97e822aee063f5ab))
-- **wizard:** [SEMANTICS-4489] add icons ([74402dd](https://github.com/eruditorgroup/profi-design-system/commit/74402ddcd34b34768c050cf5a88f07a0280ab962))
+- [FM-5098] add Badge component and new icons ([#622](https://github.com/eruditorgroup/profi-design-system/issues/622)) ([85b944b](https://github.com/eruditorgroup/profi-design-system/commit/85b944b4a03394ae4627d39bd641df492f72797e))
 
-# [1.0.0-alpha.47](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-icons@1.0.0-alpha.46...@eruditorgroup/profi-icons@1.0.0-alpha.47) (2024-08-05)
+# [0.52.0](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-icons@0.51.0...@eruditorgroup/profi-icons@0.52.0) (2025-02-18)
 
-**Note:** Version bump only for package @eruditorgroup/profi-icons
-
-# [1.0.0-alpha.46](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-icons@1.0.0-alpha.45...@eruditorgroup/profi-icons@1.0.0-alpha.46) (2024-06-17)
-
-**Note:** Version bump only for package @eruditorgroup/profi-icons
-
-# [1.0.0-alpha.45](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-icons@1.0.0-alpha.44...@eruditorgroup/profi-icons@1.0.0-alpha.45) (2024-06-17)
-
-**Note:** Version bump only for package @eruditorgroup/profi-icons
-
-# [1.0.0-alpha.44](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-icons@1.0.0-alpha.43...@eruditorgroup/profi-icons@1.0.0-alpha.44) (2024-06-14)
-
-**Note:** Version bump only for package @eruditorgroup/profi-icons
-
-# [1.0.0-alpha.43](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-icons@1.0.0-alpha.42...@eruditorgroup/profi-icons@1.0.0-alpha.43) (2024-06-14)
-
-**Note:** Version bump only for package @eruditorgroup/profi-icons
-
-# [1.0.0-alpha.42](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-icons@1.0.0-alpha.41...@eruditorgroup/profi-icons@1.0.0-alpha.42) (2024-05-14)
-
-**Note:** Version bump only for package @eruditorgroup/profi-icons
-
-# [1.0.0-alpha.41](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-icons@1.0.0-alpha.40...@eruditorgroup/profi-icons@1.0.0-alpha.41) (2024-04-27)
-
-**Note:** Version bump only for package @eruditorgroup/profi-icons
-
-# [1.0.0-alpha.40](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-icons@1.0.0-alpha.39...@eruditorgroup/profi-icons@1.0.0-alpha.40) (2024-01-22)
-
-**Note:** Version bump only for package @eruditorgroup/profi-icons
-
-# [1.0.0-alpha.39](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-icons@1.0.0-alpha.38...@eruditorgroup/profi-icons@1.0.0-alpha.39) (2023-12-26)
-
-**Note:** Version bump only for package @eruditorgroup/profi-icons
-
-# [1.0.0-alpha.38](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-icons@1.0.0-alpha.37...@eruditorgroup/profi-icons@1.0.0-alpha.38) (2023-12-04)
-
-**Note:** Version bump only for package @eruditorgroup/profi-icons
-
-# [1.0.0-alpha.37](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-icons@1.0.0-alpha.36...@eruditorgroup/profi-icons@1.0.0-alpha.37) (2023-11-30)
-
-**Note:** Version bump only for package @eruditorgroup/profi-icons
-
-# [1.0.0-alpha.36](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-icons@1.0.0-alpha.35...@eruditorgroup/profi-icons@1.0.0-alpha.36) (2023-10-26)
+## 0.33.53 (2025-02-18)
 
 ### Features
 
-- **icons:** Added LoaderIcon ([da97a5a](https://github.com/eruditorgroup/profi-design-system/commit/da97a5a7e95dafb844eb2a806f9782070de99e80))
+- [FM-5098] add Badge component and new icons ([#622](https://github.com/eruditorgroup/profi-design-system/issues/622)) ([85b944b](https://github.com/eruditorgroup/profi-design-system/commit/85b944b4a03394ae4627d39bd641df492f72797e))
 
-# [1.0.0-alpha.35](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-icons@1.0.0-alpha.34...@eruditorgroup/profi-icons@1.0.0-alpha.35) (2023-06-07)
+## [0.51.1](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-icons@0.51.0...@eruditorgroup/profi-icons@0.51.1) (2025-02-14)
 
 **Note:** Version bump only for package @eruditorgroup/profi-icons
 
-# [1.0.0-alpha.34](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-icons@1.0.0-alpha.33...@eruditorgroup/profi-icons@1.0.0-alpha.34) (2022-06-06)
+# [0.51.0](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-icons@0.50.0...@eruditorgroup/profi-icons@0.51.0) (2025-02-14)
+
+### Features
+
+- [FM-5106] Add resize icon ([77f374d](https://github.com/eruditorgroup/profi-design-system/commit/77f374dc780f4f3e57881dc7d0eaf9d6d7e5a2ea))
+
+## [0.50.1](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-icons@0.50.0...@eruditorgroup/profi-icons@0.50.1) (2025-01-29)
+
+**Note:** Version bump only for package @eruditorgroup/profi-icons
+
+# [0.50.0](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-icons@0.48.8...@eruditorgroup/profi-icons@0.50.0) (2025-01-28)
+
+## 0.33.48 (2025-01-21)
+
+### Features
+
+- [FM-5094] add new icons, change active menu item, add small toggle ([#610](https://github.com/eruditorgroup/profi-design-system/issues/610)) ([11fb23d](https://github.com/eruditorgroup/profi-design-system/commit/11fb23dd9b9fd95276724e28e68b09dc6801c23f))
+
+# [0.49.0](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-icons@0.48.8...@eruditorgroup/profi-icons@0.49.0) (2025-01-21)
+
+## 0.33.48 (2025-01-21)
+
+### Features
+
+- [FM-5094] add new icons, change active menu item, add small toggle ([#610](https://github.com/eruditorgroup/profi-design-system/issues/610)) ([11fb23d](https://github.com/eruditorgroup/profi-design-system/commit/11fb23dd9b9fd95276724e28e68b09dc6801c23f))
+
+## [0.48.9](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-icons@0.48.8...@eruditorgroup/profi-icons@0.48.9) (2024-12-26)
+
+**Note:** Version bump only for package @eruditorgroup/profi-icons
+
+## [0.48.8](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-icons@0.48.2...@eruditorgroup/profi-icons@0.48.8) (2024-12-19)
+
+## 0.33.45 (2024-12-10)
+
+## 0.33.44 (2024-12-09)
 
 ### Bug Fixes
 
-- удалили лишнюю инфу из changelog ([8178c93](https://github.com/eruditorgroup/profi-design-system/commit/8178c93df0bb5de03cc41d80f69b53b2877b97a8))
+- [FM-4903] rename icons ([#599](https://github.com/eruditorgroup/profi-design-system/issues/599)) ([778628c](https://github.com/eruditorgroup/profi-design-system/commit/778628ced636e34c5f9873b03574794cecfc171a))
+
+# 1.0.0-alpha.55 (2024-12-06)
+
+# 1.0.0-alpha.54 (2024-12-06)
+
+# 1.0.0-alpha.53 (2024-12-06)
+
+### Bug Fixes
+
+- [FM-4903] add new icons ([#593](https://github.com/eruditorgroup/profi-design-system/issues/593)) ([a18b620](https://github.com/eruditorgroup/profi-design-system/commit/a18b620f244e03bf495641bcaa4c26b48809287e))
+
+## [0.48.7](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-icons@0.48.2...@eruditorgroup/profi-icons@0.48.7) (2024-12-10)
+
+## 0.33.45 (2024-12-10)
+
+## 0.33.44 (2024-12-09)
+
+### Bug Fixes
+
+- [FM-4903] rename icons ([#599](https://github.com/eruditorgroup/profi-design-system/issues/599)) ([778628c](https://github.com/eruditorgroup/profi-design-system/commit/778628ced636e34c5f9873b03574794cecfc171a))
+
+# 1.0.0-alpha.55 (2024-12-06)
+
+# 1.0.0-alpha.54 (2024-12-06)
+
+# 1.0.0-alpha.53 (2024-12-06)
+
+### Bug Fixes
+
+- [FM-4903] add new icons ([#593](https://github.com/eruditorgroup/profi-design-system/issues/593)) ([a18b620](https://github.com/eruditorgroup/profi-design-system/commit/a18b620f244e03bf495641bcaa4c26b48809287e))
+
+## [0.48.6](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-icons@0.48.2...@eruditorgroup/profi-icons@0.48.6) (2024-12-06)
+
+# 1.0.0-alpha.55 (2024-12-06)
+
+# 1.0.0-alpha.54 (2024-12-06)
+
+# 1.0.0-alpha.53 (2024-12-06)
+
+### Bug Fixes
+
+- [FM-4903] add new icons ([#593](https://github.com/eruditorgroup/profi-design-system/issues/593)) ([a18b620](https://github.com/eruditorgroup/profi-design-system/commit/a18b620f244e03bf495641bcaa4c26b48809287e))
+
+## [0.48.5](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-icons@0.48.2...@eruditorgroup/profi-icons@0.48.5) (2024-12-06)
+
+# 1.0.0-alpha.54 (2024-12-06)
+
+# 1.0.0-alpha.53 (2024-12-06)
+
+### Bug Fixes
+
+- [FM-4903] add new icons ([#593](https://github.com/eruditorgroup/profi-design-system/issues/593)) ([a18b620](https://github.com/eruditorgroup/profi-design-system/commit/a18b620f244e03bf495641bcaa4c26b48809287e))
+
+## [0.48.4](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-icons@0.48.2...@eruditorgroup/profi-icons@0.48.4) (2024-12-06)
+
+## 0.33.41 (2024-12-06)
+
+### Bug Fixes
+
+- [FM-4903] add new icons ([#593](https://github.com/eruditorgroup/profi-design-system/issues/593)) ([a18b620](https://github.com/eruditorgroup/profi-design-system/commit/a18b620f244e03bf495641bcaa4c26b48809287e))
+
+## [0.48.3](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-icons@0.48.2...@eruditorgroup/profi-icons@0.48.3) (2024-11-28)
+
+**Note:** Version bump only for package @eruditorgroup/profi-icons
+
+## [0.48.2](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-icons@0.48.0...@eruditorgroup/profi-icons@0.48.2) (2024-11-27)
+
+**Note:** Version bump only for package @eruditorgroup/profi-icons
+
+## [0.48.1](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-icons@0.48.0...@eruditorgroup/profi-icons@0.48.1) (2024-11-26)
+
+**Note:** Version bump only for package @eruditorgroup/profi-icons
+
+# [0.48.0](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-icons@0.47.2...@eruditorgroup/profi-icons@0.48.0) (2024-11-06)
+
+### Features
+
+- [SEMANTICS-4572] add SortingIcon and GeoIcon ([ff2ff98](https://github.com/eruditorgroup/profi-design-system/commit/ff2ff98f28271675b7b9f0bdfe9ada5d223a14bb))
+- [SEMANTICS-4572] add SortingIcon and GeoIcon ([5914209](https://github.com/eruditorgroup/profi-design-system/commit/591420985717a6564ce56dec5912b9f4b9318210))
+- [SEMANTICS-4572] add SortingIcon and GeoIcon ([53f8d95](https://github.com/eruditorgroup/profi-design-system/commit/53f8d959a0a812542a0e1a0735eaaafece9946a7))
+
+## [0.47.2](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-icons@0.47.1...@eruditorgroup/profi-icons@0.47.2) (2024-11-05)
+
+**Note:** Version bump only for package @eruditorgroup/profi-icons
+
+## [0.47.1](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-icons@0.47.0...@eruditorgroup/profi-icons@0.47.1) (2024-10-31)
+
+**Note:** Version bump only for package @eruditorgroup/profi-icons
+
+# [0.47.0](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-icons@0.46.9...@eruditorgroup/profi-icons@0.47.0) (2024-10-18)
+
+### Features
+
+- [SEMANTICS-4626] add new icon ([80f1751](https://github.com/eruditorgroup/profi-design-system/commit/80f1751788320829d528399c314fddc51aa79744))
+
+## [0.46.9](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-icons@0.46.6...@eruditorgroup/profi-icons@0.46.9) (2024-10-04)
+
+### Bug Fixes
+
+- **autosuggest:** [SEMANTICS-4625] fix focus ([c525fd4](https://github.com/eruditorgroup/profi-design-system/commit/c525fd4ed5240fc837ef4239d64223be91df1304))
+
+## [0.46.8](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-icons@0.46.6...@eruditorgroup/profi-icons@0.46.8) (2024-09-24)
+
+**Note:** Version bump only for package @eruditorgroup/profi-icons
+
+## [0.46.7](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-icons@0.46.6...@eruditorgroup/profi-icons@0.46.7) (2024-09-23)
+
+**Note:** Version bump only for package @eruditorgroup/profi-icons
+
+## [0.46.6](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-icons@0.46.5...@eruditorgroup/profi-icons@0.46.6) (2024-09-13)
+
+**Note:** Version bump only for package @eruditorgroup/profi-icons
+
+## [0.46.5](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-icons@0.46.3...@eruditorgroup/profi-icons@0.46.5) (2024-09-12)
+
+**Note:** Version bump only for package @eruditorgroup/profi-icons
+
+## [0.46.4](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-icons@0.46.3...@eruditorgroup/profi-icons@0.46.4) (2024-09-11)
+
+**Note:** Version bump only for package @eruditorgroup/profi-icons
+
+## [0.46.3](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-icons@0.46.2...@eruditorgroup/profi-icons@0.46.3) (2024-09-06)
+
+**Note:** Version bump only for package @eruditorgroup/profi-icons
+
+## [0.46.2](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-icons@0.46.1...@eruditorgroup/profi-icons@0.46.2) (2024-09-03)
+
+**Note:** Version bump only for package @eruditorgroup/profi-icons
+
+## [0.46.1](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-icons@0.46.0...@eruditorgroup/profi-icons@0.46.1) (2024-09-03)
+
+**Note:** Version bump only for package @eruditorgroup/profi-icons
+
+# [0.46.0](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-icons@0.45.1...@eruditorgroup/profi-icons@0.46.0) (2024-09-03)
+
+### Features
+
+- **profi-x-service:** [FM-4727] add Toast to index, add disabled color for spinner, fix icon styles ([fba2053](https://github.com/eruditorgroup/profi-design-system/commit/fba205391d0316f4a1d6c0d30788878a5572f3aa))
+
+## [0.45.1](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-icons@0.45.0...@eruditorgroup/profi-icons@0.45.1) (2024-08-28)
+
+**Note:** Version bump only for package @eruditorgroup/profi-icons
+
+# [0.45.0](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-icons@0.44.1...@eruditorgroup/profi-icons@0.45.0) (2024-08-22)
+
+### Features
+
+- [SEMANTICS-4498] add new icon ([e97a9d0](https://github.com/eruditorgroup/profi-design-system/commit/e97a9d0454ef7c2a26b7e74f5c92810812f07888))
+
+## [0.44.1](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-icons@0.44.0...@eruditorgroup/profi-icons@0.44.1) (2024-08-05)
+
+**Note:** Version bump only for package @eruditorgroup/profi-icons
+
+# [0.44.0](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-icons@0.42.9...@eruditorgroup/profi-icons@0.44.0) (2024-08-02)
+
+### Features
+
+- **wizard:** [SEMANTICS-4489] add icons ([00b04ce](https://github.com/eruditorgroup/profi-design-system/commit/00b04ce4975f5acfce67a058c78a3d18ed9c9f65))
+
+## [0.42.9](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-icons@0.42.8...@eruditorgroup/profi-icons@0.42.9) (2024-06-18)
+
+**Note:** Version bump only for package @eruditorgroup/profi-icons
+
+## [0.42.8](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-icons@0.42.7...@eruditorgroup/profi-icons@0.42.8) (2024-06-14)
+
+**Note:** Version bump only for package @eruditorgroup/profi-icons
+
+## [0.42.7](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-icons@0.42.6...@eruditorgroup/profi-icons@0.42.7) (2024-06-14)
+
+**Note:** Version bump only for package @eruditorgroup/profi-icons
+
+## [0.42.6](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-icons@0.42.5...@eruditorgroup/profi-icons@0.42.6) (2024-05-14)
+
+**Note:** Version bump only for package @eruditorgroup/profi-icons
+
+## [0.42.5](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-icons@0.42.4...@eruditorgroup/profi-icons@0.42.5) (2024-04-27)
+
+**Note:** Version bump only for package @eruditorgroup/profi-icons
+
+## [0.42.4](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-icons@0.42.3...@eruditorgroup/profi-icons@0.42.4) (2024-01-22)
+
+**Note:** Version bump only for package @eruditorgroup/profi-icons
+
+## [0.42.3](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-icons@0.42.2...@eruditorgroup/profi-icons@0.42.3) (2023-12-26)
+
+**Note:** Version bump only for package @eruditorgroup/profi-icons
+
+## [0.42.2](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-icons@0.42.1...@eruditorgroup/profi-icons@0.42.2) (2023-12-04)
+
+**Note:** Version bump only for package @eruditorgroup/profi-icons
+
+## [0.42.1](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-icons@0.42.0...@eruditorgroup/profi-icons@0.42.1) (2023-11-30)
+
+**Note:** Version bump only for package @eruditorgroup/profi-icons
+
+# [0.42.0](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-icons@0.41.3...@eruditorgroup/profi-icons@0.42.0) (2023-10-26)
+
+### Features
+
+- **icons:** Added LoaderIcon ([2a483c1](https://github.com/eruditorgroup/profi-design-system/commit/2a483c17f491b3ec88ffa218cf7518525283c570))
+
+## [0.41.3](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-icons@0.41.0...@eruditorgroup/profi-icons@0.41.3) (2023-06-08)
+
+**Note:** Version bump only for package @eruditorgroup/profi-icons
+
+## [0.41.2](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-icons@0.41.0...@eruditorgroup/profi-icons@0.41.2) (2022-05-06)
+
+**Note:** Version bump only for package @eruditorgroup/profi-icons
+
+## [0.41.1](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-icons@0.41.0...@eruditorgroup/profi-icons@0.41.1) (2022-05-06)
+
+**Note:** Version bump only for package @eruditorgroup/profi-icons
+
+# [0.41.0](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-icons@0.40.0...@eruditorgroup/profi-icons@0.41.0) (2022-05-04)
 
 ### Features
 
 - +sideEffects: false ([5e5a2a2](https://github.com/eruditorgroup/profi-design-system/commit/5e5a2a2edbde6341a152ba4b3a2996f25e330db8))
 
-# [1.0.0-alpha.33](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-icons@1.0.0-alpha.32...@eruditorgroup/profi-icons@1.0.0-alpha.33) (2022-05-23)
+# [0.40.0](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-icons@0.38.3...@eruditorgroup/profi-icons@0.40.0) (2022-04-11)
 
-# 1.0.0-alpha.33 (2022-05-23)
+### Features
+
+- **Icons:** Добавил иконку медали для больших размеров ([356efb7](https://github.com/eruditorgroup/profi-design-system/commit/356efb73ff5f67a0bc9b1a3f5ee31dbc7692071a))
+
+# [0.39.0](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-icons@0.38.3...@eruditorgroup/profi-icons@0.39.0) (2022-03-22)
+
+### Features
+
+- **Icons:** Добавил иконку медали для больших размеров ([356efb7](https://github.com/eruditorgroup/profi-design-system/commit/356efb73ff5f67a0bc9b1a3f5ee31dbc7692071a))
+
+## [0.38.3](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-icons@0.38.2...@eruditorgroup/profi-icons@0.38.3) (2022-03-18)
 
 **Note:** Version bump only for package @eruditorgroup/profi-icons
 
-# [1.0.0-alpha.32](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-icons@1.0.0-alpha.27...@eruditorgroup/profi-icons@1.0.0-alpha.32) (2022-05-23)
+## [0.38.2](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-icons@0.38.1...@eruditorgroup/profi-icons@0.38.2) (2022-03-18)
 
-# 1.0.0-alpha.32 (2022-05-23)
+**Note:** Version bump only for package @eruditorgroup/profi-icons
 
-### Features
+## [0.38.1](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-icons@0.38.0...@eruditorgroup/profi-icons@0.38.1) (2022-03-03)
 
-- +sideEffects: false ([4a1505e](https://github.com/eruditorgroup/profi-design-system/commit/4a1505e8b95f3f5251940535444b0095298fa63d))
+**Note:** Version bump only for package @eruditorgroup/profi-icons
 
-# [1.0.0-alpha.31](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-icons@1.0.0-alpha.25...@eruditorgroup/profi-icons@1.0.0-alpha.31) (2022-04-11)
-
-# 1.0.0-alpha.26 (2022-03-22)
-
-### Features
-
-- **Icons:** Добавил иконку медали для больших размеров ([356efb7](https://github.com/eruditorgroup/profi-design-system/commit/356efb73ff5f67a0bc9b1a3f5ee31dbc7692071a))
-
-# [1.0.0-alpha.26](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-icons@1.0.0-alpha.25...@eruditorgroup/profi-icons@1.0.0-alpha.26) (2022-03-22)
-
-# 1.0.0-alpha.26 (2022-03-22)
-
-### Features
-
-- **Icons:** Добавил иконку медали для больших размеров ([356efb7](https://github.com/eruditorgroup/profi-design-system/commit/356efb73ff5f67a0bc9b1a3f5ee31dbc7692071a))
-
-# [1.0.0-alpha.25](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-icons@0.38.3...@eruditorgroup/profi-icons@1.0.0-alpha.25) (2022-03-18)
-
-# 1.0.0-alpha.24 (2022-03-18)
-
-# 1.0.0-alpha.23 (2022-03-02)
-
-# 1.0.0-alpha.21 (2022-02-21)
-
-# 1.0.0-alpha.19 (2022-02-08)
-
-# 1.0.0-alpha.18 (2022-02-07)
-
-# 1.0.0-alpha.11 (2021-11-30)
-
-# 1.0.0-alpha.10 (2021-11-30)
-
-# 1.0.0-alpha.8 (2021-11-29)
-
-### Bug Fixes
-
-- bump versions ([5e4227d](https://github.com/eruditorgroup/profi-design-system/commit/5e4227d8858fa0a8b1d79500eef102da7917d833))
-- bump versions ([a2e80a7](https://github.com/eruditorgroup/profi-design-system/commit/a2e80a7fd90ad50c39d19980036b11de0a4c59a0))
-- bump versions ([a9dcca5](https://github.com/eruditorgroup/profi-design-system/commit/a9dcca573d09a93610932d2a5338d1854a70a0be))
-- bump versions ([a5d6b59](https://github.com/eruditorgroup/profi-design-system/commit/a5d6b590f775b311c4dfa99a982572bd505ffed1))
-
-# [1.0.0-alpha.24](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-icons@0.38.2...@eruditorgroup/profi-icons@1.0.0-alpha.24) (2022-03-18)
-
-# 1.0.0-alpha.24 (2022-03-18)
-
-# 1.0.0-alpha.23 (2022-03-02)
-
-# 1.0.0-alpha.21 (2022-02-21)
-
-# 1.0.0-alpha.19 (2022-02-08)
-
-# 1.0.0-alpha.18 (2022-02-07)
-
-# 1.0.0-alpha.11 (2021-11-30)
-
-# 1.0.0-alpha.10 (2021-11-30)
-
-# 1.0.0-alpha.8 (2021-11-29)
-
-### Bug Fixes
-
-- bump versions ([5e4227d](https://github.com/eruditorgroup/profi-design-system/commit/5e4227d8858fa0a8b1d79500eef102da7917d833))
-- bump versions ([a2e80a7](https://github.com/eruditorgroup/profi-design-system/commit/a2e80a7fd90ad50c39d19980036b11de0a4c59a0))
-- bump versions ([a9dcca5](https://github.com/eruditorgroup/profi-design-system/commit/a9dcca573d09a93610932d2a5338d1854a70a0be))
-- bump versions ([a5d6b59](https://github.com/eruditorgroup/profi-design-system/commit/a5d6b590f775b311c4dfa99a982572bd505ffed1))
-
-# [1.0.0-alpha.23](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-icons@1.0.0-alpha.22...@eruditorgroup/profi-icons@1.0.0-alpha.23) (2022-03-02)
-
-# 1.0.0-alpha.23 (2022-03-02)
+# [0.38.0](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-icons@0.37.3...@eruditorgroup/profi-icons@0.38.0) (2022-03-02)
 
 ## 0.33.1 (2022-03-02)
 
@@ -290,130 +399,89 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 - **Icons:** Добавлена PlayIcon ([#444](https://github.com/eruditorgroup/profi-design-system/issues/444)) ([8bd9e74](https://github.com/eruditorgroup/profi-design-system/commit/8bd9e747e339f765f71891434ab04ef8a59cfe4f))
 
-# [1.0.0-alpha.22](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-icons@0.37.3...@eruditorgroup/profi-icons@1.0.0-alpha.22) (2022-03-01)
-
-# 1.0.0-alpha.21 (2022-02-21)
-
-# 1.0.0-alpha.19 (2022-02-08)
-
-# 1.0.0-alpha.18 (2022-02-07)
-
-# 1.0.0-alpha.11 (2021-11-30)
-
-# 1.0.0-alpha.10 (2021-11-30)
-
-# 1.0.0-alpha.8 (2021-11-29)
-
-### Bug Fixes
-
-- bump versions ([5e4227d](https://github.com/eruditorgroup/profi-design-system/commit/5e4227d8858fa0a8b1d79500eef102da7917d833))
-- bump versions ([a2e80a7](https://github.com/eruditorgroup/profi-design-system/commit/a2e80a7fd90ad50c39d19980036b11de0a4c59a0))
-- bump versions ([a9dcca5](https://github.com/eruditorgroup/profi-design-system/commit/a9dcca573d09a93610932d2a5338d1854a70a0be))
-- bump versions ([a5d6b59](https://github.com/eruditorgroup/profi-design-system/commit/a5d6b590f775b311c4dfa99a982572bd505ffed1))
-
-# [1.0.0-alpha.21](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-icons@0.37.1...@eruditorgroup/profi-icons@1.0.0-alpha.21) (2022-02-21)
-
-# 1.0.0-alpha.21 (2022-02-21)
-
-# 1.0.0-alpha.19 (2022-02-08)
-
-# 1.0.0-alpha.18 (2022-02-07)
-
-# 1.0.0-alpha.11 (2021-11-30)
-
-# 1.0.0-alpha.10 (2021-11-30)
-
-# 1.0.0-alpha.8 (2021-11-29)
-
-### Bug Fixes
-
-- bump versions ([5e4227d](https://github.com/eruditorgroup/profi-design-system/commit/5e4227d8858fa0a8b1d79500eef102da7917d833))
-- bump versions ([a2e80a7](https://github.com/eruditorgroup/profi-design-system/commit/a2e80a7fd90ad50c39d19980036b11de0a4c59a0))
-- bump versions ([a9dcca5](https://github.com/eruditorgroup/profi-design-system/commit/a9dcca573d09a93610932d2a5338d1854a70a0be))
-- bump versions ([a5d6b59](https://github.com/eruditorgroup/profi-design-system/commit/a5d6b590f775b311c4dfa99a982572bd505ffed1))
-
-# [1.0.0-alpha.20](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-icons@1.0.0-alpha.19...@eruditorgroup/profi-icons@1.0.0-alpha.20) (2022-02-09)
+## [0.37.3](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-icons@0.37.2...@eruditorgroup/profi-icons@0.37.3) (2022-02-28)
 
 **Note:** Version bump only for package @eruditorgroup/profi-icons
 
-# [1.0.0-alpha.19](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-icons@1.0.0-alpha.18...@eruditorgroup/profi-icons@1.0.0-alpha.19) (2022-02-08)
+## [0.37.2](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-icons@0.37.1...@eruditorgroup/profi-icons@0.37.2) (2022-02-28)
 
-# 1.0.0-alpha.19 (2022-02-08)
+**Note:** Version bump only for package @eruditorgroup/profi-icons
+
+## [0.37.1](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-icons@0.37.0...@eruditorgroup/profi-icons@0.37.1) (2022-02-21)
+
+**Note:** Version bump only for package @eruditorgroup/profi-icons
+
+# [0.37.0](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-icons@0.36.4...@eruditorgroup/profi-icons@0.37.0) (2022-02-16)
+
+### Features
+
+- **icons:** add ChatFilled icon ([d2f1f85](https://github.com/eruditorgroup/profi-design-system/commit/d2f1f85c679c2012868e8356a42419ee4271601f))
+
+## [0.36.4](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-icons@0.36.3...@eruditorgroup/profi-icons@0.36.4) (2022-02-03)
+
+**Note:** Version bump only for package @eruditorgroup/profi-icons
+
+## [0.36.3](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-icons@0.36.2...@eruditorgroup/profi-icons@0.36.3) (2022-02-01)
+
+**Note:** Version bump only for package @eruditorgroup/profi-icons
+
+## [0.36.2](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-icons@0.36.1...@eruditorgroup/profi-icons@0.36.2) (2022-01-27)
+
+**Note:** Version bump only for package @eruditorgroup/profi-icons
+
+## [0.36.1](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-icons@0.36.0...@eruditorgroup/profi-icons@0.36.1) (2022-01-26)
+
+**Note:** Version bump only for package @eruditorgroup/profi-icons
+
+# [0.36.0](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-icons@0.35.11...@eruditorgroup/profi-icons@0.36.0) (2022-01-13)
 
 ### Features
 
 - **icons:** Добавил новую иконку профи ([a4fa332](https://github.com/eruditorgroup/profi-design-system/commit/a4fa332a67a6dad4d78aec6d4a221b632906bfcf))
 
-# [1.0.0-alpha.18](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-icons@1.0.0-alpha.17...@eruditorgroup/profi-icons@1.0.0-alpha.18) (2022-02-07)
-
-# 1.0.0-alpha.18 (2022-02-07)
+## [0.35.11](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-icons@0.35.10...@eruditorgroup/profi-icons@0.35.11) (2022-01-11)
 
 **Note:** Version bump only for package @eruditorgroup/profi-icons
 
-# [1.0.0-alpha.17](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-icons@1.0.0-alpha.15...@eruditorgroup/profi-icons@1.0.0-alpha.17) (2022-02-01)
+## [0.35.10](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-icons@0.35.9...@eruditorgroup/profi-icons@0.35.10) (2021-12-20)
 
 **Note:** Version bump only for package @eruditorgroup/profi-icons
 
-# [1.0.0-alpha.16](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-icons@1.0.0-alpha.15...@eruditorgroup/profi-icons@1.0.0-alpha.16) (2022-01-12)
+## [0.35.9](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-icons@0.35.8...@eruditorgroup/profi-icons@0.35.9) (2021-12-14)
 
 **Note:** Version bump only for package @eruditorgroup/profi-icons
 
-# [1.0.0-alpha.15](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-icons@1.0.0-alpha.14...@eruditorgroup/profi-icons@1.0.0-alpha.15) (2022-01-11)
+## [0.35.8](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-icons@0.35.4...@eruditorgroup/profi-icons@0.35.8) (2021-12-06)
 
 **Note:** Version bump only for package @eruditorgroup/profi-icons
 
-# [1.0.0-alpha.14](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-icons@1.0.0-alpha.13...@eruditorgroup/profi-icons@1.0.0-alpha.14) (2021-12-10)
+## [0.35.7](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-icons@0.35.4...@eruditorgroup/profi-icons@0.35.7) (2021-11-30)
 
 **Note:** Version bump only for package @eruditorgroup/profi-icons
 
-# [1.0.0-alpha.13](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-icons@0.35.8...@eruditorgroup/profi-icons@1.0.0-alpha.13) (2021-12-09)
-
-# 1.0.0-alpha.11 (2021-11-30)
-
-# 1.0.0-alpha.10 (2021-11-30)
-
-# 1.0.0-alpha.8 (2021-11-29)
-
-### Bug Fixes
-
-- bump versions ([5e4227d](https://github.com/eruditorgroup/profi-design-system/commit/5e4227d8858fa0a8b1d79500eef102da7917d833))
-- bump versions ([a2e80a7](https://github.com/eruditorgroup/profi-design-system/commit/a2e80a7fd90ad50c39d19980036b11de0a4c59a0))
-- bump versions ([a9dcca5](https://github.com/eruditorgroup/profi-design-system/commit/a9dcca573d09a93610932d2a5338d1854a70a0be))
-- bump versions ([a5d6b59](https://github.com/eruditorgroup/profi-design-system/commit/a5d6b590f775b311c4dfa99a982572bd505ffed1))
-
-# [1.0.0-alpha.12](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-icons@1.0.0-alpha.11...@eruditorgroup/profi-icons@1.0.0-alpha.12) (2021-12-03)
+## [0.35.6](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-icons@0.35.4...@eruditorgroup/profi-icons@0.35.6) (2021-11-30)
 
 **Note:** Version bump only for package @eruditorgroup/profi-icons
 
-# [1.0.0-alpha.11](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-icons@1.0.0-alpha.10...@eruditorgroup/profi-icons@1.0.0-alpha.11) (2021-11-30)
-
-# 1.0.0-alpha.11 (2021-11-30)
+## [0.35.5](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-icons@0.35.4...@eruditorgroup/profi-icons@0.35.5) (2021-11-30)
 
 **Note:** Version bump only for package @eruditorgroup/profi-icons
 
-# [1.0.0-alpha.10](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-icons@0.35.4...@eruditorgroup/profi-icons@1.0.0-alpha.10) (2021-11-30)
+## [0.35.4](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-icons@0.35.0...@eruditorgroup/profi-icons@0.35.4) (2021-11-29)
 
-# 1.0.0-alpha.10 (2021-11-30)
+**Note:** Version bump only for package @eruditorgroup/profi-icons
 
-# 1.0.0-alpha.8 (2021-11-29)
+## [0.35.3](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-icons@0.35.0...@eruditorgroup/profi-icons@0.35.3) (2021-11-29)
 
-### Bug Fixes
+**Note:** Version bump only for package @eruditorgroup/profi-icons
 
-- bump versions ([5e4227d](https://github.com/eruditorgroup/profi-design-system/commit/5e4227d8858fa0a8b1d79500eef102da7917d833))
-- bump versions ([a2e80a7](https://github.com/eruditorgroup/profi-design-system/commit/a2e80a7fd90ad50c39d19980036b11de0a4c59a0))
-- bump versions ([a9dcca5](https://github.com/eruditorgroup/profi-design-system/commit/a9dcca573d09a93610932d2a5338d1854a70a0be))
-- bump versions ([a5d6b59](https://github.com/eruditorgroup/profi-design-system/commit/a5d6b590f775b311c4dfa99a982572bd505ffed1))
+## [0.35.2](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-icons@0.35.0...@eruditorgroup/profi-icons@0.35.2) (2021-11-29)
 
-# [1.0.0-alpha.9](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-icons@0.35.0...@eruditorgroup/profi-icons@1.0.0-alpha.9) (2021-11-29)
+**Note:** Version bump only for package @eruditorgroup/profi-icons
 
-# 1.0.0-alpha.8 (2021-11-29)
+## [0.35.1](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-icons@0.35.0...@eruditorgroup/profi-icons@0.35.1) (2021-11-29)
 
-### Bug Fixes
-
-- bump versions ([5e4227d](https://github.com/eruditorgroup/profi-design-system/commit/5e4227d8858fa0a8b1d79500eef102da7917d833))
-- bump versions ([a2e80a7](https://github.com/eruditorgroup/profi-design-system/commit/a2e80a7fd90ad50c39d19980036b11de0a4c59a0))
-- bump versions ([a9dcca5](https://github.com/eruditorgroup/profi-design-system/commit/a9dcca573d09a93610932d2a5338d1854a70a0be))
-- bump versions ([a5d6b59](https://github.com/eruditorgroup/profi-design-system/commit/a5d6b590f775b311c4dfa99a982572bd505ffed1))
+**Note:** Version bump only for package @eruditorgroup/profi-icons
 
 # [0.35.0](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-icons@0.34.22...@eruditorgroup/profi-icons@0.35.0) (2021-11-29)
 
