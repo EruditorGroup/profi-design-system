@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.0.0-alpha.72](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-icons@1.0.0-alpha.69...@eruditorgroup/profi-icons@1.0.0-alpha.72) (2025-09-08)
+
+
+### Bug Fixes
+
+* [NO-TASK] Manual reset for package versions ([b9e234b](https://github.com/eruditorgroup/profi-design-system/commit/b9e234ba05c0752d8beff89398f3ba1c049e4543))
+
+
+
+
+
 # 1.0.0-alpha.71
 
 **Note:** Version bump only for package @eruditorgroup/profi-icons
