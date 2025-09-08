@@ -7,88 +7,93 @@
     Roboto, Arial, sans-serif;
 
   /* Text sizes */
-  --ui-text-size-xs: 11px;
-  --ui-text-size-s: 13px;
-  --ui-text-size-m: 15px;
-  --ui-text-size-l: 17px;
-  --ui-text-size-lt: 17px;
-  --ui-text-size-xl: 22px;
-  --ui-text-size-xxl: 28px;
+  --ui-text-size-xs: 12px; /* --uikit-font-caption-fontSize */
+  --ui-text-size-s: 13px; /* --uikit-font-bodyS-fontSize */
+  --ui-text-size-m: 15px; /* --uikit-font-bodyM-fontSize */
+  --ui-text-size-l: 17px; /* --uikit-font-bodyL-fontSize */
+  --ui-text-size-lt: 17px; /* --uikit-font-bodyL-fontSize */
+  --ui-text-size-xl: 22px; /* --uikit-font-headlineS-fontSize */
+  --ui-text-size-xxl: 28px; /* --uikit-font-headlineM-fontSize */
+
   /* Laptop 732 - 1023px */
-  --ui-text-size-3xl-laptop: 35px;
-  --ui-text-size-4xl-laptop: 45px;
-  --ui-text-size-5xl-laptop: 60px;
+  --ui-text-size-3xl-laptop: 32px; /* adapted --uikit-font-displayS-fontSize */
+  --ui-text-size-4xl-laptop: 40px; /* adapted --uikit-font-displayM-fontSize */
+  --ui-text-size-5xl-laptop: 60px; /* adapted --uikit-font-displayL-fontSize */
+
   /* Desktop > 1024px */
-  --ui-text-size-3xl-desktop: 40px;
-  --ui-text-size-4xl-desktop: 60px;
-  --ui-text-size-5xl-desktop: 80px;
+  --ui-text-size-3xl-desktop: 40px; /* --uikit-font-displayS-fontSize */
+  --ui-text-size-4xl-desktop: 60px; /* --uikit-font-displayM-fontSize */
+  --ui-text-size-5xl-desktop: 80px; /* --uikit-font-displayL-fontSize */
 
   /* Line heights */
-  --ui-text-lineHeight-xs: 13px;
-  --ui-text-lineHeight-s: 17px;
-  --ui-text-lineHeight-m: 20px;
-  --ui-text-lineHeight-l: 22px;
-  --ui-text-lineHeight-lt: 25px;
-  --ui-text-lineHeight-xl: 26px;
-  --ui-text-lineHeight-xxl: 33px;
+  --ui-text-lineHeight-xs: 14px; /* --uikit-font-caption-lineHeight */
+  --ui-text-lineHeight-s: 16px; /* --uikit-font-bodyS-lineHeight */
+  --ui-text-lineHeight-m: 20px; /* --uikit-font-bodyM-lineHeight */
+  --ui-text-lineHeight-l: 22px; /* --uikit-font-bodyL-lineHeight */
+  --ui-text-lineHeight-lt: 24px; /* --uikit-font-bodyL-lineHeight-paragraph */
+  --ui-text-lineHeight-xl: 28px; /* --uikit-font-headlineS-lineHeight */
+  --ui-text-lineHeight-xxl: 32px; /* --uikit-font-headlineM-lineHeight */
+
   /* Laptop 732 - 1023px */
-  --ui-text-lineHeight-3xl-laptop: 38px;
-  --ui-text-lineHeight-4xl-laptop: 45px;
-  --ui-text-lineHeight-5xl-laptop: 60px;
+  --ui-text-lineHeight-3xl-laptop: 40px; /* adapted --uikit-font-displayS-lineHeight */
+  --ui-text-lineHeight-4xl-laptop: 44px; /* adapted --uikit-font-displayM-lineHeight */
+  --ui-text-lineHeight-5xl-laptop: 60px; /* adapted --uikit-font-displayL-lineHeight */
+
   /* Desktop > 1024px */
-  --ui-text-lineHeight-3xl-desktop: 45px;
-  --ui-text-lineHeight-4xl-desktop: 60px;
-  --ui-text-lineHeight-5xl-desktop: 80px;
+  --ui-text-lineHeight-3xl-desktop: 44px; /* --uikit-font-displayS-lineHeight */
+  --ui-text-lineHeight-4xl-desktop: 60px; /* --uikit-font-displayM-lineHeight */
+  --ui-text-lineHeight-5xl-desktop: 80px; /* --uikit-font-displayL-lineHeight */
 
   /* Letter spasings */
   --ui-text-letterSpacing-5xl-desktop: -2px;
 
-  --ui-color-primary: #e01935;
-  --ui-color-primaryState: #c90c27;
-  --ui-color-primaryInverse: #fff;
-  --ui-color-primaryInverseState: #ec7586;
+  --ui-color-primary: #fa2a48; /* --uikit-color-actionPrimaryBrand */
+  --ui-color-primaryState: #e2223d; /* --uikit-color-actionPrimaryBrandHover */
+  --ui-color-primaryInverse: #fff; /* --uikit-color-textInvertedPrimary */
+  --ui-color-primaryInverseState: #ff9099;
 
-  --ui-color-secondary: #333333;
-  --ui-color-secondaryState: #1a1a1a;
-  --ui-color-secondaryInverse: #fff;
+  --ui-color-secondary: #181818; /* --uikit-color-actionPrimary */
+  --ui-color-secondaryState: #3b3b3b; /* --uikit-color-actionPrimaryHover */
+  --ui-color-secondaryInverse: #fff; /* --uikit-color-textInvertedPrimary */
   --ui-color-secondaryInverseState: #666666;
-  --ui-color-light: #ebebeb;
-  --ui-color-lightState: #dedede;
-  --ui-color-lightInverse: #333333;
-  --ui-color-lightInverseState: #a6a6a6;
 
-  --ui-color-disabled: #bfbfbf;
-  --ui-color-danger: #e01935;
-  --ui-color-warning: #ffa216;
-  --ui-color-success: #18d15c;
-  --ui-color-brand: #ee203a;
+  --ui-color-light: #f4f5fb; /* --uikit-color-actionSecondary */
+  --ui-color-lightState: #eceff6; /* --uikit-color-actionSecondaryHover */
+  --ui-color-lightInverse: #181818; /* --uikit-color-textPrimary */
+  --ui-color-lightInverseState: #a9a9c1; /* используется как плейсхолдер, --uikit-color-textHint */
+
+  --ui-color-disabled: #c9c9dd; /* --uikit-color-textDisabled */
+  --ui-color-danger: #f54a63; /* --uikit-color-error */
+  --ui-color-warning: #ffad0b; /* --uikit-color-warning */
+  --ui-color-success: #1bb577; /* --uikit-color-success */
+  --ui-color-brand: #fa2a48; /* --uikit-color-decorBrand */
 
   --ui-color-vk: #2787f5;
   --ui-color-fb: #1878f2;
   --ui-color-ya: #fc0;
 
-  --ui-color-link: #333333;
-  --ui-color-text: #333333;
-  --ui-color-text-muted: #808080;
-  --ui-color-text-disabled: #a6a6a6;
+  --ui-color-link: #181818; /* --uikit-color-textPrimary */
+  --ui-color-text: #181818; /* --uikit-color-textPrimary */
+  --ui-color-text-muted: #838398; /* --uikit-color-textSecondary */
+  --ui-color-text-disabled: #c9c9dd; /* --uikit-color-textDisabled */
 
-  --ui-border-color: #ebebeb;
-  --ui-border-color-secondary: #d9d9d9;
-  --ui-border-radius-xs: 5px;
-  --ui-border-radius-s: 8px;
-  --ui-border-radius-m: 9px;
-  --ui-border-radius-l: 10px;
-  --ui-border-radius-xl: 12px;
-  --ui-border-radius-ml: 20px;
-  --ui-border-radius-xxl: 50px;
+  --ui-border-color: #e8e8f4; /* --uikit-color-borderSecondary */
+  --ui-border-color-secondary: #c9c9dd; /* --uikit-color-borderPrimary */
+  --ui-border-radius-xs: 4px; /* --uikit-radius-xxs */
+  --ui-border-radius-s: 8px; /* --uikit-radius-xs */
+  --ui-border-radius-m: 8px; /* --uikit-radius-xs */
+  --ui-border-radius-l: 12px; /* --uikit-radius-s */
+  --ui-border-radius-xl: 12px; /* --uikit-radius-s */
+  --ui-border-radius-ml: 20px; /* --uikit-radius-l */
+  --ui-border-radius-xxl: 40px; /* --uikit-radius-xxxl */
 
   --ui-box-shadow: 0px 5px 30px rgba(0, 0, 0, 0.05);
 
   --ui-link-shadow: inset 0px -1px 0px #d9d9d9;
   --ui-link-shadowState: inset 0px -1px 0px rgba(224, 25, 53, 0.3);
 
-  --ui-bg-default: #fff;
-  --ui-bg-primary: #fafafa;
-  --ui-bg-light: #f2f2f2;
-  --ui-bg-lightState: #ebebeb;
+  --ui-bg-default: #fff; /* --uikit-color-backgroundPrimary */
+  --ui-bg-primary: var(--ui-bg-default); /* фон главной (и других страниц) */
+  --ui-bg-light: #f4f5fb; /* --uikit-color-backgroundSecondary */
+  --ui-bg-lightState: #e8ebf1; /* --uikit-color-actionSecondaryHover */
 }
