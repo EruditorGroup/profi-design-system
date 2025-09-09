@@ -22,6 +22,7 @@ export type DatepickerProps = Omit<
   shmid?: string;
   inputClassName?: string;
   calendarClassName?: string;
+  mobileContainerClassName?: string;
   /**
    * Применяется справо налево и применяется первый, который подходит.
    */
@@ -36,6 +37,7 @@ const Datepicker: React.FC<React.PropsWithChildren<DatepickerProps>> = ({
   className,
   inputClassName,
   calendarClassName,
+  mobileContainerClassName,
   onChange: _onChange,
   inputLabelTransformerList = [],
   invalid = false,
@@ -91,7 +93,12 @@ const Datepicker: React.FC<React.PropsWithChildren<DatepickerProps>> = ({
       />
       {isMobile ? (
         datepickerOpen && (
-          <BodyPortal className={styles['mobile-container']}>
+          <BodyPortal
+            className={classnames(
+              styles['mobile-container'],
+              mobileContainerClassName,
+            )}
+          >
             <Dropdown.Portal
               animated={false}
               position="from-bottom"
