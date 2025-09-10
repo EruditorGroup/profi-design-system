@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.92.2](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.91.0...@eruditorgroup/profi-ui@0.92.2) (2025-09-10)
+
+
+### Bug Fixes
+
+* [NO-TASK] Manual reset for package versions ([ed4fa15](https://github.com/eruditorgroup/profi-design-system/commit/ed4fa1531325d745d6e363dd1e6459d0d0652bd0))
+* [NO-TASK] Useless commit to fix auto publish ([b719962](https://github.com/eruditorgroup/profi-design-system/commit/b719962d6e651c06b78e688e6e84acb1a44c68f4))
+
+
+
+
+
 ## [0.92.1](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@0.91.0...@eruditorgroup/profi-ui@0.92.1) (2025-09-08)
 
 
