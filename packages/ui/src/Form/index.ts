@@ -18,23 +18,52 @@ import type {CheckboxProps} from './Checkbox';
 import type {RadioProps} from './Radio';
 
 import {default as FormControl} from './FormControl';
-//
+/**
+ * @deprecated У компонента существует аналог из @mono-front/uikit-web. Стоит использовать его
+ *
+ * `import {Input} from '@mono-front/uikit-web';`
+ */
 type InputProps = React.PropsWithChildren<FormControlProps & BareInputProps>;
 
+/**
+ * @deprecated У компонента существует аналог из @mono-front/uikit-web. Стоит использовать его
+ *
+ * `import {Input} from '@mono-front/uikit-web';`
+ */
 const Input = forwardRef<HTMLInputElement, InputProps>(
   /*#__PURE__*/ wrapControlWithRef<HTMLInputElement, InputProps>(BareInput),
 );
 
+/**
+ * @deprecated У компонента существует аналог из @mono-front/uikit-web. Стоит использовать его
+ *
+ * `import {Input} from '@mono-front/uikit-web';`
+ */
 type InputUnitProps = FormControlProps & BareInputUnitProps;
 
+/**
+ * @deprecated У компонента существует аналог из @mono-front/uikit-web. Стоит использовать его
+ *
+ * `import {Input} from '@mono-front/uikit-web';`
+ */
 const InputUnit = forwardRef<HTMLInputElement, InputUnitProps>(
   /*#__PURE__*/ wrapControlWithRef<HTMLInputElement, InputUnitProps>(
     BareInputUnit,
   ),
 );
 
+/**
+ * @deprecated У компонента существует аналог из @mono-front/uikit-web. Стоит использовать его
+ *
+ * `import {TextArea} from '@mono-front/uikit-web';`
+ */
 type TextareaProps = Omit<FormControlProps, 'align'> & BareTextareaProps;
 
+/**
+ * @deprecated У компонента существует аналог из @mono-front/uikit-web. Стоит использовать его
+ *
+ * `import {TextArea} from '@mono-front/uikit-web';`
+ */
 const Textarea = forwardRef<HTMLTextAreaElement, TextareaProps>(
   /*#__PURE__*/ wrapControlWithRef<HTMLTextAreaElement, TextareaProps>(
     BareTextarea,
