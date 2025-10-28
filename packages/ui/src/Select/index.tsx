@@ -17,6 +17,11 @@ import {Input, InputProps} from '../Form';
 
 import styles from './Select.module.css';
 
+/**
+ * @deprecated У компонента существует аналог из @mono-front/uikit-web. Стоит использовать его
+ *
+ * `import {Select, SelectOption} from '@mono-front/uikit-web';`
+ */
 export interface SelectProps
   extends Omit<InputProps, 'readonly' | 'onChange' | 'value'> {
   startScrollFrom?: number;
@@ -48,6 +53,11 @@ export const useSelectContext = (): ISelectContext => {
 
 const itemsSize = 40;
 
+/**
+ * @deprecated У компонента существует аналог из @mono-front/uikit-web. Стоит использовать его
+ *
+ * `import {Select, SelectOption} from '@mono-front/uikit-web';`
+ */
 const Select: SelectComponent = function Select({
   startScrollFrom,
   value: propValue,
