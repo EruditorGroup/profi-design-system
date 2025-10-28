@@ -10,6 +10,11 @@ import styles from './Checkbox.module.scss';
 type CheckboxSize = 'm' | 'l' | 'xl' | 'xxl';
 type CheckboxType = 'radio' | 'checkbox';
 
+/**
+ * @deprecated У компонента существует аналог из @mono-front/uikit-web. Стоит использовать его
+ *
+ * `import {Checkbox, ToggleLabel} from '@mono-front/uikit-web';`
+ */
 export interface CheckboxProps
   extends Omit<InputHTMLAttributes<HTMLInputElement>, 'size'> {
   label?: string;
@@ -23,6 +28,11 @@ export interface CheckboxProps
 export const getTextSize = (size: CheckboxSize): CheckboxSize =>
   ['xxl', 'xl', 'l'].includes(size) ? 'l' : 'm';
 
+/**
+ * @deprecated У компонента существует аналог из @mono-front/uikit-web. Стоит использовать его
+ *
+ * `import {Checkbox, ToggleLabel} from '@mono-front/uikit-web';`
+ */
 const Checkbox = forwardRef<HTMLInputElement, CheckboxProps>(function Checkbox(
   {
     label,

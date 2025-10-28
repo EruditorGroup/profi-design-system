@@ -9,6 +9,11 @@ import classnames from 'classnames';
 import styles from './Spinner.module.scss';
 import {IColor, ISize, theme} from '@eruditorgroup/profi-toolkit';
 
+/**
+ * @deprecated У компонента существует аналог из @mono-front/uikit-web. Стоит использовать его
+ *
+ * `import {Spinner} from '@mono-front/uikit-web';`
+ */
 export interface SpinnerProps
   extends HTMLAttributes<HTMLDivElement>,
     RefAttributes<HTMLDivElement> {
@@ -20,6 +25,11 @@ export interface SpinnerProps
   withLeftPadding?: boolean;
 }
 
+/**
+ * @deprecated У компонента существует аналог из @mono-front/uikit-web. Стоит использовать его
+ *
+ * `import {Spinner} from '@mono-front/uikit-web';`
+ */
 const Spinner: ForwardRefExoticComponent<SpinnerProps> = forwardRef(
   (
     {

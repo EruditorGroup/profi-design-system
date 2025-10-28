@@ -5,6 +5,11 @@ import type {InputHTMLAttributes} from 'react';
 
 import styles from './Toggle.module.scss';
 
+/**
+ * @deprecated У компонента существует аналог из @mono-front/uikit-web. Стоит использовать его
+ *
+ * `import {Toggle} from '@mono-front/uikit-web';`
+ */
 export type ToggleProps = Omit<
   InputHTMLAttributes<HTMLInputElement>,
   'type'
@@ -12,6 +17,11 @@ export type ToggleProps = Omit<
   small?: boolean;
 };
 
+/**
+ * @deprecated У компонента существует аналог из @mono-front/uikit-web. Стоит использовать его
+ *
+ * `import {Toggle} from '@mono-front/uikit-web';`
+ */
 const Toggle = forwardRef<HTMLInputElement, ToggleProps>(function Toggle(
   {className, small, ...inputAttrs},
   ref,

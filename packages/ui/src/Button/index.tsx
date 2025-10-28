@@ -32,6 +32,11 @@ type ButtonUndesignedProps = {
   skeleton?: boolean;
 };
 
+/**
+ * @deprecated У компонента существует аналог из @mono-front/uikit-web. Стоит использовать его
+ *
+ * `import {Button, ButtonLink} from '@mono-front/uikit-web';`
+ */
 export type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> &
   AliasProps &
   ButtonUndesignedProps &
@@ -40,6 +45,11 @@ export type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> &
     | {design?: 'link'; underlined?: boolean}
   );
 
+/**
+ * @deprecated У компонента существует аналог из @mono-front/uikit-web. Стоит использовать его
+ *
+ * `import {Button, ButtonLink} from '@mono-front/uikit-web';`
+ */
 const Button: ForwardingComponent<'button', ButtonProps> = forwardRef(
   (
     {
