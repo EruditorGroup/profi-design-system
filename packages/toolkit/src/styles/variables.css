@@ -47,20 +47,20 @@
   /* Letter spasings */
   --ui-text-letterSpacing-5xl-desktop: -2px;
 
-  --ui-color-primary: #fa2a48; /* --uikit-color-actionPrimaryBrand */
-  --ui-color-primaryState: #e2223d; /* --uikit-color-actionPrimaryBrandHover */
+  --ui-color-primary: #fa2a48; /* --uikit-color-controlPrimaryBrand */
+  --ui-color-primaryState: #e2223d; /* --uikit-color-controlPrimaryBrandHover */
   --ui-color-primaryInverse: #fff; /* --uikit-color-textInvertedPrimary */
   --ui-color-primaryInverseState: #ff9099;
 
-  --ui-color-secondary: #181818; /* --uikit-color-actionPrimary */
-  --ui-color-secondaryState: #3b3b3b; /* --uikit-color-actionPrimaryHover */
+  --ui-color-secondary: #181818; /* --uikit-color-controlPrimary */
+  --ui-color-secondaryState: #3b3b3b; /* --uikit-color-controlPrimaryHover */
   --ui-color-secondaryInverse: #fff; /* --uikit-color-textInvertedPrimary */
   --ui-color-secondaryInverseState: #666666;
 
-  --ui-color-light: #f4f5fb; /* --uikit-color-actionSecondary */
-  --ui-color-lightState: #eceff6; /* --uikit-color-actionSecondaryHover */
+  --ui-color-light: #eff1f8; /* --uikit-color-controlSecondary */
+  --ui-color-lightState: #e7e9f4; /* --uikit-color-controlSecondaryHover */
   --ui-color-lightInverse: #181818; /* --uikit-color-textPrimary */
-  --ui-color-lightInverseState: #a9a9c1; /* используется как плейсхолдер, --uikit-color-textHint */
+  --ui-color-lightInverseState: #838398; /* используется как плейсхолдер, --uikit-color-textSecondary */
 
   --ui-color-disabled: #c9c9dd; /* --uikit-color-textDisabled */
   --ui-color-danger: #f54a63; /* --uikit-color-error */
@@ -95,5 +95,5 @@
   --ui-bg-default: #fff; /* --uikit-color-backgroundPrimary */
   --ui-bg-primary: var(--ui-bg-default); /* фон главной (и других страниц) */
   --ui-bg-light: #f4f5fb; /* --uikit-color-backgroundSecondary */
-  --ui-bg-lightState: #e8ebf1; /* --uikit-color-actionSecondaryHover */
+  --ui-bg-lightState: #e8ebf1; /* --uikit-color-controlSecondaryHover */
 }
