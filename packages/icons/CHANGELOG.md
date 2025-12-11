@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.56.5](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-icons@0.56.4...@eruditorgroup/profi-icons@0.56.5) (2025-12-11)
+
+**Note:** Version bump only for package @eruditorgroup/profi-icons
+
+
+
+
+
 ## [0.56.4](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-icons@0.56.3...@eruditorgroup/profi-icons@0.56.4) (2025-11-17)
 
 **Note:** Version bump only for package @eruditorgroup/profi-icons
