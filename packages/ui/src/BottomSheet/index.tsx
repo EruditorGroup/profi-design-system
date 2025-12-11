@@ -66,7 +66,11 @@ const BottomSheet: ForwardRefExoticComponent<
     useEffect(() => {
       if (!inline) {
         const {current: element} = bodyEl;
+
+        if (!element) return;
+
         visible ? disableBodyScroll(element) : enableBodyScroll(element);
+
         return () => enableBodyScroll(element);
       }
     }, [visible, inline]);
