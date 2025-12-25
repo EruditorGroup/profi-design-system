@@ -33,6 +33,7 @@ export interface BottomSheetProps
   onClose: MouseEventHandler<HTMLElement>;
   rootClassName?: string;
   overlayClassName?: string;
+  bodyClassName?: string;
 }
 
 const DEFAULT_ANIMATION_DURATION = 150;
@@ -52,6 +53,7 @@ const BottomSheet: ForwardRefExoticComponent<
       inline,
       rootClassName,
       overlayClassName,
+      bodyClassName,
       ...props
     },
     ref,
@@ -132,6 +134,7 @@ const BottomSheet: ForwardRefExoticComponent<
                 className={cx(
                   styles['body'],
                   withPadding && styles['body_withPadding'],
+                  bodyClassName,
                 )}
                 ref={bodyEl}
               >
