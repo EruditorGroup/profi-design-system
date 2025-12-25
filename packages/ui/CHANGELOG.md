@@ -3,6 +3,21 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.0.0-alpha.76](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@1.0.0-alpha.75...@eruditorgroup/profi-ui@1.0.0-alpha.76) (2025-12-11)
+
+
+
+# 1.0.0-alpha.76 (2025-12-11)
+
+
+### Bug Fixes
+
+* [FM-5858] check element in body scroll lock inside BottomSheet ([#695](https://github.com/eruditorgroup/profi-design-system/issues/695)) ([dbd5bec](https://github.com/eruditorgroup/profi-design-system/commit/dbd5bec7949c11072407b73294663aa9faa40921))
+
+
+
+
+
 # [1.0.0-alpha.75](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-ui@1.0.0-alpha.74...@eruditorgroup/profi-ui@1.0.0-alpha.75) (2025-11-17)
 
 **Note:** Version bump only for package @eruditorgroup/profi-ui
