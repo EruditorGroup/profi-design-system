@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.66.2](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-toolkit@0.66.0...@eruditorgroup/profi-toolkit@0.66.2) (2025-12-25)
+
+
+
+## 0.35.6 (2025-12-25)
+
+**Note:** Version bump only for package @eruditorgroup/profi-toolkit
+
+
+
+
+
 ## [0.66.1](https://github.com/eruditorgroup/profi-design-system/compare/@eruditorgroup/profi-toolkit@0.66.0...@eruditorgroup/profi-toolkit@0.66.1) (2025-12-11)
 
 **Note:** Version bump only for package @eruditorgroup/profi-toolkit
